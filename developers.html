@@ -1,0 +1,480 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>For Developers &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Detailed Notes on Drake’s Unit Tests" href="unit_testing_instructions.html" />
+    <link rel="prev" title="Frequently Asked Questions" href="faq.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="unit_testing_instructions.html" title="Detailed Notes on Drake’s Unit Tests"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="for-developers">
+<span id="developer-notes"></span><h1>For Developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first"><cite>Table of contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id5">Introduction</a></li>
+<li><a class="reference internal" href="#licensing" id="id6">Licensing</a></li>
+<li><a class="reference internal" href="#testing" id="id7">Testing</a></li>
+<li><a class="reference internal" href="#supported-configurations" id="id8">Supported Configurations</a><ul>
+<li><a class="reference internal" href="#binary-packages" id="id9">Binary Packages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#issue-tracking" id="id10">Issue Tracking</a></li>
+<li><a class="reference internal" href="#code-review" id="id11">Code Review</a><ul>
+<li><a class="reference internal" href="#review-process" id="id12">Review Process</a></li>
+<li><a class="reference internal" href="#review-process-tooling" id="id13">Review Process Tooling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-assistance" id="id14">User Assistance</a><ul>
+<li><a class="reference internal" href="#handling-user-github-issues" id="id15">Handling User GitHub Issues</a></li>
+<li><a class="reference internal" href="#handling-user-stackoverflow-questions" id="id16">Handling User StackOverflow Questions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4" id="id17">Continuous Integration Notes</a></li>
+<li><a class="reference internal" href="#documentation-instructions" id="id18">Documentation Instructions</a></li>
+<li><a class="reference internal" href="#ide-and-text-editor-notes" id="id19">IDE and Text Editor Notes</a></li>
+<li><a class="reference internal" href="#operating-system-notes" id="id20">Operating System Notes</a></li>
+<li><a class="reference internal" href="#programming-style-notes" id="id21">Programming Style Notes</a></li>
+<li><a class="reference internal" href="#version-control" id="id22">Version Control</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<span id="pull-request"></span><h2><a class="toc-backref" href="#id5">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>If you have improvements to Drake, send us your pull requests!</p>
+<p>Our standard workflow is to fork <a class="reference external" href="https://github.com/RobotLocomotion/drake/">Drake’s official Github repository</a> into your
+own Github account and then push your changes into a branch on your fork. Once
+you believe your code is ready to be merged into Drake’s primary repository,
+open a <a class="reference external" href="https://help.github.com/articles/using-pull-requests/">pull request</a>
+via the Github website. Your code will then undergo an interactive review
+process and <a class="reference internal" href="#continuous-integration-notes"><span class="std std-ref">Continuous Integration (CI)</span></a>
+tests before it is merged into
+<a class="reference external" href="https://github.com/RobotLocomotion/drake">Drake’s primary repository</a>.</p>
+<p>Drake’s <a class="reference internal" href="#continuous-integration-notes"><span class="std std-ref">CI service</span></a> runs on all pull requests each time they are
+submitted and updated. Pull requests cannot be merged into master unless all
+unit tests pass on all
+<a class="reference internal" href="#supported-configurations"><span class="std std-ref">supported platform configurations</span></a>.</p>
+<p>Drake’s CI server also runs continuously on
+<a class="reference external" href="https://github.com/RobotLocomotion/drake">Drake’s primary master branch</a>
+using an even more comprehensive set of unit tests.
+If problems are detected on this branch, the build cop will
+<a class="reference internal" href="buildcop.html#build-cop"><span class="std std-ref">revert the PRs that most likely caused the problem</span></a>.
+To increase the likelihood that your pull requests pass CI tests and are not
+reverted, you can run the unit tests locally. Instructions for how to do that
+are provided <a class="reference internal" href="unit_testing_instructions.html#unit-test-instructions"><span class="std std-ref">here</span></a>. Note, however, that there are
+many computationally-demanding tests and running the entire test suite can take
+several hours depending on your machine.</p>
+<p>We would like to hear about your success stories if you’ve used Drake in your
+own projects.  Please consider contributing to our <a class="reference internal" href="gallery.html"><span class="doc">Drake Gallery</span></a> by editing
+<code class="docutils literal"><span class="pre">doc/gallery.rst</span></code> and submitting a pull request with the update!</p>
+</div>
+<div class="section" id="licensing">
+<h2><a class="toc-backref" href="#id6">Licensing</a><a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p><strong>Important note:</strong> Drake is an open source project licensed under
+extremely flexible terms intended to encourage use by anyone, for any
+purpose. When you make a contribution to the Drake project, you are
+agreeing to do so under those same terms.</p>
+</div>
+<div class="section" id="testing">
+<h2><a class="toc-backref" href="#id7">Testing</a><a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="unit_testing_instructions.html">Detailed Notes on Drake’s Unit Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downstream_testing.html">Downstream Testing (Drake as a Dependency)</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="supported-configurations">
+<span id="id2"></span><h2><a class="toc-backref" href="#id8">Supported Configurations</a><a class="headerlink" href="#supported-configurations" title="Permalink to this headline">¶</a></h2>
+<p>The following table shows the configurations and platforms that Drake
+officially supports. Supported configurations are tested in continuous
+integration. All other configurations are provided on a best-effort basis.</p>
+<p>Drake requires a compiler running in C++14 mode or greater. MATLAB is only
+supported for CMake builds using the “Unix Makefiles” generator.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="16%" />
+<col width="16%" />
+<col width="11%" />
+<col width="18%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operating System</th>
+<th class="head">Build System</th>
+<th class="head">C/C++ Compiler</th>
+<th class="head">Java</th>
+<th class="head">MATLAB (Optional)</th>
+<th class="head">Python</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Ubuntu 16.04 LTS (Xenial Xerus)</td>
+<td><div class="first last line-block">
+<div class="line">Bazel 0.19.2</div>
+<div class="line">CMake 3.5.1</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Clang 6.0</div>
+<div class="line">GCC 5.4</div>
+</div>
+</td>
+<td>OpenJDK 8</td>
+<td>R2017a</td>
+<td>2.7.11</td>
+</tr>
+<tr class="row-even"><td>Ubuntu 18.04 LTS (Bionic Beaver)</td>
+<td><div class="first last line-block">
+<div class="line">Bazel 0.19.2</div>
+<div class="line">CMake 3.10.2</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Clang 6.0</div>
+<div class="line">GCC 7.3</div>
+</div>
+</td>
+<td>OpenJDK 11</td>
+<td rowspan="3">R2018b</td>
+<td rowspan="3">2.7.15</td>
+</tr>
+<tr class="row-odd"><td>macOS High Sierra (10.13)</td>
+<td rowspan="2"><div class="first last line-block">
+<div class="line">Bazel 0.19.2</div>
+<div class="line">CMake 3.13.0</div>
+</div>
+</td>
+<td rowspan="2">Apple LLVM 10.0</td>
+<td rowspan="2">Oracle 11</td>
+</tr>
+<tr class="row-even"><td>macOS Mojave (10.14)</td>
+</tr>
+</tbody>
+</table>
+<p>macOS Mojave C++ and Python support and macOS and Ubuntu Bionic MATLAB support
+is experimental and untested in continuous integration.</p>
+<div class="section" id="binary-packages">
+<span id="id3"></span><h3><a class="toc-backref" href="#id9">Binary Packages</a><a class="headerlink" href="#binary-packages" title="Permalink to this headline">¶</a></h3>
+<p>The binary releases of Drake are built with GCC 5.4 on Ubuntu Xenial, GCC 7.3
+on Ubuntu Bionic, and Apple LLVM 10.0 on macOS High Sierra.</p>
+<p>The links for these packages are listed in <a class="reference internal" href="from_binary.html#binary-installation"><span class="std std-ref">Binary installation (macOS, Ubuntu)</span></a>.</p>
+</div>
+</div>
+<div class="section" id="issue-tracking">
+<h2><a class="toc-backref" href="#id10">Issue Tracking</a><a class="headerlink" href="#issue-tracking" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">GitHub Issue Management</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="code-review">
+<h2><a class="toc-backref" href="#id11">Code Review</a><a class="headerlink" href="#code-review" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="review-process">
+<h3><a class="toc-backref" href="#id12">Review Process</a><a class="headerlink" href="#review-process" title="Permalink to this headline">¶</a></h3>
+<p>For complex changes, especially those that will span multiple PRs, please
+open a GitHub issue and solicit design feedback before you invest a lot of
+time in code.</p>
+<p>Before your submit a pull request, please consult the
+<a class="reference internal" href="code_review_checklist.html#code-review-checklist"><span class="std std-ref">Code Review Checklist</span></a>,
+where a list of the most frequent problems are collected.</p>
+<p>Be prepared to engage in active code review on your pull requests.  The Drake
+code review process has two phases: feature review and platform review. You
+are responsible for finding reviewers, and for providing them the information
+they need to review your change effectively. If a reviewer asks you for more
+information, that is a sign you should add more documentation to your PR.</p>
+<p>A PR generally <em>should not</em> include more than 750 added or changed lines (the
+green <code class="docutils literal"><span class="pre">+###</span></code> number as reported by github), and <em>must not</em> include more than
+1500 lines, with the following exemptions:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Data files do not count towards the line limit.</li>
+<li>Machine-generated changes do not count towards the line limit.</li>
+<li>Files in
+<a class="reference internal" href="directory_structure.html#directory-structure-special-directories"><span class="std std-ref">Special Directories</span></a>
+do not count towards the line limit.</li>
+<li>This rule may be overridden by agreement of at least two platform reviewers
+(listed below).</li>
+</ul>
+</div></blockquote>
+<p>The utility <code class="docutils literal"><span class="pre">tools/prstat</span></code> will report the total added or changed
+lines, excluding files that are easily identified to meet the exemptions above.</p>
+<p>We use <a class="reference external" href="https://reviewable.io">https://reviewable.io</a> for code reviews. You can sign in for free with
+your GitHub identity. Before your first code review, please take a look at
+<a class="reference internal" href="reviewable.html"><span class="doc">Tips for Participating In Drake Code Reviews using reviewable.io</span></a>.</p>
+<p><strong>Feature Review.</strong> After creating your pull request, assign it to someone
+else on your team for feature review. Choose the person most familiar
+with the context of your pull request. This reviewer is responsible for
+protecting your team by inspecting for bugs, for test coverage, and for
+alignment with the team’s goals. During this review, you and your reviewer
+should also strive to minimize the number of changes that will be necessary
+in platform review.</p>
+<p><strong>Platform Review.</strong> After your feature reviewer has signed off on your change,
+reassign it to a Drake owner for platform review. The owner will inspect for
+architectural compatibility, stability, performance, test coverage, and style.</p>
+<p>The following GitHub users are Drake owners. If possible, seek platform review
+from an owner who has previously reviewed related changes. Shared context will
+make the review faster.</p>
+<ul class="simple">
+<li>&#64;EricCousineau-TRI (Toyota Research Institute)</li>
+<li>&#64;ggould-tri (Toyota Research Institute)</li>
+<li>&#64;jwnimmer-tri (Toyota Research Institute)</li>
+<li>&#64;sammy-tri (Toyota Research Institute)</li>
+<li>&#64;SeanCurtis-TRI (Toyota Research Institute)</li>
+<li>&#64;sherm1 (Toyota Research Institute)</li>
+<li>&#64;soonho-tri (Toyota Research Institute)</li>
+<li>&#64;RussTedrake (MIT / Toyota Research Institute)</li>
+</ul>
+<p><strong>Merge.</strong> If you have write access to RobotLocomotion/drake, a green
+“Merge Pull Request” button will appear when your change is fully reviewed and
+passes CI. You may click it to merge your PR. If you do not have write access,
+or if you believe that status checks are failing for inconsequential reasons,
+ask your platform reviewer to perform the merge for you.</p>
+<p><strong>After Merge.</strong> If your PR breaks continuous integration, the <a class="reference internal" href="buildcop.html"><span class="doc">Build Cop</span></a>
+will contact you to work out a resolution.</p>
+</div>
+<div class="section" id="review-process-tooling">
+<h3><a class="toc-backref" href="#id13">Review Process Tooling</a><a class="headerlink" href="#review-process-tooling" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reviewable.html">Tips for Participating In Drake Code Reviews using reviewable.io</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="user-assistance">
+<span id="continuous-integration-notes"></span><h2><a class="toc-backref" href="#id14">User Assistance</a><a class="headerlink" href="#user-assistance" title="Permalink to this headline">¶</a></h2>
+<p>The user-facing instructions for requesting assistance are located in
+<a class="reference internal" href="getting_help.html#getting-help"><span class="std std-ref">Getting Help</span></a>. The two main options for requesting assistance are either
+posting a GitHub issue or a StackOverflow question.</p>
+<div class="section" id="handling-user-github-issues">
+<h3><a class="toc-backref" href="#id15">Handling User GitHub Issues</a><a class="headerlink" href="#handling-user-github-issues" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference internal" href="issues.html#issues"><span class="std std-ref">GitHub Issue Management</span></a>.</p>
+<p>If a GitHub issue should instead be a StackOverflow question (e.g. it is of a
+tutorial nature that does not require code or documentation modification),
+please request that the user repost the question on StackOverflow, post the
+new link on the GitHub issue, and close the issue.</p>
+</div>
+<div class="section" id="handling-user-stackoverflow-questions">
+<h3><a class="toc-backref" href="#id16">Handling User StackOverflow Questions</a><a class="headerlink" href="#handling-user-stackoverflow-questions" title="Permalink to this headline">¶</a></h3>
+<p>Please subscribe to the <code class="docutils literal"><span class="pre">drake</span></code> tag by following
+<a class="reference external" href="https://meta.stackoverflow.com/a/336515/7829525">these general instructions</a>,
+if you are able to.</p>
+<p>Please also monitor for <a class="reference external" href="https://stackoverflow.com/unanswered/tagged/drake?tab=noanswers">unanswered StackOverflow posts</a>
+once per day. If there are unanswered questions that you are unsure of the
+answer, consider posting on the Slack <code class="docutils literal"><span class="pre">#onramp</span></code> channel to see if someone
+can can look into the question.</p>
+<p>The following developers are subscribed to the <code class="docutils literal"><span class="pre">drake</span></code> tag, and will monitor
+it:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Russ Tedrake</li>
+<li>Eric Cousineau</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id17">Continuous Integration Notes</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://drake-cdash.csail.mit.edu/index.php?project=Drake">CDash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jenkins.html">GitHub PR Interaction with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buildcop.html">Build Cop</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="documentation-instructions">
+<h2><a class="toc-backref" href="#id18">Documentation Instructions</a><a class="headerlink" href="#documentation-instructions" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documentation_instructions.html">Documentation Generation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="doxygen_instructions.html">Doxygen Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx_instructions.html">Sphinx Instructions</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="ide-and-text-editor-notes">
+<h2><a class="toc-backref" href="#id19">IDE and Text Editor Notes</a><a class="headerlink" href="#ide-and-text-editor-notes" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="clion.html">CLion IDE setup</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/tkoolen/drake/wiki/Eclipse-setup-(experimental)">Eclipse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sublime_text.html">Sublime Text Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unicode_tips_tricks.html">Unicode Tips &amp; Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vim.html">Vim/Neovim Notes</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="operating-system-notes">
+<h2><a class="toc-backref" href="#id20">Operating System Notes</a><a class="headerlink" href="#operating-system-notes" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development_on_mac.html">Drake Development on macOS</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="programming-style-notes">
+<h2><a class="toc-backref" href="#id21">Programming Style Notes</a><a class="headerlink" href="#programming-style-notes" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code_review_checklist.html">Code Review Checklist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_style_guide.html">Code Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_style_tools.html">Tools for Code Style Compliance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="directory_structure.html">Directory Structure</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="version-control">
+<h2><a class="toc-backref" href="#id22">Version Control</a><a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="no_push_to_origin.html">Avoid Accidental Pushes to the Repository</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">For Developers</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#licensing">Licensing</a></li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#supported-configurations">Supported Configurations</a><ul>
+<li><a class="reference internal" href="#binary-packages">Binary Packages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#issue-tracking">Issue Tracking</a></li>
+<li><a class="reference internal" href="#code-review">Code Review</a><ul>
+<li><a class="reference internal" href="#review-process">Review Process</a></li>
+<li><a class="reference internal" href="#review-process-tooling">Review Process Tooling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-assistance">User Assistance</a><ul>
+<li><a class="reference internal" href="#handling-user-github-issues">Handling User GitHub Issues</a></li>
+<li><a class="reference internal" href="#handling-user-stackoverflow-questions">Handling User StackOverflow Questions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">Continuous Integration Notes</a></li>
+<li><a class="reference internal" href="#documentation-instructions">Documentation Instructions</a></li>
+<li><a class="reference internal" href="#ide-and-text-editor-notes">IDE and Text Editor Notes</a></li>
+<li><a class="reference internal" href="#operating-system-notes">Operating System Notes</a></li>
+<li><a class="reference internal" href="#programming-style-notes">Programming Style Notes</a></li>
+<li><a class="reference internal" href="#version-control">Version Control</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="unit_testing_instructions.html" title="Detailed Notes on Drake’s Unit Tests"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

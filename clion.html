@@ -1,0 +1,597 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CLion IDE setup &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sublime Text Notes" href="sublime_text.html" />
+    <link rel="prev" title="Sphinx Instructions" href="sphinx_instructions.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sublime_text.html" title="Sublime Text Notes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sphinx_instructions.html" title="Sphinx Instructions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="clion-ide-setup">
+<h1>CLion IDE setup<a class="headerlink" href="#clion-ide-setup" title="Permalink to this headline">¶</a></h1>
+<p>This guide describes how to set up Drake in the JetBrains CLion IDE.</p>
+<p><strong>NOTE: EVERY SETUP STEP IN THIS DOCUMENT IS CRITICAL TO GET CLION WORKING
+PROPERLY.  Read carefully, and don’t skip anything.</strong></p>
+<div class="section" id="using-clion-with-bazel">
+<h2>Using CLion with Bazel<a class="headerlink" href="#using-clion-with-bazel" title="Permalink to this headline">¶</a></h2>
+<p>First, you <strong>must</strong> install Bazel and build Drake with Bazel, following
+<a class="reference internal" href="bazel.html#bazel"><span class="std std-ref">the Drake Bazel instructions</span></a>.</p>
+<p>To use Drake with CLion, your Drake checkout <strong>must</strong> be named <code class="docutils literal"><span class="pre">drake</span></code>.</p>
+<div class="section" id="installing-clion">
+<h3>Installing CLion<a class="headerlink" href="#installing-clion" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Go to <a class="reference external" href="https://www.jetbrains.com/clion/download/">https://www.jetbrains.com/clion/download/</a>. Download the latest version
+of CLion.</li>
+<li>Install CLion. Exact steps depend on your platform, but it’s
+straightforward. Just using defaults for everything is fine. You now have a
+30-day trial version of CLion. Either try it out as is, or get a free
+academic license <a class="reference external" href="https://www.jetbrains.com/shop/eform/students">here</a>.</li>
+</ol>
+<dl class="docutils">
+<dt>The most recent versions that we have tested for compatibility are:</dt>
+<dd><ul class="first last simple">
+<li>Ubuntu 16.04</li>
+<li>Bazel 0.19.2</li>
+<li>CLion 2018.2.6 with:<ul>
+<li>Bazel plug-in 2018.10.22.0.2.</li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+<p>Many versions the above (Bazel / CLion / plug-in) are <em>not</em> compatible with
+each other.  We strongly suggest using only the versions shown above, when
+working with Drake.</p>
+<p>For developers on macOS, see the <a class="reference internal" href="#macos"><span class="std std-ref">macOS support</span></a> details.</p>
+</div>
+<div class="section" id="upgrading-clion">
+<h3>Upgrading CLion<a class="headerlink" href="#upgrading-clion" title="Permalink to this headline">¶</a></h3>
+<p>Users upgrading from a previous version of CLion should do the following:</p>
+<ol class="arabic simple">
+<li>To have your Unity launcher CLion icon point to the correct version,
+run <code class="docutils literal"><span class="pre">locate</span> <span class="pre">jetbrains-clion.desktop</span></code> and edit the located file. If more
+than one file is located, you may want to consolidate to a single launch file
+in your user directory, typically <code class="docutils literal"><span class="pre">~/.local/share/applications</span></code>.</li>
+<li>Uninstall the previous version of the Bazel plugin and update to the latest
+version. See <a class="reference internal" href="#installing-the-bazel-plugin">Installing the Bazel Plugin</a>.</li>
+</ol>
+<p><strong>Note</strong>: It is not necessary to import your project into a <em>new</em> CLion project.
+Overwriting the old project is appropriate.</p>
+</div>
+<div class="section" id="installing-the-bazel-plugin">
+<h3>Installing the Bazel Plugin<a class="headerlink" href="#installing-the-bazel-plugin" title="Permalink to this headline">¶</a></h3>
+<p>To use Bazel in CLion, you <strong>must</strong> install a plugin supplied by Google.  To
+install the plugin, open <code class="docutils literal"><span class="pre">Settings</span></code> (either <code class="docutils literal"><span class="pre">Welcome</span> <span class="pre">&gt;</span> <span class="pre">Configure</span> <span class="pre">&gt;</span>
+<span class="pre">Settings</span></code> or <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Settings</span></code>), select <code class="docutils literal"><span class="pre">Plugins</span></code>, and press the <code class="docutils literal"><span class="pre">Browse</span>
+<span class="pre">repositories</span></code> button.  Locate and install the <code class="docutils literal"><span class="pre">Bazel</span></code> plugin. You will be
+prompted to restart CLion.</p>
+<p>To use Drake in CLion you <strong>must</strong> use Drake’s bazel wrapper.
+Open <code class="docutils literal"><span class="pre">Settings</span> <span class="pre">&gt;</span> <span class="pre">Bazel</span> <span class="pre">Settings</span></code>.  For <code class="docutils literal"><span class="pre">Bazel</span> <span class="pre">binary</span> <span class="pre">location</span></code> select the
+path to <code class="docutils literal"><span class="pre">drake/tools/clion/bazel_wrapper</span></code> from any recent Drake source tree
+(it doesn’t have to match the current project open in CLion).</p>
+</div>
+<div class="section" id="setting-up-drake-in-clion">
+<h3>Setting up Drake in CLion<a class="headerlink" href="#setting-up-drake-in-clion" title="Permalink to this headline">¶</a></h3>
+<p>CLion will invoke Bazel to build Drake, including the external dependencies
+specified in the WORKSPACE file.</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Import</span> <span class="pre">Bazel</span> <span class="pre">Project</span></code></li>
+<li>Select Workspace: Use an existing Bazel workspace, and provide the path to
+your <code class="docutils literal"><span class="pre">drake</span></code> directory.</li>
+<li>Select Project View: choose “Import project view file”, and
+select the file <code class="docutils literal"><span class="pre">drake/.bazelproject</span></code></li>
+<li>Project View: Pick a <code class="docutils literal"><span class="pre">project</span> <span class="pre">data</span> <span class="pre">directory</span></code> of your choice for the
+CLion project files. It must not be a subdirectory of <code class="docutils literal"><span class="pre">drake</span></code>.</li>
+<li>(Advanced) Project View: If you only wish to develop a subset of Drake,
+you can specify only those files and targets in the project view file.
+Most users should leave it as-is.</li>
+<li>Click “Finish”.  CLion will begin ingesting the Drake source, building
+symbols, and compiling Drake. This will take several minutes.</li>
+</ol>
+</div>
+<div class="section" id="building-and-running-targets">
+<h3>Building and Running Targets<a class="headerlink" href="#building-and-running-targets" title="Permalink to this headline">¶</a></h3>
+<p>To build all of Drake with default Bazel options, select
+<code class="docutils literal"><span class="pre">Bazel</span> <span class="pre">&gt;</span> <span class="pre">Build</span> <span class="pre">&gt;</span> <span class="pre">Compile</span> <span class="pre">Project</span></code>.</p>
+<p>To build or run a specific target go to <code class="docutils literal"><span class="pre">Run</span> <span class="pre">&gt;</span> <span class="pre">Edit</span> <span class="pre">Configurations</span></code>. Click
+<code class="docutils literal"><span class="pre">+</span></code> to create a new Bazel command.  Specify the configuration name and Bazel
+options. The <code class="docutils literal"><span class="pre">Target</span> <span class="pre">expression</span></code> specifies the actual code (library, binary,
+and/or test) that you want to run. To learn more about target expressions, see
+<cite>the Bazel manual
+&lt;https://docs.bazel.build/versions/master/user-manual.html#target-patterns&gt;</cite>
+_. Once you’ve created a configuration, you can launch it from the <code class="docutils literal"><span class="pre">Run</span></code> menu.</p>
+<p>To run a specific target in the debugger, create a configuration as above,
+using the <code class="docutils literal"><span class="pre">bazel</span> <span class="pre">run</span></code> command. Then launch it from <code class="docutils literal"><span class="pre">Run</span> <span class="pre">&gt;</span> <span class="pre">Debug</span></code>.</p>
+</div>
+<div class="section" id="keeping-clion-up-to-date-with-the-bazel-build">
+<h3>Keeping CLion Up-to-Date with the Bazel Build<a class="headerlink" href="#keeping-clion-up-to-date-with-the-bazel-build" title="Permalink to this headline">¶</a></h3>
+<p>Changes to BUILD files can add or remove source files from the Bazel build.
+To propagate those changes into the CLion project structure, select
+<code class="docutils literal"><span class="pre">Bazel</span> <span class="pre">&gt;</span> <span class="pre">Sync</span> <span class="pre">Project</span> <span class="pre">With</span> <span class="pre">BUILD</span> <span class="pre">Files</span></code>.</p>
+</div>
+<div class="section" id="git-integration">
+<h3>Git Integration<a class="headerlink" href="#git-integration" title="Permalink to this headline">¶</a></h3>
+<p>CLion provides a user interface for Git, which you can enable in the <code class="docutils literal"><span class="pre">VCS</span></code>
+menu.  It automatically detects all Git roots within the workspace. This will
+include <code class="docutils literal"><span class="pre">bazel-drake</span></code>, which is a Bazel-internal detail. Bazel edits
+the contents of that directory for its own purposes, and those changes will
+spuriously appear in the CLion UI as changes that need to be committed. To make
+CLion ignore <code class="docutils literal"><span class="pre">bazel-drake</span></code>, enable Git integration under the <code class="docutils literal"><span class="pre">VCS</span></code>
+tab, then go to <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Settings</span></code>. Select the <code class="docutils literal"><span class="pre">Version</span> <span class="pre">Control</span></code> menu item
+directly (not one of the subtopics displayed when that item is expanded). You
+will see a list of all the Git root directories. Look for <code class="docutils literal"><span class="pre">bazel-drake</span></code>
+on that list and select it. On the right hand side are <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">-</span></code> buttons;
+click <code class="docutils literal"><span class="pre">-</span></code> to remove the spurious root directory. After that you should be
+able to go to <code class="docutils literal"><span class="pre">VCS</span> <span class="pre">&gt;</span> <span class="pre">Commit</span> <span class="pre">Changes</span></code> and there should be no changes seen.</p>
+</div>
+</div>
+<div class="section" id="integrating-external-tools-with-clion">
+<h2>Integrating External Tools with CLion<a class="headerlink" href="#integrating-external-tools-with-clion" title="Permalink to this headline">¶</a></h2>
+<p>CLion provides a mechanism for invoking external binaries/scripts/etc. with
+parameters derived from the CLion GUI. Below, we outline a number of common
+tools to aid with compliance with the Drake style guide. The work to create
+a new external tool is the same in all cases; only the specific tool settings
+differ from tool to tool. We’ll outline the general work here and provide
+per-tool details below. The GUI description applies to version 2018.1.6 and
+may be slightly different in previous versions.</p>
+<ol class="arabic simple">
+<li>Open the Settings dialog (<code class="docutils literal"><span class="pre">File</span></code> &gt; <code class="docutils literal"><span class="pre">Settings</span></code>) or <code class="docutils literal"><span class="pre">Alt+Ctrl+S</span></code>.</li>
+<li>Navigate to <code class="docutils literal"><span class="pre">Tools</span></code> &gt; <code class="docutils literal"><span class="pre">External</span> <span class="pre">Tools</span></code>.</li>
+<li>Click the <span class="raw-html"><font size="5" color="green">+</font></span> sign to add a new
+tool.</li>
+<li>Set the appropriate fields in the <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">Tool</span></code>. See the following tools for
+details.</li>
+<li>Click <code class="docutils literal"><span class="pre">Ok</span></code>.</li>
+</ol>
+<p>There are several ways to use an <em>External Tool</em>. One is to right-click on a
+file and select <code class="docutils literal"><span class="pre">External</span> <span class="pre">Tools</span></code> &gt; <code class="docutils literal"><span class="pre">Tool</span> <span class="pre">Name</span></code>. Another is to select
+<code class="docutils literal"><span class="pre">Tools</span></code> &gt; <code class="docutils literal"><span class="pre">External</span> <span class="pre">Tools</span></code> &gt; <code class="docutils literal"><span class="pre">Tool</span> <span class="pre">Name</span></code>. For tools that operate on a
+selected file, make sure that file is “active” by clicking on it. The
+<code class="docutils literal"><span class="pre">Tool</span> <span class="pre">Name</span></code> will be the value set in the <code class="docutils literal"><span class="pre">Name</span></code> field outlined below.</p>
+<div class="section" id="formatting-files">
+<span id="integrating-format-tools-with-clion"></span><h3>Formatting files<a class="headerlink" href="#formatting-files" title="Permalink to this headline">¶</a></h3>
+<p>You can use clang format to modify the formatting of your file in the GUI. We’ll
+introduce three variants:</p>
+<ul class="simple">
+<li>Apply clang-format to a whole file.</li>
+<li>Apply clang-format to selected lines.</li>
+<li>Apply clang-format to correct <code class="docutils literal"><span class="pre">#include</span></code> ordering.</li>
+</ul>
+<p>These tools modify the selected file. There is a synchronization issue with
+CLion such that the modification may not be immediately apparent. When in doubt,
+select away from the target file and back; this will cause the file to refresh
+and you can confirm that the file has been modified as expected.</p>
+<p>First, make sure you have installed <code class="docutils literal"><span class="pre">clang-format-6.0</span></code>
+(see <a class="reference internal" href="code_style_tools.html"><span class="doc">Tools for Code Style Compliance</span></a>).</p>
+<div class="section" id="clang-format-selected-file">
+<h4>Clang format selected file<a class="headerlink" href="#clang-format-selected-file" title="Permalink to this headline">¶</a></h4>
+<p>Open the <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">Tool</span></code> for external tools as outlined above and enter the
+following values for the fields:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal"><span class="pre">Clang</span> <span class="pre">Format</span> <span class="pre">Full</span> <span class="pre">File</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><code class="docutils literal"><span class="pre">Apply</span> <span class="pre">clang-format</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">active</span> <span class="pre">file</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Program:</th><td class="field-body"><code class="docutils literal"><span class="pre">clang-format-6.0</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arguments:</th><td class="field-body"><code class="docutils literal"><span class="pre">-i</span> <span class="pre">$FileName$</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Working directory:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><code class="docutils literal"><span class="pre">$FileDir$</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Advanced Options:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Uncheck <code class="docutils literal"><span class="pre">Open</span> <span class="pre">console</span> <span class="pre">for</span> <span class="pre">tool</span> <span class="pre">output</span></code></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Leave the checkbox options in their default state.</p>
+</div>
+<div class="section" id="clang-format-selected-lines">
+<h4>Clang format selected lines<a class="headerlink" href="#clang-format-selected-lines" title="Permalink to this headline">¶</a></h4>
+<p>Open the <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">Tool</span></code> for external tools as outlined above and enter the
+following values for the fields:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal"><span class="pre">Clang</span> <span class="pre">Format</span> <span class="pre">Selected</span> <span class="pre">Lines</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><code class="docutils literal"><span class="pre">Apply</span> <span class="pre">clang-format</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">selected</span> <span class="pre">lines</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Program:</th><td class="field-body"><code class="docutils literal"><span class="pre">clang-format-6.0</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arguments:</th><td class="field-body"><code class="docutils literal"><span class="pre">-lines</span> <span class="pre">$SelectionStartLine$:$SelectionEndLine$</span> <span class="pre">-i</span> <span class="pre">$FileName$</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Working directory:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><code class="docutils literal"><span class="pre">$FileDir$</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Advanced Options:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Uncheck <code class="docutils literal"><span class="pre">Open</span> <span class="pre">console</span> <span class="pre">for</span> <span class="pre">tool</span> <span class="pre">output</span></code></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Leave the checkbox options in their default state.</p>
+</div>
+<div class="section" id="correct-include-ordering">
+<h4>Correct #include ordering<a class="headerlink" href="#correct-include-ordering" title="Permalink to this headline">¶</a></h4>
+<p>Open the <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">Tool</span></code> for external tools as outlined above and enter the
+following values for the fields:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal"><span class="pre">Clang</span> <span class="pre">Format</span> <span class="pre">Include</span> <span class="pre">Ordering</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><code class="docutils literal"><span class="pre">Runs</span> <span class="pre">the</span> <span class="pre">clang</span> <span class="pre">format</span> <span class="pre">for</span> <span class="pre">correcting</span> <span class="pre">includes</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">current</span>
+<span class="pre">file</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Program:</th><td class="field-body"><code class="docutils literal"><span class="pre">bazel</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arguments:</th><td class="field-body"><code class="docutils literal"><span class="pre">run</span> <span class="pre">//tools/lint:clang-format-includes</span> <span class="pre">--</span> <span class="pre">$FilePath$</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Working directory:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><code class="docutils literal"><span class="pre">$Projectpath$</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Advanced Options:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Uncheck <code class="docutils literal"><span class="pre">Open</span> <span class="pre">console</span> <span class="pre">for</span> <span class="pre">tool</span> <span class="pre">output</span></code></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Leave the checkbox options in their default state.</p>
+</div>
+</div>
+<div class="section" id="linting-files">
+<span id="integrating-lint-tools-with-clion"></span><h3>“Linting” files<a class="headerlink" href="#linting-files" title="Permalink to this headline">¶</a></h3>
+<p>“Linting” refers to using tools to find aspects of code which don’t conform
+to specified coding practices. You can apply Drake’s linting tools in CLion to
+find such issues. We’ll define two tools:</p>
+<ul class="simple">
+<li>General linting (via cpplint) which captures most of the Drake style guide.</li>
+<li>Drake extended linting which captures aspects of the Drake style guide _not_
+captured by the general linting tool. This includes detecting out-of-order
+<code class="docutils literal"><span class="pre">#include</span></code> directives.</li>
+</ul>
+<p>These tools produce reports. In some cases, the reports can be automatically
+converted into clickable links so that you can click on a message and be taken
+to the file and line indicated in the message. The configuration instructions
+include the details of how to configure these clickable links.</p>
+<p>You can also set the general coding style for CLion through the following steps</p>
+<ol class="arabic simple">
+<li>Go to <code class="docutils literal"><span class="pre">File</span></code> &gt; <code class="docutils literal"><span class="pre">Settings</span></code> &gt; <code class="docutils literal"><span class="pre">Editor</span></code> &gt; <code class="docutils literal"><span class="pre">Code</span> <span class="pre">Style</span></code></li>
+<li>On the right panel, Go to <code class="docutils literal"><span class="pre">Default</span> <span class="pre">Options</span></code> &gt; <code class="docutils literal"><span class="pre">Right</span> <span class="pre">margin</span> <span class="pre">(columns)</span></code>:
+Set it to 80</li>
+<li>Go to <code class="docutils literal"><span class="pre">File</span></code> &gt; <code class="docutils literal"><span class="pre">Settings</span></code> &gt; <code class="docutils literal"><span class="pre">Editor</span></code> &gt; <code class="docutils literal"><span class="pre">Code</span> <span class="pre">Style</span></code> &gt; <code class="docutils literal"><span class="pre">C/C++</span></code></li>
+<li>On the right panel, choose <code class="docutils literal"><span class="pre">Set</span> <span class="pre">from</span></code> &gt; <code class="docutils literal"><span class="pre">Predefined</span> <span class="pre">Style</span></code> &gt; <code class="docutils literal"><span class="pre">Google</span></code></li>
+</ol>
+<div class="section" id="lint-selected-file-for-google-style-guide">
+<h4>Lint selected file for google style guide<a class="headerlink" href="#lint-selected-file-for-google-style-guide" title="Permalink to this headline">¶</a></h4>
+<p>Open the <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">Tool</span></code> for external tools as outlined above and enter the
+following values for the fields:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal"><span class="pre">Cpplint</span> <span class="pre">File</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><code class="docutils literal"><span class="pre">Apply</span> <span class="pre">cpplint</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">file</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Program:</th><td class="field-body"><code class="docutils literal"><span class="pre">bazel</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arguments:</th><td class="field-body"><code class="docutils literal"><span class="pre">run</span> <span class="pre">&#64;styleguide//:cpplint</span> <span class="pre">--</span> <span class="pre">--output=eclipse</span>
+<span class="pre">$FilePath$</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Working directory:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><code class="docutils literal"><span class="pre">$Projectpath$</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Advanced Options:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Confirm <code class="docutils literal"><span class="pre">Open</span> <span class="pre">console</span> <span class="pre">for</span> <span class="pre">tool</span> <span class="pre">output</span></code> is checked</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>To configure the clickable links, enter the following string in the <code class="docutils literal"><span class="pre">Advanced</span>
+<span class="pre">Options</span></code> &gt; <code class="docutils literal"><span class="pre">Output</span> <span class="pre">filters</span></code> window:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">$FILE_PATH$:$LINE$</span></code></div></blockquote>
+</div>
+<div class="section" id="lint-selected-file-for-drake-style-addenda">
+<h4>Lint selected file for Drake style addenda<a class="headerlink" href="#lint-selected-file-for-drake-style-addenda" title="Permalink to this headline">¶</a></h4>
+<p>This tool is a supplement to the google style cpplint. It tests for additional
+style requirements which are otherwise missed by the general tool. The primary
+reason to run this is to confirm that the order of the <code class="docutils literal"><span class="pre">#include</span></code> statements
+is correct.</p>
+<p>Open the <code class="docutils literal"><span class="pre">Edit</span> <span class="pre">Tool</span></code> for external tools as outlined above and enter the
+following values for the fields:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Name:</th><td class="field-body"><code class="docutils literal"><span class="pre">Drake</span> <span class="pre">Lint</span> <span class="pre">File</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Description:</th><td class="field-body"><code class="docutils literal"><span class="pre">Apply</span> <span class="pre">drake</span> <span class="pre">lint</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">file</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Program:</th><td class="field-body"><code class="docutils literal"><span class="pre">bazel</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arguments:</th><td class="field-body"><code class="docutils literal"><span class="pre">run</span> <span class="pre">//tools/lint:drakelint</span> <span class="pre">--</span> <span class="pre">$FilePath$</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Working directory:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><code class="docutils literal"><span class="pre">$Projectpath$</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Advanced Options:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Confirm <code class="docutils literal"><span class="pre">Open</span> <span class="pre">console</span> <span class="pre">for</span> <span class="pre">tool</span> <span class="pre">output</span></code> is checked</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>In the event of finding a lint problem (e.g., out-of-order include files), the
+CLion output will contain a <em>single</em> clickable link. This link is only the
+<em>first</em> error encountered in the include section; there may be more. The link
+merely provides a hint to the developer to see the problem area. Rather than
+fixing by hand, we strongly recommend executing the <code class="docutils literal"><span class="pre">Clang</span> <span class="pre">Format</span> <span class="pre">Include</span>
+<span class="pre">Ordering</span></code> external tool on the file.</p>
+</div>
+<div class="section" id="alternative-linting-configuration">
+<h4>Alternative linting configuration<a class="headerlink" href="#alternative-linting-configuration" title="Permalink to this headline">¶</a></h4>
+<p>The linting tools have been configured to use the bazel system. The advantage in
+doing so is that it guarantees that the tools are built prior to being used.
+However, bazel only allows one instance of bazel to run at a time. For example,
+if building Drake in a command-line window, it would be impossible to lint files
+at the same time.</p>
+<p>The work around is to change the configurations to execute the binaries
+directly. This approach generally works but will fail if the corresponding bazel
+targets have not been built. The tools would need to be built prior to
+execution.</p>
+<p>With this warning in place, you can make the following modifications to the
+linting tools to be able to lint and compile simultaneously.</p>
+<div class="section" id="google-style-guide-linting">
+<h5>Google style guide linting<a class="headerlink" href="#google-style-guide-linting" title="Permalink to this headline">¶</a></h5>
+<p>Change the following fields in the instructions given above:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Program:</th><td class="field-body"><code class="docutils literal"><span class="pre">bazel-bin/external/styleguide/cpplint_binary</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arguments:</th><td class="field-body"><code class="docutils literal"><span class="pre">--output=eclipse</span> <span class="pre">$FilePath$</span></code></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Building the google styleguide lint tool:</p>
+<p><code class="docutils literal"><span class="pre">bazel</span> <span class="pre">build</span> <span class="pre">&#64;styleguide//:cpplint</span></code></p>
+</div>
+<div class="section" id="drake-style-addenda">
+<h5>Drake style addenda<a class="headerlink" href="#drake-style-addenda" title="Permalink to this headline">¶</a></h5>
+<p>Change the following fields in the instructions given above:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Program:</th><td class="field-body"><code class="docutils literal"><span class="pre">bazel-bin/tools/lint/drakelint</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arguments:</th><td class="field-body"><code class="docutils literal"><span class="pre">$FilePath$</span></code></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Building the drake addenda lint tool:</p>
+<p><code class="docutils literal"><span class="pre">bazel</span> <span class="pre">build</span> <span class="pre">//tools/lint:drakelint</span></code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="macos-support">
+<span id="macos"></span><h2>macOS support<a class="headerlink" href="#macos-support" title="Permalink to this headline">¶</a></h2>
+<p>Google’s Bazel plug-in for CLion does not officially support macOS, per
+<a class="reference external" href="https://github.com/bazelbuild/intellij/issues/109">bazelbuild/intellij#109</a>.
+However, on a best-effort basis, we will document here any tips that Drake
+developers have discovered to fix the compatibility problems.</p>
+<div class="section" id="cpp-toolchain">
+<h3>CPP toolchain<a class="headerlink" href="#cpp-toolchain" title="Permalink to this headline">¶</a></h3>
+<p>CLion users on macOS <strong>must</strong> set this environment variable before starting
+CLion:</p>
+<p><code class="docutils literal"><span class="pre">export</span> <span class="pre">BAZEL_USE_CPP_ONLY_TOOLCHAIN=1</span></code></p>
+<p>CLion’s editor needs to locate all C/C++ targets and parse their code (e.g.,
+resolve <code class="docutils literal"><span class="pre">#include</span></code> statements).  Without this variable, the compiler
+auto-detection works well enough to compile the code, but fails to report
+itself as a C/C++ compiler to the IDE.</p>
+<p>When this variable is set and the IDE is working correctly, the Bazel Console
+will report a line such as this:</p>
+<p><code class="docutils literal"><span class="pre">953</span> <span class="pre">unique</span> <span class="pre">C</span> <span class="pre">configurations</span> <span class="pre">(0</span> <span class="pre">reused),</span> <span class="pre">1104</span> <span class="pre">C</span> <span class="pre">targets</span></code></p>
+<p>When this variable is <em>not</em> set, the IDE will show pervasive “unknown symbol”
+red squiggles, and the Bazel Console will report a line such as this:</p>
+<p><code class="docutils literal"><span class="pre">0</span> <span class="pre">unique</span> <span class="pre">C</span> <span class="pre">configurations</span> <span class="pre">(0</span> <span class="pre">reused),</span> <span class="pre">0</span> <span class="pre">C</span> <span class="pre">targets</span></code></p>
+</div>
+<div class="section" id="environment-variables">
+<h3>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h3>
+<p>CLion forwards environment variables to the processes it launches, including
+the Bazel client and server. We have a number of Bazel repository rules that
+consult environment variables to locate external dependencies, e.g.,
+<code class="docutils literal"><span class="pre">SNOPT_PATH</span></code> or <code class="docutils literal"><span class="pre">GUROBI_PATH</span></code>. Therefore, some care is necessary to make
+sure CLion is launched with the environment you actually want!</p>
+<p>macOS users will get broken behavior by default.  When you run an macOS app
+graphically, the parent process is <cite>launchd</cite> (PID 1), which provides its own
+standard environment variables to the child process.  In particular, it provides
+a minimal <code class="docutils literal"><span class="pre">PATH</span></code> that does not include <code class="docutils literal"><span class="pre">/usr/local/bin</span></code>, where most Homebrew
+executables are installed.  Consequently, the Bazel build may fail to find
+Homebrew dependencies like <code class="docutils literal"><span class="pre">glib</span></code> and <code class="docutils literal"><span class="pre">pkg-config</span></code>.</p>
+<p>The simplest solution is not to launch CLion graphically. Instead, configure
+your shell environment properly in <code class="docutils literal"><span class="pre">.bashrc</span></code>, and launch CLion from the
+command line:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Applications</span><span class="o">/</span><span class="n">CLion</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">MacOS</span><span class="o">/</span><span class="n">clion</span>
+</pre></div>
+</div>
+<p>If you strongly prefer clicking on buttons, you might be able to configure the
+<code class="docutils literal"><span class="pre">launchd</span></code> environment using <code class="docutils literal"><span class="pre">launchctl</span></code>, but this process is finicky. We
+have no reliable recipe for it yet.</p>
+</div>
+<div class="section" id="id1">
+<h3>Formatting files<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The instructions above related to <code class="docutils literal"><span class="pre">clang-format-6.0</span></code> are written for Ubuntu.
+On macOS, the program is named just <code class="docutils literal"><span class="pre">clang-format</span></code>, without the <code class="docutils literal"><span class="pre">-6.0</span></code>
+suffix.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">CLion IDE setup</a><ul>
+<li><a class="reference internal" href="#using-clion-with-bazel">Using CLion with Bazel</a><ul>
+<li><a class="reference internal" href="#installing-clion">Installing CLion</a></li>
+<li><a class="reference internal" href="#upgrading-clion">Upgrading CLion</a></li>
+<li><a class="reference internal" href="#installing-the-bazel-plugin">Installing the Bazel Plugin</a></li>
+<li><a class="reference internal" href="#setting-up-drake-in-clion">Setting up Drake in CLion</a></li>
+<li><a class="reference internal" href="#building-and-running-targets">Building and Running Targets</a></li>
+<li><a class="reference internal" href="#keeping-clion-up-to-date-with-the-bazel-build">Keeping CLion Up-to-Date with the Bazel Build</a></li>
+<li><a class="reference internal" href="#git-integration">Git Integration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#integrating-external-tools-with-clion">Integrating External Tools with CLion</a><ul>
+<li><a class="reference internal" href="#formatting-files">Formatting files</a><ul>
+<li><a class="reference internal" href="#clang-format-selected-file">Clang format selected file</a></li>
+<li><a class="reference internal" href="#clang-format-selected-lines">Clang format selected lines</a></li>
+<li><a class="reference internal" href="#correct-include-ordering">Correct #include ordering</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#linting-files">“Linting” files</a><ul>
+<li><a class="reference internal" href="#lint-selected-file-for-google-style-guide">Lint selected file for google style guide</a></li>
+<li><a class="reference internal" href="#lint-selected-file-for-drake-style-addenda">Lint selected file for Drake style addenda</a></li>
+<li><a class="reference internal" href="#alternative-linting-configuration">Alternative linting configuration</a><ul>
+<li><a class="reference internal" href="#google-style-guide-linting">Google style guide linting</a></li>
+<li><a class="reference internal" href="#drake-style-addenda">Drake style addenda</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#macos-support">macOS support</a><ul>
+<li><a class="reference internal" href="#cpp-toolchain">CPP toolchain</a></li>
+<li><a class="reference internal" href="#environment-variables">Environment Variables</a></li>
+<li><a class="reference internal" href="#id1">Formatting files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sublime_text.html" title="Sublime Text Notes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sphinx_instructions.html" title="Sphinx Instructions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

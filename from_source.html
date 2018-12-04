@@ -1,0 +1,180 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Source installation (macOS, Ubuntu) &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="macOS" href="mac.html" />
+    <link rel="prev" title="Binary installation (macOS, Ubuntu)" href="from_binary.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mac.html" title="macOS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="from_binary.html" title="Binary installation (macOS, Ubuntu)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="installation.html" accesskey="U">Installation and Quickstart</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="source-installation-macos-ubuntu">
+<span id="build-from-source"></span><h1>Source installation (macOS, Ubuntu)<a class="headerlink" href="#source-installation-macos-ubuntu" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="getting-drake">
+<span id="id1"></span><h2>Getting Drake<a class="headerlink" href="#getting-drake" title="Permalink to this headline">¶</a></h2>
+<p>We recommend that you <a class="reference external" href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">setup SSH access to Github.com</a>
+to avoid needing to type your password each time you access it. The following
+instructions assume you have uploaded your public SSH key to your Github
+account.</p>
+<p>Now run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">RobotLocomotion</span><span class="o">/</span><span class="n">drake</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Note: we suggest you keep the default clone directory name (<code class="docutils literal"><span class="pre">drake</span></code>) and not
+rename it (such as <code class="docutils literal"><span class="pre">drake2</span></code>).  The CLion integration will suffer if the
+checkout directory is not named <code class="docutils literal"><span class="pre">drake</span></code>.  (See <a class="reference internal" href="clion.html"><span class="doc">CLion IDE setup</span></a> for details.)</p>
+<p>Note: the build process may encounter problems if you have unusual characters
+like parentheses in the absolute path to the drake directory
+(see <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/394">#394</a>).</p>
+<p>The above <code class="docutils literal"><span class="pre">git</span> <span class="pre">clone</span></code> command will configure Drake’s primary repository as a
+remote called <code class="docutils literal"><span class="pre">origin</span></code>. We recommend that you configure your fork of Drake’s
+primary repository as the <code class="docutils literal"><span class="pre">origin</span></code> remote and Drake’s primary repository as
+the <code class="docutils literal"><span class="pre">upstream</span></code> remote. This can be done by executing the following commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">drake</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:[</span><span class="n">your</span> <span class="n">github</span> <span class="n">user</span> <span class="n">name</span><span class="p">]</span><span class="o">/</span><span class="n">drake</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">RobotLocomotion</span><span class="o">/</span><span class="n">drake</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="o">--</span><span class="n">push</span> <span class="n">upstream</span> <span class="n">no_push</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mandatory-platform-specific-instructions">
+<span id="platform-specific-setup"></span><h2>Mandatory platform specific instructions<a class="headerlink" href="#mandatory-platform-specific-instructions" title="Permalink to this headline">¶</a></h2>
+<p>Before running the build, you must follow some one-time platform-specific
+setup steps:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mac.html">macOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntu.html">Ubuntu</a></li>
+</ul>
+</div>
+<p>See <a class="reference internal" href="developers.html#supported-configurations"><span class="std std-ref">supported configurations</span></a>
+for the configurations and platforms that Drake officially supports.
+All else being equal, we would recommend developers use Ubuntu Xenial.</p>
+</div>
+<div class="section" id="build-with-bazel">
+<span id="id3"></span><h2>Build with Bazel<a class="headerlink" href="#build-with-bazel" title="Permalink to this headline">¶</a></h2>
+<p>For instructions, jump to <a class="reference internal" href="bazel.html#using-bazel"><span class="std std-ref">Using Bazel</span></a>, or check out the
+full details at:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bazel.html">Bazel build system</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Source installation (macOS, Ubuntu)</a><ul>
+<li><a class="reference internal" href="#getting-drake">Getting Drake</a></li>
+<li><a class="reference internal" href="#mandatory-platform-specific-instructions">Mandatory platform specific instructions</a></li>
+<li><a class="reference internal" href="#build-with-bazel">Build with Bazel</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mac.html" title="macOS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="from_binary.html" title="Binary installation (macOS, Ubuntu)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="installation.html" >Installation and Quickstart</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

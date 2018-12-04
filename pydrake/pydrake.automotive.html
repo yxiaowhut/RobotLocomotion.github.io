@@ -1,0 +1,856 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.automotive &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="next" title="pydrake.common" href="pydrake.common.html"/>
+        <link rel="prev" title="pydrake.autodiffutils" href="pydrake.autodiffutils.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>pydrake.automotive</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.automotive">
+<span id="pydrake-automotive"></span><h1>pydrake.automotive<a class="headerlink" href="#module-pydrake.automotive" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for Automotive systems</p>
+<dl class="class">
+<dt id="pydrake.automotive.AheadOrBehind">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">AheadOrBehind</code><a class="headerlink" href="#pydrake.automotive.AheadOrBehind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to assess the cars ahead or behind the ego car at
+its current orientation with respect to its lane.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kAhead :</p>
+<p>kBehind :</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.automotive.AheadOrBehind.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.AheadOrBehind</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.AheadOrBehind.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.AheadOrBehind.kAhead">
+<code class="descname">kAhead</code><em class="property"> = AheadOrBehind.kAhead</em><a class="headerlink" href="#pydrake.automotive.AheadOrBehind.kAhead" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.AheadOrBehind.kBehind">
+<code class="descname">kBehind</code><em class="property"> = AheadOrBehind.kBehind</em><a class="headerlink" href="#pydrake.automotive.AheadOrBehind.kBehind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.AheadOrBehind.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.automotive.AheadOrBehind.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.ClosestPose">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">ClosestPose</code><a class="headerlink" href="#pydrake.automotive.ClosestPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>ClosestPose bundles together the RoadOdometry of a particular target
+along with its distance measure relative to the ego vehicle. Its
+intended use is as the return argument for PoseSelector member
+functions.</p>
+<dl class="method">
+<dt id="pydrake.automotive.ClosestPose.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.automotive.ClosestPose.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.automotive.ClosestPose) -&gt; None</li>
+</ol>
+<p>Default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.automotive.ClosestPose, odom: drake::automotive::RoadOdometry&lt;double&gt;, dist: float) -&gt; None</li>
+</ol>
+<p>Constructs the ClosestPose via a full parameterization.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.ClosestPose.distance">
+<code class="descname">distance</code><a class="headerlink" href="#pydrake.automotive.ClosestPose.distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.ClosestPose.odometry">
+<code class="descname">odometry</code><a class="headerlink" href="#pydrake.automotive.ClosestPose.odometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.DrivingCommand">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">DrivingCommand</code><a class="headerlink" href="#pydrake.automotive.DrivingCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></p>
+<p>Specializes BasicVector with specific getters and setters.</p>
+<dl class="method">
+<dt id="pydrake.automotive.DrivingCommand.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.DrivingCommand</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.DrivingCommand.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor. Sets all rows to their default value:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">steering_angle</span></code> defaults to 0.0 rad.</li>
+<li><code class="docutils literal"><span class="pre">acceleration</span></code> defaults to 0.0 m/s^2.</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.DrivingCommand.acceleration">
+<code class="descname">acceleration</code><span class="sig-paren">(</span><em>self: pydrake.automotive.DrivingCommand</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.automotive.DrivingCommand.acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The signed acceleration, positive means speed up; negative means slow
+down, but should not move in reverse.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">acceleration</span></code> is expressed in units of m/s^2.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.DrivingCommand.set_acceleration">
+<code class="descname">set_acceleration</code><span class="sig-paren">(</span><em>self: pydrake.automotive.DrivingCommand</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.DrivingCommand.set_acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches acceleration().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.DrivingCommand.set_steering_angle">
+<code class="descname">set_steering_angle</code><span class="sig-paren">(</span><em>self: pydrake.automotive.DrivingCommand</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.DrivingCommand.set_steering_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches steering_angle().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.DrivingCommand.steering_angle">
+<code class="descname">steering_angle</code><span class="sig-paren">(</span><em>self: pydrake.automotive.DrivingCommand</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.automotive.DrivingCommand.steering_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The desired steering angle of a virtual center wheel, positive results
+in the vehicle turning left.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">steering_angle</span></code> is expressed in units of rad.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.IdmController">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">IdmController</code><a class="headerlink" href="#pydrake.automotive.IdmController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>IdmController implements the IDM (Intelligent Driver Model) planner,
+computed based only on the nearest car ahead. See IdmPlanner and
+PoseSelector for details. The output of this block is an acceleration
+value passed as a command to the vehicle.</p>
+<p>Input Port 0: PoseVector for the ego car. (InputPort getter:
+ego_pose_input())</p>
+<p>Input Port 1: FrameVelocity of the ego car. (InputPort getter:
+ego_velocity_input())</p>
+<p>Input Port 2: PoseBundle for the traffic cars, possibly inclusive of
+the ego car’s pose. (InputPort getter: traffic_input())</p>
+<p>Output Port 0: A BasicVector containing the acceleration request.
+(OutputPort getter: acceleration_output())</p>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<p>They are already available to link against in the containing library.</p>
+<dl class="method">
+<dt id="pydrake.automotive.IdmController.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.IdmController</em>, <em>road: drake::maliput::api::RoadGeometry</em>, <em>path_or_branches: pydrake.automotive.ScanStrategy</em>, <em>road_position_strategy: pydrake.automotive.RoadPositionStrategy</em>, <em>period_sec: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.IdmController.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">road</span></code>:</dt>
+<dd>The pre-defined RoadGeometry.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path_or_branches</span></code>:</dt>
+<dd>If ScanStrategy::kBranches, performs IDM computations using
+vehicles detected in confluent branches; if ScanStrategy::kPath,
+limits to vehicles on the default path. See documentation for
+PoseSelector::FindSingleClosestPose().</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">road_position_strategy</span></code>:</dt>
+<dd>Determines whether or not to cache RoadPosition. See
+<code class="docutils literal"><span class="pre">calc_ongoing_road_position.h</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">period_sec</span></code>:</dt>
+<dd>The update period to use if road_position_strategy ==
+RoadPositionStrategy::kCache.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.IdmController.acceleration_output">
+<code class="descname">acceleration_output</code><span class="sig-paren">(</span><em>self: pydrake.automotive.IdmController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.automotive.IdmController.acceleration_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.IdmController.ego_pose_input">
+<code class="descname">ego_pose_input</code><span class="sig-paren">(</span><em>self: pydrake.automotive.IdmController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.automotive.IdmController.ego_pose_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>See the class description for details on the following input ports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.IdmController.ego_velocity_input">
+<code class="descname">ego_velocity_input</code><span class="sig-paren">(</span><em>self: pydrake.automotive.IdmController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.automotive.IdmController.ego_velocity_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.IdmController.traffic_input">
+<code class="descname">traffic_input</code><span class="sig-paren">(</span><em>self: pydrake.automotive.IdmController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.automotive.IdmController.traffic_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.LaneDirection">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">LaneDirection</code><a class="headerlink" href="#pydrake.automotive.LaneDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>LaneDirection holds the lane that a MaliputRailcar is traversing and
+the direction in which it is moving. A MaliputRailcar can either
+travel in the increasing-<code class="docutils literal"><span class="pre">s</span></code> direction or in the decreasing-<code class="docutils literal"><span class="pre">s</span></code>
+direction.</p>
+<dl class="method">
+<dt id="pydrake.automotive.LaneDirection.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.LaneDirection</em>, <em>lane: drake::maliput::api::Lane</em>, <em>with_s: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.LaneDirection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully parameterized constructor.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.LaneDirection.lane">
+<code class="descname">lane</code><a class="headerlink" href="#pydrake.automotive.LaneDirection.lane" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.LaneDirection.with_s">
+<code class="descname">with_s</code><a class="headerlink" href="#pydrake.automotive.LaneDirection.with_s" title="Permalink to this definition">¶</a></dt>
+<dd><p>True means that the MaliputRailcar’s <code class="docutils literal"><span class="pre">s</span></code> coordinate increases when
+the vehicle has positive speed. False means the opposite.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.PoseSelector">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">PoseSelector</code><a class="headerlink" href="#pydrake.automotive.PoseSelector" title="Permalink to this definition">¶</a></dt>
+<dd><p>PoseSelector is a class that provides the relevant pose or poses with
+respect to a given ego vehicle driving within a given maliput road
+geometry.</p>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<p>They are already available to link against in the containing library.</p>
+<dl class="method">
+<dt id="pydrake.automotive.PoseSelector.FindClosestPair">
+<code class="descname">FindClosestPair</code><span class="sig-paren">(</span><em>lane: drake::maliput::api::Lane</em>, <em>ego_pose: pydrake.systems.rendering.PoseVector</em>, <em>traffic_poses: pydrake.systems.rendering.PoseBundle</em>, <em>scan_distance: float</em>, <em>path_or_branches: pydrake.automotive.ScanStrategy</em><span class="sig-paren">)</span> &#x2192; Dict[pydrake.automotive.AheadOrBehind, pydrake.automotive.ClosestPose]<a class="headerlink" href="#pydrake.automotive.PoseSelector.FindClosestPair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the leading and trailing vehicles in a given <code class="docutils literal"><span class="pre">lane</span></code> or
+<code class="docutils literal"><span class="pre">road</span></code> that are closest to an ego vehicle along its path, as
+measured along the <code class="docutils literal"><span class="pre">s</span></code>-coordinate of the ego vehicle’s lane. If
+<code class="docutils literal"><span class="pre">path_or_branches</span></code> is ScanStrategy::kPath, only poses in the same
+path as the ego (ahead or behind) are tracked; if
+ScanStrategy::kBranches, poses in lanes that eventually merge
+(converge to the same branch point that is on the default path of
+<code class="docutils literal"><span class="pre">lane)</span></code> are considered in addition to those along the ego car’s
+default path.</p>
+<p>Users should take heed to the fact that ScanStrategy::kBranches does
+<em>not</em> assess the relationship between traffic and ego vehicle velocity
+when selecting poses. Thus, cars within the same lane as the ego but
+with negative net-velocity (approaching the ego car, from the ego’s
+point-of-view) could be ignored in favor of a car in a branch with
+positive net-velocity.</p>
+<p>The ego vehicle must be within the <code class="docutils literal"><span class="pre">driveable_bounds</span></code> of <code class="docutils literal"><span class="pre">lane</span></code>
+(i.e. the road is contiguous with <code class="docutils literal"><span class="pre">lane</span></code> along the <code class="docutils literal"><span class="pre">r</span></code>-direction).
+This function is used, for instance, as logic for lane-change planners
+(e.g. MOBIL). The ego car’s pose (<code class="docutils literal"><span class="pre">ego_pose)</span></code> and the poses of the
+traffic cars (<code class="docutils literal"><span class="pre">traffic_poses)</span></code> are provided. The parameter
+<code class="docutils literal"><span class="pre">scan_distance</span></code> determines the distance along the sequence of lanes
+to scan before declaring that no traffic car is ahead (resp. behind)
+the ego car.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A map of AheadOrBehind values to vehicle ClosestPoses (containing
+RoadOdometries and closest relative distances). Relative distances
+are always positive, and a distance of positive infinity is
+returned if no traffic cars are found. Note that when no vehicle
+is detected in front of (resp. behind) the ego vehicle, the
+respective RoadPosition within ClosestPoses will contain an
+<code class="docutils literal"><span class="pre">s</span></code>-value of positive (resp. negative) infinity. Any traffic
+poses that are redundant with <code class="docutils literal"><span class="pre">ego_pose</span></code> (i.e. have the same
+RoadPosition as the ego car and thus the same <code class="docutils literal"><span class="pre">s</span></code> and <code class="docutils literal"><span class="pre">r</span></code>
+value) are discarded. If no leading/trailing vehicles are seen
+within scan-distance of the ego car, <code class="docutils literal"><span class="pre">s</span></code>-positions are taken to
+be at infinite distances away from the ego car. Note also that
+traffic vehicles having exactly the same <code class="docutils literal"><span class="pre">s</span></code>-position as the ego
+vehicle but with different <code class="docutils literal"><span class="pre">r</span></code>-value or are directly
+perpendicular in a Lane::to_left(), Lane::to_right() lane are
+taken to be <em>behind</em> the ego vehicle. Note that this
+implementation is greatly simplified by considering poses as
+points (i.e. vehicle geometries are ignored).</td>
+</tr>
+</tbody>
+</table>
+<p>The RoadGeometry from which <code class="docutils literal"><span class="pre">lane</span></code> is drawn is required to have
+default branches set for all branches in the road network.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.PoseSelector.FindSingleClosestPose">
+<code class="descname">FindSingleClosestPose</code><span class="sig-paren">(</span><em>lane: drake::maliput::api::Lane</em>, <em>ego_pose: pydrake.systems.rendering.PoseVector</em>, <em>traffic_poses: pydrake.systems.rendering.PoseBundle</em>, <em>scan_distance: float</em>, <em>side: pydrake.automotive.AheadOrBehind</em>, <em>path_or_branches: pydrake.automotive.ScanStrategy</em><span class="sig-paren">)</span> &#x2192; pydrake.automotive.ClosestPose<a class="headerlink" href="#pydrake.automotive.PoseSelector.FindSingleClosestPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as PoseSelector::FindClosestPair() except that it returns a
+single ClosestPose for either the vehicle ahead
+(AheadOrBehind::kAhead) or behind (AheadOrBehind::kBehind).</p>
+<p>Cars in other lanes are only tracked if they are in confluent lanes to
+a given branch point within the <code class="docutils literal"><span class="pre">scan_distance</span></code>; i.e. cars in two
+side-by-side lanes that never enter a branch point will not be
+selected. This assumes that the ego car has knowledge of the traffic
+cars’ default lane.</p>
+<p>Note that when no car is detected in front of the ego car, the
+returned RoadOdometry within ClosestPose will contain an <code class="docutils literal"><span class="pre">s</span></code>-value
+of <code class="docutils literal"><span class="pre">std::numeric_limits&lt;double&gt;::infinity()</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.PoseSelector.GetSigmaVelocity">
+<code class="descname">GetSigmaVelocity</code><span class="sig-paren">(</span><em>arg0: pydrake.automotive.RoadOdometry</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.automotive.PoseSelector.GetSigmaVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the vehicle’s <code class="docutils literal"><span class="pre">s</span></code>-direction velocity based on its
+RoadOdometry <code class="docutils literal"><span class="pre">road_odometry</span></code> in the Lane coordinate frame. Assumes
+the road has zero elevation and superelevation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any element of <code class="docutils literal"><span class="pre">road_odometry.pos</span></code> is not within</li>
+<li>the respective bounds of <code class="docutils literal"><span class="pre">road_odometry.lane</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function currently only provides exact derivatives for
+velocity in the <code class="docutils literal"><span class="pre">s</span></code> direction when the road is straight (no yaw
+angle variations).</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.PoseSelector.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.automotive.PoseSelector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.PurePursuitController">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">PurePursuitController</code><a class="headerlink" href="#pydrake.automotive.PurePursuitController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>PurePursuitController implements a pure pursuit controller. See
+PurePursuit for details on the approach.</p>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<p>They are already available to link against in the containing library.</p>
+<p>Input Port 0: a LaneDirection representing the requested lane and
+direction of travel. (InputPort getter: lane_input())</p>
+<p>Input Port 1: PoseVector for the ego car. (InputPort getter:
+ego_pose_input())</p>
+<p>Output Port 0: A BasicVector of size one with the commanded steering
+angle. (OutputPort getter: steering_command_output())</p>
+<dl class="method">
+<dt id="pydrake.automotive.PurePursuitController.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.PurePursuitController</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.PurePursuitController.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scalar-converting copy constructor. See system_scalar_conversion.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.PurePursuitController.ego_pose_input">
+<code class="descname">ego_pose_input</code><span class="sig-paren">(</span><em>self: pydrake.automotive.PurePursuitController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.automotive.PurePursuitController.ego_pose_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.PurePursuitController.lane_input">
+<code class="descname">lane_input</code><span class="sig-paren">(</span><em>self: pydrake.automotive.PurePursuitController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.automotive.PurePursuitController.lane_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the port to the individual input/output ports.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.PurePursuitController.steering_command_output">
+<code class="descname">steering_command_output</code><span class="sig-paren">(</span><em>self: pydrake.automotive.PurePursuitController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.automotive.PurePursuitController.steering_command_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.RoadOdometry">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">RoadOdometry</code><a class="headerlink" href="#pydrake.automotive.RoadOdometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>RoadOdometry contains the position of the vehicle with respect to a
+lane in a road, along with its velocity vector in the world frame.</p>
+<dl class="method">
+<dt id="pydrake.automotive.RoadOdometry.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.automotive.RoadOdometry.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.automotive.RoadOdometry) -&gt; None</li>
+</ol>
+<p>Default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.automotive.RoadOdometry, road_position: drake::maliput::api::RoadPosition, frame_velocity: pydrake.systems.rendering.FrameVelocity) -&gt; None</li>
+</ol>
+<p>Fully-parameterized constructor.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.automotive.RoadOdometry, lane: drake::maliput::api::Lane, lane_position: drake::maliput::api::LanePositionT&lt;double&gt;, frame_velocity: pydrake.systems.rendering.FrameVelocity) -&gt; None</li>
+</ol>
+<p>Fully-parameterized constructor that is T-supported.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.RoadOdometry.lane">
+<code class="descname">lane</code><a class="headerlink" href="#pydrake.automotive.RoadOdometry.lane" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.RoadOdometry.pos">
+<code class="descname">pos</code><a class="headerlink" href="#pydrake.automotive.RoadOdometry.pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.RoadOdometry.vel">
+<code class="descname">vel</code><a class="headerlink" href="#pydrake.automotive.RoadOdometry.vel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.RoadPositionStrategy">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">RoadPositionStrategy</code><a class="headerlink" href="#pydrake.automotive.RoadPositionStrategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>If kCache, configures a planning system (e.g. IdmController,
+MobilPlanner) to declare an abstract state that caches the
+last-computed RoadPosition. If kExhaustiveSearch, then the system will
+contain no abstract states. Note that the kCache option is for
+performance speedup (at the expense of optimizer compatibility) by
+preventing a potentially sizeable computation within
+RoadGeometry::ToRoadPosition().</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kExhaustiveSearch :</p>
+<p>kCache :</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.automotive.RoadPositionStrategy.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.RoadPositionStrategy</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.RoadPositionStrategy.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.RoadPositionStrategy.kCache">
+<code class="descname">kCache</code><em class="property"> = RoadPositionStrategy.kCache</em><a class="headerlink" href="#pydrake.automotive.RoadPositionStrategy.kCache" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.RoadPositionStrategy.kExhaustiveSearch">
+<code class="descname">kExhaustiveSearch</code><em class="property"> = RoadPositionStrategy.kExhaustiveSearch</em><a class="headerlink" href="#pydrake.automotive.RoadPositionStrategy.kExhaustiveSearch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.RoadPositionStrategy.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.automotive.RoadPositionStrategy.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.ScanStrategy">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">ScanStrategy</code><a class="headerlink" href="#pydrake.automotive.ScanStrategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies whether to check ongoing lanes or both ongoing lanes and
+confluent branches for traffic.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kPath :</p>
+<p>kBranches :</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.automotive.ScanStrategy.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.ScanStrategy</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.ScanStrategy.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.ScanStrategy.kBranches">
+<code class="descname">kBranches</code><em class="property"> = ScanStrategy.kBranches</em><a class="headerlink" href="#pydrake.automotive.ScanStrategy.kBranches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.ScanStrategy.kPath">
+<code class="descname">kPath</code><em class="property"> = ScanStrategy.kPath</em><a class="headerlink" href="#pydrake.automotive.ScanStrategy.kPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.automotive.ScanStrategy.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.automotive.ScanStrategy.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.SimpleCar">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">SimpleCar</code><a class="headerlink" href="#pydrake.automotive.SimpleCar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>SimpleCar models an idealized response to driving commands, neglecting
+all physics. Note that SimpleCar can move forward, stop, turn left,
+and turn right but <em>cannot</em> travel in reverse.</p>
+<p>parameters:</p>
+<ul class="simple">
+<li>uses systems::Parameters wrapping a SimpleCarParams</li>
+</ul>
+<p>state vector (planar for now):</p>
+<ul class="simple">
+<li>position: x, y, heading;
+heading is 0 rad when pointed +x, pi/2 rad when pointed +y;
+heading is defined around the +z axis, so positive-turn-left</li>
+<li>velocity</li>
+</ul>
+<p>input vector:</p>
+<ul class="simple">
+<li>steering angle (virtual center wheel angle);
+a positive angle means a positive change in heading (left turn);
+the value must lie within (-pi, +pi).</li>
+<li>throttle (0-1)</li>
+<li>brake (0-1)</li>
+</ul>
+<p>output port 0: same as state vector. output port 1: A PoseVector
+containing X_WC, where C is the car frame. output port 2: A
+FrameVelocity containing Xdot_WC, where C is the car frame.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>must support certain arithmetic operations; for details, see
+drake::symbolic::Expression.</dd>
+</dl>
+<p>Instantiated templates for the following ScalarTypes are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>drake::AutoDiffXd</li>
+<li>drake::symbolic::Expression</li>
+</ul>
+<p>They are already available to link against in the containing library.</p>
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCar.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCar</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.SimpleCar.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scalar-converting copy constructor. See system_scalar_conversion.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCar.pose_output">
+<code class="descname">pose_output</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCar</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.automotive.SimpleCar.pose_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCar.state_output">
+<code class="descname">state_output</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCar</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.automotive.SimpleCar.state_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCar.velocity_output">
+<code class="descname">velocity_output</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCar</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.automotive.SimpleCar.velocity_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.automotive.SimpleCarState">
+<em class="property">class </em><code class="descclassname">pydrake.automotive.</code><code class="descname">SimpleCarState</code><a class="headerlink" href="#pydrake.automotive.SimpleCarState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></p>
+<p>Specializes BasicVector with specific getters and setters.</p>
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.SimpleCarState.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor. Sets all rows to their default value:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">x</span></code> defaults to 0.0 with unknown units.</li>
+<li><code class="docutils literal"><span class="pre">y</span></code> defaults to 0.0 with unknown units.</li>
+<li><code class="docutils literal"><span class="pre">heading</span></code> defaults to 0.0 with unknown units.</li>
+<li><code class="docutils literal"><span class="pre">velocity</span></code> defaults to 0.0 with unknown units.</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.heading">
+<code class="descname">heading</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.automotive.SimpleCarState.heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>heading</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.set_heading">
+<code class="descname">set_heading</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.SimpleCarState.set_heading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches heading().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.set_velocity">
+<code class="descname">set_velocity</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.SimpleCarState.set_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches velocity().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.set_x">
+<code class="descname">set_x</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.SimpleCarState.set_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches x().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.set_y">
+<code class="descname">set_y</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.automotive.SimpleCarState.set_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches y().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.velocity">
+<code class="descname">velocity</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.automotive.SimpleCarState.velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>velocity</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.x">
+<code class="descname">x</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.automotive.SimpleCarState.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>x</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.automotive.SimpleCarState.y">
+<code class="descname">y</code><span class="sig-paren">(</span><em>self: pydrake.automotive.SimpleCarState</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.automotive.SimpleCarState.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>y</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.common.html" class="btn btn-neutral float-right" title="pydrake.common" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.autodiffutils.html" class="btn btn-neutral" title="pydrake.autodiffutils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

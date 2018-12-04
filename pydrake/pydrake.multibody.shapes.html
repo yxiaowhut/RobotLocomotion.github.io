@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.shapes &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.perception" href="pydrake.perception.html"/>
+        <link rel="prev" title="pydrake.multibody.rigid_body_tree" href="pydrake.multibody.rigid_body_tree.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.shapes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.shapes</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.shapes">
+<span id="pydrake-multibody-shapes"></span><h1>pydrake.multibody.shapes<a class="headerlink" href="#module-pydrake.multibody.shapes" title="Permalink to this headline">¶</a></h1>
+<p>Core geometry and shape types.</p>
+<dl class="class">
+<dt id="pydrake.multibody.shapes.Box">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">Box</code><a class="headerlink" href="#pydrake.multibody.shapes.Box" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.shapes.Geometry" title="pydrake.multibody.shapes.Geometry"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.shapes.Geometry</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Box.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Box, size: numpy.ndarray[float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.Box.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Box.size">
+<code class="descname">size</code><a class="headerlink" href="#pydrake.multibody.shapes.Box.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.Capsule">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">Capsule</code><a class="headerlink" href="#pydrake.multibody.shapes.Capsule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.shapes.Geometry" title="pydrake.multibody.shapes.Geometry"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.shapes.Geometry</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Capsule.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Capsule</em>, <em>radius: float</em>, <em>length: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.Capsule.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Capsule.length">
+<code class="descname">length</code><a class="headerlink" href="#pydrake.multibody.shapes.Capsule.length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Capsule.radius">
+<code class="descname">radius</code><a class="headerlink" href="#pydrake.multibody.shapes.Capsule.radius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.Cylinder">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">Cylinder</code><a class="headerlink" href="#pydrake.multibody.shapes.Cylinder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.shapes.Geometry" title="pydrake.multibody.shapes.Geometry"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.shapes.Geometry</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Cylinder.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Cylinder</em>, <em>radius: float</em>, <em>length: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.Cylinder.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Cylinder.length">
+<code class="descname">length</code><a class="headerlink" href="#pydrake.multibody.shapes.Cylinder.length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Cylinder.radius">
+<code class="descname">radius</code><a class="headerlink" href="#pydrake.multibody.shapes.Cylinder.radius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.Element">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">Element</code><a class="headerlink" href="#pydrake.multibody.shapes.Element" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.multibody.shapes.Element.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Element</em>, <em>geometry_in: pydrake.multibody.shapes.Geometry</em>, <em>T_element_to_local: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.Element.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Element.getGeometry">
+<code class="descname">getGeometry</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Element</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.shapes.Geometry<a class="headerlink" href="#pydrake.multibody.shapes.Element.getGeometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Element.getLocalTransform">
+<code class="descname">getLocalTransform</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Element</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[4, 4]]<a class="headerlink" href="#pydrake.multibody.shapes.Element.getLocalTransform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Element.hasGeometry">
+<code class="descname">hasGeometry</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Element</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.shapes.Element.hasGeometry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.Geometry">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">Geometry</code><a class="headerlink" href="#pydrake.multibody.shapes.Geometry" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.multibody.shapes.Geometry.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.shapes.Geometry.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Geometry.getBoundingBoxPoints">
+<code class="descname">getBoundingBoxPoints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Geometry</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, n]]<a class="headerlink" href="#pydrake.multibody.shapes.Geometry.getBoundingBoxPoints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Geometry.getFaces">
+<code class="descname">getFaces</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Geometry</em><span class="sig-paren">)</span> &#x2192; List[numpy.ndarray[int32[3, 1]]]<a class="headerlink" href="#pydrake.multibody.shapes.Geometry.getFaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Geometry.getPoints">
+<code class="descname">getPoints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Geometry</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, n]]<a class="headerlink" href="#pydrake.multibody.shapes.Geometry.getPoints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Geometry.getShape">
+<code class="descname">getShape</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Geometry</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.shapes.Shape<a class="headerlink" href="#pydrake.multibody.shapes.Geometry.getShape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Geometry.hasFaces">
+<code class="descname">hasFaces</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Geometry</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.shapes.Geometry.hasFaces" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if this geometry can return faces.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.Mesh">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">Mesh</code><a class="headerlink" href="#pydrake.multibody.shapes.Mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.shapes.Geometry" title="pydrake.multibody.shapes.Geometry"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.shapes.Geometry</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Mesh.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Mesh</em>, <em>uri: unicode</em>, <em>resolved_filename: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.Mesh.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a representation of a mesh to be loaded from
+<code class="docutils literal"><span class="pre">resolved_filename</span></code>. <code class="docutils literal"><span class="pre">uri</span></code> provides a unique identifier used to
+interact with BotVisualizer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Mesh.resolved_filename">
+<code class="descname">resolved_filename</code><a class="headerlink" href="#pydrake.multibody.shapes.Mesh.resolved_filename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Mesh.scale">
+<code class="descname">scale</code><a class="headerlink" href="#pydrake.multibody.shapes.Mesh.scale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Mesh.uri">
+<code class="descname">uri</code><a class="headerlink" href="#pydrake.multibody.shapes.Mesh.uri" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.MeshPoints">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">MeshPoints</code><a class="headerlink" href="#pydrake.multibody.shapes.MeshPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.shapes.Geometry" title="pydrake.multibody.shapes.Geometry"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.shapes.Geometry</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.multibody.shapes.MeshPoints.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.MeshPoints, points: numpy.ndarray[float64[3, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.MeshPoints.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.Shape">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">Shape</code><a class="headerlink" href="#pydrake.multibody.shapes.Shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>BOX :</p>
+<p>CYLINDER :</p>
+<p>MESH_POINTS :</p>
+<p>UNKNOWN :</p>
+<p>SPHERE :</p>
+<p>CAPSULE :</p>
+<p>MESH :</p>
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Shape.BOX">
+<code class="descname">BOX</code><em class="property"> = Shape.BOX</em><a class="headerlink" href="#pydrake.multibody.shapes.Shape.BOX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Shape.CAPSULE">
+<code class="descname">CAPSULE</code><em class="property"> = Shape.CAPSULE</em><a class="headerlink" href="#pydrake.multibody.shapes.Shape.CAPSULE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Shape.CYLINDER">
+<code class="descname">CYLINDER</code><em class="property"> = Shape.CYLINDER</em><a class="headerlink" href="#pydrake.multibody.shapes.Shape.CYLINDER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Shape.MESH">
+<code class="descname">MESH</code><em class="property"> = Shape.MESH</em><a class="headerlink" href="#pydrake.multibody.shapes.Shape.MESH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Shape.MESH_POINTS">
+<code class="descname">MESH_POINTS</code><em class="property"> = Shape.MESH_POINTS</em><a class="headerlink" href="#pydrake.multibody.shapes.Shape.MESH_POINTS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Shape.SPHERE">
+<code class="descname">SPHERE</code><em class="property"> = Shape.SPHERE</em><a class="headerlink" href="#pydrake.multibody.shapes.Shape.SPHERE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Shape.UNKNOWN">
+<code class="descname">UNKNOWN</code><em class="property"> = Shape.UNKNOWN</em><a class="headerlink" href="#pydrake.multibody.shapes.Shape.UNKNOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Shape.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Shape</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.Shape.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Shape.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.shapes.Shape.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.Sphere">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">Sphere</code><a class="headerlink" href="#pydrake.multibody.shapes.Sphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.shapes.Geometry" title="pydrake.multibody.shapes.Geometry"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.shapes.Geometry</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.multibody.shapes.Sphere.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.Sphere</em>, <em>radius: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.Sphere.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.shapes.Sphere.radius">
+<code class="descname">radius</code><a class="headerlink" href="#pydrake.multibody.shapes.Sphere.radius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.shapes.VisualElement">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.shapes.</code><code class="descname">VisualElement</code><a class="headerlink" href="#pydrake.multibody.shapes.VisualElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.shapes.Element" title="pydrake.multibody.shapes.Element"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.shapes.Element</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.multibody.shapes.VisualElement.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.VisualElement, geometry_in: pydrake.multibody.shapes.Geometry, T_element_to_local: pydrake.common.eigen_geometry.Isometry3, material_in: numpy.ndarray[float64[4, 1]], name: unicode = u''</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.VisualElement.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a geometry at a specified transform with a given material
+(i.e. a color specified as a 4-vector of RGBA, each on [0, 1]).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.VisualElement.getMaterial">
+<code class="descname">getMaterial</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.VisualElement</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[4, 1]]<a class="headerlink" href="#pydrake.multibody.shapes.VisualElement.getMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the element’s material color, in RGBA format.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.shapes.VisualElement.setMaterial">
+<code class="descname">setMaterial</code><span class="sig-paren">(</span><em>self: pydrake.multibody.shapes.VisualElement, arg0: numpy.ndarray[float64[4, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.shapes.VisualElement.setMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the element’s material color, in RGBA format.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.perception.html" class="btn btn-neutral float-right" title="pydrake.perception" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.rigid_body_tree.html" class="btn btn-neutral" title="pydrake.multibody.rigid_body_tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

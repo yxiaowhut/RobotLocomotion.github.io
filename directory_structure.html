@@ -1,0 +1,163 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Directory Structure &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Avoid Accidental Pushes to the Repository" href="no_push_to_origin.html" />
+    <link rel="prev" title="Tools for Code Style Compliance" href="code_style_tools.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="no_push_to_origin.html" title="Avoid Accidental Pushes to the Repository"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="code_style_tools.html" title="Tools for Code Style Compliance"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="directory-structure">
+<span id="id1"></span><h1>Directory Structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h1>
+<p>The current directory structure in Drake is organized to (1) group functional
+components, (2) limit dependencies, and (3) prevent circular dependencies.</p>
+<div class="section" id="special-directories">
+<span id="directory-structure-special-directories"></span><h2>Special Directories<a class="headerlink" href="#special-directories" title="Permalink to this headline">¶</a></h2>
+<p>All code that implements core functionality in Drake must adhere to the strict
+code standards described in <a class="reference internal" href="developers.html#developer-notes"><span class="std std-ref">Developer Notes</span></a>, and must
+have unit test coverage via code implemented in a <code class="docutils literal"><span class="pre">test</span></code> subdirectory
+immediately below the core implementation.</p>
+<p>To promote rapid development of research ideas within the code base,
+we allow for some exceptions to this rule for experimental code.  This includes
+any subdirectory labeled <code class="docutils literal"><span class="pre">dev</span></code> and directories with a special <code class="docutils literal"><span class="pre">README.md</span></code>
+file describing the protocol for that directory.  For PRs that affect only these
+experimental directories, one feature review is sufficient; platform review is
+not required.  If build or test targets in these directories break, and the PR
+author or on-call build cop cannot trivially resolve them, a GitHub issue will
+be assigned to the author of the code. If the issue is not resolved within 24
+hours, the core development team may disable the offending targets.</p>
+<p>The <code class="docutils literal"><span class="pre">BUILD.bazel</span></code> rules for special directories must live within the
+directory itself, not a parent directory.  (For example, <code class="docutils literal"><span class="pre">foo/BUILD.bazel</span></code>
+must <strong>not</strong> say <code class="docutils literal"><span class="pre">srcs</span> <span class="pre">=</span> <span class="pre">[&quot;dev/bar.cc&quot;],</span></code>; instead, <code class="docutils literal"><span class="pre">foo/dev/BUILD.bazel</span></code>
+must exist and must say <code class="docutils literal"><span class="pre">srcs</span> <span class="pre">=</span> <span class="pre">[&quot;bar.cc&quot;],</span></code>.)  This ensures that all <code class="docutils literal"><span class="pre">dev</span></code>
+code has a package name that clearly denotes it as such.</p>
+</div>
+<div class="section" id="controlling-dependencies">
+<span id="directory-structure-controlling-dependencies"></span><h2>Controlling Dependencies<a class="headerlink" href="#controlling-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>We would like to avoid circular dependencies in the source code tree.  For
+example, some code in <code class="docutils literal"><span class="pre">drake/systems</span></code> depends on code in <code class="docutils literal"><span class="pre">drake/solvers</span></code>, so
+code in <code class="docutils literal"><span class="pre">drake/solvers</span></code> should <em>not</em> depend on <code class="docutils literal"><span class="pre">drake/systems</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">drake/examples</span></code> directories are logically after all of the core libraries
+in <code class="docutils literal"><span class="pre">drake</span></code>.  <code class="docutils literal"><span class="pre">test</span></code> directories located throughout the code are logically
+last in the dependency tree – they are allowed to depend on any of the other
+directories.  For example, <code class="docutils literal"><span class="pre">test</span></code> code <strong>is</strong> allowed to use models/code from
+the <code class="docutils literal"><span class="pre">examples</span></code> directories to test core functionality, as long as that
+dependency is explicitly declared in the build system rules for that test.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Directory Structure</a><ul>
+<li><a class="reference internal" href="#special-directories">Special Directories</a></li>
+<li><a class="reference internal" href="#controlling-dependencies">Controlling Dependencies</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="no_push_to_origin.html" title="Avoid Accidental Pushes to the Repository"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="code_style_tools.html" title="Tools for Code Style Compliance"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

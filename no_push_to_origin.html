@@ -1,0 +1,164 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Avoid Accidental Pushes to the Repository &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Credits" href="credits.html" />
+    <link rel="prev" title="Directory Structure" href="directory_structure.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="credits.html" title="Credits"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="directory_structure.html" title="Directory Structure"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="avoid-accidental-pushes-to-the-repository">
+<span id="git-remote-config"></span><h1>Avoid Accidental Pushes to the Repository<a class="headerlink" href="#avoid-accidental-pushes-to-the-repository" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-issue">
+<h2>The Issue<a class="headerlink" href="#the-issue" title="Permalink to this headline">¶</a></h2>
+<p>We want to prevent developers from accidentally pushing changes into RobotLocomotion/drake. This is accomplished by:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Everybody agreeing on a naming convention for the repositories.</li>
+<li>Providing a dummy url for the repository we want to protect.</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="a-convention">
+<h2>A Convention<a class="headerlink" href="#a-convention" title="Permalink to this headline">¶</a></h2>
+<p>To make the notion of <code class="docutils literal"><span class="pre">origin</span></code> consistent with the idea of the one repository you work with, we agree in the following convention:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;upstream&quot;</span>  <span class="o">=</span> <span class="n">RobotLocomotion</span><span class="o">/</span><span class="n">drake</span>
+<span class="s2">&quot;origin&quot;</span> <span class="o">=</span> <span class="n">my</span> <span class="n">fork</span>
+</pre></div>
+</div>
+<p>so that a simple <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span></code> will push changes into a developer’s fork. This still does not prevent you from pushing into <code class="docutils literal"><span class="pre">upstream</span></code>. To protect developers from making this simple mistake the following solution is proposed.</p>
+</div>
+<div class="section" id="a-solution">
+<h2>A Solution<a class="headerlink" href="#a-solution" title="Permalink to this headline">¶</a></h2>
+<p>A way to avoid pushing into a repository is providing a dummy url address to the repository. This is accomplished by issuing the git command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="o">--</span><span class="n">push</span> <span class="n">upstream</span> <span class="n">no_push</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">no_push</span></code> is the dummy url and <code class="docutils literal"><span class="pre">upstream</span></code> points to RobotLocomotion/drake (recall the convention is to call your fork <code class="docutils literal"><span class="pre">origin</span></code>).</p>
+<p>If a push to the master repository is attempted issuing a <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">upstream</span> <span class="pre">my_branch</span></code>, git will return the following error message:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fatal</span><span class="p">:</span> <span class="s1">&#39;no_push&#39;</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">appear</span> <span class="n">to</span> <span class="n">be</span> <span class="n">a</span> <span class="n">git</span> <span class="n">repository</span>
+<span class="n">fatal</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">read</span> <span class="kn">from</span> <span class="nn">remote</span> <span class="n">repository</span><span class="o">.</span>
+
+<span class="n">Please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="n">correct</span> <span class="n">access</span> <span class="n">rights</span>
+<span class="ow">and</span> <span class="n">the</span> <span class="n">repository</span> <span class="n">exists</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Avoid Accidental Pushes to the Repository</a><ul>
+<li><a class="reference internal" href="#the-issue">The Issue</a></li>
+<li><a class="reference internal" href="#a-convention">A Convention</a></li>
+<li><a class="reference internal" href="#a-solution">A Solution</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="credits.html" title="Credits"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="directory_structure.html" title="Directory Structure"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

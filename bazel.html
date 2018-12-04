@@ -1,0 +1,413 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bazel build system &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Building Drake in a Docker Container" href="docker.html" />
+    <link rel="prev" title="Ubuntu" href="ubuntu.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="docker.html" title="Building Drake in a Docker Container"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ubuntu.html" title="Ubuntu"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="installation.html" >Installation and Quickstart</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="from_source.html" accesskey="U">Source installation (macOS, Ubuntu)</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="bazel-build-system">
+<span id="bazel"></span><h1>Bazel build system<a class="headerlink" href="#bazel-build-system" title="Permalink to this headline">¶</a></h1>
+<p>The Bazel build system is officially supported for a subset of Drake on Ubuntu
+Xenial and Bionic and macOS High Sierra and Mojave.</p>
+<p>For more information, see:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://bazel.build/">https://bazel.build/</a></li>
+<li><a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/3129">https://github.com/RobotLocomotion/drake/issues/3129</a></li>
+</ul>
+</div></blockquote>
+<div class="section" id="bazel-installation">
+<h2>Bazel Installation<a class="headerlink" href="#bazel-installation" title="Permalink to this headline">¶</a></h2>
+<p>Follow Drake’s
+<a class="reference internal" href="from_source.html#platform-specific-setup"><span class="std std-ref">platform-specific setup instructions</span></a>
+to install Bazel.</p>
+</div>
+<div class="section" id="drake-clone-and-platform-setup">
+<h2>Drake clone and platform setup<a class="headerlink" href="#drake-clone-and-platform-setup" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Start with a <strong>git clone</strong> of drake, per the <a class="reference internal" href="from_source.html#getting-drake"><span class="std std-ref">Getting Drake</span></a> instructions.</li>
+<li>Continue with the <em>“Mandatory platform specific instructions”</em> on the same
+page.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="developing-drake-using-bazel">
+<span id="using-bazel"></span><h2>Developing Drake using Bazel<a class="headerlink" href="#developing-drake-using-bazel" title="Permalink to this headline">¶</a></h2>
+<p>To build or test Drake, run <strong>bazel build</strong> or <strong>bazel test</strong> with the desired
+target label (and optional configuration options if desired).  We give some
+typical examples below; for more reading about target patterns, see:
+<a class="reference external" href="https://docs.bazel.build/versions/master/user-manual.html#target-patterns">https://docs.bazel.build/versions/master/user-manual.html#target-patterns</a>.</p>
+<p>On Ubuntu, the default compiler is the first <code class="docutils literal"><span class="pre">gcc</span></code> compiler in the
+<code class="docutils literal"><span class="pre">PATH</span></code>, usually GCC 5.4 on Xenial and GCC 7.3 on Bionic. On macOS, the
+default compiler is the Apple LLVM compiler. To use Clang 6.0 on Ubuntu, set
+the <code class="docutils literal"><span class="pre">CC</span></code> and <code class="docutils literal"><span class="pre">CXX</span></code> environment variables before running <strong>bazel build</strong>,
+<strong>bazel test</strong>, or any other <strong>bazel</strong> commands.</p>
+<p>Cheat sheet for operating on the entire project:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">drake</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="o">//...</span>                               <span class="c1"># Build the entire project.</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">//...</span>                                <span class="c1"># Build and test the entire project.</span>
+
+<span class="n">CC</span><span class="o">=</span><span class="n">clang</span><span class="o">-</span><span class="mf">6.0</span> <span class="n">CXX</span><span class="o">=</span><span class="n">clang</span><span class="o">++-</span><span class="mf">6.0</span> <span class="n">bazel</span> <span class="n">build</span> <span class="o">//...</span>  <span class="c1"># Build using Clang 6.0 on Xenial.</span>
+<span class="n">CC</span><span class="o">=</span><span class="n">clang</span><span class="o">-</span><span class="mf">6.0</span> <span class="n">CXX</span><span class="o">=</span><span class="n">clang</span><span class="o">++-</span><span class="mf">6.0</span> <span class="n">bazel</span> <span class="n">test</span> <span class="o">//...</span>   <span class="c1"># Build and test using Clang 6.0 on Xenial.</span>
+
+<span class="n">CC</span><span class="o">=</span><span class="n">clang</span> <span class="n">CXX</span><span class="o">=</span><span class="n">clang</span><span class="o">++</span> <span class="n">bazel</span> <span class="n">build</span> <span class="o">//...</span>          <span class="c1"># Build using Clang 6.0 on Bionic.</span>
+<span class="n">CC</span><span class="o">=</span><span class="n">clang</span> <span class="n">CXX</span><span class="o">=</span><span class="n">clang</span><span class="o">++</span> <span class="n">bazel</span> <span class="n">test</span> <span class="o">//...</span>           <span class="c1"># Build and test using Clang 6.0 on Bionic.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>The “<code class="docutils literal"><span class="pre">//</span></code>” means “starting from the root of the project”.</li>
+<li>The “<code class="docutils literal"><span class="pre">...</span></code>” means “everything including the subdirectories’ <code class="docutils literal"><span class="pre">BUILD</span></code> files”.<ul>
+<li>Contrast with, e.g., the “<code class="docutils literal"><span class="pre">bazel</span> <span class="pre">build</span> <span class="pre">common:*</span></code>” explained below, where
+only targets declared <em>directly</em> in <code class="docutils literal"><span class="pre">drake/common/BUILD</span></code> are compiled,
+and not the targets in <code class="docutils literal"><span class="pre">drake/common/trajectories/BUILD</span></code>.  The “<code class="docutils literal"><span class="pre">*</span></code>”
+matches targets in that directory; the “<code class="docutils literal"><span class="pre">...</span></code>” also matches down into
+subdirectories.</li>
+</ul>
+</li>
+</ul>
+<p>You may use relative pathnames if your shell’s working directory is not at the
+project root:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">drake</span><span class="o">/</span><span class="n">common</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="o">...</span>                   <span class="c1"># Build everything in common and its child subdirectories.</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">...</span>                    <span class="c1"># Test everything in common and its child subdirectories.</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="o">//...</span>                 <span class="c1"># Build the entire project.</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">//...</span>                  <span class="c1"># Build and test the entire project.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>As before, the “<code class="docutils literal"><span class="pre">...</span></code>” above means “everything including subdirectories”.<ul>
+<li>In the first two lines we did not precede “<code class="docutils literal"><span class="pre">...</span></code>” with “<code class="docutils literal"><span class="pre">//</span></code>”, so the
+search begins in the current directory (<code class="docutils literal"><span class="pre">common</span></code>) and not from the
+<code class="docutils literal"><span class="pre">drake</span></code> root.</li>
+<li>In the second two lines we used the “<code class="docutils literal"><span class="pre">//</span></code>” prefix to specify the project
+root, so we’re back to operating on the entire project even though
+<code class="docutils literal"><span class="pre">common</span></code> is still our shell’s current working directory.</li>
+</ul>
+</li>
+</ul>
+<p>Cheat sheet for operating on specific portions of the project:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">drake</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="n">common</span><span class="o">/...</span>                               <span class="c1"># Build everything in common and its child subdirectories.</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="n">common</span>                                   <span class="c1"># Build libcommon.</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="n">common</span><span class="p">:</span><span class="n">polynomial</span>                        <span class="c1"># Build libpolynomial.</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="n">common</span><span class="p">:</span><span class="o">*</span>                                 <span class="c1"># Build everything in common but NOT its children.</span>
+
+<span class="n">bazel</span> <span class="n">test</span> <span class="n">common</span><span class="p">:</span><span class="n">polynomial_test</span>                    <span class="c1"># Run one test.</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">-</span><span class="n">c</span> <span class="n">dbg</span> <span class="n">common</span><span class="p">:</span><span class="n">polynomial_test</span>             <span class="c1"># Run one test in debug mode.</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">memcheck</span> <span class="n">common</span><span class="p">:</span><span class="n">polynomial_test</span>  <span class="c1"># Run one test under memcheck (valgrind).</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">fastmemcheck</span> <span class="n">common</span><span class="p">:</span><span class="o">*</span>            <span class="c1"># Run common&#39;s tests under memcheck, with minimal recompiling.</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">asan</span> <span class="n">common</span><span class="p">:</span><span class="n">polynomial_test</span>      <span class="c1"># Run one test under AddressSanitizer.</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">kcov</span> <span class="n">common</span><span class="p">:</span><span class="n">polynomial_test</span>      <span class="c1"># Run one test under kcov (see instructions below).</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="o">-</span><span class="n">c</span> <span class="n">dbg</span> <span class="n">common</span><span class="p">:</span><span class="n">polynomial_test</span> <span class="o">&amp;&amp;</span> \
+  <span class="n">gdb</span> <span class="n">bazel</span><span class="o">-</span><span class="nb">bin</span><span class="o">/</span><span class="n">common</span><span class="o">/</span><span class="n">polynomial_test</span>               <span class="c1"># Run one test under gdb.</span>
+
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">--</span><span class="n">config</span> <span class="n">lint</span> <span class="o">//...</span>                       <span class="c1"># Only run style checks; don&#39;t build or test anything else.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>The “<code class="docutils literal"><span class="pre">:</span></code>” syntax separates target names from the directory path of the
+<code class="docutils literal"><span class="pre">BUILD</span></code> file they appear in.  In this case, for example,
+<code class="docutils literal"><span class="pre">drake/common/BUILD</span></code> specifies <code class="docutils literal"><span class="pre">cc_test(name</span> <span class="pre">=</span> <span class="pre">&quot;polynomial_test&quot;)</span></code>.</li>
+<li>Note that the configuration switches (<code class="docutils literal"><span class="pre">-c</span></code> and <code class="docutils literal"><span class="pre">--config</span></code>) influence the
+entire command.  For example, running a test in <code class="docutils literal"><span class="pre">dbg</span></code> mode means that its
+prerequisite libraries are also compiled and linked in <code class="docutils literal"><span class="pre">dbg</span></code> mode.</li>
+<li>For the definitions of the “<code class="docutils literal"><span class="pre">--config</span></code>” options see <code class="docutils literal"><span class="pre">drake/tools/bazel.rc</span></code>.</li>
+</ul>
+<div class="section" id="debugging-on-macos">
+<h3>Debugging on macOS<a class="headerlink" href="#debugging-on-macos" title="Permalink to this headline">¶</a></h3>
+<p>On macOS, DWARF debug symbols are emitted to a <code class="docutils literal"><span class="pre">.dSYM</span></code> file.  The Bazel
+<code class="docutils literal"><span class="pre">cc_binary</span></code> and <code class="docutils literal"><span class="pre">cc_test</span></code> rules do not natively generate or expose this
+file, so we have implemented a workaround in Drake, <code class="docutils literal"><span class="pre">--config=apple_debug</span></code>.
+This config turns off sandboxing, which allows a <code class="docutils literal"><span class="pre">genrule</span></code> to access the
+<code class="docutils literal"><span class="pre">.o</span></code> files and process them into a <code class="docutils literal"><span class="pre">.dSYM</span></code>.  Use as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">build</span> <span class="o">--</span><span class="n">config</span><span class="o">=</span><span class="n">apple_debug</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my</span><span class="p">:</span><span class="n">binary_or_test_dsym</span>
+<span class="n">lldb</span> <span class="o">./</span><span class="n">bazel</span><span class="o">-</span><span class="nb">bin</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">binary_or_test</span>
+</pre></div>
+</div>
+<p>For more information, see <a class="reference external" href="https://github.com/bazelbuild/bazel/issues/2537">https://github.com/bazelbuild/bazel/issues/2537</a>.</p>
+</div>
+</div>
+<div class="section" id="updating-build-files">
+<span id="buildifier"></span><h2>Updating BUILD files<a class="headerlink" href="#updating-build-files" title="Permalink to this headline">¶</a></h2>
+<p>Please use the “<code class="docutils literal"><span class="pre">buildifier</span></code>” tool to format edits to <code class="docutils literal"><span class="pre">BUILD</span></code> files (in the
+same spirit as <code class="docutils literal"><span class="pre">clang-format</span></code> formatting C++ code):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">drake</span>
+<span class="n">bazel</span><span class="o">-</span><span class="nb">bin</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">lint</span><span class="o">/</span><span class="n">buildifier</span> <span class="o">--</span><span class="nb">all</span>         <span class="c1"># Reformat all Bazel files.</span>
+<span class="n">bazel</span><span class="o">-</span><span class="nb">bin</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">lint</span><span class="o">/</span><span class="n">buildifier</span> <span class="n">common</span><span class="o">/</span><span class="n">BUILD</span>  <span class="c1"># Only reformat one file.</span>
+</pre></div>
+</div>
+<p>In most cases the <code class="docutils literal"><span class="pre">bazel-bin/tools/lint/buildifier</span></code> will already be compiled
+by the time you need it.  In case it’s absent, you can compile it via:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">drake</span>
+<span class="n">bazel</span> <span class="n">build</span> <span class="o">//</span><span class="n">tools</span><span class="o">/</span><span class="n">lint</span><span class="p">:</span><span class="n">buildifier</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="proprietary-solvers">
+<h2>Proprietary Solvers<a class="headerlink" href="#proprietary-solvers" title="Permalink to this headline">¶</a></h2>
+<p>The Drake Bazel build currently supports the following proprietary solvers:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Gurobi 8.0.0</li>
+<li>MOSEK 8.1</li>
+<li>SNOPT 7.6</li>
+</ul>
+</div></blockquote>
+<div class="section" id="gurobi-8-0-0">
+<span id="gurobi"></span><h3>Gurobi 8.0.0<a class="headerlink" href="#gurobi-8-0-0" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="install-on-ubuntu">
+<h4>Install on Ubuntu<a class="headerlink" href="#install-on-ubuntu" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Register for an account on <a class="reference external" href="https://www.gurobi.com">https://www.gurobi.com</a>.</li>
+<li>Set up your Gurobi license file in accordance with Gurobi documentation.</li>
+<li><code class="docutils literal"><span class="pre">export</span> <span class="pre">GRB_LICENSE_FILE=/path/to/gurobi.lic</span></code>.</li>
+<li>Download <code class="docutils literal"><span class="pre">gurobi8.0.0_linux64.tar.gz</span></code></li>
+<li>Unzip it.  We suggest that you use <code class="docutils literal"><span class="pre">/opt/gurobi800</span></code> to simplify working with Drake installations.</li>
+<li><code class="docutils literal"><span class="pre">export</span> <span class="pre">GUROBI_PATH=/opt/gurobi800/linux64</span></code></li>
+</ol>
+</div>
+<div class="section" id="install-on-macos">
+<h4>Install on macOS<a class="headerlink" href="#install-on-macos" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Register for an account on <a class="reference external" href="http://www.gurobi.com">http://www.gurobi.com</a>.</li>
+<li>Set up your Gurobi license file in accordance with Gurobi documentation.</li>
+<li><code class="docutils literal"><span class="pre">export</span> <span class="pre">GRB_LICENSE_FILE=/path/to/gurobi.lic</span></code></li>
+<li>Download and install <code class="docutils literal"><span class="pre">gurobi8.0.0_mac64.pkg</span></code>.</li>
+</ol>
+<p>To confirm that your setup was successful, run the tests that require Gurobi:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">bazel</span> <span class="pre">test</span> <span class="pre">--config</span> <span class="pre">gurobi</span> <span class="pre">--test_tag_filters=gurobi</span> <span class="pre">//...</span></code></div></blockquote>
+<p>The default value of <code class="docutils literal"><span class="pre">--test_tag_filters</span></code> in Drake’s <code class="docutils literal"><span class="pre">bazel.rc</span></code> excludes
+these tests.  If you will be developing with Gurobi regularly, you may wish
+to specify a more convenient <code class="docutils literal"><span class="pre">--test_tag_filters</span></code> in a local <code class="docutils literal"><span class="pre">.bazelrc</span></code>.
+See <a class="reference external" href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+</div>
+</div>
+<div class="section" id="mosek-8-1">
+<h3>MOSEK 8.1<a class="headerlink" href="#mosek-8-1" title="Permalink to this headline">¶</a></h3>
+<p>The Drake Bazel build system downloads MOSEK 8.1.0.51 automatically.  No manual
+installation is required.  Set the location of your license file as follows:</p>
+<p><code class="docutils literal"><span class="pre">export</span> <span class="pre">MOSEKLM_LICENSE_FILE=/path/to/mosek.lic</span></code></p>
+<p>To confirm that your setup was successful, run the tests that require MOSEK:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">bazel</span> <span class="pre">test</span> <span class="pre">--config</span> <span class="pre">mosek</span> <span class="pre">--test_tag_filters=mosek</span> <span class="pre">//...</span></code></div></blockquote>
+<p>The default value of <code class="docutils literal"><span class="pre">--test_tag_filters</span></code> in Drake’s <code class="docutils literal"><span class="pre">bazel.rc</span></code> excludes
+these tests.  If you will be developing with MOSEK regularly, you may wish
+to specify a more convenient <code class="docutils literal"><span class="pre">--test_tag_filters</span></code> in a local <code class="docutils literal"><span class="pre">.bazelrc</span></code>.
+See <a class="reference external" href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+</div>
+<div class="section" id="snopt">
+<h3>SNOPT<a class="headerlink" href="#snopt" title="Permalink to this headline">¶</a></h3>
+<p>Drake provides two mechanisms to include the SNOPT sources.  One mechanism is
+to provide your own SNOPT source archive.  The other mechanism is via access to
+a private RobotLocomotion git repository.</p>
+<div class="section" id="using-your-own-source-archive">
+<h4>Using your own source archive<a class="headerlink" href="#using-your-own-source-archive" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Download the SNOPT sources from the distributor in <code class="docutils literal"><span class="pre">.tar.gz</span></code> format (e.g.,
+named <code class="docutils literal"><span class="pre">snopt7.6.tar.gz</span></code>).</li>
+<li><code class="docutils literal"><span class="pre">export</span> <span class="pre">SNOPT_PATH=/home/username/Downloads/snopt7.6.tar.gz</span></code></li>
+</ol>
+</div>
+<div class="section" id="using-the-robotlocomotion-git-repository">
+<h4>Using the RobotLocomotion git repository<a class="headerlink" href="#using-the-robotlocomotion-git-repository" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>Obtain access to the private RobotLocomotion/snopt GitHub repository.</li>
+<li><a class="reference external" href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">Set up SSH access to github.com</a>.</li>
+<li><code class="docutils literal"><span class="pre">export</span> <span class="pre">SNOPT_PATH=git</span></code></li>
+</ol>
+</div>
+<div class="section" id="test-the-build-for-either-mechanism">
+<h4>Test the build (for either mechanism)<a class="headerlink" href="#test-the-build-for-either-mechanism" title="Permalink to this headline">¶</a></h4>
+<p>To confirm that your setup was successful, run the tests that require SNOPT:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">bazel</span> <span class="pre">test</span> <span class="pre">--config</span> <span class="pre">snopt</span> <span class="pre">--test_tag_filters=snopt</span> <span class="pre">//...</span></code></div></blockquote>
+<p>The default value of <code class="docutils literal"><span class="pre">--test_tag_filters</span></code> in Drake’s <code class="docutils literal"><span class="pre">bazel.rc</span></code> excludes
+these tests.  If you will be developing with SNOPT regularly, you may wish
+to specify a more convenient <code class="docutils literal"><span class="pre">--test_tag_filters</span></code> in a local <code class="docutils literal"><span class="pre">.bazelrc</span></code>.
+See <a class="reference external" href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="optional-tools">
+<h2>Optional Tools<a class="headerlink" href="#optional-tools" title="Permalink to this headline">¶</a></h2>
+<p>The Drake Bazel build system has integration support for some optional
+development tools:</p>
+<blockquote>
+<div><ul class="simple">
+<li>kcov – test coverage analysis</li>
+</ul>
+</div></blockquote>
+<div class="section" id="kcov">
+<h3>kcov<a class="headerlink" href="#kcov" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">kcov</span></code> can analyze coverage for any binary that contains DWARF format
+debuggging symbols, and produce nicely formatted browse-able coverage reports.</p>
+<p>To analyze test coverage, run the tests under <code class="docutils literal"><span class="pre">kcov</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">test</span> <span class="o">--</span><span class="n">config</span> <span class="n">kcov</span> <span class="o">//...</span>
+</pre></div>
+</div>
+<p>Note that it disables compiler-optimization (<code class="docutils literal"><span class="pre">-O0</span></code>) to have a better and more
+precise coverage report.  If you have trouble with kcov and unoptimized programs,
+you can turn it back on by also supplying <code class="docutils literal"><span class="pre">--copt</span> <span class="pre">-O2</span></code>.</p>
+<p>The coverage report is written to the <code class="docutils literal"><span class="pre">drake/bazel-kcov</span></code> directory.  To
+view it, browse to <code class="docutils literal"><span class="pre">drake/bazel-kcov/index.html</span></code>.</p>
+<div class="section" id="kcov-on-macos">
+<h4>kcov on macOS<a class="headerlink" href="#kcov-on-macos" title="Permalink to this headline">¶</a></h4>
+<p>Be sure that your account has developer mode enabled, which gives you the
+privileges necessary to run debuggers and similar tools. If you are an
+administrator, use this command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">DevToolsSecurity</span> <span class="o">--</span><span class="n">enable</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Bazel build system</a><ul>
+<li><a class="reference internal" href="#bazel-installation">Bazel Installation</a></li>
+<li><a class="reference internal" href="#drake-clone-and-platform-setup">Drake clone and platform setup</a></li>
+<li><a class="reference internal" href="#developing-drake-using-bazel">Developing Drake using Bazel</a><ul>
+<li><a class="reference internal" href="#debugging-on-macos">Debugging on macOS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#updating-build-files">Updating BUILD files</a></li>
+<li><a class="reference internal" href="#proprietary-solvers">Proprietary Solvers</a><ul>
+<li><a class="reference internal" href="#gurobi-8-0-0">Gurobi 8.0.0</a><ul>
+<li><a class="reference internal" href="#install-on-ubuntu">Install on Ubuntu</a></li>
+<li><a class="reference internal" href="#install-on-macos">Install on macOS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mosek-8-1">MOSEK 8.1</a></li>
+<li><a class="reference internal" href="#snopt">SNOPT</a><ul>
+<li><a class="reference internal" href="#using-your-own-source-archive">Using your own source archive</a></li>
+<li><a class="reference internal" href="#using-the-robotlocomotion-git-repository">Using the RobotLocomotion git repository</a></li>
+<li><a class="reference internal" href="#test-the-build-for-either-mechanism">Test the build (for either mechanism)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optional-tools">Optional Tools</a><ul>
+<li><a class="reference internal" href="#kcov">kcov</a><ul>
+<li><a class="reference internal" href="#kcov-on-macos">kcov on macOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="docker.html" title="Building Drake in a Docker Container"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ubuntu.html" title="Ubuntu"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="installation.html" >Installation and Quickstart</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="from_source.html" >Source installation (macOS, Ubuntu)</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

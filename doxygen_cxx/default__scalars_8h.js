@@ -1,0 +1,5 @@
+var default__scalars_8h =
+[
+    [ "DRAKE_DEFINE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS", "default__scalars_8h.html#ab6234c37b7596964a364d799933f4a17", null ],
+    [ "DRAKE_DEFINE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "default__scalars_8h.html#ad69d96bfd76d7750f2d40ebe0a546b3c", null ]
+];

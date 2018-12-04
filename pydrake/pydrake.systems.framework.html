@@ -1,0 +1,2592 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.framework &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.lcm" href="pydrake.systems.lcm.html"/>
+        <link rel="prev" title="pydrake.systems.drawing" href="pydrake.systems.drawing.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.meshcat_visualizer.html">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.framework</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.framework">
+<span id="pydrake-systems-framework"></span><h1>pydrake.systems.framework<a class="headerlink" href="#module-pydrake.systems.framework" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the core Systems framework.</p>
+<dl class="class">
+<dt id="pydrake.systems.framework.AbstractParameterIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">AbstractParameterIndex</code><a class="headerlink" href="#pydrake.systems.framework.AbstractParameterIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.AbstractParameterIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractParameterIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractParameterIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractParameterIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractParameterIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.AbstractParameterIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.AbstractStateIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">AbstractStateIndex</code><a class="headerlink" href="#pydrake.systems.framework.AbstractStateIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.AbstractStateIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractStateIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractStateIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractStateIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.AbstractStateIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.AbstractValue">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">AbstractValue</code><a class="headerlink" href="#pydrake.systems.framework.AbstractValue" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.AbstractValue.Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValue</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValue<a class="headerlink" href="#pydrake.systems.framework.AbstractValue.Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValue.Make">
+<code class="descname">Make</code><span class="sig-paren">(</span><em>arg0: object</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.framework.AbstractValue.Make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an AbstractValue containing the given <code class="docutils literal"><span class="pre">value</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValue.SetFrom">
+<code class="descname">SetFrom</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValue</em>, <em>arg0: pydrake.systems.framework.AbstractValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractValue.SetFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies or clones the value in <code class="docutils literal"><span class="pre">other</span></code> to this value. In Debug
+builds, if the types don’t match, an RuntimeError will be thrown with
+a helpful error message. In Release builds, this is not guaranteed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.AbstractValue.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.AbstractValue.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValue.get_mutable_value">
+<code class="descname">get_mutable_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValue</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractValue.get_mutable_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value wrapped in this AbstractValue, which must be of
+exactly type T. T cannot be a superclass, abstract or otherwise. In
+Debug builds, if the types don’t match, an RuntimeError will be thrown
+with a helpful error message. In Release builds, this is not
+guaranteed. Intentionally not const: holders of const references to
+the AbstractValue should not be able to mutate the value it contains.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValue.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValue</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractValue.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value wrapped in this AbstractValue, which must be of
+exactly type T. T cannot be a superclass, abstract or otherwise. In
+Debug builds, if the types don’t match, an RuntimeError will be thrown
+with a helpful error message. In Release builds, this is not
+guaranteed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValue.set_value">
+<code class="descname">set_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValue</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractValue.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the value wrapped in this AbstractValue, which must be of exactly
+type T. T cannot be a superclass, abstract or otherwise.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">value_to_set</span></code>:</dt>
+<dd>The value to be copied or cloned into this AbstractValue. In Debug
+builds, if the types don’t match, an RuntimeError will be thrown
+with a helpful error message. In Release builds, this is not
+guaranteed.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.AbstractValues">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">AbstractValues</code><a class="headerlink" href="#pydrake.systems.framework.AbstractValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>AbstractValues is a container for non-numerical state and parameters.
+It may or may not own the underlying data, and therefore is suitable
+for both leaf Systems and diagrams.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>A mathematical type compatible with Eigen’s Scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValues.Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValues</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.AbstractValues.Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValues.CopyFrom">
+<code class="descname">CopyFrom</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValues</em>, <em>arg0: pydrake.systems.framework.AbstractValues</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.AbstractValues.CopyFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies all of the AbstractValues in <code class="docutils literal"><span class="pre">other</span></code> into this. Asserts if
+the two are not equal in size.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if any of the elements are of incompatible type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValues.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.AbstractValues.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.AbstractValues) -&gt; None</li>
+<li>__init__(self: pydrake.systems.framework.AbstractValues, arg0: List[drake::systems::AbstractValue]) -&gt; None</li>
+</ol>
+<p>Constructs an AbstractValues that owns the underlying data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValues.get_mutable_value">
+<code class="descname">get_mutable_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValues</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::AbstractValue<a class="headerlink" href="#pydrake.systems.framework.AbstractValues.get_mutable_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the element of AbstractValues at the given <code class="docutils literal"><span class="pre">index</span></code>, or
+aborts if the index is out-of-bounds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValues.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValues</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::AbstractValue<a class="headerlink" href="#pydrake.systems.framework.AbstractValues.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the element of AbstractValues at the given <code class="docutils literal"><span class="pre">index</span></code>, or
+aborts if the index is out-of-bounds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.AbstractValues.size">
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.AbstractValues</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.AbstractValues.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements of AbstractValues.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.BasicVector">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">BasicVector</code><a class="headerlink" href="#pydrake.systems.framework.BasicVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.BasicVector_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">BasicVector_</code><a class="headerlink" href="#pydrake.systems.framework.BasicVector_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">BasicVector_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">BasicVector_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">BasicVector_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.BasicVector_.BasicVector_[float]">
+<em class="property">class </em><code class="descname">BasicVector_[float]</code><a class="headerlink" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.VectorBase_[float]</span></code></p>
+<p>BasicVector is a semantics-free wrapper around an Eigen vector that
+satisfies VectorBase. Once constructed, its size is fixed.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_.BasicVector_[float].Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float].Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_.BasicVector_[float].GetAtIndex">
+<code class="descname">GetAtIndex</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float].GetAtIndex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_.BasicVector_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.BasicVector_[float], data: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a BasicVector with the specified <code class="docutils literal"><span class="pre">vec</span></code> data.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.BasicVector_[float], size: int) -&gt; None</li>
+</ol>
+<p>Initializes with the given <code class="docutils literal"><span class="pre">size</span></code> using the drake::dummy_value&lt;T&gt;,
+which is NaN when T = double.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_.BasicVector_[float].get_mutable_value">
+<code class="descname">get_mutable_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1], flags.writeable]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float].get_mutable_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector as a mutable Eigen::VectorBlock, which
+allows mutation of the values, but does not allow resizing the vector
+itself.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_.BasicVector_[float].get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float].get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector as a const Eigen::VectorBlock.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.CacheIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">CacheIndex</code><a class="headerlink" href="#pydrake.systems.framework.CacheIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.CacheIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.CacheIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.CacheIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.CacheIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.CacheIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.CacheIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Context">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">Context</code><a class="headerlink" href="#pydrake.systems.framework.Context" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Context_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.Context_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Context_</code><a class="headerlink" href="#pydrake.systems.framework.Context_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.Context_.Context_[float]" title="pydrake.systems.framework.Context_.Context_[float]"><code class="xref py py-class docutils literal"><span class="pre">Context_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Context_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Context_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.Context_.Context_[float]">
+<em class="property">class </em><code class="descname">Context_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>%Context is an abstract class template that represents all the typed
+values that are used in a System’s computations: time, numeric-valued
+input ports, numerical state, and numerical parameters. There are also
+type-erased abstract state variables, abstract-valued input ports,
+abstract parameters, and a double accuracy setting. The framework
+provides two concrete subclasses of Context: LeafContext (for leaf
+Systems) and DiagramContext (for composite System Diagrams). Users are
+forbidden to extend DiagramContext and are discouraged from
+subclassing LeafContext.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The mathematical type of the context, which must be a valid Eigen
+scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.Context_[float]<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].Clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a deep copy of this Context.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].FixInputPort">
+<code class="descname">FixInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].FixInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>FixInputPort(self: pydrake.systems.framework.Context_[float], index: int, vec: drake::systems::BasicVector&lt;double&gt;) -&gt; pydrake.systems.framework.FixedInputPortValue</li>
+</ol>
+<p>Connects the input port at <code class="docutils literal"><span class="pre">index</span></code> to a FixedInputPortValue with the
+given vector <code class="docutils literal"><span class="pre">vec</span></code>. Aborts if <code class="docutils literal"><span class="pre">index</span></code> is out of range. Returns a
+reference to the allocated FixedInputPortValue. The reference will
+remain valid until this input port’s value source is replaced or the
+Context is destroyed. You may use that reference to modify the input
+port’s value using the appropriate FixedInputPortValue method, which
+will ensure that invalidation notifications are delivered.</p>
+<ol class="arabic simple" start="2">
+<li>FixInputPort(self: pydrake.systems.framework.Context_[float], index: int, value: drake::systems::AbstractValue) -&gt; pydrake.systems.framework.FixedInputPortValue</li>
+</ol>
+<p>Same as above method but starts with an Eigen vector whose contents
+are used to initialize a BasicVector in the FixedInputPortValue.</p>
+<ol class="arabic simple" start="3">
+<li>FixInputPort(self: pydrake.systems.framework.Context_[float], index: int, data: numpy.ndarray[float64[m, 1]]) -&gt; pydrake.systems.framework.FixedInputPortValue</li>
+</ol>
+<p>Same as the above method that takes a <code class="docutils literal"><span class="pre">const</span> <span class="pre">BasicVector&lt;T&gt;&amp;</span></code>, but
+here the vector is passed by unique_ptr instead of by const reference.
+The caller must not retain any aliases to <code class="docutils literal"><span class="pre">vec</span></code>; within this method,
+<code class="docutils literal"><span class="pre">vec</span></code> is cloned and then deleted.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This overload will become deprecated in the future, because it can
+mislead users to believe that they can retain an alias of <code class="docutils literal"><span class="pre">vec</span></code>
+to mutate the fixed value during a simulation. Callers should
+prefer to use one of the other overloads instead.</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Context_.Context_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_abstract_state">
+<code class="descname">get_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_abstract_state(self: pydrake.systems.framework.Context_[float]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a const reference to the abstract component of the state,
+which may be of size zero.</p>
+<ol class="arabic simple" start="2">
+<li>get_abstract_state(self: pydrake.systems.framework.Context_[float], arg0: int) -&gt; drake::systems::AbstractValue</li>
+</ol>
+<p>Returns a const reference to the abstract component of the state,
+which may be of size zero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_accuracy">
+<code class="descname">get_accuracy</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; Optional[float]<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the accuracy setting (if any). Note that the return type is
+<code class="docutils literal"><span class="pre">optional&lt;double&gt;</span></code> rather than the double value itself.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">set_accuracy() for details.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_continuous_state">
+<code class="descname">get_continuous_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::ContinuousState&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_continuous_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the continuous component of the state,
+which may be of size zero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_continuous_state_vector">
+<code class="descname">get_continuous_state_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::VectorBase&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_continuous_state_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the continuous state vector, devoid of
+second-order structure. The vector may be of size zero.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_discrete_state">
+<code class="descname">get_discrete_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_discrete_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_discrete_state(self: pydrake.systems.framework.Context_[float]) -&gt; drake::systems::DiscreteValues&lt;double&gt;</li>
+</ol>
+<p>Returns a reference to the entire discrete state, which may consist of
+multiple discrete state vectors (groups).</p>
+<ol class="arabic simple" start="2">
+<li>get_discrete_state(self: pydrake.systems.framework.Context_[float], arg0: int) -&gt; drake::systems::BasicVector&lt;double&gt;</li>
+</ol>
+<p>Returns a const reference to group (vector) <code class="docutils literal"><span class="pre">index</span></code> of the discrete
+state.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span></code> must identify an existing group.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_discrete_state_vector">
+<code class="descname">get_discrete_state_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::BasicVector&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_discrete_state_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the <em>only</em> discrete state vector. The vector
+may be of size zero.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>There is only one discrete state group.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_mutable_abstract_state">
+<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.Context_[float]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a mutable reference to the abstract component of the state,
+which may be of size zero. Sends out of date notifications for all
+abstract-state-dependent computations.</p>
+<ol class="arabic simple" start="2">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.Context_[float], arg0: int) -&gt; drake::systems::AbstractValue</li>
+</ol>
+<p>Returns a mutable reference to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract
+state. Sends out of date notifications for all computations that
+depend on this abstract state variable.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span></code> must identify an existing element.</dd>
+<dt>Precondition:</dt>
+<dd>the abstract state’s type must match the template argument.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently notifies dependents of <em>any</em> abstract state variable.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_mutable_continuous_state">
+<code class="descname">get_mutable_continuous_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::ContinuousState&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_mutable_continuous_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the continuous component of the state,
+which may be of size zero. Sends out of date notifications for all
+continuous-state-dependent computations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_mutable_continuous_state_vector">
+<code class="descname">get_mutable_continuous_state_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::VectorBase&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_mutable_continuous_state_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the continuous state vector, devoid of
+second-order structure. The vector may be of size zero. Sends out of
+date notifications for all continuous-state-dependent computations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_mutable_discrete_state">
+<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.Context_[float]) -&gt; drake::systems::DiscreteValues&lt;double&gt;</li>
+</ol>
+<p>Returns a mutable reference to the discrete component of the state,
+which may be of size zero. Sends out of date notifications for all
+discrete-state-dependent computations.</p>
+<ol class="arabic simple" start="2">
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.Context_[float], arg0: int) -&gt; drake::systems::BasicVector&lt;double&gt;</li>
+</ol>
+<p>Returns a mutable reference to group (vector) <code class="docutils literal"><span class="pre">index</span></code> of the
+discrete state. Sends out of date notifications for all computations
+that depend on this discrete state group.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span></code> must identify an existing group.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently notifies dependents of <em>all</em> groups.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_mutable_discrete_state_vector">
+<code class="descname">get_mutable_discrete_state_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::BasicVector&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_mutable_discrete_state_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the <em>only</em> discrete state vector. Sends
+out of date notifications for all discrete-state-dependent
+computations.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">get_discrete_state_vector().</p>
+</div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>There is only one discrete state group.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_mutable_state">
+<code class="descname">get_mutable_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::State&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_mutable_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the whole State, potentially
+invalidating <em>all</em> state-dependent computations so requiring out of
+date notifications to be made for all such computations. If you don’t
+mean to change the whole state, use more focused methods to modify
+only a portion of the state. See class documentation for more
+information.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_num_abstract_states">
+<code class="descname">get_num_abstract_states</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_num_abstract_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the abstract state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_num_discrete_state_groups">
+<code class="descname">get_num_discrete_state_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_num_discrete_state_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vectors (groups) in the discrete state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_num_input_ports">
+<code class="descname">get_num_input_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_num_input_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of input ports in this context.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_state">
+<code class="descname">get_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::State&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the whole State.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].get_time">
+<code class="descname">get_time</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].get_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current time in seconds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].set_accuracy">
+<code class="descname">set_accuracy</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float], arg0: Optional[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].set_accuracy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Records the user’s requested accuracy. If no accuracy is requested,
+computations are free to choose suitable defaults, or to refuse to
+proceed without an explicit accuracy setting. Any accuracy-dependent
+computation in this Context and its subcontexts may be invalidated by
+a change to the accuracy setting, so out of date notifications are
+sent to all such computations (at least if the accuracy setting has
+actually changed). Accuracy must have the same value in every
+subcontext within the same context tree so may only be modified at the
+root context of a tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this is not the root context.</td>
+</tr>
+</tbody>
+</table>
+<p>Requested accuracy is stored in the Context for two reasons: - It
+permits all computations performed over a System to see the <em>same</em>
+accuracy request since accuracy is stored in one shared place, and -
+it allows us to notify accuracy-dependent cached results that they are
+out of date when the accuracy setting changes.</p>
+<p>The accuracy of a complete simulation or other numerical study depends
+on the accuracy of <em>all</em> contributing computations, so it is important
+that each computation is done in accordance with the overall requested
+accuracy. Some examples of where this is needed: - Error-controlled
+numerical integrators use the accuracy setting to decide what step
+sizes to take. - The Simulator employs a numerical integrator, but
+also uses accuracy to decide how precisely to isolate witness function
+zero crossings. - Iterative calculations reported as results or cached
+internally depend on accuracy to decide how strictly to converge the
+results. Examples of these are: constraint projection, calculation of
+distances between smooth shapes, and deformation calculations for soft
+contact.</p>
+<p>The common thread among these examples is that they all share the same
+Context, so by keeping accuracy here it can be used effectively to
+control all accuracy-dependent computations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Context_.Context_[float].set_time">
+<code class="descname">set_time</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].set_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the current time in seconds. Sends out of date notifications for
+all time-dependent computations (at least if the time has actually
+changed). Time must have the same value in every subcontext within the
+same Diagram context tree so may only be modified at the root context
+of the tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this is not the root context.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.ContinuousState">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">ContinuousState</code><a class="headerlink" href="#pydrake.systems.framework.ContinuousState" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.ContinuousState_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.ContinuousState_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">ContinuousState_</code><a class="headerlink" href="#pydrake.systems.framework.ContinuousState_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.ContinuousState_.ContinuousState_[float]" title="pydrake.systems.framework.ContinuousState_.ContinuousState_[float]"><code class="xref py py-class docutils literal"><span class="pre">ContinuousState_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">ContinuousState_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">ContinuousState_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.ContinuousState_.ContinuousState_[float]">
+<em class="property">class </em><code class="descname">ContinuousState_[float]</code><a class="headerlink" href="#pydrake.systems.framework.ContinuousState_.ContinuousState_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>%ContinuousState is a view of, and optionally a container for, all the
+continuous state variables <code class="docutils literal"><span class="pre">xc</span></code> of a Drake System. Continuous state
+variables are those whose values are defined by differential
+equations, so we expect there to be a well-defined time derivative
+<code class="docutils literal"><span class="pre">xcdot</span></code> ≜ <code class="docutils literal"><span class="pre">d/dt</span> <span class="pre">xc</span></code>.</p>
+<p>The contents of <code class="docutils literal"><span class="pre">xc</span></code> are conceptually partitioned into three groups:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">q</span></code> is generalized position</li>
+<li><code class="docutils literal"><span class="pre">v</span></code> is generalized velocity</li>
+<li><code class="docutils literal"><span class="pre">z</span></code> is other continuous state</li>
+</ul>
+<p>For a Drake LeafSystem these partitions are stored contiguously in
+memory in this sequence: xc=[q v z]. But because a Drake System may be
+a Diagram composed from subsystems, each with its own continuous state
+variables (“substates”), the composite continuous state will not
+generally be stored in contiguous memory. In that case the most we can
+say is that xc={q,v,z}, that is, it consists of all the q’s, v’s, and
+z’s, in some order.</p>
+<p>Nevertheless, this ContinuousState class provides a vector view of the
+data that groups together all the q partitions, v partitions, and z
+partitions. For example, if there are three subsystems (possibly
+Diagrams) whose continuous state variables are respectively
+xc₁={q₁,v₁,z₁}, xc₂={q₂,v₂,z₂}, and xc₃={q₃,v₃,z₃} the composite xc
+includes all the partitions in an undefined order. However, composite
+q, v, and z appear ordered as q=[q₁ q₂ q₃], v=[v₁ v₂ v₃], z=[z₁ z₂
+z₃]. Note that the element ordering of the composite xc is <em>not</em> a
+concatenation of the composite subgroups. Do not index elements of the
+full state xc unless you know it is the continuous state of a
+LeafSystem (a LeafSystem looking at its own Context can depend on
+that).</p>
+<p>Any of the groups may be empty. However, groups q and v must be either
+both present or both empty, because the time derivative <code class="docutils literal"><span class="pre">qdot</span></code> of
+the second-order state variables <code class="docutils literal"><span class="pre">q</span></code> must be computable using a
+linear mapping <code class="docutils literal"><span class="pre">qdot=N(q)*v</span></code>.</p>
+<p>The time derivative <code class="docutils literal"><span class="pre">xcdot</span></code> has the identical substructure to
+<code class="docutils literal"><span class="pre">xc</span></code>, with the partitions interpreted as <code class="docutils literal"><span class="pre">qdot</span></code>, <cite>vdot</cite>, and
+<code class="docutils literal"><span class="pre">zdot</span></code>. We use identical ContinuousState objects for both.</p>
+<p><em>Memory ownership</em></p>
+<p>When a ContinuousState represents the state of a LeafSystem, it always
+owns the memory that is used for the state variables and is
+responsible for destruction. For a Diagram, ContinuousState can
+instead be a <em>view</em> of the underlying LeafSystem substates, so that
+modifying the Diagram’s continuous state affects the LeafSystems
+appropriately. In that case, the memory is owned by the underlying
+LeafSystems. However, when a ContinuousState object of any structure
+is cloned, the resulting object <em>always</em> owns all its underlying
+memory, which is initialized with a copy of the original state
+variable values but is otherwise independent. The cloned object
+retains the structure and ordering of the elements and does not
+guarantee contiguous storage.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DiagramContinuousState for more information.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>A mathematical type compatible with Eigen’s Scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.ContinuousState_.ContinuousState_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContinuousState_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ContinuousState_.ContinuousState_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a zero-length ContinuousState.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContinuousState_.ContinuousState_[float].get_mutable_vector">
+<code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContinuousState_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::VectorBase&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.ContinuousState_.ContinuousState_[float].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the entire continuous state vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContinuousState_.ContinuousState_[float].get_vector">
+<code class="descname">get_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContinuousState_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::VectorBase&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.ContinuousState_.ContinuousState_[float].get_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the entire continuous state vector.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.DependencyTicket">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DependencyTicket</code><a class="headerlink" href="#pydrake.systems.framework.DependencyTicket" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.DependencyTicket.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DependencyTicket</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.DependencyTicket.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DependencyTicket.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DependencyTicket</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.DependencyTicket.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Diagram">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">Diagram</code><a class="headerlink" href="#pydrake.systems.framework.Diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.DiagramBuilder">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiagramBuilder</code><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.DiagramBuilder_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.DiagramBuilder_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiagramBuilder_</code><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float]" title="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float]"><code class="xref py py-class docutils literal"><span class="pre">DiagramBuilder_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">DiagramBuilder_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">DiagramBuilder_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float]">
+<em class="property">class </em><code class="descname">DiagramBuilder_[float]</code><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>DiagramBuilder is a factory class for Diagram. It is single use: after
+calling Build or BuildInto, DiagramBuilder gives up ownership of the
+constituent systems, and should therefore be discarded.</p>
+<p>A system must be added to the DiagramBuilder with AddSystem before it
+can be wired up in any way. Every system must have a unique, non-empty
+name.</p>
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].AddSystem">
+<code class="descname">AddSystem</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], arg0: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.System_[float]<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].AddSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes ownership of <code class="docutils literal"><span class="pre">system</span></code> and adds it to the builder. Returns a
+bare pointer to the System, which will remain valid for the lifetime
+of the Diagram built by this builder.</p>
+<p>If the system’s name is unset, sets it to
+System::GetMemoryObjectName() as a default in order to have unique
+names within the diagram.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
+  <span class="n">auto</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">());</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">S</span></code>:</dt>
+<dd>The type of system to add.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].Build">
+<code class="descname">Build</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.Diagram_[float]<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].Build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds the Diagram that has been described by the calls to Connect,
+ExportInput, and ExportOutput.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the graph is not buildable.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].BuildInto">
+<code class="descname">BuildInto</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], arg0: pydrake.systems.framework.Diagram_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].BuildInto" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures <code class="docutils literal"><span class="pre">target</span></code> to have the topology that has been described by
+the calls to Connect, ExportInput, and ExportOutput.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the graph is not buildable.</td>
+</tr>
+</tbody>
+</table>
+<p>Only Diagram subclasses should call this method. The target must not
+already be initialized.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].Connect">
+<code class="descname">Connect</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], arg0: drake::systems::OutputPort&lt;double&gt;, arg1: drake::systems::InputPort&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].Connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that input port <code class="docutils literal"><span class="pre">dest</span></code> is connected to output port <code class="docutils literal"><span class="pre">src</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].ExportInput">
+<code class="descname">ExportInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], input: drake::systems::InputPort&lt;double&gt;, name: unicode = u'__use_default_name__'</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPortIndex<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].ExportInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that the given <code class="docutils literal"><span class="pre">input</span></code> port of a constituent system is an
+input to the entire Diagram. <code class="docutils literal"><span class="pre">name</span></code> is an optional name for the
+input port; if it is unspecified, then a default name will be
+provided.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>If supplied at all, <code class="docutils literal"><span class="pre">name</span></code> must not be empty.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The index of the exported input port of the entire diagram.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].ExportOutput">
+<code class="descname">ExportOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], output: drake::systems::OutputPort&lt;double&gt;, name: unicode = u'__use_default_name__'</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPortIndex<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].ExportOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that the given <code class="docutils literal"><span class="pre">output</span></code> port of a constituent system is an
+output of the entire diagram. <code class="docutils literal"><span class="pre">name</span></code> is an optional name for the
+output port; if it is unspecified, then a default name will be
+provided.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>If supplied at all, <code class="docutils literal"><span class="pre">name</span></code> must not be empty.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The index of the exported output port of the entire diagram.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.Diagram_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Diagram_</code><a class="headerlink" href="#pydrake.systems.framework.Diagram_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.Diagram_.Diagram_[float]" title="pydrake.systems.framework.Diagram_.Diagram_[float]"><code class="xref py py-class docutils literal"><span class="pre">Diagram_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Diagram_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Diagram_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.Diagram_.Diagram_[float]">
+<em class="property">class </em><code class="descname">Diagram_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Diagram_.Diagram_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.System_[float]</span></code></p>
+<p>Diagram is a System composed of one or more constituent Systems,
+arranged in a directed graph where the vertices are the constituent
+Systems themselves, and the edges connect the output of one
+constituent System to the input of another. To construct a Diagram,
+use a DiagramBuilder.</p>
+<p>Each System in the Diagram must have a unique, non-empty name.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The mathematical scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.Diagram_.Diagram_[float].GetMutableSubsystemContext">
+<code class="descname">GetMutableSubsystemContext</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Diagram_[float], arg0: pydrake.systems.framework.System_[float], arg1: drake::systems::Context&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; drake::systems::Context&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Diagram_.Diagram_[float].GetMutableSubsystemContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the subcontext that corresponds to the system <code class="docutils literal"><span class="pre">subsystem</span></code>.
+Classes inheriting from Diagram need access to this method in order to
+pass their constituent subsystems the appropriate subcontext. Aborts
+if <code class="docutils literal"><span class="pre">subsystem</span></code> is not actually a subsystem of this diagram.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Diagram_.Diagram_[float].GetMutableSubsystemState">
+<code class="descname">GetMutableSubsystemState</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Diagram_[float], arg0: pydrake.systems.framework.System_[float], arg1: drake::systems::Context&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; drake::systems::State&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Diagram_.Diagram_[float].GetMutableSubsystemState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the state for a particular subsystem from the context for
+the entire diagram. Invalidates all entries in that subsystem’s cache
+that depend on State. Aborts if <code class="docutils literal"><span class="pre">subsystem</span></code> is not actually a
+subsystem of this diagram.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Diagram_.Diagram_[float].GetSubsystemContext">
+<code class="descname">GetSubsystemContext</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Diagram_[float], arg0: pydrake.systems.framework.System_[float], arg1: drake::systems::Context&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; drake::systems::Context&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Diagram_.Diagram_[float].GetSubsystemContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the subcontext that corresponds to the system <code class="docutils literal"><span class="pre">subsystem</span></code>.
+Classes inheriting from Diagram need access to this method in order to
+pass their constituent subsystems the appropriate subcontext. Aborts
+if <code class="docutils literal"><span class="pre">subsystem</span></code> is not actually a subsystem of this diagram.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Diagram_.Diagram_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Diagram_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Diagram_.Diagram_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs an uninitialized Diagram. Subclasses that use this
+constructor are obligated to call DiagramBuilder::BuildInto(this).
+Provides scalar- type conversion support only if every contained
+subsystem provides the same support.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.DiscreteStateIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiscreteStateIndex</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteStateIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.DiscreteStateIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteStateIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.DiscreteStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteStateIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteStateIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.DiscreteStateIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.DiscreteUpdateEvent">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiscreteUpdateEvent</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.DiscreteUpdateEvent_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.DiscreteUpdateEvent_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiscreteUpdateEvent_</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.DiscreteUpdateEvent_.DiscreteUpdateEvent_[float]" title="pydrake.systems.framework.DiscreteUpdateEvent_.DiscreteUpdateEvent_[float]"><code class="xref py py-class docutils literal"><span class="pre">DiscreteUpdateEvent_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">DiscreteUpdateEvent_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">DiscreteUpdateEvent_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.DiscreteUpdateEvent_.DiscreteUpdateEvent_[float]">
+<em class="property">class </em><code class="descname">DiscreteUpdateEvent_[float]</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent_.DiscreteUpdateEvent_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Event_[float]</span></code></p>
+<p>This class represents a discrete update event. It has an optional
+callback function to do custom handling of this event given const
+Context and const DiscreteUpdateEvent references, and writes the
+updates to a mutable, non-null DiscreteValues object.</p>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.DiscreteUpdateEvent_.DiscreteUpdateEvent_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteUpdateEvent_.DiscreteUpdateEvent_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.DiscreteValues">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiscreteValues</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.DiscreteValues_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.DiscreteValues_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiscreteValues_</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float]" title="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float]"><code class="xref py py-class docutils literal"><span class="pre">DiscreteValues_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">DiscreteValues_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">DiscreteValues_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float]">
+<em class="property">class </em><code class="descname">DiscreteValues_[float]</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>%DiscreteValues is a container for numerical but non-continuous state
+and parameters. It may own its underlying data, for use with leaf
+Systems, or not, for use with Diagrams.</p>
+<p>DiscreteValues is an ordered collection xd of BasicVector “groups” so
+xd = [xd₀, xd₁…], where each group xdᵢ is a contiguous vector.
+Requesting a specific group index from this collection is the most
+granular way to retrieve discrete values from the Context, and thus is
+the unit of cache invalidation. System authors are encouraged to
+partition their DiscreteValues such that each cacheable computation
+within the System may depend on only the elements of DiscreteValues
+that it needs.</p>
+<p>None of the contained vectors (groups) may be null, although any of
+them may be zero-length.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>A mathematical type compatible with Eigen’s Scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DiscreteValues_[float]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float]</em><span class="sig-paren">)</span> &#x2192; List[drake::systems::BasicVector&lt;double&gt;]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_mutable_vector">
+<code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; drake::systems::BasicVector&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the vector holding data for the
+indicated group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_vector">
+<code class="descname">get_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; drake::systems::BasicVector&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the vector holding data for the indicated
+group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].num_groups">
+<code class="descname">num_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].num_groups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Event">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">Event</code><a class="headerlink" href="#pydrake.systems.framework.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Event_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.Event_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Event_</code><a class="headerlink" href="#pydrake.systems.framework.Event_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.Event_.Event_[float]" title="pydrake.systems.framework.Event_.Event_[float]"><code class="xref py py-class docutils literal"><span class="pre">Event_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Event_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Event_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.Event_.Event_[float]">
+<em class="property">class </em><code class="descname">Event_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Event_.Event_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract base class that represents an event. The base event contains
+two main pieces of information: an enum trigger type and an optional
+attribute of AbstractValue that can be used to explain why the event
+is triggered. Derived classes should contain a function pointer to an
+optional callback function that handles the event. No-op is the
+default handling behavior. Currently, the System framework only
+supports three concrete event types: PublishEvent,
+DiscreteUpdateEvent, and UnrestrictedUpdateEvent distinguished by
+their callback functions’ access level to the context.</p>
+<p>Event handling occurs during a simulation of a system. The logic that
+describes when particular event types are handled is described in the
+class documentation for Simulator.</p>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Event_.Event_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.Event_.Event_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Event_.Event_[float].get_trigger_type">
+<code class="descname">get_trigger_type</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Event_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.TriggerType<a class="headerlink" href="#pydrake.systems.framework.Event_.Event_[float].get_trigger_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the trigger type.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.FixedInputPortValue">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">FixedInputPortValue</code><a class="headerlink" href="#pydrake.systems.framework.FixedInputPortValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>A FixedInputPortValue encapsulates a vector or abstract value for use
+as an internal value source for one of a System’s input ports. The
+semantics are identical to a Parameter. We assign a DependencyTracker
+to this object and subscribe the InputPort to it when that port is
+fixed. Any modification to the value here issues a notification to its
+dependent, and increments a serial number kept here.</p>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.FixedInputPortValue.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.FixedInputPortValue.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.InputPort">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">InputPort</code><a class="headerlink" href="#pydrake.systems.framework.InputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.InputPort_[float]</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.InputPortIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">InputPortIndex</code><a class="headerlink" href="#pydrake.systems.framework.InputPortIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.InputPortIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPortIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.InputPortIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.InputPortIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPortIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.InputPortIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.InputPort_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">InputPort_</code><a class="headerlink" href="#pydrake.systems.framework.InputPort_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.InputPort_.InputPort_[float]" title="pydrake.systems.framework.InputPort_.InputPort_[float]"><code class="xref py py-class docutils literal"><span class="pre">InputPort_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">InputPort_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">InputPort_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.InputPort_.InputPort_[float]">
+<em class="property">class </em><code class="descname">InputPort_[float]</code><a class="headerlink" href="#pydrake.systems.framework.InputPort_.InputPort_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>This extends InputPortBase with some scalar type-dependent methods.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The mathematical type of the context, which must be a valid Eigen
+scalar.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.InputPort_.InputPort_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.InputPort_.InputPort_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.InputPort_.InputPort_[float].get_data_type">
+<code class="descname">get_data_type</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.PortDataType<a class="headerlink" href="#pydrake.systems.framework.InputPort_.InputPort_[float].get_data_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the port data type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.InputPort_.InputPort_[float].get_index">
+<code class="descname">get_index</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPortIndex<a class="headerlink" href="#pydrake.systems.framework.InputPort_.InputPort_[float].get_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index of this input port within the owning System. For a
+Diagram, this will be the index within the Diagram, <em>not</em> the index
+within a LeafSystem whose input port was exported.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.InputPort_.InputPort_[float].size">
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.InputPort_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.InputPort_.InputPort_[float].size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the fixed size expected for a vector-valued input port. Not
+meaningful for abstract-valued input ports.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.LeafContext">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">LeafContext</code><a class="headerlink" href="#pydrake.systems.framework.LeafContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafContext_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.LeafContext_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">LeafContext_</code><a class="headerlink" href="#pydrake.systems.framework.LeafContext_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.LeafContext_.LeafContext_[float]" title="pydrake.systems.framework.LeafContext_.LeafContext_[float]"><code class="xref py py-class docutils literal"><span class="pre">LeafContext_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">LeafContext_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">LeafContext_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.LeafContext_.LeafContext_[float]">
+<em class="property">class </em><code class="descname">LeafContext_[float]</code><a class="headerlink" href="#pydrake.systems.framework.LeafContext_.LeafContext_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Context_[float]</span></code></p>
+<p>LeafContext contains all prerequisite data necessary to uniquely
+determine the results of computations performed by the associated
+LeafSystem.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Context for more information.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The mathematical type of the context, which must be a valid Eigen
+scalar.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.LeafContext_.LeafContext_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.LeafContext_.LeafContext_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.LeafSystem">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">LeafSystem</code><a class="headerlink" href="#pydrake.systems.framework.LeafSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.LeafSystem_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">LeafSystem_</code><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">LeafSystem_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">LeafSystem_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">LeafSystem_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float]">
+<em class="property">class </em><code class="descname">LeafSystem_[float]</code><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.System_[float]</span></code></p>
+<p>A superclass template that extends System with some convenience
+utilities that are not applicable to Diagrams.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.LeafSystem_[float]) -&gt; None</li>
+</ol>
+<p>Default constructor that declares no inputs, outputs, state,
+parameters, events, nor scalar-type conversion support (AutoDiff,
+etc.). To enable AutoDiff support, use the SystemScalarConverter-based
+constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.LeafSystem_[float], converter: pydrake.systems.framework.SystemScalarConverter) -&gt; None</li>
+</ol>
+<p>Constructor that declares no inputs, outputs, state, parameters, or
+events, but allows subclasses to declare scalar-type conversion
+support (AutoDiff, etc.).</p>
+<p>The scalar-type conversion support will use <code class="docutils literal"><span class="pre">converter</span></code>. To enable
+scalar-type conversion support, pass a <code class="docutils literal"><span class="pre">SystemTypeTag&lt;S&gt;{}</span></code> where
+<code class="docutils literal"><span class="pre">S</span></code> must be the exact class of <code class="docutils literal"><span class="pre">this</span></code> being constructed.</p>
+<p>See system_scalar_conversion for detailed background and examples
+related to scalar-type conversion support.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.NumericParameterIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">NumericParameterIndex</code><a class="headerlink" href="#pydrake.systems.framework.NumericParameterIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.NumericParameterIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.NumericParameterIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.NumericParameterIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.NumericParameterIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.NumericParameterIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.NumericParameterIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.OutputPort">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">OutputPort</code><a class="headerlink" href="#pydrake.systems.framework.OutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.OutputPort_[float]</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.OutputPortIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">OutputPortIndex</code><a class="headerlink" href="#pydrake.systems.framework.OutputPortIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.OutputPortIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.OutputPortIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.OutputPortIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.OutputPortIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.OutputPortIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.OutputPortIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.OutputPort_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">OutputPort_</code><a class="headerlink" href="#pydrake.systems.framework.OutputPort_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.OutputPort_.OutputPort_[float]" title="pydrake.systems.framework.OutputPort_.OutputPort_[float]"><code class="xref py py-class docutils literal"><span class="pre">OutputPort_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">OutputPort_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">OutputPort_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.OutputPort_.OutputPort_[float]">
+<em class="property">class </em><code class="descname">OutputPort_[float]</code><a class="headerlink" href="#pydrake.systems.framework.OutputPort_.OutputPort_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>An OutputPort belongs to a System and represents the properties of one
+of that System’s output ports. OutputPort objects are assigned
+OutputPortIndex values in the order they are declared; these are
+unique within a single System.</p>
+<p>An output port can be considered a “window” into a System that permits
+controlled exposure of one of the values contained in that System’s
+Context at run time. Input ports of other subsystems may be connected
+to an output port to construct system diagrams with carefully managed
+interdependencies.</p>
+<p>The exposed value may be the result of an output computation, or it
+may simply expose some other value contained in the Context, such as
+the values of state variables. The Context handles caching of output
+port values and tracks dependencies to ensure that the values are
+valid with respect to their prerequisites. Leaf systems provide for
+the production of output port values, by computation or forwarding
+from other values within the associated leaf context. A diagram’s
+output ports, on the other hand, are exported from output ports of its
+contained subsystems.</p>
+<p>An output port’s value is always stored as an AbstractValue, but we
+also provide special handling for output ports known to have numeric
+(vector) values. Vector-valued ports may specify a particular vector
+length, or may leave that to be determined at runtime.</p>
+<p>OutputPort objects support three important operations:</p>
+<ul class="simple">
+<li>Allocate() returns an object that can hold the port’s value.</li>
+<li>Calc() unconditionally computes the port’s value.</li>
+<li>Eval() updates a cached value if necessary.</li>
+</ul>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+<li>symbolic::Expression</li>
+</ul>
+<p>They are already available to link against in the containing library.
+No other values for T are currently supported.</p>
+<dl class="method">
+<dt id="pydrake.systems.framework.OutputPort_.OutputPort_[float].Eval">
+<code class="descname">Eval</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.OutputPort_[float], arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.framework.OutputPort_.OutputPort_[float].Eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the up-to-date value of this output port
+contained in the given Context. This is the preferred way to obtain an
+output port’s value since it will not be recalculated once up to date.
+If the value is not already up to date with respect to its
+prerequisites, this port’s Calc() method is used first to update the
+value before the reference is returned. The Calc() method may be
+arbitrarily expensive, but Eval() is constant time and <em>very</em> fast if
+the value is already up to date.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.OutputPort_.OutputPort_[float].EvalAbstract">
+<code class="descname">EvalAbstract</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.OutputPort_[float], arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::AbstractValue<a class="headerlink" href="#pydrake.systems.framework.OutputPort_.OutputPort_[float].EvalAbstract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the value of this output port contained in the
+given Context. If that value is not up to date with respect to its
+prerequisites, the Calc() method above is used first to update the
+value before the reference is returned.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.OutputPort_.OutputPort_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.OutputPort_.OutputPort_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.OutputPort_.OutputPort_[float].get_index">
+<code class="descname">get_index</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.OutputPort_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPortIndex<a class="headerlink" href="#pydrake.systems.framework.OutputPort_.OutputPort_[float].get_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index of this output port within the owning System. For a
+Diagram, this will be the index within the Diagram, <em>not</em> the index
+within the LeafSystem whose output port was forwarded.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.OutputPort_.OutputPort_[float].size">
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.OutputPort_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.OutputPort_.OutputPort_[float].size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the fixed size expected for a vector-valued output port. Not
+meaningful for abstract output ports.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Parameters">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">Parameters</code><a class="headerlink" href="#pydrake.systems.framework.Parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Parameters_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.Parameters_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Parameters_</code><a class="headerlink" href="#pydrake.systems.framework.Parameters_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.Parameters_.Parameters_[float]" title="pydrake.systems.framework.Parameters_.Parameters_[float]"><code class="xref py py-class docutils literal"><span class="pre">Parameters_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Parameters_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Parameters_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float]">
+<em class="property">class </em><code class="descname">Parameters_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameters is a container for variables that parameterize a System so
+that it can represent a family of related models. Parameters are
+members of the Context. Parameters are not Inputs because they do not
+flow from upstream Systems, and they are not State because the System
+does not define update functions for them. If Parameters are modified,
+they are modified by application-specific logic, extrinsic to the
+System framework and to the flow of simulation time.</p>
+<p>The Parameters include both vector-valued and abstract-valued
+elements.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>A mathematical type compatible with Eigen’s Scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.Parameters_[float]<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].Clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].SetFrom">
+<code class="descname">SetFrom</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], arg0: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].SetFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes this state (regardless of scalar type) from a
+Parameters&lt;double&gt;. All scalar types in Drake must support
+initialization from doubles.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.Parameters_[float]) -&gt; None</li>
+</ol>
+<p>Constructs an empty Parameters.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.Parameters_[float], numeric: List[drake::systems::BasicVector&lt;double&gt;], abstract: List[drake::systems::AbstractValue]) -&gt; None</li>
+</ol>
+<p>Constructs Parameters both <code class="docutils literal"><span class="pre">numeric</span></code> and <code class="docutils literal"><span class="pre">abstract</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.systems.framework.Parameters_[float], numeric: List[drake::systems::BasicVector&lt;double&gt;]) -&gt; None</li>
+</ol>
+<p>Constructs Parameters that are purely <code class="docutils literal"><span class="pre">numeric</span></code>.</p>
+<ol class="arabic simple" start="4">
+<li>__init__(self: pydrake.systems.framework.Parameters_[float], abstract: List[drake::systems::AbstractValue]) -&gt; None</li>
+</ol>
+<p>Constructs Parameters that are purely <code class="docutils literal"><span class="pre">abstract</span></code>.</p>
+<ol class="arabic simple" start="5">
+<li>__init__(self: pydrake.systems.framework.Parameters_[float], vec: drake::systems::BasicVector&lt;double&gt;) -&gt; None</li>
+</ol>
+<p>Constructs Parameters in the common case where the parameters consist
+of exactly one numeric vector.</p>
+<ol class="arabic simple" start="6">
+<li>__init__(self: pydrake.systems.framework.Parameters_[float], value: drake::systems::AbstractValue) -&gt; None</li>
+</ol>
+<p>Constructs Parameters in the common case where the parameters consist
+of exactly one abstract value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].get_abstract_parameter">
+<code class="descname">get_abstract_parameter</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], index: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::AbstractValue<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].get_abstract_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the abstract-valued parameter at <code class="docutils literal"><span class="pre">index</span></code>. Asserts if the
+index is out of bounds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].get_abstract_parameters">
+<code class="descname">get_abstract_parameters</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].get_abstract_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].get_mutable_abstract_parameter">
+<code class="descname">get_mutable_abstract_parameter</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], index: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::AbstractValue<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].get_mutable_abstract_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the abstract-valued parameter at <code class="docutils literal"><span class="pre">index</span></code>. Asserts if the
+index is out of bounds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].get_mutable_numeric_parameter">
+<code class="descname">get_mutable_numeric_parameter</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], index: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::BasicVector&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].get_mutable_numeric_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vector-valued parameter at <code class="docutils literal"><span class="pre">index</span></code>. Asserts if the index
+is out of bounds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].get_numeric_parameter">
+<code class="descname">get_numeric_parameter</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], index: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::BasicVector&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].get_numeric_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vector-valued parameter at <code class="docutils literal"><span class="pre">index</span></code>. Asserts if the index
+is out of bounds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].get_numeric_parameters">
+<code class="descname">get_numeric_parameters</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::DiscreteValues&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].get_numeric_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].num_abstract_parameters">
+<code class="descname">num_abstract_parameters</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].num_abstract_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].num_numeric_parameter_groups">
+<code class="descname">num_numeric_parameter_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].num_numeric_parameter_groups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].set_abstract_parameters">
+<code class="descname">set_abstract_parameters</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], abstract_params: pydrake.systems.framework.AbstractValues</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].set_abstract_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Parameters_.Parameters_[float].set_numeric_parameters">
+<code class="descname">set_numeric_parameters</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], numeric_params: drake::systems::DiscreteValues&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].set_numeric_parameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.PortDataType">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">PortDataType</code><a class="headerlink" href="#pydrake.systems.framework.PortDataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>kVectorValued</p>
+<p>kAbstractValued</p>
+<dl class="method">
+<dt id="pydrake.systems.framework.PortDataType.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.PortDataType</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.PortDataType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.PortDataType.kAbstractValued">
+<code class="descname">kAbstractValued</code><em class="property"> = PortDataType.kAbstractValued</em><a class="headerlink" href="#pydrake.systems.framework.PortDataType.kAbstractValued" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.PortDataType.kVectorValued">
+<code class="descname">kVectorValued</code><em class="property"> = PortDataType.kVectorValued</em><a class="headerlink" href="#pydrake.systems.framework.PortDataType.kVectorValued" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.PortDataType.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.systems.framework.PortDataType.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.PublishEvent">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">PublishEvent</code><a class="headerlink" href="#pydrake.systems.framework.PublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.PublishEvent_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.PublishEvent_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">PublishEvent_</code><a class="headerlink" href="#pydrake.systems.framework.PublishEvent_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.PublishEvent_.PublishEvent_[float]" title="pydrake.systems.framework.PublishEvent_.PublishEvent_[float]"><code class="xref py py-class docutils literal"><span class="pre">PublishEvent_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">PublishEvent_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">PublishEvent_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.PublishEvent_.PublishEvent_[float]">
+<em class="property">class </em><code class="descname">PublishEvent_[float]</code><a class="headerlink" href="#pydrake.systems.framework.PublishEvent_.PublishEvent_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Event_[float]</span></code></p>
+<p>This class represents a publish event. It has an optional callback
+function to do custom handling of this event given const Context and
+const PublishEvent object references.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System::Publish for more details.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.systems.framework.PublishEvent_.PublishEvent_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.PublishEvent_[float], trigger_type: pydrake.systems.framework.TriggerType, callback: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.PublishEvent_[float]], None]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.PublishEvent_.PublishEvent_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.State">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">State</code><a class="headerlink" href="#pydrake.systems.framework.State" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.State_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.State_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">State_</code><a class="headerlink" href="#pydrake.systems.framework.State_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.State_.State_[float]" title="pydrake.systems.framework.State_.State_[float]"><code class="xref py py-class docutils literal"><span class="pre">State_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">State_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">State_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.State_.State_[float]">
+<em class="property">class </em><code class="descname">State_[float]</code><a class="headerlink" href="#pydrake.systems.framework.State_.State_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>%State is a container for all the data comprising the complete state
+of a particular System at a particular moment. Any field in State may
+be empty if it is not applicable to the System in question. A System
+may not maintain state in any place other than a State object.</p>
+<p>A State <code class="docutils literal"><span class="pre">x</span></code> contains three types of state variables:</p>
+<ul class="simple">
+<li>ContinuousState <code class="docutils literal"><span class="pre">xc</span></code></li>
+<li>DiscreteState   <code class="docutils literal"><span class="pre">xd</span></code></li>
+<li>AbstractState   <code class="docutils literal"><span class="pre">xa</span></code></li>
+</ul>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>A mathematical type compatible with Eigen’s Scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.State_.State_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.State_.State_[float].get_continuous_state">
+<code class="descname">get_continuous_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::ContinuousState&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_continuous_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.State_.State_[float].get_discrete_state">
+<code class="descname">get_discrete_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::DiscreteValues&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_discrete_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.State_.State_[float].get_mutable_continuous_state">
+<code class="descname">get_mutable_continuous_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::ContinuousState&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_mutable_continuous_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.State_.State_[float].get_mutable_discrete_state">
+<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::DiscreteValues&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.SubsystemIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">SubsystemIndex</code><a class="headerlink" href="#pydrake.systems.framework.SubsystemIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.SubsystemIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SubsystemIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SubsystemIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construction from a non-negative <code class="docutils literal"><span class="pre">int</span></code> value. The value must lie in
+the range of [0, 2³¹). Constructor only promises to test validity in
+Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SubsystemIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SubsystemIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SubsystemIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Subvector">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">Subvector</code><a class="headerlink" href="#pydrake.systems.framework.Subvector" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Subvector_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.Subvector_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Subvector_</code><a class="headerlink" href="#pydrake.systems.framework.Subvector_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.Subvector_.Subvector_[float]" title="pydrake.systems.framework.Subvector_.Subvector_[float]"><code class="xref py py-class docutils literal"><span class="pre">Subvector_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Subvector_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Subvector_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.Subvector_.Subvector_[float]">
+<em class="property">class </em><code class="descname">Subvector_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Subvector_.Subvector_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.VectorBase_[float]</span></code></p>
+<p>Subvector is a concrete class template that implements VectorBase by
+providing a sliced view of a VectorBase.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>A mathematical type compatible with Eigen’s Scalar.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Subvector_.Subvector_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.Subvector_.Subvector_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Supervector">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">Supervector</code><a class="headerlink" href="#pydrake.systems.framework.Supervector" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Supervector_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.Supervector_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Supervector_</code><a class="headerlink" href="#pydrake.systems.framework.Supervector_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.Supervector_.Supervector_[float]" title="pydrake.systems.framework.Supervector_.Supervector_[float]"><code class="xref py py-class docutils literal"><span class="pre">Supervector_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Supervector_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Supervector_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.Supervector_.Supervector_[float]">
+<em class="property">class </em><code class="descname">Supervector_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Supervector_.Supervector_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.VectorBase_[float]</span></code></p>
+<p>Supervector is a concrete class template that implements VectorBase by
+concatenating multiple VectorBases, which it does not own.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>A mathematical type compatible with Eigen’s Scalar.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.Supervector_.Supervector_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.Supervector_.Supervector_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.System">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">System</code><a class="headerlink" href="#pydrake.systems.framework.System" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.System_[float]</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.SystemOutput">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">SystemOutput</code><a class="headerlink" href="#pydrake.systems.framework.SystemOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.SystemOutput_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.SystemOutput_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">SystemOutput_</code><a class="headerlink" href="#pydrake.systems.framework.SystemOutput_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.SystemOutput_.SystemOutput_[float]" title="pydrake.systems.framework.SystemOutput_.SystemOutput_[float]"><code class="xref py py-class docutils literal"><span class="pre">SystemOutput_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">SystemOutput_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">SystemOutput_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.SystemOutput_.SystemOutput_[float]">
+<em class="property">class </em><code class="descname">SystemOutput_[float]</code><a class="headerlink" href="#pydrake.systems.framework.SystemOutput_.SystemOutput_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conveniently stores a snapshot of the values of every output port of a
+System. There is framework support for allocating the right types and
+filling them in but otherwise this is not used internally. Note that
+there is never any live connection between a SystemOutput object and
+the System whose output values it has captured.</p>
+<p>A <code class="docutils literal"><span class="pre">SystemOutput&lt;T&gt;</span></code> object can only be obtained using
+<code class="docutils literal"><span class="pre">System&lt;T&gt;::AllocateOutput()</span></code> or by copying an existing SystemOutput
+object.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The type of the output data. Must be a valid Eigen scalar.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.SystemOutput_.SystemOutput_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.SystemOutput_.SystemOutput_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemOutput_.SystemOutput_[float].get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemOutput_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::AbstractValue<a class="headerlink" href="#pydrake.systems.framework.SystemOutput_.SystemOutput_[float].get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the last-saved value of output port <code class="docutils literal"><span class="pre">index</span></code> as an
+AbstractValue. This works for any output port regardless of it actual
+type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemOutput_.SystemOutput_[float].get_num_ports">
+<code class="descname">get_num_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemOutput_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.SystemOutput_.SystemOutput_[float].get_num_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of output ports specified for this SystemOutput
+during allocation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemOutput_.SystemOutput_[float].get_vector_data">
+<code class="descname">get_vector_data</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemOutput_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::BasicVector&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.SystemOutput_.SystemOutput_[float].get_vector_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the last-saved value of output port <code class="docutils literal"><span class="pre">index</span></code> as a
+<code class="docutils literal"><span class="pre">BasicVector&lt;T&gt;</span></code>, although the actual concrete type is preserved
+from the actual output port.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the port is not vector-valued.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.SystemScalarConverter">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">SystemScalarConverter</code><a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="template">
+<dt id="pydrake.systems.framework.SystemScalarConverter.Add">
+<em class="property">template </em><code class="descname">Add</code><a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter.Add.Add[AutoDiffXd, float]" title="pydrake.systems.framework.SystemScalarConverter.Add.Add[AutoDiffXd, float]"><code class="xref py py-class docutils literal"><span class="pre">Add[AutoDiffXd,</span> <span class="pre">float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Add[Expression,</span> <span class="pre">float]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Add[float,</span> <span class="pre">AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Add[Expression,</span> <span class="pre">AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Add[float,</span> <span class="pre">Expression]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Add[AutoDiffXd,</span> <span class="pre">Expression]</span></code></p>
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemScalarConverter.Add.Add[AutoDiffXd, float]">
+<code class="descname">Add[AutoDiffXd, float]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter, arg0: Callable[[drake::systems::System&lt;double&gt;], drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add.Add[AutoDiffXd, float]" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible">
+<em class="property">template </em><code class="descname">IsConvertible</code><a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible.IsConvertible[AutoDiffXd, float]" title="pydrake.systems.framework.SystemScalarConverter.IsConvertible.IsConvertible[AutoDiffXd, float]"><code class="xref py py-class docutils literal"><span class="pre">IsConvertible[AutoDiffXd,</span> <span class="pre">float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[Expression,</span> <span class="pre">float]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[float,</span> <span class="pre">AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[Expression,</span> <span class="pre">AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[float,</span> <span class="pre">Expression]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[AutoDiffXd,</span> <span class="pre">Expression]</span></code></p>
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible.IsConvertible[AutoDiffXd, float]">
+<code class="descname">IsConvertible[AutoDiffXd, float]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible.IsConvertible[AutoDiffXd, float]" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.SystemScalarConverter.SupportedConversionPairs">
+<code class="descname">SupportedConversionPairs</code><em class="property"> = ((&lt;class 'pydrake.autodiffutils.AutoDiffXd'&gt;, &lt;type 'float'&gt;), (&lt;class 'pydrake.symbolic.Expression'&gt;, &lt;type 'float'&gt;), (&lt;type 'float'&gt;, &lt;class 'pydrake.autodiffutils.AutoDiffXd'&gt;), (&lt;class 'pydrake.symbolic.Expression'&gt;, &lt;class 'pydrake.autodiffutils.AutoDiffXd'&gt;), (&lt;type 'float'&gt;, &lt;class 'pydrake.symbolic.Expression'&gt;), (&lt;class 'pydrake.autodiffutils.AutoDiffXd'&gt;, &lt;class 'pydrake.symbolic.Expression'&gt;))</em><a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.SupportedConversionPairs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.SystemScalarConverter.SupportedScalars">
+<code class="descname">SupportedScalars</code><em class="property"> = (&lt;type 'float'&gt;, &lt;class 'pydrake.autodiffutils.AutoDiffXd'&gt;, &lt;class 'pydrake.symbolic.Expression'&gt;)</em><a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.SupportedScalars" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemScalarConverter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.System_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">System_</code><a class="headerlink" href="#pydrake.systems.framework.System_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.System_.System_[float]" title="pydrake.systems.framework.System_.System_[float]"><code class="xref py py-class docutils literal"><span class="pre">System_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">System_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">System_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.System_.System_[float]">
+<em class="property">class </em><code class="descname">System_[float]</code><a class="headerlink" href="#pydrake.systems.framework.System_.System_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides non-templatized functionality shared by the templatized
+System classes.</p>
+<p>Terminology: in general a Drake System is a tree structure composed of
+“subsystems”, which are themselves System objects. The corresponding
+Context is a parallel tree structure composed of “subcontexts”, which
+are themselves Context objects. There is a one-to-one correspondence
+between subsystems and subcontexts. Within a given System (Context),
+its child subsystems (subcontexts) are indexed using a SubsystemIndex;
+there is no separate SubcontextIndex since the numbering must be
+identical.</p>
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].AllocateOutput">
+<code class="descname">AllocateOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::SystemOutput&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].AllocateOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a container that can hold the values of all of this System’s
+output ports. It is sized with the number of output ports and uses
+each output port’s allocation method to provide an object of the right
+type for that port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].CalcOutput">
+<code class="descname">CalcOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], arg0: drake::systems::Context&lt;double&gt;, arg1: drake::systems::SystemOutput&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].CalcOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility method that computes for <em>every</em> output port i the value y(i)
+that should result from the current contents of the given Context.
+Note that individual output port values can be calculated using
+<code class="docutils literal"><span class="pre">get_output_port(i).Calc()</span></code>; this method invokes that for each
+output port in index order. The result may depend on time and the
+current values of input ports, parameters, and state variables. The
+result is written to <code class="docutils literal"><span class="pre">outputs</span></code> which must already have been
+allocated to have the right number of entries of the right types.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].CalcTimeDerivatives">
+<code class="descname">CalcTimeDerivatives</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], arg0: drake::systems::Context&lt;double&gt;, arg1: drake::systems::ContinuousState&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].CalcTimeDerivatives" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the time derivatives <code class="docutils literal"><span class="pre">xcdot</span></code> of the continuous state
+<code class="docutils literal"><span class="pre">xc</span></code> into a given output argument. Prefer EvalTimeDerivatives()
+instead to avoid unnecessary recomputation.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalTimeDerivatives() for more information.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The Context whose contents will be used to evaluate the
+derivatives.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">derivatives</span></code>:</dt>
+<dd>The time derivatives <code class="docutils literal"><span class="pre">xcdot</span></code>. Must be the same size as the
+continuous state vector in <code class="docutils literal"><span class="pre">context</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].CreateDefaultContext">
+<code class="descname">CreateDefaultContext</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::Context&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].CreateDefaultContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>This convenience method allocates a context using AllocateContext()
+and sets its default values using SetDefaultContext().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].EvalAbstractInput">
+<code class="descname">EvalAbstractInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], arg0: drake::systems::Context&lt;double&gt;, arg1: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::AbstractValue<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].EvalAbstractInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of the input port with the given <code class="docutils literal"><span class="pre">port_index</span></code> as
+an AbstractValue, which is permitted for ports of any type. Causes the
+value to become up to date first if necessary, delegating to our
+parent Diagram. Returns a pointer to the port’s value, or nullptr if
+the port is not connected. If you know the actual type, use one of the
+more-specific signatures.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">port_index</span></code> selects an existing input port of this System.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalInputValue(), System::EvalVectorInput(),
+System::EvalEigenVectorInput()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].EvalVectorInput">
+<code class="descname">EvalVectorInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], arg0: drake::systems::Context&lt;double&gt;, arg1: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::BasicVector&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].EvalVectorInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of the vector-valued input port with the given
+<code class="docutils literal"><span class="pre">port_index</span></code> as a BasicVector or a specific subclass <code class="docutils literal"><span class="pre">Vec</span></code> derived
+from BasicVector. Causes the value to become up to date first if
+necessary. See EvalAbstractInput() for more information.</p>
+<p>The result is returned as a pointer to the input port’s value of type
+<code class="docutils literal"><span class="pre">Vec&lt;T&gt;</span></code> or nullptr if the port is not connected.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">port_index</span></code> selects an existing input port of this System.</dd>
+<dt>Precondition:</dt>
+<dd>the port must have been declared to be vector-valued.</dd>
+<dt>Precondition:</dt>
+<dd>the port’s value must be of type Vec&lt;T&gt;.</dd>
+<dt>Template parameter <code class="docutils literal"><span class="pre">Vec</span></code>:</dt>
+<dd>The template type of the input vector, which must be a subclass of
+BasicVector.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].GetGraphvizString">
+<code class="descname">GetGraphvizString</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], max_depth: int = 2147483647</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].GetGraphvizString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Graphviz string describing this System. To render the
+string, use the Graphviz tool, <code class="docutils literal"><span class="pre">dot</span></code>.
+<a class="reference external" href="http://www.graphviz.org/Documentation/dotguide.pdf">http://www.graphviz.org/Documentation/dotguide.pdf</a></p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">max_depth</span></code>:</dt>
+<dd>Sets a limit to the depth of nested diagrams to</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].GetInputPort">
+<code class="descname">GetInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], port_name: unicode</em><span class="sig-paren">)</span> &#x2192; drake::systems::InputPort&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].GetInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the typed input port with the unique name <code class="docutils literal"><span class="pre">port_name</span></code>. The
+current implementation performs a linear search over strings; prefer
+get_input_port() when performance is a concern.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if port_name is not found.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].GetOutputPort">
+<code class="descname">GetOutputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], port_name: unicode</em><span class="sig-paren">)</span> &#x2192; drake::systems::OutputPort&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].GetOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the typed output port with the unique name <code class="docutils literal"><span class="pre">port_name</span></code>. The
+current implementation performs a linear search over strings; prefer
+get_output_port() when performance is a concern.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if port_name is not found.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].HasAnyDirectFeedthrough">
+<code class="descname">HasAnyDirectFeedthrough</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].HasAnyDirectFeedthrough" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if any of the inputs to the system might be directly
+fed through to any of its outputs and <code class="docutils literal"><span class="pre">False</span></code> otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].HasDirectFeedthrough">
+<code class="descname">HasDirectFeedthrough</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].HasDirectFeedthrough" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>HasDirectFeedthrough(self: pydrake.systems.framework.System_[float], output_port: int) -&gt; bool</li>
+</ol>
+<p>Returns true if there might be direct-feedthrough from any input port
+to the given <code class="docutils literal"><span class="pre">output_port</span></code>, and false otherwise.</p>
+<ol class="arabic simple" start="2">
+<li>HasDirectFeedthrough(self: pydrake.systems.framework.System_[float], input_port: int, output_port: int) -&gt; bool</li>
+</ol>
+<p>Returns true if there might be direct-feedthrough from the given
+<code class="docutils literal"><span class="pre">input_port</span></code> to the given <code class="docutils literal"><span class="pre">output_port</span></code>, and false otherwise.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].Publish">
+<code class="descname">Publish</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], arg0: drake::systems::Context&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].Publish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forces a publish on the system, given a <code class="docutils literal"><span class="pre">context</span></code>. The publish event
+will have a trigger type of kForced, with no additional data,
+attribute or custom callback. The Simulator can be configured to call
+this in Simulator::Initialize() and at the start of each continuous
+integration step. See the Simulator API for more details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].ToAutoDiffXd">
+<code class="descname">ToAutoDiffXd</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].ToAutoDiffXd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a deep copy of this System, transmogrified to use the autodiff
+scalar type, with a dynamic-sized vector of partial derivatives. The
+result is never nullptr.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this System does not support autodiff</td>
+</tr>
+</tbody>
+</table>
+<p>See system_scalar_conversion for detailed background and examples
+related to scalar-type conversion support.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].ToAutoDiffXdMaybe">
+<code class="descname">ToAutoDiffXdMaybe</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].ToAutoDiffXdMaybe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a deep copy of this system exactly like ToAutoDiffXd(), but
+returns nullptr if this System does not support autodiff, instead of
+throwing an exception.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].ToSymbolic">
+<code class="descname">ToSymbolic</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].ToSymbolic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a deep copy of this System, transmogrified to use the symbolic
+scalar type. The result is never nullptr.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this System does not support symbolic</td>
+</tr>
+</tbody>
+</table>
+<p>See system_scalar_conversion for detailed background and examples
+related to scalar-type conversion support.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].ToSymbolicMaybe">
+<code class="descname">ToSymbolicMaybe</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::System&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].ToSymbolicMaybe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a deep copy of this system exactly like ToSymbolic(), but
+returns nullptr if this System does not support symbolic, instead of
+throwing an exception.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.System_.System_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].get_input_port">
+<code class="descname">get_input_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], port_index: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::InputPort&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].get_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the typed input port at index <code class="docutils literal"><span class="pre">port_index</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].get_num_input_ports">
+<code class="descname">get_num_input_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].get_num_input_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of input ports currently allocated in this System.
+These are indexed from 0 to get_num_input_ports()-1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].get_num_output_ports">
+<code class="descname">get_num_output_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].get_num_output_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of output ports currently allocated in this System.
+These are indexed from 0 to get_num_output_ports()-1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].get_output_port">
+<code class="descname">get_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], port_index: int</em><span class="sig-paren">)</span> &#x2192; drake::systems::OutputPort&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].get_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the typed output port at index <code class="docutils literal"><span class="pre">port_index</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].set_name">
+<code class="descname">set_name</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].set_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of the system. Do not use the path delimiter character
+‘:’ in the name. When creating a Diagram, names of sibling subsystems
+should be unique. DiagramBuilder uses this method to assign a unique
+default name if none is provided.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.TriggerType">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">TriggerType</code><a class="headerlink" href="#pydrake.systems.framework.TriggerType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predefined types of triggers for events. Used at run time to determine
+why the associated event has occurred.</p>
+<p>Members:</p>
+<blockquote>
+<div>kForced : This trigger indicates that an associated event is triggered by</div></blockquote>
+<p>directly calling the corresponding public system API for event
+handling (e.g. Publish(context)).</p>
+<blockquote>
+<div>kWitness : This trigger indicates that an associated event is triggered by the</div></blockquote>
+<p>zero crossing of a witness function.</p>
+<blockquote>
+<div>kPerStep : This trigger indicates that an associated event is triggered whenever</div></blockquote>
+<p>a <code class="docutils literal"><span class="pre">solver</span></code> takes a <code class="docutils literal"><span class="pre">step</span></code>. A <code class="docutils literal"><span class="pre">solver</span></code> is an abstract construct
+that controls the time and state evolution of a System. For example, a
+simulator is a <code class="docutils literal"><span class="pre">solver</span></code>. Its <code class="docutils literal"><span class="pre">step</span></code> advances time a finite
+duration by integrating a system, modifying its state accordingly.
+Per-step events are most commonly created in
+System::GetPerStepEvents(). A very common use of such per-step events
+is to update a discrete or abstract state variable that changes
+whenever the continuous state advances; examples are computing the
+“min” or “max” of some state variable, recording a signal in a delay
+buffer, or publishing. Per-step events are also useful to implement
+feedback controllers interfaced with physical devices; the controller
+can be implemented in the event handler, and the “step” would
+correspond to receiving sensory data from the hardware.</p>
+<blockquote>
+<div><p>kUnknown :</p>
+<p>kInitialization : This trigger indicates that an associated event is triggered at system</p>
+</div></blockquote>
+<p>initialization.</p>
+<blockquote>
+<div>kPeriodic : This type indicates that an associated event is triggered by the</div></blockquote>
+<p>system proceeding to a time t ∈ {tᵢ = t₀ + p * i} for some period p,
+time offset t₀, and i is a non-negative integer.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<blockquote>
+<div>PeriodicEventData. Periodic events are commonly created in
+System::CalcNextUpdateTime().</div></blockquote>
+<p class="last">kTimed : This trigger indicates that an associated event is triggered by the</p>
+</div>
+<p>system proceeding to a single, arbitrary time. Timed events are
+commonly created in System::CalcNextUpdateTime().</p>
+<dl class="method">
+<dt id="pydrake.systems.framework.TriggerType.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.TriggerType</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.TriggerType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.TriggerType.kForced">
+<code class="descname">kForced</code><em class="property"> = TriggerType.kForced</em><a class="headerlink" href="#pydrake.systems.framework.TriggerType.kForced" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.TriggerType.kInitialization">
+<code class="descname">kInitialization</code><em class="property"> = TriggerType.kInitialization</em><a class="headerlink" href="#pydrake.systems.framework.TriggerType.kInitialization" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.TriggerType.kPerStep">
+<code class="descname">kPerStep</code><em class="property"> = TriggerType.kPerStep</em><a class="headerlink" href="#pydrake.systems.framework.TriggerType.kPerStep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.TriggerType.kPeriodic">
+<code class="descname">kPeriodic</code><em class="property"> = TriggerType.kPeriodic</em><a class="headerlink" href="#pydrake.systems.framework.TriggerType.kPeriodic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.TriggerType.kTimed">
+<code class="descname">kTimed</code><em class="property"> = TriggerType.kTimed</em><a class="headerlink" href="#pydrake.systems.framework.TriggerType.kTimed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.TriggerType.kUnknown">
+<code class="descname">kUnknown</code><em class="property"> = TriggerType.kUnknown</em><a class="headerlink" href="#pydrake.systems.framework.TriggerType.kUnknown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.TriggerType.kWitness">
+<code class="descname">kWitness</code><em class="property"> = TriggerType.kWitness</em><a class="headerlink" href="#pydrake.systems.framework.TriggerType.kWitness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.TriggerType.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.systems.framework.TriggerType.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.Value">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Value</code><a class="headerlink" href="#pydrake.systems.framework.Value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.Value.Value[str]" title="pydrake.systems.framework.Value.Value[str]"><code class="xref py py-class docutils literal"><span class="pre">Value[str]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Value[BasicVector_[float]]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[BasicVector_[AutoDiffXd]]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[BasicVector_[Expression]]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[object]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[PoseBundle]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[LaneDirection]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[QueryObject]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[Image[PixelType.kRgba8U]]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[Image[PixelType.kDepth32F]]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[Image[PixelType.kLabel16I]]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[PointCloud]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[ContactResults]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Value[ContactResults]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.Value.Value[str]">
+<em class="property">class </em><code class="descname">Value[str]</code><a class="headerlink" href="#pydrake.systems.framework.Value.Value[str]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.AbstractValue" title="pydrake.systems.framework.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.AbstractValue</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.systems.framework.Value.Value[str].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.Value.Value[str].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework._TemporaryName_N5drake7systems5ValueINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE, arg0: unicode) -&gt; None</li>
+<li>__init__(self: pydrake.systems.framework._TemporaryName_N5drake7systems5ValueINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE, <a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Value.Value[str].get_mutable_value">
+<code class="descname">get_mutable_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework._TemporaryName_N5drake7systems5ValueINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.systems.framework.Value.Value[str].get_mutable_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Value.Value[str].get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework._TemporaryName_N5drake7systems5ValueINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.systems.framework.Value.Value[str].get_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.Value.Value[str].set_value">
+<code class="descname">set_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework._TemporaryName_N5drake7systems5ValueINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEE</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Value.Value[str].set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces stored value with a new one.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.VectorBase">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">VectorBase</code><a class="headerlink" href="#pydrake.systems.framework.VectorBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.VectorBase_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.VectorBase_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">VectorBase_</code><a class="headerlink" href="#pydrake.systems.framework.VectorBase_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.VectorBase_.VectorBase_[float]" title="pydrake.systems.framework.VectorBase_.VectorBase_[float]"><code class="xref py py-class docutils literal"><span class="pre">VectorBase_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">VectorBase_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">VectorBase_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.VectorBase_.VectorBase_[float]">
+<em class="property">class </em><code class="descname">VectorBase_[float]</code><a class="headerlink" href="#pydrake.systems.framework.VectorBase_.VectorBase_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>VectorBase is an abstract base class that real-valued signals between
+Systems and real-valued System state vectors must implement. Classes
+that inherit from VectorBase will typically provide names for the
+elements of the vector, and may also provide other computations for
+the convenience of Systems handling the signal. The vector is always a
+column vector. It may or may not be contiguous in memory. Contiguous
+subclasses should typically inherit from BasicVector, not from
+VectorBase directly.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>Must be a Scalar compatible with Eigen.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.VectorBase_.VectorBase_[float].CopyToVector">
+<code class="descname">CopyToVector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.VectorBase_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.VectorBase_.VectorBase_[float].CopyToVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies the entire state to a vector with no semantics.</p>
+<p>Implementations should ensure this operation is O(N) in the size of
+the value and allocates only the O(N) memory that it returns.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.VectorBase_.VectorBase_[float].SetAtIndex">
+<code class="descname">SetAtIndex</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.VectorBase_[float], arg0: int, arg1: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.VectorBase_.VectorBase_[float].SetAtIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the state at the given index with the value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the index is &gt;= size().</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.VectorBase_.VectorBase_[float].SetFromVector">
+<code class="descname">SetFromVector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.VectorBase_[float], arg0: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.VectorBase_.VectorBase_[float].SetFromVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces the entire vector with the contents of <code class="docutils literal"><span class="pre">value</span></code>. Throws
+RuntimeError if <code class="docutils literal"><span class="pre">value</span></code> is not a column vector with size() rows.</p>
+<p>Implementations should ensure this operation is O(N) in the size of
+the value and allocates no memory.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.VectorBase_.VectorBase_[float].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.VectorBase_.VectorBase_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.VectorBase_.VectorBase_[float].size">
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.VectorBase_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.VectorBase_.VectorBase_[float].size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the vector.</p>
+<p>Implementations should ensure this operation is O(1) and allocates no
+memory.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.framework.VectorSystem">
+<code class="descclassname">pydrake.systems.framework.</code><code class="descname">VectorSystem</code><a class="headerlink" href="#pydrake.systems.framework.VectorSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.VectorSystem_[float]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.framework.VectorSystem_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">VectorSystem_</code><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.VectorSystem_.VectorSystem_[float]" title="pydrake.systems.framework.VectorSystem_.VectorSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">VectorSystem_[float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">VectorSystem_[AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">VectorSystem_[Expression]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.framework.VectorSystem_.VectorSystem_[float]">
+<em class="property">class </em><code class="descname">VectorSystem_[float]</code><a class="headerlink" href="#pydrake.systems.framework.VectorSystem_.VectorSystem_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>A base class that specializes LeafSystem for use with only zero or one
+vector input ports, and only zero or one vector output ports.</p>
+<p>By default, this base class does not declare any state; subclasses may
+optionally declare continuous or discrete state, but not both;
+subclasses may not declare abstract state.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.systems.framework.VectorSystem_.VectorSystem_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.VectorSystem_[float], arg0: int, arg1: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.VectorSystem_.VectorSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a system with one input port and one output port of the given
+sizes, when the sizes are non-zero. Either size can be zero, in which
+case no input (or output) port is created.</p>
+<p>Does <em>not</em> declare scalar-type conversion support (AutoDiff, etc.). To
+enable AutoDiff support, use the SystemScalarConverter-based
+constructor. (For that, see system_scalar_conversion at the example
+titled “Example using drake::systems::VectorSystem as the base
+class”.)</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.lcm.html" class="btn btn-neutral float-right" title="pydrake.systems.lcm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.drawing.html" class="btn btn-neutral" title="pydrake.systems.drawing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

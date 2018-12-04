@@ -1,0 +1,4 @@
+var namespacedrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1internal =
+[
+    [ "KukaIiwaModelBuilder", "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1internal_1_1_kuka_iiwa_model_builder.html", "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1internal_1_1_kuka_iiwa_model_builder" ]
+];

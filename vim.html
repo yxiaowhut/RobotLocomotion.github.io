@@ -1,0 +1,319 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vim/Neovim Notes &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Drake Development on macOS" href="development_on_mac.html" />
+    <link rel="prev" title="Unicode Tips &amp; Tricks" href="unicode_tips_tricks.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="development_on_mac.html" title="Drake Development on macOS"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="unicode_tips_tricks.html" title="Unicode Tips &amp; Tricks"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vim-neovim-notes">
+<span id="id1"></span><h1>Vim/Neovim Notes<a class="headerlink" href="#vim-neovim-notes" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first"><cite>Table of contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id3">Introduction</a></li>
+<li><a class="reference internal" href="#installing-neovim" id="id4">Installing Neovim</a></li>
+<li><a class="reference internal" href="#configuration-files" id="id5">Configuration Files</a></li>
+<li><a class="reference internal" href="#setting-up-code-completion-linting-jump-to-declaration" id="id6">Setting up Code-Completion/Linting/Jump To Declaration</a></li>
+<li><a class="reference internal" href="#additional-mappings" id="id7">Additional Mappings</a><ul>
+<li><a class="reference internal" href="#git-mappings" id="id8">Git Mappings</a></li>
+<li><a class="reference internal" href="#linting-and-jump-to-declaration-mappings" id="id9">Linting and Jump-to-Declaration Mappings</a></li>
+<li><a class="reference internal" href="#file-tree-explorer-mappings" id="id10">File Tree Explorer Mappings</a></li>
+<li><a class="reference internal" href="#fuzzy-finder-mappings" id="id11">Fuzzy Finder Mappings</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<span id="vim-intro"></span><h2><a class="toc-backref" href="#id3">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This page contains notes on ways to use <a class="reference external" href="https://www.vim.org/">Vim</a> or
+<a class="reference external" href="https://neovim.io/">Neovim</a> with Drake. Wherever there are differences
+between the two the Neovim value will be given in curly braces after the Vim
+value (e.g. <code class="docutils literal"><span class="pre">.vimrc</span></code> {<code class="docutils literal"><span class="pre">.config/nvim/init.vim</span></code>}).</p>
+</div>
+<div class="section" id="installing-neovim">
+<h2><a class="toc-backref" href="#id4">Installing Neovim</a><a class="headerlink" href="#installing-neovim" title="Permalink to this headline">¶</a></h2>
+<p>If you want to use Neovim, follow the instructions on the Neovim wiki
+(<a class="reference external" href="https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu">Ubuntu</a>,
+<a class="reference external" href="https://github.com/neovim/neovim/wiki/Installing-Neovim#homebrew-macos--linuxbrew-linux">Homebrew</a>).
+Ubuntu users should make sure that they install the Python modules as well.</p>
+</div>
+<div class="section" id="configuration-files">
+<h2><a class="toc-backref" href="#id5">Configuration Files</a><a class="headerlink" href="#configuration-files" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">sample_vimrc</span></code> (<a class="reference download internal" href="_downloads/sample_vimrc" download=""><code class="xref download docutils literal"><span class="pre">download</span></code></a>) provides a sample
+configuration file that sets up some plugins and key-mappings that users may
+find useful for working with Drake. It should work out of the box if copied
+to <code class="docutils literal"><span class="pre">~/.vimrc</span></code> {<code class="docutils literal"><span class="pre">~/.config/nvim/init.vim</span></code>}. Be sure to back up any existing
+<code class="docutils literal"><span class="pre">.vimrc</span></code> {<code class="docutils literal"><span class="pre">init.vim</span></code>} before copying! Users with existing Vim
+configurations are, of course, free to cherry-pick whatever portions of
+<code class="docutils literal"><span class="pre">sample_vimrc</span></code> they’d like.</p>
+<p>If you do copy <code class="docutils literal"><span class="pre">sample_vimrc</span></code> to <code class="docutils literal"><span class="pre">.vimrc</span></code> {<code class="docutils literal"><span class="pre">init.vim</span></code>}, your next step
+is to install the plugins that it specifies.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Open a terminal and launch Vim. The plugin manager
+(<a class="reference external" href="https://github.com/junegunn/vim-plug">vim-plug</a>) will be automatically
+installed (to disable this behavior, delete the four lines following the
+comment “Remove these lines …”).</p>
+</li>
+<li><p class="first">In Vim, type <code class="docutils literal"><span class="pre">:PlugInstall</span></code> and press “Enter”. vim-plug will download
+the specified plugins from GitHub. If you later decide to stop using
+vim-plug, you can remove it along with the plugins it installs by
+deleting the following</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">~/.vim/autoload/plug.vim</span></code>
+{<code class="docutils literal"><span class="pre">~/.local/share/nvim/site/autoload/plug.vim</span></code>}</li>
+<li><code class="docutils literal"><span class="pre">~/.vim/plugged</span></code> {<code class="docutils literal"><span class="pre">~/.local/share/nvim/plugged</span></code>}</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="setting-up-code-completion-linting-jump-to-declaration">
+<h2><a class="toc-backref" href="#id6">Setting up Code-Completion/Linting/Jump To Declaration</a><a class="headerlink" href="#setting-up-code-completion-linting-jump-to-declaration" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> is a plugin that
+provides real-time linting + jump-to-declaration functionality. It has a
+compiled component, which needs to be built before the plugin can be used.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Let <code class="docutils literal"><span class="pre">&lt;YouCompleteMe-location&gt;</span></code> be the directory in which the plugin is
+located. If you’re using the provided <code class="docutils literal"><span class="pre">sample_vimrc</span></code>, you can determine
+<code class="docutils literal"><span class="pre">&lt;YouCompleteMe-location&gt;</span></code> by running <code class="docutils literal"><span class="pre">:echo</span> <span class="pre">g:plug_home</span></code> in Vim and
+appending <code class="docutils literal"><span class="pre">/YouCompleteMe</span></code> to the result.</p>
+</li>
+<li><p class="first">In a terminal, run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">YouCompleteMe</span><span class="o">-</span><span class="n">location</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
+<span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">clang</span><span class="o">-</span><span class="n">completer</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>In order for YouCompleteMe to provide code-completion and linting for Drake’s
+C++ files, it needs to know what flags to use when compiling them. Fortunately,
+<a class="reference external" href="https://github.com/grailbio/bazel-compilation-database">bazel-compilation-database</a> provides a way for
+YouCompleteMe to get this information from Bazel. The following steps should
+get this working in Drake:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Download the bazel-compilation-database 0.2.2
+<a class="reference external" href="https://github.com/grailbio/bazel-compilation-database/archive/0.2.2.tar.gz">tarball</a>.</p>
+</li>
+<li><p class="first">Extract the contents of the tarball to some directory. We will refer to
+this directory as <code class="docutils literal"><span class="pre">&lt;bcd-location&gt;</span></code>.</p>
+</li>
+<li><p class="first">From the root of your Drake repository run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">bazel</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">&lt;</span><span class="n">bcd</span><span class="o">-</span><span class="n">location</span><span class="o">&gt;</span> <span class="n">bazel</span><span class="o">/</span><span class="n">compilation_database</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Add the following line to your <code class="docutils literal"><span class="pre">.vimrc</span></code> {<code class="docutils literal"><span class="pre">init.vim</span></code>}:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">ycm_global_ycm_extra_conf</span> <span class="o">=</span> <span class="s1">&#39;&lt;bcd-location&gt;/.ycm_extra_conf.py&#39;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>Now, when you open a Drake C++ file, you should get real-time linting and
+completion, as well as jump-to functionality (through the <code class="docutils literal"><span class="pre">:YcmCompeter</span> <span class="pre">GoTo</span></code>
+command). If it appears not to be working, try running <code class="docutils literal"><span class="pre">:YcmDiags</span></code> to force
+YouCompleteMe to compile the current file. Note that for YouCompleteMe to see
+a given Drake header file, the corresponding Bazel target must have been built.
+See also, <a class="reference internal" href="#linting-and-jump-to-declaration-mappings">Linting and Jump-to-Declaration Mappings</a>.</p>
+</div>
+<div class="section" id="additional-mappings">
+<h2><a class="toc-backref" href="#id7">Additional Mappings</a><a class="headerlink" href="#additional-mappings" title="Permalink to this headline">¶</a></h2>
+<p>The aforementioned <code class="docutils literal"><span class="pre">sample_vimrc</span></code> file pulls in several plugins and defines
+mappings for working with them. It also defines some general-purpose mappings.
+Here are some highlights. A lot of these start with &lt;leader&gt;, which in the
+attached file is mapped to “;” (so &lt;leader&gt;gv becomes ;gv). You can, of course,
+change &lt;leader&gt; to whatever you prefer in your <code class="docutils literal"><span class="pre">.vimrc</span></code> {<code class="docutils literal"><span class="pre">init.vim</span></code>} file.</p>
+<div class="section" id="git-mappings">
+<h3><a class="toc-backref" href="#id8">Git Mappings</a><a class="headerlink" href="#git-mappings" title="Permalink to this headline">¶</a></h3>
+<p>These mappings use <a class="reference external" href="https://github.com/tpope/vim-fugitive">fugitive.git</a> and
+<a class="reference external" href="https://github.com/gregsexton/gitv">Gitv</a> to perform Git-related tasks.</p>
+<blockquote>
+<div><ul class="simple">
+<li>&lt;leader&gt;gd shows the git diff for the current file. You can move hunks into
+the index using Vim’s diff commands.</li>
+<li>&lt;leader&gt;gs shows the current git status using fugitive.git.You can stage
+files by moving the cursor to the line and pressing “-“. Press cc to start
+editing the commit message. Save and exit in the commit message to commit.</li>
+<li>&lt;leader&gt;gv launches gitv, a Gitk clone for Vim. You can use this to inspect
+commits, switch branches, cherry-pick, and more</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="linting-and-jump-to-declaration-mappings">
+<h3><a class="toc-backref" href="#id9">Linting and Jump-to-Declaration Mappings</a><a class="headerlink" href="#linting-and-jump-to-declaration-mappings" title="Permalink to this headline">¶</a></h3>
+<p>These mappings use <a class="reference external" href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a>
+and <a class="reference external" href="https://github.com/Valloric/ListToggle">ListToggle</a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li>&lt;leader&gt;gg jumps to the declaration of the class/function under the cursor
+(mnemonic “go go!”). Use the standard jump command Ctrl+o to go back.</li>
+<li>&lt;leader&gt;fi applies the “fix-it” action listed at the bottom of the buffer
+(mnemonic “fix it!”).</li>
+<li>&lt;leader&gt;lo toggles the Location List on and off (mnemonic “LOcation”). All
+errors found by YouCompleteMe are listed in the location list, which can
+make it easy to go from one to the next.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="file-tree-explorer-mappings">
+<h3><a class="toc-backref" href="#id10">File Tree Explorer Mappings</a><a class="headerlink" href="#file-tree-explorer-mappings" title="Permalink to this headline">¶</a></h3>
+<p>These mappings use <a class="reference external" href="https://github.com/scrooloose/nerdtree">NERDTree</a> to
+provide a file tree explorer in Vim.</p>
+<blockquote>
+<div><ul class="simple">
+<li>&lt;leader&gt;nt launches NERDTree for the current working directory</li>
+<li>&lt;leader&gt;nf launches NERDTree with the current file selected. This is
+particularly useful for getting to the appropriate <code class="docutils literal"><span class="pre">BUILD.bazel</span></code> file for a
+given source file.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="fuzzy-finder-mappings">
+<h3><a class="toc-backref" href="#id11">Fuzzy Finder Mappings</a><a class="headerlink" href="#fuzzy-finder-mappings" title="Permalink to this headline">¶</a></h3>
+<p>These mappings use <a class="reference external" href="https://github.com/ctrlpvim/ctrlp.vim">ctrlp.vim</a> to
+provide fuzzy file lookup in Vim.</p>
+<blockquote>
+<div><ul class="simple">
+<li>&lt;leader&gt;ff launches CtrlP in file mode (mnemonic “find file”). Start typing
+any portions of the file path (they don’t have to be contiguous!) and select
+the file you want once the choices are narrowed down sufficiently.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Vim/Neovim Notes</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#installing-neovim">Installing Neovim</a></li>
+<li><a class="reference internal" href="#configuration-files">Configuration Files</a></li>
+<li><a class="reference internal" href="#setting-up-code-completion-linting-jump-to-declaration">Setting up Code-Completion/Linting/Jump To Declaration</a></li>
+<li><a class="reference internal" href="#additional-mappings">Additional Mappings</a><ul>
+<li><a class="reference internal" href="#git-mappings">Git Mappings</a></li>
+<li><a class="reference internal" href="#linting-and-jump-to-declaration-mappings">Linting and Jump-to-Declaration Mappings</a></li>
+<li><a class="reference internal" href="#file-tree-explorer-mappings">File Tree Explorer Mappings</a></li>
+<li><a class="reference internal" href="#fuzzy-finder-mappings">Fuzzy Finder Mappings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="development_on_mac.html" title="Drake Development on macOS"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="unicode_tips_tricks.html" title="Unicode Tips &amp; Tricks"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

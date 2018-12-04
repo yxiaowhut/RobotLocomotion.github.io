@@ -1,0 +1,191 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tools for Code Style Compliance &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Directory Structure" href="directory_structure.html" />
+    <link rel="prev" title="C++ *-inl.h files" href="cxx_inl.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="directory_structure.html" title="Directory Structure"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cxx_inl.html" title="C++ *-inl.h files"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tools-for-code-style-compliance">
+<span id="code-style-tools"></span><h1>Tools for Code Style Compliance<a class="headerlink" href="#tools-for-code-style-compliance" title="Permalink to this headline">¶</a></h1>
+<p>This section provides a list of tools that some have found useful for ensuring
+their code abides by <a class="reference internal" href="code_style_guide.html#code-style-guide"><span class="std std-ref">Drake’s coding style</span></a>. The list
+is by no means comprehensive.
+If your favorite tools or methodologies are not listed, we would be delighted
+to learn about them. Please document your trick and submit a pull request!</p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first"><cite>Table of contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#automated-style-checks" id="id1">Automated style checks</a></li>
+<li><a class="reference internal" href="#manual-style-fixups" id="id2">Manual style fixups</a><ul>
+<li><a class="reference internal" href="#c-c-clang-format" id="id3">C/C++: Clang-Format</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="automated-style-checks">
+<h2><a class="toc-backref" href="#id1">Automated style checks</a><a class="headerlink" href="#automated-style-checks" title="Permalink to this headline">¶</a></h2>
+<p>Code style tests are run by default during <code class="docutils literal"><span class="pre">bazel</span> <span class="pre">test</span></code> and the results are
+cached so that only edited files are re-checked.  In other words, no special
+action is required by a developer.</p>
+<p>However, you may still invoke code style checks directly if desired, as
+follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">drake</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">--</span><span class="n">config</span> <span class="n">lint</span> <span class="o">//...</span>         <span class="c1"># Only run style checks; don&#39;t build or test anything else.</span>
+<span class="n">bazel</span> <span class="n">test</span> <span class="o">--</span><span class="n">config</span> <span class="n">lint</span> <span class="o">//</span><span class="n">common</span><span class="o">/...</span>  <span class="c1"># Check common/ and its child subdirectories.</span>
+</pre></div>
+</div>
+<p>User manuals for the style-checking tools are as follows:</p>
+<ul class="simple">
+<li>C/C++: See the cpplint <code class="docutils literal"><span class="pre">USAGE</span></code> string at
+<a class="reference external" href="https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py">https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py</a>.<ul>
+<li>In particular, note the <code class="docutils literal"><span class="pre">//</span> <span class="pre">NOLINT(foo/bar)</span></code> syntax to disable a warning.</li>
+</ul>
+</li>
+<li>Python: See the pycodestyle manual at
+<a class="reference external" href="http://pycodestyle.readthedocs.io/en/latest/intro.html">http://pycodestyle.readthedocs.io/en/latest/intro.html</a>.<ul>
+<li>The syntax <code class="docutils literal"><span class="pre">#</span> <span class="pre">noqa</span></code> can be used to quiet the warning about an overly-long
+line.</li>
+</ul>
+</li>
+<li>Bazel: Uses both pycodestyle like Python, and also <a class="reference internal" href="bazel.html#buildifier"><span class="std std-ref">buildifier</span></a>.</li>
+</ul>
+</div>
+<div class="section" id="manual-style-fixups">
+<h2><a class="toc-backref" href="#id2">Manual style fixups</a><a class="headerlink" href="#manual-style-fixups" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="c-c-clang-format">
+<span id="code-style-tools-clang-format"></span><h3><a class="toc-backref" href="#id3">C/C++: Clang-Format</a><a class="headerlink" href="#c-c-clang-format" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference internal" href="from_source.html#platform-specific-setup"><span class="std std-ref">Mandatory platform specific instructions</span></a>
+install Drake’s required version of <code class="docutils literal"><span class="pre">clang-format</span></code>, depending on the platform
+(macOS or Ubuntu).</p>
+<p>To run clang-format:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># For development on macOS:</span>
+<span class="n">clang</span><span class="o">-</span><span class="nb">format</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">style</span><span class="o">=</span><span class="n">file</span> <span class="p">[</span><span class="n">file</span> <span class="n">name</span><span class="p">]</span>
+
+<span class="c1"># For development on Ubuntu:</span>
+<span class="n">clang</span><span class="o">-</span><span class="nb">format</span><span class="o">-</span><span class="mf">6.0</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">style</span><span class="o">=</span><span class="n">file</span> <span class="p">[</span><span class="n">file</span> <span class="n">name</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tools for Code Style Compliance</a><ul>
+<li><a class="reference internal" href="#automated-style-checks">Automated style checks</a></li>
+<li><a class="reference internal" href="#manual-style-fixups">Manual style fixups</a><ul>
+<li><a class="reference internal" href="#c-c-clang-format">C/C++: Clang-Format</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="directory_structure.html" title="Directory Structure"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cxx_inl.html" title="C++ *-inl.h files"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

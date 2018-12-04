@@ -1,0 +1,358 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Build Cop &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation Generation Instructions" href="documentation_instructions.html" />
+    <link rel="prev" title="GitHub PR Interaction with Jenkins" href="jenkins.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="documentation_instructions.html" title="Documentation Generation Instructions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="jenkins.html" title="GitHub PR Interaction with Jenkins"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="build-cop">
+<span id="id1"></span><h1>Build Cop<a class="headerlink" href="#build-cop" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<span id="id2"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The Drake build cop monitors <a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Continuous%20Production/">continuous</a>, <a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">nightly</a>, and
+<a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Weekly%20Production/">weekly</a>
+production continuous integration failures in the
+<a class="reference external" href="https://github.com/RobotLocomotion/drake">RobotLocomotion/drake</a> GitHub
+repo.</p>
+<p>The build cop will rotate on a weekly basis. The
+<a class="reference external" href="https://github.com/RobotLocomotion/drake-ci/wiki/Build-Cop-Rotation">schedule</a>
+is maintained on the
+<a class="reference external" href="https://github.com/RobotLocomotion/drake-ci">RobotLocomotion/drake-ci</a> wiki.</p>
+</div>
+<div class="section" id="process">
+<span id="id3"></span><h2>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
+<p>The build cop is expected to be on duty during normal business hours Eastern
+Time, approximately 9am to 5pm on weekdays, holidays excepted. Developers are
+encouraged, but not required, to merge pull requests during times when the build
+cop is on duty. Nightly and weekly build failures will be addressed the
+following weekday morning.</p>
+<p>When a CI build failure occurs, the build cop will be notified by email.
+Notifications are sent to <code class="docutils literal"><span class="pre">drake-alerts+jenkins&#64;tri.global</span></code> and
+<code class="docutils literal"><span class="pre">drake-developers+build-cop&#64;kitware.com</span></code>. To receive these notifications,
+subscribe to the <code class="docutils literal"><span class="pre">drake-alerts</span></code> Google Group at TRI or the
+<code class="docutils literal"><span class="pre">drake-developers</span></code> Google Group at Kitware. The build cop will triage the
+failure by identifying the recent commits or other problem that caused the CI
+build to fail.</p>
+<p>In the case of an issue with the CI infrastructure, Kitware will be responsible
+for fixing the issue.</p>
+<p>In the case of an issue with recent commits, the build cop will contact the
+authors of the commits and prepare a new pull request that reverts those
+commits. If the authors are not responsive within 15 minutes, or are unable to
+fix the failure within 60 minutes, the build cop will merge the pull request to
+revert the commits and verify that the continuous builds triggered by that merge
+pass.</p>
+<p>Use the <a class="reference external" href="https://drakedevelopers.slack.com/messages/buildcop/details/">DrakeDevelopers Slack channel
+#buildcop</a>
+to discuss build issues with your partner build cop and other Drake
+contributors.</p>
+<p>At the end of each rotation, the build cop should complete the
+<a class="reference external" href="https://docs.google.com/document/d/120AOAaamIMO-SM1UaJ6vfzpA15LnXHexDF4a7MLAS3o/edit#heading=h.sxk1djc2v0yg">build cop review and retrospective</a>,
+and should notify the next build cop on the <a class="reference external" href="https://drakedevelopers.slack.com/messages/buildcop/details/">DrakeDevelopers Slack channel
+#buildcop</a>.</p>
+</div>
+<div class="section" id="revert-template">
+<span id="id5"></span><h2>Revert Template<a class="headerlink" href="#revert-template" title="Permalink to this headline">¶</a></h2>
+<p>When creating a revert PR, the build cop will assign that PR to the original
+author, and include the following template in the PR description.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Dear $AUTHOR,
+
+The on-call build cop, $BUILD_COP, believes that your PR $NUMBER may have
+broken one or more of Drake&#39;s continuous integration builds [1]. It is
+possible to break a build even if your PR passed continuous integration
+pre-merge because additional platforms are tested post-merge.
+
+The specific build failures under investigation are:
+$LINK_TO_BROKEN_BUILD_ON_JENKINS
+$LINK_TO_BROKEN_BUILD_ON_JENKINS
+
+Therefore, the build cop has created this revert PR and started a complete
+post-merge build to determine whether your PR was in fact the cause of the
+problem. If that build passes, this revert PR will be merged 60 minutes from
+now. You can then fix the problem at your leisure, and send a new PR to
+reinstate your change.
+
+If you believe your original PR did not actually break the build, please
+explain on this thread.
+
+If you believe you can fix the break promptly in lieu of a revert, please
+explain on this thread, and send a PR to the build cop for review ASAP.
+
+If you believe your original PR definitely did break the build and should be
+reverted, please review and LGTM this PR. This allows the build cop to merge
+without waiting for CI results.
+
+For advice on how to handle a build cop revert, see [2].
+
+Thanks!
+Your Friendly On-call Build Cop
+
+[1] CI Production Dashboard: https://drake-jenkins.csail.mit.edu/view/Production/
+[2] https://drake.mit.edu/buildcop.html#workflow-for-handling-a-build-cop-revert
+</pre></div>
+</div>
+</div>
+<div class="section" id="workflow-for-handling-a-build-cop-revert">
+<span id="handling-a-build-cop-revert"></span><h2>Workflow for Handling a Build Cop Revert<a class="headerlink" href="#workflow-for-handling-a-build-cop-revert" title="Permalink to this headline">¶</a></h2>
+<p>Suppose your merged PR was reverted on the master branch. What do you do?</p>
+<p>Here’s one workflow:</p>
+<ol class="arabic simple">
+<li>Create a new development branch based off of the <code class="docutils literal"><span class="pre">HEAD</span></code> of master.</li>
+<li><a class="reference external" href="https://git-scm.com/docs/git-revert">Revert</a> the revert of your
+originally-merged PR to get your changes back.</li>
+<li>Debug the problem. This may require you to
+<a class="reference internal" href="jenkins.html#run-specific-build"><span class="std std-ref">run on-demand continuous integration builds</span></a> to
+ensure the problem that caused your PR to be reverted was actually fixed.</li>
+<li>Commit your changes into your new branch.</li>
+<li>Issue a new PR containing your fixes. Be sure to link to the build cop revert
+PR in your new PR.</li>
+</ol>
+</div>
+<div class="section" id="build-cop-playbook">
+<span id="id6"></span><h2>Build Cop Playbook<a class="headerlink" href="#build-cop-playbook" title="Permalink to this headline">¶</a></h2>
+<p>This section is a quick-reference manual for the on-call build cop.</p>
+<div class="section" id="monitor-the-build">
+<h3>Monitor the Build<a class="headerlink" href="#monitor-the-build" title="Permalink to this headline">¶</a></h3>
+<p>Check the <a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Continuous%20Production/">Continuous Production</a>
+build dashboard in Jenkins at least once an hour during on-call hours. These
+builds run after every merge to Drake. Also check the
+<a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">Nightly Production</a>
+build dashboard every morning and
+<a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Weekly%20Production/">Weekly Production</a>
+build dashboard on Monday morning. These builds are unusually
+resource-intensive, and therefore run at most once per day.</p>
+<p>If any Continuous, Nightly, or Weekly Production builds turn yellow or red, you
+need to act.</p>
+<p>In Jenkins, builds that are in progress (blinking on and off) will show the
+color of the previous build.</p>
+<p>Note that CDash pages may take a minute to populate.</p>
+</div>
+<div class="section" id="respond-to-breakage">
+<h3>Respond to Breakage<a class="headerlink" href="#respond-to-breakage" title="Permalink to this headline">¶</a></h3>
+<p>There are various reasons the build might break. Diagnose the failure, and
+then take appropriate action. This section lists some common failures and
+recommended responses. However, build cops often have to address unexpected
+circumstances. Do not expect this list to be complete, and always apply your
+own judgment.</p>
+<p>In almost any build breakage, the first information-gathering step is to
+click on the build that is yellow or red in Jenkins, then click on the first
+breaking change in the Build History. You will see a list of the new commits
+in that particular run.</p>
+<p>Determine if an open GitHub Drake issue describes the situation. For example,
+some tests are flaky for reasons that have no known resolution, but are
+described by Drake issues. If you find that your broken build is described by
+such an issue, consider adding the build information to the issue for future
+analysis. The <a class="reference external" href="https://docs.google.com/document/d/120AOAaamIMO-SM1UaJ6vfzpA15LnXHexDF4a7MLAS3o/edit#heading=h.sxk1djc2v0yg">build cop review and retrospective</a>
+also describes current build issues.</p>
+<div class="section" id="broken-compile-or-test">
+<h4>Broken Compile or Test<a class="headerlink" href="#broken-compile-or-test" title="Permalink to this headline">¶</a></h4>
+<p>Sometimes people merge code that doesn’t compile, or that fails a test.
+This can happen for several reasons:</p>
+<ul class="simple">
+<li>The platform or test case only runs post-merge.</li>
+<li>An administrator performed an override-merge of the culprit PR,
+circumventing pre-merge checks.</li>
+<li>The failure is an interaction between the culprit PR and some other
+recent change to master.</li>
+</ul>
+<p>Compile failures will be red in Jenkins. Test failures will be yellow.
+Consult the list of commits in the breaking change to identify possible culprit
+PRs. Try to rule out some of those PRs by comparing their contents to the
+specifics of the failure. For any PRs you cannot rule out, create a rollback
+by clicking “Revert” in the GitHub UI. Use the
+<a class="reference internal" href="#revert-template"><span class="std std-ref">template message</span></a> to communicate  with the author, and
+proceed as specified in that message.</p>
+<p><a class="reference internal" href="jenkins.html#run-specific-build"><span class="std std-ref">Manually schedule</span></a> the failing build as an
+experimental build on the rollback PR. If it passes, the odds are good that you
+have found the culprit. Proceed as specified in the template message.</p>
+</div>
+<div class="section" id="flaky-test">
+<h4>Flaky Test<a class="headerlink" href="#flaky-test" title="Permalink to this headline">¶</a></h4>
+<p>Sometimes people introduce code that makes a test non-deterministic, failing
+on some runs and passing on others. You cannot reliably attribute a flaky test
+failure to the first failing build, because it may have passed by chance for
+the first few continuous builds after the culprit PR landed.</p>
+<p>Test failures will be yellow in Jenkins. If the list of commits in the breaking
+change does not include any plausible culprits, you may be looking at a flaky
+test.  Look through earlier commits one-by-one for plausible culprits.
+After you identify one, create a rollback by clicking “Revert” in the
+GitHub UI. Use the <a class="reference internal" href="#revert-template"><span class="std std-ref">template message</span></a> to communicate
+with the author, and proceed as specified in that message.</p>
+</div>
+<div class="section" id="broken-ci-script">
+<h4>Broken CI Script<a class="headerlink" href="#broken-ci-script" title="Permalink to this headline">¶</a></h4>
+<p>Sometimes people merge changes to the Drake CI scripts that result in spurious
+CI failures. The list of commits in Jenkins for each continuous build includes
+the <a class="reference external" href="https://github.com/RobotLocomotion/drake-ci">drake-ci</a> repository as well
+as Drake proper. Consider whether those changes are possible culprits.</p>
+<p>If you believe a CI script change is the culprit, contact the author.
+If they are not responsive, revert the commit yourself and see what happens on
+the next continuous build. There are no pre-merge builds you can run that
+exercise changes to the CI scripts themselves.</p>
+</div>
+<div class="section" id="infrastructure-flake">
+<h4>Infrastructure Flake<a class="headerlink" href="#infrastructure-flake" title="Permalink to this headline">¶</a></h4>
+<p>The machinery of the CI system itself sometimes fails for reasons unrelated to
+any code change. The most common infrastructure flakes include:</p>
+<ul class="simple">
+<li>Unable to obtain a MATLAB license.</li>
+<li>Broken connection to a Mac build agent.</li>
+</ul>
+<p>Infrastructure flakes will be red in Jenkins. If you believe you are looking at
+an infrastructure flake, run the build manually at HEAD. If it passes, you are
+definitely looking at an infrastructure flake, and no further action is
+required. If you believe the rate of a particular infrastructure flake has
+increased, alert Kitware by assigning a GitHub issue to both &#64;BetsyMcPhail and
+&#64;jamiesnape.</p>
+<p>Note that “slow read” warnings during Bazel builds are due to the relative
+slowness of the remote storage used by the CI infrastructure when compared to
+storage connected to the local bus on a local developer workstation build and
+can be safely ignored.</p>
+<p>If you see “All nodes of label &lt;label&gt; are offline”, this should disappear
+eventually and the build should run, once Jenkins gets a node booted up.</p>
+</div>
+<div class="section" id="infrastructure-collapse">
+<h4>Infrastructure Collapse<a class="headerlink" href="#infrastructure-collapse" title="Permalink to this headline">¶</a></h4>
+<p>Occasionally, some piece of CI infrastructure completely stops working. For
+instance, GitHub, AWS, or MacStadium could have an outage, or our Jenkins server
+could crash or become wedged.  During infrastructure collapses, lots of builds
+will turn red and stay red.</p>
+<p>Attempt to figure out what infrastructure collapsed. If it’s under our control,
+alert Kitware by assigning a GitHub issue to both &#64;BetsyMcPhail and
+&#64;jamiesnape. If it’s under a vendor’s control, spread the news and simply wait
+it out.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Build Cop</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#process">Process</a></li>
+<li><a class="reference internal" href="#revert-template">Revert Template</a></li>
+<li><a class="reference internal" href="#workflow-for-handling-a-build-cop-revert">Workflow for Handling a Build Cop Revert</a></li>
+<li><a class="reference internal" href="#build-cop-playbook">Build Cop Playbook</a><ul>
+<li><a class="reference internal" href="#monitor-the-build">Monitor the Build</a></li>
+<li><a class="reference internal" href="#respond-to-breakage">Respond to Breakage</a><ul>
+<li><a class="reference internal" href="#broken-compile-or-test">Broken Compile or Test</a></li>
+<li><a class="reference internal" href="#flaky-test">Flaky Test</a></li>
+<li><a class="reference internal" href="#broken-ci-script">Broken CI Script</a></li>
+<li><a class="reference internal" href="#infrastructure-flake">Infrastructure Flake</a></li>
+<li><a class="reference internal" href="#infrastructure-collapse">Infrastructure Collapse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="documentation_instructions.html" title="Documentation Generation Instructions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="jenkins.html" title="GitHub PR Interaction with Jenkins"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

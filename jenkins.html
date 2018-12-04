@@ -1,0 +1,182 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GitHub PR Interaction with Jenkins &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Build Cop" href="buildcop.html" />
+    <link rel="prev" title="Tips for Participating In Drake Code Reviews using reviewable.io" href="reviewable.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="buildcop.html" title="Build Cop"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="reviewable.html" title="Tips for Participating In Drake Code Reviews using reviewable.io"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="github-pr-interaction-with-jenkins">
+<h1>GitHub PR Interaction with Jenkins<a class="headerlink" href="#github-pr-interaction-with-jenkins" title="Permalink to this headline">¶</a></h1>
+<p>When a new pull request is opened in the project and the author of the pull
+request is not a member of the RobotLocomotion GitHub organization, the Jenkins
+GitHub Pull Request Builder &#64;drake-jenkins-bot will not automatically schedule
+builds.</p>
+<p>To allow the pull request to be tested, a member of the RobotLocomotion
+organization may comment:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;drake-jenkins-bot</span> <span class="pre">ok</span> <span class="pre">to</span> <span class="pre">test</span></code> to accept this pull request for testing.</li>
+<li><code class="docutils literal"><span class="pre">&#64;drake-jenkins-bot</span> <span class="pre">test</span> <span class="pre">this</span> <span class="pre">please</span></code> for a one time test run.</li>
+</ul>
+<p>If the build fails for other various reasons you can rebuild:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;drake-jenkins-bot</span> <span class="pre">retest</span> <span class="pre">this</span> <span class="pre">please</span></code> to start a new build.</li>
+</ul>
+<p>You can also view the <a class="reference external" href="https://drake-jenkins.csail.mit.edu/">Jenkins UI</a>
+directly.</p>
+<div class="section" id="running-an-on-demand-build">
+<span id="run-specific-build"></span><h2>Running an On-Demand Build<a class="headerlink" href="#running-an-on-demand-build" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of Jenkins builds that do not normally run pre-merge, but do
+run post-merge, nightly, or weekly. These builds include lower-priority
+platforms (e.g., macOS), and specialized options (e.g.,
+<a class="reference external" href="https://releases.llvm.org/6.0.0/tools/clang/docs/UndefinedBehaviorSanitizer.html">UndefinedBehaviorSanitizer</a>).
+Members of the RobotLocomotion organization can manually schedule these builds
+on pull requests that have not yet been merged, or on arbitrary commits in the
+<code class="docutils literal"><span class="pre">RobotLocomotion/drake</span></code> repository.</p>
+<p>To schedule a build of an open pull request merged with master, comment:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;drake-jenkins-bot</span> <span class="pre">&lt;job-name&gt;</span> <span class="pre">please</span></code></li>
+</ul>
+<p>where <code class="docutils literal"><span class="pre">&lt;job-name&gt;</span></code> is the name of an
+<a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Experimental/">experimental job</a>.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">&#64;drake-jenkins-bot</span> <span class="pre">mac-high-sierra-clang-bazel-experimental-release</span> <span class="pre">please</span></code></li>
+<li><code class="docutils literal"><span class="pre">&#64;drake-jenkins-bot</span> <span class="pre">linux-bionic-clang-bazel-experimental-valgrind-memcheck</span> <span class="pre">please</span></code></li>
+</ul>
+<p>Alternatively, to schedule a build of an open pull request or arbitrary commit
+in the <code class="docutils literal"><span class="pre">RobotLocomotion/drake</span></code> repository:</p>
+<ol class="arabic simple">
+<li>Log in to <a class="reference external" href="https://drake-jenkins.csail.mit.edu/">Jenkins</a> using GitHub OAuth.</li>
+<li>Go to the <a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Experimental/">list of experimental builds</a>.</li>
+<li>Click on the specific build you want to schedule.</li>
+<li>Click on “Build with Parameters” in the left menu.</li>
+<li>Enter <code class="docutils literal"><span class="pre">pr/XYZ/head</span></code> (HEAD of pull request), <code class="docutils literal"><span class="pre">pr/XYZ/merge</span></code> (pull request
+merged with master), or the desired commit SHA in the <code class="docutils literal"><span class="pre">sha1</span></code> field.</li>
+<li>Click <code class="docutils literal"><span class="pre">Build</span></code>.</li>
+</ol>
+<p>The list of experimental builds includes builds that automatically run on opened
+and updated pull requests, as well as numerous other builds for on-demand use.
+To help identify the on-demand build you want to run, you can consult the lists
+of <a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Continuous/">continuous</a>,
+<a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Nightly/">nightly</a>, and
+<a class="reference external" href="https://drake-jenkins.csail.mit.edu/view/Weekly/">weekly</a> builds,
+but you should not schedule continuous, nightly, or weekly builds directly.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GitHub PR Interaction with Jenkins</a><ul>
+<li><a class="reference internal" href="#running-an-on-demand-build">Running an On-Demand Build</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="buildcop.html" title="Build Cop"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="reviewable.html" title="Tips for Participating In Drake Code Reviews using reviewable.io"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

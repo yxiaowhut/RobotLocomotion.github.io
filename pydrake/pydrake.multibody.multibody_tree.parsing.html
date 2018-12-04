@@ -1,0 +1,413 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.multibody_tree.parsing &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody.multibody_tree" href="pydrake.multibody.multibody_tree.html"/>
+        <link rel="next" title="pydrake.multibody.parsers" href="pydrake.multibody.parsers.html"/>
+        <link rel="prev" title="pydrake.multibody.multibody_tree.multibody_plant" href="pydrake.multibody.multibody_tree.multibody_plant.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pydrake.multibody.multibody_tree.all.html">pydrake.multibody.multibody_tree.all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydrake.multibody.multibody_tree.math.html">pydrake.multibody.multibody_tree.math</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydrake.multibody.multibody_tree.multibody_plant.html">pydrake.multibody.multibody_tree.multibody_plant</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pydrake.multibody.multibody_tree.parsing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.shapes.html">pydrake.multibody.shapes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a> &raquo;</li>
+        
+      <li>pydrake.multibody.multibody_tree.parsing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.multibody_tree.parsing">
+<span id="pydrake-multibody-multibody-tree-parsing"></span><h1>pydrake.multibody.multibody_tree.parsing<a class="headerlink" href="#module-pydrake.multibody.multibody_tree.parsing" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydrake.multibody.multibody_tree.parsing.AddModelFromSdfFile">
+<code class="descclassname">pydrake.multibody.multibody_tree.parsing.</code><code class="descname">AddModelFromSdfFile</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.parsing.AddModelFromSdfFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddModelFromSdfFile(file_name: unicode, model_name: unicode, plant: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, scene_graph: pydrake.geometry.SceneGraph = None) -&gt; pydrake.multibody.multibody_tree.ModelInstanceIndex</li>
+</ol>
+<p>Parses a <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> element from the SDF file specified by
+<code class="docutils literal"><span class="pre">file_name</span></code> and adds it to <code class="docutils literal"><span class="pre">plant</span></code>. The SDF file can only contain
+a single <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> element. <code class="docutils literal"><span class="pre">&lt;world&gt;</span></code> elements (used for instance
+to specify gravity) are ignored by this method. A new model instance
+will be added to <code class="docutils literal"><span class="pre">plant</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the file is not in accordance with the SDF</li>
+<li>specification containing a message with a list of errors</li>
+<li>encountered while parsing the file.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if there is more than one <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> element or zero</li>
+<li>of them.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if plant is nullptr or if MultibodyPlant::Finalize()</li>
+<li>was already called on <code class="docutils literal"><span class="pre">plant</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">file_name</span></code>:</dt>
+<dd>The name of the SDF file to be parsed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_name</span></code>:</dt>
+<dd>The name given to the newly created instance of this model. If
+empty, the “name” attribute from the model tag will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>A pointer to a mutable MultibodyPlant object to which the model
+will be added.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">scene_graph</span></code>:</dt>
+<dd>A pointer to a mutable SceneGraph object used for geometry
+registration (either to model visual or contact geometry). May be
+nullptr.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The model instance index for the newly added model.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>AddModelFromSdfFile(file_name: unicode, plant: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, scene_graph: pydrake.geometry.SceneGraph = None) -&gt; pydrake.multibody.multibody_tree.ModelInstanceIndex</li>
+</ol>
+<p>Alternate version of AddModelFromSdfFile which always uses the “name”
+element from the model tag for the name of the newly created model
+instance.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.multibody_tree.parsing.Parser">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.parsing.</code><code class="descname">Parser</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.parsing.Parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses SDF and URDF input files into a MultibodyPlant and (optionally)
+a SceneGraph.</p>
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.parsing.Parser.AddAllModelsFromFile">
+<code class="descname">AddAllModelsFromFile</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.parsing.Parser</em>, <em>file_name: unicode</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.multibody_tree.ModelInstanceIndex]<a class="headerlink" href="#pydrake.multibody.multibody_tree.parsing.Parser.AddAllModelsFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the SDF or URDF file named in <code class="docutils literal"><span class="pre">file_name</span></code> and adds all of its
+model(s) to <code class="docutils literal"><span class="pre">plant</span></code>.</p>
+<p>SDF files may contain multiple <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> elements. New model
+instances will be added to <code class="docutils literal"><span class="pre">plant</span></code> for each <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> tag in the
+file.</p>
+<p>URDF files contain a single <code class="docutils literal"><span class="pre">&lt;robot&gt;</span></code> element. Only a single model
+instance will be added to <code class="docutils literal"><span class="pre">plant</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">file_name</span></code>:</dt>
+<dd>The name of the SDF or URDF file to be parsed. The file type will
+be inferred from the extension.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The set of model instance indices for the newly added models.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in case of errors.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.parsing.Parser.AddModelFromFile">
+<code class="descname">AddModelFromFile</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.parsing.Parser</em>, <em>file_name: unicode</em>, <em>model_name: unicode = u''</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.ModelInstanceIndex<a class="headerlink" href="#pydrake.multibody.multibody_tree.parsing.Parser.AddModelFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses the SDF or URDF file named in <code class="docutils literal"><span class="pre">file_name</span></code> and adds one model
+to <code class="docutils literal"><span class="pre">plant</span></code>. It is an error to call this using an SDF file with more
+than one <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> element.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">file_name</span></code>:</dt>
+<dd>The name of the SDF or URDF file to be parsed. The file type will
+be inferred from the extension.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_name</span></code>:</dt>
+<dd>The name given to the newly created instance of this model. If
+empty, the “name” attribute from the <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> or <code class="docutils literal"><span class="pre">&lt;robot&gt;</span></code>
+tag will be used.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The instance index for the newly added model.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in case of errors.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.parsing.Parser.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.parsing.Parser</em>, <em>plant: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>scene_graph: pydrake.geometry.SceneGraph = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.parsing.Parser.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Parser that adds models to the given plant and (optionally)
+scene_graph.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>A pointer to a mutable MultibodyPlant object to which parsed
+model(s) will be added; <code class="docutils literal"><span class="pre">plant-&gt;is_finalized()</span></code> must remain
+<code class="docutils literal"><span class="pre">False</span></code> for as long as the <code class="docutils literal"><span class="pre">plant</span></code> is in used by <code class="docutils literal"><span class="pre">this</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">scene_graph</span></code>:</dt>
+<dd>A pointer to a mutable SceneGraph object used for geometry
+registration (either to model visual or contact geometry). May be
+nullptr.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.parsers.html" class="btn btn-neutral float-right" title="pydrake.multibody.parsers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.multibody_tree.multibody_plant.html" class="btn btn-neutral" title="pydrake.multibody.multibody_tree.multibody_plant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

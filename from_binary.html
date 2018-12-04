@@ -1,0 +1,192 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Binary installation (macOS, Ubuntu) &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Source installation (macOS, Ubuntu)" href="from_source.html" />
+    <link rel="prev" title="Installation and Quickstart" href="installation.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="from_source.html" title="Source installation (macOS, Ubuntu)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation and Quickstart"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="installation.html" accesskey="U">Installation and Quickstart</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="binary-installation-macos-ubuntu">
+<span id="binary-installation"></span><h1>Binary installation (macOS, Ubuntu)<a class="headerlink" href="#binary-installation-macos-ubuntu" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nightly-releases">
+<h2>Nightly releases<a class="headerlink" href="#nightly-releases" title="Permalink to this headline">¶</a></h2>
+<p>There are <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/1766#issuecomment-318955338">experimental binary packages</a> of Drake available at:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-bionic.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-bionic.tar.gz</a></li>
+<li><a class="reference external" href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-xenial.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-xenial.tar.gz</a></li>
+<li><a class="reference external" href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz</a></li>
+<li><dl class="first docutils">
+<dt><code class="samp docutils literal"><span class="pre">https://drake-packages.csail.mit.edu/drake/nightly/drake-</span><em><span class="pre">yyyymmdd</span></em><span class="pre">-</span><em><span class="pre">bionic|mac|xenial</span></em><span class="pre">.tar.gz</span></code>.</dt>
+<dd><ul class="first last">
+<li>Example: <a class="reference external" href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20171015-xenial.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20171015-xenial.tar.gz</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Example usages of these binaries are shown in this <a class="reference external" href="https://github.com/RobotLocomotion/drake-shambhala/tree/master/drake_cmake_installed">example CMake project</a>.
+For the compilers used to produce these releases, see <a class="reference internal" href="developers.html#binary-packages"><span class="std std-ref">Binary Packages</span></a>.
+If you are unsure of which approach to use, we suggest you <a class="reference internal" href="from_source.html#build-from-source"><span class="std std-ref">build from source</span></a>
+instead.</p>
+<p>For using Python bindings, see <a class="reference internal" href="python_bindings.html#python-bindings-binary"><span class="std std-ref">Binary Installation for Python</span></a>.</p>
+</div>
+<div class="section" id="using-older-2015-releases">
+<h2>Using older (2015) releases<a class="headerlink" href="#using-older-2015-releases" title="Permalink to this headline">¶</a></h2>
+<p>We cannot offer support for older releases, but we still host the binaries for
+reference.</p>
+<p>Download the appropriate binary release for your platform
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a>
+Simply extract the archive file into a folder of your choice (mine is called <code class="docutils literal"><span class="pre">drake-distro</span></code>).</p>
+<div class="section" id="running-matlab-examples">
+<h3>Running MATLAB examples<a class="headerlink" href="#running-matlab-examples" title="Permalink to this headline">¶</a></h3>
+<p>To run the MATLAB examples, change directories (in MATLAB) into the <code class="docutils literal"><span class="pre">drake-distro/drake</span></code> folder and at the MATLAB prompt do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">addpath_drake</span>
+</pre></div>
+</div>
+<p>Then <code class="docutils literal"><span class="pre">cd</span></code> into the examples directories and try some things out.  Here are a few fun ones to get you started:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">runLQR</span></code> in the <code class="docutils literal"><span class="pre">examples/CartPole</span></code> directory</li>
+<li><code class="docutils literal"><span class="pre">runLQR</span></code> in the <code class="docutils literal"><span class="pre">examples/Quadrotor2D</span></code> directory</li>
+<li><code class="docutils literal"><span class="pre">RimlessWheelPlant.run()</span></code> in the <code class="docutils literal"><span class="pre">examples/RimlessWheel</span></code> directory</li>
+<li><code class="docutils literal"><span class="pre">StateMachineControl.run()</span></code> in the <code class="docutils literal"><span class="pre">examples/PlanarMonopodHopper</span></code> directory</li>
+</ul>
+<p>Please note that you will have to run <cite>addpath_drake</cite> each time you start MATLAB, or <a class="reference external" href="http://www.mathworks.com/help/matlab/ref/startup.html">add it to your startup.m</a>.</p>
+</div>
+<div class="section" id="linux-specific">
+<h3>Linux Specific<a class="headerlink" href="#linux-specific" title="Permalink to this headline">¶</a></h3>
+<p>The version of the standard C++ libraries that are shipped with the Linux distribution of MATLAB is severely outdated and can cause problems when running mex files that are built against a newer version of the standard.  The typical error message in this case reports <cite>Invalid MEX-Files</cite></p>
+<p>To work around this issue, the symbolic link for the standard C++ library provided by MATLAB must be redirected to point to a more up-to-date version.</p>
+<p>First, make sure that a suitable version of the standard library is installed:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">g</span><span class="o">++-</span><span class="mf">4.4</span>
+</pre></div>
+</div>
+<p>Now, the symbolic link in MATLAB must be updated to point to the version that was just installed in <cite>/usr/lib</cite>.  An example for MATLAB R2014a is shown below:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">MATLAB</span><span class="o">/</span><span class="n">R2014a</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">os</span><span class="o">/</span><span class="n">glnxa64</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span><span class="o">.</span><span class="mi">6</span>
+<span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gcc</span><span class="o">/</span><span class="n">x86_64</span><span class="o">-</span><span class="n">linux</span><span class="o">-</span><span class="n">gnu</span><span class="o">/</span><span class="mf">4.4</span><span class="o">/</span><span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span> <span class="n">libstdc</span><span class="o">++.</span><span class="n">so</span><span class="o">.</span><span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Binary installation (macOS, Ubuntu)</a><ul>
+<li><a class="reference internal" href="#nightly-releases">Nightly releases</a></li>
+<li><a class="reference internal" href="#using-older-2015-releases">Using older (2015) releases</a><ul>
+<li><a class="reference internal" href="#running-matlab-examples">Running MATLAB examples</a></li>
+<li><a class="reference internal" href="#linux-specific">Linux Specific</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="from_source.html" title="Source installation (macOS, Ubuntu)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="installation.html" title="Installation and Quickstart"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="installation.html" >Installation and Quickstart</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

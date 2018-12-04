@@ -1,0 +1,363 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Overview &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation and Quickstart" href="installation.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="installation.html" title="Installation and Quickstart"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <a class="reference internal image-reference" href="_images/logo_w_text.jpg"><img alt="_images/logo_w_text.jpg" class="align-center" src="_images/logo_w_text.jpg" style="width: 60%;" /></a>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Drake (“dragon” in Middle English) is a C++ toolbox started by the
+<a class="reference external" href="http://groups.csail.mit.edu/locomotion/">Robot Locomotion Group</a> at the MIT Computer Science and Artificial Intelligence Lab (CSAIL).  The <a class="reference internal" href="credits.html"><span class="doc">development team has now
+grown significantly</span></a>, with core development led by the <a class="reference external" href="http://tri.global">Toyota Research Institute</a>.
+It is a collection of tools for analyzing the dynamics of our robots and building control systems for them, with a heavy emphasis on optimization-based design/analysis.</p>
+<p>While there are an increasing number of simulation tools available for robotics, most of them function like a black box: commands go in, sensors come out.  Drake aims to simulate even very complex dynamics of robots (e.g. including friction, contact, aerodynamics, …), but always with an emphasis on exposing the structure in the governing equations (sparsity, analytical gradients, polynomial structure, uncertainty quantification, …) and making this information available for advanced planning, control, and analysis algorithms.  Drake provides interfaces to high-level languages (MATLAB, Python, …) to enable rapid-prototyping of new algorithms, and also aims to provide solid open-source implementations for many state-of-the-art algorithms.  Finally, we hope Drake provides many compelling examples that can help people get started and provide much needed benchmarks.   We are excited to accept user contributions to improve the coverage.</p>
+<p>Here is a quick summary of capabilities:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__systems.html">Modeling Dynamical Systems</a></dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>C++ <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_diagram_builder.html#details">block-diagram</a>  modeling environment with support for:</dt>
+<dd><ul class="first last">
+<li>Continuous, discrete, hybrid, event-triggered, and multi-rate systems</li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/stochastic_systems.html">Stochastic systems</a></li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_system_constraint.html#details">System constraints</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__rigid__body__systems.html">Rigid-body kinematics and dynamics</a></dt>
+<dd><ul class="first last">
+<li>Rigorously designed and tested, well-documented <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__multibody__concepts.html">multi-body library</a></li>
+<li>Load from <a class="reference internal" href="models.html"><span class="doc">SDF / URDF models</span></a> (+ a few custom tags)</li>
+<li>Contact/collisions modeled with either <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__drake__contacts.html">compliant</a>  or rigid contact using continuous (differential equation) and discrete (difference equation, i.e., time stepping) models; <strong>Coming soon</strong>: hybrid models for rigid contact</li>
+<li>Geometry queries (e.g. collision detection, contact queries, and sensor queries) for simple geometries and convex meshes;  <strong>Coming soon</strong>: non-convex meshes and multi-contact</li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/class_rigid_body_tree.html">Rich library of kinematic and dynamic queries</a> (e.g. Centroidal dynamics, Center of Pressure, Kinematic Jacobians, …)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__sensor__systems.html">Sensor models</a> (lidar, RGB-D camera, imu, contact force/torque)</li>
+<li>Hand-derived models for many canonical control dynamical systems</li>
+<li><a class="reference external" href="https://github.com/RobotLocomotion/drake/blob/master/examples/simple_continuous_time_system.cc">Easily add your own models/components</a></li>
+<li>For nearly all of the above we aim to expose sparsity in the governing equations and provide analytical gradients / symbolic analysis</li>
+<li><dl class="first docutils">
+<dt><strong>Coming soon</strong>:</dt>
+<dd><ul class="first last">
+<li>API upgrade from <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/class_rigid_body_tree.html">RigidBodyTree</a> to <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_multibody_tree.html">MultiBodyTree</a></li>
+<li>Soft-body kinematics and dynamics</li>
+<li>More sophisticated rendering (towards photo-realism) and noise models for perception</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Core Libraries / Utilities</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">MathematicalProgram</a>, a C++ interface wrapping many open-source and commercial solvers</li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/namespacedrake_1_1symbolic.html">Symbolic Computation</a>, Eigen-compatible scalar types for symbolic design and analysis</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Simulation and Analysis</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_simulator.html">Simulation</a> with a suite of <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_integrator_base.html">numerical integration routines</a></li>
+<li>Local stability/controllability/observability analysis (via linearization / semi-definite programming)</li>
+<li><dl class="first docutils">
+<dt><strong>To be ported from MATLAB to C++</strong>:</dt>
+<dd><ul class="first last">
+<li>Find fixed points / trim conditions</li>
+<li>Region of attraction analysis using sums-of-squares optimization</li>
+<li>Finite-time verification (e.g. forward/backward reachability analysis)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Coming soon</strong>:</dt>
+<dd><ul class="first last">
+<li>Uncertainty quantification</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Planning</dt>
+<dd><ul class="first last">
+<li>Optimization-based inverse kinematics (fast <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/rigid__body__ik_8h.html">SQP-based methods</a> and <a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1multibody_1_1_global_inverse_kinematics.html">Global IK</a>)</li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_direct_trajectory_optimization.html">Trajectory optimization</a> (<a class="reference external" href="https://drake.mit.edu/doxygen_cxx/rigid__body__ik_8h.html#a6a69c1ef8426e4729ea1c7d4c11e6021">kinematic</a> and dynamic)</li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/class_rigid_body_constraint.html">Rich library of constraints</a> used by all of the above</li>
+<li><dl class="first docutils">
+<dt><strong>To be ported from MATLAB to C++</strong></dt>
+<dd><ul class="first last">
+<li>Contact-implicit trajectory optimization</li>
+<li><a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/6243">Mixed-integer-convex trajectory optimization</a></li>
+<li>Footstep/Gait planning for walking robots</li>
+<li>Grasp optimization</li>
+<li>Feedback motion planning</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Coming soon</strong>:</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/3413">Sample-based motion planning</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__control__systems.html">Feedback Control Design</a></dt>
+<dd><ul class="first last">
+<li>LQR design for fixed-points</li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1systems_1_1_inverse_dynamics_controller.html#details">Inverse-dynamics controller with contact constraints</a> using Quadratic Programming (e.g. for humanoid whole-body control)</li>
+<li><dl class="first docutils">
+<dt><strong>To be ported from MATLAB to C++</strong></dt>
+<dd><ul class="first last">
+<li>Time-varying LQR</li>
+<li>Sums-of-squares-based feedback design</li>
+<li>Value iteration algorithms (for low dimensional systems)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__estimator__systems.html">State Estimation</a></dt>
+<dd><ul class="first last">
+<li>Recursive filter design (Kalman Filters, Luenberger observers)</li>
+<li><dl class="first docutils">
+<dt><strong>Coming soon</strong>:</dt>
+<dd><ul class="first last">
+<li>“Smoothing” estimators for nonlinear systems</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/classdrake_1_1solvers_1_1_system_identification.html">System Identification</a></dt>
+<dd><ul class="first last">
+<li>Least-squares “equation error” minimization for rigid body systems (with automatic extraction of identifiable lumped parameters)</li>
+<li>Nonlinear “simulation error” minimization</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/RobotLocomotion/drake/tree/master/examples">Many examples / benchmarks / model systems</a></dt>
+<dd><ul class="first last">
+<li>Acrobot, Cart-Pole, Bouncing balls, …</li>
+<li>Quadrotors</li>
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__automotive__systems.html">Automotive/Traffic</a></li>
+<li>Manipulation</li>
+<li><dl class="first docutils">
+<dt><strong>To be ported from MATLAB to C++</strong></dt>
+<dd><ul class="first last">
+<li>Fixed-Wing UAVs</li>
+<li>Walking Robots</li>
+<li>Humanoids (most notably including the bulk of our codebase for Atlas from <a class="reference external" href="http://drc.mit.edu">MIT’s entry in the DARPA Robotics Challenge</a>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Other</dt>
+<dd><ul class="first last">
+<li><a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__message__passing.html">Message passing interfaces</a>  (<a class="reference external" href="https://github.com/lcm-proj/lcm">LCM</a>)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Most of these models/tools are described in <a class="reference external" href="https://people.csail.mit.edu/russt/underactuated/underactuated.html?chapter=drake">the companion textbook from an MIT course/MOOC</a>.  We’ve also recently started populating the <a class="reference internal" href="gallery.html"><span class="doc">Drake Gallery</span></a> (contributions welcome!).</p>
+<p>We hope you find this tool useful.  Please see <a class="reference internal" href="getting_help.html#getting-help"><span class="std std-ref">Getting Help</span></a> if you wish
+to share your comments, questions, success stories, or frustrations.  And please contribute your best bug fixes, features, and examples!</p>
+</div>
+<div class="section" id="citing-drake">
+<h1>Citing Drake<a class="headerlink" href="#citing-drake" title="Permalink to this headline">¶</a></h1>
+<p>If you would like to cite Drake in your academic publications, we suggest the following BibTeX citation:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@misc</span><span class="p">{</span><span class="n">drake</span><span class="p">,</span>
+ <span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;Russ Tedrake and the Drake Development Team&quot;</span><span class="p">,</span>
+ <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Drake: A planning, control, and analysis toolbox for nonlinear dynamical systems&quot;</span><span class="p">,</span>
+ <span class="n">year</span> <span class="o">=</span> <span class="mi">2016</span><span class="p">,</span>
+ <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://drake.mit.edu&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="acknowledgements">
+<h1>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h1>
+<p>The Drake developers would like to acknowledge significant support from the <a class="reference external" href="http://tri.global">Toyota Research Institute</a>, <a class="reference external" href="http://www.darpa.mil/">DARPA</a>, the <a class="reference external" href="https://nsf.gov/">National Science Foundation</a>, the <a class="reference external" href="http://www.onr.navy.mil/">Office of Naval Research</a>, <a class="reference external" href="https://www.amazon.com/">Amazon.com</a>, and <a class="reference external" href="http://www.mathworks.com/">The MathWorks</a>.</p>
+</div>
+<div class="section" id="next-steps">
+<h1>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="using-drake-from-other-programming-languages">
+<h1>Using Drake from other Programming Languages<a class="headerlink" href="#using-drake-from-other-programming-languages" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="documentation-that-may-be-useful-but-needs-updating">
+<h1>Documentation that may be useful but needs updating<a class="headerlink" href="#documentation-that-may-be-useful-but-needs-updating" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="http://underactuated.csail.mit.edu/underactuated.html?chapter=drake">Introduction and Examples</a></li>
+<li><a class="reference internal" href="design.html"><span class="doc">Design Notes</span></a></li>
+<li><a class="reference internal" href="video_tutorials.html"><span class="doc">Video Tutorials</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="#">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Overview</a></li>
+<li><a class="reference internal" href="#citing-drake">Citing Drake</a></li>
+<li><a class="reference internal" href="#acknowledgements">Acknowledgements</a></li>
+<li><a class="reference internal" href="#next-steps">Next steps</a></li>
+<li><a class="reference internal" href="#using-drake-from-other-programming-languages">Using Drake from other Programming Languages</a></li>
+<li><a class="reference internal" href="#documentation-that-may-be-useful-but-needs-updating">Documentation that may be useful but needs updating</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="installation.html" title="Installation and Quickstart"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

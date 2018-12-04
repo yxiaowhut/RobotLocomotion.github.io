@@ -1,0 +1,328 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Geometric Models in Drake &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="geometric-models-in-drake">
+<span id="models"></span><h1>Geometric Models in Drake<a class="headerlink" href="#geometric-models-in-drake" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first"><cite>Table of contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id5">Introduction</a></li>
+<li><a class="reference internal" href="#terminology" id="id6">Terminology</a></li>
+<li><a class="reference internal" href="#file-formats-for-drake-model-components" id="id7">File formats for Drake model components</a><ul>
+<li><a class="reference internal" href="#model-file-format" id="id8">Model file format</a></li>
+<li><a class="reference internal" href="#mesh-file-format" id="id9">Mesh file format</a></li>
+<li><a class="reference internal" href="#texture-file-format" id="id10">Texture file format</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-content-of-a-model-file" id="id11">The content of a Model file</a><ul>
+<li><a class="reference internal" href="#modelling-the-shape-of-an-object" id="id12">Modelling the shape of an object</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#simplifying-a-mesh" id="id13">Simplifying a Mesh</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<span id="models-intro"></span><h2><a class="toc-backref" href="#id5">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This document discusses how physical objects (i.e., robots and other objects
+such as furniture) are represented in Drake.</p>
+<p>The representations of physical objects are modeled in Drake declaratively
+using either URDF (Unified Robot Description Format) or SDF (Simulation
+Description Format), which are both XML formats.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sdformat.org/">SDF Reference</a></li>
+<li><a class="reference external" href="https://drake.mit.edu/drake-urdf-schema-documentation/drakeURDF.html">Drake’s version of URDF</a>.  Drake’s URDF has
+extensions to the <a class="reference external" href="http://wiki.ros.org/urdf/XML">official ROS URDF</a>.</li>
+</ul>
+<p>The target audience for this document is for those who want to model a
+physical object for use in Drake. You should have some understanding of XML
+formats, and be able to run Drake. You don’t need to know C++. This document
+provides enough reference material for someone to edit or create a
+representation of a simple object and its environment, by defining the
+terminology and providing an overview of what’s in a model file. This
+document is not meant as a tutorial for creating URDF/SDF files, which you
+can find <a class="reference external" href="http://gazebosim.org/tutorials?tut=build_robot">elsewhere</a>. For
+deeper understanding of polygonal modeling and advanced topics like meshes
+and textures, we try to provide links to further information, but you may
+have to do more of your own research and education.</p>
+<p>In this document, we call the URDF or SDF representation of the object a
+model. The model of an object will describe the object’s physical properties,
+including visual, contact, and dynamic properties. Visual properties
+describe the appearance of an object, such as its shape and texture. Dynamic
+properties describe how the object moves and have parameters like mass and
+spatial inertia. Contact properties describe how an object behaves when in
+contact with other objects and include numerous collision parameters.</p>
+<p>These properties allow you to do simulation, visualization, motion planning,
+and control.</p>
+</div>
+<div class="section" id="terminology">
+<span id="models-terminology"></span><h2><a class="toc-backref" href="#id6">Terminology</a><a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Polygon_mesh">Mesh</a> - a polygon mesh which
+is a collection of vertices, edges, and faces that describes the surface of a
+3D object. For a mesh to represent the fine details of a surface, a complex
+mesh is required. Processing a mesh gets more expensive as the mesh becomes
+more complex. Therefore, it is important to use a mesh with just enough
+detail to serve the purpose. To be compatible with Drake, all of the faces
+in the mesh must be triangles. Many modeling tools have a simple tool for
+“triangulating” the mesh.</p>
+<p><a class="reference external" href="http://sdformat.org/">SDF</a>- Simulation Description Format. An XML format
+that describes objects and environments for robot simulators, visualization,
+and control. SDF is OSRF’s successor to URDF. Unlike URDF, SDF allows
+multiple objects to be modeled in a single SDF file, and allows you to model
+the pose of the robot in the world. Relative to URDF, SDF is being more
+actively maintained.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Texture_mapping#Texture_maps">Texture</a> - the
+digital representation of an object’s surface. A texture may include color,
+brightness, transparency, reflectivity, and other aspects. The texture is
+mapped onto a preexisting surface - typically a mesh.</p>
+<p><a class="reference external" href="https://drake.mit.edu/drake-urdf-schema-documentation/drakeURDF.html">URDF</a>- Unified Robot Description Format, an XML
+format for representing one model of a robot or other object. Unlike SDF,
+only one object can be modeled per file, and pose cannot be modeled. Drake’s
+URDF extends the <a class="reference external" href="http://wiki.ros.org/urdf/XML">official ROS URDF</a>.</p>
+</div>
+<div class="section" id="file-formats-for-drake-model-components">
+<span id="models-file-formats"></span><h2><a class="toc-backref" href="#id7">File formats for Drake model components</a><a class="headerlink" href="#file-formats-for-drake-model-components" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="model-file-format">
+<span id="models-model-file-formats"></span><h3><a class="toc-backref" href="#id8">Model file format</a><a class="headerlink" href="#model-file-format" title="Permalink to this headline">¶</a></h3>
+<p>Drake’s models can be defined in either URDF or SDF file formats, but SDF is
+newer and thus preferred. They are similar formats. Both are XML-based.</p>
+</div>
+<div class="section" id="mesh-file-format">
+<span id="models-mesh-file-formats"></span><h3><a class="toc-backref" href="#id9">Mesh file format</a><a class="headerlink" href="#mesh-file-format" title="Permalink to this headline">¶</a></h3>
+<p>Drake can process the following mesh file format (file extension):</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Wavefront_.obj_file">OBJ</a> - a 3D geometry
+definition file format.</li>
+</ul>
+<p>If Drake processes an SDF or URDF file and finds a mesh file name extension that
+is not a type that it can process (currently only OBJ), it will see if a file
+exists with the same path and name but with an “obj” extension.</p>
+<p>The following are mesh file formats that are not processed by Drake, but may be
+found in the Drake repository and may be used to find OBJ versions:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/COLLADA">DAE</a> (digital asset exchange) - can
+include textures. An <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/2941">issue exists to add Drake support for DAE files</a>.</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> (<strong>ST</strong>ereo
+<strong>L</strong>ithography) - describes only the surface geometry
+of a three-dimensional object without any representation of color,
+texture or other common CAD model attributes.  An
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/issues/2941">issue exists to add Drake support for STL files</a>.</li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/VRML">WRL</a>- an obsolete mesh format that is
+superseded by a new format called X3D. Allows you to specify surface color,
+textures, shininess, transparency, and other parameters. Vertices and edges
+for a 3D polygon can be specified.</li>
+</ul>
+</div>
+<div class="section" id="texture-file-format">
+<span id="models-texture-file-formats"></span><h3><a class="toc-backref" href="#id10">Texture file format</a><a class="headerlink" href="#texture-file-format" title="Permalink to this headline">¶</a></h3>
+<p>Textures are normally used to represent the appearance of an object’s surface,
+for example, the colors and patterns. To visualize the appearance of a Drake
+model, use the <code class="docutils literal"><span class="pre">drake-visualizer</span></code> program in the <a class="reference external" href="https://github.com/RobotLocomotion/director">Director external</a>.</p>
+<p>There are three ways in which <code class="docutils literal"><span class="pre">drake-visualizer</span></code> applies visual surface
+properties to meshes:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Via VTK’s native VTM/VTP texture files.</li>
+<li>Via OBJ’s native MTL material files.</li>
+<li>Via URDF’s and SDF’s material specification. (Currently only color is
+supported.)</li>
+</ol>
+</div></blockquote>
+<p>Priority will be given in the order shown above, i.e., VTM/VTP will be used
+if they exist followed by MTL and finally SDF and URDF. Note that VTM/VTP files
+will only be used if they (1) exist in the same directory as the OBJ file and
+(2) share the same base file name as the OBJ file.</p>
+<p>To create VTM/VTP texture files for your OBJ mesh, one method is to get a DAE
+file which is equivalent to your OBJ file (your 3D scanner may be able to output
+both DAE and OBJ, or file converters are available).  Convert the DAE file into
+a VTM texture by running this <a class="reference external" href="https://raw.githubusercontent.com/openhumanoids/oh-distro/master/software/models/model_transformation/convertCollada.py">Python script</a>.
+Save the script to the place where your DAE file is stored. Then run the
+following commands, and the script will create VTM and VTP files:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt install python-collada
+$ python convertCollada.py my_file.dae
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-content-of-a-model-file">
+<span id="models-contents"></span><h2><a class="toc-backref" href="#id11">The content of a Model file</a><a class="headerlink" href="#the-content-of-a-model-file" title="Permalink to this headline">¶</a></h2>
+<p>The best way to learn how to create a model is to examine and change an
+existing, working model.  <a class="reference external" href="https://www.youtube.com/watch?v=gugV8IMyHnY">This tutorial</a> walks through editing a model in Drake.</p>
+<p>For detailed information on the elements of a model, see the
+<a class="reference external" href="https://drake.mit.edu/drake-urdf-schema-documentation/drakeURDF.html">URDF</a> or <a class="reference external" href="http://sdformat.org/">SDF</a>
+references for more information.</p>
+<div class="section" id="modelling-the-shape-of-an-object">
+<span id="models-shape"></span><h3><a class="toc-backref" href="#id12">Modelling the shape of an object</a><a class="headerlink" href="#modelling-the-shape-of-an-object" title="Permalink to this headline">¶</a></h3>
+<p>To model a shape for visual purposes, use URDF’s or SDF’s <code class="docutils literal"><span class="pre">&lt;visual&gt;</span></code> tag. To
+model a shape for the purpose of determining contact between your model and
+other objects, use URDF’s or SDF’s <code class="docutils literal"><span class="pre">&lt;collision&gt;</span></code> tag. (While both SDF and URDF
+use those same tags, note that the structure and content of those tags differ.)</p>
+<p>To explain why you might want to define the collision element differently than
+the visual element, let’s explore the different ways of defining shapes.</p>
+<p>An object’s shape can be modelled using a 3D scanner, which produces a polygon
+mesh. Meshes of geometrically complicated objects contain many polygons. The
+detail (density) of the mesh is great for a realistic visual display. However
+when a mesh is used for a collision element, collision algorithms must process
+all the polygons that are close to the target, which can be slow. For these
+reasons it is often desirable to use something simpler than a mesh for the
+collision model.  It’s a tradeoff between accuracy of the shape and processing
+time.</p>
+<p>The <code class="docutils literal"><span class="pre">&lt;visual&gt;</span></code> tag is used in visualization programs like
+<code class="docutils literal"><span class="pre">drake-visualizer</span></code> (in the
+<a class="reference external" href="https://github.com/RobotLocomotion/director">Director external</a>). Drake does
+not process the visual tag, unless you have something specific in your code that
+will process it, like
+<a class="reference external" href="https://drake.mit.edu/doxygen_cxx/rgbd__camera_8h.html">RgbdCamera</a>.
+Regardless of what program is processing the visual data, the processing time
+of visual elements is generally not an issue.</p>
+<p>In addition to modelling shapes with meshes, you can also model shapes with
+geometric primitives, such as cylinders, spheres, or boxes. Geometric primitives
+are far less complex than meshes and so require far less processing time.</p>
+<p>In the <a class="reference external" href="https://github.com/RobotLocomotion/drake/blob/83740997e1c893be5d2209563b755cfe84ee1c32/drake/examples/kuka_iiwa_arm/urdf/iiwa14.urdf">iiwa14.urdf robotic arm example</a>,
+we use meshes for the visual geometry elements, and
+cylinders for the collision elements, except for the last links where meshes
+are used.  The idea is that for links of the arm, we don’t need exact shapes
+for collision, where we don’t expect to need precision. Even if we were to
+use an “elbow” to shove an object out of the way, we probably don’t need
+exact accuracy.</p>
+<p>But there are cases where we need the precision of a mesh. For example, extra
+modeling precision may be needed to simulate a robot arm’s end effector
+reaching into tight spaces or performing dexterous manipulation tasks. In these
+cases, if it’s taking too long to process the original mesh, then the mesh needs
+to be simplified. The next section describes some options.</p>
+</div>
+</div>
+<div class="section" id="simplifying-a-mesh">
+<span id="models-simplifying-meshes"></span><h2><a class="toc-backref" href="#id13">Simplifying a Mesh</a><a class="headerlink" href="#simplifying-a-mesh" title="Permalink to this headline">¶</a></h2>
+<p>Q: What is the easiest way to use something simpler for a collision model?</p>
+<p>A: If you are starting with a mesh of an object (e.g., from a 3D scanner),
+you may be able to use a primitive geometric shape (e.g., cylinder, box, or
+sphere) instead of the mesh, as described above. To do this, consider a tool
+like <a class="reference external" href="http://gazebosim.org/">Gazebo</a>, which provides a visual editor of model
+files, and allows you to modify primitive geometric shapes in your model.</p>
+<p>Q: A single geometric shape is not accurate enough for my needs. What else
+can I do?</p>
+<p>A: You can use multiple overlapping geometric shapes to define slightly more
+complex collision elements.</p>
+<p>Q: I need something much more accurate than these simple shapes. How do I
+simplify a mesh?</p>
+<p>A: Sometimes you really need the accuracy of a mesh.</p>
+<p>An existing complex mesh can be simplified using a tool like <a class="reference external" href="https://www.blender.org/">Blender</a>, a free and open source 3D creation suite.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Geometric Models in Drake</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#terminology">Terminology</a></li>
+<li><a class="reference internal" href="#file-formats-for-drake-model-components">File formats for Drake model components</a><ul>
+<li><a class="reference internal" href="#model-file-format">Model file format</a></li>
+<li><a class="reference internal" href="#mesh-file-format">Mesh file format</a></li>
+<li><a class="reference internal" href="#texture-file-format">Texture file format</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-content-of-a-model-file">The content of a Model file</a><ul>
+<li><a class="reference internal" href="#modelling-the-shape-of-an-object">Modelling the shape of an object</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#simplifying-a-mesh">Simplifying a Mesh</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1499 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.multibody_tree.multibody_plant &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody.multibody_tree" href="pydrake.multibody.multibody_tree.html"/>
+        <link rel="next" title="pydrake.multibody.multibody_tree.parsing" href="pydrake.multibody.multibody_tree.parsing.html"/>
+        <link rel="prev" title="pydrake.multibody.multibody_tree.math" href="pydrake.multibody.multibody_tree.math.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pydrake.multibody.multibody_tree.all.html">pydrake.multibody.multibody_tree.all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydrake.multibody.multibody_tree.math.html">pydrake.multibody.multibody_tree.math</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pydrake.multibody.multibody_tree.multibody_plant</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pydrake.multibody.multibody_tree.parsing.html">pydrake.multibody.multibody_tree.parsing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.shapes.html">pydrake.multibody.shapes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a> &raquo;</li>
+        
+      <li>pydrake.multibody.multibody_tree.multibody_plant</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.multibody_tree.multibody_plant">
+<span id="pydrake-multibody-multibody-tree-multibody-plant"></span><h1>pydrake.multibody.multibody_tree.multibody_plant<a class="headerlink" href="#module-pydrake.multibody.multibody_tree.multibody_plant" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.ContactResults">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.multibody_plant.</code><code class="descname">ContactResults</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.ContactResults" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.ContactResults.AddContactInfo">
+<code class="descname">AddContactInfo</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.ContactResults</em>, <em>point_pair_info: pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.ContactResults.AddContactInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.ContactResults.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.ContactResults</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.ContactResults.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.ContactResults.contact_info">
+<code class="descname">contact_info</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.ContactResults</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.ContactResults.contact_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.ContactResults.num_contacts">
+<code class="descname">num_contacts</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.ContactResults</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.ContactResults.num_contacts" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.multibody_plant.</code><code class="descname">MultibodyPlant</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>%MultibodyPlant is a Drake system framework representation (see
+systems::System) for the model of a physical system consisting of a
+collection of interconnected bodies. See multibody for an overview of
+concepts/notation.</p>
+<p>MultibodyPlant provides a user-facing API to:</p>
+<ul class="simple">
+<li>add bodies, joints, force elements, and constraints,</li>
+<li>register geometries to a provided SceneGraph instance,</li>
+<li>create and manipulate its Context,</li>
+<li>perform Context-dependent computational queries.</li>
+</ul>
+<p>The state of a multibody system <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code> is given by its
+generalized positions vector q, of size <code class="docutils literal"><span class="pre">nq</span></code> (see num_positions()),
+and by its generalized velocities vector v, of size <code class="docutils literal"><span class="pre">nv</span></code> (see
+num_velocities()). As a Drake System, MultibodyPlant implements the
+governing equations for a multibody dynamical system in the form <code class="docutils literal"><span class="pre">ẋ</span>
+<span class="pre">=</span> <span class="pre">f(t,</span> <span class="pre">x,</span> <span class="pre">u)</span></code> with t being the time and u the input vector of
+actuation forces. The governing equations for the dynamics of a
+multibody system modeled with MultibodyPlant are [Featherstone 2008,
+Jain 2010]:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">q̇</span> <span class="o">=</span> <span class="n">N</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v</span>
+  <span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">=</span> <span class="n">tau</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">M(q)</span></code> is the mass matrix of the multibody system, <code class="docutils literal"><span class="pre">C(q,</span>
+<span class="pre">v)v</span></code> corresponds to the bias term containing Coriolis and gyroscopic
+effects and <code class="docutils literal"><span class="pre">N(q)</span></code> is the kinematic coupling matrix describing the
+relationship between the rate of change of the generalized coordinates
+and the generalized velocities, [Seth 2010]. N(q) is an <code class="docutils literal"><span class="pre">nq</span> <span class="pre">x</span> <span class="pre">nv</span></code>
+matrix. The vector <code class="docutils literal"><span class="pre">tau</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1)
+corresponds to generalized forces applied on the system. These can
+include externally applied body forces, constraint forces, and contact
+forces.</p>
+<p>Drake has the capability of loading multibody models from SDF and URDF
+files. Consider the example below which loads an acrobot model:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">acrobot</span><span class="p">;</span>
+  <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">scene_graph</span><span class="p">;</span>
+  <span class="n">Parser</span> <span class="n">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span>
+  <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">relative_name</span> <span class="o">=</span>
+    <span class="s2">&quot;drake/multibody/benchmarks/acrobot/acrobot.sdf&quot;</span><span class="p">;</span>
+  <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span> <span class="n">full_name</span> <span class="o">=</span> <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="n">relative_name</span><span class="p">);</span>
+  <span class="n">parser</span><span class="o">.</span><span class="n">AddModelFromFile</span><span class="p">(</span><span class="n">full_name</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>As in the example above, for models including visual geometry,
+collision geometry or both, the user must specify a SceneGraph for
+geometry handling. You can find a full example of the LQR controlled
+acrobot in examples/multibody/acrobot/run_lqr.cc.</p>
+<p>AddModelFromFile() can be invoked multiple times on the same plant in
+order to load multiple model instances. Other methods are available on
+Parser such as AddAllModelsFromFile() which allows creating model
+instances per each <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> tag found in the file. Please refer to
+each of these methods’ documentation for further details.</p>
+<p>Clients of a MultibodyPlant can add multibody elements with the
+following methods:</p>
+<ul class="simple">
+<li>Bodies: AddRigidBody().</li>
+<li>Joints: AddJoint().</li>
+</ul>
+<p>All modeling elements <strong>must</strong> be added pre-finalize.</p>
+<p>MultibodyPlant users can register geometry with a SceneGraph for
+essentially two purposes; a) visualization and, b) contact modeling.</p>
+<p>Before any geometry registration takes place, a user <strong>must</strong> first
+make a call to RegisterAsSourceForSceneGraph() in order to register
+the MultibodyPlant as a client of a SceneGraph instance, point at
+which the plant will have assigned a valid geometry::SourceId. At
+Finalize(), MultibodyPlant will declare input/output ports as
+appropriate to communicate with the SceneGraph instance on which
+registrations took place. All geometry registration <strong>must</strong> be
+performed pre-finalize.</p>
+<p>If MultibodyPlant registers geometry with a SceneGraph via calls to
+RegisterCollisionGeometry(), an input port for geometric queries will
+be declared at Finalize() time, see get_geometry_query_input_port().
+Users must connect this input port to the output port for geometric
+queries of the SceneGraph used for registration, which can be obtained
+with SceneGraph::get_query_output_port(). In summary, if
+MultibodyPlant registers collision geometry, the setup process will
+include:</p>
+<ol class="arabic simple">
+<li>Call to RegisterAsSourceForSceneGraph().</li>
+<li>Calls to RegisterCollisionGeometry(), as many as needed.</li>
+<li>Call to Finalize(), user is done specifying the model.</li>
+<li>Connect SceneGraph::get_query_output_port() to
+get_geometry_query_input_port().</li>
+</ol>
+<p>Refer to the documentation provided in each of the methods above for
+further details.</p>
+<p>Once the user is done adding modeling elements and registering
+geometry, a call to Finalize() must be performed. This call will:</p>
+<ul class="simple">
+<li>Build the underlying MultibodyTree topology, see MultibodyTree::Finalize()
+for details,</li>
+<li>declare the plant’s state,</li>
+<li>declare the plant’s input and output ports,</li>
+<li>declare input and output ports for communication with a SceneGraph.</li>
+</ul>
+<p>** References **</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>[Featherstone 2008] Featherstone, R., 2008.</dt>
+<dd>Rigid body dynamics algorithms. Springer.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[Jain 2010] Jain, A., 2010.</dt>
+<dd>Robot and multibody dynamics: analysis and algorithms.
+Springer Science &amp; Business Media.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>[Seth 2010] Seth, A., Sherman, M., Eastman, P. and Delp, S., 2010.</dt>
+<dd>Minimal formulation of joint motion for biomechanisms.
+Nonlinear dynamics, 62(1), pp.291-303.</dd>
+</dl>
+</li>
+</ul>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<p>They are already available to link against in the containing library.
+No other values for T are currently supported.</p>
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.AddForceElement">
+<code class="descname">AddForceElement</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>force_element: pydrake.multibody.multibody_tree.ForceElement</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.ForceElement<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.AddForceElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new force element model of type <code class="docutils literal"><span class="pre">ForceElementType</span></code> to
+<code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant. The arguments to this method <code class="docutils literal"><span class="pre">args</span></code> are
+forwarded to <a href="#id1"><span class="problematic" id="id2">``</span></a>ForceElementType`’s constructor.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">args</span></code>:</dt>
+<dd>Zero or more parameters provided to the constructor of the new
+force element. It must be the case that <cite>JointType&lt;T&gt;(args)`</cite> is a
+valid constructor.</dd>
+<dt>Template parameter <code class="docutils literal"><span class="pre">ForceElementType</span></code>:</dt>
+<dd>The type of the ForceElement to add. This method can only be
+called once for elements of type UniformGravityFieldElement. That
+is, gravity can only be specified once.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A constant reference to the new ForceElement just added, of type
+<code class="docutils literal"><span class="pre">ForceElementType&lt;T&gt;</span></code> specialized on the scalar type T of
+<code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant. It will remain valid for the lifetime of
+<code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">The ForceElement class’s documentation for further details on how
+a force element is defined.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.AddJoint">
+<code class="descname">AddJoint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>joint: pydrake.multibody.multibody_tree.Joint</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.Joint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.AddJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method adds a Joint of type <code class="docutils literal"><span class="pre">JointType</span></code> between two bodies. For
+more information, see the below overload of <code class="docutils literal"><span class="pre">AddJoint&lt;&gt;</span></code>, and the
+related <code class="docutils literal"><span class="pre">MultibodyTree::AddJoint&lt;&gt;</span></code> method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.Finalize">
+<code class="descname">Finalize</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>scene_graph: pydrake.geometry.SceneGraph = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.Finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method must be called after all elements in the model (joints,
+bodies, force elements, constraints, etc.) are added and before any
+computations are performed. It essentially compiles all the necessary
+“topological information”, i.e. how bodies, joints and, any other
+elements connect with each other, and performs all the required
+pre-processing to enable computations at a later stage.</p>
+<p>If the finalize stage is successful, the topology of this
+MultibodyPlant is valid, meaning that the topology is up-to-date after
+this call. No more multibody elements can be added after a call to
+Finalize().</p>
+<p>At Finalize(), state and input/output ports for <code class="docutils literal"><span class="pre">this</span></code> plant are
+declared. If <code class="docutils literal"><span class="pre">this</span></code> plant registered geometry with a SceneGraph,
+input and output ports to enable communication with that SceneGraph
+are declared as well.</p>
+<p>If geometry has been registered on a SceneGraph instance, that
+instance must be provided to the Finalize() method so that any
+geometric implications of the finalization process can be
+appropriately handled.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">is_finalized().</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if 1. the MultibodyPlant has already been finalized</li>
+<li>or 3. a different scene_graph instance is provided than the one</li>
+<li>for which this plant is a geometry source.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetBodyByName">
+<code class="descname">GetBodyByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetBodyByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetBodyByName(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode) -&gt; pydrake.multibody.multibody_tree.Body</li>
+</ol>
+<p>Returns a constant reference to a body that is identified by the
+string <code class="docutils literal"><span class="pre">name</span></code> in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the body name occurs in multiple model instances.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>GetBodyByName(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; pydrake.multibody.multibody_tree.Body</li>
+</ol>
+<p>Returns a constant reference to the body that is uniquely identified
+by the string <code class="docutils literal"><span class="pre">name</span></code> and <code class="docutils literal"><span class="pre">model_instance</span></code> in <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant with a given specified name.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetBodyFromFrameId">
+<code class="descname">GetBodyFromFrameId</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>arg0: pydrake.geometry.FrameId</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.Body<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetBodyFromFrameId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a geometry frame identifier, returns a pointer to the body
+associated with that id (nullptr if there is no such body).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetFrameByName">
+<code class="descname">GetFrameByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetFrameByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetFrameByName(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode) -&gt; pydrake.multibody.multibody_tree.Frame</li>
+</ol>
+<p>Returns a constant reference to a frame that is identified by the
+string <code class="docutils literal"><span class="pre">name</span></code> in <code class="docutils literal"><span class="pre">this</span></code> model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no frame with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the frame name occurs in multiple model instances.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasFrameNamed() to query if there exists a frame in <code class="docutils literal"><span class="pre">this</span></code> model
+with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>GetFrameByName(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; pydrake.multibody.multibody_tree.Frame</li>
+</ol>
+<p>Returns a constant reference to the frame that is uniquely identified
+by the string <code class="docutils literal"><span class="pre">name</span></code> in <code class="docutils literal"><span class="pre">model_instance</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no frame with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasFrameNamed() to query if there exists a frame in <code class="docutils literal"><span class="pre">this</span></code> model
+with a given specified name.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetJointActuatorByName">
+<code class="descname">GetJointActuatorByName</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>name: unicode</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.JointActuator<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetJointActuatorByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to an actuator that is identified by the
+string <code class="docutils literal"><span class="pre">name</span></code> in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if there is no actuator with the requested name.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the actuator name occurs in multiple model</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">instances.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasJointActuatorNamed() to query if there exists an actuator in
+<code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant with a given specified name.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetJointByName">
+<code class="descname">GetJointByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetJointByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetJointByName(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode) -&gt; pydrake.multibody.multibody_tree.Joint</li>
+</ol>
+<p>Returns a constant reference to a joint that is identified by the
+string <code class="docutils literal"><span class="pre">name</span></code> in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no joint with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the joint name occurs in multiple model instances.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasJointNamed() to query if there exists a joint in <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>GetJointByName(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; pydrake.multibody.multibody_tree.Joint</li>
+</ol>
+<p>Returns a constant reference to the joint that is uniquely identified
+by the string <code class="docutils literal"><span class="pre">name</span></code> and <code class="docutils literal"><span class="pre">model_instance</span></code> in <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no joint with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasJointNamed() to query if there exists a joint in <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant with a given specified name.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetModelInstanceByName">
+<code class="descname">GetModelInstanceByName</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>name: unicode</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.ModelInstanceIndex<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetModelInstanceByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index to the model instance that is uniquely identified by
+the string <code class="docutils literal"><span class="pre">name</span></code> in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no instance with the requested name.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasModelInstanceNamed() to query if there exists an instance in
+<code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant with a given specified name.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetMutablePositions">
+<code class="descname">GetMutablePositions</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1], flags.writeable]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetMutablePositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Returns a mutable vector reference containing the vector of
+generalized positions (<strong>see warning</strong>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method returns a reference to existing data, exhibits
+constant i.e., O(1) time complexity, and runs very quickly.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You should use SetPositions() instead of this method unless you
+are fully aware of the possible interactions with the caching
+mechanism (see dangerous_get_mutable).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr or if it does not</li>
+<li>correspond to the context for a multibody model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetMutablePositionsAndVelocities">
+<code class="descname">GetMutablePositionsAndVelocities</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1], flags.writeable]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetMutablePositionsAndVelocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Returns a mutable vector containing the vector <code class="docutils literal"><span class="pre">[q;</span> <span class="pre">v]</span></code>
+of the model with <code class="docutils literal"><span class="pre">q</span></code> the vector of generalized positions and <code class="docutils literal"><span class="pre">v</span></code>
+the vector of generalized velocities (<strong>see warning</strong>).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You should use SetPositionsAndVelocities() instead of this method
+unless you are fully aware of the interactions with the caching
+mechanism (see dangerous_get_mutable).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr or if it does not</li>
+<li>correspond to the context for a multibody model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetMutableVelocities">
+<code class="descname">GetMutableVelocities</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1], flags.writeable]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetMutableVelocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Returns a mutable vector reference containing the vector of
+generalized velocities (<strong>see warning</strong>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method returns a reference to existing data, exhibits
+constant i.e., O(1) time complexity, and runs very quickly.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You should use SetVelocities() instead of this method unless you
+are fully aware of the possible interactions with the caching
+mechanism (see dangerous_get_mutable).</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr or the context does not</li>
+<li>correspond to the context for a multibody model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetPositions">
+<code class="descname">GetPositions</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetPositions(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float]) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Returns a const vector reference containing the vector of generalized
+positions.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method returns a reference to existing data, exhibits
+constant i.e., O(1) time complexity, and runs very quickly.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> does not correspond to the context</li>
+<li>for a multibody model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>GetPositions(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Returns an vector containing the generalized positions (<code class="docutils literal"><span class="pre">q</span></code>) for the
+given model instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> does not correspond to the context</li>
+<li>for a multibody model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">returns a dense vector of dimension <code class="docutils literal"><span class="pre">q.size()</span></code> associated with
+<code class="docutils literal"><span class="pre">model_instance</span></code> in O(<code class="docutils literal"><span class="pre">q.size()</span></code>) time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetPositionsAndVelocities">
+<code class="descname">GetPositionsAndVelocities</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetPositionsAndVelocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetPositionsAndVelocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float]) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Returns a const vector reference containing the vector <code class="docutils literal"><span class="pre">[q;</span> <span class="pre">v]</span></code> with
+<code class="docutils literal"><span class="pre">q</span></code> the vector of generalized positions and <code class="docutils literal"><span class="pre">v</span></code> the vector of
+generalized velocities.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method returns a reference to existing data, exhibits
+constant i.e., O(1) time complexity, and runs very quickly.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> does not correspond to the context</li>
+<li>for a multibody model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>GetPositionsAndVelocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Returns the vector <code class="docutils literal"><span class="pre">[q;</span> <span class="pre">v]</span></code> of the model with <code class="docutils literal"><span class="pre">q</span></code> the vector of
+generalized positions and <code class="docutils literal"><span class="pre">v</span></code> the vector of generalized velocities
+for model instance <code class="docutils literal"><span class="pre">model_instance</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> does not correspond to the context</li>
+<li>for a multibody model or <code class="docutils literal"><span class="pre">model_instance</span></code> is invalid.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">returns a dense vector of dimension <code class="docutils literal"><span class="pre">q.size()</span> <span class="pre">+</span> <span class="pre">v.size()</span></code>
+associated with <code class="docutils literal"><span class="pre">model_instance</span></code> in O(<code class="docutils literal"><span class="pre">q.size()</span></code>) time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetVelocities">
+<code class="descname">GetVelocities</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetVelocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetVelocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float]) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Returns a const vector reference containing the generalized
+velocities.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method returns a reference to existing data, exhibits
+constant i.e., O(1) time complexity, and runs very quickly.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>GetVelocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Returns a vector containing the generalized velocities (<code class="docutils literal"><span class="pre">v</span></code>) for the
+given model instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> does not correspond to the context</li>
+<li>for a multibody model.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">returns a dense vector of dimension <code class="docutils literal"><span class="pre">v.size()</span></code> associated with
+<code class="docutils literal"><span class="pre">model_instance</span></code> in O(<code class="docutils literal"><span class="pre">v.size()</span></code>) time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.HasBodyNamed">
+<code class="descname">HasBodyNamed</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.HasBodyNamed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>HasBodyNamed(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode) -&gt; bool</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if a body named <code class="docutils literal"><span class="pre">name</span></code> was added to the MultibodyPlant.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddRigidBody().</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the body name occurs in multiple model instances.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>HasBodyNamed(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; bool</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if a body named <code class="docutils literal"><span class="pre">name</span></code> was added to the MultibodyPlant
+in <code class="docutils literal"><span class="pre">model_instance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddRigidBody().</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.HasJointNamed">
+<code class="descname">HasJointNamed</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.HasJointNamed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>HasJointNamed(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode) -&gt; bool</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if a joint named <code class="docutils literal"><span class="pre">name</span></code> was added to the
+MultibodyPlant.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddJoint().</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the joint name occurs in multiple model instances.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>HasJointNamed(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; bool</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if a joint named <code class="docutils literal"><span class="pre">name</span></code> was added to the MultibodyPlant
+in <code class="docutils literal"><span class="pre">model_instance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddJoint().</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.RegisterAsSourceForSceneGraph">
+<code class="descname">RegisterAsSourceForSceneGraph</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>scene_graph: pydrake.geometry.SceneGraph</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.RegisterAsSourceForSceneGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers <code class="docutils literal"><span class="pre">this</span></code> plant to serve as a source for an instance of
+SceneGraph. This registration allows MultibodyPlant to register
+geometry with <code class="docutils literal"><span class="pre">scene_graph</span></code> for visualization and/or collision
+queries. Successive registration calls with SceneGraph <strong>must</strong> be
+performed on the same instance to which the pointer argument
+<code class="docutils literal"><span class="pre">scene_graph</span></code> points to. Failure to do so will result in runtime
+exceptions.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">scene_graph</span></code>:</dt>
+<dd>A valid non nullptr to the SceneGraph instance for which <code class="docutils literal"><span class="pre">this</span></code>
+plant will sever as a source, see SceneGraph documentation for
+further details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the SourceId of <code class="docutils literal"><span class="pre">this</span></code> plant in <code class="docutils literal"><span class="pre">scene_graph</span></code>. It can also
+later on be retrieved with get_source_id().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called post-finalize.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">scene_graph</span></code> is the nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called more than once.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.SetPositions">
+<code class="descname">SetPositions</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.SetPositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetPositions(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], q: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets all generalized positions from the given vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr, if the context does</li>
+<li>not correspond to the context for a multibody model, or if the</li>
+<li>length of <code class="docutils literal"><span class="pre">q</span></code> is not equal to <code class="docutils literal"><span class="pre">num_positions()</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SetPositions(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex, q: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets all generalized positions from the given vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr, if the context does</li>
+<li>not correspond to the context for a multibody model, or if the</li>
+<li>length of <code class="docutils literal"><span class="pre">q</span></code> is not equal to <code class="docutils literal"><span class="pre">num_positions()</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.SetPositionsAndVelocities">
+<code class="descname">SetPositionsAndVelocities</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.SetPositionsAndVelocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetPositionsAndVelocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], q_v: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets all generalized positions and velocities from the given vector
+[q; v].</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr, if the context does</li>
+<li>not correspond to the context for a multibody model, or if the</li>
+<li>length of <code class="docutils literal"><span class="pre">q_v</span></code> is not equal to <a href="#id3"><span class="problematic" id="id4">``</span></a>num_positions() +</li>
+<li>num_velocities()``.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SetPositionsAndVelocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex, q_v: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets generalized positions and velocities from the given vector [q; v]
+for the specified model instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr, if the context does</li>
+<li>not correspond to the context for a multibody model, if the model</li>
+<li>instance index is invalid, or if the length of <code class="docutils literal"><span class="pre">q_v</span></code> is not</li>
+<li>equal to <a href="#id5"><span class="problematic" id="id6">``</span></a>num_positions(model_instance) +</li>
+<li>num_velocities(model_instance)``.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.SetVelocities">
+<code class="descname">SetVelocities</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.SetVelocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetVelocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], v: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets all generalized velocities from the given vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr, if the context does</li>
+<li>not correspond to the context for a multibody model, or if the</li>
+<li>length of <code class="docutils literal"><span class="pre">v</span></code> is not equal to <code class="docutils literal"><span class="pre">num_velocities()</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SetVelocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex, v: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the generalized velocities for a particular model instance from
+the given vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr, if the context does</li>
+<li>not correspond to the context for a multibody model, if the model</li>
+<li>instance index is invalid, or if the length of <code class="docutils literal"><span class="pre">v_instance</span></code> is</li>
+<li>not equal to <code class="docutils literal"><span class="pre">num_velocities(model_instance)</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7f7a60ce06f0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Welds frames A and B with relative pose <code class="docutils literal"><span class="pre">X_AB</span></code>. That is, the pose of
+frame B in frame A is fixed, with value <code class="docutils literal"><span class="pre">X_AB</span></code>. The call to this
+method creates and adds a new WeldJoint to the model. The new
+WeldJoint is named as: A.name() + “_welds_to_” + B.name().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to the WeldJoint welding frames A and B.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>time_step: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.geometry_source_is_registered">
+<code class="descname">geometry_source_is_registered</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.geometry_source_is_registered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant was registered with a
+SceneGraph. This method can be called at any time during the lifetime
+of <code class="docutils literal"><span class="pre">this</span></code> plant to query if <code class="docutils literal"><span class="pre">this</span></code> plant has been registered with
+a SceneGraph, either pre- or post-finalize, see Finalize().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_actuation_input_port">
+<code class="descname">get_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_actuation_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the input port for external actuation
+for the case where only one model instance has actuated dofs. This
+input port is a vector valued port, which can be set with
+JointActuator::set_actuation_vector().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Finalize() was already called on <code class="docutils literal"><span class="pre">this</span></code> plant.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called before Finalize(), if the model does not</li>
+<li>contain any actuators, or if multiple model instances have</li>
+<li>actuated dofs.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_contact_results_output_port">
+<code class="descname">get_contact_results_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_contact_results_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the port that outputs ContactResults.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">this</span></code> plant is not modeled as a discrete system</li>
+<li>with periodic updates.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if called pre-finalize, see Finalize().</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_continuous_state_output_port">
+<code class="descname">get_continuous_state_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_continuous_state_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the output port for the full
+continuous state of the model.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Finalize() was already called on <code class="docutils literal"><span class="pre">this</span></code> plant.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_geometry_poses_output_port">
+<code class="descname">get_geometry_poses_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_geometry_poses_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output port of frames’ poses to communicate with a
+SceneGraph.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this system was not registered with a SceneGraph.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_geometry_query_input_port">
+<code class="descname">get_geometry_query_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_geometry_query_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the input port used to perform
+geometric queries on a SceneGraph. See
+SceneGraph::get_query_output_port(). Refer to section
+geometry_registration of this class’s documentation for further
+details on collision geometry registration and connection with a
+SceneGraph.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this system was not registered with a SceneGraph.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_source_id">
+<code class="descname">get_source_id</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; Optional[pydrake.geometry.SourceId]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_source_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unique id identifying <code class="docutils literal"><span class="pre">this</span></code> plant as a source for a
+SceneGraph. Returns <code class="docutils literal"><span class="pre">nullopt</span></code> if <code class="docutils literal"><span class="pre">this</span></code> plant did not register any
+geometry. This method can be called at any time during the lifetime of
+<code class="docutils literal"><span class="pre">this</span></code> plant to query if <code class="docutils literal"><span class="pre">this</span></code> plant has been registered with a
+SceneGraph, either pre- or post-finalize, see Finalize(). However, a
+geometry::SourceId is only assigned once at the first call of any of
+this plant’s geometry registration methods, and it does not change
+after that. Post-finalize calls will always return the same value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.is_finalized">
+<code class="descname">is_finalized</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.is_finalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if this MultibodyPlant was finalized with a call to
+Finalize().</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Finalize().</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.message_model">
+<code class="descname">message_model</code><em class="property"> = u'Please use tree().'</em><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.message_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.model">
+<code class="descname">model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.MultibodyTree<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_actuated_dofs">
+<code class="descname">num_actuated_dofs</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_actuated_dofs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total number of actuated degrees of freedom. That is, the
+vector of actuation values u has this size. See AddJointActuator().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_actuators">
+<code class="descname">num_actuators</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_actuators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of joint actuators in the model.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddJointActuator().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_bodies">
+<code class="descname">num_bodies</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_bodies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of bodies in the model, including the “world” body,
+which is always part of the model.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddRigidBody().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_joints">
+<code class="descname">num_joints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_joints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of joints in the model.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddJoint().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_model_instances">
+<code class="descname">num_model_instances</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_model_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of model instances in the model.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddModelInstance().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_multibody_states">
+<code class="descname">num_multibody_states</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_multibody_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of the multibody system state vector <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[q;</span> <span class="pre">v]</span></code>
+for <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant. This will equal the number of generalized
+positions (see num_positions()) plus the number of generalized
+velocities (see num_velocities()). Notice however that the state of a
+MultibodyPlant, stored in its Context, can actually contain other
+variables such as integrated power and discrete states.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_positions">
+<code class="descname">num_positions</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>num_positions(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant) -&gt; int</li>
+</ol>
+<p>Returns the size of the generalized position vector <code class="docutils literal"><span class="pre">q</span></code> for <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+<ol class="arabic simple" start="2">
+<li>num_positions(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; int</li>
+</ol>
+<p>Returns the size of the generalized position vector <code class="docutils literal"><span class="pre">q</span></code> for a
+specific model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_velocities">
+<code class="descname">num_velocities</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.num_velocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>num_velocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant) -&gt; int</li>
+</ol>
+<p>Returns the size of the generalized velocity vector <code class="docutils literal"><span class="pre">v</span></code> for <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+<ol class="arabic simple" start="2">
+<li>num_velocities(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, arg0: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; int</li>
+</ol>
+<p>Returns the size of the generalized velocity vector <code class="docutils literal"><span class="pre">v</span></code> for a
+specific model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.tree">
+<code class="descname">tree</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.MultibodyTree<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the MultibodyTree owned by this class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.world_body">
+<code class="descname">world_body</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.RigidBody<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.world_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the <em>world</em> body.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.world_frame">
+<code class="descname">world_frame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.BodyFrame<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.world_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the <em>world</em> frame.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.multibody_plant.</code><code class="descname">PointPairContactInfo</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo, bodyA_index: pydrake.multibody.multibody_tree.BodyIndex, bodyB_index: pydrake.multibody.multibody_tree.BodyIndex, f_Bc_W: numpy.ndarray[float64[3, 1]], p_WC: numpy.ndarray[float64[3, 1]], separation_speed: float, slip_speed: float, point_pair: pydrake.geometry.PenetrationAsPointPair</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.bodyA_index">
+<code class="descname">bodyA_index</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.BodyIndex<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.bodyA_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.bodyB_index">
+<code class="descname">bodyB_index</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.BodyIndex<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.bodyB_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.contact_force">
+<code class="descname">contact_force</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.contact_force" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.contact_point">
+<code class="descname">contact_point</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.contact_point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.separation_speed">
+<code class="descname">separation_speed</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.separation_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.slip_speed">
+<code class="descname">slip_speed</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.PointPairContactInfo.slip_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.multibody_tree.parsing.html" class="btn btn-neutral float-right" title="pydrake.multibody.multibody_tree.parsing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.multibody_tree.math.html" class="btn btn-neutral" title="pydrake.multibody.multibody_tree.math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.meshcat_visualizer &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.primitives" href="pydrake.systems.primitives.html"/>
+        <link rel="prev" title="pydrake.systems.lcm" href="pydrake.systems.lcm.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.meshcat_visualizer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.meshcat_visualizer">
+<span id="pydrake-systems-meshcat-visualizer"></span><h1>pydrake.systems.meshcat_visualizer<a class="headerlink" href="#module-pydrake.systems.meshcat_visualizer" title="Permalink to this headline">¶</a></h1>
+<p>Provides utilities for communicating with the browser-based visualization
+package, Meshcat:</p>
+<blockquote>
+<div><a class="reference external" href="https://github.com/rdeits/meshcat">https://github.com/rdeits/meshcat</a></div></blockquote>
+<dl class="class">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer">
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatVisualizer</code><span class="sig-paren">(</span><em>scene_graph</em>, <em>draw_period=0.033333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>MeshcatVisualizer is a System block that connects to the pose bundle output
+port of a SceneGraph and visualizes the scene in Meshcat.</p>
+<p>The most common workflow would be to run
+<cite>bazel run &#64;meshcat_python//:meshcat-server</cite>
+in another terminal, open the url printed in that terminal in your
+browser, then to run drake apps (potentially many times) that publish to
+that default url.</p>
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph</em>, <em>draw_period=0.033333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scene_graph</strong> – A SceneGraph object.</li>
+<li><strong>draw_period</strong> – The rate at which this class publishes to the
+visualizer.</li>
+<li><strong>prefix</strong> – Appears as the root of the tree structure in the meshcat
+data structure</li>
+<li><strong>zmq_url</strong> – Optionally set a url to connect to the visualizer.
+Use zmp_url=”default” to the value obtained by running a
+single <cite>meshcat-server</cite> in another terminal.
+Use zmp_url=None or zmq_url=”new” to start a new server (as a
+child of this process); a new web browser will be opened (the
+url will also be printed to the console).
+Use e.g. zmq_url=”<a class="reference external" href="tcp://127.0.0.1:6000">tcp://127.0.0.1:6000</a>” to specify a
+specific address.</li>
+<li><strong>open_browser</strong> – Set to True to open the meshcat browser url in your
+default web browser.  The default value of None will open the
+browser iff a new meshcat server is created as a subprocess.
+Set to False to disable this.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Note: This call will not return until it connects to the</dt>
+<dd>meshcat-server.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.add_argparse_argument">
+<em class="property">static </em><code class="descname">add_argparse_argument</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.add_argparse_argument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a common command-line interface for including meshcat support
+in a python executable.  Example:</p>
+<blockquote>
+<div><p>parser = argparse.ArgumentParser(description=__doc__)
+…
+MeshcatVisualizer.add_argparse_argument(parser)
+…
+args = parser.parse_args()</p>
+<p>…</p>
+<dl class="docutils">
+<dt>if args.meshcat:</dt>
+<dd><dl class="first last docutils">
+<dt>meshcat = builder.AddSystem(MeshcatVisualizer(</dt>
+<dd>scene_graph, zmq_url=args.meshcat))</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads <cite>meshcat</cite> visualization elements.</p>
+<p>&#64;pre The <cite>scene_graph</cite> used to construct this object must be part of a
+fully constructed diagram (e.g. via <cite>DiagramBuilder.Build()</cite>).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.primitives.html" class="btn btn-neutral float-right" title="pydrake.systems.primitives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.lcm.html" class="btn btn-neutral" title="pydrake.systems.lcm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

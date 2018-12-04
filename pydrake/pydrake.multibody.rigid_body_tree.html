@@ -1,0 +1,1826 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.rigid_body_tree &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.multibody.shapes" href="pydrake.multibody.shapes.html"/>
+        <link rel="prev" title="pydrake.multibody.rigid_body_plant" href="pydrake.multibody.rigid_body_plant.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.rigid_body_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.shapes.html">pydrake.multibody.shapes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.rigid_body_tree</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.rigid_body_tree">
+<span id="pydrake-multibody-rigid-body-tree"></span><h1>pydrake.multibody.rigid_body_tree<a class="headerlink" href="#module-pydrake.multibody.rigid_body_tree" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the RigidBodyTree class</p>
+<dl class="function">
+<dt id="pydrake.multibody.rigid_body_tree.AddFlatTerrainToWorld">
+<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddFlatTerrainToWorld</code><span class="sig-paren">(</span><em>tree: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>box_size: float = 1000</em>, <em>box_depth: float = 10</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddFlatTerrainToWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a box-shaped terrain to <code class="docutils literal"><span class="pre">tree</span></code>. This directly modifies the
+existing world rigid body within <code class="docutils literal"><span class="pre">tree</span></code> and thus does not need to
+return a <code class="docutils literal"><span class="pre">model_instance_id</span></code> value.</p>
+<p>Two opposite corners of the resulting axis-aligned box are:
+<code class="docutils literal"><span class="pre">(box_size</span> <span class="pre">/</span> <span class="pre">2,</span> <span class="pre">box_size</span> <span class="pre">/</span> <span class="pre">2,</span> <span class="pre">0)</span></code> and <code class="docutils literal"><span class="pre">(-box_size</span> <span class="pre">/</span> <span class="pre">2,</span> <span class="pre">-box_size</span> <span class="pre">/</span>
+<span class="pre">2,</span> <span class="pre">-box_depth)</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">tree</span></code>:</dt>
+<dd>The RigidBodyTreed to which to add the terrain.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">box_size</span></code>:</dt>
+<dd>The length and width of the terrain aligned with the world’s X and
+Y axes.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">box_depth</span></code>:</dt>
+<dd>The depth of the terrain aligned with the world’s Z axis. Note
+that regardless of how deep the terrain is, the top surface of the
+terrain will be at Z = 0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.multibody.rigid_body_tree.AddModelInstanceFromUrdfFile">
+<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstanceFromUrdfFile</code><span class="sig-paren">(</span><em>urdf_filename: unicode</em>, <em>floating_base_type: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>weld_to_frame: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>tree: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>do_compile: bool = True</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstanceFromUrdfFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydrake.multibody.rigid_body_tree.AddModelInstanceFromUrdfStringSearchingInRosPackages">
+<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstanceFromUrdfStringSearchingInRosPackages</code><span class="sig-paren">(</span><em>arg0: unicode</em>, <em>arg1: pydrake.multibody.parsers.PackageMap</em>, <em>arg2: unicode</em>, <em>arg3: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>arg4: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>arg5: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstanceFromUrdfStringSearchingInRosPackages" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is the same as AddModelInstanceFromUrdfString() except it
+has an additional parameter called <code class="docutils literal"><span class="pre">package_map</span></code>. Parameter
+<code class="docutils literal"><span class="pre">package_map</span></code> contains a mapping from ROS package names to their
+paths on the local file system. The mapping is used to find resources
+like mesh files that are referenced within the URDF. This method may
+be called from within the context of a <a class="reference external" href="http://wiki.ros.org/Nodes">ROS node</a> or a regular non-ROS application.</p>
+<p>This method has input parameter <code class="docutils literal"><span class="pre">package_map</span></code>. This parameter is
+only necessary if the URDF contains a model that references meshes and
+other modeling resources using <code class="docutils literal"><span class="pre">package://</span></code>. If the model in the
+URDF does not use <code class="docutils literal"><span class="pre">package://</span></code>, the URDF could instead be loaded
+using AddModelInstanceFromUrdfString().</p>
+<p>There are two versions: one in which the tree is automatically
+“compiled” after a successful parse and one in which compilation
+depends on an input parameter, <code class="docutils literal"><span class="pre">do_compile</span></code>. If <code class="docutils literal"><span class="pre">do_compile</span></code> is
+false, it is the responsibility of the caller to ensure
+RigdBodyTree::compile() is invoked appropriately subsequent to the
+successful parse.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">urdf_string</span></code>:</dt>
+<dd>The URDF string of the model. This is the actual URDF text (i.e.,
+it is not the name of a file that contains the URDF text). A new
+model instance is created based on this URDF text and added to
+<code class="docutils literal"><span class="pre">tree</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">package_map</span></code>:</dt>
+<dd>A map of ROS package names to their paths. These are the packages
+to search through when finding files referenced in the URDF.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">root_dir</span></code>:</dt>
+<dd>The root directory in which to search for files mentioned in the
+URDF.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">floating_base_type</span></code>:</dt>
+<dd>The type of joint that connects the model instance’s root to
+<code class="docutils literal"><span class="pre">tree</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">weld_to_frame</span></code>:</dt>
+<dd>The frame to which to connect the new model instance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">tree</span></code>:</dt>
+<dd>The <code class="docutils literal"><span class="pre">RigidBodyTree</span></code> to which to add the model instance. This
+parameter must not be <code class="docutils literal"><span class="pre">nullptr</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A table mapping the names of the models whose instances were just
+added to the <code class="docutils literal"><span class="pre">RigidBodyTree</span></code> to their instance IDs, which are
+unique within the <code class="docutils literal"><span class="pre">RigidBodyTree</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfFile">
+<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstancesFromSdfFile</code><span class="sig-paren">(</span><em>sdf_filename: unicode</em>, <em>floating_base_type: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>weld_to_frame: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>tree: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>do_compile: bool = True</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfString">
+<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstancesFromSdfString</code><span class="sig-paren">(</span><em>arg0: unicode</em>, <em>arg1: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>arg2: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>arg3: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the model or models defined within an SDF description to
+<code class="docutils literal"><span class="pre">tree</span></code>. One instance of each model is added.</p>
+<p>This method can only be used with SDF models that either (1) do not
+use <code class="docutils literal"><span class="pre">package://</span></code> to reference modeling resources like mesh files, or
+(2) only reference packages that are defined up the directory tree
+relative to <code class="docutils literal"><span class="pre">filename</span></code>. SDF files that contain <code class="docutils literal"><span class="pre">package://</span></code>
+references to do not meet these requirements should instead use
+AddModelInstancesFromSdfStringSearchingInRosPackages().</p>
+<p>There are two versions: one in which the tree is automatically
+“compiled” after a successful parse and one in which compilation
+depends on an input parameter, <code class="docutils literal"><span class="pre">do_compile</span></code>. If <code class="docutils literal"><span class="pre">do_compile</span></code> is
+false, it is the responsibility of the caller to ensure
+RigdBodyTree::compile() is invoked appropriately subsequent to the
+successful parse.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">sdf_string</span></code>:</dt>
+<dd>The SDF description of one or more models.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">floating_base_type</span></code>:</dt>
+<dd>The type of joint that connects the model’s root to the existing
+rigid body tree.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">weld_to_frame</span></code>:</dt>
+<dd>The frame to which to connect the new model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">tree</span></code>:</dt>
+<dd>The rigid body tree to which to add the model.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A table mapping the names of the models whose instances were just
+added to the <code class="docutils literal"><span class="pre">RigidBodyTree</span></code> to their instance IDs, which are
+unique within the <code class="docutils literal"><span class="pre">RigidBodyTree</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfStringSearchingInRosPackages">
+<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstancesFromSdfStringSearchingInRosPackages</code><span class="sig-paren">(</span><em>arg0: unicode</em>, <em>arg1: pydrake.multibody.parsers.PackageMap</em>, <em>arg2: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>arg3: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>arg4: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfStringSearchingInRosPackages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the model or models defined within an SDF description to
+<code class="docutils literal"><span class="pre">tree</span></code>. One instance of each model is added.</p>
+<p>This method has input parameter <code class="docutils literal"><span class="pre">package_map</span></code>. This parameter is
+only necessary if the SDF contains models that reference meshes and
+other modeling resources using <code class="docutils literal"><span class="pre">package://</span></code>. If the models in the
+SDF do not use <code class="docutils literal"><span class="pre">package://</span></code>, or if the package can be found by
+crawling up the directory tree, the SDF could instead be loaded using
+AddModelInstancesFromSdfFile().</p>
+<p>There are two versions: one in which the tree is automatically
+“compiled” after a successful parse and one in which compilation
+depends on an input parameter, <code class="docutils literal"><span class="pre">do_compile</span></code>. If <code class="docutils literal"><span class="pre">do_compile</span></code> is
+false, it is the responsibility of the caller to ensure
+RigdBodyTree::compile() is invoked appropriately subsequent to the
+successful parse.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">sdf_string</span></code>:</dt>
+<dd>The SDF description of one or more models.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">package_map</span></code>:</dt>
+<dd>A map of ROS package names to their paths. These are the packages
+to search through when finding files referenced in the SDF.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">floating_base_type</span></code>:</dt>
+<dd>The type of joint that connects the model’s root to the existing
+rigid body tree.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">weld_to_frame</span></code>:</dt>
+<dd>The frame to which to connect the new model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">tree</span></code>:</dt>
+<dd>The rigid body tree to which to add the model.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A table mapping the names of the models whose instances were just
+added to the <code class="docutils literal"><span class="pre">RigidBodyTree</span></code> to their instance IDs, which are
+unique within the <code class="docutils literal"><span class="pre">RigidBodyTree</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_tree.FloatingBaseType">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">FloatingBaseType</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.FloatingBaseType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates how unattached links are to be mobilized in the world (fixed
+or floating) after parsing.</p>
+<p>Members:</p>
+<blockquote>
+<div>kQuaternion : A floating quaternion joint will be added to all unattached links. An</div></blockquote>
+<p>error will be triggered if no unattached links are found.</p>
+<blockquote>
+<div><p>kFixed : A fixed body will be added to all unattached links. An error will be</p>
+<p>kExperimentalMultibodyPlantStyle : (Experimental) Intended for compatibility with MultibodyPlant SDF</p>
+</div></blockquote>
+<p>parsing: A floating quaternion joint will be added to all unattached
+links; however, it does not trigger an error if no unattachced links
+are found.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<blockquote>
+<div>This is an experimental feature whose functionality and name may
+change before it becomes stable. Please proceed with caution.</div></blockquote>
+<p class="last">kRollPitchYaw : A floating roll-pitch-yaw joint will be added to all unattached links.</p>
+</div>
+<p>An error will be triggered if no unattached links are found.</p>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.FloatingBaseType.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.FloatingBaseType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.FloatingBaseType.kExperimentalMultibodyPlantStyle">
+<code class="descname">kExperimentalMultibodyPlantStyle</code><em class="property"> = FloatingBaseType.kExperimentalMultibodyPlantStyle</em><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.FloatingBaseType.kExperimentalMultibodyPlantStyle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.FloatingBaseType.kFixed">
+<code class="descname">kFixed</code><em class="property"> = FloatingBaseType.kFixed</em><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.FloatingBaseType.kFixed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.FloatingBaseType.kQuaternion">
+<code class="descname">kQuaternion</code><em class="property"> = FloatingBaseType.kQuaternion</em><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.FloatingBaseType.kQuaternion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.FloatingBaseType.kRollPitchYaw">
+<code class="descname">kRollPitchYaw</code><em class="property"> = FloatingBaseType.kRollPitchYaw</em><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.FloatingBaseType.kRollPitchYaw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.FloatingBaseType.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.FloatingBaseType.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_tree.KinematicsCacheAutoDiffXd">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">KinematicsCacheAutoDiffXd</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.KinematicsCacheAutoDiffXd" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.KinematicsCacheAutoDiffXd.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.KinematicsCacheAutoDiffXd.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_tree.KinematicsCacheDouble">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">KinematicsCacheDouble</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.KinematicsCacheDouble" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.KinematicsCacheDouble.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.KinematicsCacheDouble.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyActuator">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">RigidBodyActuator</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyActuator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a physical actuator (i.e., an electric motor and step-down
+transmission) that operates on a joint. This class assumes the
+actuator has a single DOF.</p>
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyActuator.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyActuator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyActuator.body">
+<code class="descname">body</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyActuator.body" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyActuator.effort_limit_max">
+<code class="descname">effort_limit_max</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyActuator.effort_limit_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyActuator.effort_limit_min">
+<code class="descname">effort_limit_min</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyActuator.effort_limit_min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyActuator.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyActuator.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyActuator.reduction">
+<code class="descname">reduction</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyActuator.reduction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyFrame">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">RigidBodyFrame</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multibody systems typically have distinguished frames of interest that
+need to be monitored. A frame is fully described by the body it is
+rigidly attached to and the pose of this frame with respect to that
+body. RigidBodyFrame provides an abstraction to describe these frames.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The type being integrated. Must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<p>They are already available to link against in the containing library.
+No other values for T are currently supported.</p>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyFrame.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyFrame.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyFrame, name: unicode, body: pydrake.multibody.rigid_body.RigidBody, xyz: numpy.ndarray[float64[m, 1]] = array([ 0.,  0.,  0.]), rpy: numpy.ndarray[float64[m, 1]] = array([ 0.,  0.,  0.])) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyFrame, name: unicode, body: pydrake.multibody.rigid_body.RigidBody, transform_to_body: pydrake.common.eigen_geometry.Isometry3) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyFrame.get_frame_index">
+<code class="descname">get_frame_index</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyFrame.get_frame_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index of this <code class="docutils literal"><span class="pre">RigidBodyFrame</span></code> within the vector of
+<code class="docutils literal"><span class="pre">RigidBodyFrame</span></code> objects in the <code class="docutils literal"><span class="pre">RigidBodyTree</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyFrame.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyFrame.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of this frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyFrame.get_rigid_body">
+<code class="descname">get_rigid_body</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body.RigidBody<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyFrame.get_rigid_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rigid body to which this frame is attached.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyFrame.get_transform_to_body">
+<code class="descname">get_transform_to_body</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Isometry3<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyFrame.get_transform_to_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the transform between the coordinate frame that belongs to
+this <code class="docutils literal"><span class="pre">RigidBodyFrame</span></code> and the coordinate frame that belongs to the
+<code class="docutils literal"><span class="pre">RigidBody</span></code> to which this frame is attached (which is obtainable by
+calling RigidBodyFrame::get_rigid_body()).</p>
+<p>Let <code class="docutils literal"><span class="pre">B</span></code> be the coordinate frame of the <code class="docutils literal"><span class="pre">RigidBody</span></code> to which this
+<code class="docutils literal"><span class="pre">RigidBodyFrame</span></code> is attached and <code class="docutils literal"><span class="pre">F</span></code> be the coordinate frame of
+this <code class="docutils literal"><span class="pre">RigidBodyFrame</span></code>. Furthermore, let <code class="docutils literal"><span class="pre">p_B</span></code> be the location of a
+point measured from <code class="docutils literal"><span class="pre">B`'s</span> <span class="pre">origin</span> <span class="pre">and</span> <span class="pre">expressed</span> <span class="pre">in</span> <span class="pre">coordinate</span> <span class="pre">frame</span>
+<span class="pre">`B</span></code>, and <code class="docutils literal"><span class="pre">p_F</span></code> be the location of the same point but measured from
+<code class="docutils literal"><span class="pre">F`'s</span> <span class="pre">origin</span> <span class="pre">and</span> <span class="pre">expressed</span> <span class="pre">in</span> <span class="pre">coordinate</span> <span class="pre">frame</span> <span class="pre">`F</span></code>.</p>
+<p>The returned value is <code class="docutils literal"><span class="pre">T_BF</span></code> where:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">p_B</span> <span class="o">=</span> <span class="n">T_BF</span> <span class="o">*</span> <span class="n">p_F</span><span class="p">;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">RigidBodyTree</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maintains a vector of RigidBody objects that are arranged into a
+kinematic tree via DrakeJoint objects. It provides various utility
+methods for computing kinematic and dynamics properties of the
+RigidBodyTree.</p>
+<p>The internal organization of a RigidBodyTree’s generalized state
+vector is as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">model</span> <span class="n">instance</span> <span class="mi">1</span><span class="s1">&#39;s generalized coordinate vector]</span>
+<span class="p">[</span><span class="n">model</span> <span class="n">instance</span> <span class="mi">2</span><span class="s1">&#39;s generalized coordinate vector]</span>
+<span class="o">...</span>
+<span class="p">[</span><span class="n">model</span> <span class="n">instance</span> <span class="mi">1</span><span class="s1">&#39;s generalized velocity vector]</span>
+<span class="p">[</span><span class="n">model</span> <span class="n">instance</span> <span class="mi">2</span><span class="s1">&#39;s generalized velocity vector]</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Each RigidBody maintains for its joint that connects to its parent the
+indices of the joint’s generalized coordinate vector and generalized
+velocity vector in the RigidBodyTree’s generalized state vector.</p>
+<p>The starting index of the joint’s generalized coordinate vector in the
+RigidBodyTree’s generalized state vector can be obtained by executing
+RigidBody::get_position_start_index().</p>
+<p>The starting index of the joint’s generalized velocity vector in the
+RigidBodyTree’s generalized state vector can be computed as follows:
+RigidBodyTree::get_num_positions() +
+RigidBody::get_velocity_start_index().</p>
+<p>Note that the velocity index starts at the beginning of the velocity
+state variables and not at the beginning of the full state of the
+RigidBodyTree. This is why the total number of positions needs to be
+added to the velocity index to get its index in the RigidBodyTree’s
+full state vector.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.AddCollisionFilterGroupMember">
+<code class="descname">AddCollisionFilterGroupMember</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>group_name: unicode</em>, <em>body_name: unicode</em>, <em>model_id: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.AddCollisionFilterGroupMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a RigidBody to a collision filter group. The RigidBody is
+referenced by name and model instance id. The process will fail if the
+body cannot be found or if the group cannot be found.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">group_name</span></code>:</dt>
+<dd>The collision filter group name to add the body to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">body_name</span></code>:</dt>
+<dd>The name of the body to add.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_id</span></code>:</dt>
+<dd>The id of the model instance to which this body belongs.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in response to failure conditions.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.AddCollisionFilterIgnoreTarget">
+<code class="descname">AddCollisionFilterIgnoreTarget</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>group_name: unicode</em>, <em>target_group_name: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.AddCollisionFilterIgnoreTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a collision group to the set of groups ignored by the specified
+collision filter group. Will fail if the specified group name does not
+refer to an existing collision filter group. (The target group name
+need not exist at this time.)</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">group_name</span></code>:</dt>
+<dd>$Parameter <code class="docutils literal"><span class="pre">target_group_name</span></code>:</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in response to failure conditions.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.B">
+<code class="descname">B</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.B" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.CalcBodyPoseInWorldFrame">
+<code class="descname">CalcBodyPoseInWorldFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>arg0: KinematicsCache&lt;double&gt;</em>, <em>arg1: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[4, 4]]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.CalcBodyPoseInWorldFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of <code class="docutils literal"><span class="pre">body</span></code>’s frame B in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>Reference to the KinematicsCache.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">body</span></code>:</dt>
+<dd>Reference to the RigidBody.</dd>
+</dl>
+<p>Returns <code class="docutils literal"><span class="pre">X_WB</span></code>:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body_tree.RigidBodyTree<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.Clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a deep clone of this RigidBodyTree&lt;double&gt;. Currently,
+everything <em>except</em> for collision and visual elements are cloned. Only
+supported for T = double.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.DefineCollisionFilterGroup">
+<code class="descname">DefineCollisionFilterGroup</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>name: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.DefineCollisionFilterGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to define a new collision filter group. The given name <em>must</em>
+be unique since the last invocation of compile() (or construction,
+whichever is more recent). Duplicate names or attempting to add more
+collision filter groups than the system can handle will lead to
+failure. In the event of failure, an exception is thrown.
+kMaxNumCollisionFilterGroups defines the limit of total collision
+filter groups that are supported.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dd>The unique name of the new group. &#64;trhows RuntimeError in response
+to failure conditions.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.FindBaseBodies">
+<code class="descname">FindBaseBodies</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>model_instance_id: int = -1</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.FindBaseBodies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains a vector of indexes of the bodies that are directly attached
+to the world via any type of joint. This method has a time complexity
+of <code class="docutils literal"><span class="pre">O(N)</span></code> where <code class="docutils literal"><span class="pre">N</span></code> is the number of bodies in the tree, which can
+be determined by calling RigidBodyTree::get_num_bodies().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.FindBody">
+<code class="descname">FindBody</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>body_name: unicode</em>, <em>model_name: unicode = u''</em>, <em>model_id: int = -1</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body.RigidBody<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.FindBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a body with the specified <code class="docutils literal"><span class="pre">body_name</span></code> belonging to a model
+with the specified <code class="docutils literal"><span class="pre">model_name</span></code> and <code class="docutils literal"><span class="pre">model_id</span></code>. Note that if
+<code class="docutils literal"><span class="pre">model_name</span></code> is the empty string and <code class="docutils literal"><span class="pre">model_id</span></code> is -1, every model
+is searched. If <code class="docutils literal"><span class="pre">model_name</span></code> and <code class="docutils literal"><span class="pre">model_id</span></code> are inconsistent, no
+body will be found and an exception will be thrown.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">body_name</span></code>:</dt>
+<dd>The name of the body to find.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_name</span></code>:</dt>
+<dd>The name of the model to which the body belongs. If this value is
+an empty string, every model is searched.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_id</span></code>:</dt>
+<dd>The ID of the model to which the body belongs. If this value is
+-1, every model is searched.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if multiple matching bodies are found or no matching</li>
+<li>bodies are found.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.FindBodyIndex">
+<code class="descname">FindBodyIndex</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>body_name: unicode</em>, <em>model_id: int = -1</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.FindBodyIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the index of a rigid body within this rigid body tree. The
+rigid body tree maintains a vector of pointers to all rigid bodies
+that are part of the rigid body tree. The index of a rigid body is the
+index within this vector at which a pointer to the rigid body is
+stored.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">body_name</span></code>:</dt>
+<dd>The body whose index we want to find. It should be unique within
+the searched models, otherwise an exception will be thrown.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_instance_id</span></code>:</dt>
+<dd>The ID of the model instance. This parameter is optional. If
+supplied, only the model instance with the specified instance ID
+is searched; otherwise, all model instances are searched.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The index of the specified rigid body.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if no rigid body with the specified <code class="docutils literal"><span class="pre">body_name</span></code> and</li>
+<li><code class="docutils literal"><span class="pre">model_id</span></code> was found or if multiple matching rigid bodies were</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">found.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.FindChildBodyOfJoint">
+<code class="descname">FindChildBodyOfJoint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>joint_name: unicode</em>, <em>model_id: int = -1</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body.RigidBody<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.FindChildBodyOfJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains a pointer to the rigid body whose parent joint is named
+<code class="docutils literal"><span class="pre">joint_name</span></code> and is part of a model instance with ID
+<code class="docutils literal"><span class="pre">model_instance_id</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">joint_name</span></code>:</dt>
+<dd>The name of the parent joint of the rigid body to find.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_instance_id</span></code>:</dt>
+<dd>The ID of the model instance that owns the rigid body to find.
+This parameter is optional. If supplied, the set of rigid bodies
+to search through is restricted to those that belong to the
+specified model instance. Otherwise, all rigid bodies in this tree
+are searched.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A pointer to the rigid body whose parent joint is named
+<code class="docutils literal"><span class="pre">joint_name</span></code> joint and, if <code class="docutils literal"><span class="pre">model_instance_id</span></code> is specified,
+is part of the specified model instance.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError If either no rigid body is found or multiple matching</li>
+<li>rigid bodies are found.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.FindCollisionElement">
+<code class="descname">FindCollisionElement</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>id: int</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.collision.CollisionElement<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.FindCollisionElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a <code class="docutils literal"><span class="pre">const</span></code> pointer to an element of the collision model.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The use of Find (instead of get) and the use of CamelCase both
+imply a potential runtime cost are carried over from the collision
+model accessor method.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.FindIndexOfChildBodyOfJoint">
+<code class="descname">FindIndexOfChildBodyOfJoint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>joint_name: unicode</em>, <em>model_id: int = -1</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.FindIndexOfChildBodyOfJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index within the vector of rigid bodies of the rigid body
+whose parent joint is named <code class="docutils literal"><span class="pre">joint_name</span></code> and is part of a model
+instance with ID <code class="docutils literal"><span class="pre">model_instance_id</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">joint_name</span></code>:</dt>
+<dd>The name of the parent joint of the rigid body whose index is
+being searched for.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_instance_id</span></code>:</dt>
+<dd>The ID of the model instance that owns the rigid body to find.
+This parameter is optional. If supplied, the set of rigid bodies
+to search through is restricted to those that belong to the
+specified model instance. Otherwise, all rigid bodies in this tree
+are searched.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The index of the rigid body whose parent joint is named
+<code class="docutils literal"><span class="pre">joint_name</span></code> and, if <code class="docutils literal"><span class="pre">model_instance_id</span></code> is specified, is part
+of the specified model instance.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError If either no rigid body is found or multiple matching</li>
+<li>rigid bodies are found.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.GetActuator">
+<code class="descname">GetActuator</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; RigidBodyActuator<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.GetActuator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains a rigid body actuator from this rigid body tree. The actuator
+is selected based on its name.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dd>The name of the rigid body actuator to get.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A const reference to the rigid body actuator with name <code class="docutils literal"><span class="pre">name</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if no rigid body actuator with name <code class="docutils literal"><span class="pre">name</span></code> exists.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.GetQDotToVelocityMapping">
+<code class="descname">GetQDotToVelocityMapping</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.GetQDotToVelocityMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetQDotToVelocityMapping(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;double&gt;) -&gt; numpy.ndarray[float64[m, n]]</li>
+<li>GetQDotToVelocityMapping(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.GetVelocityToQDotMapping">
+<code class="descname">GetVelocityToQDotMapping</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.GetVelocityToQDotMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetVelocityToQDotMapping(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;double&gt;) -&gt; numpy.ndarray[float64[m, n]]</li>
+<li>GetVelocityToQDotMapping(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyTree) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, urdf_filename: unicode, package_map: pydrake.multibody.parsers.PackageMap, floating_base_type: pydrake.multibody.rigid_body_tree.FloatingBaseType = FloatingBaseType.kRollPitchYaw) -&gt; None</li>
+</ol>
+<p>A constructor that initializes the gravity vector to be [0, 0, -9.81]
+and a single RigidBody named “world”. This RigidBody can be accessed
+by calling RigidBodyTree::world().</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, urdf_filename: unicode, floating_base_type: pydrake.multibody.rigid_body_tree.FloatingBaseType = FloatingBaseType.kRollPitchYaw) -&gt; None</li>
+</ol>
+<p>A constructor that initializes the gravity vector to be [0, 0, -9.81]
+and a single RigidBody named “world”. This RigidBody can be accessed
+by calling RigidBodyTree::world().</p>
+<ol class="arabic simple" start="4">
+<li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, urdf_filename: unicode, joint_type: unicode = u’ROLLPITCHYAW’) -&gt; None</li>
+</ol>
+<p>A constructor that initializes the gravity vector to be [0, 0, -9.81]
+and a single RigidBody named “world”. This RigidBody can be accessed
+by calling RigidBodyTree::world().</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.actuators">
+<code class="descname">actuators</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.actuators" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.addCollisionElement">
+<code class="descname">addCollisionElement</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>arg0: pydrake.multibody.collision.CollisionElement</em>, <em>arg1: pydrake.multibody.rigid_body.RigidBody</em>, <em>arg2: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.addCollisionElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new collision element to the tree. The input <code class="docutils literal"><span class="pre">element</span></code> will
+be copied and that copy will be stored in the tree, associated with
+the given <code class="docutils literal"><span class="pre">body</span></code>. This association is pending. It is necessary to
+call compile() in order for the element to be fully integrated into
+the RigidBodyTree.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">element</span></code>:</dt>
+<dd>the element to add.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">body</span></code>:</dt>
+<dd>the body to associate the element with.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">group_name</span></code>:</dt>
+<dd>a group name to tag the associated element with.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.addDistanceConstraint">
+<code class="descname">addDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree, bodyA_index_in: int, r_AP_in: numpy.ndarray[float64[3, 1]], bodyB_index_in: int, r_BQ_in: numpy.ndarray[float64[3, 1]], distance_in: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.addDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>For details on parameters see RigidBodyDistanceContraint.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.addFrame">
+<code class="descname">addFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>frame: RigidBodyFrame&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.addFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a frame.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frame</span></code>:</dt>
+<dd>Frame to be added.</dd>
+<dt>Precondition:</dt>
+<dd>Neither a body nor frame with the same identifying information
+(name and model id / name) should already exist in the tree.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if preconditions are not met.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.add_rigid_body">
+<code class="descname">add_rigid_body</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>arg0: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body.RigidBody<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.add_rigid_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds and takes ownership of a rigid body. This also adds a frame whose
+pose is the same as the body’s.</p>
+<p>A RigidBodyTree is the sole owner and manager of the RigidBody’s in
+it. A body is assigned a unique id (RigidBody::id()) when added to a
+RigidBodyTree. This unique id can be use to access a body using
+RigidBodyTree::get_bodies()[id].</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">body</span></code>:</dt>
+<dd>The rigid body to add to this rigid body tree.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A bare, unowned pointer to the <code class="docutils literal"><span class="pre">body</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Neither a body nor frame with the same identifying information
+(name and model id / name) should already exist in the tree.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if preconditions are not met.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.centerOfMass">
+<code class="descname">centerOfMass</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.centerOfMass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>centerOfMass(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, model_instance_id_set: Set[int] = set([0])) -&gt; numpy.ndarray[float64[3, 1]]</li>
+<li>centerOfMass(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, model_instance_id_set: Set[int] = set([0])) -&gt; numpy.ndarray[object[3, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.centerOfMassJacobian">
+<code class="descname">centerOfMassJacobian</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.centerOfMassJacobian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>centerOfMassJacobian(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, model_instance_id_set: Set[int] = set([0]), in_terms_of_qdot: bool = False) -&gt; numpy.ndarray[float64[3, n]]</li>
+<li>centerOfMassJacobian(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, model_instance_id_set: Set[int] = set([0]), in_terms_of_qdot: bool = False) -&gt; numpy.ndarray[object[3, n]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.centerOfMassJacobianDotTimesV">
+<code class="descname">centerOfMassJacobianDotTimesV</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.centerOfMassJacobianDotTimesV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>centerOfMassJacobianDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, model_instance_id_set: Set[int] = set([0])) -&gt; numpy.ndarray[float64[3, 1]]</li>
+<li>centerOfMassJacobianDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, model_instance_id_set: Set[int] = set([0])) -&gt; numpy.ndarray[object[3, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.centroidalMomentumMatrix">
+<code class="descname">centroidalMomentumMatrix</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.centroidalMomentumMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>centroidalMomentumMatrix(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, model_instance_id_set: Set[int] = set([0]), in_terms_of_qdot: bool = False) -&gt; numpy.ndarray[float64[6, n]]</li>
+<li>centroidalMomentumMatrix(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, model_instance_id_set: Set[int] = set([0]), in_terms_of_qdot: bool = False) -&gt; numpy.ndarray[object[6, n]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.centroidalMomentumMatrixDotTimesV">
+<code class="descname">centroidalMomentumMatrixDotTimesV</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.centroidalMomentumMatrixDotTimesV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>centroidalMomentumMatrixDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, model_instance_id_set: Set[int] = set([0])) -&gt; numpy.ndarray[float64[6, 1]]</li>
+<li>centroidalMomentumMatrixDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, model_instance_id_set: Set[int] = set([0])) -&gt; numpy.ndarray[object[6, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.compile">
+<code class="descname">compile</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.compile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.doKinematics">
+<code class="descname">doKinematics</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.doKinematics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>doKinematics(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: numpy.ndarray[float64[m, 1]]) -&gt; KinematicsCache&lt;double&gt;</li>
+</ol>
+<p>Initializes a <code class="docutils literal"><span class="pre">KinematicsCache</span></code> with the given configuration <code class="docutils literal"><span class="pre">q</span></code>,
+computes the kinematics, and returns the cache.</p>
+<p>This method is explicitly instantiated in rigid_body_tree.cc for a
+small set of supported <code class="docutils literal"><span class="pre">DerivedQ</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li>doKinematics(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, 1]]) -&gt; KinematicsCache&lt;double&gt;</li>
+</ol>
+<p>Initializes a <code class="docutils literal"><span class="pre">KinematicsCache</span></code> with the given configuration <code class="docutils literal"><span class="pre">q</span></code>
+and velocity <code class="docutils literal"><span class="pre">v</span></code>, computes the kinematics, and returns the cache.</p>
+<p>This method is explicitly instantiated in rigid_body_tree.cc for a
+small set of supported <code class="docutils literal"><span class="pre">DerivedQ</span></code> and <code class="docutils literal"><span class="pre">DerivedV</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li>doKinematics(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: numpy.ndarray[object[m, 1]]) -&gt; KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;</li>
+</ol>
+<p>Initializes a <code class="docutils literal"><span class="pre">KinematicsCache</span></code> with the given configuration <code class="docutils literal"><span class="pre">q</span></code>,
+computes the kinematics, and returns the cache.</p>
+<p>This method is explicitly instantiated in rigid_body_tree.cc for a
+small set of supported <code class="docutils literal"><span class="pre">DerivedQ</span></code>.</p>
+<ol class="arabic simple" start="4">
+<li>doKinematics(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: numpy.ndarray[object[m, 1]], arg1: numpy.ndarray[object[m, 1]]) -&gt; KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;</li>
+</ol>
+<p>Initializes a <code class="docutils literal"><span class="pre">KinematicsCache</span></code> with the given configuration <code class="docutils literal"><span class="pre">q</span></code>
+and velocity <code class="docutils literal"><span class="pre">v</span></code>, computes the kinematics, and returns the cache.</p>
+<p>This method is explicitly instantiated in rigid_body_tree.cc for a
+small set of supported <code class="docutils literal"><span class="pre">DerivedQ</span></code> and <code class="docutils literal"><span class="pre">DerivedV</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.drawKinematicTree">
+<code class="descname">drawKinematicTree</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.drawKinematicTree" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.dynamicsBiasTerm">
+<code class="descname">dynamicsBiasTerm</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.dynamicsBiasTerm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>dynamicsBiasTerm(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, external_wrenches: Dict[pydrake.multibody.rigid_body.RigidBody, numpy.ndarray[float64[6, 1]]], include_velocity_terms: bool = True) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Compute the term <span class="math">\(C(q, v, f_\text{ext})\)</span> in the manipulator
+equations</p>
+<div class="math">
+\[H(q) \dot{v} + C(q, v, f_\text{ext}) = B(q) u\]</div>
+<p>Convenience method that calls inverseDynamics with <span class="math">\(\dot{v} =
+0\)</span>. See inverseDynamics for argument descriptions.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">inverseDynamics</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>dynamicsBiasTerm(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, external_wrenches: Dict[pydrake.multibody.rigid_body.RigidBody, numpy.ndarray[object[6, 1]]], include_velocity_terms: bool = True) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Compute the term <span class="math">\(C(q, v, f_\text{ext})\)</span> in the manipulator
+equations</p>
+<div class="math">
+\[H(q) \dot{v} + C(q, v, f_\text{ext}) = B(q) u\]</div>
+<p>Convenience method that calls inverseDynamics with <span class="math">\(\dot{v} =
+0\)</span>. See inverseDynamics for argument descriptions.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">inverseDynamics</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.findFrame">
+<code class="descname">findFrame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>frame_name: unicode</em>, <em>model_id: int = -1</em><span class="sig-paren">)</span> &#x2192; RigidBodyFrame&lt;double&gt;<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.findFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a frame of the specified <code class="docutils literal"><span class="pre">frame_name</span></code> belonging to a model
+with the specified <code class="docutils literal"><span class="pre">model_id</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frame_name</span></code>:</dt>
+<dd>The name of the frame to find.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_id</span></code>:</dt>
+<dd>The ID of the model to which the frame belongs. If this value is
+-1, search all models.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The frame with the specified name and model instance ID.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if either multiple matching frames are found or no</li>
+<li>matching frame is found.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.frictionTorques">
+<code class="descname">frictionTorques</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.frictionTorques" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>frictionTorques(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: numpy.ndarray[float64[m, 1]]) -&gt; numpy.ndarray[float64[m, 1]]</li>
+<li>frictionTorques(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.geometricJacobian">
+<code class="descname">geometricJacobian</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.geometricJacobian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>geometricJacobian(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, base_body_or_frame_ind: int, end_effector_body_or_frame_ind: int, expressed_in_body_or_frame_ind: int, in_terms_of_qdot: bool = False) -&gt; tuple</li>
+<li>geometricJacobian(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, base_body_or_frame_ind: int, end_effector_body_or_frame_ind: int, expressed_in_body_or_frame_ind: int, in_terms_of_qdot: bool = False) -&gt; tuple</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.geometricJacobianDotTimesV">
+<code class="descname">geometricJacobianDotTimesV</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.geometricJacobianDotTimesV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>geometricJacobianDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, base_body_or_frame_ind: int, end_effector_body_or_frame_ind: int, expressed_in_body_or_frame_ind: int) -&gt; numpy.ndarray[float64[6, 1]]</li>
+<li>geometricJacobianDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, base_body_or_frame_ind: int, end_effector_body_or_frame_ind: int, expressed_in_body_or_frame_ind: int) -&gt; numpy.ndarray[object[6, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.getBodyOrFrameName">
+<code class="descname">getBodyOrFrameName</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>body_or_frame_id: int</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.getBodyOrFrameName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.getNumPositionConstraints">
+<code class="descname">getNumPositionConstraints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.getNumPositionConstraints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.getRandomConfiguration">
+<code class="descname">getRandomConfiguration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.getRandomConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.getTerrainContactPoints">
+<code class="descname">getTerrainContactPoints</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>body: pydrake.multibody.rigid_body.RigidBody</em>, <em>group_name: unicode = u''</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, n]]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.getTerrainContactPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the contact points defined by a body’s collision elements.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">body</span></code>:</dt>
+<dd>The body who’s collision elements are searched.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">terrain_points</span></code>:</dt>
+<dd>Contact points are added to this matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">group_name</span></code>:</dt>
+<dd>If a group name was given, use it to look up the subset of
+collision elements that belong to that collision group. Otherwise,
+uses the full set of collision elements that belong to the body.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if an invalid group name is given.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.getZeroConfiguration">
+<code class="descname">getZeroConfiguration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.getZeroConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_bodies">
+<code class="descname">get_bodies</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_bodies" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of bodies.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_body">
+<code class="descname">get_body</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body.RigidBody<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the body at index <code class="docutils literal"><span class="pre">body_index</span></code>. Parameter <code class="docutils literal"><span class="pre">body_index</span></code>
+must be between zero and the number of bodies in this tree, which can
+be determined by calling RigidBodyTree::get_num_bodies().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_frames">
+<code class="descname">get_frames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; List[RigidBodyFrame&lt;double&gt;]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of frames.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_actuators">
+<code class="descname">get_num_actuators</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_actuators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of actuators in this RigidBodyTree.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_bodies">
+<code class="descname">get_num_bodies</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_bodies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of bodies in this tree. This includes the one body
+that represents the world.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_frames">
+<code class="descname">get_num_frames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of frames in this tree.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_model_instances">
+<code class="descname">get_num_model_instances</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_model_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of model instances in the tree, not including the
+world.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_positions">
+<code class="descname">get_num_positions</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of position states outputted by this RigidBodyTree.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_velocities">
+<code class="descname">get_num_velocities</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_num_velocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of velocity states outputted by this RigidBodyTree.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.get_position_name">
+<code class="descname">get_position_name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.get_position_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the position state at index <code class="docutils literal"><span class="pre">position_num</span></code>
+within this <cite>RigidBodyTree</cite>’s state vector.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">position_num</span></code>:</dt>
+<dd>An index value between zero and number_of_positions().</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The name of the position value at index <code class="docutils literal"><span class="pre">position_num</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.initialized">
+<code class="descname">initialized</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.initialized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether this RigidBodyTree is initialized. It is initialized
+after compile() is called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.inverseDynamics">
+<code class="descname">inverseDynamics</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.inverseDynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>inverseDynamics(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, external_wrenches: Dict[pydrake.multibody.rigid_body.RigidBody, numpy.ndarray[float64[6, 1]]], vd: numpy.ndarray[float64[m, 1]], include_velocity_terms: bool = True) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Compute</p>
+<div class="math">
+\[H(q) \dot{v} + C(q, v, f_\text{ext})\]</div>
+<p>that is, the left hand side of the manipulator equations</p>
+<div class="math">
+\[H(q) \dot{v} + C(q, v, f_\text{ext}) = B(q) u\]</div>
+<p>Note that the ‘dynamics bias term’ <span class="math">\(C(q, v, f_\text{ext})\)</span> can
+be computed by simply setting <span class="math">\(\dot{v} = 0\)</span>. Note also that if
+only the gravitational terms contained in <span class="math">\(C(q, v,
+f_\text{ext})\)</span> are required, one can set <em>include_velocity_terms</em> to
+false. Alternatively, one can pass in a KinematicsCache created with
+<span class="math">\(v = 0\)</span> or without specifying the velocity vector.</p>
+<p>Algorithm: recursive Newton-Euler. Does not explicitly compute mass
+matrix.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>a KinematicsCache constructed given <span class="math">\(q\)</span> and <span class="math">\(v\)</span></dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">external_wrenches</span></code>:</dt>
+<dd>external wrenches exerted upon bodies (<span class="math">\(f_\text{ext}\)</span>).
+Expressed in body frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">vd</span></code>:</dt>
+<dd><span class="math">\(\dot{v}\)</span></dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">include_velocity_terms</span></code>:</dt>
+<dd>whether to include velocity-dependent terms in <span class="math">\(C(q, v,
+f_\text{ext})\)</span>. Setting <em>include_velocity_terms</em> to false is
+Equivalent to setting <span class="math">\(v = 0\)</span></dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><span class="math">\(H(q) \dot{v} + C(q, v, f_\text{ext})\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>inverseDynamics(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, external_wrenches: Dict[pydrake.multibody.rigid_body.RigidBody, numpy.ndarray[object[6, 1]]], vd: numpy.ndarray[object[m, 1]], include_velocity_terms: bool = True) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Compute</p>
+<div class="math">
+\[H(q) \dot{v} + C(q, v, f_\text{ext})\]</div>
+<p>that is, the left hand side of the manipulator equations</p>
+<div class="math">
+\[H(q) \dot{v} + C(q, v, f_\text{ext}) = B(q) u\]</div>
+<p>Note that the ‘dynamics bias term’ <span class="math">\(C(q, v, f_\text{ext})\)</span> can
+be computed by simply setting <span class="math">\(\dot{v} = 0\)</span>. Note also that if
+only the gravitational terms contained in <span class="math">\(C(q, v,
+f_\text{ext})\)</span> are required, one can set <em>include_velocity_terms</em> to
+false. Alternatively, one can pass in a KinematicsCache created with
+<span class="math">\(v = 0\)</span> or without specifying the velocity vector.</p>
+<p>Algorithm: recursive Newton-Euler. Does not explicitly compute mass
+matrix.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>a KinematicsCache constructed given <span class="math">\(q\)</span> and <span class="math">\(v\)</span></dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">external_wrenches</span></code>:</dt>
+<dd>external wrenches exerted upon bodies (<span class="math">\(f_\text{ext}\)</span>).
+Expressed in body frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">vd</span></code>:</dt>
+<dd><span class="math">\(\dot{v}\)</span></dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">include_velocity_terms</span></code>:</dt>
+<dd>whether to include velocity-dependent terms in <span class="math">\(C(q, v,
+f_\text{ext})\)</span>. Setting <em>include_velocity_terms</em> to false is
+Equivalent to setting <span class="math">\(v = 0\)</span></dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><span class="math">\(H(q) \dot{v} + C(q, v, f_\text{ext})\)</span></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.joint_limit_max">
+<code class="descname">joint_limit_max</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.joint_limit_max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.joint_limit_min">
+<code class="descname">joint_limit_min</code><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.joint_limit_min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.massMatrix">
+<code class="descname">massMatrix</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.massMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>massMatrix(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;double&gt;) -&gt; numpy.ndarray[float64[m, n]]</li>
+</ol>
+<p>Compute the positive definite mass (configuration space) matrix
+<span class="math">\(H(q)\)</span>, defined by <span class="math">\(T = \frac{1}{2} v^T H(q) v\)</span>, where
+<span class="math">\(T\)</span> is kinetic energy.</p>
+<p>The mass matrix also appears in the manipulator equations</p>
+<div class="math">
+\[H(q) \dot{v} + C(q, v, f_\text{ext}) = B(q) u\]</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>a KinematicsCache constructed given <span class="math">\(q\)</span></dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the mass matrix <span class="math">\(H(q)\)</span></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>massMatrix(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+<p>Compute the positive definite mass (configuration space) matrix
+<span class="math">\(H(q)\)</span>, defined by <span class="math">\(T = \frac{1}{2} v^T H(q) v\)</span>, where
+<span class="math">\(T\)</span> is kinetic energy.</p>
+<p>The mass matrix also appears in the manipulator equations</p>
+<div class="math">
+\[H(q) \dot{v} + C(q, v, f_\text{ext}) = B(q) u\]</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>a KinematicsCache constructed given <span class="math">\(q\)</span></dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the mass matrix <span class="math">\(H(q)\)</span></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.number_of_positions">
+<code class="descname">number_of_positions</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.number_of_positions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.number_of_velocities">
+<code class="descname">number_of_velocities</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.number_of_velocities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.positionConstraints">
+<code class="descname">positionConstraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.positionConstraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>positionConstraints(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;) -&gt; numpy.ndarray[float64[m, 1]]</li>
+<li>positionConstraints(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.positionConstraintsJacDotTimesV">
+<code class="descname">positionConstraintsJacDotTimesV</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.positionConstraintsJacDotTimesV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>positionConstraintsJacDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;) -&gt; numpy.ndarray[float64[m, 1]]</li>
+<li>positionConstraintsJacDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.positionConstraintsJacobian">
+<code class="descname">positionConstraintsJacobian</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.positionConstraintsJacobian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>positionConstraintsJacobian(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, in_terms_of_qdot: bool = True) -&gt; numpy.ndarray[float64[m, n]]</li>
+<li>positionConstraintsJacobian(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, in_terms_of_qdot: bool = True) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.relativeRollPitchYaw">
+<code class="descname">relativeRollPitchYaw</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.relativeRollPitchYaw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>relativeRollPitchYaw(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, from_body_or_frame_ind: int, to_body_or_frame_ind: int) -&gt; numpy.ndarray[float64[3, 1]]</li>
+<li>relativeRollPitchYaw(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, from_body_or_frame_ind: int, to_body_or_frame_ind: int) -&gt; numpy.ndarray[object[3, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.relativeTransform">
+<code class="descname">relativeTransform</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.relativeTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>relativeTransform(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, base_or_frame_ind: int, body_or_frame_ind: int) -&gt; numpy.ndarray[float64[4, 4]]</li>
+<li>relativeTransform(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, base_or_frame_ind: int, body_or_frame_ind: int) -&gt; numpy.ndarray[object[4, 4]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.relativeTwist">
+<code class="descname">relativeTwist</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.relativeTwist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>relativeTwist(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, base_or_frame_ind: int, body_or_frame_ind: int, expressed_in_body_or_frame_ind: int) -&gt; numpy.ndarray[float64[6, 1]]</li>
+<li>relativeTwist(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, base_or_frame_ind: int, body_or_frame_ind: int, expressed_in_body_or_frame_ind: int) -&gt; numpy.ndarray[object[6, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.transformPoints">
+<code class="descname">transformPoints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.transformPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>transformPoints(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;double&gt;, arg1: numpy.ndarray[float64[3, n]], arg2: int, arg3: int) -&gt; numpy.ndarray[float64[3, n]]</li>
+<li>transformPoints(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, arg1: numpy.ndarray[float64[3, n]], arg2: int, arg3: int) -&gt; numpy.ndarray[object[3, n]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.transformPointsJacobian">
+<code class="descname">transformPointsJacobian</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.transformPointsJacobian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>transformPointsJacobian(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, points: numpy.ndarray[float64[3, n]], from_body_or_frame_ind: int, to_body_or_frame_ind: int, in_terms_of_qdot: bool) -&gt; numpy.ndarray[float64[m, n]]</li>
+<li>transformPointsJacobian(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, points: numpy.ndarray[float64[3, n]], from_body_or_frame_ind: int, to_body_or_frame_ind: int, in_terms_of_qdot: bool) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.transformPointsJacobianDotTimesV">
+<code class="descname">transformPointsJacobianDotTimesV</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.transformPointsJacobianDotTimesV" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>transformPointsJacobianDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;double&gt;, points: numpy.ndarray[float64[3, n]], from_body_or_frame_ind: int, to_body_or_frame_ind: int) -&gt; numpy.ndarray[float64[m, 1]]</li>
+<li>transformPointsJacobianDotTimesV(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, cache: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, points: numpy.ndarray[float64[3, n]], from_body_or_frame_ind: int, to_body_or_frame_ind: int) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.transformQDotMappingToVelocityMapping">
+<code class="descname">transformQDotMappingToVelocityMapping</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.transformQDotMappingToVelocityMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>transformQDotMappingToVelocityMapping(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;double&gt;, arg1: numpy.ndarray[float64[m, n]]) -&gt; numpy.ndarray[float64[m, n]]</li>
+</ol>
+<p>Converts a matrix A, which transforms the time derivative of
+generalized coordinates (qdot) to an output space X, to a matrix B,
+which transforms generalized velocities (v) to the same space X. For
+example, A could be a Jacobian matrix that transforms qdot to spatial
+velocities at the end effector. Formally, this would be the matrix of
+partial derivatives of end-effector configuration computed with
+respect to the generalized coordinates (q). This function would allow
+the user to transform this Jacobian matrix to the more commonly used
+one: the matrix of partial derivatives of end-effector configuration
+computed with respect to quasi-coordinates (ꝗ).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">Ap</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">nq</span></code> sized matrix, where <code class="docutils literal"><span class="pre">nq</span></code> is the dimension of the
+generalized coordinates.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">B</span></code>:</dt>
+<dd>, a <code class="docutils literal"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">nv</span></code> sized matrix, where <code class="docutils literal"><span class="pre">nv</span></code> is the dimension of the
+generalized velocities.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">transformVelocityMappingToQDotMapping()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>transformQDotMappingToVelocityMapping(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+<p>Converts a matrix A, which transforms the time derivative of
+generalized coordinates (qdot) to an output space X, to a matrix B,
+which transforms generalized velocities (v) to the same space X. For
+example, A could be a Jacobian matrix that transforms qdot to spatial
+velocities at the end effector. Formally, this would be the matrix of
+partial derivatives of end-effector configuration computed with
+respect to the generalized coordinates (q). This function would allow
+the user to transform this Jacobian matrix to the more commonly used
+one: the matrix of partial derivatives of end-effector configuration
+computed with respect to quasi-coordinates (ꝗ).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">Ap</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">nq</span></code> sized matrix, where <code class="docutils literal"><span class="pre">nq</span></code> is the dimension of the
+generalized coordinates.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">B</span></code>:</dt>
+<dd>, a <code class="docutils literal"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">nv</span></code> sized matrix, where <code class="docutils literal"><span class="pre">nv</span></code> is the dimension of the
+generalized velocities.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">transformVelocityMappingToQDotMapping()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.transformQDotToVelocity">
+<code class="descname">transformQDotToVelocity</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.transformQDotToVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>transformQDotToVelocity(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;double&gt;, arg1: numpy.ndarray[float64[m, 1]]) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Converts a vector of the time derivative of generalized coordinates
+(qdot) to generalized velocity (v).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>the kinematics cache, which is assumed to be up-to-date with
+respect to the state</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">qdot</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">nq</span></code> dimensional vector, where <code class="docutils literal"><span class="pre">nq</span></code> is the dimension of the
+generalized coordinates.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a <code class="docutils literal"><span class="pre">nv</span></code> dimensional vector, where <code class="docutils literal"><span class="pre">nv</span></code> is the dimension of the
+generalized velocities.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">transformVelocityToQDot()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>transformQDotToVelocity(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, arg1: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Converts a vector of the time derivative of generalized coordinates
+(qdot) to generalized velocity (v).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>the kinematics cache, which is assumed to be up-to-date with
+respect to the state</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">qdot</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">nq</span></code> dimensional vector, where <code class="docutils literal"><span class="pre">nq</span></code> is the dimension of the
+generalized coordinates.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a <code class="docutils literal"><span class="pre">nv</span></code> dimensional vector, where <code class="docutils literal"><span class="pre">nv</span></code> is the dimension of the
+generalized velocities.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">transformVelocityToQDot()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.transformVelocityMappingToQDotMapping">
+<code class="descname">transformVelocityMappingToQDotMapping</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.transformVelocityMappingToQDotMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>transformVelocityMappingToQDotMapping(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;double&gt;, arg1: numpy.ndarray[float64[m, n]]) -&gt; numpy.ndarray[float64[m, n]]</li>
+</ol>
+<p>Converts a matrix B, which transforms generalized velocities (v) to an
+output space X, to a matrix A, which transforms the time derivative of
+generalized coordinates (qdot) to the same output X. For example, B
+could be a Jacobian matrix that transforms generalized velocities to
+spatial velocities at the end-effector. Formally, this would be the
+matrix of partial derivatives of end-effector configuration computed
+with respect to quasi-coordinates (ꝗ). This function would allow
+transforming that Jacobian so that all partial derivatives would be
+computed with respect to qdot.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">Av</span></code>:</dt>
+<dd>, a <code class="docutils literal"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">nv</span></code> sized matrix, where <code class="docutils literal"><span class="pre">nv</span></code> is the dimension of the
+generalized velocities.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">nq</span></code> sized matrix, where <code class="docutils literal"><span class="pre">nq</span></code> is the dimension of the
+generalized coordinates.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">transformQDotMappingToVelocityMapping()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>transformVelocityMappingToQDotMapping(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, arg1: numpy.ndarray[object[m, n]]) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+<p>Converts a matrix B, which transforms generalized velocities (v) to an
+output space X, to a matrix A, which transforms the time derivative of
+generalized coordinates (qdot) to the same output X. For example, B
+could be a Jacobian matrix that transforms generalized velocities to
+spatial velocities at the end-effector. Formally, this would be the
+matrix of partial derivatives of end-effector configuration computed
+with respect to quasi-coordinates (ꝗ). This function would allow
+transforming that Jacobian so that all partial derivatives would be
+computed with respect to qdot.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">Av</span></code>:</dt>
+<dd>, a <code class="docutils literal"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">nv</span></code> sized matrix, where <code class="docutils literal"><span class="pre">nv</span></code> is the dimension of the
+generalized velocities.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">m</span> <span class="pre">x</span> <span class="pre">nq</span></code> sized matrix, where <code class="docutils literal"><span class="pre">nq</span></code> is the dimension of the
+generalized coordinates.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">transformQDotMappingToVelocityMapping()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.transformVelocityToQDot">
+<code class="descname">transformVelocityToQDot</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.transformVelocityToQDot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>transformVelocityToQDot(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;double&gt;, arg1: numpy.ndarray[float64[m, 1]]) -&gt; numpy.ndarray[float64[m, 1]]</li>
+</ol>
+<p>Converts a vector of generalized velocities (v) to the time derivative
+of generalized coordinates (qdot).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>the kinematics cache, which is assumed to be up-to-date with
+respect to the state</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">v</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">nv</span></code> dimensional vector, where <code class="docutils literal"><span class="pre">nv</span></code> is the dimension of the
+generalized velocities.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">qdot</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">nq</span></code> dimensional vector, where <code class="docutils literal"><span class="pre">nq</span></code> is the dimension of the
+generalized coordinates.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">transformQDotToVelocity()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>transformVelocityToQDot(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, arg0: KinematicsCache&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, arg1: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Converts a vector of generalized velocities (v) to the time derivative
+of generalized coordinates (qdot).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">cache</span></code>:</dt>
+<dd>the kinematics cache, which is assumed to be up-to-date with
+respect to the state</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">v</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">nv</span></code> dimensional vector, where <code class="docutils literal"><span class="pre">nv</span></code> is the dimension of the
+generalized velocities.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">qdot</span></code>:</dt>
+<dd>a <code class="docutils literal"><span class="pre">nq</span></code> dimensional vector, where <code class="docutils literal"><span class="pre">nq</span></code> is the dimension of the
+generalized coordinates.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">transformQDotToVelocity()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_tree.RigidBodyTree.world">
+<code class="descname">world</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body.RigidBody<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.RigidBodyTree.world" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the RigidBody associated with the world
+in the model. This is the root of the RigidBodyTree.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.shapes.html" class="btn btn-neutral float-right" title="pydrake.multibody.shapes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.rigid_body_plant.html" class="btn btn-neutral" title="pydrake.multibody.rigid_body_plant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

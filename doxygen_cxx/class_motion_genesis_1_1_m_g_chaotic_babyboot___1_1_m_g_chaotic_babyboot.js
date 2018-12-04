@@ -1,0 +1,25 @@
+var class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot =
+[
+    [ "MGChaoticBabyboot", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a0b1d6ed4d4b6e759ac9dd4a44d9b4fec", null ],
+    [ "MGeqns", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a828b87388420976d3907a1eb92b7c8a1", null ],
+    [ "MGSimulate", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#aa8f64bf135a90ee792e7b16842c035b3", null ],
+    [ "Energy", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a30227b8974f00e031efb6ba4aa8f980a", null ],
+    [ "g", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#ab30c765b9be1b7776c97c899a12a66bb", null ],
+    [ "IAx", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a8ea44bac4e2c42b64c101d05eaf60676", null ],
+    [ "IBx", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#afbb0c96eb13ee93ef2dd352b4ff32e55", null ],
+    [ "IBy", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#ae7a58a85f8d480d488b3aa30f9c55413", null ],
+    [ "IBz", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a82f64d304c5590e00341884b0429ba8f", null ],
+    [ "KE", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a85b450ac8f09247addddb4ca704b2cac", null ],
+    [ "LA", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#aa8d239269a6e000afb7dd83aefde71ee", null ],
+    [ "LB", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#af5bfad8fcd15432cf66a4974055944d0", null ],
+    [ "mA", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#afc00940de090bcb5851b2dc9606c0c24", null ],
+    [ "mB", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a01e6e6a62e2740cf474a711d7e77b254", null ],
+    [ "Output", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a58df42cfe6b73d25df661571ef7ba736", null ],
+    [ "PE", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a8c8df07a3d8f2d4ba6ec954f97402c2a", null ],
+    [ "qA", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#ac87613a69d6dff6f74087d04969e29ae", null ],
+    [ "qAp", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#ad91d5b974530640c488171ccdf400e43", null ],
+    [ "qApp", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#afefc765f18ebd76c0bb33f0af5640829", null ],
+    [ "qB", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#ac44a0170a5ef34aa40810f2e962490da", null ],
+    [ "qBp", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#ab25d0fa549c03c6272c7a98fe9fc13e1", null ],
+    [ "qBpp", "class_motion_genesis_1_1_m_g_chaotic_babyboot___1_1_m_g_chaotic_babyboot.html#a0479af31d90e280d72050c96eec038ce", null ]
+];

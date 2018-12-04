@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.geometry &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="next" title="pydrake.lcm" href="pydrake.lcm.html"/>
+        <link rel="prev" title="pydrake.forwarddiff" href="pydrake.forwarddiff.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>pydrake.geometry</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.geometry">
+<span id="pydrake-geometry"></span><h1>pydrake.geometry<a class="headerlink" href="#module-pydrake.geometry" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydrake.geometry.ConnectDrakeVisualizer">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">ConnectDrakeVisualizer</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.ConnectDrakeVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ConnectDrakeVisualizer(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph, lcm: pydrake.lcm.DrakeLcmInterface = None) -&gt; pydrake.systems.lcm.LcmPublisherSystem</li>
+</ol>
+<p>Extends a Diagram with the required components to interface with
+drake_visualizer. This must be called <em>during</em> Diagram building and
+uses the given <code class="docutils literal"><span class="pre">builder</span></code> to add relevant subsystems and connections.</p>
+<p>This is a convenience method to simplify some common boilerplate for
+adding visualization capability to a Diagram. What it does is:</p>
+<ul class="simple">
+<li>adds an initialization event that sends the required load message to set up</li>
+</ul>
+<p>the visualizer with the relevant geometry,
+- adds systems PoseBundleToDrawMessage and LcmPublisherSystem to
+the Diagram and connects the draw message output to the publisher input,
+- connects the <code class="docutils literal"><span class="pre">scene_graph</span></code> pose bundle output to the PoseBundleToDrawMessage
+system, and
+- sets the publishing rate to 1/60 of a second (simulated time).</p>
+<p>The visualization mechanism depends on the illustration role (see
+geometry_roles for details). Specifically, only geometries with the
+illustration role assigned will be included. The visualization
+function looks for the following properties in the
+IllustrationProperties instance. | Group name | Required | Property
+Name | Property Type | Property Description | | :——–: | :——:
+| :———–: | :————-: | :——————- | | phong |
+no | diffuse | Eigen::Vector4d | The rgba value of the object surface
+| See MakeDrakeVisualizerProperties() to facilitate making a compliant
+set of illustration properties.</p>
+<p>You can then connect source output ports for visualization like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">Connect</span><span class="p">(</span><span class="n">pose_output_port</span><span class="p">,</span>
+<span class="n">scene_graph</span><span class="o">.</span><span class="n">get_source_pose_port</span><span class="p">(</span><span class="n">source_id</span><span class="p">));</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The initialization event occurs when Simulator::Initialize() is
+called (explicitly or implicitly at the start of a simulation). If
+you aren’t going to be using a Simulator, use
+DispatchLoadMessage() to send the message yourself.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">builder</span></code>:</dt>
+<dd>The diagram builder being used to construct the Diagram.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">scene_graph</span></code>:</dt>
+<dd>The System in <code class="docutils literal"><span class="pre">builder</span></code> containing the geometry to be
+visualized.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lcm</span></code>:</dt>
+<dd>An optional lcm interface through which lcm messages will be
+dispatched. Will be allocated internally if none is supplied.</dd>
+<dt>Precondition:</dt>
+<dd>This method has not been previously called while building the
+builder’s current Diagram.</dd>
+<dt>Precondition:</dt>
+<dd>The given <code class="docutils literal"><span class="pre">scene_graph</span></code> must be contained within the supplied
+DiagramBuilder.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the LcmPublisherSystem (in case callers, e.g., need to change the
+default publishing rate).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">geometry::DispatchLoadMessage()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>ConnectDrakeVisualizer(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph, pose_bundle_output_port: pydrake.systems.framework.OutputPort_[float], lcm: pydrake.lcm.DrakeLcmInterface = None) -&gt; pydrake.systems.lcm.LcmPublisherSystem</li>
+</ol>
+<p>Implements ConnectDrakeVisualizer, but using
+<code class="docutils literal"><span class="pre">pose_bundle_output_port</span></code> to explicitly specify the output port used
+to get pose bundles for <code class="docutils literal"><span class="pre">scene_graph</span></code>. This is required, for
+instance, when the SceneGraph is inside a Diagram, and the Diagram
+exports the pose bundle port.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>pose_bundle_output_port must be connected directly to the
+pose_bundle_output_port of <code class="docutils literal"><span class="pre">scene_graph</span></code>.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">ConnectDrakeVisualizer().</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.geometry.DispatchLoadMessage">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">DispatchLoadMessage</code><span class="sig-paren">(</span><em>scene_graph: pydrake.geometry.SceneGraph</em>, <em>lcm: pydrake.lcm.DrakeLcmInterface</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DispatchLoadMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Explicitly dispatches an LCM load message based on the
+registered geometry. Normally this is done automatically at Simulator
+initialization. But if you have to do it yourself (likely because you
+are not using a Simulator), it should be invoked <em>after</em> registration
+is complete. Typically this is used after ConnectDrakeVisualizer() has
+been used to add visualization to the Diagram that contains the given
+<code class="docutils literal"><span class="pre">scene_graph</span></code>. The message goes to LCM channel
+“DRAKE_VIEWER_LOAD_ROBOT”.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">geometry::ConnectDrakeVisualizer()</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.FrameId">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">FrameId</code><a class="headerlink" href="#pydrake.geometry.FrameId" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.geometry.FrameId.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FrameId</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.FrameId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor; the result is an <em>invalid</em> identifier. This only
+exists to satisfy demands of working with various container classes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FrameId.get_new_id">
+<code class="descname">get_new_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.geometry.FrameId<a class="headerlink" href="#pydrake.geometry.FrameId.get_new_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a new identifier for this id type. This new identifier will
+be different from all previous identifiers created. This method does
+<em>not</em> make any guarantees about the values of ids from successive
+invocations. This method is guaranteed to be thread safe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FrameId.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FrameId</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FrameId.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the underlying representation from the identifier. This is
+considered invalid for invalid ids and is strictly enforced in Debug
+builds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FrameId.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FrameId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.FrameId.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the id is valid.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.GeometryId">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">GeometryId</code><a class="headerlink" href="#pydrake.geometry.GeometryId" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.geometry.GeometryId.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.GeometryId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor; the result is an <em>invalid</em> identifier. This only
+exists to satisfy demands of working with various container classes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.GeometryId.get_new_id">
+<code class="descname">get_new_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.geometry.GeometryId.get_new_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a new identifier for this id type. This new identifier will
+be different from all previous identifiers created. This method does
+<em>not</em> make any guarantees about the values of ids from successive
+invocations. This method is guaranteed to be thread safe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.GeometryId.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.GeometryId.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the underlying representation from the identifier. This is
+considered invalid for invalid ids and is strictly enforced in Debug
+builds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.GeometryId.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.GeometryId.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the id is valid.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.PenetrationAsPointPair">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">PenetrationAsPointPair</code><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.geometry.PenetrationAsPointPair.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PenetrationAsPointPair</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.PenetrationAsPointPair.depth">
+<code class="descname">depth</code><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>The penetration depth.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.PenetrationAsPointPair.id_A">
+<code class="descname">id_A</code><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair.id_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the first geometry in the contact.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.PenetrationAsPointPair.id_B">
+<code class="descname">id_B</code><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair.id_B" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the second geometry in the contact.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.PenetrationAsPointPair.nhat_BA_W">
+<code class="descname">nhat_BA_W</code><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair.nhat_BA_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unit-length normal which defines the penetration direction,
+pointing from geometry B into geometry A, measured and expressed in
+the world frame. It <em>approximates</em> the normal to the plane on which
+the contact patch lies.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.PenetrationAsPointPair.p_WCa">
+<code class="descname">p_WCa</code><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair.p_WCa" title="Permalink to this definition">¶</a></dt>
+<dd><p>The point on A that most deeply penetrates B, measured and expressed
+in the world frame.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.PenetrationAsPointPair.p_WCb">
+<code class="descname">p_WCb</code><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair.p_WCb" title="Permalink to this definition">¶</a></dt>
+<dd><p>The point on B that most deeply penetrates A, measured and expressed
+in the world frame.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.QueryObject">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">QueryObject</code><a class="headerlink" href="#pydrake.geometry.QueryObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>The QueryObject serves as a mechanism to perform geometry queries on
+the world’s geometry. The SceneGraph has an abstract-valued port that
+contains a QueryObject (i.e., a QueryObject-valued output port).</p>
+<p>To perform geometry queries on SceneGraph: - a LeafSystem must have a
+QueryObject-valued input port and connect it to the corresponding
+query output port on SceneGraph, - the querying LeafSystem can
+evaluate the input port, retrieving a <code class="docutils literal"><span class="pre">const</span> <span class="pre">QueryObject&amp;</span></code> in
+return, and, finally, - invoke the appropriate method on the
+QueryObject.</p>
+<p>The const reference returned by the input port is considered “live” -
+it is linked to the context, system, and cache (making full use of all
+of those mechanisms). This const reference should <em>never</em> be
+persisted; doing so can lead to erroneous query results. It is simpler
+and more advisable to acquire it for evaluation in a limited scope
+(e.g., CalcTimeDerivatives()) and then discard it. If a QueryObject is
+needed for many separate functions in a LeafSystem, each should
+re-evaluate the input port. The underlying caching mechanism should
+make the cost of this negligible.</p>
+<p>In addition to not persisting the reference from the output port, the
+QueryObject shouldn’t be copied. Strictly speaking, it is an allowed
+operation, but the result is not live, and any geometry query
+performed on the copy will throw an exception.</p>
+<p>A QueryObject <em>cannot</em> be converted to a different scalar type. A
+QueryObject of scalar type S can only be acquired from the output port
+of a SceneGraph of type S evaluated on a corresponding
+GeometryContext, also of type S.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<p>They are already available to link against in the containing library.
+No other values for T are currently supported.</p>
+<dl class="method">
+<dt id="pydrake.geometry.QueryObject.ComputePointPairPenetration">
+<code class="descname">ComputePointPairPenetration</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject</em><span class="sig-paren">)</span> &#x2192; List[drake::geometry::PenetrationAsPointPair&lt;double&gt;]<a class="headerlink" href="#pydrake.geometry.QueryObject.ComputePointPairPenetration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the penetrations across all pairs of geometries in the world.
+Only reports results for <em>penetrating</em> geometries; if two geometries
+are separated, there will be no result for that pair. Pairs of
+<em>anchored</em> geometry are also not reported. The penetration between two
+geometries is characterized as a point pair (see
+PenetrationAsPointPair).</p>
+<p>For two penetrating geometries g₁ and g₂, it is guaranteed that they
+will map to <code class="docutils literal"><span class="pre">id_A</span></code> and <code class="docutils literal"><span class="pre">id_B</span></code> in a fixed, repeatable manner.</p>
+<p>This method is affected by collision filtering; element pairs that
+have been filtered will not produce contacts, even if their collision
+geometry is penetrating.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector populated with all detected penetrations characterized as
+point pairs.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.QueryObject.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.QueryObject.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.QueryObject.inspector">
+<code class="descname">inspector</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SceneGraphInspector<a class="headerlink" href="#pydrake.geometry.QueryObject.inspector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an inspector for the topological structure of the underlying
+scene graph data (see SceneGraphInspector for details).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.SceneGraph">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SceneGraph</code><a class="headerlink" href="#pydrake.geometry.SceneGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>SceneGraph serves as the nexus for all geometry (and geometry-based
+operations) in a Diagram. Through SceneGraph, other systems that
+introduce geometry can <em>register</em> that geometry as part of a common
+global domain, including it in geometric queries (e.g., cars
+controlled by one LeafSystem can be observed by a different sensor
+system). SceneGraph provides the interface for registering the
+geometry, updating its position based on the current context, and
+performing geometric queries.</p>
+<p>Only registered “geometry sources” can introduce geometry into
+SceneGraph. Geometry sources will typically be other leaf systems,
+but, in the case of <em>anchored</em> (i.e., stationary) geometry, it could
+also be some other block of code (e.g., adding a common ground plane
+with which all systems’ geometries interact). For dynamic geometry
+(geometry whose pose depends on a Context), the geometry source must
+also provide pose values for all of the geometries the source owns,
+via a port connection on SceneGraph.</p>
+<p>The basic workflow for interacting with SceneGraph is:</p>
+<ul class="simple">
+<li>Register as a geometry source, acquiring a unique SourceId.</li>
+<li>Register geometry (anchored and dynamic) with the system.</li>
+<li>Connect source’s geometry output ports to the corresponding SceneGraph</li>
+</ul>
+<p>input ports.
+- Implement appropriate <code class="docutils literal"><span class="pre">Calc*</span></code> methods on the geometry output ports to
+update geometry pose values.</p>
+<p>For each registered geometry source, there is one input port for each
+order of kinematics values (e.g., pose, velocity, and acceleration).
+If a source registers a frame, it must connect to these ports
+(although, in the current version, only pose is supported). Failure to
+connect to the port (or to provide valid kinematics values) will lead
+to runtime exceptions.</p>
+<p><strong>pose port</strong>: An abstract-valued port providing an instance of
+FramePoseVector. For each registered frame, this “pose vector” maps
+the registered FrameId to a pose value. All registered frames must be
+accounted for and only frames registered by a source can be included
+in its output port. See the details in FrameKinematicsVector for
+details on how to allocate and calculate this port.</p>
+<p>SceneGraph has two output ports:</p>
+<p><strong>query port</strong>: An abstract-valued port containing an instance of
+QueryObject. It provides a “ticket” for downstream LeafSystem
+instances to perform geometric queries on the SceneGraph. To perform
+geometric queries, downstream LeafSystem instances acquire the
+QueryObject from SceneGraph’s output port and provide it as a
+parameter to one of SceneGraph’s query methods (e.g.,
+SceneGraph::ComputeContact()). This assumes that the querying system
+has access to a const pointer to the connected SceneGraph instance.
+Use get_query_output_port() to acquire the output port for the query
+handle.</p>
+<p><strong>lcm visualization port</strong>: An abstract-valued port containing an
+instance of PoseBundle. This is a convenience port designed to feed
+LCM update messages to drake_visualizer for the purpose of visualizing
+the state of the world’s geometry. Additional uses of this port are
+strongly discouraged; instead, use an appropriate geometric query to
+obtain the state of the world’s geometry.</p>
+<p>LeafSystem instances can relate to SceneGraph in one of two ways: as a
+<em>consumer</em> that performs queries, or as a <em>producer</em> that introduces
+geometry into the shared world and defines its context-dependent
+kinematics values. It is reasonable for systems to perform either role
+singly, or both.</p>
+<p><strong>Consumer</strong></p>
+<p>Consumers perform geometric queries upon the world geometry.
+SceneGraph <em>serves</em> those queries. As indicated above, in order for a
+LeafSystem to act as a consumer, it must: 1. define a
+QueryObject-valued input port and connect it to SceneGraph’s
+corresponding output port, and 2. have a reference to the connected
+SceneGraph instance.</p>
+<p>With those two requirements satisfied, a LeafSystem can perform
+geometry queries by: 1. evaluating the QueryObject input port, and 2.
+passing the returned query object into the appropriate query method on
+SceneGraph (e.g., SceneGraph::ComputeContact()).</p>
+<p><strong>Producer</strong></p>
+<p>All producers introduce geometry into the shared geometric world. This
+is called <em>registering</em> geometry. Depending on what exactly has been
+registered, a producer may also have to <em>update kinematics</em>. Producers
+themselves must be registered with SceneGraph as producers (a.k.a.
+<em>geometry sources</em>). They do this by acquiring a SourceId (via
+SceneGraph::RegisterSource()). The SourceId serves as a unique handle
+through which the producer’s identity is validated and its ownership
+of its registered geometry is maintained.</p>
+<p><em>Registering Geometry</em></p>
+<p>SceneGraph cannot know what geometry <em>should</em> be part of the shared
+world. Other systems are responsible for introducing geometry into the
+world. This process (defining geometry and informing SceneGraph) is
+called <em>registering</em> the geometry. The source that registers the
+geometry “owns” the geometry; the source’s unique SourceId is required
+to perform any operations on the geometry registered with that
+SourceId. Geometry can be registered as <em>anchored</em> or <em>dynamic</em>.</p>
+<p>Dynamic geometry can move; more specifically, its kinematics (e.g.,
+pose) depends on a system’s Context. Particularly, dynamic geometry is
+<em>fixed</em> to a <em>frame</em> whose kinematics values depend on a context. As
+the frame moves, the geometries fixed to it move with it. Therefore,
+to register dynamic geometry a frame must be registered first. These
+registered frames serve as the basis for repositioning geometry in the
+shared world. The geometry source is responsible for providing
+up-to-date kinematics values for those registered frames upon request
+(via an appropriate output port on the source LeafSystem connecting to
+the appropriate input port on SceneGraph). The work flow is as
+follows: 1. A LeafSystem registers itself as a geometry source,
+acquiring a SourceId (RegisterSource()). 2. The source registers a
+frame (GeometrySource::RegisterFrame()). - A frame always has a
+“parent” frame. It can implicitly be the world frame, <em>or</em> another
+frame registered by the source. 3. Register one or more geometries to
+a frame (GeometrySource::RegisterGeometry()). - The registered
+geometry is posed relative to the frame to which it is fixed. - The
+geometry can also be posed relative to another registered geometry. It
+will be affixed to <em>that</em> geometry’s frame.</p>
+<p>Anchored geometry is <em>independent</em> of the context (i.e., it doesn’t
+move). Anchored geometries are always affixed to the immobile world
+frame. As such, registering a frame is <em>not</em> required for registering
+anchored geometry (see GeometrySource::RegisterAnchoredGeometry()).
+However, the source still “owns” the anchored geometry.</p>
+<p><em>Updating Kinematics</em></p>
+<p>Registering <em>dynamic</em> geometry implies a contract between the geometry
+source and SceneGraph. The geometry source must do the following: - It
+must provide, populate, and connect two output ports: the “id” port
+and the “pose” port. - The id port must contain <em>all</em> the frame ids
+returned as a result of frame registration. - The pose port must
+contain one pose per registered frame; the pose value is expressed
+relative to the registered frame’s <em>parent</em> frame. As mentioned above,
+the iᵗʰ pose value should describe the frame indicated by the iᵗʰ id
+in the id output port.</p>
+<p>Failure to meet these requirements will lead to a run-time error.</p>
+<p>Many (and eventually all) methods that configure the population of
+SceneGraph have two variants that differ by whether they accept a
+mutable Context or not. When no Context is provided, <em>this</em> SceneGraph
+instance’s underlying model is modified. When the SceneGraph instance
+allocates a context, its model is copied into that context.</p>
+<p>The second variant causes SceneGraph to modify the data stored in the
+provided Context to be modified <em>instead of the internal model</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In this initial version, the only methods with the
+Context-modifying variant are those methods that <em>do not</em> change
+the the semantics of the input or output ports. Modifications that
+make such changes must be coordinated across systems.</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<p>They are already available to link against in the containing library.
+No other values for T are currently supported.</p>
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph.RegisterSource">
+<code class="descname">RegisterSource</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph</em>, <em>name: unicode = u''</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.geometry.SceneGraph.RegisterSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a new source to the geometry system. The caller must save
+the returned SourceId; it is the token by which all other operations
+on the geometry world are conducted.</p>
+<p>This source id can be used to register arbitrary <em>anchored</em> geometry.
+But if dynamic geometry is registered (via
+RegisterGeometry/RegisterFrame), then the context-dependent pose
+values must be provided on an input port. See get_source_pose_port().</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dd>The optional name of the source. If none is provided (or the empty
+string) a unique name will be defined by SceneGraph’s logic.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if a context has already been allocated for this</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">SceneGraph.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GeometryState::RegisterNewSource()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.SceneGraph.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor used for scalar conversions. It should only be used to
+convert <em>from</em> double <em>to</em> other scalar types.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph.get_pose_bundle_output_port">
+<code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph.get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output port which produces the PoseBundle for LCM
+communication to drake visualizer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph.get_query_output_port">
+<code class="descname">get_query_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph.get_query_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output port which produces the QueryObject for performing
+geometric queries.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph.get_source_pose_port">
+<code class="descname">get_source_pose_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph</em>, <em>arg0: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph.get_source_pose_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a valid source <code class="docutils literal"><span class="pre">id</span></code>, returns a <em>pose</em> input port associated
+with that <code class="docutils literal"><span class="pre">id</span></code>. This port is used to communicate <em>pose</em> data for
+registered frames.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the source_id is <em>not</em> recognized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.SceneGraphInspector">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SceneGraphInspector</code><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SceneGraphInspector serves as a mechanism to query the topological
+structure of a SceneGraph instance. The topological structure consists
+of all of the SceneGraph data that does <em>not</em> depend on input pose
+data. Including, but not limited to:</p>
+<ul class="simple">
+<li>names of frames and geometries</li>
+<li>hierarchies (parents of geometries, parents of frames, etc.)</li>
+<li>geometry parameters (e.g., contact, rendering, visualization)</li>
+<li>fixed poses of geometries relative to frames</li>
+</ul>
+<p>In contrast, the following pieces of data <em>do</em> depend on input pose
+data and cannot* be performed with the SceneGraphInspector (see the
+QueryObject instead):</p>
+<ul class="simple">
+<li>world pose of frames or geometry</li>
+<li>collision queries</li>
+<li>proximity queries</li>
+</ul>
+<p>A SceneGraphInspector cannot be instantiated explicitly. Nor can it be
+copied or moved. A <em>reference</em> to a SceneGraphInspector instance can
+be acquired from</p>
+<ul class="simple">
+<li>a SceneGraph instance (to inspect the state of the system’s <em>model</em>), or</li>
+<li>a QueryObject instance (to inspect the state of the scene graph data stored</li>
+</ul>
+<p>in the context).</p>
+<p>The reference should not be persisted (and, as previously indicated,
+cannot be copied). SceneGraphInspector instances are cheap; they can
+be created, queried, and thrown out. If there is any doubt about the
+valid lifespan of a SceneGraphInspector, throw out the old instance
+and request a new instance.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar of the associated SceneGraph instance. The template
+parameter is provided for the sake of compatibility, although no
+queries (or their results) depend on the scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraphInspector.GetFrameId">
+<code class="descname">GetFrameId</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector</em>, <em>geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.FrameId<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.GetFrameId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the id of the frame to which the given geometry id is
+registered.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the geometry id is invalid.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.SceneGraphInspector.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.SourceId">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SourceId</code><a class="headerlink" href="#pydrake.geometry.SourceId" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.geometry.SourceId.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.SourceId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor; the result is an <em>invalid</em> identifier. This only
+exists to satisfy demands of working with various container classes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SourceId.get_new_id">
+<code class="descname">get_new_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.geometry.SourceId.get_new_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a new identifier for this id type. This new identifier will
+be different from all previous identifiers created. This method does
+<em>not</em> make any guarantees about the values of ids from successive
+invocations. This method is guaranteed to be thread safe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SourceId.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SourceId.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the underlying representation from the identifier. This is
+considered invalid for invalid ids and is strictly enforced in Debug
+builds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SourceId.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SourceId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.SourceId.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the id is valid.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.lcm.html" class="btn btn-neutral float-right" title="pydrake.lcm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.forwarddiff.html" class="btn btn-neutral" title="pydrake.forwarddiff" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

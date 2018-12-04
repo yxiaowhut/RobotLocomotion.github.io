@@ -1,0 +1,269 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Code Review Checklist &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code Style Guide" href="code_style_guide.html" />
+    <link rel="prev" title="Drake Development on macOS" href="development_on_mac.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="code_style_guide.html" title="Code Style Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="development_on_mac.html" title="Drake Development on macOS"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="code-review-checklist">
+<span id="id1"></span><h1>Code Review Checklist<a class="headerlink" href="#code-review-checklist" title="Permalink to this headline">¶</a></h1>
+<p>The following questions cover about 80% of the comments reviewers make
+on pull requests.  Before submitting or assigning reviewers to a pull
+request to Drake, please take a moment to re-read your changes with
+these common errors in mind.</p>
+<div class="section" id="does-your-code-compile-facepalm">
+<h2>Does your code compile?  :facepalm:<a class="headerlink" href="#does-your-code-compile-facepalm" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>If your code doesn’t pass Jenkins, why are you asking for a detailed
+code review?</li>
+</ul>
+</div>
+<div class="section" id="is-the-code-the-minimal-set-of-what-you-want">
+<h2>Is the code the minimal set of what you want?<a class="headerlink" href="#is-the-code-the-minimal-set-of-what-you-want" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>If the PR includes more than 750 added or changed lines,
+try to divide it into multiple PRs. The following techniques may be useful.
+If you don’t think it can be done, talk to a platform reviewer before
+sending the PR.<ul>
+<li>If you are modifying an API, consider deprecating the old interface instead
+of migrating all call sites immediately.</li>
+<li>If you are introducing a new feature, consider adding only test cases
+now, and deferring the first application use to a follow-up PR.</li>
+</ul>
+</li>
+<li>Do a self-review, before you ask anyone else to review.<ul>
+<li>Before you even submit the PR, you can review the diffs using
+github.</li>
+<li>If you’d rather use reviewable.io to self-review, that’s fine too
+– just wait to tag any reviewers until you’ve finished your
+review.</li>
+<li>As you update your PR based on review feedback, review your commit
+diffs before pushing them – don’t leave it to the reviewers to
+discover your typos.</li>
+</ul>
+</li>
+<li>Remove commented-out code.</li>
+<li>Remove code that isn’t part of the build, or doesn’t have unit tests.</li>
+<li>Don’t include files with only whitespace diffs in your pull request
+(unless of course the purpose of the changes is whitespace fixes).</li>
+</ul>
+</div>
+<div class="section" id="are-your-classes-methods-arguments-and-fields-correctly-named">
+<h2>Are your classes, methods, arguments, and fields correctly named?<a class="headerlink" href="#are-your-classes-methods-arguments-and-fields-correctly-named" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Classes are <code class="docutils literal"><span class="pre">UppercaseStyle</span></code> and nouns or noun-phrases.</li>
+<li>Methods are <code class="docutils literal"><span class="pre">UppercaseStyle</span></code> and verbs or verb-phrases, except for
+trivial getters and setters.</li>
+<li>Inexpensive or trivial methods are <code class="docutils literal"><span class="pre">lowercase_style</span></code> verb-phrases.</li>
+<li>Arguments are <code class="docutils literal"><span class="pre">lowercase_style</span></code> and nouns, and are single-letter only
+when they have a clear and documented meaning.  (Yes, this includes
+single greek letters!  A <code class="docutils literal"><span class="pre">theta</span></code> argument must still be clearly
+documented, even though it’s longer than one letter.)</li>
+<li>Member fields are <code class="docutils literal"><span class="pre">lowercase_style_with_trailing_underscore_</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="are-you-using-pointers-well">
+<h2>Are you using pointers well?<a class="headerlink" href="#are-you-using-pointers-well" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">shared_ptr&lt;&gt;</span></code> usually means you haven’t thought through
+ownerships and lifespans.</li>
+<li><code class="docutils literal"><span class="pre">unique_ptr&lt;&gt;</span></code> and const reference should cover 95% of all your
+use cases.</li>
+<li>Bare pointers are a common source of mistakes; if you see one,
+consider if it is what you want (e.g., this is a mutable
+pass-by-reference) and if so ensure that any nontrivial lifetime
+guarantee is documented and you checked for <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
+</ul>
+</div>
+<div class="section" id="did-you-document-your-api-did-you-comment-your-complexity">
+<h2>Did you document your API?  Did you comment your complexity?<a class="headerlink" href="#did-you-document-your-api-did-you-comment-your-complexity" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Every nontrivial public symbol must have a Doxygen-formatted
+comment.</li>
+<li>If you are uncertain of your formatting, consider
+<a class="reference internal" href="documentation_instructions.html#documentation-generation-instructions"><span class="std std-ref">generating the Doxygen</span></a>
+and checking how it looks in a browser.</li>
+<li>Only use Doxygen comments (<code class="docutils literal"><span class="pre">///</span></code> or <code class="docutils literal"><span class="pre">/**</span> <span class="pre">*/</span></code>) on published APIs (public
+or protected classes and methods).  Code with private access or declared in
+<code class="docutils literal"><span class="pre">.cc</span></code> files should <em>not</em> use the Doxygen format.</li>
+<li>Most private methods with multiple callers should have a
+documentation comment (but not phrased as a Doxygen comment).</li>
+<li>Anything in your code that confuses you or makes you read it twice
+to understand its workings should have an implementation comment.</li>
+</ul>
+</div>
+<div class="section" id="are-your-comments-clear-and-grammatical">
+<h2>Are your comments clear and grammatical?<a class="headerlink" href="#are-your-comments-clear-and-grammatical" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>If a comment is or is meant to be a complete sentence, capitalize
+it, punctuate it, and re-read it to make sure it parses!</li>
+<li>If your editor has a spell-checker for strings and comments, did you
+run it?</li>
+</ul>
+</div>
+<div class="section" id="did-you-use-const-where-you-could">
+<h2>Did you use <code class="docutils literal"><span class="pre">const</span></code> where you could?<a class="headerlink" href="#did-you-use-const-where-you-could" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>A large majority of arguments and locals and a significant fraction
+of methods and fields can be made <code class="docutils literal"><span class="pre">const</span></code>.  This improves
+compile-time error checking.</li>
+<li>Do all “plain old data” member fields have <code class="docutils literal"><span class="pre">{}</span></code>?<ul>
+<li>See <a class="reference external" href="https://drake.mit.edu/styleguide/cppguide.html#Variable_and_Array_Initialization">our style guide</a>
+citing “in-class member initialization.”</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="did-you-use-a-c-style-cast-by-accident">
+<h2>Did you use a C-style cast by accident?<a class="headerlink" href="#did-you-use-a-c-style-cast-by-accident" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>You usually want <code class="docutils literal"><span class="pre">static_cast&lt;To&gt;(from)</span></code>.</li>
+<li>To cast to superclasses or subclasses, <code class="docutils literal"><span class="pre">dynamic_cast&lt;To&gt;(from)</span></code>;
+however if <code class="docutils literal"><span class="pre">To</span></code> is a pointer type then you must always check for
+<code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
+<li>You very, very rarely want <code class="docutils literal"><span class="pre">reinterpret_cast</span></code>.  Use with great
+caution.</li>
+</ul>
+</div>
+<div class="section" id="have-you-run-linting-tools">
+<h2>Have you run linting tools?<a class="headerlink" href="#have-you-run-linting-tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>See <a class="reference internal" href="code_style_tools.html#code-style-tools"><span class="std std-ref">Automated style checks</span></a>.</li>
+</ul>
+</div>
+<div class="section" id="is-your-code-deterministic">
+<h2>Is your code deterministic?<a class="headerlink" href="#is-your-code-deterministic" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Do not use <code class="docutils literal"><span class="pre">Eigen::Random</span></code>, <code class="docutils literal"><span class="pre">libc</span> <span class="pre">rand</span></code>, or anything like it.
+You can use <code class="docutils literal"><span class="pre">libstdc++</span></code>’s new random generators, as long as you
+call them using a local instance (no global state), and seed it with
+a hard-coded value for repeatability.  This includes test code.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Code Review Checklist</a><ul>
+<li><a class="reference internal" href="#does-your-code-compile-facepalm">Does your code compile?  :facepalm:</a></li>
+<li><a class="reference internal" href="#is-the-code-the-minimal-set-of-what-you-want">Is the code the minimal set of what you want?</a></li>
+<li><a class="reference internal" href="#are-your-classes-methods-arguments-and-fields-correctly-named">Are your classes, methods, arguments, and fields correctly named?</a></li>
+<li><a class="reference internal" href="#are-you-using-pointers-well">Are you using pointers well?</a></li>
+<li><a class="reference internal" href="#did-you-document-your-api-did-you-comment-your-complexity">Did you document your API?  Did you comment your complexity?</a></li>
+<li><a class="reference internal" href="#are-your-comments-clear-and-grammatical">Are your comments clear and grammatical?</a></li>
+<li><a class="reference internal" href="#did-you-use-const-where-you-could">Did you use <code class="docutils literal"><span class="pre">const</span></code> where you could?</a></li>
+<li><a class="reference internal" href="#did-you-use-a-c-style-cast-by-accident">Did you use a C-style cast by accident?</a></li>
+<li><a class="reference internal" href="#have-you-run-linting-tools">Have you run linting tools?</a></li>
+<li><a class="reference internal" href="#is-your-code-deterministic">Is your code deterministic?</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="code_style_guide.html" title="Code Style Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="development_on_mac.html" title="Drake Development on macOS"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.maliput.api &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.maliput" href="pydrake.maliput.html"/>
+        <link rel="next" title="pydrake.maliput.dragway" href="pydrake.maliput.dragway.html"/>
+        <link rel="prev" title="pydrake.maliput.all" href="pydrake.maliput.all.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.maliput.all.html">pydrake.maliput.all</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.maliput.api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.maliput.dragway.html">pydrake.maliput.dragway</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.maliput.html">pydrake.maliput</a> &raquo;</li>
+        
+      <li>pydrake.maliput.api</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.maliput.api">
+<span id="pydrake-maliput-api"></span><h1>pydrake.maliput.api<a class="headerlink" href="#module-pydrake.maliput.api" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the Maliput API.</p>
+<dl class="class">
+<dt id="pydrake.maliput.api.GeoPosition">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">GeoPosition</code><a class="headerlink" href="#pydrake.maliput.api.GeoPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A position in 3-dimensional geographical Cartesian space, i.e., in the
+world frame, consisting of three components x, y, and z.</p>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>drake::AutoDiffXd</li>
+<li>drake::symbolic::Expression</li>
+</ul>
+<p>They are already available to link against in the containing library.</p>
+<dl class="method">
+<dt id="pydrake.maliput.api.GeoPosition.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.GeoPosition</em>, <em>x: float</em>, <em>y: float</em>, <em>z: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.maliput.api.GeoPosition.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully parameterized constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.GeoPosition.xyz">
+<code class="descname">xyz</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.GeoPosition</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.maliput.api.GeoPosition.xyz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all components as 3-vector <code class="docutils literal"><span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.Junction">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">Junction</code><a class="headerlink" href="#pydrake.maliput.api.Junction" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Junction is a closed set of Segments which have physically coplanar
+road surfaces, in the sense that RoadPositions with the same h value
+(height above surface) in the domains of two Segments map to the same
+GeoPosition. The Segments need not be directly connected to one
+another in the network topology.</p>
+<p>Junctions are grouped by RoadGeometry.</p>
+<dl class="attribute">
+<dt id="pydrake.maliput.api.Junction.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.maliput.api.Junction.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Junction.num_segments">
+<code class="descname">num_segments</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Junction</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.maliput.api.Junction.num_segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of Segments in the Junction.</p>
+<p>Return value is non-negative.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Junction.segment">
+<code class="descname">segment</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Junction</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; drake::maliput::api::Segment<a class="headerlink" href="#pydrake.maliput.api.Junction.segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Segment indexed by <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span></code> must be &gt;= 0 and &lt; num_segments().</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.Lane">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">Lane</code><a class="headerlink" href="#pydrake.maliput.api.Lane" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Lane represents a lane of travel in a road network. A Lane defines a
+curvilinear coordinate system covering the road surface, with a
+longitudinal ‘s’ coordinate that expresses the arc-length along a
+central reference curve. The reference curve nominally represents an
+ideal travel trajectory along the Lane.</p>
+<p>Lanes are grouped by Segment. All Lanes belonging to a Segment
+represent the same road surface, but with different coordinate
+parameterizations (e.g., each Lane has its own reference curve).</p>
+<dl class="method">
+<dt id="pydrake.maliput.api.Lane.GetOrientation">
+<code class="descname">GetOrientation</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Lane</em>, <em>arg0: pydrake.maliput.api.LanePosition</em><span class="sig-paren">)</span> &#x2192; pydrake.maliput.api.Rotation<a class="headerlink" href="#pydrake.maliput.api.Lane.GetOrientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rotation which expresses the orientation of the
+<code class="docutils literal"><span class="pre">Lane</span></code>-frame basis at <code class="docutils literal"><span class="pre">lane_pos</span></code> with respect to the world frame
+basis.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Lane.ToGeoPosition">
+<code class="descname">ToGeoPosition</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Lane</em>, <em>arg0: pydrake.maliput.api.LanePosition</em><span class="sig-paren">)</span> &#x2192; pydrake.maliput.api.GeoPosition<a class="headerlink" href="#pydrake.maliput.api.Lane.ToGeoPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the GeoPosition corresponding to the given LanePosition.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>The s component of <code class="docutils literal"><span class="pre">lane_pos</span></code> must be in domain [0,
+Lane::length()].</dd>
+<dt>Precondition:</dt>
+<dd>The r component of <code class="docutils literal"><span class="pre">lane_pos</span></code> must be in domain [Rmin, Rmax]
+derived from Lane::driveable_bounds().</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Lane.ToLanePosition">
+<code class="descname">ToLanePosition</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Lane</em>, <em>arg0: pydrake.maliput.api.GeoPosition</em>, <em>arg1: pydrake.maliput.api.GeoPosition</em>, <em>arg2: float</em><span class="sig-paren">)</span> &#x2192; pydrake.maliput.api.LanePosition<a class="headerlink" href="#pydrake.maliput.api.Lane.ToLanePosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the LanePosition corresponding to GeoPosition <code class="docutils literal"><span class="pre">geo_pos</span></code>.</p>
+<p>The return value is the LanePosition of the point within the Lane’s
+driveable-bounds which is closest to <code class="docutils literal"><span class="pre">geo_pos</span></code> (as measured by the
+Cartesian metric in the world frame). If <code class="docutils literal"><span class="pre">nearest_point</span></code> is
+non-null, then it will be populated with the GeoPosition of that
+nearest point. If <code class="docutils literal"><span class="pre">distance</span></code> is non-null, then it will be populated
+with the Cartesian distance from <code class="docutils literal"><span class="pre">geo_pos</span></code> to that nearest point.</p>
+<p>This method guarantees that its result satisfies the condition that
+<code class="docutils literal"><span class="pre">ToGeoPosition(result)</span></code> is within <code class="docutils literal"><span class="pre">linear_tolerance()</span></code> of
+<code class="docutils literal"><span class="pre">*nearest_position</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.maliput.api.Lane.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.maliput.api.Lane.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Lane.id">
+<code class="descname">id</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Lane</em><span class="sig-paren">)</span> &#x2192; pydrake.maliput.api.LaneId<a class="headerlink" href="#pydrake.maliput.api.Lane.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the persistent identifier.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Lane.length">
+<code class="descname">length</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Lane</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.maliput.api.Lane.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the arc-length of the Lane along its reference curve.</p>
+<p>The value of length() is also the maximum s-coordinate for this Lane;
+i.e., the domain of s is [0, length()].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.LaneId">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">LaneId</code><a class="headerlink" href="#pydrake.maliput.api.LaneId" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.maliput.api.LaneId.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.LaneId</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.maliput.api.LaneId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the persistent identifier.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.LaneId.string">
+<code class="descname">string</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.LaneId</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.maliput.api.LaneId.string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.LanePosition">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">LanePosition</code><a class="headerlink" href="#pydrake.maliput.api.LanePosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A 3-dimensional position in a <code class="docutils literal"><span class="pre">Lane</span></code>-frame, consisting of three
+components:</p>
+<ul class="simple">
+<li>s is longitudinal position, as arc-length along a Lane’s reference line.</li>
+<li>r is lateral position, perpendicular to the reference line at s.</li>
+<li>h is height above the road surface.</li>
+</ul>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>drake::AutoDiffXd</li>
+<li>drake::symbolic::Expression</li>
+</ul>
+<p>They are already available to link against in the containing library.</p>
+<dl class="method">
+<dt id="pydrake.maliput.api.LanePosition.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.LanePosition</em>, <em>s: float</em>, <em>r: float</em>, <em>h: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.maliput.api.LanePosition.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully parameterized constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.LanePosition.srh">
+<code class="descname">srh</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.LanePosition</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.maliput.api.LanePosition.srh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all components as 3-vector <code class="docutils literal"><span class="pre">[s,</span> <span class="pre">r,</span> <span class="pre">h]</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.RoadGeometry">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">RoadGeometry</code><a class="headerlink" href="#pydrake.maliput.api.RoadGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract API for the geometry of a road network, including both the
+network topology and the geometry of its embedding in 3-space.</p>
+<dl class="attribute">
+<dt id="pydrake.maliput.api.RoadGeometry.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.maliput.api.RoadGeometry.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.RoadGeometry.junction">
+<code class="descname">junction</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.RoadGeometry</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; drake::maliput::api::Junction<a class="headerlink" href="#pydrake.maliput.api.RoadGeometry.junction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Junction indexed by <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span></code> must be &gt;= 0 and &lt; num_junctions().</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.RoadGeometry.num_junctions">
+<code class="descname">num_junctions</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.RoadGeometry</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.maliput.api.RoadGeometry.num_junctions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of Junctions in the RoadGeometry.</p>
+<p>Return value is non-negative.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.RoadGeometryId">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">RoadGeometryId</code><a class="headerlink" href="#pydrake.maliput.api.RoadGeometryId" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.maliput.api.RoadGeometryId.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.RoadGeometryId</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.maliput.api.RoadGeometryId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.RoadGeometryId.string">
+<code class="descname">string</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.RoadGeometryId</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.maliput.api.RoadGeometryId.string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.RoadPosition">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">RoadPosition</code><a class="headerlink" href="#pydrake.maliput.api.RoadPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>A position in the road network, consisting of a pointer to a specific
+Lane and a <code class="docutils literal"><span class="pre">Lane</span></code>-frame position in that Lane.</p>
+<dl class="method">
+<dt id="pydrake.maliput.api.RoadPosition.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.maliput.api.RoadPosition.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.maliput.api.RoadPosition) -&gt; None</li>
+</ol>
+<p>Default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.maliput.api.RoadPosition, lane: drake::maliput::api::Lane, pos: pydrake.maliput.api.LanePosition) -&gt; None</li>
+</ol>
+<p>Fully parameterized constructor.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.maliput.api.RoadPosition.lane">
+<code class="descname">lane</code><a class="headerlink" href="#pydrake.maliput.api.RoadPosition.lane" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.maliput.api.RoadPosition.pos">
+<code class="descname">pos</code><a class="headerlink" href="#pydrake.maliput.api.RoadPosition.pos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.Rotation">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">Rotation</code><a class="headerlink" href="#pydrake.maliput.api.Rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A 3-dimensional rotation.</p>
+<dl class="attribute">
+<dt id="pydrake.maliput.api.Rotation.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.maliput.api.Rotation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Rotation.quat">
+<code class="descname">quat</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Rotation</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion<a class="headerlink" href="#pydrake.maliput.api.Rotation.quat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a quaternion representation of the rotation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Rotation.rpy">
+<code class="descname">rpy</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Rotation</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RollPitchYaw<a class="headerlink" href="#pydrake.maliput.api.Rotation.rpy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a representation of rotation as a vector of angles <code class="docutils literal"><span class="pre">[roll,</span>
+<span class="pre">pitch,</span> <span class="pre">yaw]</span></code> (in radians).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.maliput.api.Segment">
+<em class="property">class </em><code class="descclassname">pydrake.maliput.api.</code><code class="descname">Segment</code><a class="headerlink" href="#pydrake.maliput.api.Segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Segment represents a bundle of adjacent Lanes which share a
+continuously traversable road surface. Every LanePosition on a given
+Lane of a Segment has a corresponding LanePosition on each other Lane,
+all with the same height-above-surface h, that all map to the same
+GeoPoint in 3-space.</p>
+<p>Segments are grouped by Junction.</p>
+<dl class="attribute">
+<dt id="pydrake.maliput.api.Segment.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.maliput.api.Segment.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Segment.lane">
+<code class="descname">lane</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Segment</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; drake::maliput::api::Lane<a class="headerlink" href="#pydrake.maliput.api.Segment.lane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Lane indexed by <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<p>The indexing order is meaningful; numerically adjacent indices
+correspond to geometrically adjacent Lanes. Indices increase “to the
+left”, i.e., in the direction of increasing <code class="docutils literal"><span class="pre">r</span></code> coordinate.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span></code> must be &gt;= 0 and &lt; num_lanes().</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.maliput.api.Segment.num_lanes">
+<code class="descname">num_lanes</code><span class="sig-paren">(</span><em>self: pydrake.maliput.api.Segment</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.maliput.api.Segment.num_lanes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of Lanes contained in this Segment.</p>
+<p>Return value is non-negative.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.maliput.dragway.html" class="btn btn-neutral float-right" title="pydrake.maliput.dragway" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.maliput.all.html" class="btn btn-neutral" title="pydrake.maliput.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.lcm &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.meshcat_visualizer" href="pydrake.systems.meshcat_visualizer.html"/>
+        <link rel="prev" title="pydrake.systems.framework" href="pydrake.systems.framework.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.meshcat_visualizer.html">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.lcm</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.lcm">
+<span id="pydrake-systems-lcm"></span><h1>pydrake.systems.lcm<a class="headerlink" href="#module-pydrake.systems.lcm" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydrake.systems.lcm.ConnectLcmScope">
+<code class="descclassname">pydrake.systems.lcm.</code><code class="descname">ConnectLcmScope</code><span class="sig-paren">(</span><em>src: pydrake.systems.framework.OutputPort_[float], channel: unicode, builder: pydrake.systems.framework.DiagramBuilder_[float], lcm: pydrake.lcm.DrakeLcmInterface = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.lcm.LcmPublisherSystem<a class="headerlink" href="#pydrake.systems.lcm.ConnectLcmScope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides the ability to publish any VectorBase&lt;double&gt; output port to
+the LCM <code class="docutils literal"><span class="pre">channel</span></code>, using the drake::lcmt_drake_signal LCM message
+type, by adding an appropriate LcmPublisherSystem to the <code class="docutils literal"><span class="pre">builder</span></code>.
+If <code class="docutils literal"><span class="pre">lcm</span></code> is null, then an LCM instance will be created automatically
+(but this is expensive, and creating multiple LCM instances in a
+single process should be avoided).</p>
+<p>What it does is:</p>
+<ul class="simple">
+<li>adds systems LcmtDrakeSignalTranslator and LcmPublisherSystem to</li>
+</ul>
+<p>the Diagram and connects the translator output to the publisher input, and
+- connects the <code class="docutils literal"><span class="pre">src</span></code> output to the LcmtDrakeSignalTranslator
+system.</p>
+<p>The intention is to enable logging and debugging in complex diagrams
+using external tools like <code class="docutils literal"><span class="pre">lcm-spy</span></code>. Consider using
+Simulator&lt;T&gt;::set_publish_every_time_step(), or calling the
+LcmPublisherSystem::set_publish_period() on the returned
+LcmPublisherSystem to control when the output is generated.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">src</span></code> must be an OutputPort of a system that has already been
+added to the <code class="docutils literal"><span class="pre">builder</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.lcm.LcmPublisherSystem">
+<em class="property">class </em><code class="descclassname">pydrake.systems.lcm.</code><code class="descname">LcmPublisherSystem</code><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<dl class="classmethod">
+<dt id="pydrake.systems.lcm.LcmPublisherSystem.Make">
+<em class="property">classmethod </em><code class="descname">Make</code><span class="sig-paren">(</span><em>channel</em>, <em>lcm_type</em>, <em>lcm</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.Make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience to create an LCM system with a concrete type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> – LCM channel name.</li>
+<li><strong>lcm_type</strong> – Python class generated by lcmgen.</li>
+<li><strong>lcm</strong> – LCM service instance.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.LcmPublisherSystem.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmPublisherSystem</em>, <em>channel: unicode</em>, <em>serializer: pydrake.systems.lcm.SerializerInterface</em>, <em>lcm: pydrake.lcm.DrakeLcmInterface</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constructor for an LcmPublisherSystem that takes vector data on its
+sole vector-valued input port. The vector data is mapped to message
+content by the provided <code class="docutils literal"><span class="pre">translator</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">channel</span></code>:</dt>
+<dd>The LCM channel on which to publish.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">translator</span></code>:</dt>
+<dd>The translator that converts between LCM message objects and
+drake::systems::VectorBase objects. This reference must remain
+valid for the lifetime of this object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lcm</span></code>:</dt>
+<dd>A pointer to the LCM subsystem to use, which must remain valid for
+the lifetime of this object. If null, a drake::lcm::DrakeLcm
+object is allocated and maintained internally, but see the note in
+the class comments.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.LcmPublisherSystem.set_publish_period">
+<code class="descname">set_publish_period</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmPublisherSystem</em>, <em>period: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.set_publish_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the publishing period of this system. See
+LeafSystem::DeclarePeriodicPublish() for details about the semantics
+of parameter <code class="docutils literal"><span class="pre">period</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.lcm.LcmSubscriberSystem">
+<em class="property">class </em><code class="descclassname">pydrake.systems.lcm.</code><code class="descname">LcmSubscriberSystem</code><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<dl class="classmethod">
+<dt id="pydrake.systems.lcm.LcmSubscriberSystem.Make">
+<em class="property">classmethod </em><code class="descname">Make</code><span class="sig-paren">(</span><em>channel</em>, <em>lcm_type</em>, <em>lcm</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.Make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience to create an LCM system with a concrete type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>channel</strong> – LCM channel name.</li>
+<li><strong>lcm_type</strong> – Python class generated by lcmgen.</li>
+<li><strong>lcm</strong> – LCM service instance.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.LcmSubscriberSystem.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmSubscriberSystem</em>, <em>channel: unicode</em>, <em>serializer: pydrake.systems.lcm.SerializerInterface</em>, <em>lcm: pydrake.lcm.DrakeLcmInterface</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor that returns a subscriber System that provides message
+objects on its sole abstract-valued output port. The type of the
+message object is determined by the <code class="docutils literal"><span class="pre">serializer</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">channel</span></code>:</dt>
+<dd>The LCM channel on which to subscribe.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">serializer</span></code>:</dt>
+<dd>The serializer that converts between byte vectors and LCM message
+objects.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lcm</span></code>:</dt>
+<dd>A non-null pointer to the LCM subsystem to subscribe on.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.lcm.PySerializer">
+<em class="property">class </em><code class="descclassname">pydrake.systems.lcm.</code><code class="descname">PySerializer</code><span class="sig-paren">(</span><em>lcm_type</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.lcm.SerializerInterface" title="pydrake.systems.lcm.SerializerInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.lcm.SerializerInterface</span></code></a></p>
+<p>Provides a Python implementation of <cite>SerializerInterface</cite> for use
+with <cite>LcmPublisherSystem</cite> and <cite>LcmSubscriberSystem</cite>.</p>
+<dl class="method">
+<dt id="pydrake.systems.lcm.PySerializer.CreateDefaultValue">
+<code class="descname">CreateDefaultValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.CreateDefaultValue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.PySerializer.Deserialize">
+<code class="descname">Deserialize</code><span class="sig-paren">(</span><em>buffer</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Deserialize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.lcm.PySerializer.Serialize">
+<code class="descname">Serialize</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.PySerializer.Serialize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.lcm.SerializerInterface">
+<em class="property">class </em><code class="descclassname">pydrake.systems.lcm.</code><code class="descname">SerializerInterface</code><a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.lcm.SerializerInterface.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.SerializerInterface</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.lcm.SerializerInterface.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.meshcat_visualizer.html" class="btn btn-neutral float-right" title="pydrake.systems.meshcat_visualizer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.framework.html" class="btn btn-neutral" title="pydrake.systems.framework" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.examples.manipulation_station &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.examples" href="pydrake.examples.html"/>
+        <link rel="next" title="pydrake.examples.multibody" href="pydrake.examples.multibody.html"/>
+        <link rel="prev" title="pydrake.examples.compass_gait" href="pydrake.examples.compass_gait.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.acrobot.html">pydrake.examples.acrobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.compass_gait.html">pydrake.examples.compass_gait</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.examples.manipulation_station</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.multibody.html">pydrake.examples.multibody</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.pendulum.html">pydrake.examples.pendulum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.rimless_wheel.html">pydrake.examples.rimless_wheel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.van_der_pol.html">pydrake.examples.van_der_pol</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.examples.html">pydrake.examples</a> &raquo;</li>
+        
+      <li>pydrake.examples.manipulation_station</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.examples.manipulation_station">
+<span id="pydrake-examples-manipulation-station"></span><h1>pydrake.examples.manipulation_station<a class="headerlink" href="#module-pydrake.examples.manipulation_station" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the Manipulation Station example.</p>
+<dl class="class">
+<dt id="pydrake.examples.manipulation_station.IiwaCollisionModel">
+<em class="property">class </em><code class="descclassname">pydrake.examples.manipulation_station.</code><code class="descname">IiwaCollisionModel</code><a class="headerlink" href="#pydrake.examples.manipulation_station.IiwaCollisionModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>kNoCollision :</p>
+<p>kBoxCollision :</p>
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.IiwaCollisionModel.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.IiwaCollisionModel</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.IiwaCollisionModel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.examples.manipulation_station.IiwaCollisionModel.kBoxCollision">
+<code class="descname">kBoxCollision</code><em class="property"> = IiwaCollisionModel.kBoxCollision</em><a class="headerlink" href="#pydrake.examples.manipulation_station.IiwaCollisionModel.kBoxCollision" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.examples.manipulation_station.IiwaCollisionModel.kNoCollision">
+<code class="descname">kNoCollision</code><em class="property"> = IiwaCollisionModel.kNoCollision</em><a class="headerlink" href="#pydrake.examples.manipulation_station.IiwaCollisionModel.kNoCollision" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.examples.manipulation_station.IiwaCollisionModel.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.examples.manipulation_station.IiwaCollisionModel.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation">
+<em class="property">class </em><code class="descclassname">pydrake.examples.manipulation_station.</code><code class="descname">ManipulationStation</code><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></p>
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.AddCupboard">
+<code class="descname">AddCupboard</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.AddCupboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the geometry (and two extra degrees-of-freedom) of the optional
+workstation cupboard to the model.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.Finalize">
+<code class="descname">Finalize</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.Finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Users <em>must</em> call Finalize() after making any additions to the
+multibody plant and before using this class in the Systems framework.
+This should be called exactly once.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">multibody::multibody_plant::MultibodyPlant&lt;T&gt;::Finalize()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.GetIiwaPosition">
+<code class="descname">GetIiwaPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.GetIiwaPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for getting all of the joint angles of the Kuka
+IIWA. This does not include the gripper.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.GetIiwaVelocity">
+<code class="descname">GetIiwaVelocity</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.GetIiwaVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for getting all of the joint velocities of the Kuka</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.GetWsgPosition">
+<code class="descname">GetWsgPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.GetWsgPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for getting the position of the Schunk WSG. Note
+that the WSG position is the signed distance between the two fingers
+(not the state of the fingers individually).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.GetWsgVelocity">
+<code class="descname">GetWsgVelocity</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.GetWsgVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for getting the velocity of the Schunk WSG.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition">
+<code class="descname">SetIiwaPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]], arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for setting all of the joint angles of the Kuka
+IIWA. Also sets the position history in the velocity command
+generator. <code class="docutils literal"><span class="pre">q</span></code> must have size num_iiwa_joints().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocity">
+<code class="descname">SetIiwaVelocity</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]], arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for setting all of the joint velocities of the Kuka
+IIWA. &#64;v must have size num_iiwa_joints().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetWsgPosition">
+<code class="descname">SetWsgPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: float, arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetWsgPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for setting the position of the Schunk WSG. Also
+sets the position history in the velocity interpolator. Note that the
+WSG position is the signed distance between the two fingers (not the
+state of the fingers individually).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetWsgVelocity">
+<code class="descname">SetWsgVelocity</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: float, arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetWsgVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for setting the velocity of the Schunk WSG.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>time_step: float = 0.002</em>, <em>collision_model: pydrake.examples.manipulation_station.IiwaCollisionModel = IiwaCollisionModel.kNoCollision</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct the station model.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">time_step</span></code>:</dt>
+<dd>The time step used by MultibodyPlant&lt;T&gt;, and by the discrete
+derivative used to approximate velocity from the position command
+inputs.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">collision_model</span></code>:</dt>
+<dd>Determines which sdf is loaded for the IIWA.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.get_camera_names">
+<code class="descname">get_camera_names</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; List[unicode]<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_camera_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the camera names / unique ids.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.get_camera_poses_in_world">
+<code class="descname">get_camera_poses_in_world</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, pydrake.math.RigidTransform]<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_camera_poses_in_world" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the camera poses.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.get_controller_plant">
+<code class="descname">get_controller_plant</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_controller_plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a reference to the plant used by the inverse dynamics
+controller (which contains only a model of the iiwa + equivalent mass
+of the gripper).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.get_multibody_plant">
+<code class="descname">get_multibody_plant</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_multibody_plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the main plant responsible for the dynamics of
+the robot and the environment. This can be used to, e.g., add
+additional elements into the world before calling Finalize().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.get_mutable_multibody_plant">
+<code class="descname">get_mutable_multibody_plant</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_mutable_multibody_plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the main plant responsible for the
+dynamics of the robot and the environment. This can be used to, e.g.,
+add additional elements into the world before calling Finalize().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.get_mutable_scene_graph">
+<code class="descname">get_mutable_scene_graph</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SceneGraph<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_mutable_scene_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable reference to the SceneGraph responsible for all of
+the geometry for the robot and the environment. This can be used to,
+e.g., add additional elements into the world before calling
+Finalize().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.get_scene_graph">
+<code class="descname">get_scene_graph</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SceneGraph<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_scene_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the SceneGraph responsible for all of the
+geometry for the robot and the environment. This can be used to, e.g.,
+add additional elements into the world before calling Finalize().</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.examples.manipulation_station.ManipulationStationHardwareInterface">
+<em class="property">class </em><code class="descclassname">pydrake.examples.manipulation_station.</code><code class="descname">ManipulationStationHardwareInterface</code><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStationHardwareInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></p>
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.Connect">
+<code class="descname">Connect</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStationHardwareInterface</em>, <em>wait_for_cameras: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.Connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts a thread to receive network messages, and blocks execution
+until the first messages have been received.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStationHardwareInterface</em>, <em>camera_names: List[unicode] = []</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subscribes to an incoming camera message on the channel
+DRAKE_RGBD_CAMERA_IMAGES_&lt;camera_id&gt; where <code class="docutils literal"><span class="pre">camera_name</span></code> contains
+the names/unique ids, typically serial numbers, and declares the
+output ports camera_%s_rgb_image and camera_%s_depth_image, where s is
+the camera name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.get_camera_names">
+<code class="descname">get_camera_names</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStationHardwareInterface</em><span class="sig-paren">)</span> &#x2192; List[unicode]<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.get_camera_names" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.get_controller_plant">
+<code class="descname">get_controller_plant</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStationHardwareInterface</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.get_controller_plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>For parity with ManipulationStation, we maintain a MultibodyPlant of
+the IIWA arm, with the lumped-mass equivalent spatial inertia of the
+Schunk WSG gripper.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.examples.multibody.html" class="btn btn-neutral float-right" title="pydrake.examples.multibody" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.examples.compass_gait.html" class="btn btn-neutral" title="pydrake.examples.compass_gait" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

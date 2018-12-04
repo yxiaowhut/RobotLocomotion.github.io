@@ -1,0 +1,4 @@
+var namespacedrake_1_1systems_1_1plants_1_1rigid__body__plant_1_1test =
+[
+    [ "ContactResultTestCommon", "classdrake_1_1systems_1_1plants_1_1rigid__body__plant_1_1test_1_1_contact_result_test_common.html", "classdrake_1_1systems_1_1plants_1_1rigid__body__plant_1_1test_1_1_contact_result_test_common" ]
+];

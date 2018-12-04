@@ -1,0 +1,1259 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.math &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="next" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="prev" title="pydrake.manipulation.simple_ui" href="pydrake.manipulation.simple_ui.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>pydrake.math</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.math">
+<span id="pydrake-math"></span><h1>pydrake.math<a class="headerlink" href="#module-pydrake.math" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for //math.</p>
+<dl class="class">
+<dt id="pydrake.math.BarycentricMesh">
+<em class="property">class </em><code class="descclassname">pydrake.math.</code><code class="descname">BarycentricMesh</code><a class="headerlink" href="#pydrake.math.BarycentricMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a multi-linear function (from vector inputs to vector
+outputs) by interpolating between points on a mesh using (triangular)
+barycentric interpolation.</p>
+<p>For a technical description of barycentric interpolation, see e.g.
+Remi Munos and Andrew Moore, “Barycentric Interpolators for Continuous
+Space and Time Reinforcement Learning”, NIPS 1998</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+</ul>
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.Eval">
+<code class="descname">Eval</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh, arg0: numpy.ndarray[float64[m, n], flags.f_contiguous], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.math.BarycentricMesh.Eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the function evaluated at <code class="docutils literal"><span class="pre">input</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.EvalBarycentricWeights">
+<code class="descname">EvalBarycentricWeights</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh, arg0: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[int32[m, 1]], numpy.ndarray[float64[m, 1]]]<a class="headerlink" href="#pydrake.math.BarycentricMesh.EvalBarycentricWeights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the mesh indices used for interpolation to <code class="docutils literal"><span class="pre">mesh_indices</span></code>,
+and the interpolating coefficients to <code class="docutils literal"><span class="pre">weights</span></code>. Inputs that are
+outside the bounding box of the input_grid are interpolated as though
+they were projected (elementwise) to the closest face of the defined
+mesh.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input</span></code>:</dt>
+<dd>must be a vector of length get_num_inputs().</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">mesh_indices</span></code>:</dt>
+<dd>is a pointer to a vector of length get_num_interpolants().</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">weights</span></code>:</dt>
+<dd>is a vector of coefficients (which sum to 1) of length
+get_num_interpolants().</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.MeshValuesFrom">
+<code class="descname">MeshValuesFrom</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh, arg0: Callable[[numpy.ndarray[float64[m, 1]]], numpy.ndarray[float64[m, 1]]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, n]]<a class="headerlink" href="#pydrake.math.BarycentricMesh.MeshValuesFrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates <code class="docutils literal"><span class="pre">vector_func</span></code> at all input mesh points and extracts the
+mesh value matrix that should be used to approximate the function with
+this barycentric interpolation.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MatrixXd</span> <span class="n">mesh_values</span> <span class="o">=</span> <span class="n">bary</span><span class="o">.</span><span class="n">MeshValuesFrom</span><span class="p">(</span>
+    <span class="p">[](</span><span class="n">const</span> <span class="n">auto</span><span class="o">&amp;</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Vector1d</span><span class="p">(</span><span class="n">std</span><span class="p">::</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span> <span class="p">});</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh, arg0: List[Set[float]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.math.BarycentricMesh.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.get_all_mesh_points">
+<code class="descname">get_all_mesh_points</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, n]]<a class="headerlink" href="#pydrake.math.BarycentricMesh.get_all_mesh_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a matrix with all of the mesh points, one per column.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.get_input_grid">
+<code class="descname">get_input_grid</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh</em><span class="sig-paren">)</span> &#x2192; List[Set[float]]<a class="headerlink" href="#pydrake.math.BarycentricMesh.get_input_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.get_input_size">
+<code class="descname">get_input_size</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.math.BarycentricMesh.get_input_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.get_mesh_point">
+<code class="descname">get_mesh_point</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.math.BarycentricMesh.get_mesh_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of a mesh point in the input space referenced by
+its scalar index to <code class="docutils literal"><span class="pre">point</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">index</span></code>:</dt>
+<dd>must be in [0, get_num_mesh_points).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.get_num_interpolants">
+<code class="descname">get_num_interpolants</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.math.BarycentricMesh.get_num_interpolants" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BarycentricMesh.get_num_mesh_points">
+<code class="descname">get_num_mesh_points</code><span class="sig-paren">(</span><em>self: pydrake.math.BarycentricMesh</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.math.BarycentricMesh.get_num_mesh_points" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.math.RigidTransform">
+<em class="property">class </em><code class="descclassname">pydrake.math.</code><code class="descname">RigidTransform</code><a class="headerlink" href="#pydrake.math.RigidTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a proper rigid transform between two frames
+which can be regarded in two ways. It can be regarded as a
+distance-preserving linear operator that can rotate and/or translate a
+rigid body without changing its shape or size (rigid) and without
+mirroring/reflecting the body (proper), e.g., it can add one position
+vector to another and express the result in a particular basis as
+<code class="docutils literal"><span class="pre">p_AoQ_A</span> <span class="pre">=</span> <span class="pre">X_AB</span> <span class="pre">*</span> <span class="pre">p_BoQ_B</span></code> (Q is any point). Alternately, a rigid
+transform describes the pose between two frames A and B (i.e., the
+relative orientation and position of A to B). Herein, the terms
+rotation/orientation and translation/position are used
+interchangeably. The class stores a RotationMatrix that relates
+right-handed orthogonal unit vectors Ax, Ay, Az fixed in frame A to
+right-handed orthogonal unit vectors Bx, By, Bz fixed in frame B. The
+class also stores a position vector from Ao (the origin of frame A) to
+Bo (the origin of frame B). The position vector is expressed in frame
+A. The monogram notation for the transform relating frame A to B is
+<code class="docutils literal"><span class="pre">X_AB</span></code>. The monogram notation for the rotation matrix relating A to
+B is <code class="docutils literal"><span class="pre">R_AB</span></code>. The monogram notation for the position vector from Ao
+to Bo is <code class="docutils literal"><span class="pre">p_AoBo_A</span></code>. See multibody_quantities for monogram notation
+for dynamics.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This class does not store the frames associated with the transform
+and cannot enforce correct usage of this class. For example, it
+makes sense to multiply RigidTransforms as <code class="docutils literal"><span class="pre">X_AB</span> <span class="pre">*</span> <span class="pre">X_BC</span></code>, but
+not <code class="docutils literal"><span class="pre">X_AB</span> <span class="pre">*</span> <span class="pre">X_CB</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This class is not a 4x4 transformation matrix – even though its
+operator*() methods act like 4x4 matrix multiplication. Instead,
+this class contains a rotation matrix class as well as a 3x1
+position vector. To form a 4x4 matrix, use GetAsMatrix().
+GetAsIsometry() is treated similarly.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An isometry is sometimes regarded as synonymous with rigid
+transform.</p>
+</div>
+<dl class="docutils">
+<dt>Authors:</dt>
+<dd>Paul Mitiguy (2018) Original author.</dd>
+<dt>Authors:</dt>
+<dd>Drake team (see <a class="reference external" href="https://drake.mit.edu/credits">https://drake.mit.edu/credits</a>).</dd>
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The underlying scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.GetAsIsometry3">
+<code class="descname">GetAsIsometry3</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Isometry3<a class="headerlink" href="#pydrake.math.RigidTransform.GetAsIsometry3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the isometry in ℜ³ that is equivalent to a RigidTransform.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.GetAsMatrix34">
+<code class="descname">GetAsMatrix34</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 4]]<a class="headerlink" href="#pydrake.math.RigidTransform.GetAsMatrix34" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the 3x4 matrix associated with this RigidTransform, i.e.,
+X_AB.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>┌                ┐
+ │ R_AB  p_AoBo_A │
+ └                ┘
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.GetAsMatrix4">
+<code class="descname">GetAsMatrix4</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[4, 4]]<a class="headerlink" href="#pydrake.math.RigidTransform.GetAsMatrix4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the 4x4 matrix associated with this RigidTransform, i.e.,
+X_AB.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>┌                ┐
+ │ R_AB  p_AoBo_A │
+ │                │
+ │   0      1     │
+ └                ┘
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.Identity">
+<code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform<a class="headerlink" href="#pydrake.math.RigidTransform.Identity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.SetFromIsometry3">
+<code class="descname">SetFromIsometry3</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em>, <em>pose: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.math.RigidTransform.SetFromIsometry3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal"><span class="pre">this</span></code> RigidTransform from an Eigen Isometry3.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">pose</span></code>:</dt>
+<dd>Isometry3 that contains an allegedly valid rotation matrix
+<code class="docutils literal"><span class="pre">R_AB</span></code> and also contains a position vector <code class="docutils literal"><span class="pre">p_AoBo_A</span></code> from
+frame A’s origin to frame B’s origin. <code class="docutils literal"><span class="pre">p_AoBo_A</span></code> must be
+expressed in frame A.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError in debug builds if R_AB is not a proper orthonormal</li>
+<li>3x3 rotation matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">no attempt is made to orthogonalize the 3x3 rotation matrix part
+of <code class="docutils literal"><span class="pre">pose</span></code>. As needed, use
+RotationMatrix::ProjectToRotationMatrix().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.SetIdentity">
+<code class="descname">SetIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform<a class="headerlink" href="#pydrake.math.RigidTransform.SetIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal"><span class="pre">this</span></code> RigidTransform so it corresponds to aligning the two
+frames so unit vectors Ax = Bx, Ay = By, Az = Bz and point Ao is
+coincident with Bo. Hence, <code class="docutils literal"><span class="pre">this</span></code> RigidTransform contains a 3x3
+identity matrix and a zero position vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RigidTransform.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.math.RigidTransform) -&gt; None</li>
+<li>__init__(self: pydrake.math.RigidTransform, R: drake::math::RotationMatrix&lt;double&gt;, p: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a RigidTransform from a rotation matrix and a position
+vector.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>rotation matrix relating frames A and B (e.g., <code class="docutils literal"><span class="pre">R_AB</span></code>).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p</span></code>:</dt>
+<dd>position vector from frame A’s origin to frame B’s origin,
+expressed in frame A. In monogram notation p is denoted
+<code class="docutils literal"><span class="pre">p_AoBo_A</span></code>.</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.math.RigidTransform, rpy: drake::math::RollPitchYaw&lt;double&gt;, p: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a RigidTransform from a RollPitchYaw and a position vector.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">rpy</span></code>:</dt>
+<dd>a RollPitchYaw which is a Space-fixed (extrinsic) X-Y-Z rotation
+with “roll-pitch-yaw” angles <code class="docutils literal"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> or equivalently a Body-
+fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
+<code class="docutils literal"><span class="pre">[y,</span> <span class="pre">p,</span> <span class="pre">r]</span></code>.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">RotationMatrix::RotationMatrix(const RollPitchYaw&lt;T&gt;&amp;)</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">p</span></code>:</dt>
+<dd>position vector from frame A’s origin to frame B’s origin,
+expressed in frame A. In monogram notation p is denoted
+<code class="docutils literal"><span class="pre">p_AoBo_A</span></code>.</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li>__init__(self: pydrake.math.RigidTransform, quaternion: pydrake.common.eigen_geometry.Quaternion, p: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a RigidTransform from a Quaternion and a position vector.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">quaternion</span></code>:</dt>
+<dd>a non-zero, finite quaternion which may or may not have unit
+length [i.e., <code class="docutils literal"><span class="pre">quaternion.norm()</span></code> does not have to be 1].</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p</span></code>:</dt>
+<dd>position vector from frame A’s origin to frame B’s origin,
+expressed in frame A. In monogram notation p is denoted
+<code class="docutils literal"><span class="pre">p_AoBo_A</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError in debug builds if the rotation matrix that is built</li>
+<li>from <code class="docutils literal"><span class="pre">quaternion</span></code> is invalid.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">RotationMatrix::RotationMatrix(const Eigen::Quaternion&lt;T&gt;&amp;)</p>
+</div>
+<ol class="arabic simple" start="5">
+<li>__init__(self: pydrake.math.RigidTransform, theta_lambda: pydrake.common.eigen_geometry.AngleAxis, p: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a RigidTransform from a AngleAxis and a position vector.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">theta_lambda</span></code>:</dt>
+<dd>an Eigen::AngleAxis whose associated axis (vector direction herein
+called <code class="docutils literal"><span class="pre">lambda</span></code>) is non-zero and finite, but which may or may
+not have unit length [i.e., <code class="docutils literal"><span class="pre">lambda.norm()</span></code> does not have to be
+1].</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p</span></code>:</dt>
+<dd>position vector from frame A’s origin to frame B’s origin,
+expressed in frame A. In monogram notation p is denoted <a href="#id1"><span class="problematic" id="id2">``</span></a>p_AoBo_A</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError in debug builds if the rotation matrix that is built</li>
+<li>from <cite>theta_lambda`</cite> is invalid.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">RotationMatrix::RotationMatrix(const Eigen::AngleAxis&lt;T&gt;&amp;)</p>
+</div>
+<ol class="arabic simple" start="6">
+<li>__init__(self: pydrake.math.RigidTransform, R: drake::math::RotationMatrix&lt;double&gt;) -&gt; None</li>
+</ol>
+<p>Constructs a RigidTransform with a given RotationMatrix and a zero
+position vector.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>rotation matrix relating frames A and B (e.g., <code class="docutils literal"><span class="pre">R_AB</span></code>).</dd>
+</dl>
+<ol class="arabic simple" start="7">
+<li>__init__(self: pydrake.math.RigidTransform, p: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a RigidTransform with an identity RotationMatrix and a
+given position vector ‘p’.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">p</span></code>:</dt>
+<dd>position vector from frame A’s origin to frame B’s origin,
+expressed in frame A. In monogram notation p is denoted
+<code class="docutils literal"><span class="pre">p_AoBo_A</span></code>.</dd>
+</dl>
+<ol class="arabic simple" start="8">
+<li>__init__(self: pydrake.math.RigidTransform, pose: pydrake.common.eigen_geometry.Isometry3) -&gt; None</li>
+</ol>
+<p>Constructs a RigidTransform from an Eigen Isometry3.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">pose</span></code>:</dt>
+<dd>Isometry3 that contains an allegedly valid rotation matrix
+<code class="docutils literal"><span class="pre">R_AB</span></code> and also contains a position vector <code class="docutils literal"><span class="pre">p_AoBo_A</span></code> from
+frame A’s origin to frame B’s origin. <code class="docutils literal"><span class="pre">p_AoBo_A</span></code> must be
+expressed in frame A.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError in debug builds if R_AB is not a proper orthonormal</li>
+<li>3x3 rotation matrix.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">no attempt is made to orthogonalize the 3x3 rotation matrix part
+of <code class="docutils literal"><span class="pre">pose</span></code>. As needed, use
+RotationMatrix::ProjectToRotationMatrix().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.inverse">
+<code class="descname">inverse</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform<a class="headerlink" href="#pydrake.math.RigidTransform.inverse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.multiply">
+<code class="descname">multiply</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RigidTransform.multiply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>multiply(self: pydrake.math.RigidTransform, other: pydrake.math.RigidTransform) -&gt; pydrake.math.RigidTransform</li>
+</ol>
+<p>Calculates <code class="docutils literal"><span class="pre">this</span></code> RigidTransform <code class="docutils literal"><span class="pre">X_AB</span></code> multiplied by <code class="docutils literal"><span class="pre">other</span></code>
+RigidTransform <code class="docutils literal"><span class="pre">X_BC</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform that post-multiplies <code class="docutils literal"><span class="pre">this</span></code>.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">X_AC</span></code>:</dt>
+<dd>= X_AB * X_BC</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>multiply(self: pydrake.math.RigidTransform, p_BoQ_B: numpy.ndarray[float64[3, 1]]) -&gt; numpy.ndarray[float64[3, 1]]</li>
+</ol>
+<p>Calculates <code class="docutils literal"><span class="pre">this</span></code> RigidTransform <code class="docutils literal"><span class="pre">X_AB</span></code> multiplied by the position
+vector ‘p_BoQ_B` which is from Bo (B’s origin) to an arbitrary point
+Q.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">p_BoQ_B</span></code>:</dt>
+<dd>position vector from Bo to Q, expressed in frame B.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">p_AoQ_A</span></code>:</dt>
+<dd>position vector from Ao to Q, expressed in frame A.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.rotation">
+<code class="descname">rotation</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; drake::math::RotationMatrix&lt;double&gt;<a class="headerlink" href="#pydrake.math.RigidTransform.rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns R_AB, the rotation matrix portion of <code class="docutils literal"><span class="pre">this</span></code> RigidTransform.</p>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal"><span class="pre">R_AB</span></code>:</dt>
+<dd>the rotation matrix portion of <code class="docutils literal"><span class="pre">this</span></code> RigidTransform.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform, R: drake::math::RotationMatrix&lt;double&gt;, p: numpy.ndarray[float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.math.RigidTransform.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal"><span class="pre">this</span></code> RigidTransform from a RotationMatrix and a position
+vector.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>rotation matrix relating frames A and B (e.g., <code class="docutils literal"><span class="pre">R_AB</span></code>).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p</span></code>:</dt>
+<dd>position vector from frame A’s origin to frame B’s origin,
+expressed in frame A. In monogram notation p is denoted
+<code class="docutils literal"><span class="pre">p_AoBo_A</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.set_rotation">
+<code class="descname">set_rotation</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em>, <em>R: drake::math::RotationMatrix&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.math.RigidTransform.set_rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> RigidTransform.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>rotation matrix relating frames A and B (e.g., <code class="docutils literal"><span class="pre">R_AB</span></code>).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.set_translation">
+<code class="descname">set_translation</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform, p: numpy.ndarray[float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.math.RigidTransform.set_translation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the position vector portion of <code class="docutils literal"><span class="pre">this</span></code> RigidTransform.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">p</span></code>:</dt>
+<dd>position vector from Ao (frame A’s origin) to Bo (frame B’s
+origin) expressed in frame A. In monogram notation p is denoted
+p_AoBo_A.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform.translation">
+<code class="descname">translation</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.math.RigidTransform.translation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">p_AoBo_A</span></code>, the position vector portion of <code class="docutils literal"><span class="pre">this</span></code>
+RigidTransform, i.e., position vector from Ao (frame A’s origin) to Bo
+(frame B’s origin).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.math.RollPitchYaw">
+<em class="property">class </em><code class="descclassname">pydrake.math.</code><code class="descname">RollPitchYaw</code><a class="headerlink" href="#pydrake.math.RollPitchYaw" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.math.RollPitchYaw.ToQuaternion">
+<code class="descname">ToQuaternion</code><span class="sig-paren">(</span><em>self: pydrake.math.RollPitchYaw</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion<a class="headerlink" href="#pydrake.math.RollPitchYaw.ToQuaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a quaternion representation of <code class="docutils literal"><span class="pre">this</span></code> RollPitchYaw.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RollPitchYaw.ToRotationMatrix">
+<code class="descname">ToRotationMatrix</code><span class="sig-paren">(</span><em>self: pydrake.math.RollPitchYaw</em><span class="sig-paren">)</span> &#x2192; drake::math::RotationMatrix&lt;double&gt;<a class="headerlink" href="#pydrake.math.RollPitchYaw.ToRotationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the RotationMatrix representation of <code class="docutils literal"><span class="pre">this</span></code> RollPitchYaw.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RollPitchYaw.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RollPitchYaw.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.math.RollPitchYaw, rpy: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a RollPitchYaw from a 3x1 array of angles.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">rpy</span></code>:</dt>
+<dd>3x1 array with roll, pitch, yaw angles (units of radians).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in debug builds if !IsValid(rpy).</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.math.RollPitchYaw, roll: float, pitch: float, yaw: float) -&gt; None</li>
+</ol>
+<p>Constructs a RollPitchYaw from roll, pitch, yaw angles (radian units).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">roll</span></code>:</dt>
+<dd>x-directed angle in SpaceXYZ rotation sequence.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">pitch</span></code>:</dt>
+<dd>y-directed angle in SpaceXYZ rotation sequence.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">yaw</span></code>:</dt>
+<dd>z-directed angle in SpaceXYZ rotation sequence.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError in debug builds if !IsValid(Vector3&lt;T&gt;(roll, pitch,</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">yaw)).</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.math.RollPitchYaw, R: drake::math::RotationMatrix&lt;double&gt;) -&gt; None</li>
+</ol>
+<p>Uses a RotationMatrix to construct a RollPitchYaw with roll-pitch-yaw
+angles <code class="docutils literal"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>, <cite>-π/2 &lt;= p &lt;= π/2,
+`</cite>-π &lt;= y &lt;= π``.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>a RotationMatrix.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This new high-accuracy algorithm avoids numerical round-off issues
+encountered by some algorithms when pitch is within 1E-6 of π/2 or
+-π/2.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li>__init__(self: pydrake.math.RollPitchYaw, quaternion: pydrake.common.eigen_geometry.Quaternion) -&gt; None</li>
+</ol>
+<p>Uses a Quaternion to construct a RollPitchYaw with roll-pitch-yaw
+angles <code class="docutils literal"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> in the range <code class="docutils literal"><span class="pre">-π</span> <span class="pre">&lt;=</span> <span class="pre">r</span> <span class="pre">&lt;=</span> <span class="pre">π</span></code>, <cite>-π/2 &lt;= p &lt;= π/2,
+`</cite>-π &lt;= y &lt;= π``.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">quaternion</span></code>:</dt>
+<dd>unit Quaternion.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This new high-accuracy algorithm avoids numerical round-off issues
+encountered by some algorithms when pitch is within 1E-6 of π/2 or
+-π/2.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in debug builds if !IsValid(rpy).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RollPitchYaw.pitch_angle">
+<code class="descname">pitch_angle</code><span class="sig-paren">(</span><em>self: pydrake.math.RollPitchYaw</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.RollPitchYaw.pitch_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the pitch-angle underlying <code class="docutils literal"><span class="pre">this</span></code> RollPitchYaw.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RollPitchYaw.roll_angle">
+<code class="descname">roll_angle</code><span class="sig-paren">(</span><em>self: pydrake.math.RollPitchYaw</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.RollPitchYaw.roll_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the roll-angle underlying <code class="docutils literal"><span class="pre">this</span></code> RollPitchYaw.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RollPitchYaw.vector">
+<code class="descname">vector</code><span class="sig-paren">(</span><em>self: pydrake.math.RollPitchYaw</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.math.RollPitchYaw.vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Vector3 underlying <code class="docutils literal"><span class="pre">this</span></code> RollPitchYaw.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RollPitchYaw.yaw_angle">
+<code class="descname">yaw_angle</code><span class="sig-paren">(</span><em>self: pydrake.math.RollPitchYaw</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.RollPitchYaw.yaw_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the yaw-angle underlying <code class="docutils literal"><span class="pre">this</span></code> RollPitchYaw.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.math.RotationMatrix">
+<em class="property">class </em><code class="descclassname">pydrake.math.</code><code class="descname">RotationMatrix</code><a class="headerlink" href="#pydrake.math.RotationMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents a 3x3 rotation matrix between two arbitrary
+frames A and B and helps ensure users create valid rotation matrices.
+This class relates right-handed orthogonal unit vectors Ax, Ay, Az
+fixed in frame A to right-handed orthogonal unit vectors Bx, By, Bz
+fixed in frame B. The monogram notation for the rotation matrix
+relating A to B is <code class="docutils literal"><span class="pre">R_AB</span></code>. An example that gives context to this
+rotation matrix is <code class="docutils literal"><span class="pre">v_A</span> <span class="pre">=</span> <span class="pre">R_AB</span> <span class="pre">*</span> <span class="pre">v_B</span></code>, where <code class="docutils literal"><span class="pre">v_B</span></code> denotes an
+arbitrary vector v expressed in terms of Bx, By, Bz and <code class="docutils literal"><span class="pre">v_A</span></code>
+denotes vector v expressed in terms of Ax, Ay, Az. See
+multibody_quantities for monogram notation for dynamics. See
+orientation_discussion “a discussion on rotation matrices”.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This class does not store the frames associated with a rotation
+matrix nor does it enforce strict proper usage of this class with
+vectors.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When DRAKE_ASSERT_IS_ARMED is defined, several methods in this
+class do a validity check and throw an exception (RuntimeError) if
+the rotation matrix is invalid. When DRAKE_ASSERT_IS_ARMED is not
+defined, many of these validity checks are skipped (which helps
+improve speed). In addition, these validity tests are only
+performed for scalar types for which
+drake::scalar_predicate&lt;T&gt;::is_bool is <code class="docutils literal"><span class="pre">True</span></code>. For instance,
+validity checks are not performed when T is symbolic::Expression.</p>
+</div>
+<dl class="docutils">
+<dt>Authors:</dt>
+<dd>Paul Mitiguy (2018) Original author.</dd>
+<dt>Authors:</dt>
+<dd>Drake team (see <a class="reference external" href="https://drake.mit.edu/credits">https://drake.mit.edu/credits</a>).</dd>
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The underlying scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+<li>symbolic::Expression</li>
+</ul>
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix.Identity">
+<code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix<a class="headerlink" href="#pydrake.math.RotationMatrix.Identity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix.ToQuaternion">
+<code class="descname">ToQuaternion</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion<a class="headerlink" href="#pydrake.math.RotationMatrix.ToQuaternion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RotationMatrix.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.math.RotationMatrix) -&gt; None</li>
+</ol>
+<p>Constructs a 3x3 identity RotationMatrix – which corresponds to
+aligning two frames (so that unit vectors Ax = Bx, Ay = By, Az = Bz).</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.math.RotationMatrix, R: numpy.ndarray[float64[3, 3]]) -&gt; None</li>
+</ol>
+<p>Constructs a RotationMatrix from a Matrix3.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>an allegedly valid rotation matrix.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError in debug builds if R fails IsValid(R).</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.math.RotationMatrix, quaternion: pydrake.common.eigen_geometry.Quaternion) -&gt; None</li>
+</ol>
+<p>Constructs a RotationMatrix from an Eigen::Quaternion.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">quaternion</span></code>:</dt>
+<dd>a non-zero, finite quaternion which may or may not have unit
+length [i.e., <code class="docutils literal"><span class="pre">quaternion.norm()</span></code> does not have to be 1].</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError in debug builds if the rotation matrix R that is</li>
+<li>built from <code class="docutils literal"><span class="pre">quaternion</span></code> fails IsValid(R). For example, an</li>
+<li>exception is thrown if <code class="docutils literal"><span class="pre">quaternion</span></code> is zero or contains a NaN or</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">infinity.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method has the effect of normalizing its <code class="docutils literal"><span class="pre">quaternion</span></code>
+argument, without the inefficiency of the square-root associated
+with normalization.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li>__init__(self: pydrake.math.RotationMatrix, rpy: pydrake.math.RollPitchYaw) -&gt; None</li>
+</ol>
+<p>Constructs a RotationMatrix from an RollPitchYaw. In other words,
+makes the RotationMatrix for a Space-fixed (extrinsic) X-Y-Z rotation
+by “roll-pitch-yaw” angles <code class="docutils literal"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code>, which is equivalent to a
+Body-fixed (intrinsic) Z-Y-X rotation by “yaw-pitch-roll” angles <code class="docutils literal"><span class="pre">[y,</span>
+<span class="pre">p,</span> <span class="pre">r]</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">rpy</span></code>:</dt>
+<dd>radian measures of three angles [roll, pitch, yaw].</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">rpy</span></code>:</dt>
+<dd>a RollPitchYaw which is a Space-fixed (extrinsic) X-Y-Z rotation
+with “roll-pitch-yaw” angles <code class="docutils literal"><span class="pre">[r,</span> <span class="pre">p,</span> <span class="pre">y]</span></code> or equivalently a Body-
+fixed (intrinsic) Z-Y-X rotation with “yaw-pitch-roll” angles
+<code class="docutils literal"><span class="pre">[y,</span> <span class="pre">p,</span> <span class="pre">r]</span></code>.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Denoting roll <code class="docutils literal"><span class="pre">r</span></code>, pitch <code class="docutils literal"><span class="pre">p</span></code>, yaw <code class="docutils literal"><span class="pre">y</span></code>, this method returns a
+rotation matrix <code class="docutils literal"><span class="pre">R_AD</span></code> equal to the matrix multiplication shown
+below.</p>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>⎡cos(y) -sin(y)  0⎤   ⎡ cos(p)  0  sin(p)⎤   ⎡1      0        0 ⎤
+R_AD = ⎢sin(y)  cos(y)  0⎥ * ⎢     0   1      0 ⎥ * ⎢0  cos(r)  -sin(r)⎥
+       ⎣    0       0   1⎦   ⎣-sin(p)  0  cos(p)⎦   ⎣0  sin(r)   cos(r)⎦
+     =       R_AB          *        R_BC          *        R_CD
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In this discussion, A is the Space frame and D is the Body frame.
+One way to visualize this rotation sequence is by introducing
+intermediate frames B and C (useful constructs to understand this
+rotation sequence). Initially, the frames are aligned so <code class="docutils literal"><span class="pre">Di</span> <span class="pre">=</span> <span class="pre">Ci</span>
+<span class="pre">=</span> <span class="pre">Bi</span> <span class="pre">=</span> <span class="pre">Ai</span> <span class="pre">(i</span> <span class="pre">=</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code>. Then D is subjected to successive
+right-handed rotations relative to A.</p>
+</div>
+<ul class="simple">
+<li>1st rotation R_CD: Frame D rotates relative to frames C, B, A by a</li>
+</ul>
+<p>roll angle <code class="docutils literal"><span class="pre">r</span></code> about <code class="docutils literal"><span class="pre">Dx</span> <span class="pre">=</span> <span class="pre">Cx</span></code>.  Note: D and C are no longer aligned.</p>
+<ul class="simple">
+<li>2nd rotation R_BC: Frames D, C (collectively – as if welded together)</li>
+</ul>
+<p>rotate relative to frame B, A by a pitch angle <code class="docutils literal"><span class="pre">p</span></code> about <code class="docutils literal"><span class="pre">Cy</span> <span class="pre">=</span> <span class="pre">By</span></code>.
+Note: C and B are no longer aligned.</p>
+<ul class="simple">
+<li>3rd rotation R_AB: Frames D, C, B (collectively – as if welded)</li>
+</ul>
+<p>rotate relative to frame A by a roll angle <code class="docutils literal"><span class="pre">y</span></code> about <code class="docutils literal"><span class="pre">Bz</span> <span class="pre">=</span> <span class="pre">Az</span></code>.
+Note: B and A are no longer aligned.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix.inverse">
+<code class="descname">inverse</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix<a class="headerlink" href="#pydrake.math.RotationMatrix.inverse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix.matrix">
+<code class="descname">matrix</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 3]]<a class="headerlink" href="#pydrake.math.RotationMatrix.matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Matrix3 underlying a RotationMatrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix.multiply">
+<code class="descname">multiply</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix</em>, <em>arg0: pydrake.math.RotationMatrix</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix<a class="headerlink" href="#pydrake.math.RotationMatrix.multiply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal"><span class="pre">this</span></code> rotation matrix <code class="docutils literal"><span class="pre">R_AB</span></code> multiplied by <code class="docutils literal"><span class="pre">other</span></code>
+rotation matrix <code class="docutils literal"><span class="pre">R_BC</span></code>, returning the composition <code class="docutils literal"><span class="pre">R_AB</span> <span class="pre">*</span> <span class="pre">R_BC</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">other</span></code>:</dt>
+<dd>RotationMatrix that post-multiplies <code class="docutils literal"><span class="pre">this</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">rotation matrix that results from <code class="docutils literal"><span class="pre">this</span></code> multiplied by
+<code class="docutils literal"><span class="pre">other</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rotation
+matrix by accumulating round-off error with a large number of
+multiplies.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.abs">
+<code class="descclassname">pydrake.math.</code><code class="descname">abs</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.abs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>abs(arg0: float) -&gt; float</li>
+<li>abs(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>abs(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.acos">
+<code class="descclassname">pydrake.math.</code><code class="descname">acos</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.acos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>acos(arg0: float) -&gt; float</li>
+<li>acos(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>acos(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.asin">
+<code class="descclassname">pydrake.math.</code><code class="descname">asin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.asin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>asin(arg0: float) -&gt; float</li>
+<li>asin(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>asin(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.atan">
+<code class="descclassname">pydrake.math.</code><code class="descname">atan</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.atan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>atan(arg0: float) -&gt; float</li>
+<li>atan(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.atan2">
+<code class="descclassname">pydrake.math.</code><code class="descname">atan2</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.atan2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>atan2(y: float, x: float) -&gt; float</li>
+<li>atan2(arg0: pydrake.autodiffutils.AutoDiffXd, arg1: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>atan2(arg0: pydrake.symbolic.Expression, arg1: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.ceil">
+<code class="descclassname">pydrake.math.</code><code class="descname">ceil</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.ceil" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ceil(arg0: float) -&gt; float</li>
+<li>ceil(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; float</li>
+<li>ceil(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.cos">
+<code class="descclassname">pydrake.math.</code><code class="descname">cos</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.cos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>cos(arg0: float) -&gt; float</li>
+<li>cos(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>cos(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.cosh">
+<code class="descclassname">pydrake.math.</code><code class="descname">cosh</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.cosh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>cosh(arg0: float) -&gt; float</li>
+<li>cosh(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>cosh(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.exp">
+<code class="descclassname">pydrake.math.</code><code class="descname">exp</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>exp(arg0: float) -&gt; float</li>
+<li>exp(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>exp(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.floor">
+<code class="descclassname">pydrake.math.</code><code class="descname">floor</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.floor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>floor(arg0: float) -&gt; float</li>
+<li>floor(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; float</li>
+<li>floor(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.log">
+<code class="descclassname">pydrake.math.</code><code class="descname">log</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>log(arg0: float) -&gt; float</li>
+<li>log(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>log(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.max">
+<code class="descclassname">pydrake.math.</code><code class="descname">max</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>max(arg0: float, arg1: float) -&gt; float</li>
+<li>max(arg0: pydrake.autodiffutils.AutoDiffXd, arg1: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>max(arg0: pydrake.symbolic.Expression, arg1: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.min">
+<code class="descclassname">pydrake.math.</code><code class="descname">min</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>min(arg0: float, arg1: float) -&gt; float</li>
+<li>min(arg0: pydrake.autodiffutils.AutoDiffXd, arg1: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>min(arg0: pydrake.symbolic.Expression, arg1: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.pow">
+<code class="descclassname">pydrake.math.</code><code class="descname">pow</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.pow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>pow(arg0: float, arg1: float) -&gt; float</li>
+<li>pow(arg0: pydrake.autodiffutils.AutoDiffXd, arg1: int) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>pow(arg0: pydrake.symbolic.Expression, arg1: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.sin">
+<code class="descclassname">pydrake.math.</code><code class="descname">sin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.sin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>sin(arg0: float) -&gt; float</li>
+<li>sin(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>sin(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.sinh">
+<code class="descclassname">pydrake.math.</code><code class="descname">sinh</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.sinh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>sinh(arg0: float) -&gt; float</li>
+<li>sinh(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>sinh(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.sqrt">
+<code class="descclassname">pydrake.math.</code><code class="descname">sqrt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.sqrt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>sqrt(arg0: float) -&gt; float</li>
+<li>sqrt(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>sqrt(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.tan">
+<code class="descclassname">pydrake.math.</code><code class="descname">tan</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.tan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>tan(arg0: float) -&gt; float</li>
+<li>tan(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>tan(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.tanh">
+<code class="descclassname">pydrake.math.</code><code class="descname">tanh</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.tanh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>tanh(arg0: float) -&gt; float</li>
+<li>tanh(arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</li>
+<li>tanh(arg0: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+</ol>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.math.wrap_to">
+<code class="descclassname">pydrake.math.</code><code class="descname">wrap_to</code><span class="sig-paren">(</span><em>value: float</em>, <em>low: float</em>, <em>high: float</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.wrap_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>For variables that are meant to be periodic, (e.g. over a 2π
+interval), wraps <code class="docutils literal"><span class="pre">value</span></code> into the interval <code class="docutils literal"><span class="pre">[low,</span> <span class="pre">high)</span></code>.
+Precisely, <code class="docutils literal"><span class="pre">wrap_to</span></code> returns: value + k*(high-low) for the unique
+integer value <code class="docutils literal"><span class="pre">k</span></code> that lands the output in the desired interval.
+<code class="docutils literal"><span class="pre">low</span></code> and <code class="docutils literal"><span class="pre">high</span></code> must be finite, and low &lt; high.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.html" class="btn btn-neutral float-right" title="pydrake.multibody" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.manipulation.simple_ui.html" class="btn btn-neutral" title="pydrake.manipulation.simple_ui" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

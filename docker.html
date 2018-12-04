@@ -1,0 +1,323 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Building Drake in a Docker Container &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Drake Gallery" href="gallery.html" />
+    <link rel="prev" title="Bazel build system" href="bazel.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="gallery.html" title="Drake Gallery"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bazel.html" title="Bazel build system"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="installation.html" accesskey="U">Installation and Quickstart</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="building-drake-in-a-docker-container">
+<span id="docker-entry"></span><h1>Building Drake in a Docker Container<a class="headerlink" href="#building-drake-in-a-docker-container" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<span id="docker-intro"></span><h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Docker containers have emerged as a solution to running code or services in a
+way that is isolated from the host operating system. This allows code to be
+compiled and run on systems running unsupported operating systems or with
+incompatible configurations to the software dependencies. Docker is available
+for <a class="reference external" href="https://www.docker.com/community-edition">all major operating systems</a>.</p>
+<p>Two Docker containers are provided with Drake to allow developers to test and
+develop without needing to configure a supported operating system. These
+containers will build Drake in isolated Ubuntu 16.04 environments.</p>
+<p>The Nvidia Dockerfile is based upon the nvidia docker plugin base image, which
+also contains CUDA support. The opensource Dockerfile is based on the
+the vanilla Ubuntu 16.04 image and is intended to support opensource graphics
+card drivers such as nouveau and intel. Should you need to build inside of
+another base image (FROM line in the Dockerfile), they are available <a class="reference external" href="https://hub.docker.com/explore/">here</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This docker image is provided as an experimental feature and is not
+presently covered by continuous integration.</p>
+<p>However, there are downstream usages of Drake within a Docker container:</p>
+<ul class="last simple">
+<li><a class="reference external" href="http://underactuated.csail.mit.edu/Spring2018/install_drake_docker.html">Underactuated Robotics Drake Docker Instructions</a>,
+used by many students across all nooks and crannies of Windows, Mac, Linux.</li>
+<li><a class="reference external" href="https://github.com/RobotLocomotion/spartan/blob/master/setup/docker/README.md">Spartan’s Docker Build</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="getting-started">
+<span id="docker-getting-started"></span><h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>In order to get docker installed, please follow guides specific to your
+operating system. The typical steps are:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Install docker from your distribution’s package manager or official installer
+from <a class="reference external" href="https://store.docker.com/search?type=edition&amp;offering=community">Docker</a></li>
+<li>Enable Docker to run as a daemon/service</li>
+<li>Add appropriate users to the docker group to give permissions to interact
+with the Docker service</li>
+<li>Log out and back in to update user groups</li>
+<li>Happy dockering!</li>
+</ol>
+</div></blockquote>
+<p>These steps on Ubuntu 16.04 x86_64 are:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ wget https://download.docker.com/linux/ubuntu/dists/xenial/pool/stable/amd64/docker-ce_17.03.1~ce-0~ubuntu-xenial_amd64.deb
+$ sudo dpkg -i docker-ce_17.03.1~ce-0~ubuntu-xenial_amd64.deb
+$ sudo systemctl start docker
+$ sudo usermod -aG docker &lt;username&gt;
+</pre></div>
+</div>
+<p>Log out and then back in.</p>
+</div>
+<div class="section" id="building">
+<span id="docker-building"></span><h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h2>
+<p>Clone the Drake source code as described in
+<a class="reference internal" href="from_source.html#getting-drake"><span class="std std-ref">Getting Drake</span></a>.</p>
+<p>The the following build commands will copy the full <code class="docutils literal"><span class="pre">drake</span></code> directory
+from your host machine into the Docker container where it may be built and run.</p>
+<div class="section" id="nvidia">
+<h3>Nvidia<a class="headerlink" href="#nvidia" title="Permalink to this headline">¶</a></h3>
+<p>When using the Nvidia proprietary drivers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd drake
+$ docker build -t drake -f setup/docker/Dockerfile.ubuntu16.04.nvidia .
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-source">
+<h3>Open Source<a class="headerlink" href="#open-source" title="Permalink to this headline">¶</a></h3>
+<p>When using open source video drivers (nouveau, intel, …):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd drake
+$ docker build -t drake -f setup/docker/Dockerfile.ubuntu16.04.opensource .
+</pre></div>
+</div>
+<p>If successful, <code class="docutils literal"><span class="pre">docker</span> <span class="pre">images</span></code> should show an image named drake and
+<code class="docutils literal"><span class="pre">docker</span> <span class="pre">ps</span></code> will show any running Docker containers on your system.</p>
+</div>
+</div>
+<div class="section" id="running">
+<span id="docker-running"></span><h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
+<p id="docker-running-simulation">The simplest run command is</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ docker run -it drake bash
+</pre></div>
+</div>
+<p>which will give you bash shell access to the Ubuntu 16.04 Docker container
+where you can run commands such as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd /drake
+$ bazel build //...
+$ bazel test //...
+</pre></div>
+</div>
+<p>These commands will build all packages using bazel and run all tests.</p>
+<div class="section" id="graphical-interface">
+<h3>Graphical Interface<a class="headerlink" href="#graphical-interface" title="Permalink to this headline">¶</a></h3>
+<p>The run command in order to get graphical interfaces from the Docker container
+is a bit more involved. Two systems are described below one with Nvidia
+proprietary graphics card drivers and one with open source drivers like Nouveau
+and Intel.</p>
+<div class="section" id="nvidia-drivers">
+<span id="docker-running-simulation-nvidia"></span><h4>Nvidia drivers:<a class="headerlink" href="#nvidia-drivers" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference external" href="https://github.com/NVIDIA/nvidia-docker/">nvidia-docker</a> plugin is
+required in order to pass Xorg drawing commands to your host system when the
+proprietary Nvidia GPU drivers are installed. To install Nvidia GPU drivers with
+apt on Ubuntu 16.04:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ sudo apt install nvidia-361 nvidia-modprobe
+</pre></div>
+</div>
+<p>To install nvidia-docker on Ubuntu 16.04:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb
+$ sudo dpkg -i /tmp/nvidia-docker*.deb &amp;&amp; rm /tmp/nvidia-docker*.deb
+$ nvidia-docker run --rm nvidia/cuda nvidia-smi
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ xhost +local:root; nvidia-docker run -i --rm -e DISPLAY \
+-e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix \
+--privileged -t drake; xhost -local:root
+</pre></div>
+</div>
+<p>The default command defined behavior will start the Drake visualizer and run
+the bowling ball simulation.</p>
+<p>Walking through this command:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">xhost</span> <span class="pre">+local:root</span></code> will allow access for non-network connections to your
+local X server and pass the necessary X11 parameters for graphical display of
+programs within the Docker container.</li>
+<li><code class="docutils literal"><span class="pre">docker-nvidia</span></code> is an Nvidia plugin that couples with the proprietary
+Nvidia drivers and gives access to advanced features like CUDA.</li>
+<li><code class="docutils literal"><span class="pre">-i</span></code> assigns a tty for interactive text connections within the console.</li>
+<li><code class="docutils literal"><span class="pre">--rm</span></code> will clean up after the image, omit this to allow the container’s
+file system to persist.</li>
+<li><code class="docutils literal"><span class="pre">-e</span> <span class="pre">DISPLAY</span></code> forwards your host DISPLAY environment variable to the Docker
+container.</li>
+<li><code class="docutils literal"><span class="pre">-e</span> <span class="pre">QT_X11_NO_MITSHM=1</span></code> specifies to not use the MIT magic cookie.</li>
+<li><code class="docutils literal"><span class="pre">-v</span> <span class="pre">/tmp/.X11-unix:/tmp/.X11-unix</span></code> shares the host .X11 interface with the
+Docker container as a volume.</li>
+<li><code class="docutils literal"><span class="pre">--privileged</span></code> is only needed on selinux systems.</li>
+<li><code class="docutils literal"><span class="pre">-t</span> <span class="pre">drake</span></code> provides the Docker container name, and</li>
+<li><code class="docutils literal"><span class="pre">xhost</span> <span class="pre">-local:root</span></code> removes the permission given earlier for local
+non-network connections to X.</li>
+</ul>
+<p>See the <a class="reference external" href="https://docs.docker.com/engine/reference/run/">Docker Run Reference</a> for more information on
+run options.</p>
+<p>It is also possible to enter a bash shell for interactive development with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ xhost +local:root; nvidia-docker run -i --rm -e DISPLAY \
+-e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix \
+--privileged -t drake bash; xhost -local:root
+</pre></div>
+</div>
+<p>where you may want to try various demonstrations, e.g.:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd /drake
+$ bazel run //examples/contact_model:bowling_ball
+$ bazel run //examples/kuka_iiwa_arm:kuka_simulation
+$ bazel run //examples/kuka_iiwa_arm/dev/monolithic_pick_and_place:monolithic_pick_and_place_demo
+</pre></div>
+</div>
+<p>Note: these are currently not rendering properly due to VTK .obj/.mtl importing.</p>
+</div>
+</div>
+<div class="section" id="open-source-drivers">
+<span id="docker-running-simulation-open"></span><h3>Open source drivers:<a class="headerlink" href="#open-source-drivers" title="Permalink to this headline">¶</a></h3>
+<p>With open source graphics drivers like Nouveau and Intel you do not need the
+nvidia-docker plugin.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ xhost +local:root; docker run -i --rm -e DISPLAY \
+-e QT_X11_NO_MITSHM=1 -v /tmp/.X11-unix:/tmp/.X11-unix \
+--privileged -t drake; xhost -local:root
+</pre></div>
+</div>
+</div>
+<div class="section" id="sharing-files-between-host-and-docker">
+<h3>Sharing Files Between Host and Docker:<a class="headerlink" href="#sharing-files-between-host-and-docker" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to interactively develop and compile within the Docker container.
+Several options exist for retaining code altered or generated within the
+Docker image:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/cp/">docker cp</a> can
+be used to copy files into and out of a running image.</li>
+<li><a class="reference external" href="https://docs.docker.com/storage/volumes/#choose-the--v-or-mount-flag">-v, –volume</a>
+can be used to mount a host directory inside the Docker image at the expense
+of file system isolation. Or you can use git commands interactively inside the
+container to push code changes directly to a repository.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Building Drake in a Docker Container</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li><a class="reference internal" href="#building">Building</a><ul>
+<li><a class="reference internal" href="#nvidia">Nvidia</a></li>
+<li><a class="reference internal" href="#open-source">Open Source</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running">Running</a><ul>
+<li><a class="reference internal" href="#graphical-interface">Graphical Interface</a><ul>
+<li><a class="reference internal" href="#nvidia-drivers">Nvidia drivers:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#open-source-drivers">Open source drivers:</a></li>
+<li><a class="reference internal" href="#sharing-files-between-host-and-docker">Sharing Files Between Host and Docker:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="gallery.html" title="Drake Gallery"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bazel.html" title="Bazel build system"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="installation.html" >Installation and Quickstart</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

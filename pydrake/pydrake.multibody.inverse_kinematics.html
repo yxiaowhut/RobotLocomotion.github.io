@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.inverse_kinematics &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.multibody.joints" href="pydrake.multibody.joints.html"/>
+        <link rel="prev" title="pydrake.multibody.collision" href="pydrake.multibody.collision.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.shapes.html">pydrake.multibody.shapes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.inverse_kinematics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.inverse_kinematics">
+<span id="pydrake-multibody-inverse-kinematics"></span><h1>pydrake.multibody.inverse_kinematics<a class="headerlink" href="#module-pydrake.multibody.inverse_kinematics" title="Permalink to this headline">¶</a></h1>
+<p>InverseKinematics module</p>
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">InverseKinematics</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves an inverse kinematics (IK) problem on a MultibodyPlant, to find
+the postures of the robot satisfying certain constraints. The decision
+variables include the generalized position of the robot.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsConstraint">
+<code class="descname">AddAngleBetweenVectorsConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.multibody_tree.Frame, na_A: numpy.ndarray[float64[3, 1]], frameB: pydrake.multibody.multibody_tree.Frame, nb_B: numpy.ndarray[float64[3, 1]], angle_lower: float, angle_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrains that the angle between a vector na and another vector nb is
+between [θ_lower, θ_upper]. na is fixed to a frame A, while nb is
+fixed to a frame B. Mathematically, if we denote na_unit_A as na
+expressed in frame A after normalization (na_unit_A has unit length),
+and nb_unit_B as nb expressed in frame B after normalization, the
+constraint is cos(θ_upper) ≤ na_unit_Aᵀ * R_AB * nb_unit_B ≤
+cos(θ_lower), where R_AB is the rotation matrix, representing the
+orientation of frame B expressed in frame A.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame to which na is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">na_A</span></code>:</dt>
+<dd>The vector na fixed to frame A, expressed in frame A.</dd>
+<dt>Precondition:</dt>
+<dd>na_A should be a non-zero vector.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if na_A is close to zero.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame to which nb is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">nb_B</span></code>:</dt>
+<dd>The vector nb fixed to frame B, expressed in frame B.</dd>
+<dt>Precondition:</dt>
+<dd>nb_B should be a non-zero vector.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if nb_B is close to zero.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">angle_lower</span></code>:</dt>
+<dd>The lower bound on the angle between na and nb. It is denoted as
+θ_lower in the documentation. <code class="docutils literal"><span class="pre">angle_lower</span></code> is in radians.</dd>
+<dt>Precondition:</dt>
+<dd>angle_lower &gt;= 0.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if angle_lower is negative.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">angle_upper</span></code>:</dt>
+<dd>The upper bound on the angle between na and nb. it is denoted as
+θ_upper in the class documentation. <code class="docutils literal"><span class="pre">angle_upper</span></code> is in radians.</dd>
+<dt>Precondition:</dt>
+<dd>angle_lower &lt;= angle_upper &lt;= pi.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if angle_upper is outside the bounds.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddGazeTargetConstraint">
+<code class="descname">AddGazeTargetConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.multibody_tree.Frame, p_AS: numpy.ndarray[float64[3, 1]], n_A: numpy.ndarray[float64[3, 1]], frameB: pydrake.multibody.multibody_tree.Frame, p_BT: numpy.ndarray[float64[3, 1]], cone_half_angle: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddGazeTargetConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrains a target point T to be within a cone K. The point T (“T”
+stands for “target”) is fixed in a frame B, with position p_BT. The
+cone originates from a point S (“S” stands for “source”), fixed in
+frame A with position p_AS, with the axis of the cone being n, also
+fixed in frame A. The half angle of the cone is θ. A common usage of
+this constraint is that a camera should gaze at some target; namely
+the target falls within a gaze cone, originating from the camera eye.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame where the gaze cone is fixed to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AS</span></code>:</dt>
+<dd>The position of the cone source point S, measured and expressed in
+frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">n_A</span></code>:</dt>
+<dd>The directional vector representing the center ray of the cone,
+expressed in frame A.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">n_A</span></code> cannot be a zero vector.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError is n_A is close to a zero vector.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame where the target point T is fixed to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_BT</span></code>:</dt>
+<dd>The position of the target point T, measured and expressed in
+frame B.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">cone_half_angle</span></code>:</dt>
+<dd>The half angle of the cone. We denote it as θ in the
+documentation. <code class="docutils literal"><span class="pre">cone_half_angle</span></code> is in radians.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">0</span></code> &lt;= cone_half_angle &lt;= pi.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if cone_half_angle is outside of the bound.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationConstraint">
+<code class="descname">AddOrientationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em>, <em>frameAbar: pydrake.multibody.multibody_tree.Frame</em>, <em>R_AbarA: pydrake.math.RotationMatrix</em>, <em>frameBbar: pydrake.multibody.multibody_tree.Frame</em>, <em>R_BbarB: pydrake.math.RotationMatrix</em>, <em>theta_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrains that the angle difference θ between the orientation of
+frame A and the orientation of frame B to satisfy θ ≤ θ_bound. Frame A
+is fixed to frame A_bar, with orientation R_AbarA measured in frame
+A_bar. Frame B is fixed to frame B_bar, with orientation R_BbarB
+measured in frame B_bar. The angle difference between frame A’s
+orientation R_WA and B’s orientation R_WB is θ, (θ ∈ [0, π]), if there
+exists a rotation axis a, such that rotating frame A by angle θ about
+axis a aligns it with frame B. Namely R_AB = I + sinθ â + (1-cosθ)â²
+(1) where R_AB is the orientation of frame B expressed in frame A. â
+is the skew symmetric matrix of the rotation axis a. Equation (1) is
+the Rodrigues formula that computes the rotation matrix from a
+rotation axis a and an angle θ,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula</a> If the
+users want frame A and frame B to align perfectly, they can set
+θ_bound = 0. Mathematically, this constraint is imposed as trace(R_AB)
+≥ 2cos(θ_bound) + 1 (1) To derive (1), using Rodrigues formula R_AB =
+I + sinθ â + (1-cosθ)â² where trace(R_AB) = 2cos(θ) + 1 ≥
+2cos(θ_bound) + 1</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameAbar</span></code>:</dt>
+<dd>frame A_bar, the frame A is fixed to frame A_bar.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R_AbarA</span></code>:</dt>
+<dd>The orientation of frame A measured in frame A_bar.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameBbar</span></code>:</dt>
+<dd>frame B_bar, the frame B is fixed to frame B_bar.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R_BbarB</span></code>:</dt>
+<dd>The orientation of frame B measured in frame B_bar.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">theta_bound</span></code>:</dt>
+<dd>The bound on the angle difference between frame A’s orientation
+and frame B’s orientation. It is denoted as θ_bound in the
+documentation. <code class="docutils literal"><span class="pre">theta_bound</span></code> is in radians.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint">
+<code class="descname">AddPositionConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.multibody_tree.Frame, p_BQ: numpy.ndarray[float64[3, 1]], frameA: pydrake.multibody.multibody_tree.Frame, p_AQ_lower: numpy.ndarray[float64[3, 1]], p_AQ_upper: numpy.ndarray[float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the kinematic constraint that a point Q, fixed in frame B, should
+lie within a bounding box expressed in another frame A as p_AQ_lower
+&lt;= p_AQ &lt;= p_AQ_upper, where p_AQ is the position of point Q measured
+and expressed in frame A.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame in which point Q is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The position of the point Q, rigidly attached to frame B, measured
+and expressed in frame B.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame in which the bounding box p_AQ_lower &lt;= p_AQ &lt;=
+p_AQ_upper is expressed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AQ_lower</span></code>:</dt>
+<dd>The lower bound on the position of point Q, measured and expressed
+in frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AQ_upper</span></code>:</dt>
+<dd>The upper bound on the position of point Q, measured and expressed
+in frame A.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em>, <em>plant: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_prog">
+<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the optimization program constructed by InverseKinematics.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.prog">
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.prog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the optimization program constructed by InverseKinematics.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.q">
+<code class="descname">q</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.q" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for q. q is the decision variable for the generalized positions
+of the robot.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.joints.html" class="btn btn-neutral float-right" title="pydrake.multibody.joints" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.collision.html" class="btn btn-neutral" title="pydrake.multibody.collision" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

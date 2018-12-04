@@ -1,0 +1,357 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Code Style Guide &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="C++ *-inl.h files" href="cxx_inl.html" />
+    <link rel="prev" title="Code Review Checklist" href="code_review_checklist.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="cxx_inl.html" title="C++ *-inl.h files"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="code_review_checklist.html" title="Code Review Checklist"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="code-style-guide">
+<span id="id1"></span><h1>Code Style Guide<a class="headerlink" href="#code-style-guide" title="Permalink to this headline">¶</a></h1>
+<p>This section defines a style guide which should be followed by all code that is
+written in Drake. Being consistent with this style will make the code easier to
+read, debug, and maintain. To ensure your code is style compliant, consider
+using <a class="reference internal" href="code_style_tools.html#code-style-tools"><span class="std std-ref">tools for complying with coding style</span></a>.</p>
+<p>See also the brief
+<a class="reference internal" href="code_review_checklist.html#code-review-checklist"><span class="std std-ref">Code Review Checklist</span></a>,
+where a list of the most frequent problems are collected.</p>
+<p>Note: Many of the files in the repository were written before this style guide,
+or did not follow it precisely.  If you find style errors, go ahead and change
+it and submit a pull request.</p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first"><cite>Table of contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#c-style" id="id2">C++ Style</a></li>
+<li><a class="reference internal" href="#python-style" id="id3">Python Style</a><ul>
+<li><a class="reference internal" href="#clarifications" id="id4">Clarifications</a></li>
+<li><a class="reference internal" href="#exceptions" id="id5">Exceptions</a></li>
+<li><a class="reference internal" href="#additional-rules" id="id6">Additional Rules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matlab-style" id="id7">MATLAB Style</a></li>
+<li><a class="reference internal" href="#java-style" id="id8">Java Style</a></li>
+<li><a class="reference internal" href="#lcm-style" id="id9">LCM Style</a></li>
+<li><a class="reference internal" href="#package-xml-style" id="id10">package.xml Style</a></li>
+<li><a class="reference internal" href="#shell-script-style" id="id11">Shell Script Style</a></li>
+<li><a class="reference internal" href="#version-numbers" id="id12">Version numbers</a></li>
+<li><a class="reference internal" href="#supplementary-documents" id="id13">Supplementary documents</a></li>
+</ul>
+</div>
+<div class="section" id="c-style">
+<span id="code-style-guide-cpp"></span><h2><a class="toc-backref" href="#id2">C++ Style</a><a class="headerlink" href="#c-style" title="Permalink to this headline">¶</a></h2>
+<p>The Drake C++ style guide (which is derived from the Google C++ style guide)
+can be found
+<a class="reference external" href="https://drake.mit.edu/styleguide/cppguide.html">on its own page</a>.
+Its source lives in
+<a class="reference external" href="https://github.com/RobotLocomotion/styleguide">the styleguide repository</a>.</p>
+</div>
+<div class="section" id="python-style">
+<span id="code-style-guide-python"></span><h2><a class="toc-backref" href="#id3">Python Style</a><a class="headerlink" href="#python-style" title="Permalink to this headline">¶</a></h2>
+<p>Drake Python code uses Python 2.7.</p>
+<p>Drake strictly follows <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8 – Style Guide for Python Code</a> except for the specific
+clarifications, exceptions, and additional rules noted below. Since PEP 8
+incorporates <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/">PEP 257 – Docstring Conventions</a>, Drake follows its
+recommendations as well.</p>
+<p>See <a class="reference internal" href="code_style_tools.html#code-style-tools"><span class="std std-ref">tools for complying with coding style</span></a> for details
+about the automated style checks.</p>
+<div class="section" id="clarifications">
+<span id="code-style-guide-python-clarifications"></span><h3><a class="toc-backref" href="#id4">Clarifications</a><a class="headerlink" href="#clarifications" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>External, third-party, and auto-generated source files are not to be checked
+for style.</li>
+<li>Always prefer long, human-readable variable/method/class names to short
+acronyms.</li>
+</ul>
+</div>
+<div class="section" id="exceptions">
+<span id="code-style-guide-python-exceptions"></span><h3><a class="toc-backref" href="#id5">Exceptions</a><a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Lines containing a long URL may be longer than 80 columns if necessary to
+avoid splitting the URL.</li>
+</ul>
+</div>
+<div class="section" id="additional-rules">
+<span id="code-style-guide-python-addon-rules"></span><h3><a class="toc-backref" href="#id6">Additional Rules</a><a class="headerlink" href="#additional-rules" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">When importing in-tree modules, always use absolute import paths; explicit
+relative import paths are disallowed. See the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#imports">PEP 8 discussion of imports</a> for more detail.</p>
+</li>
+<li><p class="first">Sometimes <code class="docutils literal"><span class="pre">__init__.py</span></code> files are necessary, for Python’s <code class="docutils literal"><span class="pre">import</span></code>
+mechanism; these files should be non-empty (via a copyright notice, for
+example). Rationale: 0-byte files can be mistakenly perceived as the result
+of some error or accident.</p>
+</li>
+<li><p class="first">When using the <code class="docutils literal"><span class="pre">logging</span></code> module, avoid its lazy-formatting
+syntax. Rationale: exceptions raised in lazy formatting get printed to
+<code class="docutils literal"><span class="pre">stderr</span></code>, but are otherwise ignored, and thus may escape notice.</p>
+</li>
+<li><p class="first">Executable files should use one of the following “shebang” lines:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python2</span>
+<span class="c1">#!/usr/bin/env python3</span>
+</pre></div>
+</div>
+<p>Rationale: <code class="docutils literal"><span class="pre">/usr/bin/env</span></code> enables a <code class="docutils literal"><span class="pre">PATH</span></code> search for the Python 2.7
+executable. On macOS systems configured for Drake, this gives a better result
+than <code class="docutils literal"><span class="pre">/usr/bin/python</span></code> (system Python 2.7). This is also recommended by
+<cite>PEP 394 &lt;https://www.python.org/dev/peps/pep-0394/&gt;`_</cite>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="matlab-style">
+<span id="code-style-guide-matlab"></span><h2><a class="toc-backref" href="#id7">MATLAB Style</a><a class="headerlink" href="#matlab-style" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>All of the above rules still hold as relevant (e.g. variable names).</li>
+<li><dl class="first docutils">
+<dt>A short list of variable name exceptions for common acronyms:</dt>
+<dd><ul class="first last">
+<li><cite>rpy</cite> or <cite>somethingRPY</cite> (for roll-pitch-yaw)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>All classes and methods should be commented with Doxygen compatible
+formatting (using the tags <cite>&#64;param</cite> to describe each input, <cite>&#64;option</cite> to
+describe the elements of an option structure, <cite>&#64;retval</cite> to describe each
+output, and <cite>&#64;default</cite> to describe default values for an input.  Class
+methods need not document the trivial first input argument (which is the
+class object) with a <cite>&#64;param</cite> tag.</li>
+<li>Calls to MATLAB class member functions in speed critical loops for classes
+which overload subsref use <cite>memberFunc(obj,…)</cite> instead of
+<cite>obj.memberFunc(…)</cite>.  This is because obj.member calls the <cite>subsref</cite>
+method, which is only notably slower for classes which have overloaded
+<cite>subsref</cite>.  All other calls should use <cite>obj.memberFunc(…)</cite>.</li>
+<li>All methods that are outside runtime execution loops begin by checking their
+inputs (e.g. with <cite>typecheck</cite>,`sizecheck`,`rangecheck`,etc).  Methods that
+get called repeatedly inside a simulation or optimization loop should not
+perform these checks.</li>
+<li>All methods (including mex) should treat <cite>nargout==0</cite> as if we received
+<cite>nargout==1</cite></li>
+</ul>
+</div>
+<div class="section" id="java-style">
+<span id="code-style-guide-java"></span><h2><a class="toc-backref" href="#id8">Java Style</a><a class="headerlink" href="#java-style" title="Permalink to this headline">¶</a></h2>
+<p>We also strictly follow the <a class="reference external" href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>.
+Here are some additional comments:</p>
+<ul class="simple">
+<li>Every class and method should have a brief <cite>_javadoc_</cite> associated with it.</li>
+<li><dl class="first docutils">
+<dt>All Java classes should be in packages relative to the Drake root,</dt>
+<dd>e.g.: package drake.examples.Pendulum</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="lcm-style">
+<span id="code-style-guide-lcm"></span><h2><a class="toc-backref" href="#id9">LCM Style</a><a class="headerlink" href="#lcm-style" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>LCM types are under_scored with a leading <cite>lcmt_</cite> added. If the type is
+specific to a particular robot, then it begins with <cite>lcmt_robotname_</cite>.</li>
+<li>Variable names in LCM types follow the rules above.</li>
+</ul>
+</div>
+<div class="section" id="package-xml-style">
+<span id="code-style-guide-package-xml"></span><h2><a class="toc-backref" href="#id10">package.xml Style</a><a class="headerlink" href="#package-xml-style" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.ros.org/">Robot Operating System (ROS)</a> organizes code and data
+into packages. Each package is located in its own directory, which contains a
+file called <code class="docutils literal"><span class="pre">package.xml</span></code>. The official instructions on what this file should
+contain is given <a class="reference external" href="http://wiki.ros.org/catkin/package.xml">here</a>. Drake uses
+this same file for defining and finding packages. Specifically, it is searched
+for by
+<a class="reference external" href="https://github.com/RobotLocomotion/drake/blob/7bbcb0728a06c0abdd695fd8a5db1879bb5354bb/drake/systems/plants/xmlUtil.h#L160">populatePackageMap()</a>.
+Note that <code class="docutils literal"><span class="pre">package.xml</span></code> files are necessary even if you’re <em>not</em> using Drake
+with ROS because the model files used by Drake (e.g., URDF and SDF), frequently
+refer to resources like mesh files via a <code class="docutils literal"><span class="pre">package://</span></code> syntax, whose full paths
+are resolved by the <code class="docutils literal"><span class="pre">package.xml</span></code> files.</p>
+<p>When adding a model to Drake
+(typically in <a class="reference external" href="https://github.com/RobotLocomotion/drake/tree/master/examples">drake/examples/</a>),
+you will need to add a <code class="docutils literal"><span class="pre">package.xml</span></code> file to the example’s directory to enable
+modeling files like URDF and SDF to refer to resources like mesh files contained
+within the example’s directory. Please ensure that your <code class="docutils literal"><span class="pre">package.xml</span></code> file
+contains every
+<a class="reference external" href="http://wiki.ros.org/catkin/package.xml#Required_Tags">required field</a>.
+The following minimal <code class="docutils literal"><span class="pre">package.xml</span></code> file can get you started:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;!--
+This XML file is used by:
+  drake/systems/plants/xmlUtil.cpp
+Method:
+  searchDirectory()
+--&gt;
+
+&lt;package format=&quot;2&quot;&gt;
+  &lt;name&gt;package_name&lt;/name&gt;
+  &lt;version&gt;0.0.0&lt;/version&gt;
+  &lt;description&gt;
+    A description of your package.
+  &lt;/description&gt;
+  &lt;maintainer email=&quot;drake-users@mit.edu&quot;&gt;Drake Users&lt;/maintainer&gt;
+  &lt;license&gt;BSD&lt;/license&gt;
+&lt;/package&gt;
+</pre></div>
+</div>
+<p>In the above example, replace “package_name” with the name of your package. This
+is typically the name of the directory holding the <code class="docutils literal"><span class="pre">package.xml</span></code> file.</p>
+</div>
+<div class="section" id="shell-script-style">
+<span id="code-style-guide-shell-script"></span><h2><a class="toc-backref" href="#id11">Shell Script Style</a><a class="headerlink" href="#shell-script-style" title="Permalink to this headline">¶</a></h2>
+<p>We follow the <a class="reference external" href="https://google.github.io/styleguide/shell.xml">Google Shell Style Guide</a>.</p>
+</div>
+<div class="section" id="version-numbers">
+<span id="code-style-guide-version-numbers"></span><h2><a class="toc-backref" href="#id12">Version numbers</a><a class="headerlink" href="#version-numbers" title="Permalink to this headline">¶</a></h2>
+<p>We’ll adopt the following convention for version numbers in Drake:
+The version number will have the format W.X.Y.Z where</p>
+<ul class="simple">
+<li>W = major release number</li>
+<li>X = minor release number</li>
+<li>Y = development stage*</li>
+<li>Z = build</li>
+</ul>
+<p>Development stage is one of four values:</p>
+<ul class="simple">
+<li>0 = alpha (buggy, not for use)</li>
+<li>1 = beta (mostly bug-free, needs more testing)</li>
+<li>2 = release candidate (rc) (stable)</li>
+<li>3 = release</li>
+</ul>
+<p>Z (build) is optional. This is probably not needed but could just refer to the
+revision of the repository at the time of snapshot. Numbered versions should be
+referenced via tags.</p>
+</div>
+<div class="section" id="supplementary-documents">
+<h2><a class="toc-backref" href="#id13">Supplementary documents</a><a class="headerlink" href="#supplementary-documents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cxx_inl.html">C++ <cite>*-inl.h</cite> files</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Code Style Guide</a><ul>
+<li><a class="reference internal" href="#c-style">C++ Style</a></li>
+<li><a class="reference internal" href="#python-style">Python Style</a><ul>
+<li><a class="reference internal" href="#clarifications">Clarifications</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#additional-rules">Additional Rules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#matlab-style">MATLAB Style</a></li>
+<li><a class="reference internal" href="#java-style">Java Style</a></li>
+<li><a class="reference internal" href="#lcm-style">LCM Style</a></li>
+<li><a class="reference internal" href="#package-xml-style">package.xml Style</a></li>
+<li><a class="reference internal" href="#shell-script-style">Shell Script Style</a></li>
+<li><a class="reference internal" href="#version-numbers">Version numbers</a></li>
+<li><a class="reference internal" href="#supplementary-documents">Supplementary documents</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="cxx_inl.html" title="C++ *-inl.h files"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="code_review_checklist.html" title="Code Review Checklist"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

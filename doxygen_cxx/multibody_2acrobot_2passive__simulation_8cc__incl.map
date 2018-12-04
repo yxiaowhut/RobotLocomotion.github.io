@@ -1,0 +1,77 @@
+<map id="drake/examples/multibody/acrobot/passive_simulation.cc" name="drake/examples/multibody/acrobot/passive_simulation.cc">
+<area shape="rect" id="node4" href="$drake__assert_8h.html" title="Provides Drake&#39;s assertion implementation. " alt="" coords="2103,1121,2265,1163"/>
+<area shape="rect" id="node6" href="$text__logging__gflags_8h.html" title="This file defines gflags settings to control spdlog levels. " alt="" coords="14824,95,15029,136"/>
+<area shape="rect" id="node9" href="$geometry__visualization_8h.html" title="Provides a set of functions to facilitate visualization operations based on SceneGraph system state..." alt="" coords="8279,191,8473,233"/>
+<area shape="rect" id="node34" href="$scene__graph_8h.html" title="drake/geometry/scene\l_graph.h" alt="" coords="10239,295,10407,337"/>
+<area shape="rect" id="node74" href="$diagram__builder_8h.html" title="drake/systems/framework\l/diagram_builder.h" alt="" coords="3090,392,3283,433"/>
+<area shape="rect" id="node80" href="$drake__lcm_8h.html" title="drake/lcm/drake_lcm.h" alt="" coords="15256,757,15427,783"/>
+<area shape="rect" id="node84" href="$make__acrobot__plant_8h.html" title="drake/multibody/benchmarks\l/acrobot/make_acrobot_plant.h" alt="" coords="10019,95,10243,136"/>
+<area shape="rect" id="node85" href="$multibody_2multibody__tree_2joints_2revolute__joint_8h.html" title="drake/multibody/multibody\l_tree/joints/revolute_joint.h" alt="" coords="13495,481,13697,523"/>
+<area shape="rect" id="node90" href="$implicit__euler__integrator_8h.html" title="drake/systems/analysis\l/implicit_euler_integrator.h" alt="" coords="7566,392,7765,433"/>
+<area shape="rect" id="node94" href="$runge__kutta3__integrator_8h.html" title="drake/systems/analysis\l/runge_kutta3_integrator.h" alt="" coords="4945,392,5140,433"/>
+<area shape="rect" id="node95" href="$semi__explicit__euler__integrator_8h.html" title="drake/systems/analysis\l/semi_explicit_euler_integrator.h" alt="" coords="5214,392,5450,433"/>
+<area shape="rect" id="node96" href="$simulator_8h.html" title="drake/systems/analysis\l/simulator.h" alt="" coords="8329,295,8505,337"/>
+<area shape="rect" id="node99" href="$constant__vector__source_8h.html" title="drake/systems/primitives\l/constant_vector_source.h" alt="" coords="5040,191,5232,233"/>
+<area shape="rect" id="node7" href="$text__logging_8h.html" title="This is the entry point for all text logging within Drake. " alt="" coords="9637,667,9854,694"/>
+<area shape="rect" id="node8" href="$drake__copyable_8h.html" title="Provides careful macros to selectively enable or disable the special member functions for copy&#45;constr..." alt="" coords="10990,1032,11151,1073"/>
+<area shape="rect" id="node10" href="$geometry__state_8h.html" title="drake/geometry/geometry\l_state.h" alt="" coords="11547,660,11741,701"/>
+<area shape="rect" id="node72" href="$drake__lcm__interface_8h.html" title="drake/lcm/drake_lcm\l_interface.h" alt="" coords="8719,846,8878,887"/>
+<area shape="rect" id="node76" href="$lcm__publisher__system_8h.html" title="drake/systems/lcm/lcm\l_publisher_system.h" alt="" coords="7317,295,7491,337"/>
+<area shape="rect" id="node16" href="$common_2autodiff_8h.html" title="drake/common/autodiff.h" alt="" coords="7713,853,7900,880"/>
+<area shape="rect" id="node17" href="$drake__optional_8h.html" title="Provides drake::optional as an alias for the appropriate implementation of std::optional or std::expe..." alt="" coords="10483,943,10645,984"/>
+<area shape="rect" id="node18" href="$frame__kinematics__vector_8h.html" title="drake/geometry/frame\l_kinematics_vector.h" alt="" coords="11579,749,11749,791"/>
+<area shape="rect" id="node21" href="$geometry__ids_8h.html" title="drake/geometry/geometry\l_ids.h" alt="" coords="13745,943,13938,984"/>
+<area shape="rect" id="node22" href="$geometry_2utilities_8h.html" title="drake/geometry/utilities.h" alt="" coords="11610,853,11801,880"/>
+<area shape="rect" id="node23" href="$geometry__index_8h.html" title="drake/geometry/geometry\l_index.h" alt="" coords="13339,943,13533,984"/>
+<area shape="rect" id="node24" href="$geometry__roles_8h.html" title="drake/geometry/geometry\l_roles.h" alt="" coords="11138,846,11331,887"/>
+<area shape="rect" id="node25" href="$geometry__set_8h.html" title="drake/geometry/geometry\l_set.h" alt="" coords="13981,846,14174,887"/>
+<area shape="rect" id="node26" href="$internal__frame_8h.html" title="drake/geometry/internal\l_frame.h" alt="" coords="13213,846,13393,887"/>
+<area shape="rect" id="node27" href="$internal__geometry_8h.html" title="drake/geometry/internal\l_geometry.h" alt="" coords="11773,749,11953,791"/>
+<area shape="rect" id="node28" href="$proximity__engine_8h.html" title="drake/geometry/proximity\l_engine.h" alt="" coords="13222,749,13415,791"/>
+<area shape="rect" id="node19" href="$eigen__types_8h.html" title="This file contains abbreviated definitions for certain specializations of Eigen::Matrix that are comm..." alt="" coords="12740,943,12900,984"/>
+<area shape="rect" id="node30" href="$penetration__as__point__pair_8h.html" title="drake/geometry/query\l_results/penetration\l_as_point_pair.h" alt="" coords="14609,839,14775,895"/>
+<area shape="rect" id="node31" href="$signed__distance__pair_8h.html" title="drake/geometry/query\l_results/signed_distance\l_pair.h" alt="" coords="14198,839,14381,895"/>
+<area shape="rect" id="node32" href="$signed__distance__to__point_8h.html" title="drake/geometry/query\l_results/signed_distance\l_to_point.h" alt="" coords="13519,839,13702,895"/>
+<area shape="rect" id="node35" href="$query__object_8h.html" title="drake/geometry/query\l_object.h" alt="" coords="11685,392,11851,433"/>
+<area shape="rect" id="node43" href="$context_8h.html" title="drake/systems/framework\l/context.h" alt="" coords="5349,660,5542,701"/>
+<area shape="rect" id="node56" href="$scene__graph__inspector_8h.html" title="drake/geometry/scene\l_graph_inspector.h" alt="" coords="11036,571,11204,612"/>
+<area shape="rect" id="node57" href="$leaf__system_8h.html" title="drake/systems/framework\l/leaf_system.h" alt="" coords="6774,392,6967,433"/>
+<area shape="rect" id="node70" href="$pose__bundle_8h.html" title="drake/systems/rendering\l/pose_bundle.h" alt="" coords="9463,749,9647,791"/>
+<area shape="rect" id="node36" href="$geometry__context_8h.html" title="drake/geometry/geometry\l_context.h" alt="" coords="11783,481,11977,523"/>
+<area shape="rect" id="node37" href="$leaf__context_8h.html" title="drake/systems/framework\l/leaf_context.h" alt="" coords="6255,571,6449,612"/>
+<area shape="rect" id="node39" href="$basic__vector_8h.html" title="drake/systems/framework\l/basic_vector.h" alt="" coords="3383,943,3577,984"/>
+<area shape="rect" id="node50" href="$parameters_8h.html" title="drake/systems/framework\l/parameters.h" alt="" coords="6255,749,6449,791"/>
+<area shape="rect" id="node54" href="$state_8h.html" title="drake/systems/framework\l/state.h" alt="" coords="5450,749,5643,791"/>
+<area shape="rect" id="node42" href="$drake__throw_8h.html" title="Provides a convenient wrapper to throw an exception when a condition is unmet. " alt="" coords="1123,1032,1285,1073"/>
+<area shape="rect" id="node44" href="$pointer__cast_8h.html" title="drake/common/pointer\l_cast.h" alt="" coords="3125,749,3296,791"/>
+<area shape="rect" id="node45" href="$context__base_8h.html" title="drake/systems/framework\l/context_base.h" alt="" coords="4911,749,5105,791"/>
+<area shape="rect" id="node49" href="$value_8h.html" title="drake/systems/framework\l/value.h" alt="" coords="5842,943,6035,984"/>
+<area shape="rect" id="node48" href="$unused_8h.html" title="drake/common/unused.h" alt="" coords="5178,853,5361,880"/>
+<area shape="rect" id="node51" href="$drake__deprecated_8h.html" title="Provides a portable macro for use in generating compile&#45;time warnings for use of code that is permitt..." alt="" coords="8026,846,8187,887"/>
+<area shape="rect" id="node52" href="$abstract__values_8h.html" title="drake/systems/framework\l/abstract_values.h" alt="" coords="6482,846,6675,887"/>
+<area shape="rect" id="node53" href="$discrete__values_8h.html" title="drake/systems/framework\l/discrete_values.h" alt="" coords="4799,846,4993,887"/>
+<area shape="rect" id="node55" href="$continuous__state_8h.html" title="drake/systems/framework\l/continuous_state.h" alt="" coords="3189,846,3382,887"/>
+<area shape="rect" id="node59" href="$leaf__output__port_8h.html" title="drake/systems/framework\l/leaf_output_port.h" alt="" coords="5741,846,5934,887"/>
+<area shape="rect" id="node60" href="$model__values_8h.html" title="drake/systems/framework\l/model_values.h" alt="" coords="6111,846,6305,887"/>
+<area shape="rect" id="node61" href="$system_8h.html" title="drake/systems/framework\l/system.h" alt="" coords="4245,571,4438,612"/>
+<area shape="rect" id="node64" href="$system__constraint_8h.html" title="drake/systems/framework\l/system_constraint.h" alt="" coords="5181,749,5374,791"/>
+<area shape="rect" id="node65" href="$system__output_8h.html" title="drake/systems/framework\l/system_output.h" alt="" coords="4109,846,4302,887"/>
+<area shape="rect" id="node66" href="$system__scalar__converter_8h.html" title="drake/systems/framework\l/system_scalar_converter.h" alt="" coords="4127,749,4329,791"/>
+<area shape="rect" id="node68" href="$system__symbolic__inspector_8h.html" title="drake/systems/framework\l/system_symbolic_inspector.h" alt="" coords="6564,481,6783,523"/>
+<area shape="rect" id="node69" href="$value__checker_8h.html" title="drake/systems/framework\l/value_checker.h" alt="" coords="2971,846,3165,887"/>
+<area shape="rect" id="node63" href="$symbolic_8h.html" title="Provides public header files of Drake&#39;s symbolic library. " alt="" coords="4327,853,4521,880"/>
+<area shape="rect" id="node67" href="$witness__function_8h.html" title="drake/systems/framework\l/witness_function.h" alt="" coords="3757,749,3950,791"/>
+<area shape="rect" id="node71" href="$frame__velocity_8h.html" title="drake/systems/rendering\l/frame_velocity.h" alt="" coords="9460,846,9644,887"/>
+<area shape="rect" id="node75" href="$diagram_8h.html" title="drake/systems/framework\l/diagram.h" alt="" coords="4523,481,4717,523"/>
+<area shape="rect" id="node77" href="$lcm__and__vector__base__translator_8h.html" title="drake/systems/lcm/lcm\l_and_vector_base_translator.h" alt="" coords="3457,846,3679,887"/>
+<area shape="rect" id="node78" href="$lcm__translator__dictionary_8h.html" title="drake/systems/lcm/lcm\l_translator_dictionary.h" alt="" coords="2872,571,3048,612"/>
+<area shape="rect" id="node79" href="$serializer_8h.html" title="drake/systems/lcm/serializer.h" alt="" coords="1967,853,2190,880"/>
+<area shape="rect" id="node83" href="$lcm__receive__thread_8h.html" title="drake/lcm/lcm_receive\l_thread.h" alt="" coords="15256,846,15427,887"/>
+<area shape="rect" id="node89" href="$multibody__plant_8h.html" title="drake/multibody/multibody\l_tree/multibody_plant/multibody\l_plant.h" alt="" coords="9069,184,9304,240"/>
+<area shape="rect" id="node86" href="$joint_8h.html" title="drake/multibody/multibody\l_tree/joints/joint.h" alt="" coords="9206,571,9405,612"/>
+<area shape="rect" id="node87" href="$multibody__forces_8h.html" title="drake/multibody/multibody\l_tree/multibody_forces.h" alt="" coords="12534,846,12733,887"/>
+<area shape="rect" id="node88" href="$revolute__mobilizer_8h.html" title="drake/multibody/multibody\l_tree/revolute_mobilizer.h" alt="" coords="14325,571,14523,612"/>
+<area shape="rect" id="node92" href="$autodiff__gradient_8h.html" title="Utilities that relate simultaneously to both autodiff matrices and gradient matrices. " alt="" coords="6676,749,6828,791"/>
+<area shape="rect" id="node93" href="$integrator__base_8h.html" title="drake/systems/analysis\l/integrator_base.h" alt="" coords="5569,481,5745,523"/>
+<area shape="rect" id="node100" href="$single__output__vector__source_8h.html" title="drake/systems/framework\l/single_output_vector\l_source.h" alt="" coords="4833,288,5026,344"/>
+</map>

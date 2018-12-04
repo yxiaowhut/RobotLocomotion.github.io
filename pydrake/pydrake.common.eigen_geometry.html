@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.common.eigen_geometry &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.common" href="pydrake.common.html"/>
+        <link rel="next" title="pydrake.common.pybind11_version" href="pydrake.common.pybind11_version.html"/>
+        <link rel="prev" title="pydrake.common.deprecation" href="pydrake.common.deprecation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.common.html">pydrake.common</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_const.html">pydrake.common.cpp_const</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_template.html">pydrake.common.cpp_template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.common.html">pydrake.common</a> &raquo;</li>
+        
+      <li>pydrake.common.eigen_geometry</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.common.eigen_geometry">
+<span id="pydrake-common-eigen-geometry"></span><h1>pydrake.common.eigen_geometry<a class="headerlink" href="#module-pydrake.common.eigen_geometry" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for Eigen geometric types.</p>
+<dl class="class">
+<dt id="pydrake.common.eigen_geometry.AngleAxis">
+<em class="property">class </em><code class="descclassname">pydrake.common.eigen_geometry.</code><code class="descname">AngleAxis</code><a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bindings for Eigen::AngleAxis&lt;&gt;.</p>
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.Identity">
+<code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.AngleAxis<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.Identity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.eigen_geometry.AngleAxis) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.AngleAxis, angle: float, axis: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.AngleAxis, quaternion: pydrake.common.eigen_geometry.Quaternion) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.AngleAxis, rotation: numpy.ndarray[float64[3, 3]]) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.AngleAxis, other: pydrake.common.eigen_geometry.AngleAxis) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.angle">
+<code class="descname">angle</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.angle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.axis">
+<code class="descname">axis</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.axis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.inverse">
+<code class="descname">inverse</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.AngleAxis<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.inverse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.multiply">
+<code class="descname">multiply</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis</em>, <em>arg0: pydrake.common.eigen_geometry.AngleAxis</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.multiply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.quaternion">
+<code class="descname">quaternion</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.quaternion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.rotation">
+<code class="descname">rotation</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 3]]<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.set_angle">
+<code class="descname">set_angle</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis</em>, <em>angle: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.set_angle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.set_axis">
+<code class="descname">set_axis</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis, axis: numpy.ndarray[float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.set_axis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.set_quaternion">
+<code class="descname">set_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis</em>, <em>arg0: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.set_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.AngleAxis.set_rotation">
+<code class="descname">set_rotation</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.AngleAxis, arg0: numpy.ndarray[float64[3, 3]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.AngleAxis.set_rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.eigen_geometry.Isometry3">
+<em class="property">class </em><code class="descclassname">pydrake.common.eigen_geometry.</code><code class="descname">Isometry3</code><a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.Identity">
+<code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Isometry3<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.Identity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.eigen_geometry.Isometry3) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.Isometry3, matrix: numpy.ndarray[float64[4, 4]]) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.Isometry3, rotation: numpy.ndarray[float64[3, 3]], translation: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.Isometry3, quaternion: Eigen::Quaternion&lt;double, 0&gt;, translation: numpy.ndarray[float64[3, 1]]) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.Isometry3, other: pydrake.common.eigen_geometry.Isometry3) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.inverse">
+<code class="descname">inverse</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Isometry3<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.inverse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.matrix">
+<code class="descname">matrix</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[4, 4]]<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.multiply">
+<code class="descname">multiply</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.multiply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>multiply(self: pydrake.common.eigen_geometry.Isometry3, other: pydrake.common.eigen_geometry.Isometry3) -&gt; pydrake.common.eigen_geometry.Isometry3</li>
+<li>multiply(self: pydrake.common.eigen_geometry.Isometry3, position: numpy.ndarray[float64[3, 1]]) -&gt; numpy.ndarray[float64[3, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.quaternion">
+<code class="descname">quaternion</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; Eigen::Quaternion&lt;double, 0&gt;<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.quaternion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.rotation">
+<code class="descname">rotation</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 3]]<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.set_matrix">
+<code class="descname">set_matrix</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3, arg0: numpy.ndarray[float64[4, 4]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.set_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.set_quaternion">
+<code class="descname">set_quaternion</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3</em>, <em>arg0: Eigen::Quaternion&lt;double</em>, <em>0&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.set_quaternion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.set_rotation">
+<code class="descname">set_rotation</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3, arg0: numpy.ndarray[float64[3, 3]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.set_rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.set_translation">
+<code class="descname">set_translation</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3, arg0: numpy.ndarray[float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.set_translation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Isometry3.translation">
+<code class="descname">translation</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.common.eigen_geometry.Isometry3.translation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.eigen_geometry.Quaternion">
+<em class="property">class </em><code class="descclassname">pydrake.common.eigen_geometry.</code><code class="descname">Quaternion</code><a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a unit quaternion binding of Eigen::Quaternion&lt;&gt;.</p>
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.Identity">
+<code class="descname">Identity</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.Identity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.eigen_geometry.Quaternion) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.Quaternion, wxyz: numpy.ndarray[float64[4, 1]]) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.Quaternion, w: float, x: float, y: float, z: float) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.Quaternion, rotation: numpy.ndarray[float64[3, 3]]) -&gt; None</li>
+<li>__init__(self: pydrake.common.eigen_geometry.Quaternion, other: pydrake.common.eigen_geometry.Quaternion) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.conjugate">
+<code class="descname">conjugate</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.conjugate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.inverse">
+<code class="descname">inverse</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.inverse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.multiply">
+<code class="descname">multiply</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.multiply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>multiply(self: pydrake.common.eigen_geometry.Quaternion, arg0: pydrake.common.eigen_geometry.Quaternion) -&gt; pydrake.common.eigen_geometry.Quaternion</li>
+<li>multiply(self: pydrake.common.eigen_geometry.Quaternion, position: numpy.ndarray[float64[3, 1]]) -&gt; numpy.ndarray[float64[3, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.rotation">
+<code class="descname">rotation</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 3]]<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.set_rotation">
+<code class="descname">set_rotation</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion, arg0: numpy.ndarray[float64[3, 3]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.set_rotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.set_wxyz">
+<code class="descname">set_wxyz</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.set_wxyz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>set_wxyz(self: pydrake.common.eigen_geometry.Quaternion, wxyz: numpy.ndarray[float64[4, 1]]) -&gt; None</li>
+<li>set_wxyz(self: pydrake.common.eigen_geometry.Quaternion, w: float, x: float, y: float, z: float) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.w">
+<code class="descname">w</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.w" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.wxyz">
+<code class="descname">wxyz</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[4, 1]]<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.wxyz" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.x">
+<code class="descname">x</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.xyz">
+<code class="descname">xyz</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.xyz" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.y">
+<code class="descname">y</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.eigen_geometry.Quaternion.z">
+<code class="descname">z</code><span class="sig-paren">(</span><em>self: pydrake.common.eigen_geometry.Quaternion</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.eigen_geometry.Quaternion.z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.common.pybind11_version.html" class="btn btn-neutral float-right" title="pydrake.common.pybind11_version" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.common.deprecation.html" class="btn btn-neutral" title="pydrake.common.deprecation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

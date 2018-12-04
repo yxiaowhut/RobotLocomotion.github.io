@@ -1,0 +1,953 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.controllers &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.drawing" href="pydrake.systems.drawing.html"/>
+        <link rel="prev" title="pydrake.systems.analysis" href="pydrake.systems.analysis.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.meshcat_visualizer.html">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.controllers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.controllers">
+<span id="pydrake-systems-controllers"></span><h1>pydrake.systems.controllers<a class="headerlink" href="#module-pydrake.systems.controllers" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydrake.systems.controllers.DiscreteTimeLinearQuadraticRegulator">
+<code class="descclassname">pydrake.systems.controllers.</code><code class="descname">DiscreteTimeLinearQuadraticRegulator</code><span class="sig-paren">(</span><em>A: numpy.ndarray[float64[m, n], flags.f_contiguous], B: numpy.ndarray[float64[m, n], flags.f_contiguous], Q: numpy.ndarray[float64[m, n], flags.f_contiguous], R: numpy.ndarray[float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[float64[m, n]], numpy.ndarray[float64[m, n]]]<a class="headerlink" href="#pydrake.systems.controllers.DiscreteTimeLinearQuadraticRegulator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the optimal feedback controller, u=-Kx, and the optimal
+cost-to-go J = x’Sx for the problem:</p>
+<div class="math">
+\[x[n+1] = Ax[n] + Bu[n]\]</div>
+<div class="math">
+\[\min_u \sum_0^\infty x'Qx + u'Ru\]</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>The state-space dynamics matrix of size num_states x num_states.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">B</span></code>:</dt>
+<dd>The state-space input matrix of size num_states x num_inputs.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dd>A symmetric positive semi-definite cost matrix of size num_states
+x num_states.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>A symmetric positive definite cost matrix of size num_inputs x
+num_inputs.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A structure that contains the optimal feedback gain K and the
+quadratic cost term S. The optimal feedback control is u = -Kx;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if R is not positive definite.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions">
+<em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">DynamicProgrammingOptions</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consolidates the many possible options to be passed to the dynamic
+programming algorithms.</p>
+<dl class="method">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.DynamicProgrammingOptions</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.convergence_tol">
+<code class="descname">convergence_tol</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.convergence_tol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Value iteration methods converge when the value function stops
+changing (typically evaluated with the l∞ norm). This value sets that
+threshold.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor">
+<code class="descname">discount_factor</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.discount_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>A value between (0,1] that discounts future rewards.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">FittedValueIteration.</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.periodic_boundary_conditions">
+<code class="descname">periodic_boundary_conditions</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.periodic_boundary_conditions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback">
+<code class="descname">visualization_callback</code><a class="headerlink" href="#pydrake.systems.controllers.DynamicProgrammingOptions.visualization_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>If callable, this method is invoked during each major iteration of the
+dynamic programming algorithm, in order to facilitate e.g. graphical
+inspection/debugging of the results.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The first call happens at iteration 1 (after the value iteration
+has run once), not zero.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.systems.controllers.FittedValueIteration">
+<code class="descclassname">pydrake.systems.controllers.</code><code class="descname">FittedValueIteration</code><span class="sig-paren">(</span><em>arg0: pydrake.systems.analysis.Simulator_[float], arg1: Callable[[pydrake.systems.framework.Context_[float]], float], arg2: List[Set[float]], arg3: List[Set[float]], arg4: float, arg5: pydrake.systems.controllers.DynamicProgrammingOptions</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.systems.primitives.BarycentricMeshSystem, numpy.ndarray[float64[1, n]]]<a class="headerlink" href="#pydrake.systems.controllers.FittedValueIteration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implements Fitted Value Iteration on a (triangulated) Barycentric
+Mesh, which designs a state-feedback policy to minimize the
+infinite-horizon cost ∑ γⁿ g(x[n],u[n]), where γ is the discount
+factor in <code class="docutils literal"><span class="pre">options</span></code>.</p>
+<p>For background, and a description of this algorithm, see
+<a class="reference external" href="http://underactuated.csail.mit.edu/underactuated.html?chapter=dp">http://underactuated.csail.mit.edu/underactuated.html?chapter=dp</a> . It
+currently requires that the system to be optimized has only continuous
+state and it is assumed to be time invariant. This code makes a
+discrete-time approximation (using <code class="docutils literal"><span class="pre">timestep)</span></code> for the value
+iteration update.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dd>contains the reference to the System being optimized and to a
+Context for that system, which may contain non-default Parameters,
+etc. The <code class="docutils literal"><span class="pre">simulator</span></code> is run for <code class="docutils literal"><span class="pre">timestep</span></code> seconds from every
+point on the mesh in order to approximate the dynamics; all of the
+simulation parameters (integrator, etc) are relevant during that
+evaluation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">cost_function</span></code>:</dt>
+<dd>is the continuous-time instantaneous cost. This implementation of
+the discrete-time formulation above uses the approximation g(x,u)
+= timestep*cost_function(x,u).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">state_grid</span></code>:</dt>
+<dd>defines the mesh on the state space used to represent the
+cost-to-go function and the resulting policy.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">input_grid</span></code>:</dt>
+<dd>defines the discrete action space used in the value iteration
+update.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">timestep</span></code>:</dt>
+<dd>a time in seconds used for the discrete-time approximation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">options</span></code>:</dt>
+<dd>optional DynamicProgrammingOptions structure.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a std::pair containing the resulting policy, implemented as a
+BarycentricMeshSystem, and the RowVectorXd J that defines the
+expected cost-to-go on a BarycentricMesh using <code class="docutils literal"><span class="pre">state_grid</span></code>. The
+policy has a single vector input (which is the continuous state of
+the system passed in through <code class="docutils literal"><span class="pre">simulator)</span></code> and a single vector
+output (which is the input of the system passed in through
+<code class="docutils literal"><span class="pre">simulator)</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.controllers.InverseDynamics">
+<em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">InverseDynamics</code><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>Solves inverse dynamics with no consideration for joint actuator force
+limits. The system also provides a pure gravity compensation mode.
+This system provides a BasicVector input port for the state <code class="docutils literal"><span class="pre">(q,</span>
+<span class="pre">v)</span></code>, where <code class="docutils literal"><span class="pre">q</span></code> is the generalized position and <code class="docutils literal"><span class="pre">v</span></code> is the
+generalized velocity, and a BasicVector output port for the computed
+generalized forces. There is an additional BasicVector input port for
+desired acceleration when configured to be <strong>not</strong> in pure gravity
+compensation mode.</p>
+<p>InverseDynamicsController uses a PID controller to generate desired
+acceleration and uses this class to compute generalized forces. This
+class should be used directly if desired acceleration is computed
+differently.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Constructors for descriptions of how (and which) forces are
+incorporated into the inverse dynamics computation.</p>
+</div>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+</ul>
+<dl class="class">
+<dt id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode">
+<em class="property">class </em><code class="descname">InverseDynamicsMode</code><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>kGravityCompensation : Purely gravity compensation mode.</p>
+<p>kInverseDynamics :</p>
+<dl class="method">
+<dt id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.kGravityCompensation">
+<code class="descname">kGravityCompensation</code><em class="property"> = InverseDynamicsMode.kGravityCompensation</em><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.kGravityCompensation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.kInverseDynamics">
+<code class="descname">kInverseDynamics</code><em class="property"> = InverseDynamicsMode.kInverseDynamics</em><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.kInverseDynamics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.InverseDynamicsMode.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.InverseDynamics.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamics</em>, <em>plant: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>mode: drake::systems::controllers::InverseDynamics&lt;double&gt;::InverseDynamicsMode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the generalized force <code class="docutils literal"><span class="pre">tau_id</span></code> that needs to be applied so
+that the multibody system undergoes a desired acceleration <code class="docutils literal"><span class="pre">vd_d</span></code>.
+That is, <code class="docutils literal"><span class="pre">tau_id</span></code> is the result of an inverse dynamics computation
+according to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tau_id</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">vd_d</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">-</span> <span class="n">tau_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">-</span> <span class="n">tau_app</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">M(q)</span></code> is the mass matrix, <code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias term
+containing Coriolis and gyroscopic effects, <code class="docutils literal"><span class="pre">tau_g(q)</span></code> is the vector
+of generalized forces due to gravity and <code class="docutils literal"><span class="pre">tau_app</span></code> contains applied
+forces from force elements added to the multibody model (this can
+include damping, springs, etc. See
+MultibodyTree::CalcForceElementsContribution()).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>Pointer to the multibody plant model. The life span of <code class="docutils literal"><span class="pre">plant</span></code>
+must be longer than that of this instance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">mode</span></code>:</dt>
+<dd>If set to kGravityCompensation, this instance will only consider
+the gravity term. It also will NOT have the desired acceleration
+input port.</dd>
+<dt>Precondition:</dt>
+<dd>The plant must be finalized (i.e., plant.is_finalized() must
+return <code class="docutils literal"><span class="pre">True</span></code>).</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.InverseDynamics.is_pure_gravity_compensation">
+<code class="descname">is_pure_gravity_compensation</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamics</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.is_pure_gravity_compensation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.InverseDynamics.kGravityCompensation">
+<code class="descname">kGravityCompensation</code><em class="property"> = InverseDynamicsMode.kGravityCompensation</em><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.kGravityCompensation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.InverseDynamics.kInverseDynamics">
+<code class="descname">kInverseDynamics</code><em class="property"> = InverseDynamicsMode.kInverseDynamics</em><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.kInverseDynamics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.controllers.InverseDynamicsController">
+<em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">InverseDynamicsController</code><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></p>
+<p>A state feedback controller that uses a PidController to generate
+desired accelerations, which are then converted into torques using
+InverseDynamics. More specifically, the output of this controller is:
+<code class="docutils literal"><span class="pre">torque</span> <span class="pre">=</span> <span class="pre">inverse_dynamics(q,</span> <span class="pre">v,</span> <span class="pre">vd_d)</span></code>, where <code class="docutils literal"><span class="pre">vd_d</span> <span class="pre">=</span> <span class="pre">kp(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span>
+<span class="pre">kd(v*</span> <span class="pre">-</span> <span class="pre">v)</span> <span class="pre">+</span> <span class="pre">ki</span> <span class="pre">int(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span> <span class="pre">vd*</span></code>. <cite>q</cite> and <code class="docutils literal"><span class="pre">v</span></code> stand for the
+generalized position and velocity, and <code class="docutils literal"><span class="pre">vd</span></code> is the generalized
+acceleration. <code class="docutils literal"><span class="pre">*</span></code> indicates reference values.</p>
+<p>This controller always has a BasicVector input port for estimated
+robot state <code class="docutils literal"><span class="pre">(q,</span> <span class="pre">v)</span></code>, a BasicVector input port for reference robot
+state <code class="docutils literal"><span class="pre">(q*,</span> <span class="pre">v*)</span></code> and a BasicVector output port for computed torque
+<code class="docutils literal"><span class="pre">torque</span></code>. A constructor flag can be set to track reference
+acceleration <code class="docutils literal"><span class="pre">vd*</span></code> as well. When set, a BasicVector input port is
+also declared, and it’s content is used as <code class="docutils literal"><span class="pre">vd*</span></code>. When unset,
+<code class="docutils literal"><span class="pre">vd*</span></code> is be treated as zero.</p>
+<p>Note that this class assumes the robot is fully actuated, its position
+and velocity have the same dimension, and it does not have a floating
+base. If violated, the program will abort. This controller was not
+designed for closed loop systems: the controller accounts for neither
+constraint forces nor actuator forces applied at loop constraints. Use
+on such systems is not recommended.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">InverseDynamics for an accounting of all forces incorporated into
+the inverse dynamics computation.</p>
+</div>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+</ul>
+<dl class="method">
+<dt id="pydrake.systems.controllers.InverseDynamicsController.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.controllers.InverseDynamicsController, robot: pydrake.multibody.rigid_body_tree.RigidBodyTree, kp: numpy.ndarray[float64[m, 1]], ki: numpy.ndarray[float64[m, 1]], kd: numpy.ndarray[float64[m, 1]], has_reference_acceleration: bool) -&gt; None</li>
+<li>__init__(self: pydrake.systems.controllers.InverseDynamicsController, robot: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, kp: numpy.ndarray[float64[m, 1]], ki: numpy.ndarray[float64[m, 1]], kd: numpy.ndarray[float64[m, 1]], has_reference_acceleration: bool) -&gt; None</li>
+</ol>
+<p>Constructs an inverse dynamics controller for the given <code class="docutils literal"><span class="pre">plant</span></code>
+model. The InverseDynamicsController holds an internal, non-owned
+reference to the MultibodyPlant object so you must ensure that
+<code class="docutils literal"><span class="pre">plant</span></code> has a longer lifetime than <code class="docutils literal"><span class="pre">this</span></code>
+InverseDynamicsController.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The model of the plant for control.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">kp</span></code>:</dt>
+<dd>Position gain.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">ki</span></code>:</dt>
+<dd>Integral gain.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">kd</span></code>:</dt>
+<dd>Velocity gain.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">has_reference_acceleration</span></code>:</dt>
+<dd>If true, there is an extra BasicVector input port for <code class="docutils literal"><span class="pre">vd*</span></code>. If
+false, <code class="docutils literal"><span class="pre">vd*</span></code> is treated as zero, and no extra input port is
+declared.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">plant</span></code> has been finalized (plant.is_finalized() returns
+<code class="docutils literal"><span class="pre">True</span></code>).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if - The plant is not finalized (see</li>
+<li>MultibodyPlant::Finalize()). - The number of generalized</li>
+<li>velocities is not equal to the number of generalized positions. -</li>
+<li>The model is not fully actuated. - Vector kp, ki and kd do not all</li>
+<li>have the same size equal to the number of generalized positions.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.InverseDynamicsController.set_integral_value">
+<code class="descname">set_integral_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamicsController, arg0: pydrake.systems.framework.Context_[float], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.set_integral_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the integral part of the PidController to <code class="docutils literal"><span class="pre">value</span></code>. <code class="docutils literal"><span class="pre">value</span></code>
+must be a column vector of the appropriate size.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.systems.controllers.LinearProgrammingApproximateDynamicProgramming">
+<code class="descclassname">pydrake.systems.controllers.</code><code class="descname">LinearProgrammingApproximateDynamicProgramming</code><span class="sig-paren">(</span><em>arg0: pydrake.systems.analysis.Simulator_[float], arg1: Callable[[pydrake.systems.framework.Context_[float]], float], arg2: Callable[[numpy.ndarray[float64[m, 1]], numpy.ndarray[object[m, 1]]], pydrake.symbolic.Expression], arg3: int, arg4: numpy.ndarray[float64[m, n], flags.f_contiguous], arg5: numpy.ndarray[float64[m, n], flags.f_contiguous], arg6: float, arg7: pydrake.systems.controllers.DynamicProgrammingOptions</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.systems.controllers.LinearProgrammingApproximateDynamicProgramming" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implements the Linear Programming approach to approximate dynamic
+programming. It optimizes the linear program</p>
+<p>maximize ∑ Jₚ(x). subject to ∀x, ∀u, Jₚ(x) ≤ g(x,u) + γJₚ(f(x,u)),</p>
+<p>where g(x,u) is the one-step cost, Jₚ(x) is a (linearly) parameterized
+cost-to-go function with parameter vector p, and γ is the discount
+factor in <code class="docutils literal"><span class="pre">options</span></code>.</p>
+<p>For background, and a description of this algorithm, see
+<a class="reference external" href="http://underactuated.csail.mit.edu/underactuated.html?chapter=dp">http://underactuated.csail.mit.edu/underactuated.html?chapter=dp</a> . It
+currently requires that the system to be optimized has only continuous
+state and it is assumed to be time invariant. This code makes a
+discrete-time approximation (using <code class="docutils literal"><span class="pre">timestep)</span></code> for the value
+iteration update.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dd>contains the reference to the System being optimized and to a
+Context for that system, which may contain non-default Parameters,
+etc. The <code class="docutils literal"><span class="pre">simulator</span></code> is run for <code class="docutils literal"><span class="pre">timestep</span></code> seconds from every
+pair of input/state sample points in order to approximate the
+dynamics; all of the simulation parameters (integrator, etc) are
+relevant during that evaluation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">cost_function</span></code>:</dt>
+<dd>is the continuous-time instantaneous cost. This implementation of
+the discrete-time formulation above uses the approximation g(x,u)
+= timestep*cost_function(x,u).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">linearly_parameterized_cost_to_go_function</span></code>:</dt>
+<dd>must define a function to approximate the cost-to-go, which takes
+the state vector as the first input and the parameter vector as
+the second input. This can be any function of the form Jₚ(x) = ∑
+pᵢ φᵢ(x). This algorithm will pass in a VectorX of
+symbolic::Variable in order to set up the linear program.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">state_samples</span></code>:</dt>
+<dd>is a list of sample states (one per column) at which to apply the
+optimization constraints and the objective.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">input_samples</span></code>:</dt>
+<dd>is a list of inputs (one per column) which are evaluated <em>at every
+sample point</em>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">timestep</span></code>:</dt>
+<dd>a time in seconds used for the discrete-time approximation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">options</span></code>:</dt>
+<dd>optional DynamicProgrammingOptions structure.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">params the VectorXd of parameters that optimizes the supplied
+cost-to-go function.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.systems.controllers.LinearQuadraticRegulator">
+<code class="descclassname">pydrake.systems.controllers.</code><code class="descname">LinearQuadraticRegulator</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.LinearQuadraticRegulator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>LinearQuadraticRegulator(A: numpy.ndarray[float64[m, n], flags.f_contiguous], B: numpy.ndarray[float64[m, n], flags.f_contiguous], Q: numpy.ndarray[float64[m, n], flags.f_contiguous], R: numpy.ndarray[float64[m, n], flags.f_contiguous], N: numpy.ndarray[float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64)) -&gt; Tuple[numpy.ndarray[float64[m, n]], numpy.ndarray[float64[m, n]]]</li>
+</ol>
+<p>Computes the optimal feedback controller, u=-Kx, and the optimal
+cost-to-go J = x’Sx for the problem:</p>
+<div class="math">
+\[\dot{x} = Ax + Bu\]</div>
+<div class="math">
+\[\min_u \int_0^\infty x'Qx + u'Ru + 2x'Nu dt\]</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>The state-space dynamics matrix of size num_states x num_states.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">B</span></code>:</dt>
+<dd>The state-space input matrix of size num_states x num_inputs.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dd>A symmetric positive semi-definite cost matrix of size num_states
+x num_states.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>A symmetric positive definite cost matrix of size num_inputs x
+num_inputs.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">N</span></code>:</dt>
+<dd>A cost matrix of size num_states x num_inputs.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A structure that contains the optimal feedback gain K and the
+quadratic cost term S. The optimal feedback control is u = -Kx;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if R is not positive definite.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>LinearQuadraticRegulator(system: pydrake.systems.primitives.LinearSystem_[float], Q: numpy.ndarray[float64[m, n], flags.f_contiguous], R: numpy.ndarray[float64[m, n], flags.f_contiguous], N: numpy.ndarray[float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64)) -&gt; pydrake.systems.primitives.LinearSystem_[float]</li>
+</ol>
+<p>Creates a system that implements the optimal time-invariant linear
+quadratic regulator (LQR). If <code class="docutils literal"><span class="pre">system</span></code> is a continuous-time system,
+then solves the continuous-time LQR problem:</p>
+<div class="math">
+\[\min_u \int_0^\infty x^T(t)Qx(t) + u^T(t)Ru(t) dt.\]</div>
+<p>If <code class="docutils literal"><span class="pre">system</span></code> is a discrete-time system, then solves the discrete-time
+LQR problem:</p>
+<div class="math">
+\[\min_u \sum_0^\infty x^T[n]Qx[n] + u^T[n]Ru[n].\]</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dd>The System to be controlled.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dd>A symmetric positive semi-definite cost matrix of size num_states
+x num_states.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>A symmetric positive definite cost matrix of size num_inputs x
+num_inputs.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">N</span></code>:</dt>
+<dd>A cost matrix of size num_states x num_inputs.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A system implementing the optimal controller in the original
+system coordinates.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if R is not positive definite.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>LinearQuadraticRegulator(system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], Q: numpy.ndarray[float64[m, n], flags.f_contiguous], R: numpy.ndarray[float64[m, n], flags.f_contiguous], N: numpy.ndarray[float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64)) -&gt; pydrake.systems.primitives.AffineSystem_[float]</li>
+</ol>
+<p>Linearizes the System around the specified Context, computes the
+optimal time-invariant linear quadratic regulator (LQR), and returns a
+System which implements that regulator in the original System’s
+coordinates. If <code class="docutils literal"><span class="pre">system</span></code> is a continuous-time system, then solves
+the continuous-time LQR problem:</p>
+<div class="math">
+\[\min_u \int_0^\infty (x-x_0)^TQ(x-x_0) + (u-u_0)^TR(u-u_0)\]</div>
+<p>dt.</p>
+<p>If <code class="docutils literal"><span class="pre">system</span></code> is a discrete-time system, then solves the discrete-time
+LQR problem:</p>
+<div class="math">
+\[\min_u \sum_0^\infty (x-x_0)^TQ(x-x_0) + (u-u_0)^TR(u-u_0),\]</div>
+<p>where <span class="math">\(x_0\)</span> is the nominal state and <span class="math">\(u_0\)</span> is the nominal
+input. The system is considered discrete if it has a single discrete
+state vector and a single unique periodic update event declared.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dd>The System to be controlled.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>Defines the desired state and control input to regulate the system
+to. Note that this state/input must be an equilibrium point of the
+system. See drake::systems::Linearize for more details.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dd>A symmetric positive semi-definite cost matrix of size num_states
+x num_states.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dd>A symmetric positive definite cost matrix of size num_inputs x
+num_inputs.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">N</span></code>:</dt>
+<dd>A cost matrix of size num_states x num_inputs.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A system implementing the optimal controller in the original
+system coordinates.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if R is not positive definite.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.controllers.PeriodicBoundaryCondition">
+<em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">PeriodicBoundaryCondition</code><a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition" title="Permalink to this definition">¶</a></dt>
+<dd><p>For algorithms that rely on approximations of the state-dynamics (as
+in FittedValueIteration), this is a list of state dimensions for which
+the state space maximum value should be “wrapped around” to ensure
+that all values are in the range [low, high). The classic example is
+for angles that are wrapped around at 2π.</p>
+<dl class="method">
+<dt id="pydrake.systems.controllers.PeriodicBoundaryCondition.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.PeriodicBoundaryCondition</em>, <em>arg0: int</em>, <em>arg1: float</em>, <em>arg2: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.PeriodicBoundaryCondition.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics">
+<em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">RbtInverseDynamics</code><a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>Solves inverse dynamics with no consideration for joint actuator force
+limits. The system also provides a pure gravity compensation mode.
+This system provides a BasicVector input port for the state <code class="docutils literal"><span class="pre">(q,</span>
+<span class="pre">v)</span></code>, where <code class="docutils literal"><span class="pre">q</span></code> is the generalized position and <code class="docutils literal"><span class="pre">v</span></code> is the
+generalized velocity, and a BasicVector output port for the computed
+generalized forces. There is an additional BasicVector input port for
+desired acceleration when configured to be <strong>not</strong> in pure gravity
+compensation mode.</p>
+<p>InverseDynamicsController uses a PID controller to generate desired
+acceleration and uses this class to compute generalized forces. This
+class should be used directly if desired acceleration is computed
+differently.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Constructors for descriptions of how (and which) forces are
+incorporated into the inverse dynamics computation.</p>
+</div>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+</ul>
+<dl class="class">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode">
+<em class="property">class </em><code class="descname">InverseDynamicsMode</code><a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>kGravityCompensation : Purely gravity compensation mode.</p>
+<p>kInverseDynamics :</p>
+<dl class="method">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode.kGravityCompensation">
+<code class="descname">kGravityCompensation</code><em class="property"> = InverseDynamicsMode.kGravityCompensation</em><a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode.kGravityCompensation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode.kInverseDynamics">
+<code class="descname">kInverseDynamics</code><em class="property"> = InverseDynamicsMode.kInverseDynamics</em><a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode.kInverseDynamics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.InverseDynamicsMode.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.RbtInverseDynamics</em>, <em>tree: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>mode: drake::systems::controllers::rbt::InverseDynamics&lt;double&gt;::InverseDynamicsMode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes inverse dynamics for <code class="docutils literal"><span class="pre">tree</span></code>, where the computed force
+<code class="docutils literal"><span class="pre">tau_id</span></code> is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>tau_id = ``M(q)vd_d + C(q, v)v - tau_g(q) - tau_s(q) + tau_d(v)``
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">M(q)</span></code> is the mass matrix, <code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the Coriolis term,
+<code class="docutils literal"><span class="pre">tau_g(q)</span></code> is the gravity term, <code class="docutils literal"><span class="pre">q</span></code> is the generalized position,
+<code class="docutils literal"><span class="pre">v</span></code> is the generalized velocity, <code class="docutils literal"><span class="pre">vd_d</span></code> is the desired generalized
+acceleration, <code class="docutils literal"><span class="pre">tau_s</span></code> is computed via
+<code class="docutils literal"><span class="pre">RigidBodyTree::CalcGeneralizedSpringForces()</span></code> and <code class="docutils literal"><span class="pre">tau_d</span></code> is
+computed via <code class="docutils literal"><span class="pre">RigidBodyTree::frictionTorques()</span></code>. In gravity
+compensation mode, the generalized force only includes the gravity
+term, that is, <code class="docutils literal"><span class="pre">tau_id</span> <span class="pre">=</span> <span class="pre">-tau_g(q)</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">tree</span></code>:</dt>
+<dd>Pointer to the model. The life span of <code class="docutils literal"><span class="pre">tree</span></code> must be longer
+than this instance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">mode</span></code>:</dt>
+<dd>If set to kGravityCompensation, this instance will only consider
+the gravity term. It also will NOT have the desired acceleration
+input port.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.is_pure_gravity_compensation">
+<code class="descname">is_pure_gravity_compensation</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.RbtInverseDynamics</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.is_pure_gravity_compensation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.kGravityCompensation">
+<code class="descname">kGravityCompensation</code><em class="property"> = InverseDynamicsMode.kGravityCompensation</em><a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.kGravityCompensation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.RbtInverseDynamics.kInverseDynamics">
+<code class="descname">kInverseDynamics</code><em class="property"> = InverseDynamicsMode.kInverseDynamics</em><a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamics.kInverseDynamics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.controllers.RbtInverseDynamicsController">
+<em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">RbtInverseDynamicsController</code><a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamicsController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></p>
+<p>A state feedback controller that uses a PidController to generate
+desired accelerations, which are then converted into torques using
+InverseDynamics. More specifically, the output of this controller is:
+<code class="docutils literal"><span class="pre">torque</span> <span class="pre">=</span> <span class="pre">inverse_dynamics(q,</span> <span class="pre">v,</span> <span class="pre">vd_d)</span></code>, where <code class="docutils literal"><span class="pre">vd_d</span> <span class="pre">=</span> <span class="pre">kp(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span>
+<span class="pre">kd(v*</span> <span class="pre">-</span> <span class="pre">v)</span> <span class="pre">+</span> <span class="pre">ki</span> <span class="pre">int(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span> <span class="pre">vd*</span></code>. <cite>q</cite> and <code class="docutils literal"><span class="pre">v</span></code> stand for the
+generalized position and velocity, and <code class="docutils literal"><span class="pre">vd</span></code> is the generalized
+acceleration. <code class="docutils literal"><span class="pre">*</span></code> indicates reference values.</p>
+<p>This controller always has a BasicVector input port for estimated
+robot state <code class="docutils literal"><span class="pre">(q,</span> <span class="pre">v)</span></code>, a BasicVector input port for reference robot
+state <code class="docutils literal"><span class="pre">(q*,</span> <span class="pre">v*)</span></code> and a BasicVector output port for computed torque
+<code class="docutils literal"><span class="pre">torque</span></code>. A constructor flag can be set to track reference
+acceleration <code class="docutils literal"><span class="pre">vd*</span></code> as well. When set, a BasicVector input port is
+also declared, and it’s content is used as <code class="docutils literal"><span class="pre">vd*</span></code>. When unset,
+<code class="docutils literal"><span class="pre">vd*</span></code> is be treated as zero.</p>
+<p>Note that this class assumes the robot is fully actuated, its position
+and velocity have the same dimension, and it does not have a floating
+base. If violated, the program will abort. This controller was not
+designed for closed loop systems: the controller accounts for neither
+constraint forces nor actuator forces applied at loop constraints. Use
+on such systems is not recommended.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">InverseDynamics for an accounting of all forces incorporated into
+the inverse dynamics computation.</p>
+</div>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+</ul>
+<dl class="method">
+<dt id="pydrake.systems.controllers.RbtInverseDynamicsController.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.RbtInverseDynamicsController, robot: pydrake.multibody.rigid_body_tree.RigidBodyTree, kp: numpy.ndarray[float64[m, 1]], ki: numpy.ndarray[float64[m, 1]], kd: numpy.ndarray[float64[m, 1]], has_reference_acceleration: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamicsController.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the controller that takes ownership of a given
+RigidBodyTree unique pointer.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">robot</span></code>:</dt>
+<dd>Unique pointer whose ownership will be transferred to this
+instance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">kp</span></code>:</dt>
+<dd>Position gain.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">ki</span></code>:</dt>
+<dd>Integral gain.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">kd</span></code>:</dt>
+<dd>Velocity gain.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">has_reference_acceleration</span></code>:</dt>
+<dd>If true, there is an extra BasicVector input port for <code class="docutils literal"><span class="pre">vd*</span></code>. If
+false, <code class="docutils literal"><span class="pre">vd*</span></code> is treated as zero, and no extra input port is
+declared.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.controllers.RbtInverseDynamicsController.set_integral_value">
+<code class="descname">set_integral_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.RbtInverseDynamicsController, arg0: pydrake.systems.framework.Context_[float], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.RbtInverseDynamicsController.set_integral_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the integral part of the PidController to <code class="docutils literal"><span class="pre">value</span></code>. <code class="docutils literal"><span class="pre">value</span></code>
+must be a column vector of the appropriate size.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.drawing.html" class="btn btn-neutral float-right" title="pydrake.systems.drawing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.analysis.html" class="btn btn-neutral" title="pydrake.systems.analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

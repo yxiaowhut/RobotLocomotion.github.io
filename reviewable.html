@@ -1,0 +1,195 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tips for Participating In Drake Code Reviews using reviewable.io &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="GitHub PR Interaction with Jenkins" href="jenkins.html" />
+    <link rel="prev" title="GitHub Issue Management" href="issues.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="jenkins.html" title="GitHub PR Interaction with Jenkins"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="issues.html" title="GitHub Issue Management"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tips-for-participating-in-drake-code-reviews-using-reviewable-io">
+<span id="reviewable"></span><h1>Tips for Participating In Drake Code Reviews using reviewable.io<a class="headerlink" href="#tips-for-participating-in-drake-code-reviews-using-reviewable-io" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first"><cite>Table of contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id1">Introduction</a></li>
+<li><a class="reference internal" href="#github-integration" id="id2">GitHub Integration</a></li>
+<li><a class="reference internal" href="#life-of-a-reviewable-comment" id="id3">Life of a Reviewable Comment</a></li>
+<li><a class="reference internal" href="#curated-commits" id="id4">Curated Commits</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#id1">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Drake code reviews use <a class="reference external" href="https://reviewable.io">https://reviewable.io</a>. This page documents some
+best practices for communicating effectively in Reviewable.</p>
+</div>
+<div class="section" id="github-integration">
+<h2><a class="toc-backref" href="#id2">GitHub Integration</a><a class="headerlink" href="#github-integration" title="Permalink to this headline">¶</a></h2>
+<p>Avoid using the GitHub UI to comment on code during a review. Reviewable will
+import comments from GitHub, but cannot reliably match them to lines of diff.</p>
+<p>When you enter comments in Reviewable, they are saved as drafts. Use the
+“publish” button to send them out in a batch. Reviewable will post the
+comments to the GitHub PR in a single, well-formatted block, generating email
+to everyone else following the PR.</p>
+<p>Every time you push to your GitHub branch under review, Reviewable will
+snapshot a new diff. Because it maintains an independent diff series, you can
+rebase freely without corrupting the review history.</p>
+</div>
+<div class="section" id="life-of-a-reviewable-comment">
+<h2><a class="toc-backref" href="#id3">Life of a Reviewable Comment</a><a class="headerlink" href="#life-of-a-reviewable-comment" title="Permalink to this headline">¶</a></h2>
+<p>All threads in Reviewable must be resolved before you can merge your PR.</p>
+<p>The semantics of discussion resolution is more nuanced than GitHub’s default
+code review tool. We recommend to read <a class="reference external" href="https://github.com/Reviewable/Reviewable/issues/510#issue-272337333">this explanation</a> to
+understand the details.</p>
+<p>Before commenting on a line of code, reviewers should check to see if there
+is already a resolved discussion addressing the same topic. Resolved
+discussions are indicated by a small white check-mark in a grey circle to
+the left of the line of code.</p>
+<p>Reviewers should click the eye-shaped buttons to indicate that they have
+reviewed a file.  Reviewable will remember the revisions at which the file
+was reviewed, and mark them with an eye icon in the file history.</p>
+</div>
+<div class="section" id="curated-commits">
+<span id="curate-commits-before-merging"></span><h2><a class="toc-backref" href="#id4">Curated Commits</a><a class="headerlink" href="#curated-commits" title="Permalink to this headline">¶</a></h2>
+<p>Each commit on Drake master should pass all unit tests and lint checks, should
+be logically cohesive (should not require other commits to make sense), and
+should have a meaningful commit message.</p>
+<p>The label <code class="docutils literal"><span class="pre">status:</span> <span class="pre">curate</span> <span class="pre">commits</span> <span class="pre">before</span> <span class="pre">merging</span></code> on a PR indicates that (at
+the time the label was added) the commits pushed to the PR do not meet those
+criteria, usually because the commits contain “work-in-progress” checkpoints or
+scattered “fix review comments” adjustments.</p>
+<p>When applied to a PR, this label will prevent a PR with more than one commit
+from being merged.</p>
+<p>The author of a PR has three choices for how to resolve this defect:</p>
+<ul class="simple">
+<li>Remove the label and then immediately use the “squash and merge” button to
+merge the PR, being careful to tweak the the commit message in the github
+edit box to be a sensible description of the change.</li>
+<li>Locally (rebase and) squash the PR down to a single commit, and force-push
+that commit into the PR.  This will automatically remove the merge
+impediment: even though the label still exists, it is a no-op when there is
+only one commit in the PR.</li>
+<li>Locally (rebase and) squash the PR to contain more than one commit, but where
+each individual commit meets the above recommendations, and then remove the
+label.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tips for Participating In Drake Code Reviews using reviewable.io</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#github-integration">GitHub Integration</a></li>
+<li><a class="reference internal" href="#life-of-a-reviewable-comment">Life of a Reviewable Comment</a></li>
+<li><a class="reference internal" href="#curated-commits">Curated Commits</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="jenkins.html" title="GitHub PR Interaction with Jenkins"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="issues.html" title="GitHub Issue Management"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

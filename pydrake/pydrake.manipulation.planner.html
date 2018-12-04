@@ -1,0 +1,633 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.manipulation.planner &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.manipulation" href="pydrake.manipulation.html"/>
+        <link rel="next" title="pydrake.manipulation.simple_ui" href="pydrake.manipulation.simple_ui.html"/>
+        <link rel="prev" title="pydrake.manipulation.all" href="pydrake.manipulation.all.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.all.html">pydrake.manipulation.all</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.manipulation.planner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.simple_ui.html">pydrake.manipulation.simple_ui</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.manipulation.html">pydrake.manipulation</a> &raquo;</li>
+        
+      <li>pydrake.manipulation.planner</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.manipulation.planner">
+<span id="pydrake-manipulation-planner"></span><h1>pydrake.manipulation.planner<a class="headerlink" href="#module-pydrake.manipulation.planner" title="Permalink to this headline">¶</a></h1>
+<p>Tools for manipulation planning.</p>
+<dl class="class">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.planner.</code><code class="descname">DifferentialInverseKinematicsParameters</code><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Contains parameters for differential inverse kinematics.</p>
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>num_positions: int = 0</em>, <em>num_velocities: int = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor. Initializes the nominal joint position to zeros of size
+<code class="docutils literal"><span class="pre">num_positions</span></code>. Timestep is initialized to 1. The end effector
+gains are initialized to ones. All constraints are initialized to
+nullopt.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">num_positions</span></code>:</dt>
+<dd>Number of generalized positions.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_velocities</span></code>:</dt>
+<dd>Number of generalized velocities.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_gain">
+<code class="descname">get_end_effector_velocity_gain</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[6, 1]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_end_effector_velocity_gain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_acceleration_limits">
+<code class="descname">get_joint_acceleration_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[Tuple[numpy.ndarray[float64[m, 1]], numpy.ndarray[float64[m, 1]]]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_acceleration_limits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_position_limits">
+<code class="descname">get_joint_position_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[Tuple[numpy.ndarray[float64[m, 1]], numpy.ndarray[float64[m, 1]]]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_position_limits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_velocity_limits">
+<code class="descname">get_joint_velocity_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[Tuple[numpy.ndarray[float64[m, 1]], numpy.ndarray[float64[m, 1]]]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_joint_velocity_limits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_nominal_joint_position">
+<code class="descname">get_nominal_joint_position</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_nominal_joint_position" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_num_positions">
+<code class="descname">get_num_positions</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_num_positions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_num_velocities">
+<code class="descname">get_num_velocities</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_num_velocities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_timestep">
+<code class="descname">get_timestep</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#64;name Getters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_unconstrained_degrees_of_freedom_velocity_limit">
+<code class="descname">get_unconstrained_degrees_of_freedom_velocity_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em><span class="sig-paren">)</span> &#x2192; Optional[float]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.get_unconstrained_degrees_of_freedom_velocity_limit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_velocity_gain">
+<code class="descname">set_end_effector_velocity_gain</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: numpy.ndarray[float64[6, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_end_effector_velocity_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the end effector gains in the body frame. Gains can be used to
+specify relative importance among different dimensions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any element of <code class="docutils literal"><span class="pre">gain_E</span></code> is larger than 1 or</li>
+<li>smaller than 0.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_acceleration_limits">
+<code class="descname">set_joint_acceleration_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: Tuple[numpy.ndarray[float64[m, 1]], numpy.ndarray[float64[m, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_acceleration_limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the joint acceleration limits.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">q_bounds</span></code>:</dt>
+<dd>The first element is the lower bound, and the second is the upper
+bound.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the first or second element of <code class="docutils literal"><span class="pre">q_bounds</span></code> has</li>
+<li>the wrong dimension or any element of the second element is</li>
+<li>smaller than its corresponding part in the first element.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_position_limits">
+<code class="descname">set_joint_position_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: Tuple[numpy.ndarray[float64[m, 1]], numpy.ndarray[float64[m, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_position_limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the joint position limits.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">q_bounds</span></code>:</dt>
+<dd>The first element is the lower bound, and the second is the upper
+bound.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the first or second element of <code class="docutils literal"><span class="pre">q_bounds</span></code> has</li>
+<li>the wrong dimension or any element of the second element is</li>
+<li>smaller than its corresponding part in the first element.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_velocity_limits">
+<code class="descname">set_joint_velocity_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: Tuple[numpy.ndarray[float64[m, 1]], numpy.ndarray[float64[m, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_velocity_limits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the joint velocity limits.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">q_bounds</span></code>:</dt>
+<dd>The first element is the lower bound, and the second is the upper
+bound.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the first or second element of <code class="docutils literal"><span class="pre">q_bounds</span></code> has</li>
+<li>the wrong dimension or any element of the second element is</li>
+<li>smaller than its corresponding part in the first element.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_nominal_joint_position">
+<code class="descname">set_nominal_joint_position</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_nominal_joint_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the nominal joint position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">nominal_joint_position</span></code>’s dimension differs.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep">
+<code class="descname">set_timestep</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#64;name Setters. Sets timestep to <code class="docutils literal"><span class="pre">dt</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if dt &lt;= 0.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_unconstrained_degrees_of_freedom_velocity_limit">
+<code class="descname">set_unconstrained_degrees_of_freedom_velocity_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_unconstrained_degrees_of_freedom_velocity_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the max magnitude of the velocity in the unconstrained degree of
+freedom to <code class="docutils literal"><span class="pre">limit</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if limit &lt; 0.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsResult">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.planner.</code><code class="descname">DifferentialInverseKinematicsResult</code><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsResult" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsResult.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsResult, joint_velocities: Optional[numpy.ndarray[float64[m, 1]]], status: pydrake.manipulation.planner.DifferentialInverseKinematicsStatus</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsResult.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsResult.joint_velocities">
+<code class="descname">joint_velocities</code><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsResult.joint_velocities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsResult.status">
+<code class="descname">status</code><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsResult.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsStatus">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.planner.</code><code class="descname">DifferentialInverseKinematicsStatus</code><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kStuck : &lt; Unable to follow the desired velocity direction</p>
+<p>kSolutionFound : &lt; Found the optimal solution.</p>
+<p>kNoSolutionFound : &lt; Solver unable to find a solution.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsStatus</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.kNoSolutionFound">
+<code class="descname">kNoSolutionFound</code><em class="property"> = DifferentialInverseKinematicsStatus.kNoSolutionFound</em><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.kNoSolutionFound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.kSolutionFound">
+<code class="descname">kSolutionFound</code><em class="property"> = DifferentialInverseKinematicsStatus.kSolutionFound</em><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.kSolutionFound" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.kStuck">
+<code class="descname">kStuck</code><em class="property"> = DifferentialInverseKinematicsStatus.kStuck</em><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.kStuck" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsStatus.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.manipulation.planner.DoDifferentialInverseKinematics">
+<code class="descclassname">pydrake.manipulation.planner.</code><code class="descname">DoDifferentialInverseKinematics</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.planner.DoDifferentialInverseKinematics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DoDifferentialInverseKinematics(q_current: numpy.ndarray[float64[m, 1]], v_current: numpy.ndarray[float64[m, 1]], V: numpy.ndarray[float64[m, 1]], J: numpy.ndarray[float64[m, n]], parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; pydrake.manipulation.planner.DifferentialInverseKinematicsResult</li>
+</ol>
+<p>Computes a generalized velocity v_next, via the following
+MathematicalProgram:</p>
+<p>min_{v_next,alpha} 100 * | alpha - <a href="#id5"><span class="problematic" id="id6">|V|</span></a> <a href="#id1"><span class="problematic" id="id2">|</span></a>^2 // iff J.rows() &lt; J.cols(),
+then + | q_current + v_next*dt - q_nominal <a href="#id3"><span class="problematic" id="id4">|</span></a>^2</p>
+<p>s.t. J*v_next = alpha * V / <a href="#id7"><span class="problematic" id="id8">|V|</span></a> // J*v_next has the same direction as
+V joint_lim_min &lt;= q_current + v_next*dt &lt;= joint_lim_max
+joint_vel_lim_min &lt;= v_next &lt;= joint_vel_lim_max joint_accel_lim_min
+&lt;= (v_next - v_current)/dt &lt;= joint_accel_lim_max for all i &gt;
+J.rows(), -unconstrained_vel_lim &lt;= S.col(i)’ v_next &lt;=
+unconstrained_vel_lim where J = UΣS’ is the SVD, with the singular
+values in decreasing order. Note that the constraint is imposed on
+each column independently.</p>
+<p>and any additional linear constraints added via
+AddLinearVelocityConstraint() in the
+DifferentialInverseKinematicsParameters. where J.rows() == V.size()
+and J.cols() == v_current.size() == q_current.size() == v_next.size().
+V can have any size, with each element representing a constraint on
+the solution (6 constraints specifying an end-effector pose is
+typical, but not required).</p>
+<p>Intuitively, this finds a v_next such that J*v_next is in the same
+direction as V, and the difference between <a href="#id9"><span class="problematic" id="id10">|V|</span></a> and <a href="#id11"><span class="problematic" id="id12">|J * v_next|</span></a> is
+minimized while all constraints in <code class="docutils literal"><span class="pre">parameters</span></code> are satisfied as
+well. If the problem is redundant, a secondary objective to minimize
+<a href="#id13"><span class="problematic" id="id14">|q_current + v_next * dt - q_nominal|</span></a> is added to the problem.</p>
+<p>It is possible that the solver is unable to find such a generalized
+velocity while not violating the constraints, in which case, status
+will be set to kStuck in the returned
+DifferentialInverseKinematicsResult.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">q_current</span></code>:</dt>
+<dd>The current generalized position.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">v_current</span></code>:</dt>
+<dd>The current generalized position.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">V</span></code>:</dt>
+<dd>Desired spatial velocity. It must have the same number of rows as
+<code class="docutils literal"><span class="pre">J</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">J</span></code>:</dt>
+<dd>Geometric Jacobian. It must have the same number of rows as <code class="docutils literal"><span class="pre">V</span></code>.
+J * v need to represent the same spatial velocity as <code class="docutils literal"><span class="pre">V</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">parameters</span></code>:</dt>
+<dd>Collection of various problem specific constraints and constants.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">If the solver successfully finds a solution, joint_velocities will
+be set to v, otherwise it will be nullopt.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>DoDifferentialInverseKinematics(robot: drake::multibody::multibody_plant::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], V_WE_desired: numpy.ndarray[float64[6, 1]], frame_E: drake::multibody::Frame&lt;double&gt;, parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; pydrake.manipulation.planner.DifferentialInverseKinematicsResult</li>
+</ol>
+<p>A wrapper over DoDifferentialInverseKinematics(q_current, v_current,
+V, J, params) that tracks frame E’s spatial velocity. q_current and
+v_current are taken from <code class="docutils literal"><span class="pre">context</span></code>. V is computed by first
+transforming <code class="docutils literal"><span class="pre">V_WE</span></code> to V_WE_E, then taking the element-wise product
+between V_WE_E and the gains (specified in frame E) in <code class="docutils literal"><span class="pre">parameters</span></code>,
+and only selecting the non zero elements. J is computed similarly.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">robot</span></code>:</dt>
+<dd>A MultibodyPlant model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>Must be the Context of the MultibodyPlant. Contains the current
+generalized position and velocity.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">V_WE_desired</span></code>:</dt>
+<dd>Desired world frame spatial velocity of <code class="docutils literal"><span class="pre">frame_E</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frame_E</span></code>:</dt>
+<dd>End effector frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">parameters</span></code>:</dt>
+<dd>Collection of various problem specific constraints and constants.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">If the solver successfully finds a solution, joint_velocities will
+be set to v, otherwise it will be nullopt.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>DoDifferentialInverseKinematics(robot: drake::multibody::multibody_plant::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], X_WE_desired: pydrake.common.eigen_geometry.Isometry3, frame_E: drake::multibody::Frame&lt;double&gt;, parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; pydrake.manipulation.planner.DifferentialInverseKinematicsResult</li>
+</ol>
+<p>A wrapper over DoDifferentialInverseKinematics(robot, context,
+V_WE_desired, frame_E, params) that tracks frame E’s pose in the world
+frame. q_current and v_current are taken from <code class="docutils literal"><span class="pre">cache</span></code>. V_WE is
+computed by ComputePoseDiffInCommonFrame(X_WE, X_WE_desired) / dt,
+where X_WE is computed from <code class="docutils literal"><span class="pre">context</span></code>, and dt is taken from
+<code class="docutils literal"><span class="pre">parameters</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">robot</span></code>:</dt>
+<dd>A MultibodyPlant model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>Must be the Context of the MultibodyPlant. Contains the current
+generalized position and velocity.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">X_WE_desired</span></code>:</dt>
+<dd>Desired pose of <code class="docutils literal"><span class="pre">frame_E</span></code> in the world frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frame_E</span></code>:</dt>
+<dd>End effector frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">parameters</span></code>:</dt>
+<dd>Collection of various problem specific constraints and constants.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">If the solver successfully finds a solution, joint_velocities will
+be set to v, otherwise it will be nullopt.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.manipulation.simple_ui.html" class="btn btn-neutral float-right" title="pydrake.manipulation.simple_ui" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.manipulation.all.html" class="btn btn-neutral" title="pydrake.manipulation.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

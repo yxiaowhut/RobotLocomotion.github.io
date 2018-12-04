@@ -1,0 +1,356 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Using Drake from Python &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using Drake from Julia" href="julia_bindings.html" />
+    <link rel="prev" title="Credits" href="credits.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="julia_bindings.html" title="Using Drake from Julia"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="credits.html" title="Credits"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="using-drake-from-python">
+<span id="python-bindings"></span><h1>Using Drake from Python<a class="headerlink" href="#using-drake-from-python" title="Permalink to this headline">¶</a></h1>
+<p>A limited subset of the Drake C++ functionality is available from Python. The
+Drake Python bindings are generated using <a class="reference external" href="https://github.com/pybind/pybind11">pybind11</a>, which means that every function or
+class which is exposed to C++ has been explicitly enumerated in one of the
+source files inside the <code class="docutils literal"><span class="pre">bindings/pydrake</span></code> folder. These bindings are
+installed as a single package called <code class="docutils literal"><span class="pre">pydrake</span></code>.</p>
+<p>Python 2.7 is currently the only supported version for these bindings.</p>
+<div class="section" id="binary-installation-for-python">
+<span id="python-bindings-binary"></span><h2>Binary Installation for Python<a class="headerlink" href="#binary-installation-for-python" title="Permalink to this headline">¶</a></h2>
+<p>First, download and extract an <a class="reference internal" href="from_binary.html#binary-installation"><span class="std std-ref">available binary package</span></a>.</p>
+<p>As an example, here is how to download and extract one of the latest releases
+to <code class="docutils literal"><span class="pre">/opt</span></code> (where <code class="docutils literal"><span class="pre">&lt;platform&gt;</span></code> could be <code class="docutils literal"><span class="pre">xenial</span></code> or <code class="docutils literal"><span class="pre">mac</span></code>):</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>curl -o drake.tar.gz https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-&lt;platform&gt;.tar.gz
+rm -rf /opt/drake
+tar -xvzf drake.tar.gz -C /opt
+</pre></div>
+</div>
+<p>Ensure that you have the system dependencies:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>/opt/drake/share/drake/setup/install_prereqs
+</pre></div>
+</div>
+<p>Next, ensure that your <code class="docutils literal"><span class="pre">PYTHONPATH</span></code> is properly configured:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>/opt/drake/lib/python2.7/site-packages:<span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="#using-python-bindings"><span class="std std-ref">below</span></a> for usage instructions. If using
+macOS, pay special attention to <a class="reference internal" href="#using-python-mac-os-path"><span class="std std-ref">this note</span></a>.</p>
+</div>
+<div class="section" id="building-the-python-bindings">
+<h2>Building the Python Bindings<a class="headerlink" href="#building-the-python-bindings" title="Permalink to this headline">¶</a></h2>
+<p>To use the Python bindings from Drake externally, we recommend using CMake.
+As an example:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>git clone https://github.com/RobotLocomotion/drake.git
+mkdir drake-build
+<span class="nb">cd</span> drake-build
+cmake ../drake
+make -j
+</pre></div>
+</div>
+<p>Please note the additional CMake options which affect the Python bindings:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">-DWITH_GUROBI={ON,</span> <span class="pre">[OFF]}</span></code> - Build with Gurobi enabled.</li>
+<li><code class="docutils literal"><span class="pre">-DWITH_MOSEK={ON,</span> <span class="pre">[OFF]}</span></code> - Build with MOSEK enabled.</li>
+<li><code class="docutils literal"><span class="pre">-DWITH_SNOPT={ON,</span> <span class="pre">[OFF]}</span></code> - Build with SNOPT enabled.</li>
+</ul>
+<p><code class="docutils literal"><span class="pre">{...}</span></code> means a list of options, and the option surrounded by <code class="docutils literal"><span class="pre">[...]</span></code> is
+the default option. An example of building <code class="docutils literal"><span class="pre">pydrake</span></code> with both Gurobi and
+MOSEK, without building tests:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>cmake -DWITH_GUROBI<span class="o">=</span>ON -DWITH_MOSEK<span class="o">=</span>ON ../drake
+</pre></div>
+</div>
+<p>You will also need to have your <code class="docutils literal"><span class="pre">PYTHONPATH</span></code> configured correctly.</p>
+<p>As an example, continuing from the code snippets from above:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="nb">cd</span> drake-build
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/install/lib/python2.7/site-packages:<span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-python-bindings">
+<span id="using-python-bindings"></span><h2>Using the Python Bindings<a class="headerlink" href="#using-the-python-bindings" title="Permalink to this headline">¶</a></h2>
+<p>To use the Drake Python bindings, follow the steps above to install or build
+Drake. To check this:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>python -c <span class="s1">&#39;import pydrake; print(pydrake.__file__)&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note" id="using-python-mac-os-path">
+<p class="first admonition-title">Note</p>
+<p>If you are using macOS, you must ensure that you are using the <code class="docutils literal"><span class="pre">python2</span></code>
+executable to run these scripts. As an example for Homebrew:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/local/opt/python/libexec/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
+</pre></div>
+</div>
+<p class="last">If you would like to use <code class="docutils literal"><span class="pre">jupyter</span></code>, then be sure to install it via
+<code class="docutils literal"><span class="pre">pip2</span> <span class="pre">install</span> <span class="pre">jupyter</span></code> (<em>not</em> <code class="docutils literal"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">jupyter</span></code>) to ensure that it
+uses the correct <code class="docutils literal"><span class="pre">PYTHONPATH</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are using Gurobi, you must either have it installed in the suggested
+location under <code class="docutils literal"><span class="pre">/opt/...</span></code> mentioned in <a class="reference internal" href="bazel.html#gurobi"><span class="std std-ref">Gurobi 8.0.0</span></a>, or you must ensure
+that you define the <code class="docutils literal"><span class="pre">${GUROBI_PATH}</span></code> environment variable, or specify
+<code class="docutils literal"><span class="pre">${GUROBI_INCLUDE_DIR}</span></code> via CMake.</p>
+</div>
+</div>
+<div class="section" id="what-s-available-from-python">
+<h2>What’s Available from Python<a class="headerlink" href="#what-s-available-from-python" title="Permalink to this headline">¶</a></h2>
+<p>The most up-to-date demonstrations of what can be done using <code class="docutils literal"><span class="pre">pydrake</span></code> are
+the <code class="docutils literal"><span class="pre">pydrake</span></code> unit tests themselves. You can see all of them inside the
+<code class="docutils literal"><span class="pre">drake/bindings/python/pydrake/**/test</span></code> folders in the Drake source code.</p>
+<p>Here’s an example snippet of code from <code class="docutils literal"><span class="pre">pydrake</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pydrake.common</span> <span class="kn">import</span> <span class="n">FindResourceOrThrow</span>
+<span class="kn">from</span> <span class="nn">pydrake.multibody.rigid_body_plant</span> <span class="kn">import</span> <span class="n">RigidBodyPlant</span>
+<span class="kn">from</span> <span class="nn">pydrake.multibody.rigid_body_tree</span> <span class="kn">import</span> <span class="n">RigidBodyTree</span>
+<span class="kn">from</span> <span class="nn">pydrake.systems.analysis</span> <span class="kn">import</span> <span class="n">Simulator</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">RigidBodyTree</span><span class="p">(</span>
+    <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="s2">&quot;drake/examples/pendulum/Pendulum.urdf&quot;</span><span class="p">))</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">Simulator</span><span class="p">(</span><span class="n">RigidBodyPlant</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If you are prototyping code in a REPL environment (such as IPython / Jupyter)
+and to reduce the number of import statements, consider using <code class="docutils literal"><span class="pre">pydrake.all</span></code> to
+import a subset of symbols from a flattened namespace or import all modules
+automatically. If you are writing non-prototype code, avoid using
+<code class="docutils literal"><span class="pre">pydrake.all</span></code>; for more details, see <code class="docutils literal"><span class="pre">help(pydrake.all)</span></code>.</p>
+<p>In all cases, try to avoid using <code class="docutils literal"><span class="pre">from</span> <span class="pre">pydrake.all</span> <span class="pre">import</span> <span class="pre">*</span></code>, as it may
+introduce symbol collisions that are difficiult to debug.</p>
+<p>An example of importing symbols directly from <code class="docutils literal"><span class="pre">pydrake.all</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pydrake.all</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">FindResourceOrThrow</span><span class="p">,</span> <span class="n">RigidBodyPlant</span><span class="p">,</span> <span class="n">RigidBodyTree</span><span class="p">,</span> <span class="n">Simulator</span><span class="p">)</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">RigidBodyTree</span><span class="p">(</span>
+    <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="s2">&quot;drake/examples/pendulum/Pendulum.urdf&quot;</span><span class="p">))</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">Simulator</span><span class="p">(</span><span class="n">RigidBodyPlant</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>An alternative is to use <code class="docutils literal"><span class="pre">pydrake.all</span></code> to import all modules, but then
+explicitly refer to each symbol:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pydrake.all</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">multibody</span><span class="o">.</span><span class="n">rigid_body_tree</span><span class="o">.</span><span class="n">RigidBodyTree</span><span class="p">(</span>
+    <span class="n">pydrake</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">FindResourceOrThrow</span><span class="p">(</span>
+        <span class="s2">&quot;drake/examples/pendulum/Pendulum.urdf&quot;</span><span class="p">))</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">Simulator</span><span class="p">(</span>
+    <span class="n">pydrake</span><span class="o">.</span><span class="n">multibody</span><span class="o">.</span><span class="n">rigid_body_plant</span><span class="o">.</span><span class="n">RigidBodyPlant</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="section" id="differences-with-c-api">
+<h3>Differences with C++ API<a class="headerlink" href="#differences-with-c-api" title="Permalink to this headline">¶</a></h3>
+<p>In general, the <a class="reference external" href="pydrake/index.html#://">Python API</a> should be close to the
+<a class="reference external" href="doxygen_cxx/index.html#://">C++ API</a>. There are some exceptions:</p>
+<div class="section" id="c-template-instantiations-in-python">
+<h4>C++ Template Instantiations in Python<a class="headerlink" href="#c-template-instantiations-in-python" title="Permalink to this headline">¶</a></h4>
+<p>When you define a general class template, e.g.
+<code class="docutils literal"><span class="pre">template</span> <span class="pre">&lt;typename</span> <span class="pre">T&gt;</span> <span class="pre">class</span> <span class="pre">Value</span></code>, something like <code class="docutils literal"><span class="pre">Value&lt;std::string&gt;</span></code> is
+called the instantiation.</p>
+<p>For certain C++ templated types, they are exposed in Pythons also as templates;
+the parameter types (in this case, <code class="docutils literal"><span class="pre">T</span></code>) are the Python-equivalent types to the
+C++ type. Some examples:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">C++</th>
+<th class="head">Python</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">std::string</span></code></td>
+<td><code class="docutils literal"><span class="pre">str</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">double</span></code></td>
+<td><code class="docutils literal"><span class="pre">float</span></code>, <code class="docutils literal"><span class="pre">np.double</span></code>,
+<code class="docutils literal"><span class="pre">np.float64</span></code>, <code class="docutils literal"><span class="pre">ctypes.c_double</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">drake::AutoDiffXd</span></code></td>
+<td><code class="docutils literal"><span class="pre">pydrake.autodiffutils.AutoDiffXd</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">drake::symbolic::Expression</span></code></td>
+<td><code class="docutils literal"><span class="pre">pydrake.symbolic.Expression</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Thus, the instantiation <code class="docutils literal"><span class="pre">Value&lt;std::string&gt;</span></code> will be bound in Python as
+<code class="docutils literal"><span class="pre">Value[str]</span></code>.</p>
+</div>
+<div class="section" id="scalar-types">
+<h4>Scalar Types<a class="headerlink" href="#scalar-types" title="Permalink to this headline">¶</a></h4>
+<p>Most classes in the Systems framework and in the multibody dynamics
+computational framework are templated on a scalar type, <code class="docutils literal"><span class="pre">T</span></code>.
+For convenience (and backwards compatibility) in Python, a slightly different
+binding convention is used.</p>
+<p>For example, <code class="docutils literal"><span class="pre">Adder&lt;T&gt;</span></code> is a Systems primitive which has a user-defined
+number of inputs and outputs a single port which is the sum of all of the
+inputs.</p>
+<p>In C++, you would access the instantiations using <code class="docutils literal"><span class="pre">Adder&lt;double&gt;</span></code>,
+<code class="docutils literal"><span class="pre">Adder&lt;AutoDiffXd&gt;</span></code>, and <code class="docutils literal"><span class="pre">Adder&lt;Expression&gt;</span></code> for common scalar types.</p>
+<p>In Python, <code class="docutils literal"><span class="pre">Adder</span></code> actually refers to the “default” instantiation, the
+<code class="docutils literal"><span class="pre">Adder&lt;double&gt;</span></code> C++ class. To access other instantiations, you should add an
+<code class="docutils literal"><span class="pre">_</span></code> to the end of the C++ class name to get the Python template and then
+provide the parameters in square braces, <code class="docutils literal"><span class="pre">[...]</span></code>. In this example, you should
+use <code class="docutils literal"><span class="pre">Adder_[T]</span></code>.</p>
+<p>To illustrate, you can print out the string representations of <code class="docutils literal"><span class="pre">Adder</span></code>,
+<code class="docutils literal"><span class="pre">Adder_</span></code>, and some of its instantiations in Python:</p>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pydrake.systems.primitives</span> <span class="kn">import</span> <span class="n">Adder</span><span class="p">,</span> <span class="n">Adder_</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">Adder</span><span class="p">)</span>
+<span class="go">&lt;class &#39;pydrake.systems.primitives.Adder_[float]&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">)</span>
+<span class="go">&lt;TemplateClass pydrake.systems.primitives.Adder_&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pydrake.autodiffutils</span> <span class="kn">import</span> <span class="n">AutoDiffXd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pydrake.symbolic</span> <span class="kn">import</span> <span class="n">Expression</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">])</span>
+<span class="go">&lt;class &#39;pydrake.systems.primitives.Adder_[float]&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="n">AutoDiffXd</span><span class="p">])</span>
+<span class="go">&lt;class &#39;pydrake.systems.primitives.Adder_[AutoDiffXd]&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">Adder_</span><span class="p">[</span><span class="n">Expression</span><span class="p">])</span>
+<span class="go">&lt;class &#39;pydrake.systems.primitives.Adder_[Expression]&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Additionally, you may convert an instance (if the conversion is available) using
+<code class="docutils literal"><span class="pre">System_[T].ToAutoDiffXd</span></code> and <code class="docutils literal"><span class="pre">System_[T].ToSymbolic</span></code>:</p>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">adder</span> <span class="o">=</span> <span class="n">Adder</span><span class="p">(</span><span class="n">num_inputs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="p">)</span>
+<span class="go">&lt;pydrake.systems.primitives.Adder_[float] object at 0x...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="o">.</span><span class="n">ToAutoDiffXd</span><span class="p">())</span>
+<span class="go">&lt;pydrake.systems.primitives.Adder_[AutoDiffXd] object at 0x...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="o">.</span><span class="n">ToSymbolic</span><span class="p">())</span>
+<span class="go">&lt;pydrake.systems.primitives.Adder_[Expression] object at 0x...&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="for-developers">
+<h2>For Developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h2>
+<p>If you are developing Python bindings, please see the Doxygen page
+<a class="reference external" href="https://drake.mit.edu/doxygen_cxx/group__python__bindings.html">Python Bindings</a> which provides information on programming conventions, documentation, tips
+for debugging, and other advice.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Using Drake from Python</a><ul>
+<li><a class="reference internal" href="#binary-installation-for-python">Binary Installation for Python</a></li>
+<li><a class="reference internal" href="#building-the-python-bindings">Building the Python Bindings</a></li>
+<li><a class="reference internal" href="#using-the-python-bindings">Using the Python Bindings</a></li>
+<li><a class="reference internal" href="#what-s-available-from-python">What’s Available from Python</a><ul>
+<li><a class="reference internal" href="#differences-with-c-api">Differences with C++ API</a><ul>
+<li><a class="reference internal" href="#c-template-instantiations-in-python">C++ Template Instantiations in Python</a></li>
+<li><a class="reference internal" href="#scalar-types">Scalar Types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#for-developers">For Developers</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="julia_bindings.html" title="Using Drake from Julia"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="credits.html" title="Credits"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

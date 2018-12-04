@@ -1,0 +1,228 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GitHub Issue Management &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tips for Participating In Drake Code Reviews using reviewable.io" href="reviewable.html" />
+    <link rel="prev" title="Downstream Testing (Drake as a Dependency)" href="downstream_testing.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="reviewable.html" title="Tips for Participating In Drake Code Reviews using reviewable.io"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="downstream_testing.html" title="Downstream Testing (Drake as a Dependency)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="github-issue-management">
+<span id="issues"></span><h1>GitHub Issue Management<a class="headerlink" href="#github-issue-management" title="Permalink to this headline">¶</a></h1>
+<p>Drake uses <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues">GitHub issues</a>
+to coordinate bug resolution and feature development. We organize issues using
+labels.  Each label uses the format <code class="docutils literal"><span class="pre">group:</span> <span class="pre">value</span></code>, where <code class="docutils literal"><span class="pre">group</span></code> is one
+of the following:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">team</span></code>: Indicates the engineering team that owns the issue.</li>
+<li><code class="docutils literal"><span class="pre">type</span></code>: Indicates the nature of the issue.</li>
+<li><code class="docutils literal"><span class="pre">priority</span></code>: Indicates the urgency of resolution.</li>
+<li><code class="docutils literal"><span class="pre">configuration</span></code>: The supported configurations affected, if applicable.</li>
+<li><code class="docutils literal"><span class="pre">status</span></code>: PRs only.  Indicates the status of the PR.</li>
+</ul>
+<p>Please only assign labels if you are reasonably confident they are correct.
+The Drake development team will apply appropriate labels to issues during
+the weekly scrub.</p>
+<div class="section" id="owner">
+<h2>Owner<a class="headerlink" href="#owner" title="Permalink to this headline">¶</a></h2>
+<p>All GitHub issues should have an owner. The Platform Reviewer should check once
+per day that <a class="reference external" href="https://github.com/RobotLocomotion/drake/issues?q=is%3Aissue+is%3Aopen+no%3Aassignee">all unassigned issues</a>
+have an appropriate owner.</p>
+</div>
+<div class="section" id="team">
+<h2>Team<a class="headerlink" href="#team" title="Permalink to this headline">¶</a></h2>
+<p>Every issue must have at least one <code class="docutils literal"><span class="pre">team</span></code> label. If no team agrees to own an
+issue, the issue will be closed with an explanation.  The teams, their leads,
+and their responsibilities are:</p>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">automotive</span></code></p>
+<p>lead: jwnimmer-tri</p>
+<p>responsibilities: <code class="docutils literal"><span class="pre">drake/automotive/</span></code> subdirectory</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">dynamics</span></code></p>
+<p>lead: sherm1</p>
+<p>responsibilities: physical accuracy, numerical methods, collision,
+systems framework</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">kitware</span></code></p>
+<p>lead: jamiesnape</p>
+<p>responsibilities: build, continuous integration</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">manipulation</span></code></p>
+<p>lead: hongkai-dai</p>
+<p>responsibilities: optimizers, solvers, symbolic analysis,
+<code class="docutils literal"><span class="pre">drake/manipulation/</span></code> subdirectory</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">robot</span> <span class="pre">locomotion</span> <span class="pre">group</span></code> and <code class="docutils literal"><span class="pre">6.832</span></code></p>
+<p>lead: RussTedrake</p>
+<p>responsibilities: MIT CSAIL research lab / MIT courses</p>
+</li>
+</ul>
+</div>
+<div class="section" id="type">
+<h2>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h2>
+<p>Every issue must have at least one <code class="docutils literal"><span class="pre">type</span></code>, and typically should have exactly
+one. Issues that require a code change will typically have type <code class="docutils literal"><span class="pre">bug</span></code>,
+<code class="docutils literal"><span class="pre">feature</span> <span class="pre">request</span></code>, or <code class="docutils literal"><span class="pre">cleanup</span></code>. There are a number of niche types for
+other kinds of issues, and the exact set is expected to evolve over time.</p>
+</div>
+<div class="section" id="priority">
+<h2>Priority<a class="headerlink" href="#priority" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">emergency</span></code> priority indicates that the owning team should not work
+on anything else until the issue is resolved.</p>
+<p>The <code class="docutils literal"><span class="pre">high</span></code>, <code class="docutils literal"><span class="pre">medium</span></code>, <code class="docutils literal"><span class="pre">low</span></code>, and <code class="docutils literal"><span class="pre">backlog</span></code> priority levels have
+semantics determined by the owning team. The following rules of thumb may be
+useful:</p>
+<ul class="simple">
+<li>high-priority issues are planned to receive attention within the month.</li>
+<li>medium-priority issues are planned to receive attention within the quarter.</li>
+<li>low-priority issues may be planned for a subsequent quarter.</li>
+<li>backlog-priority issues will be handled on an ad-hoc basis, as time permits.</li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>An issue may have configuration label(s) such as <code class="docutils literal"><span class="pre">linux</span></code>, <code class="docutils literal"><span class="pre">mac</span></code>,
+<code class="docutils literal"><span class="pre">python</span></code>, etc.  If no <code class="docutils literal"><span class="pre">configuration</span></code> label is present, the issue is
+assumed to affect all configurations.</p>
+</div>
+<div class="section" id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p>For the most part, we rely on reviewable.io to communicate PR status.
+Status labels are optional, but Drake developers managing the PR queue
+will respect them.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">do</span> <span class="pre">not</span> <span class="pre">review</span></code>: Use this status to indicate you do not want anyone to
+review your PR right now. This is useful if you created the PR to trigger
+CI and plan to iterate on the results. Even if this flag is absent, you
+are responsible for finding reviewers, as documented in <cite>developers</cite>.
+This flag simply protects you from unsolicited review.</li>
+<li><code class="docutils literal"><span class="pre">do</span> <span class="pre">not</span> <span class="pre">merge</span></code>: Use this status to indicate you do not want anyone to
+merge your PR right now, even if it passes all pre-merge checks. This is
+useful if you have minor post-LGTM changes to make, or if you need to
+coordinate the precise timing of the merge. If pre-merge checks are green
+and this flag is absent, a Drake administrator may merge your PR at any
+time.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GitHub Issue Management</a><ul>
+<li><a class="reference internal" href="#owner">Owner</a></li>
+<li><a class="reference internal" href="#team">Team</a></li>
+<li><a class="reference internal" href="#type">Type</a></li>
+<li><a class="reference internal" href="#priority">Priority</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#status">Status</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="reviewable.html" title="Tips for Participating In Drake Code Reviews using reviewable.io"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="downstream_testing.html" title="Downstream Testing (Drake as a Dependency)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

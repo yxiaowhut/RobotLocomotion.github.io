@@ -1,0 +1,1229 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.rigid_body_plant &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.multibody.rigid_body_tree" href="pydrake.multibody.rigid_body_tree.html"/>
+        <link rel="prev" title="pydrake.multibody.rigid_body" href="pydrake.multibody.rigid_body.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.rigid_body_plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.shapes.html">pydrake.multibody.shapes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.rigid_body_plant</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.rigid_body_plant">
+<span id="pydrake-multibody-rigid-body-plant"></span><h1>pydrake.multibody.rigid_body_plant<a class="headerlink" href="#module-pydrake.multibody.rigid_body_plant" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantContactModelParameters">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_plant.</code><code class="descname">CompliantContactModelParameters</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantContactModelParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of parameters for the compliant contact model. These values
+affect all contacts in the simulation session. In some sense, they are
+related to the scale of the simulation. The values must all be
+<em>strictly</em> positive. See drake_contacts for details.</p>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantContactModelParameters</em>, <em>v_stiction_tolerance: float = 0.01</em>, <em>characteristic_radius: float = 0.0002</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.characteristic_radius">
+<code class="descname">characteristic_radius</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.characteristic_radius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.kDefaultCharacteristicRadius">
+<code class="descname">kDefaultCharacteristicRadius</code><em class="property"> = 0.0002</em><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.kDefaultCharacteristicRadius" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.kDefaultVStictionTolerance">
+<code class="descname">kDefaultVStictionTolerance</code><em class="property"> = 0.01</em><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.kDefaultVStictionTolerance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.v_stiction_tolerance">
+<code class="descname">v_stiction_tolerance</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantContactModelParameters.v_stiction_tolerance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_plant.</code><code class="descname">CompliantMaterial</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of per-object compliant material parameters with one material
+applied to each collision object. The material parameters include: -
+Young’s modulus with units of pascals (i.e.,N/m²). This is a measure
+of the tensile elasticity of the material and, as such, may also be
+referred to as “elasticity” or, occasionally, “stiffness”. The default
+value is that of a hard rubber: 1e8 pascals. - dissipation with units
+of s/m (i.e., 1/velocity). Its default value is 0.32, drawn from the
+Hunt-Crossly 1975 paper representing the dissipation for ivory. -
+coefficients of friction (static and dynamic). Unitless values with
+default values of 0.9 for the static coefficient of friction and 0.5
+for the dynamic coefficient.</p>
+<p>Each collision geometry is associated with compliant contact material
+properties. The value of properties can be <em>explicit</em> or <em>default</em>.</p>
+<p>Explicit values are those values that are explicitly set (via the API
+or in a source specification file – e.g., URDF or SDF). When queried,
+the property set with explicit values will always report the explicit
+value.</p>
+<p>Default values are left “open”. For default values the context in
+which the property value is queried matters. Material properties set
+to be “default” will return the hard-coded default value or a
+user-provided default value. Thus, two different invocations on the
+<em>same</em> instance can provide different values iff the property is
+configured to be default, and the different invocations provide
+different default values.</p>
+<p>Using the dissipation property to provide a concrete example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Constructor</span> <span class="n">sets</span> <span class="nb">all</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">be</span> <span class="n">default</span> <span class="n">configured</span><span class="o">.</span>
+<span class="n">CompliantMaterial</span> <span class="n">material</span><span class="p">;</span>
+
+<span class="n">material</span><span class="o">.</span><span class="n">dissipation</span><span class="p">();</span>        <span class="o">//</span> <span class="n">Reports</span> <span class="n">the</span> <span class="n">hard</span><span class="o">-</span><span class="n">coded</span> <span class="n">default</span> <span class="n">value</span><span class="o">.</span>
+<span class="n">material</span><span class="o">.</span><span class="n">dissipation</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span>     <span class="o">//</span> <span class="n">Reports</span> <span class="n">the</span> <span class="n">provided</span> <span class="n">default</span> <span class="n">value</span><span class="p">,</span> <span class="mf">1.2</span><span class="o">.</span>
+
+<span class="n">material</span><span class="o">.</span><span class="n">set_dissipation</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>  <span class="o">//</span> <span class="n">dissipation</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">longer</span> <span class="n">default</span><span class="o">.</span>
+
+<span class="n">material</span><span class="o">.</span><span class="n">dissipation</span><span class="p">();</span>        <span class="o">//</span> <span class="n">Reports</span> <span class="n">the</span> <span class="n">explicit</span> <span class="n">value</span><span class="p">,</span> <span class="mf">10.</span>
+<span class="n">material</span><span class="o">.</span><span class="n">dissipation</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span>     <span class="o">//</span> <span class="n">Reports</span> <span class="n">the</span> <span class="n">explicit</span> <span class="n">value</span><span class="p">,</span> <span class="mf">10.</span>
+</pre></div>
+</div>
+<p>See drake_contacts for semantics of these properties for dynamics.</p>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.rigid_body_plant.CompliantMaterial) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.rigid_body_plant.CompliantMaterial, youngs_modulus: float, dissipation: float, static_friction: float, dynamic_friction: float) -&gt; None</li>
+</ol>
+<p>Constructs fully specified material. Will throw an exception in any of
+the following circumstances:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">youngs_modulus</span></code> &lt;= 0</li>
+<li><code class="docutils literal"><span class="pre">dissipation</span></code> &lt; 0</li>
+<li><code class="docutils literal"><span class="pre">static_friction</span></code> &lt; 0</li>
+<li><code class="docutils literal"><span class="pre">dynamic_friction</span></code> &lt; 0</li>
+<li><code class="docutils literal"><span class="pre">static_friction</span></code> &lt; <code class="docutils literal"><span class="pre">dynamic_friction</span></code></li>
+</ul>
+<p>No value will be configured to use default values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.dissipation">
+<code class="descname">dissipation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em>, <em>default_value: float = 0.32</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.dissipation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the dissipation value with an optional default value. The
+default value is checked in Debug build.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>The dissipation value with units of 1/velocity, i.e., s/m.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.dissipation_is_default">
+<code class="descname">dissipation_is_default</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.dissipation_is_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the dissipation value is configured to use a default. A
+newly constructed instance will report true. Furthermore, it must
+return true if set_dissipation_to_default() has been called and false
+if set_dissipation() has been called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.dynamic_friction">
+<code class="descname">dynamic_friction</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em>, <em>default_value: float = 0.5</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.dynamic_friction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the dynamic friction coefficient with an optional default
+value. The default value is checked for non-negativity in Debug build.</p>
+<p>If the caller provides a default value for accessing static and
+dynamic friction, it is the callers responsibility to confirm that the
+dynamic friction default is less than or equal to the static friction
+default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.friction_is_default">
+<code class="descname">friction_is_default</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.friction_is_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the friction values are configured to use a default. A
+newly constructed instance will report true. Furthermore, it must
+return true if set_friction_to_default() has been called and false if
+set_friction() has been called.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.kDefaultDissipation">
+<code class="descname">kDefaultDissipation</code><em class="property"> = 0.32</em><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.kDefaultDissipation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.kDefaultDynamicFriction">
+<code class="descname">kDefaultDynamicFriction</code><em class="property"> = 0.5</em><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.kDefaultDynamicFriction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.kDefaultStaticFriction">
+<code class="descname">kDefaultStaticFriction</code><em class="property"> = 0.9</em><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.kDefaultStaticFriction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.kDefaultYoungsModulus">
+<code class="descname">kDefaultYoungsModulus</code><em class="property"> = 100000000.0</em><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.kDefaultYoungsModulus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.set_dissipation">
+<code class="descname">set_dissipation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body_plant.CompliantMaterial<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.set_dissipation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the dissipation value. Attempting to set a negative value will
+throw an exception. Returns a reference to <code class="docutils literal"><span class="pre">*this</span></code> so that multiple
+invocations of <code class="docutils literal"><span class="pre">set</span></code> can be chained together.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.set_dissipation_to_default">
+<code class="descname">set_dissipation_to_default</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.set_dissipation_to_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the dissipation value to report the default value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.set_friction">
+<code class="descname">set_friction</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.set_friction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>set_friction(self: pydrake.multibody.rigid_body_plant.CompliantMaterial, value: float) -&gt; pydrake.multibody.rigid_body_plant.CompliantMaterial</li>
+</ol>
+<p>Sets <em>both</em> coefficients of friction to the same value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the value is negative. Returns a reference to</li>
+<li><code class="docutils literal"><span class="pre">*this</span></code> so that multiple invocations of <code class="docutils literal"><span class="pre">set</span></code> can be chained</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">together.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>set_friction(self: pydrake.multibody.rigid_body_plant.CompliantMaterial, static_friction: float, dynamic_friction: float) -&gt; pydrake.multibody.rigid_body_plant.CompliantMaterial</li>
+</ol>
+<p>Sets the two coefficients of friction. The <code class="docutils literal"><span class="pre">dynamic_friction</span></code> values
+must be less than or equal to the <code class="docutils literal"><span class="pre">static_friction</span></code>. An exception
+will be thrown if <code class="docutils literal"><span class="pre">dynamic_friction</span></code> &gt; <code class="docutils literal"><span class="pre">static_friction</span></code> or if
+either value is negative. Returns a reference to <code class="docutils literal"><span class="pre">*this</span></code> so that
+multiple invocations of <code class="docutils literal"><span class="pre">set</span></code> can be chained together.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.set_friction_to_default">
+<code class="descname">set_friction_to_default</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.set_friction_to_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset both friction coefficient values to report the default value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.set_youngs_modulus">
+<code class="descname">set_youngs_modulus</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body_plant.CompliantMaterial<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.set_youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value for Young’s modulus. Attempting to set a negative value
+will throw an exception. Returns a reference to <code class="docutils literal"><span class="pre">*this</span></code> so that
+multiple invocations of <code class="docutils literal"><span class="pre">set</span></code> can be chained together.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>The Young’s modulus value with units of pascals.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.set_youngs_modulus_to_default">
+<code class="descname">set_youngs_modulus_to_default</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.set_youngs_modulus_to_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the elasticity value to report the default value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.static_friction">
+<code class="descname">static_friction</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em>, <em>default_value: float = 0.9</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.static_friction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the static friction coefficient with an optional default
+value. The default value is checked for non-negativity in Debug build.</p>
+<p>If the caller provides a default value for accessing static and
+dynamic friction, it is the callers responsibility to confirm that the
+dynamic friction default is less than or equal to the static friction
+default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.youngs_modulus">
+<code class="descname">youngs_modulus</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em>, <em>default_value: float = 100000000.0</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.youngs_modulus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the value for Young’s modulus with an optional default value.
+The default value is checked in Debug build.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.CompliantMaterial.youngs_modulus_is_default">
+<code class="descname">youngs_modulus_is_default</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.CompliantMaterial</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.CompliantMaterial.youngs_modulus_is_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the elasticity value is configured to use a default. A
+newly constructed instance will report true. Furthermore, it must
+return true if set_youngs_modulus_to_default() has been called and
+false if set_youngs_modulus() has been called.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_plant.</code><code class="descname">ContactForce</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data for a single contact force applied to one body of a
+contacting pair.</p>
+<p>Ultimately, a contact force consists of an application point, a
+spatial force, and a unit vector. The spatial force includes:</p>
+<ul class="simple">
+<li>a translational force, that is a pure force applied at a point,</li>
+<li>a torque, the rotational force. This is not the same as the moment</li>
+</ul>
+<p>induced by the translational force.  This torque can arise from a
+combination of different sources (e.g., torsional friction, the sum of
+various moments, etc.)</p>
+<p>The unit normal indicates the normal direction of the translational
+force. Used to decompose the force into normal and tangential
+components. The normal is typically defined by the contact normal.</p>
+<p>A ContactForce makes no assumptions about the frame in which it is
+defined except that the vectors representing application point
+location, contact normal, force, and torque are all expressed in a
+common frame, with the application point measured from the origin of
+that frame. Every external instantiation of ContactForce must make it
+clear which frame is being used.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following ScalarTypes are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactForce, application_point: numpy.ndarray[float64[3, 1]], normal: numpy.ndarray[float64[3, 1]], force: numpy.ndarray[float64[3, 1]], torque: numpy.ndarray[float64[3, 1]] = array([ 0.,  0.,  0.])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fully-specified constructor.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">application_point</span></code>:</dt>
+<dd>The point at which the wrench is applied.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">normal</span></code>:</dt>
+<dd>The translational force’s unit-length normal direction.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">force</span></code>:</dt>
+<dd>The translational force.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">torque</span></code>:</dt>
+<dd>The torque component.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce.get_application_point">
+<code class="descname">get_application_point</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactForce</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce.get_application_point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce.get_force">
+<code class="descname">get_force</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactForce</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce.get_force" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce.get_normal">
+<code class="descname">get_normal</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactForce</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce.get_normal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce.get_normal_force">
+<code class="descname">get_normal_force</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactForce</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce.get_normal_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the normal component of the translational force.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce.get_reaction_force">
+<code class="descname">get_reaction_force</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactForce</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body_plant.ContactForce<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce.get_reaction_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a spatial force applied at the same application point with
+negative force and torque.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce.get_tangent_force">
+<code class="descname">get_tangent_force</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactForce</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce.get_tangent_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the tangential component of the translational force.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactForce.get_torque">
+<code class="descname">get_torque</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactForce</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactForce.get_torque" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_plant.ContactInfo">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_plant.</code><code class="descname">ContactInfo</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class containing information regarding contact response between two
+bodies including: - The pair of collision elements that are contacting
+(e1, e2), referenced by their unique identifiers. - A resultant
+ContactForce – a single ContactForce with the equivalent effect of
+applying all individual ContactDetails to element e1. - An optional
+list of ContactDetail instances.</p>
+<p>Some forms of ContactDetail are more expensive than others. However,
+ContactInfo instances will need to be copied. The contact model
+defines a default behavior of whether the ContactDetails are stored in
+the corresponding ContactInfo instance or not. If this happens, the
+ContactInfo instance will contain a valid resultant force, but no
+contact details.</p>
+<p>Eventually, this beahvior will be subject to user configuration; the
+user will specify whether they want the details to be included in the
+ContactInfo, overriding the contact model’s default behavior, and
+paying the corresponding copying cost.</p>
+<p>The resultant force and contact details, if they are included, are all
+defined such that they act on the first element in the pair (e1).
+Newton’s third law requires that an equal and opposite force be
+applied, at exactly the same point in space, to e2.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar type. It must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following ScalarTypes are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<dl class="attribute">
+<dt id="pydrake.multibody.rigid_body_plant.ContactInfo.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactInfo.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactInfo.get_element_id_1">
+<code class="descname">get_element_id_1</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactInfo</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactInfo.get_element_id_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactInfo.get_element_id_2">
+<code class="descname">get_element_id_2</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactInfo</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactInfo.get_element_id_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactInfo.get_resultant_force">
+<code class="descname">get_resultant_force</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactInfo</em><span class="sig-paren">)</span> &#x2192; drake::systems::ContactForce&lt;double&gt;<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactInfo.get_resultant_force" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_plant.ContactResults">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_plant.</code><code class="descname">ContactResults</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class containing the contact results (contact points and response
+spatial forces for each colliding pair of collision elements) as well
+as the sum of all JᵀF for all contact, where J is the contact point
+Jacobian, and F is the contact force.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar type. It must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following ScalarTypes are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactResults.AddContact">
+<code class="descname">AddContact</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactResults</em>, <em>element_a: int</em>, <em>element_b: int</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body_plant.ContactInfo<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactResults.AddContact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactResults.Clear">
+<code class="descname">Clear</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactResults</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactResults.Clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactResults.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactResults</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactResults.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactResults.get_contact_info">
+<code class="descname">get_contact_info</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactResults</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body_plant.ContactInfo<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactResults.get_contact_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the ith ContactInfo instance. No bounds checking will be
+done in a release build (but will be done in debug). It is assumed the
+caller will only use values in the range [0, get_num_contacts() -1],
+inclusive.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactResults.get_generalized_contact_force">
+<code class="descname">get_generalized_contact_force</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactResults</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactResults.get_generalized_contact_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the stored generalized force that represents the contact
+forces.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactResults.get_num_contacts">
+<code class="descname">get_num_contacts</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactResults</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactResults.get_num_contacts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of unique collision element pairs in contact.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.ContactResults.set_generalized_contact_force">
+<code class="descname">set_generalized_contact_force</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.ContactResults, arg0: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.ContactResults.set_generalized_contact_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the contact forces as a force in the generalized coordinate.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">f</span></code>:</dt>
+<dd>= J^T * contact_force, where J is the stacked contact Jacobian,
+and contact_force is the stacked contact forces.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_plant.DrakeVisualizer">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_plant.</code><code class="descname">DrakeVisualizer</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.DrakeVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>This is a Drake System block that takes a RigidBodyTree and publishes
+LCM messages that are intended for drake-visualizer. It does this in
+two phases: initialization and run-time. This system holds a
+DiscreteState in its context that identifies whether the
+initialization phase has been completed. It is initialized to false in
+SetDefaultState(). The initialization phase is performed in
+DoCalcDiscreteVariableUpdates(), which is scheduled by
+DoCalcNextUpdateTime(). This class is intended to be used only in the
+System framework with proper event handling. If this is not the use
+case, users are encouraged to send the LCM messages directly through
+LCM. ViewerDrawTranslator and multibody::CreateLoadRobotMessage() are
+useful for generating the appropriate LCM messages.</p>
+<p>During initialization, this system block analyzes the RigidBodyTree
+and tells Drake Visualizer what it will be visualizing. For example,
+these include the number of rigid bodies, their dimensions, and
+colors. The LCM message used during this phase is called
+<code class="docutils literal"><span class="pre">lcmt_viewer_load_robot</span></code> and the channel name is
+“DRAKE_VIEWER_LOAD_ROBOT”.</p>
+<p>During run-time, this system block takes the current state of the
+model and tells drake-visualizer how to visualize the model. For
+example, this includes the position and orientation of each rigid
+body. The LCM messages used during this phase is <code class="docutils literal"><span class="pre">lcmt_viewer_draw</span></code>
+and the channel name is “DRAKE_VIEWER_DRAW”.</p>
+<p>The visualizer has an option that causes it to save the state it
+dispatches for drawing and allows replay of that cached data at wall
+clock time – i.e., one second of simulation is played back for every
+second in the real world. The playback <em>rate</em> is currently capped at
+60 Hz. This is useful for immediate review of simulations which
+evaluate at time rates radically out of scale with wall clock time,
+enabling intuitive understanding of the simulation results. See
+ReplayCachedSimulation().</p>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.DrakeVisualizer.PublishLoadRobot">
+<code class="descname">PublishLoadRobot</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.DrakeVisualizer</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.DrakeVisualizer.PublishLoadRobot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publishes a lcmt_viewer_load_robot message containing a description of
+what should be visualized. The message is intended to be received by
+drake-visualizer. This method is automatically invoked when the
+DrakeVisualizer instance is analyzed by a systems::Simulator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.DrakeVisualizer.ReplayCachedSimulation">
+<code class="descname">ReplayCachedSimulation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.DrakeVisualizer</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.DrakeVisualizer.ReplayCachedSimulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Causes the visualizer to playback its cached data at real time. If it
+has not been configured to record/playback, a warning message will be
+written to the log, but otherwise, no work will be done.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.DrakeVisualizer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.DrakeVisualizer</em>, <em>tree: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>lcm: pydrake.lcm.DrakeLcmInterface</em>, <em>enable_playback: bool = False</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.DrakeVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constructor that prepares for the transmission of
+<code class="docutils literal"><span class="pre">lcmt_viewer_draw</span></code> and <code class="docutils literal"><span class="pre">lcmt_viewer_load_robot</span></code> messages, but does
+not actually publish anything. LCM message publications occur each
+time DrakeVisualizer::Publish() is called.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">tree</span></code>:</dt>
+<dd>A reference to the rigid body tree that should be visualized by
+Drake Visualizer. This reference must remain valid for the
+duration of this object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lcm</span></code>:</dt>
+<dd>A pointer to the object through which LCM messages can be
+published. This pointer must remain valid for the duration of this
+object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">enable_playback</span></code>:</dt>
+<dd>If true, the visualizer will cache the input data for playback and
+ReplayCachedSimulation() will replay that cache data.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.DrakeVisualizer.set_publish_period">
+<code class="descname">set_publish_period</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.DrakeVisualizer</em>, <em>period: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.DrakeVisualizer.set_publish_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the publishing period of this system. See
+LeafSystem::DeclarePublishPeriodSec() for details about the semantics
+of parameter <code class="docutils literal"><span class="pre">period</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body_plant.</code><code class="descname">RigidBodyPlant</code><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<p>This class provides a System interface around a multibody dynamics
+model of the world represented by a RigidBodyTree.</p>
+<p>The RigidBodyPlant provides a number of input and output ports. The
+number and types of port accessors depends on the number of model
+instances within the RigidBodyTree with actuators. The following lists
+the accessors for obtaining the input and output ports of the
+RigidBodyPlant. These accessors are typically used when “wiring up” a
+RigidBodyPlant within a Diagram using DiagramBuilder. See, for
+example, DiagramBuilder::Connect(), DiagramBuilder::ExportInput(), and
+DiagramBuilder::ExportOutput().</p>
+<p><strong>Plant-Centric Port Accessors:</strong></p>
+<ul class="simple">
+<li>actuator_command_input_port(): Contains the command vector for the
+RigidBodyTree’s actuators. This method can only be called when there is
+only one model instance in the RigidBodyTree, as
+determined by get_num_model_instances(), and this model instance has at
+least one actuator. The size of this vector equals the number of
+RigidBodyActuator’s in the RigidBodyTree. Each RigidBodyActuator maps to a
+single-DOF joint (currently actuation cannot be applied to multiple-DOF
+joints). The units of the actuation are the same as the units of the
+generalized force on the joint. In addition, actuators allow for a gear
+box reduction factor and for actuation limits which are only used by
+controllers; the RigidBodyPlant does not apply these limits. The gear box
+factor effectively is a multiplier on the input actuation to the
+RigidBodyPlant.</li>
+<li>state_output_port(): A vector-valued port containing the state vector,
+<code class="docutils literal"><span class="pre">x</span></code>, of the system. This is useful for downstream systems that require
+<code class="docutils literal"><span class="pre">x</span></code>, which includes DrakeVisualizer. The state vector, <code class="docutils literal"><span class="pre">x</span></code>, consists of
+generalized positions followed by generalized velocities. Semantics of <code class="docutils literal"><span class="pre">x</span></code>
+can be obtained using the following methods:</li>
+<li>RigidBodyPlant&lt;T&gt;::get_num_states()
+- RigidBodyTree&lt;T&gt;::get_num_positions()
+- RigidBodyTree&lt;T&gt;::get_num_velocities()
+- RigidBodyTree&lt;T&gt;::get_position_name()
+- RigidBodyTree&lt;T&gt;::get_velocity_name()</li>
+<li>state_derivative_output_port(): A vector-valued port containing the time
+derivative <code class="docutils literal"><span class="pre">xcdot</span></code> of the state vector.  The order of indices within the
+vector is identical to state_output_port() as explained above.</li>
+<li>kinematics_results_output_port(): An abstract-valued port containing a
+KinematicsResults object allowing access to the results from kinematics
+computations for each RigidBody in the RigidBodyTree.</li>
+<li>contact_results_output_port(): An abstract-valued port containing a
+ContactsResults object allowing access to the results from contact
+computations.</li>
+</ul>
+<p><strong>Model-Instance-Centric Port Accessors:</strong></p>
+<ul class="simple">
+<li>model_instance_actuator_command_input_port(): Contains the command vector
+for the actuators belonging to a particular model instance within the
+RigidBodyTree. This method can only be called using the model instance ID
+of a model with actuators. To determine if a model instance possesses
+actuators, use model_instance_has_actuators().</li>
+<li>model_instance_state_output_port(): A vector-valued port containing the
+state vector for a particular model instance in the RigidBodyTree.</li>
+</ul>
+<p>The RigidBodyPlant’s state consists of a vector containing the
+generalized positions followed by the generalized velocities of the
+system. This state is applied to a RigidBodyTree, which is a multibody
+model that consists of a set of rigid bodies connected through joints
+in a tree structure. Bodies may have a collision model, in which case,
+collisions are considered. In addition, the model may contain loop
+constraints described by RigidBodyLoop instances in the multibody
+model. Even though loop constraints are a particular case of holonomic
+constraints, general holonomic constraints are not yet supported. For
+simulating discretized RigidBodyPlant systems, an additional
+(discrete) scalar state variable stores the last time that the
+system’s state was updated.</p>
+<p>The system dynamics is given by the set of multibody equations written
+in generalized coordinates including loop joints as a set of holonomic
+constraints like so:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">H</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">vdot</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">=</span> <span class="n">tau_actuators</span> <span class="o">+</span> <span class="n">tau_constraints</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">q</span></code> is the vector of generalized coordinates (or positions),
+<code class="docutils literal"><span class="pre">v</span></code> is the vector of generalized velocities, <code class="docutils literal"><span class="pre">C</span></code> includes the
+velocity-dependent Coriolis and gyroscopic forces, <code class="docutils literal"><span class="pre">tau_actuators</span></code>
+is the vector of externally applied generalized forces and finally
+<code class="docutils literal"><span class="pre">tau_constraints</span></code> is the vector of generalized forces due to
+constraints. <code class="docutils literal"><span class="pre">tau_constraints</span></code> is computed as</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tau_constraints</span> <span class="o">=</span> <span class="o">-</span><span class="n">J</span><span class="o">^</span><span class="n">T</span> <span class="o">*</span> <span class="k">lambda</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">lambda</span></code> is the vector of Lagrange multipliers representing
+the constraint forces and <code class="docutils literal"><span class="pre">J</span></code> is the constraint Jacobian. The time
+derivative of the generalized coordinates is then obtained from the
+generalized velocities as</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">qdot</span> <span class="o">=</span> <span class="n">N</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">v</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">N(q)</span></code> is a transformation matrix only dependent on the
+positions.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>The scalar type. Must be a valid Eigen scalar.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+<li>AutoDiffXd</li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError The AutodiffXd implementation has some restrictions</li>
+<li><ul class="first">
+<li>The collision detection code does not yet support AutoDiff, and</li>
+</ul>
+</li>
+<li>calls to RigidBodyTree that would have required that gradient</li>
+<li>information will throw a RuntimeError. Currently, the implication</li>
+<li>is that AutoDiff calls for RigidBodyPlants with Context that do</li>
+<li>not require gradients of the contact forces will succeed, but</li>
+<li>calls where Context results in non-zero contact forces will throw.</li>
+<li><ul class="first">
+<li>DoCalcDiscreteVariableUpdates does not yet support AutoDiff, and</li>
+</ul>
+</li>
+<li>will throw if called. In practice this means that AutoDiff of the</li>
+<li>dynamics are only available if the RigidBodyPlant is constructed</li>
+<li>with <code class="docutils literal"><span class="pre">timestep=0</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.FindInstancePositionIndexFromWorldIndex">
+<code class="descname">FindInstancePositionIndexFromWorldIndex</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em>, <em>arg0: int</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.FindInstancePositionIndexFromWorldIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index into the output port for <code class="docutils literal"><span class="pre">model_instance_id</span></code> which
+corresponds to the world position index of <code class="docutils literal"><span class="pre">world_position_index</span></code>,
+or throws if the position index does not correspond to the model id.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.GetStateVector">
+<code class="descname">GetStateVector</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.GetStateVector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.SetDefaultState">
+<code class="descname">SetDefaultState</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: pydrake.systems.framework.Context_[float], arg1: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.SetDefaultState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the state in <code class="docutils literal"><span class="pre">context</span></code> so that generalized positions and
+velocities are zero. For quaternion based joints the quaternion is set
+to be the identity (or equivalently a zero rotation).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em>, <em>tree: pydrake.multibody.rigid_body_tree.RigidBodyTree</em>, <em>timestep: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiates a RigidBodyPlant from a Multi-Body Dynamics (MBD) model
+of the world in <code class="docutils literal"><span class="pre">tree</span></code>. <cite>tree</cite> must not be <code class="docutils literal"><span class="pre">nullptr</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">tree</span></code>:</dt>
+<dd>the dynamic model to use with this plant.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">timestep</span></code>:</dt>
+<dd>a non-negative value specifying the update period of the model;
+0.0 implies continuous-time dynamics with derivatives, and values
+&gt; 0.0 result in discrete-time dynamics implementing a
+discretization of the dynamics equation. $*Default:* 0.0.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.actuator_command_input_port">
+<code class="descname">actuator_command_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.actuator_command_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a the actuator command input port. This method can only be
+called when there is only one model instance in the RigidBodyTree.
+Otherwise, a RuntimeError will be thrown. It returns the same port as
+model_instance_actuator_command_input_port() using input parameter
+RigidBodyTreeConstants::kFirstNonWorldModelInstanceId.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.contact_results_output_port">
+<code class="descname">contact_results_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.contact_results_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the ContactResults output port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_input_size">
+<code class="descname">get_input_size</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_input_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of the input vector to the system. This equals the
+number of actuators.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_actuators">
+<code class="descname">get_num_actuators</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_actuators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_num_actuators(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant) -&gt; int</li>
+</ol>
+<p>Returns the number of actuators.</p>
+<ol class="arabic simple" start="2">
+<li>get_num_actuators(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: int) -&gt; int</li>
+</ol>
+<p>Returns the number of actuators for a specific model instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_bodies">
+<code class="descname">get_num_bodies</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_bodies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of bodies in the world.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_model_instances">
+<code class="descname">get_num_model_instances</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_model_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of model instances in the world, not including the
+world.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_positions">
+<code class="descname">get_num_positions</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_num_positions(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant) -&gt; int</li>
+</ol>
+<p>Returns the number of generalized coordinates of the model.</p>
+<ol class="arabic simple" start="2">
+<li>get_num_positions(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: int) -&gt; int</li>
+</ol>
+<p>Returns the number of generalized coordinates for a specific model
+instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_states">
+<code class="descname">get_num_states</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_num_states(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant) -&gt; int</li>
+</ol>
+<p>Returns the size of the continuous state of the system which equals
+get_num_positions() plus get_num_velocities().</p>
+<ol class="arabic simple" start="2">
+<li>get_num_states(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: int) -&gt; int</li>
+</ol>
+<p>Returns the size of the continuous state of a specific model instance
+which equals get_num_positions() plus get_num_velocities().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_velocities">
+<code class="descname">get_num_velocities</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_num_velocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_num_velocities(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant) -&gt; int</li>
+</ol>
+<p>Returns the number of generalized velocities of the model.</p>
+<ol class="arabic simple" start="2">
+<li>get_num_velocities(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: int) -&gt; int</li>
+</ol>
+<p>Returns the number of generalized velocities for a specific model
+instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_output_size">
+<code class="descname">get_output_size</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_output_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of the output vector of the system. This equals the
+size of the continuous state vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_rigid_body_tree">
+<code class="descname">get_rigid_body_tree</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.rigid_body_tree.RigidBodyTree<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_rigid_body_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the multibody dynamics model of the
+world.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_time_step">
+<code class="descname">get_time_step</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.get_time_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the time step used to construct the plant. If the step is zero,
+the system is continuous. Otherwise, the step corresponds to the
+update rate (seconds per update).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.is_state_discrete">
+<code class="descname">is_state_discrete</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.is_state_discrete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets whether this system is modeled using discrete state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.kinematics_results_output_port">
+<code class="descname">kinematics_results_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.kinematics_results_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the KinematicsResults output port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.model_instance_actuator_command_input_port">
+<code class="descname">model_instance_actuator_command_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.model_instance_actuator_command_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the input port for a specific model instance. This method can
+only be called when this class is instantiated with constructor
+parameter <code class="docutils literal"><span class="pre">export_model_instance_centric_ports</span></code> equal to <code class="docutils literal"><span class="pre">True</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.model_instance_has_actuators">
+<code class="descname">model_instance_has_actuators</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.model_instance_has_actuators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if and only if the model instance with the provided
+<code class="docutils literal"><span class="pre">model_instance_id</span></code> has actuators. This is useful when trying to
+determine whether it’s safe to call
+model_instance_actuator_command_input_port().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.model_instance_state_output_port">
+<code class="descname">model_instance_state_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.model_instance_state_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output port containing the state of a particular model
+with instance ID equal to <code class="docutils literal"><span class="pre">model_instance_id</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">model_instance_id</span></code> does not exist.</td>
+</tr>
+</tbody>
+</table>
+<p>This method can only be called when this class is instantiated with
+constructor parameter <code class="docutils literal"><span class="pre">export_model_instance_centric_ports</span></code> equal to
+<code class="docutils literal"><span class="pre">True</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.model_instance_torque_output_port">
+<code class="descname">model_instance_torque_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.model_instance_torque_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output port containing the measured joint torques of a
+particular model with <code class="docutils literal"><span class="pre">model_instance_id</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_contact_model_parameters">
+<code class="descname">set_contact_model_parameters</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em>, <em>arg0: pydrake.multibody.rigid_body_plant.CompliantContactModelParameters</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_contact_model_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the parameters of the compliance <em>model</em>. To set material
+parameters, use the CompliantMaterial instance associated with the
+collision element.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_default_compliant_material">
+<code class="descname">set_default_compliant_material</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em>, <em>arg0: pydrake.multibody.rigid_body_plant.CompliantMaterial</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_default_compliant_material" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the compliant material values to use for default-configured
+material properties on collision elements (see CompliantMaterial for
+details).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_position">
+<code class="descname">set_position</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: pydrake.systems.framework.Context_[float], arg1: int, arg2: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the generalized coordinate <code class="docutils literal"><span class="pre">position_index</span></code> to the value
+<code class="docutils literal"><span class="pre">position</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_state_vector">
+<code class="descname">set_state_vector</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_state_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>set_state_vector(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: pydrake.systems.framework.Context_[float], arg1: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the continuous state vector of the system to be <code class="docutils literal"><span class="pre">x</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li>set_state_vector(self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: pydrake.systems.framework.State_[float], arg1: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the continuous state vector of the system to be <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_velocity">
+<code class="descname">set_velocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant, arg0: pydrake.systems.framework.Context_[float], arg1: int, arg2: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.set_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the generalized velocity <code class="docutils literal"><span class="pre">velocity_index</span></code> to the value
+<code class="docutils literal"><span class="pre">velocity</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.state_derivative_output_port">
+<code class="descname">state_derivative_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.state_derivative_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the plant-centric state derivative output port. The size of
+this port is equal to get_num_states().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>This RigidBodyPlant is using continuous-time dynamics.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.state_output_port">
+<code class="descname">state_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.state_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the plant-centric state output port. The size of this port is
+equal to get_num_states().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body_plant.RigidBodyPlant.torque_output_port">
+<code class="descname">torque_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body_plant.RigidBodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.rigid_body_plant.RigidBodyPlant.torque_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the output port containing measured joint torques.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if this RigidBodyTree contains more than one model</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">instances.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.rigid_body_tree.html" class="btn btn-neutral float-right" title="pydrake.multibody.rigid_body_tree" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.rigid_body.html" class="btn btn-neutral" title="pydrake.multibody.rigid_body" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

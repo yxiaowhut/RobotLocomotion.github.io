@@ -1,0 +1,135 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Using Drake from Julia &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Using Drake from MATLAB" href="matlab_bindings.html" />
+    <link rel="prev" title="Using Drake from Python" href="python_bindings.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="matlab_bindings.html" title="Using Drake from MATLAB"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="python_bindings.html" title="Using Drake from Python"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="using-drake-from-julia">
+<span id="julia-bindings"></span><h1>Using Drake from Julia<a class="headerlink" href="#using-drake-from-julia" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://julialang.org/">Julia</a> is a relatively new, high-level language designed for fast scientific computing. There are two ways to access Drake’s functions from Julia: <code class="docutils literal"><span class="pre">PyCall.jl</span></code> and <code class="docutils literal"><span class="pre">Cxx.jl</span></code>.</p>
+<div class="section" id="with-pycall-jl">
+<h2>With <code class="docutils literal"><span class="pre">PyCall.jl</span></code><a class="headerlink" href="#with-pycall-jl" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/JuliaPy/PyCall.jl">PyCall.jl</a> package makes it easy to call Python code from Julia, including translation of basic data types like numbers, strings, and arrays to their Python equivalents. Using <code class="docutils literal"><span class="pre">PyCall.jl</span></code>, you can run all of the Drake functions which are exposed in the <a class="reference internal" href="python_bindings.html#python-bindings"><span class="std std-ref">Drake Python bindings</span></a>. For a demonstration of this method, see <a class="reference external" href="https://github.com/rdeits/pydrake-julia/blob/master/pydrake_in_julia.ipynb">this example notebook</a>.</p>
+</div>
+<div class="section" id="with-cxx-jl">
+<h2>With <code class="docutils literal"><span class="pre">Cxx.jl</span></code><a class="headerlink" href="#with-cxx-jl" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/Keno/Cxx.jl">Cxx.jl</a> package allows Julia to call C++ code directly, and even allows Julia to compile new C++ functions on the fly. Since this method allows direct access to the Drake C++ interface, all of Drake’s features are available. However, setting up <code class="docutils literal"><span class="pre">Cxx.jl</span></code> may be more complicated than most Julia packages, and careless programming can easily lead to segmentation faults or other undefined behavior, as with any C++ code. For an example of usage, see <a class="reference external" href="https://github.com/tkoolen/drake/wiki/Running-Drake-code-from-Julia%27s-REPL">this wiki entry by Twan Koolen</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Using Drake from Julia</a><ul>
+<li><a class="reference internal" href="#with-pycall-jl">With <code class="docutils literal"><span class="pre">PyCall.jl</span></code></a></li>
+<li><a class="reference internal" href="#with-cxx-jl">With <code class="docutils literal"><span class="pre">Cxx.jl</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="matlab_bindings.html" title="Using Drake from MATLAB"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="python_bindings.html" title="Using Drake from Python"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

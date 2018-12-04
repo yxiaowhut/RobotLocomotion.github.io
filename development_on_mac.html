@@ -1,0 +1,172 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Drake Development on macOS &#8212; Drake Documentation</title>
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  false,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code Review Checklist" href="code_review_checklist.html" />
+    <link rel="prev" title="Vim/Neovim Notes" href="vim.html" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="code_review_checklist.html" title="Code Review Checklist"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vim.html" title="Vim/Neovim Notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">For Developers</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="drake-development-on-macos">
+<h1>Drake Development on macOS<a class="headerlink" href="#drake-development-on-macos" title="Permalink to this headline">¶</a></h1>
+<p>This page contains information that may be useful to people developing on macOS.</p>
+<p><em>Note that the applications, tools, and libraries listed below are simply those that some have found useful. They should</em> <strong>not</strong> <em>be interpreted as mandatory.</em></p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first"><cite>Table of contents</cite></p>
+<ul class="simple">
+<li><a class="reference internal" href="#git-tools" id="id3">Git Tools</a><ul>
+<li><a class="reference internal" href="#gitk" id="id4">gitk</a></li>
+<li><a class="reference internal" href="#sourcetree" id="id5">SourceTree</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#profiling" id="id6">Profiling</a></li>
+</ul>
+</div>
+<div class="section" id="git-tools">
+<h2><a class="toc-backref" href="#id3">Git Tools</a><a class="headerlink" href="#git-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gitk">
+<h3><a class="toc-backref" href="#id4">gitk</a><a class="headerlink" href="#gitk" title="Permalink to this headline">¶</a></h3>
+<p>The version of <a class="reference external" href="https://git-scm.com">Git</a> that comes with Xcode may not include <a class="reference external" href="https://git-scm.com/docs/gitk">gitk</a>, a GUI-based Git repository browser. A workaround is to get a newer version using Homebrew:</p>
+<blockquote>
+<div>brew update
+brew install git</div></blockquote>
+<p>If gitk does not start with an <code class="docutils literal"><span class="pre">unknown</span> <span class="pre">color</span> <span class="pre">name</span> <span class="pre">&quot;lime&quot;</span></code> error, upgrade your version of Tcl/Tk:</p>
+<blockquote>
+<div>brew cask install tcl</div></blockquote>
+<p>References:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://stackoverflow.com/questions/34637896/gitk-will-not-start-on-mac-unknown-color-name-lime">http://stackoverflow.com/questions/34637896/gitk-will-not-start-on-mac-unknown-color-name-lime</a></li>
+<li><a class="reference external" href="http://stackoverflow.com/questions/17582685/install-gitk-on-mac">http://stackoverflow.com/questions/17582685/install-gitk-on-mac</a></li>
+</ol>
+</div>
+<div class="section" id="sourcetree">
+<h3><a class="toc-backref" href="#id5">SourceTree</a><a class="headerlink" href="#sourcetree" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.sourcetreeapp.com">SourceTree</a> is a free Git and Mercurial client for Windows and macOS made by Atlassian.</p>
+<p>(<em>Notes coming soon</em>)</p>
+</div>
+</div>
+<div class="section" id="profiling">
+<h2><a class="toc-backref" href="#id6">Profiling</a><a class="headerlink" href="#profiling" title="Permalink to this headline">¶</a></h2>
+<p>A few of us have used the Xcode tool “Instruments” (which should already be installed on your system) with considerable success, but we do not have much experience with it yet.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">Drake Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference external" href="doxygen_cxx/index.html#://">API Documentation (C++)</a></li>
+<li class="toctree-l1"><a class="reference external" href="pydrake/index.html#://">API Documentation (Python)</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/RobotLocomotion/drake">GitHub</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">For Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_bindings.html">Using Drake from Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="julia_bindings.html">Using Drake from Julia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab_bindings.html">Using Drake from MATLAB</a></li>
+</ul>
+
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Drake Development on macOS</a><ul>
+<li><a class="reference internal" href="#git-tools">Git Tools</a><ul>
+<li><a class="reference internal" href="#gitk">gitk</a></li>
+<li><a class="reference internal" href="#sourcetree">SourceTree</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#profiling">Profiling</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="code_review_checklist.html" title="Code Review Checklist"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vim.html" title="Vim/Neovim Notes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Drake Documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >For Developers</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright Robot Locomotion Group (MIT).
+    </div>
+  </body>
+</html>

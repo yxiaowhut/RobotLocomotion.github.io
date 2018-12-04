@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.rigid_body &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.multibody.rigid_body_plant" href="pydrake.multibody.rigid_body_plant.html"/>
+        <link rel="prev" title="pydrake.multibody.parsers" href="pydrake.multibody.parsers.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.rigid_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.shapes.html">pydrake.multibody.shapes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.rigid_body</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.rigid_body">
+<span id="pydrake-multibody-rigid-body"></span><h1>pydrake.multibody.rigid_body<a class="headerlink" href="#module-pydrake.multibody.rigid_body" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the individual RigidBody class.</p>
+<dl class="class">
+<dt id="pydrake.multibody.rigid_body.RigidBody">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.rigid_body.</code><code class="descname">RigidBody</code><a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.AddVisualElement">
+<code class="descname">AddVisualElement</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em>, <em>arg0: pydrake.multibody.shapes.VisualElement</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.AddVisualElement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.add_joint">
+<code class="descname">add_joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em>, <em>arg0: pydrake.multibody.rigid_body.RigidBody</em>, <em>arg1: pydrake.multibody.joints.DrakeJoint</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.joints.DrakeJoint<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.add_joint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds degrees of freedom to this body by connecting it to <code class="docutils literal"><span class="pre">parent</span></code>
+with <code class="docutils literal"><span class="pre">joint</span></code>. The body takes ownership of the joint.</p>
+<p>This method aborts with an error message if the user attempts to
+assign a joint to a body that already has one.</p>
+<p>Note that this is specifically a tree joint and that by “parent” we
+mean a body that is closer to “world” in the tree topology.</p>
+<p>The <code class="docutils literal"><span class="pre">parent</span></code> pointer is copied and stored meaning its lifetime must
+exceed the lifetime of this RigidBody.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">parent</span></code>:</dt>
+<dd>The RigidBody this body gets connected to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">joint</span></code>:</dt>
+<dd>The DrakeJoint connecting this body to <code class="docutils literal"><span class="pre">parent</span></code> and adding
+degrees of freedom to this body.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A pointer to the joint just added to the body.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.getJoint">
+<code class="descname">getJoint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.joints.DrakeJoint<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.getJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>An accessor to this rigid body’s parent joint. By “parent joint” we
+mean the joint through which this rigid body connects to its parent
+rigid body in the rigid body tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent joint of this rigid body.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.get_body_index">
+<code class="descname">get_body_index</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.get_body_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the “body index” of this <code class="docutils literal"><span class="pre">RigidBody</span></code>. This is the index
+within the vector of <code class="docutils literal"><span class="pre">RigidBody</span></code> objects within the
+<code class="docutils literal"><span class="pre">RigidBodyTree</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.get_center_of_mass">
+<code class="descname">get_center_of_mass</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.get_center_of_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the center of mass of this rigid body. The center of mass is
+expressed in this body’s frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.get_collision_element_ids">
+<code class="descname">get_collision_element_ids</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.get_collision_element_ids" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to an <code class="docutils literal"><span class="pre">std::vector</span></code> of collision elements that
+represent the collision geometry of this rigid body.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of this rigid body.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.get_num_collision_elements">
+<code class="descname">get_num_collision_elements</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.get_num_collision_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the total number of <em>registered</em> collision elements attached
+to this body. See Model::AddElement() for definition of “registered”.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.get_position_start_index">
+<code class="descname">get_position_start_index</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.get_position_start_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the start index of this body’s parent jont’s position states;
+see RigidBody::set_position_start_index() for more information.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.get_spatial_inertia">
+<code class="descname">get_spatial_inertia</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[6, 6]]<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.get_spatial_inertia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the spatial inertia of this rigid body.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.get_visual_elements">
+<code class="descname">get_visual_elements</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.shapes.VisualElement]<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.get_visual_elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.has_joint">
+<code class="descname">has_joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.has_joint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the body has a parent joint.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.set_name">
+<code class="descname">set_name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.set_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of this rigid body.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.rigid_body.RigidBody.set_spatial_inertia">
+<code class="descname">set_spatial_inertia</code><span class="sig-paren">(</span><em>self: pydrake.multibody.rigid_body.RigidBody, arg0: numpy.ndarray[float64[6, 6]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.rigid_body.RigidBody.set_spatial_inertia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the spatial inertia of this rigid body.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.rigid_body_plant.html" class="btn btn-neutral float-right" title="pydrake.multibody.rigid_body_plant" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.parsers.html" class="btn btn-neutral" title="pydrake.multibody.parsers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

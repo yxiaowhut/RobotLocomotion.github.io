@@ -1,0 +1,4 @@
+var namespacedrake_1_1maliput_1_1simple__phase__provider =
+[
+    [ "SimpleRightOfWayPhaseProvider", "classdrake_1_1maliput_1_1simple__phase__provider_1_1_simple_right_of_way_phase_provider.html", "classdrake_1_1maliput_1_1simple__phase__provider_1_1_simple_right_of_way_phase_provider" ]
+];

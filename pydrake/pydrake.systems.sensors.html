@@ -1,0 +1,885 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.sensors &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.trajectory_optimization" href="pydrake.systems.trajectory_optimization.html"/>
+        <link rel="prev" title="pydrake.systems.scalar_conversion" href="pydrake.systems.scalar_conversion.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.meshcat_visualizer.html">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.sensors</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.sensors">
+<span id="pydrake-systems-sensors"></span><h1>pydrake.systems.sensors<a class="headerlink" href="#module-pydrake.systems.sensors" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the sensors portion of the Systems framework.</p>
+<dl class="class">
+<dt id="pydrake.systems.sensors.CameraInfo">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">CameraInfo</code><a class="headerlink" href="#pydrake.systems.sensors.CameraInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple data structure for camera information that includes the image
+size and camera intrinsic parameters.</p>
+<p>To clarify the terminology used to describe 2D and/or 3D spaces
+throughout the class, we use “coordinate system” rather than “frame”.
+This is because the term “frame” has two different meanings in the
+computer vision field: a synonym of coordinate system, and a snapshot
+out of consecutively captured images. To ensure the reader will not be
+confused, we clearly differentiate the use of the terms “coordinate
+system” and “frame” by using “coordinate system” to denote 2D/3D
+spaces and “frame” to denote a captured image.</p>
+<p>There are three types of the coordinate systems that are relevant to
+this class:</p>
+<ul class="simple">
+<li>the camera coordinate system
+- the image coordinate system
+- the pixel coordinate system.</li>
+</ul>
+<p>The camera coordinate system expresses a camera’s 6D pose relative to
+the world coordinate system. The camera coordinate system is defined
+to be <code class="docutils literal"><span class="pre">X-right</span></code>, <cite>Y-down</cite> and <code class="docutils literal"><span class="pre">Z-forward</span></code>. The <code class="docutils literal"><span class="pre">Z</span></code> axis is also
+called the “optical axis”. Note that each axis in the camera
+coordinate system is expressed in the upper case, like <code class="docutils literal"><span class="pre">(X,</span> <span class="pre">Y,</span> <span class="pre">Z)</span></code>
+to distinguish from those of the image coordinate system which we
+explain next.</p>
+<p>The image coordinate system is the 2D coordinate system made by
+projecting the camera coordinate system onto the 2D image plane which
+is perpendicular to the “optical axis”. Therefore, the direction of
+the each axis is <code class="docutils literal"><span class="pre">x-right</span></code> and <code class="docutils literal"><span class="pre">y-down</span></code>, and the origin of the
+image coordinate system is located at the crossing point between the
+2D image plane and the “optical axis”. This origin is called the
+“image center” or “principal point”. Note that each axis in the image
+coordinate system is expressed in the lower case , like <code class="docutils literal"><span class="pre">(x,</span> <span class="pre">y)</span></code>.</p>
+<p>The pixel coordinate system is also a 2D coordinate system. The main
+differences between the pixel coordinate system and the image
+coordinate system are the location of the origin and the direction of
+the axes. The origin of the pixel coordinate system is at the
+left-upper corner of the image and the direction of the each axis is
+the same as those of the image coordinate system. The axes of the
+pixel coordinate system are expressed using <code class="docutils literal"><span class="pre">u</span></code> and <code class="docutils literal"><span class="pre">v</span></code>, therefore
+the axes directions are <code class="docutils literal"><span class="pre">u-right</span></code> and <code class="docutils literal"><span class="pre">v-down</span></code>.</p>
+<p>For more detail including an explanation of the focal lengths, refer
+to:
+<a class="reference external" href="http://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html">http://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html</a>
+and <a class="reference external" href="https://en.wikipedia.org/wiki/Pinhole_camera_model">https://en.wikipedia.org/wiki/Pinhole_camera_model</a>.</p>
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraInfo.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.CameraInfo.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.sensors.CameraInfo, width: int, height: int, fov_y: float) -&gt; None</li>
+</ol>
+<p>Constructor that sets the image size and vertical field of view
+<code class="docutils literal"><span class="pre">fov_y</span></code>. We assume there is no image offset, so the image center
+<code class="docutils literal"><span class="pre">(center_x,</span></code> <cite>center_y)</cite> is equal to <code class="docutils literal"><span class="pre">(width</span> <span class="pre">/</span> <span class="pre">2,</span> <span class="pre">height</span> <span class="pre">/</span> <span class="pre">2)</span></code>. We
+also assume the focal lengths <code class="docutils literal"><span class="pre">focal_x</span></code> and <code class="docutils literal"><span class="pre">focal_y</span></code> are
+identical. The horizontal field of view <code class="docutils literal"><span class="pre">fov_x</span></code> is calculated using
+the aspect ratio of the image width and height together with the
+vertical field of view:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fov_x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">atan</span><span class="p">(</span><span class="n">width</span> <span class="o">/</span> <span class="n">height</span> <span class="o">*</span> <span class="n">tan</span><span class="p">(</span><span class="n">fov_y</span> <span class="o">/</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>This can be derived from the equations of the focal lengths:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">focal_x</span> <span class="o">=</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">tan</span><span class="p">(</span><span class="n">fov_x</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">focal_y</span> <span class="o">=</span> <span class="n">height</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">tan</span><span class="p">(</span><span class="n">fov_y</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">focal_x</span> <span class="pre">/</span> <span class="pre">focal_y</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dd>The image width in pixels, must be greater than zero.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dd>The image height in pixels, must be greater than zero.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">fov_y</span></code>:</dt>
+<dd>The vertical field of view.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.sensors.CameraInfo, width: int, height: int, focal_x: float, focal_y: float, center_x: float, center_y: float) -&gt; None</li>
+</ol>
+<p>Constructor that directly sets the image size, center, and focal
+lengths.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dd>The image width in pixels, must be greater than zero.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dd>The image height in pixels, must be greater than zero.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">focal_x</span></code>:</dt>
+<dd>The focal length x in pixels.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">focal_y</span></code>:</dt>
+<dd>The focal length y in pixels.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">center_x</span></code>:</dt>
+<dd>The x coordinate of the image center in the pixel coordinate
+system in pixels.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">center_y</span></code>:</dt>
+<dd>The y coordinate of the image center in the pixel coordinate
+system in pixels.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraInfo.center_x">
+<code class="descname">center_x</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraInfo</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.sensors.CameraInfo.center_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the image center x value in pixels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraInfo.center_y">
+<code class="descname">center_y</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraInfo</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.sensors.CameraInfo.center_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the image center y value in pixels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraInfo.focal_x">
+<code class="descname">focal_x</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraInfo</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.sensors.CameraInfo.focal_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the focal length x in pixels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraInfo.focal_y">
+<code class="descname">focal_y</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraInfo</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.sensors.CameraInfo.focal_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the focal length y in pixels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraInfo.height">
+<code class="descname">height</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraInfo</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.sensors.CameraInfo.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the height of the image in pixels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraInfo.intrinsic_matrix">
+<code class="descname">intrinsic_matrix</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraInfo</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[3, 3]]<a class="headerlink" href="#pydrake.systems.sensors.CameraInfo.intrinsic_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the camera intrinsic matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.CameraInfo.width">
+<code class="descname">width</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.CameraInfo</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.sensors.CameraInfo.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the width of the image in pixels.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.sensors.Image">
+<em class="property">template </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">Image</code><a class="headerlink" href="#pydrake.systems.sensors.Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]" title="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kRgba8U]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kLabel16I]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]">
+<em class="property">class </em><code class="descname">Image[PixelType.kRgba8U]</code><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].Traits">
+<code class="descname">Traits</code><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].Traits" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.sensors._TemporaryName_N5drake7systems7sensors5ImageILNS1_9PixelTypeE2EEE, arg0: int, arg1: int) -&gt; None</li>
+</ol>
+<p>Image size only constructor. Specifies a width and height for the
+image. All the channel values in all the pixels are initialized with
+zero.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dd>Size of width for image which should be greater than zero</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dd>Size of height for image which should be greater than zero</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.sensors._TemporaryName_N5drake7systems7sensors5ImageILNS1_9PixelTypeE2EEE, arg0: int, arg1: int, arg2: int) -&gt; None</li>
+</ol>
+<p>Image size and initial value constructor. Specifies a width, height
+and an initial value for all the channels in all the pixels.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dd>Size of width for image which should be greater than zero.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dd>Size of height for image which should be greater than zero.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dd>A value set to all the channels in all the pixels</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].at">
+<code class="descname">at</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors._TemporaryName_N5drake7systems7sensors5ImageILNS1_9PixelTypeE2EEE</em>, <em>x: int</em>, <em>y: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[uint8[m, 1], flags.writeable]<a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access to the pixel located at (x, y) in image coordinate system where
+x is the variable for horizontal direction and y is one for vertical
+direction. To access to the each channel value in the pixel (x, y),
+you can do:</p>
+<p>ImageRgbaU8 image(640, 480, 255); uint8_t red = image.at(x, y)[0];
+uint8_t green = image.at(x, y)[1]; uint8_t blue = image.at(x, y)[2];
+uint8_t alpha = image.at(x, y)[3];</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].data">
+<code class="descname">data</code><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].height">
+<code class="descname">height</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors._TemporaryName_N5drake7systems7sensors5ImageILNS1_9PixelTypeE2EEE</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of height for the image</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].mutable_data">
+<code class="descname">mutable_data</code><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].mutable_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].resize">
+<code class="descname">resize</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors._TemporaryName_N5drake7systems7sensors5ImageILNS1_9PixelTypeE2EEE</em>, <em>arg0: int</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].resize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the sizes of the width and height for the image. The values
+for them should be greater than zero. (To resize to zero, assign a
+default- constructed Image into this; do not use this method.) All the
+values in the pixels become zero after resize.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].shape">
+<code class="descname">shape</code><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].size">
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors._TemporaryName_N5drake7systems7sensors5ImageILNS1_9PixelTypeE2EEE</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the result of the number of pixels in a image by the number of
+channels in a pixel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].width">
+<code class="descname">width</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors._TemporaryName_N5drake7systems7sensors5ImageILNS1_9PixelTypeE2EEE</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of width for the image</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.ImageDepth32F">
+<code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageDepth32F</code><a class="headerlink" href="#pydrake.systems.sensors.ImageDepth32F" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth32F]</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.ImageLabel16I">
+<code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageLabel16I</code><a class="headerlink" href="#pydrake.systems.sensors.ImageLabel16I" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kLabel16I]</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.ImageRgba8U">
+<code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageRgba8U</code><a class="headerlink" href="#pydrake.systems.sensors.ImageRgba8U" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kRgba8U]</span></code></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.sensors.ImageTraits">
+<em class="property">template </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageTraits</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></p>
+<dl class="class">
+<dt id="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]">
+<em class="property">class </em><code class="descname">ImageTraits[PixelType.kRgba8U]</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].ChannelType">
+<code class="descname">ChannelType</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].ChannelType" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.uint8</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].kNumChannels">
+<code class="descname">kNumChannels</code><em class="property"> = 4</em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].kNumChannels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].kPixelFormat">
+<code class="descname">kPixelFormat</code><em class="property"> = PixelFormat.kRgba</em><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].kPixelFormat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.InvalidDepth">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">InvalidDepth</code><a class="headerlink" href="#pydrake.systems.sensors.InvalidDepth" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.systems.sensors.InvalidDepth.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.sensors.InvalidDepth.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.InvalidDepth.kTooClose">
+<code class="descname">kTooClose</code><em class="property"> = 0.0</em><a class="headerlink" href="#pydrake.systems.sensors.InvalidDepth.kTooClose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.InvalidDepth.kTooFar">
+<code class="descname">kTooFar</code><em class="property"> = inf</em><a class="headerlink" href="#pydrake.systems.sensors.InvalidDepth.kTooFar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.Label">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">Label</code><a class="headerlink" href="#pydrake.systems.sensors.Label" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.systems.sensors.Label.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.sensors.Label.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.Label.kFlatTerrain">
+<code class="descname">kFlatTerrain</code><em class="property"> = 32766</em><a class="headerlink" href="#pydrake.systems.sensors.Label.kFlatTerrain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.Label.kNoBody">
+<code class="descname">kNoBody</code><em class="property"> = 32767</em><a class="headerlink" href="#pydrake.systems.sensors.Label.kNoBody" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.PixelFormat">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">PixelFormat</code><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>kDepth</p>
+<p>kRgba</p>
+<p>kLabel</p>
+<dl class="method">
+<dt id="pydrake.systems.sensors.PixelFormat.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.PixelFormat</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelFormat.kDepth">
+<code class="descname">kDepth</code><em class="property"> = PixelFormat.kDepth</em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kDepth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelFormat.kLabel">
+<code class="descname">kLabel</code><em class="property"> = PixelFormat.kLabel</em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kLabel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelFormat.kRgba">
+<code class="descname">kRgba</code><em class="property"> = PixelFormat.kRgba</em><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.kRgba" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelFormat.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.systems.sensors.PixelFormat.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.PixelType">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">PixelType</code><a class="headerlink" href="#pydrake.systems.sensors.PixelType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>kDepth32F</p>
+<p>kLabel16I</p>
+<p>kRgba8U</p>
+<dl class="method">
+<dt id="pydrake.systems.sensors.PixelType.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.PixelType</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.PixelType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelType.kDepth32F">
+<code class="descname">kDepth32F</code><em class="property"> = PixelType.kDepth32F</em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kDepth32F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelType.kLabel16I">
+<code class="descname">kLabel16I</code><em class="property"> = PixelType.kLabel16I</em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kLabel16I" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelType.kRgba8U">
+<code class="descname">kRgba8U</code><em class="property"> = PixelType.kRgba8U</em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kRgba8U" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelType.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.systems.sensors.PixelType.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.RgbdCamera">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">RgbdCamera</code><a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></p>
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em>, <em>name: unicode</em>, <em>tree: RigidBodyTree&lt;double&gt;</em>, <em>frame: RigidBodyFrame&lt;double&gt;</em>, <em>z_near: float = 0.5</em>, <em>z_far: float = 5.0</em>, <em>fov_y: float = 0.7853981633974483</em>, <em>show_window: bool = False</em>, <em>width: int = 640</em>, <em>height: int = 480</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constructor that uses the default RgbdRendererVTK renderer and
+defines <code class="docutils literal"><span class="pre">B</span></code> using a RigidBodyFrame. The pose of RgbdCamera is fixed
+to a user-defined frame and will be updated during the simulation.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dd>The name of the RgbdCamera. This can be any value, but should
+typically be unique among all sensors attached to a particular
+model instance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">tree</span></code>:</dt>
+<dd>The RigidBodyTree containing the geometric description of the
+world. The life span of this parameter must exceed that of this
+class’s instance. The maximum number of bodies in the <code class="docutils literal"><span class="pre">tree</span></code>
+must be less than 1536 based on the number of the colors used for
+the label image, otherwise an exception will be thrown.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frame</span></code>:</dt>
+<dd>The frame in &#64;tree to which this camera is attached.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">z_near</span></code>:</dt>
+<dd>The minimum depth distance RgbdCamera can measure.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">z_far</span></code>:</dt>
+<dd>The maximum depth distance RgbdCamera can measure.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">fov_y</span></code>:</dt>
+<dd>The RgbdCamera’s vertical field of view.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">show_window</span></code>:</dt>
+<dd>A flag for showing a visible window. If this is false, offscreen
+rendering is executed. This is useful for debugging purposes.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dd>Width of output image.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dd>Height of output image.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">flat_terrain</span></code>:</dt>
+<dd>A flag to add a flat terrain at z = 0 in the world coordinate
+system.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError When the number of rigid bodies in the scene exceeds</li>
+<li>the maximum limit 1535.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.camera_base_pose_output_port">
+<code class="descname">camera_base_pose_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.camera_base_pose_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.color_camera_info">
+<code class="descname">color_camera_info</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.sensors.CameraInfo<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.color_camera_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reterns the color sensor’s info.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.color_camera_optical_pose">
+<code class="descname">color_camera_optical_pose</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Isometry3<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.color_camera_optical_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">X_BC</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.color_image_output_port">
+<code class="descname">color_image_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.color_image_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.depth_camera_info">
+<code class="descname">depth_camera_info</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.sensors.CameraInfo<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.depth_camera_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reterns the depth sensor’s info.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.depth_camera_optical_pose">
+<code class="descname">depth_camera_optical_pose</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Isometry3<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.depth_camera_optical_pose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">X_BD</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.depth_image_output_port">
+<code class="descname">depth_image_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.depth_image_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.frame">
+<code class="descname">frame</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>frame(self: pydrake.systems.sensors.RgbdCamera) -&gt; RigidBodyFrame&lt;double&gt;</li>
+</ol>
+<p>Returns the RigidBodyFrame to which this RgbdCamera is attached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError When RgbdCamera is instantiated as a fixed camera.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>frame(self: pydrake.systems.sensors.RgbdCamera) -&gt; RigidBodyFrame&lt;double&gt;</li>
+</ol>
+<p>Returns the RigidBodyFrame to which this RgbdCamera is attached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError When RgbdCamera is instantiated as a fixed camera.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.label_image_output_port">
+<code class="descname">label_image_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.label_image_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.state_input_port">
+<code class="descname">state_input_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.state_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCamera.tree">
+<code class="descname">tree</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCamera</em><span class="sig-paren">)</span> &#x2192; RigidBodyTree&lt;double&gt;<a class="headerlink" href="#pydrake.systems.sensors.RgbdCamera.tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the RigidBodyTree to which this RgbdCamera is attached.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete">
+<em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">RgbdCameraDiscrete</code><a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></p>
+<p>Wraps a continuous RgbdCamera with zero order holds to have it
+function as a discrete sensor.</p>
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em>, <em>camera: pydrake.systems.sensors.RgbdCamera</em>, <em>period: float = 0.03333333333333333</em>, <em>render_label_image: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a diagram containing a (non-registered) RgbdCamera that
+will update at a given rate.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">period</span></code>:</dt>
+<dd>Update period (sec).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">render_label_image</span></code>:</dt>
+<dd>If true, renders label image (which requires additional overhead).
+If false, <code class="docutils literal"><span class="pre">label_image_output_port</span></code> will raise an error if
+called.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.camera">
+<code class="descname">camera</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.sensors.RgbdCamera<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns reference to RgbdCamera intsance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.camera_base_pose_output_port">
+<code class="descname">camera_base_pose_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.camera_base_pose_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.color_image_output_port">
+<code class="descname">color_image_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.color_image_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.depth_image_output_port">
+<code class="descname">depth_image_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.depth_image_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.kDefaultPeriod">
+<code class="descname">kDefaultPeriod</code><em class="property"> = 0.03333333333333333</em><a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.kDefaultPeriod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.label_image_output_port">
+<code class="descname">label_image_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.label_image_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.mutable_camera">
+<code class="descname">mutable_camera</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.sensors.RgbdCamera<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.mutable_camera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns reference to RgbdCamera intsance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.period">
+<code class="descname">period</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns update period for discrete camera.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdCameraDiscrete.state_input_port">
+<code class="descname">state_input_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdCameraDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdCameraDiscrete.state_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.trajectory_optimization.html" class="btn btn-neutral float-right" title="pydrake.systems.trajectory_optimization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.scalar_conversion.html" class="btn btn-neutral" title="pydrake.systems.scalar_conversion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

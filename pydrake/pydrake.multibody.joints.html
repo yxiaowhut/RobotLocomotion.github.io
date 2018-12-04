@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.joints &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.multibody.multibody_tree" href="pydrake.multibody.multibody_tree.html"/>
+        <link rel="prev" title="pydrake.multibody.inverse_kinematics" href="pydrake.multibody.inverse_kinematics.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.shapes.html">pydrake.multibody.shapes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.joints</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.joints">
+<span id="pydrake-multibody-joints"></span><h1>pydrake.multibody.joints<a class="headerlink" href="#module-pydrake.multibody.joints" title="Permalink to this headline">¶</a></h1>
+<p>Joint types supported by Drake.</p>
+<dl class="class">
+<dt id="pydrake.multibody.joints.DrakeJoint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.joints.</code><code class="descname">DrakeJoint</code><a class="headerlink" href="#pydrake.multibody.joints.DrakeJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>A joint defines a spatial relationship between two rigid bodies.</p>
+<dl class="attribute">
+<dt id="pydrake.multibody.joints.DrakeJoint.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.joints.DrakeJoint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.joints.DrakeJoint.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.joints.DrakeJoint</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.multibody.joints.DrakeJoint.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of this joint.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.joints.DrakeJoint.get_num_positions">
+<code class="descname">get_num_positions</code><span class="sig-paren">(</span><em>self: pydrake.multibody.joints.DrakeJoint</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.joints.DrakeJoint.get_num_positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of position states of this joint.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.joints.PrismaticJoint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.joints.</code><code class="descname">PrismaticJoint</code><a class="headerlink" href="#pydrake.multibody.joints.PrismaticJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.joints.DrakeJoint" title="pydrake.multibody.joints.DrakeJoint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.joints.DrakeJoint</span></code></a></p>
+<p>A prismatic joint moves linearly along one axis.</p>
+<dl class="method">
+<dt id="pydrake.multibody.joints.PrismaticJoint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.joints.PrismaticJoint, name: unicode, transform_to_parent_body: pydrake.common.eigen_geometry.Isometry3, translation_axis: numpy.ndarray[float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.joints.PrismaticJoint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The constructor that initializes the name, position, and axis of
+motion of this prismatic joint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dd>The name of this joint.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">transform_to_parent_body</span></code>:</dt>
+<dd>The transform from this joint’s frame to this joint’s parent’s
+frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_axis</span></code>:</dt>
+<dd>The axis along which this joint moves.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.joints.RevoluteJoint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.joints.</code><code class="descname">RevoluteJoint</code><a class="headerlink" href="#pydrake.multibody.joints.RevoluteJoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.multibody.joints.DrakeJoint" title="pydrake.multibody.joints.DrakeJoint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.joints.DrakeJoint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.multibody.joints.RevoluteJoint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.joints.RevoluteJoint, name: unicode, transform_to_parent_body: pydrake.common.eigen_geometry.Isometry3, rotation_axis: numpy.ndarray[float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.joints.RevoluteJoint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.multibody_tree.html" class="btn btn-neutral float-right" title="pydrake.multibody.multibody_tree" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.inverse_kinematics.html" class="btn btn-neutral" title="pydrake.multibody.inverse_kinematics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

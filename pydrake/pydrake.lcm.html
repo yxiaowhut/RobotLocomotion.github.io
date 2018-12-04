@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.lcm &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="next" title="pydrake.maliput" href="pydrake.maliput.html"/>
+        <link rel="prev" title="pydrake.geometry" href="pydrake.geometry.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>pydrake.lcm</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.lcm">
+<span id="pydrake-lcm"></span><h1>pydrake.lcm<a class="headerlink" href="#module-pydrake.lcm" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pydrake.lcm.DrakeLcm">
+<em class="property">class </em><code class="descclassname">pydrake.lcm.</code><code class="descname">DrakeLcm</code><a class="headerlink" href="#pydrake.lcm.DrakeLcm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></code></a></p>
+<p>A wrapper around a <em>real</em> LCM instance.</p>
+<dl class="method">
+<dt id="pydrake.lcm.DrakeLcm.StartReceiveThread">
+<code class="descname">StartReceiveThread</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcm</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeLcm.StartReceiveThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the receive thread. This must be called for subscribers to
+receive any messages.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>StartReceiveThread() was not called.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.lcm.DrakeLcm.StopReceiveThread">
+<code class="descname">StopReceiveThread</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcm</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeLcm.StopReceiveThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the receive thread. This must be called prior to any subscribers
+being destroyed. Note that the receive thread will be automatically
+stopped by this class’s destructor, so usage of this method will be
+extremely rare. It will only be needed if this class’s instance and
+the subscribers to LCM channels are owned by different classes. In
+such a scenario, this method can be used to ensure the receive thread
+is destroyed before the subscribers are destroyed.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>StartReceiveThread() was called.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.lcm.DrakeLcm.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcm</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeLcm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs using LCM’s default URL (either the default hard-coded URL,
+or else LCM_DEFAULT_URL environment variable if it is set).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.lcm.DrakeLcmInterface">
+<em class="property">class </em><code class="descclassname">pydrake.lcm.</code><code class="descname">DrakeLcmInterface</code><a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>A pure virtual interface that enables LCM to be mocked.</p>
+<dl class="method">
+<dt id="pydrake.lcm.DrakeLcmInterface.Publish">
+<code class="descname">Publish</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcmInterface</em>, <em>channel: unicode</em>, <em>buffer: str</em>, <em>time_sec: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.Publish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publishes an LCM message on channel <code class="docutils literal"><span class="pre">channel</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">channel</span></code>:</dt>
+<dd>The channel on which to publish the message. Must not be the empty
+string.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">data</span></code>:</dt>
+<dd>A buffer containing the serialized bytes of the message to
+publish.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">data_size</span></code>:</dt>
+<dd>The length of &#64;data in bytes.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">time_sec</span></code>:</dt>
+<dd>Time in seconds when the publish event occurred. If unknown, use
+drake::nullopt or a default-constructed optional.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.lcm.DrakeLcmInterface.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.lcm.DrakeMockLcm">
+<em class="property">class </em><code class="descclassname">pydrake.lcm.</code><code class="descname">DrakeMockLcm</code><a class="headerlink" href="#pydrake.lcm.DrakeMockLcm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></code></a></p>
+<p>A <em>mock</em> LCM instance. This does not actually publish or subscribe to
+LCM messages. It contains additional methods for accessing the most
+recent message that was “published,” and faking a callback.</p>
+<dl class="method">
+<dt id="pydrake.lcm.DrakeMockLcm.InduceSubscriberCallback">
+<code class="descname">InduceSubscriberCallback</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeMockLcm</em>, <em>channel: unicode</em>, <em>buffer: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeMockLcm.InduceSubscriberCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fakes a callback. The callback is executed by the same thread as the
+one calling this method.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">channel</span></code>:</dt>
+<dd>The channel on which to publish the message.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">data</span></code>:</dt>
+<dd>A buffer containing the serialized bytes of the message to
+publish.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">data_size</span></code>:</dt>
+<dd>The length of &#64;data in bytes.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.lcm.DrakeMockLcm.Subscribe">
+<code class="descname">Subscribe</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeMockLcm, channel: unicode, handler: Callable[[str], None]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeMockLcm.Subscribe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.lcm.DrakeMockLcm.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeMockLcm</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeMockLcm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>A constructor that creates a DrakeMockLcm with loopback disabled,
+i.e., a call to Publish() will not result in subscriber callback
+functions being executed. To enable loopback behavior, call
+EnableLoopBack().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.lcm.DrakeMockLcm.get_last_published_message">
+<code class="descname">get_last_published_message</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeMockLcm</em>, <em>channel: unicode</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.lcm.DrakeMockLcm.get_last_published_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the most recently “published” message on a particular channel.
+A RuntimeError will be thrown if no message was published on the
+provide channel.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">channel</span></code>:</dt>
+<dd>The channel on which the LCM message was published.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to a vector containing the serialized bytes of the LCM
+message that was previously published on channel <code class="docutils literal"><span class="pre">channel</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>A message was previously published on channel <code class="docutils literal"><span class="pre">channel</span></code>.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.maliput.html" class="btn btn-neutral float-right" title="pydrake.maliput" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.geometry.html" class="btn btn-neutral" title="pydrake.geometry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

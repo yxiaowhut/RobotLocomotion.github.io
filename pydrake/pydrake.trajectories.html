@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.trajectories &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="next" title="pydrake.util" href="pydrake.util.html"/>
+        <link rel="prev" title="pydrake.systems.trajectory_optimization" href="pydrake.systems.trajectory_optimization.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>pydrake.trajectories</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.trajectories">
+<span id="pydrake-trajectories"></span><h1>pydrake.trajectories<a class="headerlink" href="#module-pydrake.trajectories" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pydrake.trajectories.PiecewisePolynomial">
+<em class="property">class </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">PiecewisePolynomial</code><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory" title="pydrake.trajectories.PiecewiseTrajectory"><code class="xref py py-class docutils literal"><span class="pre">pydrake.trajectories.PiecewiseTrajectory</span></code></a></p>
+<p>A scalar multi-variate piecewise polynomial.</p>
+<p>PiecewisePolynomial represents a list of contiguous segments in time
+with a Matrix of Polynomials defined for each segment. The term
+segment is used for piece.</p>
+<p>An example of a piecewise polynomial is a function of x segments in
+time, where for each segment a different polynomial is defined. For a
+more specific example, consider the absolute value function, which is
+a piecewise function. It uses one function for inputs values &lt; 0, and
+another function for input values &gt; 0:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">x</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>PiecewisePolynomials can be added, subtracted, and multiplied. They
+cannot be divided because Polynomials are not closed under division.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>is a scalar type.</dd>
+</dl>
+<p>Explicit instantiations are provided for:</p>
+<ul class="simple">
+<li>double</li>
+</ul>
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.Cubic">
+<code class="descname">Cubic</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.Cubic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>Cubic(breaks: numpy.ndarray[float64[m, 1]], knots: numpy.ndarray[float64[m, n], flags.f_contiguous], knot_dot_start: numpy.ndarray[float64[m, 1]], knot_dot_end: numpy.ndarray[float64[m, 1]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a third order PiecewisePolynomial from <code class="docutils literal"><span class="pre">breaks</span></code> and
+<code class="docutils literal"><span class="pre">knots</span></code>. The PiecewisePolynomial is constructed such that the
+interior segments have the same value, first and second derivatives at
+<code class="docutils literal"><span class="pre">breaks</span></code>. <cite>knot_dot_at_start</cite> and <code class="docutils literal"><span class="pre">knot_dot_at_end</span></code> are used for
+the first and last first derivatives.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">breaks</span></code> and <code class="docutils literal"><span class="pre">knots</span></code> have different length,</li>
+<li><code class="docutils literal"><span class="pre">breaks</span></code> is not strictly increasing, <code class="docutils literal"><span class="pre">knots</span></code> has inconsistent</li>
+<li>dimensions, <code class="docutils literal"><span class="pre">knots_dot_at_start</span></code> or <code class="docutils literal"><span class="pre">knot_dot_at_end</span></code> and</li>
+<li><code class="docutils literal"><span class="pre">knots</span></code> have inconsistent dimensions, <code class="docutils literal"><span class="pre">breaks</span></code> has length</li>
+<li>smaller than 2.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>Cubic(breaks: numpy.ndarray[float64[m, 1]], knots: numpy.ndarray[float64[m, n], flags.f_contiguous], knots_dot: numpy.ndarray[float64[m, n], flags.f_contiguous]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Eigen version of Cubic(breaks, knots, knots_dot_start, knots_dot_end)
+where each column of knots is used as a knot point, and knots.cols()
+== breaks.size().</p>
+<p>&#64;overload PiecewisePolynomial&lt;T&gt; Cubic(breaks, knots, knots_dot_start,
+knots_dot_end)</p>
+<ol class="arabic simple" start="3">
+<li>Cubic(breaks: numpy.ndarray[float64[m, 1]], knots: numpy.ndarray[float64[m, n], flags.f_contiguous], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a third order PiecewisePolynomial from <code class="docutils literal"><span class="pre">breaks</span></code>, <cite>knots</cite>
+and <a href="#id1"><span class="problematic" id="id2">``</span></a>knots`dot. Each segment is fully specified by &#64;knots and
+&#64;knot_dot at both ends. Second derivatives are not continuous.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <cite>breaks`</cite> and <code class="docutils literal"><span class="pre">knots</span></code> have different length,</li>
+<li><code class="docutils literal"><span class="pre">breaks</span></code> is not strictly increasing, <code class="docutils literal"><span class="pre">breaks</span></code> and <a href="#id3"><span class="problematic" id="id4">``</span></a>knots`dot</li>
+<li>have different length, <cite>knots`</cite> has inconsistent dimensions,</li>
+<li><code class="docutils literal"><span class="pre">knots_dot</span></code> and <code class="docutils literal"><span class="pre">knots</span></code> have inconsistent dimensions,</li>
+<li><code class="docutils literal"><span class="pre">breaks</span></code> has length smaller than 2.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.FirstOrderHold">
+<code class="descname">FirstOrderHold</code><span class="sig-paren">(</span><em>arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.FirstOrderHold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a piecewise linear PiecewisePolynomial.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">breaks</span></code> and <code class="docutils literal"><span class="pre">knots</span></code> have different length,</li>
+<li><code class="docutils literal"><span class="pre">breaks</span></code> is not strictly increasing, <code class="docutils literal"><span class="pre">knots</span></code> has inconsistent</li>
+<li>dimensions, <code class="docutils literal"><span class="pre">breaks</span></code> has length smaller than 2.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.Pchip">
+<code class="descname">Pchip</code><span class="sig-paren">(</span><em>arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, n], flags.f_contiguous], arg2: bool</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.Pchip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a third order PiecewisePolynomial from <code class="docutils literal"><span class="pre">breaks</span></code> and
+<code class="docutils literal"><span class="pre">knots</span></code>. First derivatives are chosen to be “shape preserving”, i.e.
+if <code class="docutils literal"><span class="pre">knots</span></code> is monotonic within some interval, the interpolated data
+will also be monotonic. The second derivative is not guaranteed to be
+smooth across the entire spline.</p>
+<p>Pchip stands for “Piecewise Cubic Hermite Interpolating Polynomial”.
+For more details, refer to the matlab file “pchip.m”.
+<a class="reference external" href="http://home.uchicago.edu/~sctchoi/courses/cs138/interp.pdf">http://home.uchicago.edu/~sctchoi/courses/cs138/interp.pdf</a> is also a
+good reference.</p>
+<p>If <code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is false, the first and last first
+derivative is chosen using a non-centered, shape-preserving
+three-point formulae. See equation (2.10) in the following reference
+for more details. <a class="reference external" href="http://www.mi.sanu.ac.rs/~gvm/radovi/mon.pdf">http://www.mi.sanu.ac.rs/~gvm/radovi/mon.pdf</a> If
+<code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is true, they are set to zeros.</p>
+<p>If <code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is false, <code class="docutils literal"><span class="pre">breaks</span></code> and <code class="docutils literal"><span class="pre">knots</span></code>
+must have at least 3 elements for the algorithm to determine the first
+derivatives.</p>
+<p>If <code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is true, <code class="docutils literal"><span class="pre">breaks</span></code> and <code class="docutils literal"><span class="pre">knots</span></code>
+may have 2 or more elements. For the 2 elements case, the result is
+equivalent to computing a cubic polynomial whose values are given by
+<code class="docutils literal"><span class="pre">knots</span></code>, and derivatives set to zero.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">breaks</span></code> and <code class="docutils literal"><span class="pre">knots</span></code> have different length,</li>
+<li><code class="docutils literal"><span class="pre">breaks</span></code> is not strictly increasing, <code class="docutils literal"><span class="pre">knots</span></code> has inconsistent</li>
+<li>dimensions, <code class="docutils literal"><span class="pre">breaks</span></code> has length smaller than 3 and</li>
+<li>zero_end_point_derivatives is false, <code class="docutils literal"><span class="pre">breaks</span></code> has length smaller</li>
+<li>than 2 and zero_end_point_derivatives is true.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.ZeroOrderHold">
+<code class="descname">ZeroOrderHold</code><span class="sig-paren">(</span><em>arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.ZeroOrderHold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a piecewise constant PiecewisePolynomial. Note that
+constructing a PiecewisePolynomial requires at least two knot points,
+although in this case, the second knot point’s value is ignored, and
+only its break time is used.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">breaks</span></code> and <code class="docutils literal"><span class="pre">knots</span></code> have different length,</li>
+<li><code class="docutils literal"><span class="pre">breaks</span></code> is not strictly increasing, <code class="docutils literal"><span class="pre">knots</span></code> has inconsistent</li>
+<li>dimensions, <code class="docutils literal"><span class="pre">breaks</span></code> has length smaller than 2.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.trajectories.PiecewisePolynomial) -&gt; None</li>
+<li>__init__(self: pydrake.trajectories.PiecewisePolynomial, arg0: numpy.ndarray[float64[m, n], flags.f_contiguous]) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.cols">
+<code class="descname">cols</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePolynomial</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.cols" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the column count of each and every PolynomialMatrix segment.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.derivative">
+<code class="descname">derivative</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePolynomial</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the derivative of this PiecewisePolynomial.</p>
+<p>Returns a PiecewisePolynomial where each segment is the derivative of
+the segment in the input PiecewisePolynomial. Any rules or limitations
+of Polynomial::derivative also apply to this function.</p>
+<p>If <code class="docutils literal"><span class="pre">derivative_order</span></code> is given, takes the nth derivative of this
+PiecewisePolynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.rows">
+<code class="descname">rows</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePolynomial</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the row count of each and every PolynomialMatrix segment.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.shiftRight">
+<code class="descname">shiftRight</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePolynomial</em>, <em>offset: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.shiftRight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.slice">
+<code class="descname">slice</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePolynomial</em>, <em>start_segment_index: int</em>, <em>num_segments: int</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.slice" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePolynomial.value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePolynomial</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, n]]<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the PiecewisePolynomial at the given time <code class="docutils literal"><span class="pre">t</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">t</span></code>:</dt>
+<dd>The time at which to evaluate the PiecewisePolynomial.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The matrix of evaluated values.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.trajectories.PiecewiseTrajectory">
+<em class="property">class </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">PiecewiseTrajectory</code><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.Trajectory" title="pydrake.trajectories.Trajectory"><code class="xref py py-class docutils literal"><span class="pre">pydrake.trajectories.Trajectory</span></code></a></p>
+<p>Abstract class that implements the basic logic of maintaining
+consequent segments of time (delimited by <code class="docutils literal"><span class="pre">breaks</span></code>) to implement a
+trajectory that is represented by simpler logic in each segment or
+“piece”.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>is the scalar type.</dd>
+</dl>
+<p>Instantiated templates for the following kinds of T’s are provided:</p>
+<ul class="simple">
+<li>double</li>
+</ul>
+<dl class="attribute">
+<dt id="pydrake.trajectories.PiecewiseTrajectory.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewiseTrajectory.duration">
+<code class="descname">duration</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewiseTrajectory</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.duration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewiseTrajectory.end_time">
+<code class="descname">end_time</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.end_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>end_time(self: pydrake.trajectories.PiecewiseTrajectory, arg0: int) -&gt; float</li>
+<li>end_time(self: pydrake.trajectories.PiecewiseTrajectory) -&gt; float</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewiseTrajectory.get_number_of_segments">
+<code class="descname">get_number_of_segments</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewiseTrajectory</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.get_number_of_segments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewiseTrajectory.get_segment_index">
+<code class="descname">get_segment_index</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewiseTrajectory</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.get_segment_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewiseTrajectory.get_segment_times">
+<code class="descname">get_segment_times</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewiseTrajectory</em><span class="sig-paren">)</span> &#x2192; List[float]<a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.get_segment_times" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewiseTrajectory.start_time">
+<code class="descname">start_time</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewiseTrajectory.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>start_time(self: pydrake.trajectories.PiecewiseTrajectory, arg0: int) -&gt; float</li>
+<li>start_time(self: pydrake.trajectories.PiecewiseTrajectory) -&gt; float</li>
+</ol>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.trajectories.Trajectory">
+<em class="property">class </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">Trajectory</code><a class="headerlink" href="#pydrake.trajectories.Trajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Trajectory represents a time-varying matrix, indexed by a single
+scalar double time.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dd>is a Scalar type for the data that is returned.</dd>
+</dl>
+<dl class="attribute">
+<dt id="pydrake.trajectories.Trajectory.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.trajectories.Trajectory.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.util.html" class="btn btn-neutral float-right" title="pydrake.util" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.trajectory_optimization.html" class="btn btn-neutral" title="pydrake.systems.trajectory_optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
