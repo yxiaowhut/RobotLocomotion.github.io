@@ -1,5 +1,11 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1geometry_1_1_scene_graph_inspector.html#a24456cafacabea2e6816ab4334cd2bf6":[2,0,0,7,19,5],
+"classdrake_1_1geometry_1_1_scene_graph_inspector.html#a351bd36048a5437b445fe7419d8ebef6":[2,0,0,7,19,9],
+"classdrake_1_1geometry_1_1_scene_graph_inspector.html#a606ba5b86da6b6306dd900187ac4fc6b":[2,0,0,7,19,10],
+"classdrake_1_1geometry_1_1_scene_graph_inspector.html#a6e9f389685137462f277662ef2937886":[2,0,0,7,19,15],
+"classdrake_1_1geometry_1_1_scene_graph_inspector.html#a7b176f170af189d4f31f33371e7d732c":[2,0,0,7,19,11],
+"classdrake_1_1geometry_1_1_scene_graph_inspector.html#a832092603067759319cdf2e81c4cb67c":[2,0,0,7,19,6],
 "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a9174b38bac2fe383418fa6fa711ee153":[2,0,0,7,19,12],
 "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a9d8523d308a9d9ffb724f8c288bc2c97":[2,0,0,7,19,8],
 "classdrake_1_1geometry_1_1_scene_graph_inspector.html#abbc96c65232bae3ee3d40d256e95a865":[2,0,0,7,19,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1maliput_1_1api_1_1_branch_point.html#a7cc9cd193d7fa56c96cc4b6d723b3e87":[2,0,0,9,0,2,0],
 "classdrake_1_1maliput_1_1api_1_1_branch_point.html#a8871102d89918bf07f1a07a9fca2b8d4":[2,0,0,9,0,2,5],
 "classdrake_1_1maliput_1_1api_1_1_branch_point.html#aa5b5de3cdefe8ef0d3ffa573f3822d4d":[2,0,0,9,0,2,12],
-"classdrake_1_1maliput_1_1api_1_1_branch_point.html#aaa8e0b5b74ff0e81097d3055e813a27d":[2,0,0,9,0,2,9],
-"classdrake_1_1maliput_1_1api_1_1_branch_point.html#aaf9d1836c78c24946278b3d4ec44cf28":[2,0,0,9,0,2,6],
-"classdrake_1_1maliput_1_1api_1_1_branch_point.html#abd4d29838fdb5df16d9e9890095b4e7e":[2,0,0,9,0,2,11],
-"classdrake_1_1maliput_1_1api_1_1_branch_point.html#ac243138fc475467c3c1921bdfeda6dc0":[2,0,0,9,0,2,8],
-"classdrake_1_1maliput_1_1api_1_1_branch_point.html#af0b256382bcd91d863d978c388656825":[2,0,0,9,0,2,3],
-"classdrake_1_1maliput_1_1api_1_1_geo_position_t.html":[2,0,0,9,0,3],
-"classdrake_1_1maliput_1_1api_1_1_geo_position_t.html#a37f74f89f109eefac76b30b3036e2482":[2,0,0,9,0,3,8]
+"classdrake_1_1maliput_1_1api_1_1_branch_point.html#aaa8e0b5b74ff0e81097d3055e813a27d":[2,0,0,9,0,2,9]
 };

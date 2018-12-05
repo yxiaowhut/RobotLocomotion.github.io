@@ -56,6 +56,7 @@ var dir_6c182ff7dda7d3dbcc0327b9952b2537 =
     [ "scoped_singleton_test.cc", "scoped__singleton__test_8cc.html", null ],
     [ "sorted_pair_test.cc", "sorted__pair__test_8cc.html", null ],
     [ "sorted_vectors_have_intersection_test.cc", "sorted__vectors__have__intersection__test_8cc.html", null ],
+    [ "symbolic_codegen_test.cc", "symbolic__codegen__test_8cc.html", "symbolic__codegen__test_8cc" ],
     [ "symbolic_decompose_test.cc", "symbolic__decompose__test_8cc.html", "symbolic__decompose__test_8cc" ],
     [ "symbolic_environment_test.cc", "symbolic__environment__test_8cc.html", "symbolic__environment__test_8cc" ],
     [ "symbolic_expansion_test.cc", "symbolic__expansion__test_8cc.html", "symbolic__expansion__test_8cc" ],

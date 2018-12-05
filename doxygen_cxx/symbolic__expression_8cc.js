@@ -7,6 +7,7 @@ var symbolic__expression_8cc =
     [ "atan", "symbolic__expression_8cc.html#acf24c6f256d7360650cb379c22886409", null ],
     [ "atan2", "symbolic__expression_8cc.html#a9ddcc51253066082911475e06b0ac994", null ],
     [ "ceil", "symbolic__expression_8cc.html#a2e5ea5116992b4f695c16ad0f297686b", null ],
+    [ "CodeGen", "symbolic__expression_8cc.html#aa11ee8e11a75ed1fa0f970ed7a547add", null ],
     [ "cos", "symbolic__expression_8cc.html#a8d78919127ccba2ba24cdb1b0c57613d", null ],
     [ "cosh", "symbolic__expression_8cc.html#a27a345a84e6b273a71aa02ee312f9c51", null ],
     [ "exp", "symbolic__expression_8cc.html#a27e661d9a5f1936f326068b2dea3eecc", null ],

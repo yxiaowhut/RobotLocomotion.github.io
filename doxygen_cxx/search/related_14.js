@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weldjoint',['WeldJoint',['../classdrake_1_1multibody_1_1_weld_joint.html#a4d111c4fc2a82d94fe15a244da576424',1,'drake::multibody::WeldJoint']]]
+  ['visitexpression',['VisitExpression',['../classdrake_1_1symbolic_1_1_code_gen_visitor.html#a6afbb1bd6592ef400177d0f81f275a49',1,'drake::symbolic::CodeGenVisitor']]]
 ];

@@ -135,6 +135,7 @@ var namespacedrake_1_1systems =
     [ "TimeVaryingLinearSystem", "classdrake_1_1systems_1_1_time_varying_linear_system.html", "classdrake_1_1systems_1_1_time_varying_linear_system" ],
     [ "TrajectorySource", "classdrake_1_1systems_1_1_trajectory_source.html", "classdrake_1_1systems_1_1_trajectory_source" ],
     [ "UnrestrictedUpdateEvent", "classdrake_1_1systems_1_1_unrestricted_update_event.html", "classdrake_1_1systems_1_1_unrestricted_update_event" ],
+    [ "UseDefaultName", "structdrake_1_1systems_1_1_use_default_name.html", null ],
     [ "ValkyriePDAndFeedForwardController", "classdrake_1_1systems_1_1_valkyrie_p_d_and_feed_forward_controller.html", "classdrake_1_1systems_1_1_valkyrie_p_d_and_feed_forward_controller" ],
     [ "Value", "classdrake_1_1systems_1_1_value.html", "classdrake_1_1systems_1_1_value" ],
     [ "VectorBase", "classdrake_1_1systems_1_1_vector_base.html", "classdrake_1_1systems_1_1_vector_base" ],

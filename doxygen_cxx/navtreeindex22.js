@@ -1,5 +1,11 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a7960ec53eaed268e954d64f34f05255d":[2,0,0,12,39,18],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a9b78e1282dbe407d7e389ea125515f69":[2,0,0,12,39,0],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a9c23f794058c7e02e8723e2af11c2ac7":[2,0,0,12,39,8],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#a9d4182d14a9e42d08c93116b7544e579":[2,0,0,12,39,13],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#aad91b55e6b714db4ba96190e6fab07ac":[2,0,0,12,39,5],
+"classdrake_1_1multibody_1_1_prismatic_joint.html#ab5ba247efb20484f2ac17040afdab597":[2,0,0,12,39,9],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#adc69cb1263cdaec551e07233f470e598":[2,0,0,12,39,2],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#ae58dc70f3e0535c09582b85ecbc612a7":[2,0,0,12,39,6],
 "classdrake_1_1multibody_1_1_prismatic_joint.html#af6693bdd8cd7c223b8ac7b6015dd2ab4":[2,0,0,12,39,15],
@@ -243,11 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a6cc865a1da3d8d740ee1e7534e467d57":[2,0,0,12,49,22],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a70df4e7d875f27cf5f12d391f436d688":[2,0,0,12,49,8],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a7124bb702e0614d7b4874c09e4b0c649":[2,0,0,12,49,18],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a751136a22e2d0980679dd41429d54c62":[2,0,0,12,49,6],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a87068d58ff4a71b1d3d9795e9fed4aa6":[2,0,0,12,49,21],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a87a3166ee48597a46f3d32b13a323945":[2,0,0,12,49,9],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a8f02d78a11a4fd918699c75b48573520":[2,0,0,12,49,0],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#aa0eb83927e03cc49eb573ea200767cee":[2,0,0,12,49,24],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#aa43ccc9d77b74b64c25cfcaf3deeaf0b":[2,0,0,12,49,20],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#aa7fbc3778a7090443b7b5102861ebe9a":[2,0,0,12,49,12]
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a751136a22e2d0980679dd41429d54c62":[2,0,0,12,49,6]
 };

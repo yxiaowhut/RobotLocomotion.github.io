@@ -1,5 +1,11 @@
 var NAVTREEINDEX28 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#a8d2cc4c49122282ae0b2fe0511e86817":[0,0,0,95],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a8f22188fff7a464ac091b8fea727a89d":[0,0,0,139],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a8f718351922bc149cb6e7fa6d82288a5":[0,0,0,151],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a8f76110fcfea54be86c2ef1ebfeaab55":[0,0,0,133],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a961df24d54138d7528f160332c7e36fb":[0,0,0,171],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a9673db3dce831cddef02eb3345a5f809":[0,0,0,20],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a9a8ae8ccec0fb23009ff8a010e5ad519":[0,0,0,70],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a9e65c30f5850406ee79e3a09e7816b5b":[0,0,0,91],
 "classdrake_1_1solvers_1_1_mathematical_program.html#aa44e07a559ca22d055de33fa1154c095":[0,0,0,111],
@@ -243,11 +249,5 @@ var NAVTREEINDEX28 =
 "classdrake_1_1solvers_1_1_polynomial_constraint.html#a4983fdabdbaa1977122fd25c7081127d":[2,0,0,16,44,0],
 "classdrake_1_1solvers_1_1_polynomial_constraint.html#a4cfabc8f2d2a53ee991b848f84516bb6":[2,0,0,16,44,6],
 "classdrake_1_1solvers_1_1_polynomial_constraint.html#a73f0868e6a43746c0d368f80b12ed428":[2,0,0,16,44,3],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#aacd88a44cead011690d465fbdf56026c":[2,0,0,16,44,1],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#ab3429d3e0cafa91ff2dab2bfde0de5d2":[2,0,0,16,44,2],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#ab5ba289ee6c1c0cd3e495aa59b6085dc":[2,0,0,16,44,4],
-"classdrake_1_1solvers_1_1_polynomial_constraint.html#ae141a256267715167e020e82602198a2":[2,0,0,16,44,5],
-"classdrake_1_1solvers_1_1_polynomial_cost.html":[2,0,0,16,45],
-"classdrake_1_1solvers_1_1_polynomial_cost.html#a25f396d1eaf4be52eb3db66072895105":[2,0,0,16,45,6],
-"classdrake_1_1solvers_1_1_polynomial_cost.html#a4cfabc8f2d2a53ee991b848f84516bb6":[2,0,0,16,45,5]
+"classdrake_1_1solvers_1_1_polynomial_constraint.html#aacd88a44cead011690d465fbdf56026c":[2,0,0,16,44,1]
 };

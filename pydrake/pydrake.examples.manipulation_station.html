@@ -215,18 +215,13 @@
 <em class="property">class </em><code class="descclassname">pydrake.examples.manipulation_station.</code><code class="descname">ManipulationStation</code><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></p>
 <dl class="method">
-<dt id="pydrake.examples.manipulation_station.ManipulationStation.AddCupboard">
-<code class="descname">AddCupboard</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.AddCupboard" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add the geometry (and two extra degrees-of-freedom) of the optional
-workstation cupboard to the model.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.Finalize">
 <code class="descname">Finalize</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.Finalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Users <em>must</em> call Finalize() after making any additions to the
 multibody plant and before using this class in the Systems framework.
-This should be called exactly once.</p>
+This should be called exactly once. This assumes an IIWA and WSG have
+been added to the MultibodyPlant, and RegisterIiwaControllerModel()
+and RegisterWsgControllerModel() have been called.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">multibody::multibody_plant::MultibodyPlant&lt;T&gt;::Finalize()</p>
@@ -261,6 +256,30 @@ that the WSG position is the signed distance between the two fingers
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.RegisterIiwaControllerModel">
+<code class="descname">RegisterIiwaControllerModel</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>arg0: unicode</em>, <em>arg1: pydrake.multibody.multibody_tree.ModelInstanceIndex</em>, <em>arg2: pydrake.multibody.multibody_tree.Frame</em>, <em>arg3: pydrake.multibody.multibody_tree.Frame</em>, <em>arg4: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.RegisterIiwaControllerModel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.RegisterWsgControllerModel">
+<code class="descname">RegisterWsgControllerModel</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>arg0: unicode</em>, <em>arg1: pydrake.multibody.multibody_tree.ModelInstanceIndex</em>, <em>arg2: pydrake.multibody.multibody_tree.Frame</em>, <em>arg3: pydrake.multibody.multibody_tree.Frame</em>, <em>arg4: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.RegisterWsgControllerModel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaIntegralGains">
+<code class="descname">SetIiwaIntegralGains</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaIntegralGains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the integral gains for the IIWA controller.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">exception if Finalize() has been called.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition">
 <code class="descname">SetIiwaPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]], arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience method for setting all of the joint angles of the Kuka
@@ -269,10 +288,52 @@ generator. <code class="docutils literal"><span class="pre">q</span></code> must
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPositionGains">
+<code class="descname">SetIiwaPositionGains</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPositionGains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position gains for the IIWA controller.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">exception if Finalize() has been called.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocity">
 <code class="descname">SetIiwaVelocity</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]], arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience method for setting all of the joint velocities of the Kuka
 IIWA. &#64;v must have size num_iiwa_joints().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocityGains">
+<code class="descname">SetIiwaVelocityGains</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocityGains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the velocity gains for the IIWA controller.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">exception if Finalize() has been called.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetWsgGains">
+<code class="descname">SetWsgGains</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>arg0: float</em>, <em>arg1: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetWsgGains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the gains for the WSG controller.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">exception if Finalize() has been called.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -291,16 +352,27 @@ state of the fingers individually).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.SetupDefaultStation">
+<code class="descname">SetupDefaultStation</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>collision_model: pydrake.examples.manipulation_station.IiwaCollisionModel = IiwaCollisionModel.kNoCollision</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetupDefaultStation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a default iiwa, wsg, cupboard, and 8020 frame for the MIT
+Intelligent Robot Manipulation class, then calls
+RegisterIiwaControllerModel() and RegisterWsgControllerModel() with
+the appropriate arguments. Must be called before Finalize().</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">collision_model</span></code>:</dt>
+<dd>Determines which sdf is loaded for the IIWA.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>time_step: float = 0.002</em>, <em>collision_model: pydrake.examples.manipulation_station.IiwaCollisionModel = IiwaCollisionModel.kNoCollision</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Construct the station model.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>time_step: float = 0.002</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct the EMPTY station model.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">time_step</span></code>:</dt>
 <dd>The time step used by MultibodyPlant&lt;T&gt;, and by the discrete
 derivative used to approximate velocity from the position command
 inputs.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">collision_model</span></code>:</dt>
-<dd>Determines which sdf is loaded for the IIWA.</dd>
 </dl>
 </dd></dl>
 

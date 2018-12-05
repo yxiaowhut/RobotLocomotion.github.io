@@ -1,5 +1,11 @@
 var NAVTREEINDEX29 =
 {
+"classdrake_1_1solvers_1_1_polynomial_constraint.html#ab3429d3e0cafa91ff2dab2bfde0de5d2":[2,0,0,16,44,2],
+"classdrake_1_1solvers_1_1_polynomial_constraint.html#ab5ba289ee6c1c0cd3e495aa59b6085dc":[2,0,0,16,44,4],
+"classdrake_1_1solvers_1_1_polynomial_constraint.html#ae141a256267715167e020e82602198a2":[2,0,0,16,44,5],
+"classdrake_1_1solvers_1_1_polynomial_cost.html":[2,0,0,16,45],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a25f396d1eaf4be52eb3db66072895105":[2,0,0,16,45,6],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a4cfabc8f2d2a53ee991b848f84516bb6":[2,0,0,16,45,5],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a7ac486efb96e05a296c7d114d64f2ead":[2,0,0,16,45,1],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a8f99a12c084358b7a5c4cc6ec1722450":[2,0,0,16,45,3],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#aa2d7ab409cc841882a99f3e9b5d034c3":[2,0,0,16,45,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX29 =
 "classdrake_1_1solvers_1_1test_1_1_generic_trivial_cost2.html#a2fc5144eef20970c44fb3e96b34e87d8":[2,0,0,16,2,4,0],
 "classdrake_1_1solvers_1_1test_1_1_generic_trivial_cost2.html#a387ca1aa4c1b16271a3819ec791d7786":[2,0,0,16,2,4,4],
 "classdrake_1_1solvers_1_1test_1_1_generic_trivial_cost2.html#a4f16bf5c8f0e8c2fd6fd385edc2a59a7":[2,0,0,16,2,4,5],
-"classdrake_1_1solvers_1_1test_1_1_generic_trivial_cost2.html#aad4203aefdbc5c238c5479fd5cc4f3fa":[2,0,0,16,2,4,2],
-"classdrake_1_1solvers_1_1test_1_1_generic_trivial_cost2.html#ad4118dfc77ff878195d716cc4471fd7a":[2,0,0,16,2,4,7],
-"classdrake_1_1solvers_1_1test_1_1_glopti_poly_constrained_minimization_problem.html":[2,0,0,16,2,5],
-"classdrake_1_1solvers_1_1test_1_1_glopti_poly_constrained_minimization_problem.html#a1d5b212e8da47a63f7af03b43faae6f6":[2,0,0,16,2,5,4],
-"classdrake_1_1solvers_1_1test_1_1_glopti_poly_constrained_minimization_problem.html#a2a4d3853b97d792020a115b81ef37e9f":[2,0,0,16,2,5,0],
-"classdrake_1_1solvers_1_1test_1_1_glopti_poly_constrained_minimization_problem.html#a3dca6351eeb1e5824b767665cc858deb":[2,0,0,16,2,5,5],
-"classdrake_1_1solvers_1_1test_1_1_glopti_poly_constrained_minimization_problem.html#a583350acb943c1295904ebf57de00cd5":[2,0,0,16,2,5,3]
+"classdrake_1_1solvers_1_1test_1_1_generic_trivial_cost2.html#aad4203aefdbc5c238c5479fd5cc4f3fa":[2,0,0,16,2,4,2]
 };

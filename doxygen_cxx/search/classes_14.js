@@ -17,5 +17,6 @@ var searchData=
   ['unrevisedlemkesolver_3c_20double_20_3e',['UnrevisedLemkeSolver&lt; double &gt;',['../classdrake_1_1solvers_1_1_unrevised_lemke_solver.html',1,'drake::solvers']]],
   ['unrevisedlemkesolverid',['UnrevisedLemkeSolverId',['../classdrake_1_1solvers_1_1_unrevised_lemke_solver_id.html',1,'drake::solvers']]],
   ['unusablemodel',['UnusableModel',['../classdrake_1_1multibody_1_1collision_1_1_unusable_model.html',1,'drake::multibody::collision']]],
+  ['usedefaultname',['UseDefaultName',['../structdrake_1_1systems_1_1_use_default_name.html',1,'drake::systems']]],
   ['utimemessagetoseconds',['UtimeMessageToSeconds',['../classdrake_1_1systems_1_1lcm_1_1_utime_message_to_seconds.html',1,'drake::systems::lcm']]]
 ];

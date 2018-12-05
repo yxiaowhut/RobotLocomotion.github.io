@@ -221,12 +221,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a89be3ba9e76827e83fb1e139e5b750cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a89be3ba9e76827e83fb1e139e5b750cc">AddOutputPort</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_output_port_base.html">OutputPortBase</a> &gt; port)</td></tr>
 <tr class="memdesc:a89be3ba9e76827e83fb1e139e5b750cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Adds an already-constructed output port to this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a>.  <a href="#a89be3ba9e76827e83fb1e139e5b750cc">More...</a><br /></td></tr>
 <tr class="separator:a89be3ba9e76827e83fb1e139e5b750cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bcf63c74ddf6ea865d5af01c7ba0d69"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a5bcf63c74ddf6ea865d5af01c7ba0d69">NextInputPortName</a> (std::string given_name) const</td></tr>
-<tr class="memdesc:a5bcf63c74ddf6ea865d5af01c7ba0d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a name for the next input port, using the given name if it isn't kUseDefaultName, otherwise making up a name like "u3" from the next available input port index.  <a href="#a5bcf63c74ddf6ea865d5af01c7ba0d69">More...</a><br /></td></tr>
-<tr class="separator:a5bcf63c74ddf6ea865d5af01c7ba0d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67b6d88f065d7580f39e9f95d7897481"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a67b6d88f065d7580f39e9f95d7897481">NextOutputPortName</a> (std::string given_name) const</td></tr>
-<tr class="memdesc:a67b6d88f065d7580f39e9f95d7897481"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a name for the next output port, using the given name if it isn't kUseDefaultName, otherwise making up a name like "y3" from the next available output port index.  <a href="#a67b6d88f065d7580f39e9f95d7897481">More...</a><br /></td></tr>
-<tr class="separator:a67b6d88f065d7580f39e9f95d7897481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af663ea589da3acdb084bdc608b1a4255"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#af663ea589da3acdb084bdc608b1a4255">NextInputPortName</a> (<a class="el" href="namespacedrake.html#ae98164c05774e687076c1562cf8d7593">variant</a>&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; given_name) const</td></tr>
+<tr class="memdesc:af663ea589da3acdb084bdc608b1a4255"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a name for the next input port, using the given name if it isn't kUseDefaultName, otherwise making up a name like "u3" from the next available input port index.  <a href="#af663ea589da3acdb084bdc608b1a4255">More...</a><br /></td></tr>
+<tr class="separator:af663ea589da3acdb084bdc608b1a4255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3697edc2cfdba03b33e7f39474531d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ab3697edc2cfdba03b33e7f39474531d3">NextOutputPortName</a> (<a class="el" href="namespacedrake.html#ae98164c05774e687076c1562cf8d7593">variant</a>&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; given_name) const</td></tr>
+<tr class="memdesc:ab3697edc2cfdba03b33e7f39474531d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a name for the next output port, using the given name if it isn't kUseDefaultName, otherwise making up a name like "y3" from the next available output port index.  <a href="#ab3697edc2cfdba03b33e7f39474531d3">More...</a><br /></td></tr>
+<tr class="separator:ab3697edc2cfdba03b33e7f39474531d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e83668b3fecff021600eff4390cc2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ab4e83668b3fecff021600eff4390cc2a">AddDiscreteStateGroup</a> (<a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a> index)</td></tr>
 <tr class="memdesc:ab4e83668b3fecff021600eff4390cc2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Assigns a ticket to a new discrete variable group with the given <code>index</code>.  <a href="#ab4e83668b3fecff021600eff4390cc2a">More...</a><br /></td></tr>
 <tr class="separator:ab4e83668b3fecff021600eff4390cc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2159,8 +2159,8 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
-<a id="a5bcf63c74ddf6ea865d5af01c7ba0d69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bcf63c74ddf6ea865d5af01c7ba0d69">&#9670;&nbsp;</a></span>NextInputPortName()</h2>
+<a id="af663ea589da3acdb084bdc608b1a4255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af663ea589da3acdb084bdc608b1a4255">&#9670;&nbsp;</a></span>NextInputPortName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2171,7 +2171,7 @@ the port's value must be retrievable from the stored abstract value using <code>
         <tr>
           <td class="memname">std::string NextInputPortName </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#ae98164c05774e687076c1562cf8d7593">variant</a>&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt;&#160;</td>
           <td class="paramname"><em>given_name</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -2188,8 +2188,8 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
-<a id="a67b6d88f065d7580f39e9f95d7897481"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67b6d88f065d7580f39e9f95d7897481">&#9670;&nbsp;</a></span>NextOutputPortName()</h2>
+<a id="ab3697edc2cfdba03b33e7f39474531d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3697edc2cfdba03b33e7f39474531d3">&#9670;&nbsp;</a></span>NextOutputPortName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2200,7 +2200,7 @@ the port's value must be retrievable from the stored abstract value using <code>
         <tr>
           <td class="memname">std::string NextOutputPortName </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#ae98164c05774e687076c1562cf8d7593">variant</a>&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt;&#160;</td>
           <td class="paramname"><em>given_name</em></td><td>)</td>
           <td> const</td>
         </tr>

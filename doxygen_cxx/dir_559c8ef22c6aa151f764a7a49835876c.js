@@ -2,7 +2,6 @@ var dir_559c8ef22c6aa151f764a7a49835876c =
 [
     [ "implicit_stribeck", "dir_0e54bd540e31096bcf510fa2b79ac304.html", "dir_0e54bd540e31096bcf510fa2b79ac304" ],
     [ "joints", "dir_0f4dea3f1de878f40681af0a6f59e8fe.html", "dir_0f4dea3f1de878f40681af0a6f59e8fe" ],
-    [ "math", "dir_7b49d4b943b61ded0cc33ca9dcfceafb.html", "dir_7b49d4b943b61ded0cc33ca9dcfceafb" ],
     [ "multibody_plant", "dir_2f5e9df65b9ba7505f42d71f5db981a2.html", "dir_2f5e9df65b9ba7505f42d71f5db981a2" ],
     [ "test", "dir_ce7c4b5a41aa3f48682273dc7424558d.html", "dir_ce7c4b5a41aa3f48682273dc7424558d" ],
     [ "test_utilities", "dir_47ef432f53681d9f830bdf050852fa5c.html", "dir_47ef432f53681d9f830bdf050852fa5c" ],

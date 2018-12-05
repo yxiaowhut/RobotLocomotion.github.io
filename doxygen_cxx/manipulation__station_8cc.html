@@ -105,8 +105,8 @@ $(document).ready(function(){initNavTree('manipulation__station_8cc.html','');})
 <code>#include &quot;<a class="el" href="rotation__matrix_8h.html">drake/math/rotation_matrix.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody_2multibody__tree_2joints_2prismatic__joint_8h.html">drake/multibody/multibody_tree/joints/prismatic_joint.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody_2multibody__tree_2joints_2revolute__joint_8h.html">drake/multibody/multibody_tree/joints/revolute_joint.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/parsing/multibody_plant_sdf_parser.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="uniform__gravity__field__element_8h.html">drake/multibody/multibody_tree/uniform_gravity_field_element.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="parser_8h.html">drake/multibody/parsing/parser.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="inverse__dynamics__controller_8h.html">drake/systems/controllers/inverse_dynamics_controller.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="adder_8h.html">drake/systems/primitives/adder.h</a>&quot;</code><br />
@@ -137,10 +137,13 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a80f7fc3f7d6de559a9401b4700cd4b0a"><td class="memItemLeft" align="right" valign="top">SpatialInertia&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1manipulation__station_1_1internal.html#a80f7fc3f7d6de559a9401b4700cd4b0a">MakeCompositeGripperInertia</a> (const std::string &amp;wsg_sdf_path)</td></tr>
-<tr class="separator:a80f7fc3f7d6de559a9401b4700cd4b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb5ff2e9e2cc721f61007a426893a1a"><td class="memItemLeft" align="right" valign="top">SpatialInertia&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1manipulation__station_1_1internal.html#aaeb5ff2e9e2cc721f61007a426893a1a">MakeCompositeGripperInertia</a> (const std::string &amp;wsg_sdf_path, const std::string &amp;gripper_body_frame_name)</td></tr>
+<tr class="separator:aaeb5ff2e9e2cc721f61007a426893a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba1f7cba0b593103e154b9d88c75423"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1manipulation__station_1_1internal.html#adba1f7cba0b593103e154b9d88c75423">get_camera_poses</a> (std::map&lt; std::string, RigidTransform&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; *pose_map)</td></tr>
 <tr class="separator:adba1f7cba0b593103e154b9d88c75423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0e374edde2f2430820e912f913d8039"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af0e374edde2f2430820e912f913d8039"><td class="memTemplItemLeft" align="right" valign="top">multibody::ModelInstanceIndex&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1manipulation__station_1_1internal.html#af0e374edde2f2430820e912f913d8039">AddAndWeldModelFrom</a> (const std::string &amp;model_path, const std::string &amp;model_name, const multibody::Frame&lt; T &gt; &amp;parent, const std::string &amp;child_frame_name, const Isometry3&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC, MultibodyPlant&lt; T &gt; *plant)</td></tr>
+<tr class="separator:af0e374edde2f2430820e912f913d8039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>

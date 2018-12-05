@@ -2,6 +2,7 @@ var namespacedrake_1_1symbolic =
 [
     [ "detail", "namespacedrake_1_1symbolic_1_1detail.html", "namespacedrake_1_1symbolic_1_1detail" ],
     [ "BinaryExpressionCell", "classdrake_1_1symbolic_1_1_binary_expression_cell.html", "classdrake_1_1symbolic_1_1_binary_expression_cell" ],
+    [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", "classdrake_1_1symbolic_1_1_code_gen_visitor" ],
     [ "Environment", "classdrake_1_1symbolic_1_1_environment.html", "classdrake_1_1symbolic_1_1_environment" ],
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html", "classdrake_1_1symbolic_1_1_expression" ],
     [ "ExpressionAbs", "classdrake_1_1symbolic_1_1_expression_abs.html", "classdrake_1_1symbolic_1_1_expression_abs" ],

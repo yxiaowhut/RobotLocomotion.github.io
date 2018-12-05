@@ -1,5 +1,6 @@
 var framework__common_8h =
 [
+    [ "UseDefaultName", "structdrake_1_1systems_1_1_use_default_name.html", null ],
     [ "AbstractParameterIndex", "framework__common_8h.html#a86b350169906f6d5e07e9db46e36d57a", null ],
     [ "AbstractStateIndex", "framework__common_8h.html#a8c3a27f43e356726f770159944adb929", null ],
     [ "CacheIndex", "framework__common_8h.html#a06ac9ad764b14ccff79b6feb393be498", null ],
@@ -13,6 +14,7 @@ var framework__common_8h =
       [ "kVectorValued", "framework__common_8h.html#ae516fceb67f15f61c7a232b9cc483fbea8224a2a2efb09b6189f8fd5a42c8ce52", null ],
       [ "kAbstractValued", "framework__common_8h.html#ae516fceb67f15f61c7a232b9cc483fbeaf2203e0344f142b8e294a1bf4546a94e", null ]
     ] ],
+    [ "operator==", "framework__common_8h.html#af6478a581b9f2e6722b7b044d1a9c2d9", null ],
     [ "kAutoSize", "framework__common_8h.html#a4ddb2f4c2988e2620a68a4bb78e35c8f", null ],
-    [ "kUseDefaultName", "framework__common_8h.html#ac5a84db7933b262353c28f83ade4791e", null ]
+    [ "kUseDefaultName", "framework__common_8h.html#a399dec16d9f072ee3a256c35ba3379fa", null ]
 ];

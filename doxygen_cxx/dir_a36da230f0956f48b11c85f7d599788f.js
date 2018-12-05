@@ -76,6 +76,10 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "sorted_vectors_have_intersection.h", "sorted__vectors__have__intersection_8h.html", "sorted__vectors__have__intersection_8h" ],
     [ "symbolic.cc", "symbolic_8cc.html", null ],
     [ "symbolic.h", "symbolic_8h.html", "symbolic_8h" ],
+    [ "symbolic_codegen.cc", "symbolic__codegen_8cc.html", null ],
+    [ "symbolic_codegen.h", "symbolic__codegen_8h.html", [
+      [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", "classdrake_1_1symbolic_1_1_code_gen_visitor" ]
+    ] ],
     [ "symbolic_decompose.cc", "symbolic__decompose_8cc.html", "symbolic__decompose_8cc" ],
     [ "symbolic_decompose.h", "symbolic__decompose_8h.html", "symbolic__decompose_8h" ],
     [ "symbolic_environment.cc", "symbolic__environment_8cc.html", "symbolic__environment_8cc" ],

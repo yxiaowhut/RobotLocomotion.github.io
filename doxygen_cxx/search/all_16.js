@@ -1,7 +1,7 @@
 var searchData=
 [
   ['variable_20definitions',['Variable definitions',['../group__constraint__variable__defs.html',1,'']]],
-  ['v',['V',['../struct_q_p_locomotion_plan_settings.html#a8c7c8ccd9dc8289ab8dfb5ea80375024',1,'QPLocomotionPlanSettings::V()'],['../structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html#a43caeea8e6e2f50d27b35c84a32f017c',1,'drake::systems::AntiderivativeFunction::SpecifiedValues::v()'],['../classdrake_1_1maliput_1_1utility_1_1mesh_1_1_geo_vertex.html#aa977926db17e03cc35b07d4d2a1c4a9b',1,'drake::maliput::utility::mesh::GeoVertex::v()']]],
+  ['v',['v',['../structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html#a43caeea8e6e2f50d27b35c84a32f017c',1,'drake::systems::AntiderivativeFunction::SpecifiedValues::v()'],['../classdrake_1_1maliput_1_1utility_1_1mesh_1_1_geo_vertex.html#aa977926db17e03cc35b07d4d2a1c4a9b',1,'drake::maliput::utility::mesh::GeoVertex::v()'],['../struct_q_p_locomotion_plan_settings.html#a8c7c8ccd9dc8289ab8dfb5ea80375024',1,'QPLocomotionPlanSettings::V()']]],
   ['v00_5f',['v00_',['../discrete__values__test_8cc.html#afddd2b59456e43e256876f57afaa392d',1,'discrete_values_test.cc']]],
   ['v01_5f',['v01_',['../discrete__values__test_8cc.html#a49cf3dccca0dbb007624d9ecd79ef1e6',1,'discrete_values_test.cc']]],
   ['v0_5f',['v0_',['../autodiff__test_8cc.html#a3d930295b1412ed9a3f3d79e3b9aab35',1,'autodiff_test.cc']]],
@@ -179,7 +179,7 @@ var searchData=
   ['viewer_5fdraw_5ftranslator_2eh',['viewer_draw_translator.h',['../viewer__draw__translator_8h.html',1,'']]],
   ['viewer_5fdraw_5ftranslator_5ftest_2ecc',['viewer_draw_translator_test.cc',['../viewer__draw__translator__test_8cc.html',1,'']]],
   ['viewerdrawtranslator',['ViewerDrawTranslator',['../classdrake_1_1systems_1_1_viewer_draw_translator.html',1,'ViewerDrawTranslator'],['../classdrake_1_1systems_1_1_viewer_draw_translator.html#ad2503e5fa4e7326ee55b1e993857d32a',1,'drake::systems::ViewerDrawTranslator::ViewerDrawTranslator(const ViewerDrawTranslator &amp;)=delete'],['../classdrake_1_1systems_1_1_viewer_draw_translator.html#ae8f25e6243ed587aa483b810f32d5427',1,'drake::systems::ViewerDrawTranslator::ViewerDrawTranslator(ViewerDrawTranslator &amp;&amp;)=delete'],['../classdrake_1_1systems_1_1_viewer_draw_translator.html#a6b9cfb95ed9e924516b2909a64b9b7df',1,'drake::systems::ViewerDrawTranslator::ViewerDrawTranslator(const RigidBodyTree&lt; double &gt; &amp;tree)']]],
-  ['visitexpression',['VisitExpression',['../namespacedrake_1_1symbolic.html#ab58092344918003fc7e186b1c57bbc7f',1,'drake::symbolic']]],
+  ['visitexpression',['VisitExpression',['../classdrake_1_1symbolic_1_1_code_gen_visitor.html#a6afbb1bd6592ef400177d0f81f275a49',1,'drake::symbolic::CodeGenVisitor::VisitExpression()'],['../namespacedrake_1_1symbolic.html#ab58092344918003fc7e186b1c57bbc7f',1,'drake::symbolic::VisitExpression()']]],
   ['visitformula',['VisitFormula',['../namespacedrake_1_1symbolic.html#aa2748b5dc34bc17a6c6e98ac1d0cc1ad',1,'drake::symbolic']]],
   ['visitpolynomial',['VisitPolynomial',['../namespacedrake_1_1symbolic.html#a0a61c45c20176e91159639186b26e35e',1,'drake::symbolic']]],
   ['visual_5felement_2ecc',['visual_element.cc',['../visual__element_8cc.html',1,'']]],

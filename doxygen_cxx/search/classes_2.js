@@ -7,6 +7,7 @@ var searchData=
   ['capsule',['Capsule',['../class_drake_shapes_1_1_capsule.html',1,'DrakeShapes']]],
   ['cartesiansetpoint',['CartesianSetpoint',['../classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html',1,'drake::systems::controllers']]],
   ['closestpose',['ClosestPose',['../structdrake_1_1automotive_1_1_closest_pose.html',1,'drake::automotive']]],
+  ['codegenvisitor',['CodeGenVisitor',['../classdrake_1_1symbolic_1_1_code_gen_visitor.html',1,'drake::symbolic']]],
   ['collisionfiltergroup',['CollisionFilterGroup',['../classdrake_1_1multibody_1_1collision_1_1_collision_filter_group.html',1,'drake::multibody::collision']]],
   ['collisionfiltergroup_3c_20double_20_3e',['CollisionFilterGroup&lt; double &gt;',['../classdrake_1_1multibody_1_1collision_1_1_collision_filter_group.html',1,'drake::multibody::collision']]],
   ['collisionfiltergroupmanager',['CollisionFilterGroupManager',['../classdrake_1_1multibody_1_1collision_1_1_collision_filter_group_manager.html',1,'drake::multibody::collision']]],

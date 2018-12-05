@@ -101,10 +101,10 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1internal_1_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a3cf8f3fa94653642c64632b03b9e889c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: int { <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node_impl.html#a3cf8f3fa94653642c64632b03b9e889cadcfda34ddad006ea463de4f3213c029a">nq</a> = num_positions, 
-<a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node_impl.html#a3cf8f3fa94653642c64632b03b9e889cacb56ed0f2dff658dfda4279d4420a934">nv</a> = num_velocities
+<tr class="memitem:aef0c5fad27afdf5cd974a7ecfad5eeca"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: int { <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node_impl.html#aef0c5fad27afdf5cd974a7ecfad5eecaadcfda34ddad006ea463de4f3213c029a">nq</a> = num_positions, 
+<a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node_impl.html#aef0c5fad27afdf5cd974a7ecfad5eecaacb56ed0f2dff658dfda4279d4420a934">nv</a> = num_velocities
  }</td></tr>
-<tr class="separator:a3cf8f3fa94653642c64632b03b9e889c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aef0c5fad27afdf5cd974a7ecfad5eeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -186,8 +186,8 @@ class drake::multibody::internal::BodyNodeImpl&lt; T, num_positions, num_velocit
 <p>For internal use only of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> implementation. </p>
 <p>While all code that is common to any node can be placed in the <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node.html" title="For internal use only of the MultibodyTree implementation. ">BodyNode</a> class, BodyNodeImpl provides compile-time fixed-size <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node.html" title="For internal use only of the MultibodyTree implementation. ">BodyNode</a> implementations so that all operations can be performed with fixed-size stack-allocated <a class="el" href="namespace_eigen.html">Eigen</a> variables. In particular, most of the across mobilizer code for velocity kinematics lives in this class since the across mobilizer Jacobian matrices <code>H_FM(q)</code> (defined such that the across mobilizer spatial velocity relates to the generalized velocities v by <code>V_FM = H_FM(q) * v</code>) have a compile-time fixed size. For a more detailed discussion of the role of a <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node.html" title="For internal use only of the MultibodyTree implementation. ">BodyNode</a> in a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> refer to the class documentation for <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node.html" title="For internal use only of the MultibodyTree implementation. ">BodyNode</a>. </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a3cf8f3fa94653642c64632b03b9e889c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cf8f3fa94653642c64632b03b9e889c">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="aef0c5fad27afdf5cd974a7ecfad5eeca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0c5fad27afdf5cd974a7ecfad5eeca">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,8 +198,8 @@ class drake::multibody::internal::BodyNodeImpl&lt; T, num_positions, num_velocit
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3cf8f3fa94653642c64632b03b9e889cadcfda34ddad006ea463de4f3213c029a"></a>nq&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a3cf8f3fa94653642c64632b03b9e889cacb56ed0f2dff658dfda4279d4420a934"></a>nv&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aef0c5fad27afdf5cd974a7ecfad5eecaadcfda34ddad006ea463de4f3213c029a"></a>nq&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aef0c5fad27afdf5cd974a7ecfad5eecaacb56ed0f2dff658dfda4279d4420a934"></a>nv&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

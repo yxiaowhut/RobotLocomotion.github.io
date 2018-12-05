@@ -338,6 +338,8 @@
 </li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].__init__">(pydrake.systems.framework.System_.System_[float] attribute)</a>
 </li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName.__init__">(pydrake.systems.framework.UseDefaultName attribute)</a>
+</li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.VectorBase_.VectorBase_[float].__init__">(pydrake.systems.framework.VectorBase_.VectorBase_[float] attribute)</a>
 </li>
         <li><a href="pydrake.systems.rendering.html#pydrake.systems.rendering.PoseVelocityInputPorts.__init__">(pydrake.systems.rendering.PoseVelocityInputPorts attribute)</a>
@@ -854,8 +856,6 @@
       <li><a href="pydrake.multibody.multibody_tree.multibody_plant.html#pydrake.multibody.multibody_tree.multibody_plant.ContactResults.AddContactInfo">AddContactInfo() (pydrake.multibody.multibody_tree.multibody_plant.ContactResults method)</a>
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddCost">AddCost() (pydrake.solvers.mathematicalprogram.MathematicalProgram method)</a>
-</li>
-      <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.AddCupboard">AddCupboard() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
 </li>
       <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint">AddDirectCollocationConstraint() (in module pydrake.systems.trajectory_optimization)</a>
 </li>
@@ -3669,7 +3669,11 @@
 </li>
       <li><a href="pydrake.multibody.multibody_tree.multibody_plant.html#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.RegisterAsSourceForSceneGraph">RegisterAsSourceForSceneGraph() (pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant method)</a>
 </li>
+      <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.RegisterIiwaControllerModel">RegisterIiwaControllerModel() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraph.RegisterSource">RegisterSource() (pydrake.geometry.SceneGraph method)</a>
+</li>
+      <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.RegisterWsgControllerModel">RegisterWsgControllerModel() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
 </li>
       <li><a href="pydrake.solvers.ik.html#pydrake.solvers.ik.RelativeGazeDirConstraint">RelativeGazeDirConstraint (class in pydrake.solvers.ik)</a>
 </li>
@@ -3705,10 +3709,10 @@
       </ul></li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.RgbdCamera">RgbdCamera (class in pydrake.systems.sensors)</a>
 </li>
-      <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.RgbdCameraDiscrete">RgbdCameraDiscrete (class in pydrake.systems.sensors)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.RgbdCameraDiscrete">RgbdCameraDiscrete (class in pydrake.systems.sensors)</a>
+</li>
       <li><a href="pydrake.multibody.multibody_tree.html#pydrake.multibody.multibody_tree.RigidBody">RigidBody (class in pydrake.multibody.multibody_tree)</a>
 
       <ul>
@@ -4073,12 +4077,12 @@
 </li>
       <li><a href="pydrake.multibody.rigid_body_plant.html#pydrake.multibody.rigid_body_plant.CompliantMaterial.set_youngs_modulus_to_default">set_youngs_modulus_to_default() (pydrake.multibody.rigid_body_plant.CompliantMaterial method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.ik.html#pydrake.solvers.ik.QuasiStaticConstraint.setActive">setActive() (pydrake.solvers.ik.QuasiStaticConstraint method)</a>
 </li>
       <li><a href="pydrake.solvers.ik.html#pydrake.solvers.ik.IKoptions.setAdditionaltSamples">setAdditionaltSamples() (pydrake.solvers.ik.IKoptions method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.VectorBase_.VectorBase_[float].SetAtIndex">SetAtIndex() (pydrake.systems.framework.VectorBase_.VectorBase_[float] method)</a>
 </li>
       <li><a href="pydrake.solvers.ik.html#pydrake.solvers.ik.IKoptions.setDebug">setDebug() (pydrake.solvers.ik.IKoptions method)</a>
@@ -4105,9 +4109,15 @@
 </li>
       <li><a href="pydrake.math.html#pydrake.math.RigidTransform.SetIdentity">SetIdentity() (pydrake.math.RigidTransform method)</a>
 </li>
+      <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaIntegralGains">SetIiwaIntegralGains() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
+</li>
       <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition">SetIiwaPosition() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
 </li>
+      <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPositionGains">SetIiwaPositionGains() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
+</li>
       <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocity">SetIiwaVelocity() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
+</li>
+      <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocityGains">SetIiwaVelocityGains() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram.SetInitialGuess">SetInitialGuess() (pydrake.solvers.mathematicalprogram.MathematicalProgram method)</a>
 </li>
@@ -4151,7 +4161,11 @@
 </li>
       <li><a href="pydrake.solvers.ik.html#pydrake.solvers.ik.IKoptions.setSuperbasicsLimit">setSuperbasicsLimit() (pydrake.solvers.ik.IKoptions method)</a>
 </li>
+      <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.SetupDefaultStation">SetupDefaultStation() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
+</li>
       <li><a href="pydrake.multibody.multibody_tree.multibody_plant.html#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.SetVelocities">SetVelocities() (pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant method)</a>
+</li>
+      <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.SetWsgGains">SetWsgGains() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
 </li>
       <li><a href="pydrake.examples.manipulation_station.html#pydrake.examples.manipulation_station.ManipulationStation.SetWsgPosition">SetWsgPosition() (pydrake.examples.manipulation_station.ManipulationStation method)</a>
 </li>
@@ -4546,6 +4560,8 @@
       <li><a href="pydrake.multibody.multibody_tree.html#pydrake.multibody.multibody_tree.Joint.upper_limits">upper_limits() (pydrake.multibody.multibody_tree.Joint method)</a>
 </li>
       <li><a href="pydrake.multibody.shapes.html#pydrake.multibody.shapes.Mesh.uri">uri (pydrake.multibody.shapes.Mesh attribute)</a>
+</li>
+      <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.UseDefaultName">UseDefaultName (class in pydrake.systems.framework)</a>
 </li>
   </ul></td>
 </tr></table>

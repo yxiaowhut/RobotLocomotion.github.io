@@ -86,9 +86,11 @@ $(document).ready(function(){initNavTree('framework__common_8h.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">framework_common.h File Reference</div>  </div>
@@ -100,6 +102,7 @@ $(document).ready(function(){initNavTree('framework__common_8h.html','');});
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__optional_8h.html">drake/common/drake_optional.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__variant_8h.html">drake/common/drake_variant.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="type__safe__index_8h.html">drake/common/type_safe_index.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for framework_common.h:</div>
@@ -114,6 +117,12 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Tag type that indicates a system or port should use a default name, instead of a user-provided name.  <a href="structdrake_1_1systems_1_1_use_default_name.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
@@ -159,14 +168,20 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr class="separator:ae516fceb67f15f61c7a232b9cc483fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af6478a581b9f2e6722b7b044d1a9c2d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#af6478a581b9f2e6722b7b044d1a9c2d9">operator==</a> (const variant&lt; std::string, UseDefaultName &gt; &amp;<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>, const UseDefaultName &amp;)</td></tr>
+<tr class="memdesc:af6478a581b9f2e6722b7b044d1a9c2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Sugar that compares a variant against kUseDefaultName.  <a href="namespacedrake_1_1systems.html#af6478a581b9f2e6722b7b044d1a9c2d9">More...</a><br /></td></tr>
+<tr class="separator:af6478a581b9f2e6722b7b044d1a9c2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a4ddb2f4c2988e2620a68a4bb78e35c8f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a4ddb2f4c2988e2620a68a4bb78e35c8f">kAutoSize</a> = -1</td></tr>
 <tr class="memdesc:a4ddb2f4c2988e2620a68a4bb78e35c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port type indicating a vector value whose size is not prespecified but rather depends on what it is connected to (not yet implemented).  <a href="namespacedrake_1_1systems.html#a4ddb2f4c2988e2620a68a4bb78e35c8f">More...</a><br /></td></tr>
 <tr class="separator:a4ddb2f4c2988e2620a68a4bb78e35c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a84db7933b262353c28f83ade4791e"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#ac5a84db7933b262353c28f83ade4791e">kUseDefaultName</a> = &quot;__use_default_name__&quot;</td></tr>
-<tr class="memdesc:ac5a84db7933b262353c28f83ade4791e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name to use when you want a default one generated.  <a href="namespacedrake_1_1systems.html#ac5a84db7933b262353c28f83ade4791e">More...</a><br /></td></tr>
-<tr class="separator:ac5a84db7933b262353c28f83ade4791e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399dec16d9f072ee3a256c35ba3379fa"><td class="memItemLeft" align="right" valign="top">constexpr UseDefaultName&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa">kUseDefaultName</a> = {}</td></tr>
+<tr class="memdesc:a399dec16d9f072ee3a256c35ba3379fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name to use when you want a default one generated.  <a href="namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa">More...</a><br /></td></tr>
+<tr class="separator:a399dec16d9f072ee3a256c35ba3379fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -110,6 +110,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_binary_expression_cell.html">BinaryExpressionCell</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the base class for binary expressions.  <a href="classdrake_1_1symbolic_1_1_binary_expression_cell.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_code_gen_visitor.html">CodeGenVisitor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visitor class for code generation.  <a href="classdrake_1_1symbolic_1_1_code_gen_visitor.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a symbolic environment (mapping from a variable to a value).  <a href="classdrake_1_1symbolic_1_1_environment.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -402,6 +405,9 @@ Functions</h2></td></tr>
 <tr class="separator:aa54e8cfb56c376f1e578784d6b68fbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f13e2bea2dfc69ca8f389450a062981"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2f13e2bea2dfc69ca8f389450a062981">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
 <tr class="separator:a2f13e2bea2dfc69ca8f389450a062981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11ee8e11a75ed1fa0f970ed7a547add"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa11ee8e11a75ed1fa0f970ed7a547add">CodeGen</a> (const std::string &amp;function_name, const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &amp;parameters, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
+<tr class="memdesc:aa11ee8e11a75ed1fa0f970ed7a547add"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a given symbolic expression <code>e</code>, generates two C functions, <code>function_name</code> and <code>function_name_in</code>.  <a href="#aa11ee8e11a75ed1fa0f970ed7a547add">More...</a><br /></td></tr>
+<tr class="separator:aa11ee8e11a75ed1fa0f970ed7a547add"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c7c9095542cd5f4ef70f50bca1aab7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1c7c9095542cd5f4ef70f50bca1aab7c">log</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
 <tr class="separator:a1c7c9095542cd5f4ef70f50bca1aab7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44e11b5fa4c16951b30b26e43a316569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a44e11b5fa4c16951b30b26e43a316569">abs</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e)</td></tr>
@@ -2233,6 +2239,62 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa11ee8e11a75ed1fa0f970ed7a547add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11ee8e11a75ed1fa0f970ed7a547add">&#9670;&nbsp;</a></span>CodeGen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CodeGen </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>function_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>parameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For a given symbolic expression <code>e</code>, generates two C functions, <code>function_name</code> and <code>function_name_in</code>. </p>
+<p>The generated <code>function_name</code> takes an array of doubles for parameters and returns an evaluation result. <code>function_name_in</code> returns the length of <code>parameters</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">function_name</td><td>Name of the generated C function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parameters</td><td>Vector of variables provide the ordering of symbolic variables. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>Symbolic expression to codegen.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>For example, <code>Codegen("f", {x, y}, 1 + sin(x) + cos(y))</code> generates the following string.</p>
+<pre>
+double f(const double* p) {
+    return (1 + sin(p[0]) + cos(p[1]));
+}
+int f_in() {
+    return 2;  // size of `{x, y}`.
+}
+</pre><p>Note that in this example <code>x</code> and <code>y</code> are mapped to <code>p[0]</code> and <code>p[1]</code> respectively because we passed <code>{x, y}</code> to <code>Codegen</code>.</p>
+<p>Note that generated code does not include any headers while it may use math functions defined in <code>&lt;math.h&gt;</code> such as sin, cos, exp, and log. A user of generated code is responsible to include <code>&lt;math.h&gt;</code> if needed to compile generated code. </p>
+<p>Handle <code>function_name_in</code>. </p>
 
 </div>
 </div>

@@ -33,7 +33,7 @@ var classdrake_1_1systems_1_1_system =
     [ "CheckValidOutput", "classdrake_1_1systems_1_1_system.html#a852a4bc3895e11faf46f4e32b47d338d", null ],
     [ "CopyContinuousStateVector", "classdrake_1_1systems_1_1_system.html#a24c711d92735642b2fa7fc975e9b5bf8", null ],
     [ "CreateDefaultContext", "classdrake_1_1systems_1_1_system.html#ad047317ab91889c6743d5e47a64c7f08", null ],
-    [ "DeclareInputPort", "classdrake_1_1systems_1_1_system.html#ab9b85251092123d173c2fef63338f1c9", null ],
+    [ "DeclareInputPort", "classdrake_1_1systems_1_1_system.html#a011a04791ece0fa2ae1efa90d9bf35cf", null ],
     [ "DeclareInputPort", "classdrake_1_1systems_1_1_system.html#afc5f2153443d34fc439945fc34e64c5e", null ],
     [ "DispatchDiscreteVariableUpdateHandler", "classdrake_1_1systems_1_1_system.html#a921d9a050e25d0f2c55de265477c26f5", null ],
     [ "DispatchPublishHandler", "classdrake_1_1systems_1_1_system.html#a84fe4f2e8e6d8a61dfae06f64fb6d5ce", null ],

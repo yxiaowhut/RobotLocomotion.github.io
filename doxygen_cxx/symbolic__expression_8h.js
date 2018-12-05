@@ -45,6 +45,7 @@ var symbolic__expression_8h =
     [ "atan2", "symbolic__expression_8h.html#a9ddcc51253066082911475e06b0ac994", null ],
     [ "ceil", "symbolic__expression_8h.html#a2e5ea5116992b4f695c16ad0f297686b", null ],
     [ "CheckStructuralEquality", "symbolic__expression_8h.html#ac3d55ec6a55f554174d9bc45d7ed7f5c", null ],
+    [ "CodeGen", "symbolic__expression_8h.html#aa11ee8e11a75ed1fa0f970ed7a547add", null ],
     [ "cond", "symbolic__expression_8h.html#ab24b40e467980140b850478ea0b9e766", null ],
     [ "cos", "symbolic__expression_8h.html#a8d78919127ccba2ba24cdb1b0c57613d", null ],
     [ "cosh", "symbolic__expression_8h.html#a27a345a84e6b273a71aa02ee312f9c51", null ],
