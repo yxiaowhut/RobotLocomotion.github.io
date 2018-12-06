@@ -1,6 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"classdrake_1_1maliput_1_1simplerulebook_1_1_simple_rulebook.html#a8b07e659d83ef83e4ac2ed02cc028b1e":[2,0,0,9,7,0,1],
 "classdrake_1_1maliput_1_1simplerulebook_1_1_simple_rulebook.html#a9aa9f847832ca5467851014a0d73e9bc":[2,0,0,9,7,0,10],
 "classdrake_1_1maliput_1_1simplerulebook_1_1_simple_rulebook.html#aa34a24a3e0fa4d4ab25df9d2f22c53e5":[2,0,0,9,7,0,4],
 "classdrake_1_1maliput_1_1simplerulebook_1_1_simple_rulebook.html#aa47f578b15cb59a3b0685e12a4b5ed1e":[2,0,0,9,7,0,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX18 =
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html#a59539c217911a2ef02e1c1deed220e59":[0,1,5,6,2],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html#a71ec23b5b9d1a45e490c54d445c78d94":[0,1,5,6,4],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html#a7d76498beccb08d9032326dd24aaf02b":[0,1,5,6,1],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html#ace47656319c3d104b1b8d9f52bdb5329":[0,1,5,6,0]
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html#ace47656319c3d104b1b8d9f52bdb5329":[0,1,5,6,0],
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html":[0,1,5,8]
 };

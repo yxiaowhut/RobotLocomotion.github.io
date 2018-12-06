@@ -562,27 +562,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a048bf857e2856f50fc08211a18348563"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a048bf857e2856f50fc08211a18348563">DeclareInitializationEvent</a> (const EventType &amp;event)</td></tr>
 <tr class="memdesc:a048bf857e2856f50fc08211a18348563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an initialization event by deep copying <code>event</code> and storing it internally.  <a href="#a048bf857e2856f50fc08211a18348563">More...</a><br /></td></tr>
 <tr class="separator:a048bf857e2856f50fc08211a18348563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9edb34820bfc553a9956c65e648b517b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a9edb34820bfc553a9956c65e648b517b">DeclareContinuousState</a> (<a class="el" href="classint.html">int</a> num_state_variables)</td></tr>
-<tr class="memdesc:a9edb34820bfc553a9956c65e648b517b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_state_variables</code> state variables, which have no second-order structure.  <a href="#a9edb34820bfc553a9956c65e648b517b">More...</a><br /></td></tr>
-<tr class="separator:a9edb34820bfc553a9956c65e648b517b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dc333ff0c045b371b5885f8350d8e0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a5dc333ff0c045b371b5885f8350d8e0d">DeclareContinuousState</a> (<a class="el" href="classint.html">int</a> num_q, <a class="el" href="classint.html">int</a> num_v, <a class="el" href="classint.html">int</a> num_z)</td></tr>
-<tr class="memdesc:a5dc333ff0c045b371b5885f8350d8e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables.  <a href="#a5dc333ff0c045b371b5885f8350d8e0d">More...</a><br /></td></tr>
-<tr class="separator:a5dc333ff0c045b371b5885f8350d8e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e506e194325a4456e4bc11800024272"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a2e506e194325a4456e4bc11800024272">DeclareContinuousState</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
-<tr class="memdesc:a2e506e194325a4456e4bc11800024272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>model_vector.size()</code> miscellaneous state variables, stored in a vector Cloned from <code>model_vector</code>.  <a href="#a2e506e194325a4456e4bc11800024272">More...</a><br /></td></tr>
-<tr class="separator:a2e506e194325a4456e4bc11800024272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a071d625d476e34c1a239d58eaa8e8676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a071d625d476e34c1a239d58eaa8e8676">DeclareContinuousState</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;model_vector, <a class="el" href="classint.html">int</a> num_q, <a class="el" href="classint.html">int</a> num_v, <a class="el" href="classint.html">int</a> num_z)</td></tr>
-<tr class="memdesc:a071d625d476e34c1a239d58eaa8e8676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables, stored in a vector Cloned from <code>model_vector</code>.  <a href="#a071d625d476e34c1a239d58eaa8e8676">More...</a><br /></td></tr>
-<tr class="separator:a071d625d476e34c1a239d58eaa8e8676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c5a95377421c973f7132e1d1356b37b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a0c5a95377421c973f7132e1d1356b37b">DeclareContinuousState</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt;&gt; model_vector, <a class="el" href="classint.html">int</a> num_q, <a class="el" href="classint.html">int</a> num_v, <a class="el" href="classint.html">int</a> num_z)</td></tr>
-<tr class="memdesc:a0c5a95377421c973f7132e1d1356b37b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables, stored in the a vector Cloned from <code>model_vector</code>.  <a href="#a0c5a95377421c973f7132e1d1356b37b">More...</a><br /></td></tr>
-<tr class="separator:a0c5a95377421c973f7132e1d1356b37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a164717902ac0e8cb79b9eddd7e1b96ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a164717902ac0e8cb79b9eddd7e1b96ab">DeclareDiscreteState</a> (<a class="el" href="classint.html">int</a> num_state_variables)</td></tr>
-<tr class="memdesc:a164717902ac0e8cb79b9eddd7e1b96ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve discrete state with <code>num_state_variables</code> state variables.  <a href="#a164717902ac0e8cb79b9eddd7e1b96ab">More...</a><br /></td></tr>
-<tr class="separator:a164717902ac0e8cb79b9eddd7e1b96ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f5b3aa23038e099188fdb6005c37c40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a0f5b3aa23038e099188fdb6005c37c40">DeclareAbstractState</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_abstract_value.html">AbstractValue</a> &gt; abstract_state)</td></tr>
-<tr class="memdesc:a0f5b3aa23038e099188fdb6005c37c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an abstract state.  <a href="#a0f5b3aa23038e099188fdb6005c37c40">More...</a><br /></td></tr>
-<tr class="separator:a0f5b3aa23038e099188fdb6005c37c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33a61940dfe3f8f3f3f272513d6aa7c5"><td class="memTemplParams" colspan="2">template&lt;class MySystem &gt; </td></tr>
 <tr class="memitem:a33a61940dfe3f8f3f3f272513d6aa7c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1">SystemConstraintIndex</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a33a61940dfe3f8f3f3f272513d6aa7c5">DeclareEqualityConstraint</a> (void(MySystem::*calc)(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; *) const, <a class="el" href="classint.html">int</a> count, const std::string &amp;<a class="el" href="proximity__engine__test_8cc.html#a0f6aed3e388afb968642d5e6199f767f">description</a>)</td></tr>
 <tr class="memdesc:a33a61940dfe3f8f3f3f272513d6aa7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a system constraint of the form f(context) = 0 by specifying a member function to use to calculate the (VectorX) constraint value with a signature:  <a href="#a33a61940dfe3f8f3f3f272513d6aa7c5">More...</a><br /></td></tr>
@@ -606,6 +585,44 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5a310c2914e5f99c5a76c0049e600148"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a5a310c2914e5f99c5a76c0049e600148">DoCalcUnrestrictedUpdate</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; const <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt; *&gt; &amp;events, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; T &gt; *state) const</td></tr>
 <tr class="memdesc:a5a310c2914e5f99c5a76c0049e600148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derived-class event handler for all simultaneous unrestricted update events.  <a href="#a5a310c2914e5f99c5a76c0049e600148">More...</a><br /></td></tr>
 <tr class="separator:a5a310c2914e5f99c5a76c0049e600148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Declare continuous state variables</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Continuous state consists of up to three kinds of variables: generalized coordinates q, generalized velocities v, and miscellaneous continuous variables z.</p>
+<p>Methods in this section provide different ways to declare these, and offer the ability to provide a <code>model_vector</code> to specify the initial values for these variables. Model values are useful when you want the values of these variables in a default <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to be something other than zero.</p>
+<p>If multiple calls are made to <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a9edb34820bfc553a9956c65e648b517b" title="Declares that this System should reserve continuous state with num_state_variables state variables...">DeclareContinuousState()</a> methods, only the last call has any effect. Also, these methods have no effect if <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a4c492962e0a2c6a16f71d4d1bd834ebd" title="Returns a ContinuousState used to implement both CreateDefaultContext and AllocateTimeDerivatives. ">AllocateContinuousState()</a> is overridden (not recommended). </p>
+</div></td></tr>
+<tr class="memitem:a9edb34820bfc553a9956c65e648b517b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a9edb34820bfc553a9956c65e648b517b">DeclareContinuousState</a> (<a class="el" href="classint.html">int</a> num_state_variables)</td></tr>
+<tr class="memdesc:a9edb34820bfc553a9956c65e648b517b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_state_variables</code> state variables, which have no second-order structure.  <a href="#a9edb34820bfc553a9956c65e648b517b">More...</a><br /></td></tr>
+<tr class="separator:a9edb34820bfc553a9956c65e648b517b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc333ff0c045b371b5885f8350d8e0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a5dc333ff0c045b371b5885f8350d8e0d">DeclareContinuousState</a> (<a class="el" href="classint.html">int</a> num_q, <a class="el" href="classint.html">int</a> num_v, <a class="el" href="classint.html">int</a> num_z)</td></tr>
+<tr class="memdesc:a5dc333ff0c045b371b5885f8350d8e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables.  <a href="#a5dc333ff0c045b371b5885f8350d8e0d">More...</a><br /></td></tr>
+<tr class="separator:a5dc333ff0c045b371b5885f8350d8e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e506e194325a4456e4bc11800024272"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a2e506e194325a4456e4bc11800024272">DeclareContinuousState</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
+<tr class="memdesc:a2e506e194325a4456e4bc11800024272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>model_vector.size()</code> miscellaneous state variables, stored in a vector cloned from <code>model_vector</code>.  <a href="#a2e506e194325a4456e4bc11800024272">More...</a><br /></td></tr>
+<tr class="separator:a2e506e194325a4456e4bc11800024272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071d625d476e34c1a239d58eaa8e8676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a071d625d476e34c1a239d58eaa8e8676">DeclareContinuousState</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;model_vector, <a class="el" href="classint.html">int</a> num_q, <a class="el" href="classint.html">int</a> num_v, <a class="el" href="classint.html">int</a> num_z)</td></tr>
+<tr class="memdesc:a071d625d476e34c1a239d58eaa8e8676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables, stored in a vector cloned from <code>model_vector</code>.  <a href="#a071d625d476e34c1a239d58eaa8e8676">More...</a><br /></td></tr>
+<tr class="separator:a071d625d476e34c1a239d58eaa8e8676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Declare discrete state variables</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Discrete state consists of any number of discrete state "groups", each of which is a vector of discrete state variables.</p>
+<p>Methods in this section provide different ways to declare these, and offer the ability to provide a <code>model_vector</code> to specify the initial values for each group of variables. Model values are useful when you want the values of these variables in a default <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to be something other than zero.</p>
+<p>Each call to a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a47ef984b4d9b8313d1239b76388882d2" title="Declares a discrete state group with model_vector.size() state variables, stored in a vector cloned f...">DeclareDiscreteState()</a> method produces another discrete state group, and the group index is returned. These methods have no effect if <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a4c96c770105d0773b5b4bedc9b1b1a09" title="Reserves the discrete state as required by CreateDefaultContext. ">AllocateDiscreteState()</a> is overridden (not recommended). </p>
+</div></td></tr>
+<tr class="memitem:a47ef984b4d9b8313d1239b76388882d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a47ef984b4d9b8313d1239b76388882d2">DeclareDiscreteState</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
+<tr class="memdesc:a47ef984b4d9b8313d1239b76388882d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a discrete state group with <code>model_vector.size()</code> state variables, stored in a vector cloned from <code>model_vector</code> (preserving the concrete type and value).  <a href="#a47ef984b4d9b8313d1239b76388882d2">More...</a><br /></td></tr>
+<tr class="separator:a47ef984b4d9b8313d1239b76388882d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54115bda5b519f863e41d8e5463d24cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a54115bda5b519f863e41d8e5463d24cb">DeclareDiscreteState</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;model_vector)</td></tr>
+<tr class="memdesc:a54115bda5b519f863e41d8e5463d24cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a discrete state group with <code>model_vector.size()</code> state variables, stored in a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase. ">BasicVector</a> initialized with the contents of <code>model_vector</code>.  <a href="#a54115bda5b519f863e41d8e5463d24cb">More...</a><br /></td></tr>
+<tr class="separator:a54115bda5b519f863e41d8e5463d24cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad02cadb14746ff469fa338d2351a5e68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#ad02cadb14746ff469fa338d2351a5e68">DeclareDiscreteState</a> (<a class="el" href="classint.html">int</a> num_state_variables)</td></tr>
+<tr class="memdesc:ad02cadb14746ff469fa338d2351a5e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a discrete state group with <code>num_state_variables</code> state variables, stored in a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase. ">BasicVector</a> initialized to be all-zero.  <a href="#ad02cadb14746ff469fa338d2351a5e68">More...</a><br /></td></tr>
+<tr class="separator:ad02cadb14746ff469fa338d2351a5e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Declare abstract state variables</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Abstract state consists of any number of arbitrarily-typed variables, each represented by an <a class="el" href="classdrake_1_1systems_1_1_abstract_value.html" title="A fully type-erased container class. ">AbstractValue</a>.</p>
+<p>Each call to the <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a709a4f26de52b89c79afe32d02d0250c" title="Declares an abstract state. ">DeclareAbstractState()</a> method produces another abstract state variable, and the abstract state variable index is returned. This method has no effect if <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#aaeb725ce8dde2297feaf4f90d8062691" title="Reserves the abstract state as required by CreateDefaultContext. ">AllocateAbstractState()</a> is overridden (not recommended). </p>
+</div></td></tr>
+<tr class="memitem:a709a4f26de52b89c79afe32d02d0250c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929">AbstractStateIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a709a4f26de52b89c79afe32d02d0250c">DeclareAbstractState</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_abstract_value.html">AbstractValue</a> &gt; abstract_state)</td></tr>
+<tr class="memdesc:a709a4f26de52b89c79afe32d02d0250c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares an abstract state.  <a href="#a709a4f26de52b89c79afe32d02d0250c">More...</a><br /></td></tr>
+<tr class="separator:a709a4f26de52b89c79afe32d02d0250c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Declare input ports</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods in this section are used by derived classes to declare their output ports, which may be vector valued or abstract valued.</p>
 <p>You should normally provide a meaningful name for any input port you create. Names must be unique for this system (passing in a duplicate name will throw std::logic_error). However, if you specify kUseDefaultName as the name, then a default name of e.g. "u2", where 2 is the input port number will be provided. An empty name is not permitted. </p>
@@ -1153,7 +1170,7 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Reserves the abstract state as required by CreateDefaultContext. </p>
-<p>By default, it clones the abstract states declared through <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a0f5b3aa23038e099188fdb6005c37c40" title="Declares an abstract state. ">DeclareAbstractState()</a> calls. Derived systems should override for different behaviors. </p>
+<p>By default, it clones the abstract states declared through <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a709a4f26de52b89c79afe32d02d0250c" title="Declares an abstract state. ">DeclareAbstractState()</a> calls. Derived systems may override for different behaviors (not recommended). </p>
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a3421666bbcfb19585c76edc12261bb7c">LcmSubscriberSystem</a>, and <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html#a497c4116c7917b2bb12bdc9d1ddb5d6d">RobotPlanInterpolator</a>.</p>
 
@@ -1240,7 +1257,7 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Returns a <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html" title="ContinuousState is a view of, and optionally a container for, all the continuous state variables xc o...">ContinuousState</a> used to implement both CreateDefaultContext and AllocateTimeDerivatives. </p>
-<p>Allocates the state configured with DeclareContinuousState, or none by default. Systems with continuous state variables may override, but must ensure the <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html" title="ContinuousState is a view of, and optionally a container for, all the continuous state variables xc o...">ContinuousState</a> vector is a subclass of <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase. ">BasicVector</a>. </p>
+<p>Allocates the state configured with DeclareContinuousState, or none by default. Systems with continuous state variables may override (not recommended), but must ensure the <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html" title="ContinuousState is a view of, and optionally a container for, all the continuous state variables xc o...">ContinuousState</a> vector is a subclass of <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase. ">BasicVector</a>. </p>
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_rigid_body_plant.html#aa2823e3c071ed74d1eeaed5db381a264">RigidBodyPlant&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_rigid_body_plant.html#aa2823e3c071ed74d1eeaed5db381a264">RigidBodyPlant&lt; double &gt;</a>.</p>
 
@@ -1270,7 +1287,7 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Reserves the discrete state as required by CreateDefaultContext. </p>
-<p>By default, reserves no state. Systems with discrete state should override. </p>
+<p>By default, clones the model values as provided in <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a47ef984b4d9b8313d1239b76388882d2" title="Declares a discrete state group with model_vector.size() state variables, stored in a vector cloned f...">DeclareDiscreteState()</a> calls. Alternatively, systems with discrete state can override this method (not recommended). </p>
 
 <p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_rigid_body_plant.html#ac61889c7087e7fb18dddfc0e6c7f569e">RigidBodyPlant&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_rigid_body_plant.html#ac61889c7087e7fb18dddfc0e6c7f569e">RigidBodyPlant&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a6c75a5904e24e196e16d60095630343d">LcmSubscriberSystem</a>.</p>
 
@@ -1835,8 +1852,8 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a0f5b3aa23038e099188fdb6005c37c40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f5b3aa23038e099188fdb6005c37c40">&#9670;&nbsp;</a></span>DeclareAbstractState()</h2>
+<a id="a709a4f26de52b89c79afe32d02d0250c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a709a4f26de52b89c79afe32d02d0250c">&#9670;&nbsp;</a></span>DeclareAbstractState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1845,7 +1862,7 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classint.html">int</a> DeclareAbstractState </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#a8c3a27f43e356726f770159944adb929">AbstractStateIndex</a> DeclareAbstractState </td>
           <td>(</td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td>
           <td class="paramname"><em>abstract_state</em></td><td>)</td>
@@ -1871,7 +1888,7 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </div>
 </div>
 <a id="a9edb34820bfc553a9956c65e648b517b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9edb34820bfc553a9956c65e648b517b">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9edb34820bfc553a9956c65e648b517b">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1895,12 +1912,11 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_state_variables</code> state variables, which have no second-order structure. </p>
-<p>Has no effect if AllocateContinuousState is overridden. </p>
 
 </div>
 </div>
 <a id="a5dc333ff0c045b371b5885f8350d8e0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dc333ff0c045b371b5885f8350d8e0d">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dc333ff0c045b371b5885f8350d8e0d">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1940,12 +1956,11 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables. </p>
-<p>Has no effect if AllocateContinuousState is overridden. </p>
 
 </div>
 </div>
 <a id="a2e506e194325a4456e4bc11800024272"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e506e194325a4456e4bc11800024272">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e506e194325a4456e4bc11800024272">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1968,13 +1983,12 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>model_vector.size()</code> miscellaneous state variables, stored in a vector Cloned from <code>model_vector</code>. </p>
-<p>Has no effect if AllocateContinuousState is overridden. </p>
+<p>Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>model_vector.size()</code> miscellaneous state variables, stored in a vector cloned from <code>model_vector</code>. </p>
 
 </div>
 </div>
 <a id="a071d625d476e34c1a239d58eaa8e8676"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a071d625d476e34c1a239d58eaa8e8676">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a071d625d476e34c1a239d58eaa8e8676">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2019,13 +2033,13 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables, stored in a vector Cloned from <code>model_vector</code>. </p>
-<p>Aborts if <code>model_vector</code> has the wrong size. Has no effect if AllocateContinuousState is overridden. If the <code>model_vector</code> declares any <a class="el" href="classdrake_1_1systems_1_1_vector_base.html#a6c411be6444ac037acc071dc5df92669" title="Populates a vector value suitable for a SystemConstraint inequality constraint. ">VectorBase::CalcInequalityConstraint()</a> constraints, they will be re-declared as inequality constraints on this system (see <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a88b8ef2d99466af3d204048fb7416057" title="Declares a system constraint of the form f(context) ≥ 0 by specifying a member function to use to ca...">DeclareInequalityConstraint()</a>). </p>
+<p>Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables, stored in a vector cloned from <code>model_vector</code>. </p>
+<p>Aborts if <code>model_vector</code> has the wrong size. If the <code>model_vector</code> declares any <a class="el" href="classdrake_1_1systems_1_1_vector_base.html#a6c411be6444ac037acc071dc5df92669" title="Populates a vector value suitable for a SystemConstraint inequality constraint. ">VectorBase::CalcInequalityConstraint()</a> constraints, they will be re-declared as inequality constraints on this system (see <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a88b8ef2d99466af3d204048fb7416057" title="Declares a system constraint of the form f(context) ≥ 0 by specifying a member function to use to ca...">DeclareInequalityConstraint()</a>). </p>
 
 </div>
 </div>
-<a id="a0c5a95377421c973f7132e1d1356b37b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c5a95377421c973f7132e1d1356b37b">&#9670;&nbsp;</a></span>DeclareContinuousState() <span class="overload">[5/5]</span></h2>
+<a id="a47ef984b4d9b8313d1239b76388882d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ef984b4d9b8313d1239b76388882d2">&#9670;&nbsp;</a></span>DeclareDiscreteState() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2034,33 +2048,11 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void DeclareContinuousState </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a> DeclareDiscreteState </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt;&gt;&#160;</td>
-          <td class="paramname"><em>model_vector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_vector</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>num_q</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>num_v</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>num_z</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -2070,13 +2062,12 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve continuous state with <code>num_q</code> generalized positions, <code>num_v</code> generalized velocities, and <code>num_z</code> miscellaneous state variables, stored in the a vector Cloned from <code>model_vector</code>. </p>
-<p>Aborts if <code>model_vector</code> is nullptr or has the wrong size. Has no effect if AllocateContinuousState is overridden. </p>
+<p>Declares a discrete state group with <code>model_vector.size()</code> state variables, stored in a vector cloned from <code>model_vector</code> (preserving the concrete type and value). </p>
 
 </div>
 </div>
-<a id="a164717902ac0e8cb79b9eddd7e1b96ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a164717902ac0e8cb79b9eddd7e1b96ab">&#9670;&nbsp;</a></span>DeclareDiscreteState()</h2>
+<a id="a54115bda5b519f863e41d8e5463d24cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54115bda5b519f863e41d8e5463d24cb">&#9670;&nbsp;</a></span>DeclareDiscreteState() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2085,7 +2076,35 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void DeclareDiscreteState </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a> DeclareDiscreteState </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Declares a discrete state group with <code>model_vector.size()</code> state variables, stored in a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase. ">BasicVector</a> initialized with the contents of <code>model_vector</code>. </p>
+
+</div>
+</div>
+<a id="ad02cadb14746ff469fa338d2351a5e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02cadb14746ff469fa338d2351a5e68">&#9670;&nbsp;</a></span>DeclareDiscreteState() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a> DeclareDiscreteState </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
           <td class="paramname"><em>num_state_variables</em></td><td>)</td>
@@ -2099,8 +2118,8 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Declares that this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> should reserve discrete state with <code>num_state_variables</code> state variables. </p>
-<p>Has no effect if AllocateDiscreteState is overridden. </p>
+<p>Declares a discrete state group with <code>num_state_variables</code> state variables, stored in a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase. ">BasicVector</a> initialized to be all-zero. </p>
+<p>If you want non-zero initial values, use an alternate <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a47ef984b4d9b8313d1239b76388882d2" title="Declares a discrete state group with model_vector.size() state variables, stored in a vector cloned f...">DeclareDiscreteState()</a> signature that accepts a <code>model_vector</code> parameter. </p><dl class="section pre"><dt>Precondition</dt><dd><code>num_state_variables</code> must be non-negative. </dd></dl>
 
 </div>
 </div>
@@ -3985,8 +4004,8 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a28e17a9a1a303fb56956cfe9e989ca2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28e17a9a1a303fb56956cfe9e989ca2f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a2a5ff32e4a40707c73a10a0ea24029c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5ff32e4a40707c73a10a0ea24029c0">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3997,7 +4016,7 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html">LeafSystem</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html">LeafSystem</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html">LeafSystem</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -4011,8 +4030,8 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a2a5ff32e4a40707c73a10a0ea24029c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a5ff32e4a40707c73a10a0ea24029c0">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a28e17a9a1a303fb56956cfe9e989ca2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e17a9a1a303fb56956cfe9e989ca2f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4023,7 +4042,7 @@ class drake::systems::LeafSystem&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html">LeafSystem</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html">LeafSystem</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html">LeafSystem</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -90,7 +90,8 @@ $(document).ready(function(){initNavTree('point__cloud__flags_8h.html','');});
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">point_cloud_flags.h File Reference</div>  </div>
 </div><!--header-->
@@ -131,6 +132,8 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake_1_1perception_1_1pc__flags"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html">drake::perception::pc_flags</a></td></tr>
 <tr class="memdesc:namespacedrake_1_1perception_1_1pc__flags"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_point.html">Point</a> cloud flags. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1perception_1_1pc__flags_1_1internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags_1_1internal.html">drake::perception::pc_flags::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -139,9 +142,14 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ac6b11bb7c847d6211b1f4d4720a683af"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af">BaseField</a> : int { <a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afa634ee767a8e90ff4d56e140459cca31f">kNone</a> = 0, 
+<tr class="memitem:ac6b11bb7c847d6211b1f4d4720a683af"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af">BaseField</a> : int { <br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afa634ee767a8e90ff4d56e140459cca31f">kNone</a> = 0, 
 <a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afa60bc914dc1d7f672ffe8799bd04d7ea4">kInherit</a> = 1 &lt;&lt; 0, 
-<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afaf7838358503ffc19f4ed15a03804b7f1">kXYZs</a> = 1 &lt;&lt; 1
+<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afaf7838358503ffc19f4ed15a03804b7f1">kXYZs</a> = 1 &lt;&lt; 1, 
+<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afaba0ec049309fcce2fbb0aa588bacce66">kNormals</a> = 1 &lt;&lt; 2, 
+<br />
+&#160;&#160;<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afaa75cd65c9c6667325634e0d31778b41e">kRGBs</a> = 1 &lt;&lt; 3
+<br />
  }<tr class="memdesc:ac6b11bb7c847d6211b1f4d4720a683af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the data the point cloud stores.  <a href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683af">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ac6b11bb7c847d6211b1f4d4720a683af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +171,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a9938077c448bfc1c3f8c8470e861fdf0"><td class="memItemLeft" align="right" valign="top">Fields&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#a9938077c448bfc1c3f8c8470e861fdf0">operator|</a> (const DescriptorType &amp;lhs, const Fields &amp;rhs)</td></tr>
 <tr class="memdesc:a9938077c448bfc1c3f8c8470e861fdf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes operator| compatible for <code><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size. ">DescriptorType</a></code> + <code><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html" title="Allows combination of BaseField and DescriptorType for a PointCloud. ">Fields</a></code> (<code><a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html" title="Describes an descriptor field with a name and the descriptor&#39;s size. ">DescriptorType</a></code> or <code>BaseFields</code>).  <a href="namespacedrake_1_1perception_1_1pc__flags.html#a9938077c448bfc1c3f8c8470e861fdf0">More...</a><br /></td></tr>
 <tr class="separator:a9938077c448bfc1c3f8c8470e861fdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a065916f16a59a0aa5fc8b940c8ea9233"><td class="memItemLeft" align="right" valign="top">constexpr BaseField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1perception_1_1pc__flags_1_1internal.html#a065916f16a59a0aa5fc8b940c8ea9233">kMaxBitInUse</a> = kRGBs</td></tr>
+<tr class="separator:a065916f16a59a0aa5fc8b940c8ea9233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

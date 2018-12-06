@@ -1,6 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#afe3565c4b5cbe9be575d03ebd4b99327":[2,0,0,12,11,9],
 "classdrake_1_1multibody_1_1_articulated_body_inertia_cache.html":[2,0,0,12,12],
 "classdrake_1_1multibody_1_1_articulated_body_inertia_cache.html#a33b7962d0c44f6db271ee192b6c10a4d":[2,0,0,12,12,4],
 "classdrake_1_1multibody_1_1_articulated_body_inertia_cache.html#a5a0c8ff9a8b0ae2dda56f7a1dd1a58d3":[2,0,0,12,12,6],
@@ -249,5 +248,6 @@ var NAVTREEINDEX20 =
 "classdrake_1_1multibody_1_1_multibody_forces.html#a7ed1238347a4f31beff28491602ac411":[2,0,0,12,32,13],
 "classdrake_1_1multibody_1_1_multibody_forces.html#a8305e8fcc4884808d757748513b4855e":[2,0,0,12,32,7],
 "classdrake_1_1multibody_1_1_multibody_forces.html#a8823f94494d680a558889504d46a6f6e":[2,0,0,12,32,6],
-"classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65":[2,0,0,12,32,4]
+"classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65":[2,0,0,12,32,4],
+"classdrake_1_1multibody_1_1_multibody_forces.html#aa49f61a7a12d45b3e94308cc9d8148c1":[2,0,0,12,32,8]
 };

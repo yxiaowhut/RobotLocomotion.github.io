@@ -1,6 +1,5 @@
 var NAVTREEINDEX24 =
 {
-"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a7ddc4abae4f4cf642916849570be81c9":[2,0,0,12,0,2,0,10],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a9ead6d5f18605f9a0c4e6213ef47880b":[2,0,0,12,0,2,0,12],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#aa9607107a3c382474e17fa312727264d":[2,0,0,12,0,2,0,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#aad91b55e6b714db4ba96190e6fab07ac":[2,0,0,12,0,2,0,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX24 =
 "classdrake_1_1multibody_1_1internal_1_1_model_instance.html#a48d6273cdee734fee79bef22fe28d8f8":[2,0,0,12,4,6,0],
 "classdrake_1_1multibody_1_1internal_1_1_model_instance.html#a4b7634c86d89492c32e068b0398795a2":[2,0,0,12,4,6,1],
 "classdrake_1_1multibody_1_1internal_1_1_model_instance.html#a4c344dac83fc3490251969d2e220c3c9":[2,0,0,12,4,6,6],
-"classdrake_1_1multibody_1_1internal_1_1_model_instance.html#a5bda6265862c05395a4f7b1a7c24260c":[2,0,0,12,4,6,11]
+"classdrake_1_1multibody_1_1internal_1_1_model_instance.html#a5bda6265862c05395a4f7b1a7c24260c":[2,0,0,12,4,6,11],
+"classdrake_1_1multibody_1_1internal_1_1_model_instance.html#a9b84d903194ccc942a65a7e469162112":[2,0,0,12,4,6,5]
 };

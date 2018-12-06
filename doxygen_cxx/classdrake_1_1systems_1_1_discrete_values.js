@@ -7,6 +7,7 @@ var classdrake_1_1systems_1_1_discrete_values =
     [ "DiscreteValues", "classdrake_1_1systems_1_1_discrete_values.html#ad04735d45d83dfd2fa387fee8ef39dc1", null ],
     [ "DiscreteValues", "classdrake_1_1systems_1_1_discrete_values.html#a31dd84e8f6b18b629ce9b878af683029", null ],
     [ "~DiscreteValues", "classdrake_1_1systems_1_1_discrete_values.html#a19a5e68e383564f5c571d9bb11e57930", null ],
+    [ "AppendGroup", "classdrake_1_1systems_1_1_discrete_values.html#a1921190f40a3b6421e6a7b4311b03623", null ],
     [ "Clone", "classdrake_1_1systems_1_1_discrete_values.html#a4af818ddd91ebbee04c8354fe32df917", null ],
     [ "CopyFrom", "classdrake_1_1systems_1_1_discrete_values.html#a76ba9a7fe1bdf67dca1e21a4e32dcd49", null ],
     [ "get_data", "classdrake_1_1systems_1_1_discrete_values.html#ad35e39bbc1f872f51b88bc0b53da8dde", null ],

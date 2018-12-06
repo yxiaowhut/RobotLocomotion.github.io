@@ -1,6 +1,5 @@
 var NAVTREEINDEX10 =
 {
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#aab33ee59147e39296194dcbd7060ca64":[2,0,0,6,3,0,1],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#ab39cac9ff84e953dc8f4275ab7d6cda5":[2,0,0,6,3,0,12],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#abddf55e9646f7e6f68ca579b84ce4e9d":[2,0,0,6,3,0,13],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#acb5f27dcbb7d4b2d01b25bf8b7f91017":[2,0,0,6,3,0,11],
@@ -249,5 +248,6 @@ var NAVTREEINDEX10 =
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_world_state.html#a09703b2502873ba7e41fde2e24c40eb4":[2,0,0,6,7,0,7,13],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_world_state.html#a196da5da114fb69a96ee5c432ad488b0":[2,0,0,6,7,0,7,20],
 "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_world_state.html#a1ca996b7bdaac9a98f37848d82629da1":[2,0,0,6,7,0,7,0],
-"classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_world_state.html#a24f19759e34c6e09fede9af4b9388182":[2,0,0,6,7,0,7,9]
+"classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_world_state.html#a24f19759e34c6e09fede9af4b9388182":[2,0,0,6,7,0,7,9],
+"classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_world_state.html#a2bc029901df0d98066221d4294506e99":[2,0,0,6,7,0,7,21]
 };

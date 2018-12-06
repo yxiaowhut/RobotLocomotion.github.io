@@ -1,6 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"classdrake_1_1maliput_1_1api_1_1_branch_point.html#aaf9d1836c78c24946278b3d4ec44cf28":[2,0,0,9,0,2,6],
 "classdrake_1_1maliput_1_1api_1_1_branch_point.html#abd4d29838fdb5df16d9e9890095b4e7e":[2,0,0,9,0,2,11],
 "classdrake_1_1maliput_1_1api_1_1_branch_point.html#ac243138fc475467c3c1921bdfeda6dc0":[2,0,0,9,0,2,8],
 "classdrake_1_1maliput_1_1api_1_1_branch_point.html#af0b256382bcd91d863d978c388656825":[2,0,0,9,0,2,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX14 =
 "classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html#a1b8e9eaa431ea21ae0e54ae5788653ce":[2,0,0,9,0,0,7,0,7],
 "classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html#a1d1cfd8ffb84e947f82999c682b666a7":[2,0,0,9,0,0,7,0,2],
 "classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html#a1d1cfd8ffb84e947f82999c682b666a7a44502fe4915d471b71350f3371066aac":[2,0,0,9,0,0,7,0,2,0],
-"classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html#a1d1cfd8ffb84e947f82999c682b666a7a7a484b5aaf762064a91456209d356e86":[2,0,0,9,0,0,7,0,2,2]
+"classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html#a1d1cfd8ffb84e947f82999c682b666a7a7a484b5aaf762064a91456209d356e86":[2,0,0,9,0,0,7,0,2,2],
+"classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html#a1d1cfd8ffb84e947f82999c682b666a7a97bebae73e3334ef0c946c5df81e440b":[2,0,0,9,0,0,7,0,2,1]
 };

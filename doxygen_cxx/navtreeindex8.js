@@ -1,6 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"classdrake_1_1_find_resource_result.html#aeabd6a7a3621f11c3a257a9143fd487a":[2,0,0,30,4],
 "classdrake_1_1_find_resource_result.html#aeaf31eaf8aa339156d1b1c5ab043d47f":[2,0,0,30,7],
 "classdrake_1_1_nice_type_name.html":[2,0,0,40],
 "classdrake_1_1_nice_type_name.html#a13ea97365819d400642d83eef2aa0956":[2,0,0,40,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX8 =
 "classdrake_1_1automotive_1_1_road_path.html#af631f62d0ea19cd00504c33fe791cba3":[2,0,0,1,19,5],
 "classdrake_1_1automotive_1_1_simple_car.html":[0,1,4,0,3],
 "classdrake_1_1automotive_1_1_simple_car.html#a39b0ad4cc6d510397de5f1839537dedb":[0,1,4,0,3,5],
-"classdrake_1_1automotive_1_1_simple_car.html#a47c562eb9f2c4f1f4860f47ca4a15054":[0,1,4,0,3,0]
+"classdrake_1_1automotive_1_1_simple_car.html#a47c562eb9f2c4f1f4860f47ca4a15054":[0,1,4,0,3,0],
+"classdrake_1_1automotive_1_1_simple_car.html#a77ed0907f2b72ffc67a6d934b2e936fe":[0,1,4,0,3,2]
 };

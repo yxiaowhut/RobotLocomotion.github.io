@@ -286,6 +286,7 @@ var searchData=
   ['any',['any',['../namespacedrake.html#a624916a36af99a1ddfed08a25047cbea',1,'drake']]],
   ['any_5fof',['any_of',['../namespacedrake.html#a66f0ced433e025116cf38c1cf2db6b76',1,'drake::any_of()'],['../namespacedrake_1_1symbolic_1_1test.html#a8709d7c6c2135beaf013d99f406cd183',1,'drake::symbolic::test::any_of()']]],
   ['appendcollisionelementidsfromthisbody',['appendCollisionElementIdsFromThisBody',['../class_rigid_body.html#ab8601282e30567a3343ab379da9efac7',1,'RigidBody::appendCollisionElementIdsFromThisBody(const std::string &amp;group_name, std::vector&lt; drake::multibody::collision::ElementId &gt; &amp;ids) const'],['../class_rigid_body.html#ad26710c47be54bea58bd515176431ab2',1,'RigidBody::appendCollisionElementIdsFromThisBody(std::vector&lt; drake::multibody::collision::ElementId &gt; &amp;ids) const']]],
+  ['appendgroup',['AppendGroup',['../classdrake_1_1systems_1_1_discrete_values.html#a1921190f40a3b6421e6a7b4311b03623',1,'drake::systems::DiscreteValues']]],
   ['appendtotrackerpointermap',['AppendToTrackerPointerMap',['../classdrake_1_1systems_1_1_dependency_graph.html#a32f801ebc60ebd200bf0f9dd9ae6ce32',1,'drake::systems::DependencyGraph']]],
   ['appendtovector',['AppendToVector',['../namespacedrake_1_1solvers_1_1internal.html#a75ee52ce3d6a109fb8f284c5d4373307',1,'drake::solvers::internal']]],
   ['apply',['apply',['../classdrake_1_1maliput_1_1multilane_1_1_rot3.html#ab1c01d0718167311483738ae89c75798',1,'drake::maliput::multilane::Rot3']]],

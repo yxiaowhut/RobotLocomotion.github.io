@@ -1,6 +1,5 @@
 var NAVTREEINDEX16 =
 {
-"classdrake_1_1maliput_1_1multilane_1_1_builder_base.html#a69414f63881bb6b2c1177b28888ff10a":[2,0,0,9,3,5,19],
 "classdrake_1_1maliput_1_1multilane_1_1_builder_base.html#a726dbaace64e2c8d468cdadc3cef4cbb":[2,0,0,9,3,5,3],
 "classdrake_1_1maliput_1_1multilane_1_1_builder_base.html#a7fe0352090ca51c87bfed5602c39d0f5":[2,0,0,9,3,5,8],
 "classdrake_1_1maliput_1_1multilane_1_1_builder_base.html#a8416af4d178ef6287aa081cc4d52d537":[2,0,0,9,3,5,7],
@@ -249,5 +248,6 @@ var NAVTREEINDEX16 =
 "classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#a91493c88ef47b74b43bed2d0e60b21a1":[2,0,0,9,3,24,6],
 "classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#a92b29fff38bb4dfea6fdef1bfc989f07":[2,0,0,9,3,24,11],
 "classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#a95359d81397312a87733e9a3a20245d9":[2,0,0,9,3,24,25],
-"classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#a97e4ceeb4b0898f7c3f5066cfa9d9d04":[2,0,0,9,3,24,14]
+"classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#a97e4ceeb4b0898f7c3f5066cfa9d9d04":[2,0,0,9,3,24,14],
+"classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#a9a89065d14f6934806a65be1d9f05cc1":[2,0,0,9,3,24,12]
 };

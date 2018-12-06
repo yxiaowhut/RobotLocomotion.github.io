@@ -12,7 +12,7 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
     [ "parser_common.cc", "multibody_2parsing_2parser__common_8cc.html", null ],
     [ "parser_common.h", "multibody_2parsing_2parser__common_8h.html", "multibody_2parsing_2parser__common_8h" ],
     [ "parser_path_utils.cc", "parser__path__utils_8cc.html", "parser__path__utils_8cc" ],
-    [ "parser_path_utils.h", "multibody_2parsing_2parser__path__utils_8h.html", "multibody_2parsing_2parser__path__utils_8h" ],
+    [ "parser_path_utils.h", "parser__path__utils_8h.html", "parser__path__utils_8h" ],
     [ "scene_graph_parser_detail.cc", "scene__graph__parser__detail_8cc.html", "scene__graph__parser__detail_8cc" ],
     [ "scene_graph_parser_detail.h", "scene__graph__parser__detail_8h.html", "scene__graph__parser__detail_8h" ],
     [ "sdf_parser.cc", "multibody_2parsing_2sdf__parser_8cc.html", "multibody_2parsing_2sdf__parser_8cc" ],

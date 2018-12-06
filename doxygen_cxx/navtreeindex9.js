@@ -1,6 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"classdrake_1_1automotive_1_1_simple_car.html#a77ed0907f2b72ffc67a6d934b2e936fe":[0,1,4,0,3,2],
 "classdrake_1_1automotive_1_1_simple_car.html#a78b2078ac07fc3ed36694e8ddf16da20":[0,1,4,0,3,1],
 "classdrake_1_1automotive_1_1_simple_car.html#a796306f33d5a6a7063dd6cf43b3cef5f":[0,1,4,0,3,9],
 "classdrake_1_1automotive_1_1_simple_car.html#a7d2469b69ca76ca3cfe306fb2ae4430f":[0,1,4,0,3,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX9 =
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a7efca2c7faa82e215ea228b49fe00c24":[2,0,0,6,3,0,8],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a9e8a1a6c09bca2679ad24f74365b31f9":[2,0,0,6,3,0,5],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#aa2f23671ffc5731663b495e65a9955db":[2,0,0,6,3,0,0],
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#aa6bc5266ff65f4973ff155d6844e490a":[2,0,0,6,3,0,16]
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#aa6bc5266ff65f4973ff155d6844e490a":[2,0,0,6,3,0,16],
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#aab33ee59147e39296194dcbd7060ca64":[2,0,0,6,3,0,1]
 };

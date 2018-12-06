@@ -428,9 +428,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0a2323e3640559f027b0681945cb3f1a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a0a2323e3640559f027b0681945cb3f1a">ProjectMatToRotMatWithAxis</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;M, const Eigen::Vector3d &amp;axis, const <a class="el" href="classdouble.html">double</a> angle_lb, const <a class="el" href="classdouble.html">double</a> angle_ub)</td></tr>
 <tr class="memdesc:a0a2323e3640559f027b0681945cb3f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects an approximate 3 x 3 rotation matrix M onto an orthonormal matrix R so that R is a rotation matrix associated with a angle-axis rotation by an angle θ about a vector direction <code>axis</code>, with <code>angle_lb &lt;= θ &lt;= angle_ub</code>.  <a href="#a0a2323e3640559f027b0681945cb3f1a">More...</a><br /></td></tr>
 <tr class="separator:a0a2323e3640559f027b0681945cb3f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85e9a55079aaf20ed394d115a28be0ef"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a85e9a55079aaf20ed394d115a28be0ef"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a85e9a55079aaf20ed394d115a28be0ef">DRAKE_DEPRECATED</a> (&quot;Use  <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>(<a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>(<a class="el" href="rgbd__camera__publish__lcm__example_8cc.html#adcd24d59c62f70778c30dd0d4466b202">rpy</a>)) as per issue #8323. &quot; &quot;Code will be deleted after February 5, 2019.&quot;) Matrix3&lt; typename Derived</td></tr>
-<tr class="separator:a85e9a55079aaf20ed394d115a28be0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ee101d8378756998cecdfe62796a93"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a68ee101d8378756998cecdfe62796a93"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a68ee101d8378756998cecdfe62796a93">DRAKE_DEPRECATED</a> (&quot;Use  <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>(<a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>(<a class="el" href="rgbd__camera__publish__lcm__example_8cc.html#adcd24d59c62f70778c30dd0d4466b202">rpy</a>)).matrix() as per issue &quot; &quot;#8323. Code will be deleted after February 5, 2019. Consider &quot; &quot;updating call sites to use the <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a> class rather &quot; &quot;than a <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a> because it ensures the underlying 3x3 matrix &quot; &quot;is a valid rotation matrix.&quot;) Matrix3&lt; typename Derived</td></tr>
+<tr class="separator:a68ee101d8378756998cecdfe62796a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adecdf6a7ef606861457807da4b56e7ff"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 , class T3 &gt; </td></tr>
 <tr class="memitem:adecdf6a7ef606861457807da4b56e7ff"><td class="memTemplItemLeft" align="right" valign="top">T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#adecdf6a7ef606861457807da4b56e7ff">saturate</a> (const T1 &amp;<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>, const T2 &amp;low, const T3 &amp;high)</td></tr>
 <tr class="memdesc:adecdf6a7ef606861457807da4b56e7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saturates the input <code>value</code> between upper and lower bounds.  <a href="#adecdf6a7ef606861457807da4b56e7ff">More...</a><br /></td></tr>
@@ -1451,8 +1451,8 @@ http://www.engr.iupui.edu/~skoskie/ECE684/Riccati_algorithms.pdf</pre>
 
 </div>
 </div>
-<a id="a85e9a55079aaf20ed394d115a28be0ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85e9a55079aaf20ed394d115a28be0ef">&#9670;&nbsp;</a></span>DRAKE_DEPRECATED() <span class="overload">[2/2]</span></h2>
+<a id="a68ee101d8378756998cecdfe62796a93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ee101d8378756998cecdfe62796a93">&#9670;&nbsp;</a></span>DRAKE_DEPRECATED() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1460,13 +1460,13 @@ http://www.engr.iupui.edu/~skoskie/ECE684/Riccati_algorithms.pdf</pre>
         <tr>
           <td class="memname">drake::math::DRAKE_DEPRECATED </td>
           <td>(</td>
-          <td class="paramtype">&quot;Use <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>(<a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>(<a class="el" href="rgbd__camera__publish__lcm__example_8cc.html#adcd24d59c62f70778c30dd0d4466b202">rpy</a>)) as per issue #8323. &quot; &quot;Code will be deleted after February&#160;</td>
+          <td class="paramtype">&quot;Use <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>(<a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html">RollPitchYaw</a>(<a class="el" href="rgbd__camera__publish__lcm__example_8cc.html#adcd24d59c62f70778c30dd0d4466b202">rpy</a>)).matrix() as per issue &quot; &quot;#8323. Code will be deleted after February&#160;</td>
           <td class="paramname"><em>5</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">2019.&quot;&#160;</td>
+          <td class="paramtype">2019. Consider &quot; &quot;updating call sites to use the <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a> class rather &quot; &quot;than a <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a> because it ensures the underlying 3x3 matrix &quot; &quot;is a valid rotation matrix.&quot;&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>

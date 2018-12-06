@@ -106,6 +106,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:ac068134415d867fc146cd4daf31e3f82"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> = float</td></tr>
 <tr class="memdesc:ac068134415d867fc146cd4daf31e3f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometric scalar type.  <a href="#ac068134415d867fc146cd4daf31e3f82">More...</a><br /></td></tr>
 <tr class="separator:ac068134415d867fc146cd4daf31e3f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c380ea361d4eb787e35a90fb1aa1b6c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> = uint8_t</td></tr>
+<tr class="memdesc:a2c380ea361d4eb787e35a90fb1aa1b6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color channel scalar type.  <a href="#a2c380ea361d4eb787e35a90fb1aa1b6c">More...</a><br /></td></tr>
+<tr class="separator:a2c380ea361d4eb787e35a90fb1aa1b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41d294e761edcf58942f699027fe6c23"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a41d294e761edcf58942f699027fe6c23">D</a> = <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a></td></tr>
 <tr class="memdesc:a41d294e761edcf58942f699027fe6c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptor scalar type.  <a href="#a41d294e761edcf58942f699027fe6c23">More...</a><br /></td></tr>
 <tr class="separator:a41d294e761edcf58942f699027fe6c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc8e346be919f7dbb4995d6365492301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301">resize</a> (<a class="el" href="classint.html">int</a> new_size, <a class="el" href="classbool.html">bool</a> skip_initialize=false)</td></tr>
 <tr class="memdesc:abc8e346be919f7dbb4995d6365492301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conservative resize; will maintain existing data, and initialize new data to their invalid values.  <a href="#abc8e346be919f7dbb4995d6365492301">More...</a><br /></td></tr>
 <tr class="separator:abc8e346be919f7dbb4995d6365492301"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Geometric Descriptors</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Geometric Descriptors - XYZs</div></td></tr>
 <tr class="memitem:abbefd7d1920434ef863911302c2da821"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821">has_xyzs</a> () const</td></tr>
 <tr class="memdesc:abbefd7d1920434ef863911302c2da821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if this cloud provides XYZ values.  <a href="#abbefd7d1920434ef863911302c2da821">More...</a><br /></td></tr>
 <tr class="separator:abbefd7d1920434ef863911302c2da821"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,11 +153,43 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aaccebea8a6c916c4b56083de5ca79f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to XYZ values.  <a href="#aaccebea8a6c916c4b56083de5ca79f96">More...</a><br /></td></tr>
 <tr class="separator:aaccebea8a6c916c4b56083de5ca79f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10564c9ccfebe2b5b4bd6002152c68b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a10564c9ccfebe2b5b4bd6002152c68b3">xyz</a> (<a class="el" href="classint.html">int</a> <a class="el" href="geometry__properties__test_8cc.html#acb559820d9ca11295b4500f179ef6392">i</a>) const</td></tr>
-<tr class="memdesc:a10564c9ccfebe2b5b4bd6002152c68b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to a XYZ values.  <a href="#a10564c9ccfebe2b5b4bd6002152c68b3">More...</a><br /></td></tr>
+<tr class="memdesc:a10564c9ccfebe2b5b4bd6002152c68b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to an XYZ value.  <a href="#a10564c9ccfebe2b5b4bd6002152c68b3">More...</a><br /></td></tr>
 <tr class="separator:a10564c9ccfebe2b5b4bd6002152c68b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f5e14dcd8cbd0c6ea52dab9c0fb99f5"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a8f5e14dcd8cbd0c6ea52dab9c0fb99f5">mutable_xyz</a> (<a class="el" href="classint.html">int</a> <a class="el" href="geometry__properties__test_8cc.html#acb559820d9ca11295b4500f179ef6392">i</a>)</td></tr>
-<tr class="memdesc:a8f5e14dcd8cbd0c6ea52dab9c0fb99f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to a XYZ values.  <a href="#a8f5e14dcd8cbd0c6ea52dab9c0fb99f5">More...</a><br /></td></tr>
+<tr class="memdesc:a8f5e14dcd8cbd0c6ea52dab9c0fb99f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to an XYZ value.  <a href="#a8f5e14dcd8cbd0c6ea52dab9c0fb99f5">More...</a><br /></td></tr>
 <tr class="separator:a8f5e14dcd8cbd0c6ea52dab9c0fb99f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Geometric Descriptors - Normals</div></td></tr>
+<tr class="memitem:acaf8885d4f8bf405e1388eb8f5a5dd03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03">has_normals</a> () const</td></tr>
+<tr class="memdesc:acaf8885d4f8bf405e1388eb8f5a5dd03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if this cloud provides normals.  <a href="#acaf8885d4f8bf405e1388eb8f5a5dd03">More...</a><br /></td></tr>
+<tr class="separator:acaf8885d4f8bf405e1388eb8f5a5dd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9571741d81dfbdd077fc5d0e7b8cd27a"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a9571741d81dfbdd077fc5d0e7b8cd27a">normals</a> () const</td></tr>
+<tr class="memdesc:a9571741d81dfbdd077fc5d0e7b8cd27a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to normals.  <a href="#a9571741d81dfbdd077fc5d0e7b8cd27a">More...</a><br /></td></tr>
+<tr class="separator:a9571741d81dfbdd077fc5d0e7b8cd27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25e5bab476545463b8f913749d60679"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ab25e5bab476545463b8f913749d60679">mutable_normals</a> ()</td></tr>
+<tr class="memdesc:ab25e5bab476545463b8f913749d60679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to normals.  <a href="#ab25e5bab476545463b8f913749d60679">More...</a><br /></td></tr>
+<tr class="separator:ab25e5bab476545463b8f913749d60679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ac2a91848342b7787b4e9b47f8b023"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#af1ac2a91848342b7787b4e9b47f8b023">normal</a> (<a class="el" href="classint.html">int</a> <a class="el" href="geometry__properties__test_8cc.html#acb559820d9ca11295b4500f179ef6392">i</a>) const</td></tr>
+<tr class="memdesc:af1ac2a91848342b7787b4e9b47f8b023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to a normal.  <a href="#af1ac2a91848342b7787b4e9b47f8b023">More...</a><br /></td></tr>
+<tr class="separator:af1ac2a91848342b7787b4e9b47f8b023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee9d38cefb4674cb00bfe11547e39d6"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a5ee9d38cefb4674cb00bfe11547e39d6">mutable_normal</a> (<a class="el" href="classint.html">int</a> <a class="el" href="geometry__properties__test_8cc.html#acb559820d9ca11295b4500f179ef6392">i</a>)</td></tr>
+<tr class="memdesc:a5ee9d38cefb4674cb00bfe11547e39d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to a normal.  <a href="#a5ee9d38cefb4674cb00bfe11547e39d6">More...</a><br /></td></tr>
+<tr class="separator:a5ee9d38cefb4674cb00bfe11547e39d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Geometric Descriptors - RGBs</div></td></tr>
+<tr class="memitem:a8a9f195c7c9b604373d2d00ba6fd4552"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a8a9f195c7c9b604373d2d00ba6fd4552">has_rgbs</a> () const</td></tr>
+<tr class="memdesc:a8a9f195c7c9b604373d2d00ba6fd4552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if this cloud provides RGB colors.  <a href="#a8a9f195c7c9b604373d2d00ba6fd4552">More...</a><br /></td></tr>
+<tr class="separator:a8a9f195c7c9b604373d2d00ba6fd4552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31c50aa3e697b128aa2ea1157bee250"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac31c50aa3e697b128aa2ea1157bee250">rgbs</a> () const</td></tr>
+<tr class="memdesc:ac31c50aa3e697b128aa2ea1157bee250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to RGB colors.  <a href="#ac31c50aa3e697b128aa2ea1157bee250">More...</a><br /></td></tr>
+<tr class="separator:ac31c50aa3e697b128aa2ea1157bee250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b4470dbd217b619b971130f3e902ba2"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a1b4470dbd217b619b971130f3e902ba2">mutable_rgbs</a> ()</td></tr>
+<tr class="memdesc:a1b4470dbd217b619b971130f3e902ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to RGB colors.  <a href="#a1b4470dbd217b619b971130f3e902ba2">More...</a><br /></td></tr>
+<tr class="separator:a1b4470dbd217b619b971130f3e902ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6c4df4db9fe8623b988f66f4d2ab62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abf6c4df4db9fe8623b988f66f4d2ab62">rgb</a> (<a class="el" href="classint.html">int</a> <a class="el" href="geometry__properties__test_8cc.html#acb559820d9ca11295b4500f179ef6392">i</a>) const</td></tr>
+<tr class="memdesc:abf6c4df4db9fe8623b988f66f4d2ab62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to an RGB color.  <a href="#abf6c4df4db9fe8623b988f66f4d2ab62">More...</a><br /></td></tr>
+<tr class="separator:abf6c4df4db9fe8623b988f66f4d2ab62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd5d17fcacfcdb4b975512985f861d8"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#aedd5d17fcacfcdb4b975512985f861d8">mutable_rgb</a> (<a class="el" href="classint.html">int</a> <a class="el" href="geometry__properties__test_8cc.html#acb559820d9ca11295b4500f179ef6392">i</a>)</td></tr>
+<tr class="memdesc:aedd5d17fcacfcdb4b975512985f861d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to an RGB color.  <a href="#aedd5d17fcacfcdb4b975512985f861d8">More...</a><br /></td></tr>
+<tr class="separator:aedd5d17fcacfcdb4b975512985f861d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Run-Time Descriptors</div></td></tr>
 <tr class="memitem:a36282edc63f47b897c7c7940b5fc5a8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a36282edc63f47b897c7c7940b5fc5a8d">has_descriptors</a> () const</td></tr>
 <tr class="memdesc:a36282edc63f47b897c7c7940b5fc5a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if this point cloud provides descriptor values.  <a href="#a36282edc63f47b897c7c7940b5fc5a8d">More...</a><br /></td></tr>
@@ -172,10 +207,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afa2f390016070e4bbd0afeed62fea270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to descriptor values.  <a href="#afa2f390016070e4bbd0afeed62fea270">More...</a><br /></td></tr>
 <tr class="separator:afa2f390016070e4bbd0afeed62fea270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86edb2fabfc24b9a791070aa03d79e9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a86edb2fabfc24b9a791070aa03d79e9b">descriptor</a> (<a class="el" href="classint.html">int</a> <a class="el" href="geometry__properties__test_8cc.html#acb559820d9ca11295b4500f179ef6392">i</a>) const</td></tr>
-<tr class="memdesc:a86edb2fabfc24b9a791070aa03d79e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to a descriptor values.  <a href="#a86edb2fabfc24b9a791070aa03d79e9b">More...</a><br /></td></tr>
+<tr class="memdesc:a86edb2fabfc24b9a791070aa03d79e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns access to a descriptor value.  <a href="#a86edb2fabfc24b9a791070aa03d79e9b">More...</a><br /></td></tr>
 <tr class="separator:a86edb2fabfc24b9a791070aa03d79e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5cd0db051c8712234f2aa3eb0b9b677"><td class="memItemLeft" align="right" valign="top">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ad5cd0db051c8712234f2aa3eb0b9b677">mutable_descriptor</a> (<a class="el" href="classint.html">int</a> <a class="el" href="geometry__properties__test_8cc.html#acb559820d9ca11295b4500f179ef6392">i</a>)</td></tr>
-<tr class="memdesc:ad5cd0db051c8712234f2aa3eb0b9b677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to a descriptor values.  <a href="#ad5cd0db051c8712234f2aa3eb0b9b677">More...</a><br /></td></tr>
+<tr class="memdesc:ad5cd0db051c8712234f2aa3eb0b9b677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns mutable access to a descriptor value.  <a href="#ad5cd0db051c8712234f2aa3eb0b9b677">More...</a><br /></td></tr>
 <tr class="separator:ad5cd0db051c8712234f2aa3eb0b9b677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Container Manipulation</div></td></tr>
 <tr class="memitem:acee5db2d53b1b703ab6a50eb836e07b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acee5db2d53b1b703ab6a50eb836e07b9">SetFrom</a> (const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> &amp;other, <a class="el" href="classdrake_1_1perception_1_1pc__flags_1_1_fields.html">pc_flags::Fields</a> fields_in=<a class="el" href="namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afa60bc914dc1d7f672ffe8799bd04d7ea4">pc_flags::kInherit</a>, <a class="el" href="classbool.html">bool</a> allow_resize=true)</td></tr>
@@ -210,6 +245,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:afdd6c6a1f7d8ff561217b55d7e5eb61c"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#afdd6c6a1f7d8ff561217b55d7e5eb61c">kDefaultValue</a> = std::numeric_limits&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a>&gt;::quiet_NaN()</td></tr>
 <tr class="memdesc:afdd6c6a1f7d8ff561217b55d7e5eb61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an invalid or uninitialized value.  <a href="#afdd6c6a1f7d8ff561217b55d7e5eb61c">More...</a><br /></td></tr>
 <tr class="separator:afdd6c6a1f7d8ff561217b55d7e5eb61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358b13be8641b30f83e093f66cdbabba"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a358b13be8641b30f83e093f66cdbabba">kDefaultColor</a> {}</td></tr>
+<tr class="separator:a358b13be8641b30f83e093f66cdbabba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient, synchronized interface to commonly used fields and data types applicable for basic 3D perception. </p>
@@ -234,6 +271,22 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
   human living environments." KI-Künstliche Intelligenz 24.4 (2010): 345-348. This differs from other definitions, such as having "feature" describe geometric quantities and "descriptor" describe non-geometric quantities which is presented in the following survey paper: Pomerleau, François, Francis Colas, and Roland Siegwart. "A review of
   point cloud registration algorithms for mobile robotics." Foundations and Trends® in Robotics 4.1 (2015): 1-104. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a2c380ea361d4eb787e35a90fb1aa1b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c380ea361d4eb787e35a90fb1aa1b6c">&#9670;&nbsp;</a></span>C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> =  uint8_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Color channel scalar type. </p>
+
+</div>
+</div>
 <a id="a41d294e761edcf58942f699027fe6c23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41d294e761edcf58942f699027fe6c23">&#9670;&nbsp;</a></span>D</h2>
 
@@ -445,7 +498,7 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 </table>
 </div><div class="memdoc">
 
-<p>Returns access to a descriptor values. </p>
+<p>Returns access to a descriptor value. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a36282edc63f47b897c7c7940b5fc5a8d" title="Returns if this point cloud provides descriptor values. ">has_descriptors()</a></code> must be true. </dd></dl>
 
 </div>
@@ -600,6 +653,44 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 
 </div>
 </div>
+<a id="acaf8885d4f8bf405e1388eb8f5a5dd03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaf8885d4f8bf405e1388eb8f5a5dd03">&#9670;&nbsp;</a></span>has_normals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbool.html">bool</a> has_normals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns if this cloud provides normals. </p>
+
+</div>
+</div>
+<a id="a8a9f195c7c9b604373d2d00ba6fd4552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9f195c7c9b604373d2d00ba6fd4552">&#9670;&nbsp;</a></span>has_rgbs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbool.html">bool</a> has_rgbs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns if this cloud provides RGB colors. </p>
+
+</div>
+</div>
 <a id="abbefd7d1920434ef863911302c2da821"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbefd7d1920434ef863911302c2da821">&#9670;&nbsp;</a></span>has_xyzs()</h2>
 
@@ -736,7 +827,7 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 </table>
 </div><div class="memdoc">
 
-<p>Returns mutable access to a descriptor values. </p>
+<p>Returns mutable access to a descriptor value. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a36282edc63f47b897c7c7940b5fc5a8d" title="Returns if this point cloud provides descriptor values. ">has_descriptors()</a></code> must be true. </dd></dl>
 
 </div>
@@ -758,6 +849,104 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 
 <p>Returns mutable access to descriptor values. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a36282edc63f47b897c7c7940b5fc5a8d" title="Returns if this point cloud provides descriptor values. ">has_descriptors()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
+<a id="a5ee9d38cefb4674cb00bfe11547e39d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee9d38cefb4674cb00bfe11547e39d6">&#9670;&nbsp;</a></span>mutable_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Ref&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a>&gt; &gt; mutable_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns mutable access to a normal. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals. ">has_normals()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
+<a id="ab25e5bab476545463b8f913749d60679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab25e5bab476545463b8f913749d60679">&#9670;&nbsp;</a></span>mutable_normals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt; &gt; mutable_normals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns mutable access to normals. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals. ">has_normals()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
+<a id="aedd5d17fcacfcdb4b975512985f861d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd5d17fcacfcdb4b975512985f861d8">&#9670;&nbsp;</a></span>mutable_rgb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Ref&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a>&gt; &gt; mutable_rgb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns mutable access to an RGB color. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a8a9f195c7c9b604373d2d00ba6fd4552" title="Returns if this cloud provides RGB colors. ">has_rgbs()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
+<a id="a1b4470dbd217b619b971130f3e902ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b4470dbd217b619b971130f3e902ba2">&#9670;&nbsp;</a></span>mutable_rgbs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Ref&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> &gt; &gt; mutable_rgbs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns mutable access to RGB colors. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a8a9f195c7c9b604373d2d00ba6fd4552" title="Returns if this cloud provides RGB colors. ">has_rgbs()</a></code> must be true. </dd></dl>
 
 </div>
 </div>
@@ -785,7 +974,7 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 </table>
 </div><div class="memdoc">
 
-<p>Returns mutable access to a XYZ values. </p>
+<p>Returns mutable access to an XYZ value. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821" title="Returns if this cloud provides XYZ values. ">has_xyzs()</a></code> must be true. </dd></dl>
 
 </div>
@@ -807,6 +996,55 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 
 <p>Returns mutable access to XYZ values. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821" title="Returns if this cloud provides XYZ values. ">has_xyzs()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
+<a id="af1ac2a91848342b7787b4e9b47f8b023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ac2a91848342b7787b4e9b47f8b023">&#9670;&nbsp;</a></span>normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a>&gt; normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns access to a normal. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals. ">has_normals()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
+<a id="a9571741d81dfbdd077fc5d0e7b8cd27a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9571741d81dfbdd077fc5d0e7b8cd27a">&#9670;&nbsp;</a></span>normals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#ac068134415d867fc146cd4daf31e3f82">T</a> &gt; &gt; normals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns access to normals. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#acaf8885d4f8bf405e1388eb8f5a5dd03" title="Returns if this cloud provides normals. ">has_normals()</a></code> must be true. </dd></dl>
 
 </div>
 </div>
@@ -937,6 +1175,55 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 
 </div>
 </div>
+<a id="abf6c4df4db9fe8623b988f66f4d2ab62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6c4df4db9fe8623b988f66f4d2ab62">&#9670;&nbsp;</a></span>rgb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a>&gt; rgb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns access to an RGB color. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a8a9f195c7c9b604373d2d00ba6fd4552" title="Returns if this cloud provides RGB colors. ">has_rgbs()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
+<a id="ac31c50aa3e697b128aa2ea1157bee250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac31c50aa3e697b128aa2ea1157bee250">&#9670;&nbsp;</a></span>rgbs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> &gt; &gt; rgbs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns access to RGB colors. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a8a9f195c7c9b604373d2d00ba6fd4552" title="Returns if this cloud provides RGB colors. ">has_rgbs()</a></code> must be true. </dd></dl>
+
+</div>
+</div>
 <a id="acee5db2d53b1b703ab6a50eb836e07b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acee5db2d53b1b703ab6a50eb836e07b9">&#9670;&nbsp;</a></span>SetFrom()</h2>
 
@@ -1032,7 +1319,7 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 </table>
 </div><div class="memdoc">
 
-<p>Returns access to a XYZ values. </p>
+<p>Returns access to an XYZ value. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821" title="Returns if this cloud provides XYZ values. ">has_xyzs()</a></code> must be true. </dd></dl>
 
 </div>
@@ -1058,6 +1345,28 @@ The definitions presented here for "feature" and "descriptor" are loosely based 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a358b13be8641b30f83e093f66cdbabba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358b13be8641b30f83e093f66cdbabba">&#9670;&nbsp;</a></span>kDefaultColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c">C</a> kDefaultColor {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afdd6c6a1f7d8ff561217b55d7e5eb61c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdd6c6a1f7d8ff561217b55d7e5eb61c">&#9670;&nbsp;</a></span>kDefaultValue</h2>
 

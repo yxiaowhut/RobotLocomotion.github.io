@@ -6,7 +6,6 @@ var dir_c31e70eccbc53316c75af88c36f7fc19 =
     [ "package_map.h", "attic_2multibody_2parsers_2package__map_8h.html", "attic_2multibody_2parsers_2package__map_8h" ],
     [ "parser_common.cc", "attic_2multibody_2parsers_2parser__common_8cc.html", "attic_2multibody_2parsers_2parser__common_8cc" ],
     [ "parser_common.h", "attic_2multibody_2parsers_2parser__common_8h.html", "attic_2multibody_2parsers_2parser__common_8h" ],
-    [ "parser_path_utils.h", "attic_2multibody_2parsers_2parser__path__utils_8h.html", null ],
     [ "sdf_parser.cc", "attic_2multibody_2parsers_2sdf__parser_8cc.html", "attic_2multibody_2parsers_2sdf__parser_8cc" ],
     [ "sdf_parser.h", "attic_2multibody_2parsers_2sdf__parser_8h.html", "attic_2multibody_2parsers_2sdf__parser_8h" ],
     [ "urdf_parser.cc", "attic_2multibody_2parsers_2urdf__parser_8cc.html", "attic_2multibody_2parsers_2urdf__parser_8cc" ],

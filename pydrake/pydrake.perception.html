@@ -177,6 +177,8 @@
 <blockquote>
 <div><p>kNone :</p>
 <p>kXYZs : XYZ point in Cartesian space.</p>
+<p>kNormals : Normals.</p>
+<p>kRGBs : RGB colors.</p>
 </div></blockquote>
 <dl class="method">
 <dt id="pydrake.perception.BaseField.__init__">
@@ -186,6 +188,16 @@
 <dl class="attribute">
 <dt id="pydrake.perception.BaseField.kNone">
 <code class="descname">kNone</code><em class="property"> = BaseField.kNone</em><a class="headerlink" href="#pydrake.perception.BaseField.kNone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.perception.BaseField.kNormals">
+<code class="descname">kNormals</code><em class="property"> = BaseField.kNormals</em><a class="headerlink" href="#pydrake.perception.BaseField.kNormals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.perception.BaseField.kRGBs">
+<code class="descname">kRGBs</code><em class="property"> = BaseField.kRGBs</em><a class="headerlink" href="#pydrake.perception.BaseField.kRGBs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -340,6 +352,12 @@ cloud registration algorithms for mobile robotics.” Foundations
 and Trends® in Robotics 4.1 (2015): 1-104.</p>
 </div>
 <dl class="attribute">
+<dt id="pydrake.perception.PointCloud.C">
+<code class="descname">C</code><a class="headerlink" href="#pydrake.perception.PointCloud.C" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.uint8</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.perception.PointCloud.D">
 <code class="descname">D</code><a class="headerlink" href="#pydrake.perception.PointCloud.D" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.float32</span></code></p>
@@ -382,7 +400,7 @@ the fields indicated this parameter.</dd>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.perception.PointCloud.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.perception.PointCloud, new_size: int = 0, fields: pydrake.perception.Fields = &lt;pydrake.perception.Fields object at 0x7f1bb69da670&gt;) -&gt; None</li>
+<li>__init__(self: pydrake.perception.PointCloud, new_size: int = 0, fields: pydrake.perception.Fields = &lt;pydrake.perception.Fields object at 0x7f36b61f66f0&gt;) -&gt; None</li>
 </ol>
 <p>Constructs a point cloud of a given <code class="docutils literal"><span class="pre">new_size</span></code>, with the prescribed
 <code class="docutils literal"><span class="pre">fields</span></code>. If <code class="docutils literal"><span class="pre">kDescriptors</span></code> is one of the fields, then
@@ -408,6 +426,18 @@ the fields indicated this parameter.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.perception.PointCloud.has_normals">
+<code class="descname">has_normals</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.perception.PointCloud.has_normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if this cloud provides normals.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.perception.PointCloud.has_rgbs">
+<code class="descname">has_rgbs</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.perception.PointCloud.has_rgbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if this cloud provides RGB colors.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.perception.PointCloud.has_xyzs">
 <code class="descname">has_xyzs</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.perception.PointCloud.has_xyzs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns if this cloud provides XYZ values.</p>
@@ -419,9 +449,49 @@ the fields indicated this parameter.</dd>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.perception.PointCloud.mutable_normal">
+<code class="descname">mutable_normal</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float32[3, 1], flags.writeable]<a class="headerlink" href="#pydrake.perception.PointCloud.mutable_normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mutable access to a normal.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">has_normals()</span></code> must be true.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.perception.PointCloud.mutable_normals">
+<code class="descname">mutable_normals</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float32[3, n], flags.writeable, flags.f_contiguous]<a class="headerlink" href="#pydrake.perception.PointCloud.mutable_normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mutable access to normals.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">has_normals()</span></code> must be true.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.perception.PointCloud.mutable_rgb">
+<code class="descname">mutable_rgb</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[uint8[3, 1], flags.writeable]<a class="headerlink" href="#pydrake.perception.PointCloud.mutable_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mutable access to an RGB color.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">has_rgbs()</span></code> must be true.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.perception.PointCloud.mutable_rgbs">
+<code class="descname">mutable_rgbs</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[uint8[3, n], flags.writeable, flags.f_contiguous]<a class="headerlink" href="#pydrake.perception.PointCloud.mutable_rgbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mutable access to RGB colors.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">has_rgbs()</span></code> must be true.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.perception.PointCloud.mutable_xyz">
 <code class="descname">mutable_xyz</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float32[3, 1], flags.writeable]<a class="headerlink" href="#pydrake.perception.PointCloud.mutable_xyz" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns mutable access to a XYZ values.</p>
+<dd><p>Returns mutable access to an XYZ value.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">has_xyzs()</span></code> must be true.</dd>
@@ -435,6 +505,26 @@ the fields indicated this parameter.</dd>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">has_xyzs()</span></code> must be true.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.perception.PointCloud.normal">
+<code class="descname">normal</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float32[3, 1]]<a class="headerlink" href="#pydrake.perception.PointCloud.normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns access to a normal.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">has_normals()</span></code> must be true.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.perception.PointCloud.normals">
+<code class="descname">normals</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float32[3, n], flags.f_contiguous]<a class="headerlink" href="#pydrake.perception.PointCloud.normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns access to normals.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">has_normals()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -455,6 +545,26 @@ then the values will be truncated. If greater than the present
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.perception.PointCloud.rgb">
+<code class="descname">rgb</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[uint8[3, 1]]<a class="headerlink" href="#pydrake.perception.PointCloud.rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns access to an RGB color.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">has_rgbs()</span></code> must be true.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.perception.PointCloud.rgbs">
+<code class="descname">rgbs</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[uint8[3, n], flags.f_contiguous]<a class="headerlink" href="#pydrake.perception.PointCloud.rgbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns access to RGB colors.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">has_rgbs()</span></code> must be true.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.perception.PointCloud.size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.perception.PointCloud.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of points in this point cloud.</p>
@@ -463,7 +573,7 @@ then the values will be truncated. If greater than the present
 <dl class="method">
 <dt id="pydrake.perception.PointCloud.xyz">
 <code class="descname">xyz</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float32[3, 1]]<a class="headerlink" href="#pydrake.perception.PointCloud.xyz" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns access to a XYZ values.</p>
+<dd><p>Returns access to an XYZ value.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">has_xyzs()</span></code> must be true.</dd>
