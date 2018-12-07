@@ -1,5 +1,6 @@
 var NAVTREEINDEX76 =
 {
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a12c9ae23f7c0c50dc5417ea2d15dd48b":[2,0,0,12,23,0,3],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[2,0,0,12,23,0,0],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a70e95748d802a0f66bba15e61dc5fb0e":[2,0,0,12,23,0,2],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html":[2,0,0,12,23,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX76 =
 "structdrake_1_1solvers_1_1_scs_solver_details.html":[2,0,0,16,52],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a175a256729d92d673605def5f6eac769":[2,0,0,16,52,11],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[2,0,0,16,52,0],
-"structdrake_1_1solvers_1_1_scs_solver_details.html#a4f04309606118f6deab8739e9496d6c6":[2,0,0,16,52,9],
-"structdrake_1_1solvers_1_1_scs_solver_details.html#a50ed0b0f95656409f8d69b68cae7a3f6":[2,0,0,16,52,5]
+"structdrake_1_1solvers_1_1_scs_solver_details.html#a4f04309606118f6deab8739e9496d6c6":[2,0,0,16,52,9]
 };

@@ -122,9 +122,10 @@ var NAVTREEINDEX53 =
 "drake__mock__lcm__test_8cc.html":[3,0,0,7,0,3],
 "drake__mock__lcm__test_8cc.html#a04c9e86fe465372422f11805f8a9693a":[3,0,0,7,0,3,0],
 "drake__optional_8h.html":[3,0,0,3,24],
-"drake__optional_8h.html#a9f2ec0f640175b49517f43f37073bfc8":[3,0,0,3,24,1],
-"drake__optional_8h.html#acd293644b847dc4549de80a090d66625":[3,0,0,3,24,2],
-"drake__optional_8h.html#ae4d486dcbda537cc844579ca87008bc9":[3,0,0,3,24,0],
+"drake__optional_8h.html#a9f2ec0f640175b49517f43f37073bfc8":[3,0,0,3,24,2],
+"drake__optional_8h.html#acd293644b847dc4549de80a090d66625":[3,0,0,3,24,3],
+"drake__optional_8h.html#acd47212cacf0b3909b8c3571614fdb72":[3,0,0,3,24,0],
+"drake__optional_8h.html#ae4d486dcbda537cc844579ca87008bc9":[3,0,0,3,24,1],
 "drake__optional__pybind_8h.html":[3,0,0,2,0,0,5],
 "drake__optional__test_8cc.html":[3,0,0,3,1,32],
 "drake__path_8cc.html":[3,0,0,3,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "dynamic__programming_8cc.html#a6c8d5619eb8dc7a8e280eb123deac6fe":[3,0,0,14,1,2,0],
 "dynamic__programming_8cc.html#ad9a3626540ed82521ce862855a65f56f":[3,0,0,14,1,2,1],
 "dynamic__programming_8h.html":[3,0,0,14,1,3],
-"dynamic__programming_8h.html#a6c8d5619eb8dc7a8e280eb123deac6fe":[3,0,0,14,1,3,2],
-"dynamic__programming_8h.html#ad9a3626540ed82521ce862855a65f56f":[3,0,0,14,1,3,3]
+"dynamic__programming_8h.html#a6c8d5619eb8dc7a8e280eb123deac6fe":[3,0,0,14,1,3,2]
 };

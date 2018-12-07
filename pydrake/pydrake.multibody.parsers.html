@@ -37,7 +37,7 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="pydrake  documentation" href="index.html"/>
         <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
-        <link rel="next" title="pydrake.multibody.rigid_body" href="pydrake.multibody.rigid_body.html"/>
+        <link rel="next" title="pydrake.multibody.parsing" href="pydrake.multibody.parsing.html"/>
         <link rel="prev" title="pydrake.multibody.multibody_tree.parsing" href="pydrake.multibody.multibody_tree.parsing.html"/> 
 
   
@@ -107,6 +107,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
@@ -184,86 +185,7 @@
             
   <div class="section" id="module-pydrake.multibody.parsers">
 <span id="pydrake-multibody-parsers"></span><h1>pydrake.multibody.parsers<a class="headerlink" href="#module-pydrake.multibody.parsers" title="Permalink to this headline">¶</a></h1>
-<p>Tools for loading robots from various files</p>
-<dl class="class">
-<dt id="pydrake.multibody.parsers.PackageMap">
-<em class="property">class </em><code class="descclassname">pydrake.multibody.parsers.</code><code class="descname">PackageMap</code><a class="headerlink" href="#pydrake.multibody.parsers.PackageMap" title="Permalink to this definition">¶</a></dt>
-<dd><p>Maps ROS package names to their full path on the local file system. It
-is used by the SDF and URDF parsers when parsing files that reference
-ROS packages for resources like mesh files.</p>
-<dl class="method">
-<dt id="pydrake.multibody.parsers.PackageMap.Add">
-<code class="descname">Add</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsers.PackageMap</em>, <em>arg0: unicode</em>, <em>arg1: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsers.PackageMap.Add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds package <code class="docutils literal"><span class="pre">package_name</span></code> and its path, <code class="docutils literal"><span class="pre">package_path</span></code>. Aborts
-if <code class="docutils literal"><span class="pre">package_name</span></code> is already present in this PackageMap, or if
-<code class="docutils literal"><span class="pre">package_path</span></code> does not exist.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.parsers.PackageMap.Contains">
-<code class="descname">Contains</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsers.PackageMap</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.multibody.parsers.PackageMap.Contains" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns true if and only if this PackageMap contains <code class="docutils literal"><span class="pre">package_name</span></code>.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.parsers.PackageMap.GetPath">
-<code class="descname">GetPath</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsers.PackageMap</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; unicode<a class="headerlink" href="#pydrake.multibody.parsers.PackageMap.GetPath" title="Permalink to this definition">¶</a></dt>
-<dd><p>Obtains the path associated with package <code class="docutils literal"><span class="pre">package_name</span></code>. Aborts if
-no package named <code class="docutils literal"><span class="pre">package_name</span></code> exists in this PackageMap.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.parsers.PackageMap.PopulateFromEnvironment">
-<code class="descname">PopulateFromEnvironment</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsers.PackageMap</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsers.PackageMap.PopulateFromEnvironment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Obtains one or more paths from environment variable
-<code class="docutils literal"><span class="pre">environment_variable</span></code>. Crawls downard through the directory tree(s)
-starting from the path(s) searching for <code class="docutils literal"><span class="pre">package.xml</span></code> files. For
-each of these files, this method adds a new entry into this PackageMap
-where the key is the package name as specified within <code class="docutils literal"><span class="pre">package.xml</span></code>
-and the value is the path to the <code class="docutils literal"><span class="pre">package.xml</span></code> file. Multiple paths
-can be specified by separating them using the ‘:’ symbol. For example,
-the environment variable can contain [path 1]:[path 2]:[path 3] to
-search three different paths.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.parsers.PackageMap.PopulateFromFolder">
-<code class="descname">PopulateFromFolder</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsers.PackageMap</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsers.PackageMap.PopulateFromFolder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Crawls down the directory tree starting at <code class="docutils literal"><span class="pre">path</span></code> searching for
-directories containing the file <code class="docutils literal"><span class="pre">package.xml</span></code>. For each of these
-directories, this method adds a new entry into this PackageMap where
-the key is the package name as specified within <code class="docutils literal"><span class="pre">package.xml</span></code> and
-the directory’s path is the value.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.parsers.PackageMap.PopulateUpstreamToDrake">
-<code class="descname">PopulateUpstreamToDrake</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsers.PackageMap</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsers.PackageMap.PopulateUpstreamToDrake" title="Permalink to this definition">¶</a></dt>
-<dd><p>Crawls up the directory tree from <code class="docutils literal"><span class="pre">model_file</span></code> to <code class="docutils literal"><span class="pre">drake</span></code>
-searching for <code class="docutils literal"><span class="pre">package.xml</span></code> files. Adds the packages described by
-these <code class="docutils literal"><span class="pre">package.xml</span></code> files. If <code class="docutils literal"><span class="pre">model_file</span></code> is not in <code class="docutils literal"><span class="pre">drake</span></code>,
-this method returns without doing anything.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">model_file</span></code>:</dt>
-<dd>The model file whose directory is the start of the search for
-<code class="docutils literal"><span class="pre">package.xml</span></code> files. This file must be an SDF or URDF file.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.parsers.PackageMap.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsers.PackageMap</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsers.PackageMap.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>A constructor that initializes an empty map.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.parsers.PackageMap.size">
-<code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsers.PackageMap</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.parsers.PackageMap.size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of entries in this PackageMap.</p>
-</dd></dl>
-
-</dd></dl>
-
+<p>Legacy module related to RigidBodyTree.</p>
 </div>
 
 
@@ -276,7 +198,7 @@ this method returns without doing anything.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pydrake.multibody.rigid_body.html" class="btn btn-neutral float-right" title="pydrake.multibody.rigid_body" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pydrake.multibody.parsing.html" class="btn btn-neutral float-right" title="pydrake.multibody.parsing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="pydrake.multibody.multibody_tree.parsing.html" class="btn btn-neutral" title="pydrake.multibody.multibody_tree.parsing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

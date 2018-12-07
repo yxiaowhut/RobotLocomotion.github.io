@@ -1,5 +1,6 @@
 var NAVTREEINDEX74 =
 {
+"struct_position_indices.html#a3638a4a6675620cc7b90390e6309e908":[2,0,51,4],
 "struct_position_indices.html#a62ff9f957a671ccc4243fa6b5261193e":[2,0,51,0],
 "struct_position_indices.html#a765011dc31c90c8d127db47173c69e61":[2,0,51,3],
 "struct_position_indices.html#a8530aadb7b607ee17fd2628ed70b3ead":[2,0,51,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX74 =
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html":[2,0,0,6,7,0,2],
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html#a10fbb08d4cfc3dad3047dce18cf31a09":[2,0,0,6,7,0,2,1],
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html#aa4f230408be3e94704b85754b9a6fb7d":[2,0,0,6,7,0,2,2],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html#af2ae883788df5cbe59b031062d660d9b":[2,0,0,6,7,0,2,0],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_info.html":[2,0,0,6,7,0,3]
+"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html#af2ae883788df5cbe59b031062d660d9b":[2,0,0,6,7,0,2,0]
 };

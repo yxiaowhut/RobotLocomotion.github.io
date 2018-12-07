@@ -107,6 +107,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.multibody_tree.html">pydrake.multibody.multibody_tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.rigid_body_tree</a></li>
@@ -214,7 +215,7 @@ terrain will be at Z = 0.</dd>
 
 <dl class="function">
 <dt id="pydrake.multibody.rigid_body_tree.AddModelInstanceFromUrdfStringSearchingInRosPackages">
-<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstanceFromUrdfStringSearchingInRosPackages</code><span class="sig-paren">(</span><em>arg0: unicode</em>, <em>arg1: pydrake.multibody.parsers.PackageMap</em>, <em>arg2: unicode</em>, <em>arg3: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>arg4: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>arg5: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstanceFromUrdfStringSearchingInRosPackages" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstanceFromUrdfStringSearchingInRosPackages</code><span class="sig-paren">(</span><em>arg0: unicode</em>, <em>arg1: pydrake.multibody.parsing.PackageMap</em>, <em>arg2: unicode</em>, <em>arg3: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>arg4: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>arg5: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstanceFromUrdfStringSearchingInRosPackages" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is the same as AddModelInstanceFromUrdfString() except it
 has an additional parameter called <code class="docutils literal"><span class="pre">package_map</span></code>. Parameter
 <code class="docutils literal"><span class="pre">package_map</span></code> contains a mapping from ROS package names to their
@@ -312,7 +313,7 @@ unique within the <code class="docutils literal"><span class="pre">RigidBodyTree
 
 <dl class="function">
 <dt id="pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfStringSearchingInRosPackages">
-<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstancesFromSdfStringSearchingInRosPackages</code><span class="sig-paren">(</span><em>arg0: unicode</em>, <em>arg1: pydrake.multibody.parsers.PackageMap</em>, <em>arg2: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>arg3: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>arg4: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfStringSearchingInRosPackages" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.multibody.rigid_body_tree.</code><code class="descname">AddModelInstancesFromSdfStringSearchingInRosPackages</code><span class="sig-paren">(</span><em>arg0: unicode</em>, <em>arg1: pydrake.multibody.parsing.PackageMap</em>, <em>arg2: pydrake.multibody.rigid_body_tree.FloatingBaseType</em>, <em>arg3: pydrake.multibody.rigid_body_tree.RigidBodyFrame</em>, <em>arg4: pydrake.multibody.rigid_body_tree.RigidBodyTree</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, int]<a class="headerlink" href="#pydrake.multibody.rigid_body_tree.AddModelInstancesFromSdfStringSearchingInRosPackages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the model or models defined within an SDF description to
 <code class="docutils literal"><span class="pre">tree</span></code>. One instance of each model is added.</p>
 <p>This method has input parameter <code class="docutils literal"><span class="pre">package_map</span></code>. This parameter is
@@ -869,7 +870,7 @@ is selected based on its name.</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyTree) -&gt; None</li>
-<li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, urdf_filename: unicode, package_map: pydrake.multibody.parsers.PackageMap, floating_base_type: pydrake.multibody.rigid_body_tree.FloatingBaseType = FloatingBaseType.kRollPitchYaw) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.rigid_body_tree.RigidBodyTree, urdf_filename: unicode, package_map: pydrake.multibody.parsing.PackageMap, floating_base_type: pydrake.multibody.rigid_body_tree.FloatingBaseType = FloatingBaseType.kRollPitchYaw) -&gt; None</li>
 </ol>
 <p>A constructor that initializes the gravity vector to be [0, 0, -9.81]
 and a single RigidBody named “world”. This RigidBody can be accessed

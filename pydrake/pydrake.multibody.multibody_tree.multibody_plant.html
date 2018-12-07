@@ -113,6 +113,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
@@ -1117,7 +1118,7 @@ the given vector.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7f36b3926970&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7f7ad0b978f0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Welds frames A and B with relative pose <code class="docutils literal"><span class="pre">X_AB</span></code>. That is, the pose of
 frame B in frame A is fixed, with value <code class="docutils literal"><span class="pre">X_AB</span></code>. The call to this
 method creates and adds a new WeldJoint to the model. The new

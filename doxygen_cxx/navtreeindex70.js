@@ -1,5 +1,6 @@
 var NAVTREEINDEX70 =
 {
+"rigid__body__tree__construction_8cc.html":[3,0,0,0,1,50],
 "rigid__body__tree__construction_8cc.html#a735ad214ccc90b7267ca9adf5557827b":[3,0,0,0,1,50,0],
 "rigid__body__tree__construction_8h.html":[3,0,0,0,1,51],
 "rigid__body__tree__construction_8h.html#a735ad214ccc90b7267ca9adf5557827b":[3,0,0,0,1,51,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX70 =
 "rotation__matrix__test_8cc.html#a2f4697a1403bde27f841ae00a49bc164":[3,0,0,9,0,20,0],
 "rotational__inertia_8cc.html":[3,0,0,11,4,52],
 "rotational__inertia_8h.html":[3,0,0,11,4,53],
-"rotational__inertia__test_8cc.html":[3,0,0,11,4,3,20],
-"rotational__inertia__test_8cc.html#a36983370390ca584e5d89edbd9204c0f":[3,0,0,11,4,3,20,0]
+"rotational__inertia__test_8cc.html":[3,0,0,11,4,3,20]
 };
