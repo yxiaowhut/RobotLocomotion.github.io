@@ -89,6 +89,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1multibody.html','');
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::multibody Namespace Reference</div>  </div>
@@ -210,6 +211,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structure to store the topological information associated with an entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>.  <a href="classdrake_1_1multibody_1_1_multibody_tree_topology.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps ROS package names to their full path on the local file system.  <a href="classdrake_1_1multibody_1_1_package_map.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses SDF and URDF input files into a MultibodyPlant and (optionally) a SceneGraph.  <a href="classdrake_1_1multibody_1_1_parser.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_position_kinematics_cache.html">PositionKinematicsCache</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is one of the cache entries in <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_context.html" title="MultibodyTreeContext is an object that contains all the information needed to uniquely determine the ...">MultibodyTreeContext</a>.  <a href="classdrake_1_1multibody_1_1_position_kinematics_cache.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,6 +304,14 @@ Typedefs</h2></td></tr>
 <tr class="memitem:af65439a17091283a89eb12f1955c6db0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class ModelInstanceTag &gt;</td></tr>
 <tr class="memdesc:af65439a17091283a89eb12f1955c6db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify model instances by index within a multibody tree system.  <a href="#af65439a17091283a89eb12f1955c6db0">More...</a><br /></td></tr>
 <tr class="separator:af65439a17091283a89eb12f1955c6db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ad95b5f6a8d72582ad91a1aca26d76658"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> { <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b">kQDot</a>, 
+<a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a">kV</a>
+ }<tr class="memdesc:ad95b5f6a8d72582ad91a1aca26d76658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration that distinguishes between flavors of Jacobians based on the variable with respect to which they are taken.  <a href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ad95b5f6a8d72582ad91a1aca26d76658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -391,6 +406,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ae9d8e773e197e654319e61059e33fd42"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ae9d8e773e197e654319e61059e33fd42">operator-</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_MB_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_MAb_E)</td></tr>
 <tr class="memdesc:ae9d8e773e197e654319e61059e33fd42"><td class="mdescLeft">&#160;</td><td class="mdescRight">The addition of two spatial velocities relates to the composition of the spatial velocities for two frames given we know the relative spatial velocity between them, see <a class="el" href="namespacedrake_1_1multibody.html#a33178545a5ab8df3f7b602e1c0aef4d8" title="Performs the addition of two spatial velocities. ">operator+(const SpatialVelocity&lt;T&gt;&amp;, const SpatialVelocity&lt;T&gt;&amp;)</a> for further details.  <a href="#ae9d8e773e197e654319e61059e33fd42">More...</a><br /></td></tr>
 <tr class="separator:ae9d8e773e197e654319e61059e33fd42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ade8909cd9eb3bd863970bccff82ec8"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a6ade8909cd9eb3bd863970bccff82ec8">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;package_map)</td></tr>
+<tr class="separator:a6ade8909cd9eb3bd863970bccff82ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a777a2894881e59d27fc9eb7b4413406f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a777a2894881e59d27fc9eb7b4413406f">world_model_instance</a> ()</td></tr>
 <tr class="memdesc:a777a2894881e59d27fc9eb7b4413406f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model instance containing the <em>world</em> body.  <a href="#a777a2894881e59d27fc9eb7b4413406f">More...</a><br /></td></tr>
 <tr class="separator:a777a2894881e59d27fc9eb7b4413406f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -550,6 +567,37 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type used to identify model instances by index within a multibody tree system. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad95b5f6a8d72582ad91a1aca26d76658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95b5f6a8d72582ad91a1aca26d76658">&#9670;&nbsp;</a></span>JacobianWrtVariable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enumeration that distinguishes between flavors of Jacobians based on the variable with respect to which they are taken. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b"></a>kQDot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a"></a>kV&#160;</td><td class="fielddoc"><p>J = ∂V/∂q̇ </p>
+<p>J = ∂V/∂v </p>
+</td></tr>
+</table>
 
 </div>
 </div>
@@ -1330,6 +1378,34 @@ Functions</h2></td></tr>
 <p>Physically, the subtraction operation allow us to compute the relative velocity between two frames. As an example, consider having the the spatial velocities <code>V_MA</code> and <code>V_MB</code> of two frames A and B respectively measured in the same frame M. The velocity of B in A can be obtained as: </p><pre>
   V_AB_E = V_MB_E - V_MAb_E = V_AB_E = V_MB_E - V_MA_E.Shift(p_AB_E)
 </pre><p> where we have expressed all quantities in a common frame E. Notice that, as explained in the documentation for <a class="el" href="namespacedrake_1_1multibody.html#a33178545a5ab8df3f7b602e1c0aef4d8" title="Performs the addition of two spatial velocities. ">operator+(const SpatialVelocity&lt;T&gt;&amp;, const SpatialVelocity&lt;T&gt;&amp;)</a> a shift operation with <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a6f3d914695e66945fc14bb098058b1f3" title="Shift of a SpatialVelocity from one point on a rigid body or frame to another point on the same body ...">SpatialVelocity::Shift()</a> operation is needed. </p>
+
+</div>
+</div>
+<a id="a6ade8909cd9eb3bd863970bccff82ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ade8909cd9eb3bd863970bccff82ec8">&#9670;&nbsp;</a></span>operator<<()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::multibody::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>package_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,10 +1,10 @@
-<map id="drake/multibody/multibody_tree/frame.h" name="drake/multibody/multibody_tree/frame.h">
+<map id="drake/multibody/tree/frame.h" name="drake/multibody/tree/frame.h">
 <area shape="rect" id="node4" href="$common_2autodiff_8h.html" title="drake/common/autodiff.h" alt="" coords="659,549,845,575"/>
 <area shape="rect" id="node24" href="$nice__type__name_8h.html" title="drake/common/nice_type\l_name.h" alt="" coords="2744,809,2931,851"/>
-<area shape="rect" id="node30" href="$frame__base_8h.html" title="drake/multibody/multibody\l_tree/frame_base.h" alt="" coords="1131,363,1330,404"/>
-<area shape="rect" id="node32" href="$multibody__tree__indexes_8h.html" title="drake/multibody/multibody\l_tree/multibody_tree_indexes.h" alt="" coords="1065,631,1293,672"/>
-<area shape="rect" id="node35" href="$multibody__tree__topology_8h.html" title="This file defines the topological structures which represent the logical connectivities between multi..." alt="" coords="1504,541,1739,583"/>
-<area shape="rect" id="node39" href="$multibody__tree__context_8h.html" title="drake/multibody/multibody\l_tree/multibody_tree_context.h" alt="" coords="2467,95,2693,136"/>
+<area shape="rect" id="node30" href="$frame__base_8h.html" title="drake/multibody/tree\l/frame_base.h" alt="" coords="1134,363,1293,404"/>
+<area shape="rect" id="node32" href="$multibody__tree__indexes_8h.html" title="drake/multibody/tree\l/multibody_tree_indexes.h" alt="" coords="1064,631,1259,672"/>
+<area shape="rect" id="node35" href="$multibody__tree__topology_8h.html" title="This file defines the topological structures which represent the logical connectivities between multi..." alt="" coords="1486,541,1687,583"/>
+<area shape="rect" id="node39" href="$multibody__tree__context_8h.html" title="drake/multibody/tree\l/multibody_tree_context.h" alt="" coords="2457,95,2650,136"/>
 <area shape="rect" id="node7" href="$eigen__autodiff__limits_8h.html" title="drake/common/eigen\l_autodiff_limits.h" alt="" coords="1733,720,1893,761"/>
 <area shape="rect" id="node9" href="$eigen__autodiff__types_8h.html" title="This file contains abbreviated definitions for certain uses of AutoDiffScalar that are commonly used ..." alt="" coords="6632,720,6792,761"/>
 <area shape="rect" id="node15" href="$autodiffxd_8h.html" title="drake/common/autodiffxd.h" alt="" coords="93,638,296,665"/>
@@ -17,13 +17,13 @@
 <area shape="rect" id="node23" href="$dummy__value_8h.html" title="drake/common/dummy\l_value.h" alt="" coords="1918,720,2093,761"/>
 <area shape="rect" id="node21" href="$double__overloads_8h.html" title="Provides necessary operations on double to have it as a ScalarType in drake. " alt="" coords="365,809,533,851"/>
 <area shape="rect" id="node28" href="$never__destroyed_8h.html" title="drake/common/never\l_destroyed.h" alt="" coords="2542,899,2703,940"/>
-<area shape="rect" id="node31" href="$multibody__tree__element_8h.html" title="drake/multibody/multibody\l_tree/multibody_tree_element.h" alt="" coords="1115,452,1346,493"/>
+<area shape="rect" id="node31" href="$multibody__tree__element_8h.html" title="drake/multibody/tree\l/multibody_tree_element.h" alt="" coords="1114,452,1313,493"/>
 <area shape="rect" id="node33" href="$type__safe__index_8h.html" title="drake/common/type_safe\l_index.h" alt="" coords="1470,720,1658,761"/>
 <area shape="rect" id="node34" href="$drake__throw_8h.html" title="Provides a convenient wrapper to throw an exception when a condition is unmet. " alt="" coords="1369,809,1530,851"/>
 <area shape="rect" id="node40" href="$basic__vector_8h.html" title="drake/systems/framework\l/basic_vector.h" alt="" coords="5203,631,5397,672"/>
-<area shape="rect" id="node46" href="$context_8h.html" title="drake/systems/framework\l/context.h" alt="" coords="3767,273,3961,315"/>
+<area shape="rect" id="node46" href="$context_8h.html" title="drake/systems/framework\l/context.h" alt="" coords="3769,273,3962,315"/>
 <area shape="rect" id="node60" href="$value_8h.html" title="drake/systems/framework\l/value.h" alt="" coords="3094,720,3287,761"/>
-<area shape="rect" id="node71" href="$continuous__state_8h.html" title="drake/systems/framework\l/continuous_state.h" alt="" coords="5987,541,6181,583"/>
+<area shape="rect" id="node71" href="$continuous__state_8h.html" title="drake/systems/framework\l/continuous_state.h" alt="" coords="6007,541,6201,583"/>
 <area shape="rect" id="node74" href="$leaf__context_8h.html" title="drake/systems/framework\l/leaf_context.h" alt="" coords="4925,184,5118,225"/>
 <area shape="rect" id="node45" href="$vector__base_8h.html" title="drake/systems/framework\l/vector_base.h" alt="" coords="6262,720,6455,761"/>
 <area shape="rect" id="node47" href="$drake__optional_8h.html" title="Provides drake::optional as an alias for the appropriate implementation of std::optional or std::expe..." alt="" coords="3870,809,4031,851"/>
@@ -35,7 +35,7 @@
 <area shape="rect" id="node54" href="$unused_8h.html" title="drake/common/unused.h" alt="" coords="3105,459,3287,486"/>
 <area shape="rect" id="node55" href="$cache_8h.html" title="Declares CacheEntryValue and Cache, which is the container for cache entry values. " alt="" coords="3085,541,3278,583"/>
 <area shape="rect" id="node62" href="$dependency__tracker_8h.html" title="Declares DependencyTracker and DependencyGraph which is the container for trackers. " alt="" coords="3465,452,3658,493"/>
-<area shape="rect" id="node65" href="$fixed__input__port__value_8h.html" title="drake/systems/framework\l/fixed_input_port_value.h" alt="" coords="4077,541,4270,583"/>
+<area shape="rect" id="node65" href="$fixed__input__port__value_8h.html" title="drake/systems/framework\l/fixed_input_port_value.h" alt="" coords="4055,541,4249,583"/>
 <area shape="rect" id="node56" href="$copyable__unique__ptr_8h.html" title="drake/common/copyable\l_unique_ptr.h" alt="" coords="3451,809,3634,851"/>
 <area shape="rect" id="node58" href="$framework__common_8h.html" title="drake/systems/framework\l/framework_common.h" alt="" coords="3769,631,3962,672"/>
 <area shape="rect" id="node59" href="$drake__variant_8h.html" title="Provides drake::variant as an alias for the appropriate implementation of std::variant or or stx::var..." alt="" coords="3769,720,3930,761"/>

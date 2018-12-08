@@ -3,6 +3,7 @@ var namespacedrake_1_1manipulation_1_1schunk__wsg =
     [ "MultibodyForceToWsgForceSystem", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system" ],
     [ "SchunkWsgCommandReceiver", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver" ],
     [ "SchunkWsgCommandSender", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender" ],
+    [ "SchunkWsgCommandTranslator", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_translator.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_translator" ],
     [ "SchunkWsgController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller" ],
     [ "SchunkWsgPdController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_pd_controller.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_pd_controller" ],
     [ "SchunkWsgPlainController", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller" ],

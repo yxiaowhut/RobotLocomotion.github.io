@@ -32,6 +32,7 @@ var classdrake_1_1multibody_1_1_multibody_tree =
     [ "CalcGravityGeneralizedForces", "classdrake_1_1multibody_1_1_multibody_tree.html#a0b1293f0e09ec2d3df0a9eaeab6baa9a", null ],
     [ "CalcInverseDynamics", "classdrake_1_1multibody_1_1_multibody_tree.html#af3d9f1dfe387a173b84c49a5bbe5a4c2", null ],
     [ "CalcInverseDynamics", "classdrake_1_1multibody_1_1_multibody_tree.html#a868db3695aaead74e12f38a0f40c442d", null ],
+    [ "CalcJacobianSpatialVelocity", "classdrake_1_1multibody_1_1_multibody_tree.html#a78c0dbd7529fadcbf1fd550a9fd2e80b", null ],
     [ "CalcMassMatrixViaInverseDynamics", "classdrake_1_1multibody_1_1_multibody_tree.html#ac3238273c2c927101e4515147bed17f6", null ],
     [ "CalcPointsAnalyticalJacobianExpressedInWorld", "classdrake_1_1multibody_1_1_multibody_tree.html#aa08a137307614d55094430b858f0e8cb", null ],
     [ "CalcPointsGeometricJacobianExpressedInWorld", "classdrake_1_1multibody_1_1_multibody_tree.html#ae28789d38fa6e3e0fc382fa3b0b0b882", null ],

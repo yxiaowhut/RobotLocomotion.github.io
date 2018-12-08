@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_multibody_
 <p>MultibodyTree provides a representation for a physical system consisting of a collection of interconnected rigid and deformable bodies.  
  <a href="classdrake_1_1multibody_1_1_multibody_tree.html#details">More...</a></p>
 
-<p><code>#include &lt;drake/multibody/multibody_tree/rigid_body.h&gt;</code></p>
+<p><code>#include &lt;drake/multibody/tree/rigid_body.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -452,6 +452,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9de2905e3f4541d4714e0a63a442e650"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a9de2905e3f4541d4714e0a63a442e650">CalcBiasForFrameGeometricJacobianExpressedInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_F, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;p_FP) const</td></tr>
 <tr class="memdesc:a9de2905e3f4541d4714e0a63a442e650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a frame <code>Fp</code> defined by shifting a frame F from its origin <code>Fo</code> to a new origin <code>P</code>, this method computes the bias term <code>Ab_WFp</code> associated with the spatial acceleration <code>A_WFp</code> a frame <code>Fp</code> instantaneously moving with a frame F at a fixed position <code>p_FP</code>.  <a href="#a9de2905e3f4541d4714e0a63a442e650">More...</a><br /></td></tr>
 <tr class="separator:a9de2905e3f4541d4714e0a63a442e650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c0dbd7529fadcbf1fd550a9fd2e80b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a78c0dbd7529fadcbf1fd550a9fd2e80b">CalcJacobianSpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;p_BP, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Jw_ABp_E) const</td></tr>
+<tr class="memdesc:a78c0dbd7529fadcbf1fd550a9fd2e80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Jacobian of spatial velocity for a frame instantaneously moving with a specified frame in the model.  <a href="#a78c0dbd7529fadcbf1fd550a9fd2e80b">More...</a><br /></td></tr>
+<tr class="separator:a78c0dbd7529fadcbf1fd550a9fd2e80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Computational methods</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These methods expose the computational capabilities of <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> to compute kinematics, forward and inverse dynamics, and Jacobian matrices, among others.</p>
 <p>These methods follow Drake's naming scheme for methods performing a computation and therefore are named <code>CalcXXX()</code>, where <code>XXX</code> corresponds to the quantity or object of interest to be computed. They all take a <code><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a></code> as an input argument storing the state of the multibody system. A <code>std::bad_cast</code> exception is thrown if the passed context is not a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_context.html" title="MultibodyTreeContext is an object that contains all the information needed to uniquely determine the ...">MultibodyTreeContext</a>. </p>
@@ -2056,6 +2059,93 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 <dl class="section pre"><dt>Precondition</dt><dd>The position kinematics <code>pc</code> must have been previously updated with a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a8567e741678adde3a08c0b317d908d72" title="Computes into the position kinematics pc all the kinematic quantities that depend on the generalized ...">CalcPositionKinematicsCache()</a>. </dd>
 <dd>
 The velocity kinematics <code>vc</code> must have been previously updated with a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a7d7201e5e8f39b3f08f934f0bca3108b" title="Computes all the kinematic quantities that depend on the generalized velocities and stores them in th...">CalcVelocityKinematicsCache()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a78c0dbd7529fadcbf1fd550a9fd2e80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c0dbd7529fadcbf1fd550a9fd2e80b">&#9670;&nbsp;</a></span>CalcJacobianSpatialVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcJacobianSpatialVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a>&#160;</td>
+          <td class="paramname"><em>with_respect_to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_BP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>Jw_ABp_E</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the Jacobian of spatial velocity for a frame instantaneously moving with a specified frame in the model. </p>
+<p>Consider a point P instantaneously moving with a frame B with position <code>p_BP</code> in that frame. <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame), meaning that it is associated with a material point of a Body. ">Frame</a> <code>Bp</code> is the frame defined by shifting frame B with origin at <code>Bo</code> to a new origin at point P. The spatial velocity <code>V_ABp_E</code> of frame <code>Bp</code> measured in a frame A and expressed in a frame E can be expressed as: </p><pre>
+  V_ABp_E(q, w) = Jw_ABp_E(q)⋅w
+</pre><p> where w represents</p><ul>
+<li>the time derivative of the generalized position vector q̇, if <code>with_respect_to</code> is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b">JacobianWrtVariable::kQDot</a>.</li>
+<li>the generalized velocity vector v, if <code>with_respect_to</code> is <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂q̇ ">JacobianWrtVariable::kV</a>.</li>
+</ul>
+<p>This method computes <code>Jw_ABp_E(q)</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. It stores the generalized positions q. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum indicating whether <code>Jw_ABp_E</code> converts generalized velocities or time-derivatives of generalized positions to spatial velocities. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The position <code>p_BP</code> of point P is measured and expressed in this frame. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_BP</td><td>The (fixed) position of the origin <code>P</code> of frame <code>Bp</code> as measured and expressed in frame B. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The second frame in which the spatial velocity <code>V_ABp</code> is measured. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame), meaning that it is associated with a material point of a Body. ">Frame</a> in which the velocity V_ABp_E, and therefore the Jacobian Jw_ABp_E is expressed. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">Jw_ABp_E</td><td>The Jacobian <code>Jw_ABp_E(q)</code>, function of the generalized positions q only. This Jacobian relates to the spatial velocity <code>V_ABp_E</code> of frame <code>Bp</code> in <code>A</code> and expressed in <code>E</code> by: <pre>
+    V_ABp_E(q, w) = Jw_ABp_E(q)⋅w </pre> Therefore <code>Jw_ABp_E</code> is a matrix of size <code>6 x nz</code>, where <code>nz</code> is the number of elements in w. On input, matrix <code>Jv_ABp_E</code> <b>must</b> have size <code>6 x nz</code> or this method throws an exception. Given a <code>6 x nz</code> Jacobian J, let Jr be the <code>3 x nz</code> rotational part (top 3 rows) and Jt be the translational part (bottom 3 rows). These can be obtained as follows: <div class="fragment"><div class="line">Jr_ABp_E = Jw_ABp_E.topRows&lt;3&gt;();</div><div class="line">Jt_ABp_E = Jw_ABp_E.bottomRows&lt;3&gt;();</div></div><!-- fragment --> This ordering is consistent with the internal storage of the <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html" title="This class is used to represent a spatial velocity (also called a twist) that combines rotational (an...">SpatialVelocity</a> class. Therefore the following operations results in a valid spatial velocity: <pre>
+    <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity&lt;double&gt;</a> V_ABp(Jw_ABp * w); </pre></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>Jw_ABp_E</code> is nullptr or if it is not of size <code>6 x nz</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5609,9 +5699,9 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>drake/multibody/multibody_tree/<a class="el" href="body_8h.html">body.h</a></li>
-<li>drake/multibody/multibody_tree/<a class="el" href="multibody__tree_8h.html">multibody_tree.h</a></li>
-<li>drake/multibody/multibody_tree/<a class="el" href="multibody__tree_8cc.html">multibody_tree.cc</a></li>
+<li>drake/multibody/tree/<a class="el" href="body_8h.html">body.h</a></li>
+<li>drake/multibody/tree/<a class="el" href="multibody__tree_8h.html">multibody_tree.h</a></li>
+<li>drake/multibody/tree/<a class="el" href="multibody__tree_8cc.html">multibody_tree.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

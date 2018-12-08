@@ -9,6 +9,8 @@ var dir_d42ade6542543a8b520c5d5191846d08 =
     [ "iiwa_controller.cc", "iiwa__controller_8cc.html", "iiwa__controller_8cc" ],
     [ "iiwa_lcm.cc", "iiwa__lcm_8cc.html", "iiwa__lcm_8cc" ],
     [ "iiwa_lcm.h", "iiwa__lcm_8h.html", [
+      [ "IiwaCommand", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command.html", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command" ],
+      [ "IiwaCommandTranslator", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command_translator.html", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command_translator" ],
       [ "IiwaCommandReceiver", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command_receiver.html", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command_receiver" ],
       [ "IiwaCommandSender", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command_sender.html", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command_sender" ],
       [ "IiwaStatusReceiver", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_status_receiver.html", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_status_receiver" ],

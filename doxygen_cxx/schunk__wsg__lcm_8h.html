@@ -92,10 +92,14 @@ $(document).ready(function(){initNavTree('schunk__wsg__lcm_8h.html','');});
 <div class="title">schunk_wsg_lcm.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;drake/lcmt_schunk_wsg_command.hpp&quot;</code><br />
 <code>#include &quot;drake/lcmt_schunk_wsg_status.hpp&quot;</code><br />
+<code>#include &quot;drake/manipulation/schunk_wsg/gen/schunk_wsg_command.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="leaf__system_8h.html">drake/systems/framework/leaf_system.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcm__and__vector__base__translator_8h.html">drake/systems/lcm/lcm_and_vector_base_translator.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for schunk_wsg_lcm.h:</div>
 <div class="dyncontent">
@@ -111,8 +115,11 @@ This graph shows which files directly or indirectly include this file:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_translator.html">SchunkWsgCommandTranslator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A translator between the LCM message type lcmt_schunk_wsg_command and its vectorized representation, SchunkWsgCommand.  <a href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_translator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html">SchunkWsgCommandReceiver</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles lcmt_schunk_wsg_command messages from a LcmSubscriberSystem.  <a href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the command for the Schunk WSG gripper from a LcmSubscriberSystem.  <a href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html">SchunkWsgCommandSender</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send lcmt_schunk_wsg_command messages for a Schunk WSG gripper.  <a href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html#details">More...</a><br /></td></tr>

@@ -928,64 +928,7 @@ the proper size.</dd>
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.MultibodyTree.CalcFrameGeometricJacobianExpressedInWorld">
 <code class="descname">CalcFrameGeometricJacobianExpressedInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.MultibodyTree, context: pydrake.systems.framework.Context_[float], frame_B: pydrake.multibody.multibody_tree.Frame, p_BoFo_B: numpy.ndarray[float64[3, 1]] = array([ 0.,  0.,  0.])</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, n]]<a class="headerlink" href="#pydrake.multibody.multibody_tree.MultibodyTree.CalcFrameGeometricJacobianExpressedInWorld" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a frame <code class="docutils literal"><span class="pre">Fp</span></code> defined by shifting a frame F from its origin
-<code class="docutils literal"><span class="pre">Fo</span></code> to a new origin <code class="docutils literal"><span class="pre">P</span></code>, this method computes the geometric
-Jacobian <code class="docutils literal"><span class="pre">Jv_WFp</span></code> for frame <code class="docutils literal"><span class="pre">Fp</span></code>. The new origin <code class="docutils literal"><span class="pre">P</span></code> is
-specified by the position vector <code class="docutils literal"><span class="pre">p_FP</span></code> in frame F. The frame
-geometric Jacobian <code class="docutils literal"><span class="pre">Jv_WFp</span></code> is defined by:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>V_WFp(q, v) = Jv_WFp(q)⋅v
-</pre></div>
-</div>
-<p>where <code class="docutils literal"><span class="pre">V_WFp(q,</span> <span class="pre">v)</span></code> is the spatial velocity of frame <code class="docutils literal"><span class="pre">Fp</span></code> measured
-and expressed in the world frame W and q and v are the vectors of
-generalized position and velocity, respectively. The geometric
-Jacobian <code class="docutils literal"><span class="pre">Jv_WFp(q)</span></code> is a function of the generalized coordinates q
-only.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model. It stores the
-generalized positions q.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">frame_F</span></code>:</dt>
-<dd>The position <code class="docutils literal"><span class="pre">p_FP</span></code> of frame <code class="docutils literal"><span class="pre">Fp</span></code> is measured and expressed in
-this frame F.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">p_FP</span></code>:</dt>
-<dd>The (fixed) position of the origin <code class="docutils literal"><span class="pre">P</span></code> of frame <code class="docutils literal"><span class="pre">Fp</span></code> as
-measured and expressed in frame F.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Jv_WFp</span></code>:</dt>
-<dd>The geometric Jacobian <code class="docutils literal"><span class="pre">Jv_WFp(q)</span></code>, function of the generalized
-positions q only. This Jacobian relates to the spatial velocity
-<code class="docutils literal"><span class="pre">V_WFp</span></code> of frame <code class="docutils literal"><span class="pre">Fp</span></code> by:</dd>
-</dl>
-<div class="highlight-default"><div class="highlight"><pre><span></span>V_WFp(q, v) = Jv_WFp(q)⋅v
-</pre></div>
-</div>
-<p>Therefore <code class="docutils literal"><span class="pre">Jv_WFp</span></code> is a matrix of size <code class="docutils literal"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">nv</span></code>, with <code class="docutils literal"><span class="pre">nv</span></code> the
-number of generalized velocities. On input, matrix <code class="docutils literal"><span class="pre">Jv_WFp</span></code> <strong>must</strong>
-have size <code class="docutils literal"><span class="pre">6</span> <span class="pre">x</span> <span class="pre">nv</span></code> or this method throws an exception. The top rows
-of this matrix (which can be accessed with Jv_WFp.topRows&lt;3&gt;()) is the
-Jacobian <code class="docutils literal"><span class="pre">Hw_WFp</span></code> related to the angular velocity of <code class="docutils literal"><span class="pre">Fp</span></code> in W by
-<code class="docutils literal"><span class="pre">w_WFp</span> <span class="pre">=</span> <span class="pre">Hw_WFp⋅v</span></code>. The bottom rows of this matrix (which can be
-accessed with Jv_WFp.bottomRows&lt;3&gt;()) is the Jacobian <code class="docutils literal"><span class="pre">Hv_WFp</span></code>
-related to the translational velocity of the origin <code class="docutils literal"><span class="pre">P</span></code> of frame
-<code class="docutils literal"><span class="pre">Fp</span></code> in W by <code class="docutils literal"><span class="pre">v_WFpo</span> <span class="pre">=</span> <span class="pre">Hv_WFp⋅v</span></code>. This ordering is consistent with
-the internal storage of the SpatialVelocity class. Therefore the
-following operations results in a valid spatial velocity:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SpatialVelocity</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">Jv_WFp_times_v</span><span class="p">(</span><span class="n">Jv_WFp</span> <span class="o">*</span> <span class="n">v</span><span class="p">);</span>
-</pre></div>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">J_WFp</span></code> is nullptr or if it is not of size <a href="#id1"><span class="problematic" id="id2">``</span></a>6 x</li>
-<li>nv``.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.MultibodyTree.CalcInverseDynamics">

@@ -6,5 +6,6 @@ var dir_39b8b3c6654246a9c12332c930bc7d3f =
     [ "math", "dir_7d55c3d5b8b0444a3d9934d2594c5211.html", "dir_7d55c3d5b8b0444a3d9934d2594c5211" ],
     [ "multibody_tree", "dir_559c8ef22c6aa151f764a7a49835876c.html", "dir_559c8ef22c6aa151f764a7a49835876c" ],
     [ "parsing", "dir_e56f4370c0abfd94d0eb867c3946e12e.html", "dir_e56f4370c0abfd94d0eb867c3946e12e" ],
+    [ "tree", "dir_3f9cb8dbb3b4911cb2ecb548acd672c3.html", "dir_3f9cb8dbb3b4911cb2ecb548acd672c3" ],
     [ "multibody_doxygen.h", "multibody__doxygen_8h.html", null ]
 ];

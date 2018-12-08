@@ -5,5 +5,5 @@ var scene__graph__parser__detail_8cc =
     [ "MakeGeometryPoseFromSdfCollision", "scene__graph__parser__detail_8cc.html#a830c5cfd5f8d2b0979c74914e4517031", null ],
     [ "MakeShapeFromSdfGeometry", "scene__graph__parser__detail_8cc.html#acdd3120d8bd21b09aca3fb1a3862d6e5", null ],
     [ "MakeVisualMaterialFromSdfVisual", "scene__graph__parser__detail_8cc.html#ae316355b614ffe49ee6e0a4f0a7dbfc3", null ],
-    [ "ResolveVisualUri", "scene__graph__parser__detail_8cc.html#a3563e8e670341154735943584a408c58", null ]
+    [ "ResolveVisualUri", "scene__graph__parser__detail_8cc.html#abf0ffe5867d6427daab52ff5b28470c7", null ]
 ];

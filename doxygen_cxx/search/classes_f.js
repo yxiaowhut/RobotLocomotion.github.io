@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['packagemap',['PackageMap',['../classdrake_1_1multibody_1_1parsing_1_1_package_map.html',1,'drake::multibody::parsing']]],
+  ['packagemap',['PackageMap',['../classdrake_1_1multibody_1_1_package_map.html',1,'drake::multibody']]],
   ['parameters',['Parameters',['../structdrake_1_1multibody_1_1implicit__stribeck_1_1_parameters.html',1,'Parameters'],['../classdrake_1_1systems_1_1_parameters.html',1,'Parameters&lt; T &gt;']]],
   ['parameters_3c_20autodiffxd_20_3e',['Parameters&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_parameters.html',1,'drake::systems']]],
   ['parameters_3c_20double_20_3e',['Parameters&lt; double &gt;',['../classdrake_1_1systems_1_1_parameters.html',1,'drake::systems']]],
   ['parameters_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['Parameters&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_parameters.html',1,'drake::systems']]],
   ['paramset',['ParamSet',['../classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_param_set.html',1,'drake::systems::controllers::qp_inverse_dynamics']]],
-  ['parser',['Parser',['../classdrake_1_1multibody_1_1parsing_1_1_parser.html',1,'drake::multibody::parsing']]],
+  ['parser',['Parser',['../classdrake_1_1multibody_1_1_parser.html',1,'drake::multibody']]],
   ['particle',['Particle',['../classdrake_1_1examples_1_1particles_1_1_particle.html',1,'drake::examples::particles']]],
   ['passkey',['Passkey',['../classdrake_1_1maliput_1_1geometry__base_1_1_passkey.html',1,'drake::maliput::geometry_base']]],
   ['passthrough',['PassThrough',['../classdrake_1_1systems_1_1_pass_through.html',1,'drake::systems']]],

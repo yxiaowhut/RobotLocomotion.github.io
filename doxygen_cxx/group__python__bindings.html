@@ -197,24 +197,11 @@ $EDITOR bazel-genfiles/bindings/pydrake/documentation_pybind.h
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1pydrake.html#ae9bdc6aba9aad5daab1513b39d2b34e7" title="Used when returning T&amp; orconst T&amp;`, as pybind&#39;s default behavior is to copy lvalue references. ">py_reference</a>, <a class="el" href="namespacedrake_1_1pydrake.html#a36e8cda2005c97af6a36240c45e67dd7" title="Used when returning references to objects that are internally owned by self. ">py_reference_internal</a> for dealing with common ownership issues.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Downstream users should avoid <code>using namespace <a class="el" href="namespacedrake_1_1pydrake.html">drake::pydrake</a></code>, as this may create ambiguous aliases (especially for GCC). Instead, consider an alias.</dd></dl>
 <p><a class="anchor" id="PydrakeBazelDebug"></a></p><h1>Interactive Debugging with Bazel</h1>
-<p>If you would like to interactively debug binding code (using IPython for general Python behavior, or GDB for C++ behavior), debug C++ behavior from a Python binary, while using Bazel, you may expose Bazel's development environment variables by adding these lines to your Python script: </p><pre class="fragment">import subprocess
-subprocess.Popen(
-    "export -p | sed 's# PWD=# OLD_PWD=#g' | tee /tmp/env.sh",
-    shell=True)
-</pre><p>Run your target once from Bazel, and then source the generated <code>/tmp/env.sh</code> in your terminal to gain access to the environment variables (e.g. <code>$PYTHONPATH</code>).</p>
-<h2>Example with GDB</h2>
-<p>This is a brief recipe for debugging with GDB (note the usage of subshell <code>(...)</code> to keep the variables scoped): </p><pre class="fragment">(
-    target=//bindings/pydrake/systems:lifetime_test
-    target_bin=$(echo ${target} | sed -e 's#//##' -e 's#:#/#')
-    bazel run -c dbg ${target}
-    workspace=$(bazel info workspace)
-    name=$(basename ${workspace})
-    cd ${workspace}/bazel-${name}
-    source /tmp/env.sh
-    gdb --args python ${workspace}/bazel-bin/${target_bin}
-)
-</pre><p>This allows you to use GDB from the terminal, while being able to inspect the sources in Bazel's symlink forests.</p>
-<p>If using CLion, consider using <code>gdbserver</code>. </p>
+<p>If you are debugging a unitest, first try running the test with <code>--trace=user</code> to see where the code is failing. This should cover most cases where you need to debug C++ bits. Example: </p><pre class="fragment">bazel run //bindings/pydrake/systems:py/lifetime_test -- --trace=user
+</pre><p>If you need to debug futher while using Bazel, it is suggested to use <code>gdbserver</code> for simplicity. Example:</p>
+<div class="fragment"><div class="line"><span class="preprocessor"># Terminal 1 - Host process.</span></div><div class="line">cd <a class="code" href="namespacedrake.html">drake</a></div><div class="line">bazel run -c dbg \</div><div class="line">    --run_under=<span class="stringliteral">&#39;gdbserver localhost:9999&#39;</span> \</div><div class="line">    <span class="comment">//bindings/pydrake/systems:py/lifetime_test -- \</span></div><div class="line"><span class="comment">    --trace=user</span></div><div class="line"></div><div class="line"><span class="preprocessor"># Terminal 2 - Client debugger.</span></div><div class="line">cd <a class="code" href="namespacedrake.html">drake</a></div><div class="line">gdb -ex <span class="stringliteral">&quot;dir ${PWD}/bazel-drake&quot;</span> \</div><div class="line">    -ex <span class="stringliteral">&quot;target remote localhost:9999&quot;</span> \</div><div class="line">    -ex <span class="stringliteral">&quot;set sysroot&quot;</span> \</div><div class="line">    -ex <span class="stringliteral">&quot;set breakpoint pending on&quot;</span></div><div class="line"><span class="preprocessor"># In the GDB terminal:</span></div><div class="line">(gdb) <span class="keywordflow">break</span> <a class="code" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator&lt;double&gt;::Simulator</a></div><div class="line">(gdb) <span class="keywordflow">continue</span></div></div><!-- fragment --><p><code>set sysroot</code> is important for using <code>gdbserver</code>, <code>set breakpoint pending on</code> allows you set the breakpoints before loading <code>libdrake.so</code>, and <code>dir ...</code> adds source directories. It is also suggested that you <a href="https://stackoverflow.com/a/3176802">enable readline history</a> in <code>~/.gdbinit</code> for ease of use.</p>
+<p>If using CLion, you can still connect to the <code>gdbserver</code> instance.</p>
+<p>There are analogs for <code>lldb</code> / <code>lldbserver</code> but for brevity, only GDB is covered. </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!--HTML footer for doxygen 1.8.13-->

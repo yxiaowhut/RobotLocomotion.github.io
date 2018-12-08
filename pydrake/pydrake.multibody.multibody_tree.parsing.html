@@ -199,65 +199,8 @@
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>AddModelFromSdfFile(file_name: unicode, model_name: unicode, plant: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, scene_graph: pydrake.geometry.SceneGraph = None) -&gt; pydrake.multibody.multibody_tree.ModelInstanceIndex</li>
-</ol>
-<p>Parses a <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> element from the SDF file specified by
-<code class="docutils literal"><span class="pre">file_name</span></code> and adds it to <code class="docutils literal"><span class="pre">plant</span></code>. The SDF file can only contain
-a single <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> element. <code class="docutils literal"><span class="pre">&lt;world&gt;</span></code> elements (used for instance
-to specify gravity) are ignored by this method. A new model instance
-will be added to <code class="docutils literal"><span class="pre">plant</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
-<li>RuntimeError if the file is not in accordance with the SDF</li>
-<li>specification containing a message with a list of errors</li>
-<li>encountered while parsing the file.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
-<li>RuntimeError if there is more than one <code class="docutils literal"><span class="pre">&lt;model&gt;</span></code> element or zero</li>
-<li>of them.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if plant is nullptr or if MultibodyPlant::Finalize()</li>
-<li>was already called on <code class="docutils literal"><span class="pre">plant</span></code>.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">file_name</span></code>:</dt>
-<dd>The name of the SDF file to be parsed.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">model_name</span></code>:</dt>
-<dd>The name given to the newly created instance of this model. If
-empty, the “name” attribute from the model tag will be used.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
-<dd>A pointer to a mutable MultibodyPlant object to which the model
-will be added.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">scene_graph</span></code>:</dt>
-<dd>A pointer to a mutable SceneGraph object used for geometry
-registration (either to model visual or contact geometry). May be
-nullptr.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The model instance index for the newly added model.</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="2">
 <li>AddModelFromSdfFile(file_name: unicode, plant: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, scene_graph: pydrake.geometry.SceneGraph = None) -&gt; pydrake.multibody.multibody_tree.ModelInstanceIndex</li>
 </ol>
-<p>Alternate version of AddModelFromSdfFile which always uses the “name”
-element from the model tag for the name of the newly created model
-instance.</p>
 </dd></dl>
 
 </div>

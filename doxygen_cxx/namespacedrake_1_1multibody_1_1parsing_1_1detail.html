@@ -116,9 +116,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a72989d7f800971772b29a84014351aff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_coulomb_friction.html">CoulombFriction</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a72989d7f800971772b29a84014351aff">MakeCoulombFrictionFromSdfCollisionOde</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
 <tr class="memdesc:a72989d7f800971772b29a84014351aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses friction coefficients from <code>sdf_collision</code>.  <a href="#a72989d7f800971772b29a84014351aff">More...</a><br /></td></tr>
 <tr class="separator:a72989d7f800971772b29a84014351aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3563e8e670341154735943584a408c58"><td class="memItemLeft" align="right" valign="top">sdf::Visual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a3563e8e670341154735943584a408c58">ResolveVisualUri</a> (const sdf::Visual &amp;original, const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">parsing::PackageMap</a> &amp;package_map, const std::string &amp;root_dir)</td></tr>
-<tr class="memdesc:a3563e8e670341154735943584a408c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new Visual object which resolves the uri for the mesh element, if present.  <a href="#a3563e8e670341154735943584a408c58">More...</a><br /></td></tr>
-<tr class="separator:a3563e8e670341154735943584a408c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0ffe5867d6427daab52ff5b28470c7"><td class="memItemLeft" align="right" valign="top">sdf::Visual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abf0ffe5867d6427daab52ff5b28470c7">ResolveVisualUri</a> (const sdf::Visual &amp;original, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;package_map, const std::string &amp;root_dir)</td></tr>
+<tr class="memdesc:abf0ffe5867d6427daab52ff5b28470c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new Visual object which resolves the uri for the mesh element, if present.  <a href="#abf0ffe5867d6427daab52ff5b28470c7">More...</a><br /></td></tr>
+<tr class="separator:abf0ffe5867d6427daab52ff5b28470c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e9bff0197c6c7f86f9ff6f8854def53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a3e9bff0197c6c7f86f9ff6f8854def53">AddModelFromSdfFile</a> (const std::string &amp;file_name, const std::string &amp;model_name, <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html">multibody_plant::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
+<tr class="memdesc:a3e9bff0197c6c7f86f9ff6f8854def53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a <code>&lt;model&gt;</code> element from the SDF file specified by <code>file_name</code> and adds it to <code>plant</code>.  <a href="#a3e9bff0197c6c7f86f9ff6f8854def53">More...</a><br /></td></tr>
+<tr class="separator:a3e9bff0197c6c7f86f9ff6f8854def53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#ad4a6f4d8ac026dc19d7796e3e0db47aa">AddModelsFromSdfFile</a> (const std::string &amp;file_name, <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html">multibody_plant::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
+<tr class="memdesc:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses all <code>&lt;model&gt;</code> elements from the SDF file specified by <code>file_name</code> and adds them to <code>plant</code>.  <a href="#ad4a6f4d8ac026dc19d7796e3e0db47aa">More...</a><br /></td></tr>
+<tr class="separator:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="memItemLeft" align="right" valign="top">Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a0eca6e02e85ffc38a4d5dcd6ad52a07d">ToVector3</a> (const ignition::math::Vector3d &amp;<a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">vector</a>)</td></tr>
 <tr class="memdesc:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to express an ignition::math::Vector3d instance as a Vector3d instance.  <a href="#a0eca6e02e85ffc38a4d5dcd6ad52a07d">More...</a><br /></td></tr>
 <tr class="separator:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,19 +151,22 @@ Functions</h2></td></tr>
 <tr class="separator:a27d43126f7596ab1e3a48016e29a07d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad10f9c0f1b5ec2c3f7b4d4323ed0d40a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#ad10f9c0f1b5ec2c3f7b4d4323ed0d40a">ParseMaterial</a> (const XMLElement *node, <a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abfd00d0007459c207b623fc278389108">MaterialMap</a> *materials)</td></tr>
 <tr class="separator:ad10f9c0f1b5ec2c3f7b4d4323ed0d40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7754f802cb296d28e2554479ea71bba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#ac7754f802cb296d28e2554479ea71bba">ParseVisual</a> (const std::string &amp;parent_element_name, const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">PackageMap</a> &amp;package_map, const std::string &amp;root_dir, const XMLElement *node, <a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abfd00d0007459c207b623fc278389108">MaterialMap</a> *materials)</td></tr>
-<tr class="separator:ac7754f802cb296d28e2554479ea71bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2fb56048d2e7cc94be869615e6feebd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#ac2fb56048d2e7cc94be869615e6feebd">ParseCollision</a> (const std::string &amp;parent_element_name, const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">PackageMap</a> &amp;package_map, const std::string &amp;root_dir, const XMLElement *node, <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_coulomb_friction.html">CoulombFriction</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *friction)</td></tr>
-<tr class="separator:ac2fb56048d2e7cc94be869615e6feebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c6e42413b49e2a354d59421622d1a1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a0c6e42413b49e2a354d59421622d1a1d">ParseVisual</a> (const std::string &amp;parent_element_name, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;package_map, const std::string &amp;root_dir, const XMLElement *node, <a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abfd00d0007459c207b623fc278389108">MaterialMap</a> *materials)</td></tr>
+<tr class="separator:a0c6e42413b49e2a354d59421622d1a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5aeaa58e24ca35c35dacc65982993e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a6f5aeaa58e24ca35c35dacc65982993e">ParseCollision</a> (const std::string &amp;parent_element_name, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;package_map, const std::string &amp;root_dir, const XMLElement *node, <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_coulomb_friction.html">CoulombFriction</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *friction)</td></tr>
+<tr class="separator:a6f5aeaa58e24ca35c35dacc65982993e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ee1b5f3c96366559b614f384a9048a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a64ee1b5f3c96366559b614f384a9048a">ParseMaterial</a> (const tinyxml2::XMLElement *node, <a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abfd00d0007459c207b623fc278389108">MaterialMap</a> *materials)</td></tr>
 <tr class="memdesc:a64ee1b5f3c96366559b614f384a9048a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a "material" element in <code>node</code> and adds the result to <code>materials</code>.  <a href="#a64ee1b5f3c96366559b614f384a9048a">More...</a><br /></td></tr>
 <tr class="separator:a64ee1b5f3c96366559b614f384a9048a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a199b207841f940ce3c22f4bea11baf8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a199b207841f940ce3c22f4bea11baf8a">ParseVisual</a> (const std::string &amp;parent_element_name, const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">PackageMap</a> &amp;package_map, const std::string &amp;root_dir, const tinyxml2::XMLElement *node, <a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abfd00d0007459c207b623fc278389108">MaterialMap</a> *materials)</td></tr>
-<tr class="memdesc:a199b207841f940ce3c22f4bea11baf8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a "visual" element in <code>node</code>.  <a href="#a199b207841f940ce3c22f4bea11baf8a">More...</a><br /></td></tr>
-<tr class="separator:a199b207841f940ce3c22f4bea11baf8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14ac89a01c73af0766dcb905684eebed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#a14ac89a01c73af0766dcb905684eebed">ParseCollision</a> (const std::string &amp;parent_element_name, const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">PackageMap</a> &amp;package_map, const std::string &amp;root_dir, const tinyxml2::XMLElement *node, <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_coulomb_friction.html">multibody_plant::CoulombFriction</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *friction)</td></tr>
-<tr class="memdesc:a14ac89a01c73af0766dcb905684eebed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a "collision" element in <code>node</code>.  <a href="#a14ac89a01c73af0766dcb905684eebed">More...</a><br /></td></tr>
-<tr class="separator:a14ac89a01c73af0766dcb905684eebed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3b1f8bb4fb846a0f42945e9ff40d6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abb3b1f8bb4fb846a0f42945e9ff40d6a">ParseVisual</a> (const std::string &amp;parent_element_name, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;package_map, const std::string &amp;root_dir, const tinyxml2::XMLElement *node, <a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abfd00d0007459c207b623fc278389108">MaterialMap</a> *materials)</td></tr>
+<tr class="memdesc:abb3b1f8bb4fb846a0f42945e9ff40d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a "visual" element in <code>node</code>.  <a href="#abb3b1f8bb4fb846a0f42945e9ff40d6a">More...</a><br /></td></tr>
+<tr class="separator:abb3b1f8bb4fb846a0f42945e9ff40d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe765d91d8a109d3ae55c4323ec6fd0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">geometry::GeometryInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#abe765d91d8a109d3ae55c4323ec6fd0c">ParseCollision</a> (const std::string &amp;parent_element_name, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;package_map, const std::string &amp;root_dir, const tinyxml2::XMLElement *node, <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_coulomb_friction.html">multibody_plant::CoulombFriction</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *friction)</td></tr>
+<tr class="memdesc:abe765d91d8a109d3ae55c4323ec6fd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a "collision" element in <code>node</code>.  <a href="#abe765d91d8a109d3ae55c4323ec6fd0c">More...</a><br /></td></tr>
+<tr class="separator:abe765d91d8a109d3ae55c4323ec6fd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cda52c606875d88f4010be466088d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing_1_1detail.html#ac2cda52c606875d88f4010be466088d4">AddModelFromUrdfFile</a> (const std::string &amp;file_name, const std::string &amp;model_name, <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html">multibody_plant::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
+<tr class="memdesc:ac2cda52c606875d88f4010be466088d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a <code>&lt;robot&gt;</code> element from the URDF file specified by <code>file_name</code> and adds it to <code>plant</code>.  <a href="#ac2cda52c606875d88f4010be466088d4">More...</a><br /></td></tr>
+<tr class="separator:ac2cda52c606875d88f4010be466088d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="abfd00d0007459c207b623fc278389108"></a>
@@ -178,6 +187,180 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a3e9bff0197c6c7f86f9ff6f8854def53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e9bff0197c6c7f86f9ff6f8854def53">&#9670;&nbsp;</a></span>AddModelFromSdfFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> AddModelFromSdfFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>model_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html">multibody_plant::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>scene_graph</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses a <code>&lt;model&gt;</code> element from the SDF file specified by <code>file_name</code> and adds it to <code>plant</code>. </p>
+<p>The SDF file can only contain a single <code>&lt;model&gt;</code> element. <code>&lt;world&gt;</code> elements (used for instance to specify gravity) are ignored by this method. A new model instance will be added to <code>plant</code>.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the file is not in accordance with the SDF specification containing a message with a list of errors encountered while parsing the file. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>if there is more than one <code>&lt;model&gt;</code> element or zero of them. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if plant is nullptr or if <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">MultibodyPlant::Finalize()</a> was already called on <code>plant</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>The name of the SDF file to be parsed. </td></tr>
+    <tr><td class="paramname">model_name</td><td>The name given to the newly created instance of this model. If empty, the "name" attribute from the model tag will be used. </td></tr>
+    <tr><td class="paramname">plant</td><td>A pointer to a mutable MultibodyPlant object to which the model will be added. </td></tr>
+    <tr><td class="paramname">scene_graph</td><td>A pointer to a mutable SceneGraph object used for geometry registration (either to model visual or contact geometry). May be nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The model instance index for the newly added model. </dd></dl>
+
+</div>
+</div>
+<a id="ac2cda52c606875d88f4010be466088d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2cda52c606875d88f4010be466088d4">&#9670;&nbsp;</a></span>AddModelFromUrdfFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> AddModelFromUrdfFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>model_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html">multibody_plant::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>scene_graph</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses a <code>&lt;robot&gt;</code> element from the URDF file specified by <code>file_name</code> and adds it to <code>plant</code>. </p>
+<p>A new model instance will be added to <code>plant</code>.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the file is not in accordance with the URDF specification. The exception contains a message with a list of errors encountered while parsing the file.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>The name of the URDF file to be parsed. </td></tr>
+    <tr><td class="paramname">model_name</td><td>The name given to the newly created instance of this model. If empty, the "name" attribute from the model tag will be used. </td></tr>
+    <tr><td class="paramname">plant</td><td>A pointer to a mutable MultibodyPlant object to which the model will be added. </td></tr>
+    <tr><td class="paramname">scene_graph</td><td>A pointer to a mutable SceneGraph object used for geometry registration (either to model visual or contact geometry). May be nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The model instance index for the newly added model. </dd></dl>
+
+</div>
+</div>
+<a id="ad4a6f4d8ac026dc19d7796e3e0db47aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a6f4d8ac026dc19d7796e3e0db47aa">&#9670;&nbsp;</a></span>AddModelsFromSdfFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; AddModelsFromSdfFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html">multibody_plant::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>scene_graph</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses all <code>&lt;model&gt;</code> elements from the SDF file specified by <code>file_name</code> and adds them to <code>plant</code>. </p>
+<p>The SDF file can contain multiple <code>&lt;model&gt;</code> elements. New model instances will be added to <code>plant</code> for each <code>&lt;model&gt;</code> tag in the SDF file.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the file is not in accordance with the SDF specification containing a message with a list of errors encountered while parsing the file. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>if the file contains no models. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if plant is nullptr or if <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">MultibodyPlant::Finalize()</a> was already called on <code>plant</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_name</td><td>The name of the SDF file to be parsed. </td></tr>
+    <tr><td class="paramname">plant</td><td>A pointer to a mutable MultibodyPlant object to which the model will be added. </td></tr>
+    <tr><td class="paramname">scene_graph</td><td>A pointer to a mutable SceneGraph object used for geometry registration (either to model visual or contact geometry). May be nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The set of model instance indices for the newly added models. </dd></dl>
+
+</div>
+</div>
 <a id="a72989d7f800971772b29a84014351aff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a72989d7f800971772b29a84014351aff">&#9670;&nbsp;</a></span>MakeCoulombFrictionFromSdfCollisionOde()</h2>
 
@@ -310,8 +493,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a14ac89a01c73af0766dcb905684eebed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14ac89a01c73af0766dcb905684eebed">&#9670;&nbsp;</a></span>ParseCollision() <span class="overload">[1/2]</span></h2>
+<a id="abe765d91d8a109d3ae55c4323ec6fd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe765d91d8a109d3ae55c4323ec6fd0c">&#9670;&nbsp;</a></span>ParseCollision() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +508,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">PackageMap</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;&#160;</td>
           <td class="paramname"><em>package_map</em>, </td>
         </tr>
         <tr>
@@ -365,8 +548,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac2fb56048d2e7cc94be869615e6feebd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2fb56048d2e7cc94be869615e6feebd">&#9670;&nbsp;</a></span>ParseCollision() <span class="overload">[2/2]</span></h2>
+<a id="a6f5aeaa58e24ca35c35dacc65982993e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f5aeaa58e24ca35c35dacc65982993e">&#9670;&nbsp;</a></span>ParseCollision() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,7 +563,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">PackageMap</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;&#160;</td>
           <td class="paramname"><em>package_map</em>, </td>
         </tr>
         <tr>
@@ -695,8 +878,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a199b207841f940ce3c22f4bea11baf8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a199b207841f940ce3c22f4bea11baf8a">&#9670;&nbsp;</a></span>ParseVisual() <span class="overload">[1/2]</span></h2>
+<a id="abb3b1f8bb4fb846a0f42945e9ff40d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3b1f8bb4fb846a0f42945e9ff40d6a">&#9670;&nbsp;</a></span>ParseVisual() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -710,7 +893,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">PackageMap</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;&#160;</td>
           <td class="paramname"><em>package_map</em>, </td>
         </tr>
         <tr>
@@ -750,8 +933,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac7754f802cb296d28e2554479ea71bba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7754f802cb296d28e2554479ea71bba">&#9670;&nbsp;</a></span>ParseVisual() <span class="overload">[2/2]</span></h2>
+<a id="a0c6e42413b49e2a354d59421622d1a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c6e42413b49e2a354d59421622d1a1d">&#9670;&nbsp;</a></span>ParseVisual() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -765,7 +948,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">PackageMap</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;&#160;</td>
           <td class="paramname"><em>package_map</em>, </td>
         </tr>
         <tr>
@@ -796,8 +979,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3563e8e670341154735943584a408c58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3563e8e670341154735943584a408c58">&#9670;&nbsp;</a></span>ResolveVisualUri()</h2>
+<a id="abf0ffe5867d6427daab52ff5b28470c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0ffe5867d6427daab52ff5b28470c7">&#9670;&nbsp;</a></span>ResolveVisualUri()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -811,7 +994,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1parsing_1_1_package_map.html">parsing::PackageMap</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;&#160;</td>
           <td class="paramname"><em>package_map</em>, </td>
         </tr>
         <tr>
@@ -829,7 +1012,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new Visual object which resolves the uri for the mesh element, if present. </p>
-<p>If the mesh element is not present, the new object will be identical to the original. See <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a5fc07620bf1b295c191ac2327a68c850" title="Resolves the full path of a file. ">parsers::ResolveFilename()</a> for more detail on this operation.</p>
+<p>If the mesh element is not present, the new object will be identical to the original. See <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a84e84229ba082f4d3d51fa23660c72ba" title="Resolves the full path of a file. ">parsers::ResolveFilename()</a> for more detail on this operation.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td>if the &lt;mesh&gt; tag is present but missing &lt;uri&gt; or if the file referenced in &lt;uri&gt; can not be found. </td></tr>

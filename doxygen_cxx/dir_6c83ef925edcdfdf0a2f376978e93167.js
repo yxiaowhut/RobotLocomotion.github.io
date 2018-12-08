@@ -6,6 +6,7 @@ var dir_6c83ef925edcdfdf0a2f376978e93167 =
     [ "schunk_wsg_controller.h", "schunk__wsg__controller_8h.html", null ],
     [ "schunk_wsg_lcm.cc", "schunk__wsg__lcm_8cc.html", null ],
     [ "schunk_wsg_lcm.h", "schunk__wsg__lcm_8h.html", [
+      [ "SchunkWsgCommandTranslator", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_translator.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_translator" ],
       [ "SchunkWsgCommandReceiver", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver" ],
       [ "SchunkWsgCommandSender", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender" ],
       [ "SchunkWsgStatusReceiver", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver" ]

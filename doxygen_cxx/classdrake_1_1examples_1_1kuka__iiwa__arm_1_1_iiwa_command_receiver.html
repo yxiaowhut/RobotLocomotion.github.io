@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1examples_1_1kuka__iiwa__
 </div><!--header-->
 <div class="contents">
 
-<p>Handles lcmt_iiwa_command messages from a LcmSubscriberSystem.  
+<p>Handles IIWA commands from a LcmSubscriberSystem.  
  <a href="classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command_receiver.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/examples/kuka_iiwa_arm/iiwa_lcm.h&gt;</code></p>
@@ -906,8 +906,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a414a090dc2d413d6d83bb2143e931dba inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles lcmt_iiwa_command messages from a LcmSubscriberSystem. </p>
-<p>Has two output ports: one for the commanded position for each joint along with an estimate of the commanded velocity for each joint, and another for commanded additional feedforward joint torque. </p>
+<div class="textblock"><p>Handles IIWA commands from a LcmSubscriberSystem. </p>
+<p>It has two input ports: one for lcmt_iiwa_command messages and the other for the vectorized version (<a class="el" href="classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command.html" title="A vectorized representation of lcmt_iiwa_command. ">IiwaCommand</a>). Only one of the inputs should be connected. However, if both are connected, the message one will be ignored. It has two output ports: one for the commanded position for each joint along with an estimate of the commanded velocity for each joint, and another for commanded additional feedforward joint torque.</p>
+<p>{ </p>
+<p>command_message &rarr; </p>
+<p>command_vector &rarr; </p>
+<p>&rarr; state </p>
+<p>&rarr; feedforward_torque } </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae65a9e04e24c178969a8de8aa7104ced"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae65a9e04e24c178969a8de8aa7104ced">&#9670;&nbsp;</a></span>IiwaCommandReceiver() <span class="overload">[1/3]</span></h2>

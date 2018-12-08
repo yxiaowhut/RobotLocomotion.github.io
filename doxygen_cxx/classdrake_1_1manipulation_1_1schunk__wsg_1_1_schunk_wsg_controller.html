@@ -102,10 +102,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1schunk__
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6276d2a74527ef64039900f430b21331"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html#a6276d2a74527ef64039900f430b21331">SchunkWsgController</a> (<a class="el" href="classdouble.html">double</a> kp=2000.0, <a class="el" href="classdouble.html">double</a> ki=0.0, <a class="el" href="classdouble.html">double</a> kd=5.0)</td></tr>
 <tr class="separator:a6276d2a74527ef64039900f430b21331"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08b78ae645a11052e1b7b7fa2fd35745"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html#a08b78ae645a11052e1b7b7fa2fd35745">get_command_input_port</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="separator:a08b78ae645a11052e1b7b7fa2fd35745"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71ec23b5b9d1a45e490c54d445c78d94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html#a71ec23b5b9d1a45e490c54d445c78d94">get_state_input_port</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="separator:a71ec23b5b9d1a45e490c54d445c78d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a5f4dd34a5ee97420437f404dee7890cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html#a5f4dd34a5ee97420437f404dee7890cd">SchunkWsgController</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_controller.html">SchunkWsgController</a> &amp;)=delete</td></tr>
 <tr class="separator:a5f4dd34a5ee97420437f404dee7890cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -797,7 +793,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class implements a controller for a Schunk WSG gripper. </p>
-<p>It has two input ports which receive lcmt_schunk_wsg_command messages and the current state, and an output port which emits the target force for the actuated finger. The internal implementation consists of a PID controller (which controls the target position from the command message) combined with a saturation block (which applies the force control from the command message). </p>
+<p>It has three input ports: lcmt_schunk_wsg_command message, a vectorized representation of the same message (SchunkWsgCommand), and the current state, and an output port which emits the target force for the actuated finger. Note, only one of the command input ports should be connected, However, if both are connected, the message input will be ignored. The internal implementation consists of a PID controller (which controls the target position from the command message) combined with a saturation block (which applies the force control from the command message).</p>
+<p>{ </p>
+<p>state &rarr; </p>
+<p>command_vector &rarr; </p>
+<p>command_message &rarr; </p>
+<p>&rarr; force } </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5f4dd34a5ee97420437f404dee7890cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5f4dd34a5ee97420437f404dee7890cd">&#9670;&nbsp;</a></span>SchunkWsgController() <span class="overload">[1/3]</span></h2>
@@ -894,56 +895,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a08b78ae645a11052e1b7b7fa2fd35745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08b78ae645a11052e1b7b7fa2fd35745">&#9670;&nbsp;</a></span>get_command_input_port()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_command_input_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a71ec23b5b9d1a45e490c54d445c78d94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71ec23b5b9d1a45e490c54d445c78d94">&#9670;&nbsp;</a></span>get_state_input_port()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_state_input_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6ed43fb4cfae637792d15b399ded4707"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ed43fb4cfae637792d15b399ded4707">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 

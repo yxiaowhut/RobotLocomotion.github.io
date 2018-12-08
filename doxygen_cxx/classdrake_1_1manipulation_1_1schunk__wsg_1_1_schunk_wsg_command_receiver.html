@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1schunk__
 </div><!--header-->
 <div class="contents">
 
-<p>Handles lcmt_schunk_wsg_command messages from a LcmSubscriberSystem.  
+<p>Handles the command for the Schunk WSG gripper from a LcmSubscriberSystem.  
  <a href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/manipulation/schunk_wsg/schunk_wsg_lcm.h&gt;</code></p>
@@ -102,8 +102,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1schunk__
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2afb52d3604e9fb4c1ce1d066189eeaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html#a2afb52d3604e9fb4c1ce1d066189eeaa">SchunkWsgCommandReceiver</a> (<a class="el" href="classdouble.html">double</a> initial_position=0.02, <a class="el" href="classdouble.html">double</a> initial_force=40)</td></tr>
 <tr class="separator:a2afb52d3604e9fb4c1ce1d066189eeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08b78ae645a11052e1b7b7fa2fd35745"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html#a08b78ae645a11052e1b7b7fa2fd35745">get_command_input_port</a> () const</td></tr>
-<tr class="separator:a08b78ae645a11052e1b7b7fa2fd35745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21414de23368318bfd1dd57dd3ea79a8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html#a21414de23368318bfd1dd57dd3ea79a8">get_position_output_port</a> () const</td></tr>
 <tr class="separator:a21414de23368318bfd1dd57dd3ea79a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4623b23252590de7788260bcc24d4b0f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html#a4623b23252590de7788260bcc24d4b0f">get_force_limit_output_port</a> () const</td></tr>
@@ -908,22 +906,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a414a090dc2d413d6d83bb2143e931dba inherit pro_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Handles lcmt_schunk_wsg_command messages from a LcmSubscriberSystem. </p>
-<p>Has two output ports: one for the commanded finger position represented as the desired distance between the fingers in meters, and one for the commanded force limit. The commanded position and force limit are scalars (<a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector&lt;double&gt;</a> of size 1).</p>
-<table align="center" cellpadding="0" cellspacing="0">
-<tr align="center">
-<td><table cellspacing="0" cellpadding="0">
-<tr>
-<td align="right" style="padding:5px 0px 5px 0px">lcmt_schunk_wsg_command &rarr;</td></tr>
-</table>
-</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html" title="Handles lcmt_schunk_wsg_command messages from a LcmSubscriberSystem. ">SchunkWsgCommandReceiver</a></td><td><table cellspacing="0" cellpadding="0">
-<tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; position </td></tr>
-<tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; force_limit </td></tr>
-</table>
-</td></tr>
-</table>
+<div class="textblock"><p>Handles the command for the Schunk WSG gripper from a LcmSubscriberSystem. </p>
+<p>It has two input ports for the lcmt_schunk_wsg_command message itself and a vectorized version (SchunkWsgCommand) of the message. Note, only one of the inputs should be connected. However, if both are connected, the message port will be ignored. It has two output ports: one for the commanded finger position represented as the desired distance between the fingers in meters, and one for the commanded force limit. The commanded position and force limit are scalars (<a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector&lt;double&gt;</a> of size 1).</p>
+<p>{ <a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html" title="Handles the command for the Schunk WSG gripper from a LcmSubscriberSystem. ">SchunkWsgCommandReceiver</a>, </p>
+<p>command_vector &rarr;, </p>
+<p>command_message &rarr;, </p>
+<p>&rarr; position </p>
+<p>&rarr; force_limit } </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2c6924b041ffcdd6d5cda32c1afa7456"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c6924b041ffcdd6d5cda32c1afa7456">&#9670;&nbsp;</a></span>SchunkWsgCommandReceiver() <span class="overload">[1/3]</span></h2>
@@ -1013,31 +1002,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a08b78ae645a11052e1b7b7fa2fd35745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08b78ae645a11052e1b7b7fa2fd35745">&#9670;&nbsp;</a></span>get_command_input_port()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;&amp; get_command_input_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4623b23252590de7788260bcc24d4b0f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4623b23252590de7788260bcc24d4b0f">&#9670;&nbsp;</a></span>get_force_limit_output_port()</h2>
 

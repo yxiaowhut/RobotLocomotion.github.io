@@ -567,6 +567,8 @@ var hierarchy =
     [ "LaneSRange", "classdrake_1_1maliput_1_1api_1_1rules_1_1_lane_s_range.html", null ],
     [ "LaneSRoute", "classdrake_1_1maliput_1_1api_1_1rules_1_1_lane_s_route.html", null ],
     [ "LcmAndVectorBaseTranslator", "classdrake_1_1systems_1_1lcm_1_1_lcm_and_vector_base_translator.html", [
+      [ "IiwaCommandTranslator", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command_translator.html", null ],
+      [ "SchunkWsgCommandTranslator", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_translator.html", null ],
       [ "LcmtDrakeSignalTranslator", "classdrake_1_1systems_1_1lcm_1_1_lcmt_drake_signal_translator.html", null ],
       [ "PoseStampedTPoseVectorTranslator", "classdrake_1_1systems_1_1rendering_1_1_pose_stamped_t_pose_vector_translator.html", null ],
       [ "ViewerDrawTranslator", "classdrake_1_1systems_1_1_viewer_draw_translator.html", null ]
@@ -808,14 +810,14 @@ var hierarchy =
       [ "OutputPort< double >", "classdrake_1_1systems_1_1_output_port.html", null ]
     ] ],
     [ "overload_cast_impl< Return, Args >", "structdrake_1_1pydrake_1_1overload__cast__impl.html", null ],
-    [ "PackageMap", "classdrake_1_1multibody_1_1parsing_1_1_package_map.html", null ],
+    [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", null ],
     [ "Parameters", "structdrake_1_1multibody_1_1implicit__stribeck_1_1_parameters.html", null ],
     [ "Parameters< T >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "Parameters< AutoDiffXd >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "Parameters< double >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "Parameters< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_parameters.html", null ],
     [ "ParamSet", "classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_param_set.html", null ],
-    [ "Parser", "classdrake_1_1multibody_1_1parsing_1_1_parser.html", null ],
+    [ "Parser", "classdrake_1_1multibody_1_1_parser.html", null ],
     [ "Passkey< T >", "classdrake_1_1maliput_1_1geometry__base_1_1_passkey.html", null ],
     [ "PendulumParameters", "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html", null ],
     [ "PenetrationAsPointPair< T >", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
@@ -887,8 +889,8 @@ var hierarchy =
     [ "ResizeDerivativesToMatchScalarImpl< Derived, Scalar >", "structdrake_1_1math_1_1internal_1_1_resize_derivatives_to_match_scalar_impl.html", null ],
     [ "ResizeDerivativesToMatchScalarImpl< Derived, Eigen::AutoDiffScalar< DerivType > >", "structdrake_1_1math_1_1internal_1_1_resize_derivatives_to_match_scalar_impl_3_01_derived_00_01_e4b12c7e286e912caa62a5d0fe1e24932.html", null ],
     [ "ResolvedContact", "classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_resolved_contact.html", null ],
-    [ "RightOfWayPhaseProvider::Result", "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result.html", null ],
     [ "RightOfWayStateProvider::Result", "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_state_provider_1_1_result.html", null ],
+    [ "RightOfWayPhaseProvider::Result", "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result.html", null ],
     [ "MixedIntegerRotationConstraintGenerator::ReturnType", "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html", null ],
     [ "RewritingRule", "classdrake_1_1symbolic_1_1_rewriting_rule.html", null ],
     [ "RgbdRenderer", "classdrake_1_1systems_1_1sensors_1_1_rgbd_renderer.html", [
@@ -1076,10 +1078,10 @@ var hierarchy =
     [ "SpatialVector< SpatialVelocity, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialVelocity< T >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
     ] ],
-    [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
-    [ "StartReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_reference_1_1_spec.html", null ],
     [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
     [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
+    [ "StartReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_reference_1_1_spec.html", null ],
+    [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
     [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
     [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
     [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
@@ -1468,6 +1470,7 @@ var hierarchy =
     ] ],
     [ "VectorBase< T >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< T >", "classdrake_1_1systems_1_1_basic_vector.html", [
+        [ "IiwaCommand< T >", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_command.html", null ],
         [ "MyVector< N, T >", "classdrake_1_1systems_1_1_my_vector.html", null ],
         [ "FrameVelocity< T >", "classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html", null ],
         [ "PoseVector< T >", "classdrake_1_1systems_1_1rendering_1_1_pose_vector.html", null ],

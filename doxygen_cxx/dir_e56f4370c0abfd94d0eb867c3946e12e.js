@@ -3,11 +3,11 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
     [ "test", "dir_7a40f2bc129701c1de07b5fae7197d05.html", "dir_7a40f2bc129701c1de07b5fae7197d05" ],
     [ "package_map.cc", "package__map_8cc.html", "package__map_8cc" ],
     [ "package_map.h", "multibody_2parsing_2package__map_8h.html", [
-      [ "PackageMap", "classdrake_1_1multibody_1_1parsing_1_1_package_map.html", "classdrake_1_1multibody_1_1parsing_1_1_package_map" ]
+      [ "PackageMap", "classdrake_1_1multibody_1_1_package_map.html", "classdrake_1_1multibody_1_1_package_map" ]
     ] ],
     [ "parser.cc", "parser_8cc.html", "parser_8cc" ],
     [ "parser.h", "parser_8h.html", [
-      [ "Parser", "classdrake_1_1multibody_1_1parsing_1_1_parser.html", "classdrake_1_1multibody_1_1parsing_1_1_parser" ]
+      [ "Parser", "classdrake_1_1multibody_1_1_parser.html", "classdrake_1_1multibody_1_1_parser" ]
     ] ],
     [ "parser_common.cc", "multibody_2parsing_2parser__common_8cc.html", null ],
     [ "parser_common.h", "multibody_2parsing_2parser__common_8h.html", "multibody_2parsing_2parser__common_8h" ],

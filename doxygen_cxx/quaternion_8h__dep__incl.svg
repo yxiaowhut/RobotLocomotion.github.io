@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 7599;
+var viewWidth = 7580;
 var viewHeight = 552;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/math/quaternion.h</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-548 7594.5,-548 7594.5,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-548 7576,-548 7576,4 -4,4"/>
 <!-- Node67 -->
 <g id="node1" class="node">
 <title>Node67</title>
@@ -471,19 +471,19 @@ var sectionId = 'dynsection-1';
 <!-- Node304 -->
 <g id="node100" class="node">
 <title>Node304</title>
-<g id="a_node100"><a xlink:href="quaternion__floating__mobilizer_8cc.html" target="_top" xlink:title="drake/multibody/multibody\l_tree/quaternion_floating\l_mobilizer.cc">
-<polygon fill="#ffffff" stroke="#000000" points="7185.5,-446.5 7185.5,-487.5 7334.5,-487.5 7334.5,-446.5 7185.5,-446.5"/>
-<text text-anchor="start" x="7193.5" y="-475.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">drake/multibody/multibody</text>
-<text text-anchor="start" x="7193.5" y="-464.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_tree/quaternion_floating</text>
-<text text-anchor="middle" x="7260" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_mobilizer.cc</text>
+<g id="a_node100"><a xlink:href="quaternion__floating__mobilizer_8cc.html" target="_top" xlink:title="drake/multibody/tree\l/quaternion_floating\l_mobilizer.cc">
+<polygon fill="#ffffff" stroke="#000000" points="7185.5,-446.5 7185.5,-487.5 7304.5,-487.5 7304.5,-446.5 7185.5,-446.5"/>
+<text text-anchor="start" x="7193.5" y="-475.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">drake/multibody/tree</text>
+<text text-anchor="start" x="7193.5" y="-464.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/quaternion_floating</text>
+<text text-anchor="middle" x="7245" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_mobilizer.cc</text>
 </a>
 </g>
 </g>
 <!-- Node67&#45;&gt;Node304 -->
 <g id="edge197" class="edge">
 <title>Node67&#45;&gt;Node304</title>
-<path fill="none" stroke="#191970" d="M4740.808,-533.6209C5140.0675,-531.5577 6930.1639,-520.5494 7176,-488 7178.9804,-487.6054 7182.0078,-487.1443 7185.0567,-486.6294"/>
-<polygon fill="#191970" stroke="#191970" points="4740.7786,-530.1209 4730.7967,-533.6723 4740.8146,-537.1208 4740.7786,-530.1209"/>
+<path fill="none" stroke="#191970" d="M4740.8105,-533.8556C5140.1751,-532.9497 6931.0568,-526.7421 7176,-488 7179.092,-487.5109 7182.2381,-486.9171 7185.3983,-486.2437"/>
+<polygon fill="#191970" stroke="#191970" points="4740.5094,-530.3562 4730.5172,-533.8785 4740.525,-537.3562 4740.5094,-530.3562"/>
 </g>
 <!-- Node78 -->
 <g id="node12" class="node">
@@ -2227,36 +2227,35 @@ var sectionId = 'dynsection-1';
 <!-- Node302 -->
 <g id="node98" class="node">
 <title>Node302</title>
-<g id="a_node98"><a xlink:href="floating__body__test_8cc.html" target="_top" xlink:title="drake/multibody/multibody\l_tree/test/floating_body\l_test.cc">
-<polygon fill="#ffffff" stroke="#000000" points="7441.5,-368.5 7441.5,-409.5 7590.5,-409.5 7590.5,-368.5 7441.5,-368.5"/>
-<text text-anchor="start" x="7449.5" y="-397.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">drake/multibody/multibody</text>
-<text text-anchor="start" x="7449.5" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_tree/test/floating_body</text>
-<text text-anchor="middle" x="7516" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_test.cc</text>
+<g id="a_node98"><a xlink:href="floating__body__test_8cc.html" target="_top" xlink:title="drake/multibody/tree\l/test/floating_body_test.cc">
+<polygon fill="#ffffff" stroke="#000000" points="7426,-374 7426,-404 7572,-404 7572,-374 7426,-374"/>
+<text text-anchor="start" x="7434" y="-392" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">drake/multibody/tree</text>
+<text text-anchor="middle" x="7499" y="-381" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/test/floating_body_test.cc</text>
 </a>
 </g>
 </g>
 <!-- Node300&#45;&gt;Node302 -->
 <g id="edge194" class="edge">
 <title>Node300&#45;&gt;Node302</title>
-<path fill="none" stroke="#191970" d="M7158.2485,-449.7585C7164.5747,-448.4147 7170.8931,-447.1395 7177,-446 7289.9479,-424.9249 7320.2528,-432.1235 7433,-410 7435.7713,-409.4562 7438.5884,-408.8775 7441.4293,-408.272"/>
-<polygon fill="#191970" stroke="#191970" points="7157.3572,-446.3704 7148.3302,-451.9169 7158.8458,-453.2103 7157.3572,-446.3704"/>
+<path fill="none" stroke="#191970" d="M7158.2599,-449.819C7164.5837,-448.4623 7170.8984,-447.1675 7177,-446 7282.9381,-425.7292 7311.2857,-431.4073 7417,-410 7425.6419,-408.25 7434.7373,-406.1667 7443.5989,-404.0026"/>
+<polygon fill="#191970" stroke="#191970" points="7157.363,-446.4324 7148.3445,-451.9928 7158.8621,-453.2701 7157.363,-446.4324"/>
 </g>
 <!-- Node303 -->
 <g id="node99" class="node">
 <title>Node303</title>
-<g id="a_node99"><a xlink:href="free__rotating__body__test_8cc.html" target="_top" xlink:title="drake/multibody/multibody\l_tree/test/free_rotating\l_body_test.cc">
-<polygon fill="#ffffff" stroke="#000000" points="7274.5,-368.5 7274.5,-409.5 7423.5,-409.5 7423.5,-368.5 7274.5,-368.5"/>
-<text text-anchor="start" x="7282.5" y="-397.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">drake/multibody/multibody</text>
-<text text-anchor="start" x="7282.5" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_tree/test/free_rotating</text>
-<text text-anchor="middle" x="7349" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_body_test.cc</text>
+<g id="a_node99"><a xlink:href="free__rotating__body__test_8cc.html" target="_top" xlink:title="drake/multibody/tree\l/test/free_rotating_body\l_test.cc">
+<polygon fill="#ffffff" stroke="#000000" points="7274,-368.5 7274,-409.5 7408,-409.5 7408,-368.5 7274,-368.5"/>
+<text text-anchor="start" x="7282" y="-397.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">drake/multibody/tree</text>
+<text text-anchor="start" x="7282" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/test/free_rotating_body</text>
+<text text-anchor="middle" x="7341" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_test.cc</text>
 </a>
 </g>
 </g>
 <!-- Node300&#45;&gt;Node303 -->
 <g id="edge195" class="edge">
 <title>Node300&#45;&gt;Node303</title>
-<path fill="none" stroke="#191970" d="M7147.2879,-449.0517C7186.8175,-437.2834 7238.6131,-421.8633 7279.8199,-409.5956"/>
-<polygon fill="#191970" stroke="#191970" points="7146.1018,-445.7529 7137.5162,-451.9608 7148.0992,-452.4619 7146.1018,-445.7529"/>
+<path fill="none" stroke="#191970" d="M7145.9349,-448.9019C7184.195,-437.1527 7234.1529,-421.8113 7273.9322,-409.5956"/>
+<polygon fill="#191970" stroke="#191970" points="7144.5057,-445.6794 7135.9738,-451.9608 7146.5606,-452.371 7144.5057,-445.6794"/>
 </g>
 </g>
 </svg>
