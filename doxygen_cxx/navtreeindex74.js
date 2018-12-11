@@ -1,11 +1,5 @@
 var NAVTREEINDEX74 =
 {
-"struct_i_k_results.html#aeef060b634668ca5b98ba537a733fb8f":[2,0,31,2],
-"struct_integrator_params.html":[2,0,33],
-"struct_integrator_params.html#a37d118406241c02fa0ff44ebbf825ca1":[2,0,33,2],
-"struct_integrator_params.html#a37e12f9899a022f8d347353dcfcd3052":[2,0,33,0],
-"struct_integrator_params.html#aa119cf18629939ddf3d7b0326f14e56e":[2,0,33,4],
-"struct_integrator_params.html#ae4f402913d5fc5dd3aebca242ab26019":[2,0,33,3],
 "struct_integrator_params.html#aef22c8ec5cac6f382202f2cdb3c5ffdf":[2,0,33,1],
 "struct_joint_names.html":[2,0,34],
 "struct_joint_names.html#ab459a7c8e1598afa37931c9f4da942c6":[2,0,34,0],
@@ -249,5 +243,11 @@ var NAVTREEINDEX74 =
 "structdrake_1_1automotive_1_1_lane_direction.html#a4c7e10fe12a361befa2218fc6605fe6b":[2,0,0,1,8,7],
 "structdrake_1_1automotive_1_1_lane_direction.html#a784ac120c31efa724bd904a47647f5b5":[2,0,0,1,8,5],
 "structdrake_1_1automotive_1_1_lane_direction.html#a8b11a3190704a4b5e8f3b8c659f3d452":[2,0,0,1,8,0],
-"structdrake_1_1automotive_1_1_lane_direction.html#a8c673d09412afe59fab7f1ed7724b001":[2,0,0,1,8,1]
+"structdrake_1_1automotive_1_1_lane_direction.html#a8c673d09412afe59fab7f1ed7724b001":[2,0,0,1,8,1],
+"structdrake_1_1automotive_1_1_lane_direction.html#a8ecfa2d35aee9e605c480495fcadd61f":[2,0,0,1,8,8],
+"structdrake_1_1automotive_1_1_lane_direction.html#a950417cc1f70fed9d3a16e8173ae11c1":[2,0,0,1,8,2],
+"structdrake_1_1automotive_1_1_lane_direction.html#a992448c5beadf0fc9552c07dc76327c5":[2,0,0,1,8,3],
+"structdrake_1_1automotive_1_1_lane_direction.html#ae8df43b6823402411f66f4266cbae3ee":[2,0,0,1,8,4],
+"structdrake_1_1automotive_1_1_multilane_road_characteristics.html":[2,0,0,1,12],
+"structdrake_1_1automotive_1_1_multilane_road_characteristics.html#a0b7af3d2134345d6b2a69c048a6dfa19":[2,0,0,1,12,2]
 };

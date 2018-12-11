@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_inverse_ki
 </div><!--header-->
 <div class="contents">
 
-<p>Solves an inverse kinematics (IK) problem on a MultibodyPlant, to find the postures of the robot satisfying certain constraints.  
+<p>Solves an inverse kinematics (IK) problem on a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>, to find the postures of the robot satisfying certain constraints.  
  <a href="classdrake_1_1multibody_1_1_inverse_kinematics.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/multibody/inverse_kinematics/inverse_kinematics.h&gt;</code></p>
@@ -102,8 +102,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_inverse_ki
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a17e545f30ae2d1bf7fd15e14f6198fa9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a17e545f30ae2d1bf7fd15e14f6198fa9">~InverseKinematics</a> ()</td></tr>
 <tr class="separator:a17e545f30ae2d1bf7fd15e14f6198fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a033a83ec6f3ed16305d6cdf9494a336e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a033a83ec6f3ed16305d6cdf9494a336e">InverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html">multibody_plant::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant)</td></tr>
-<tr class="memdesc:a033a83ec6f3ed16305d6cdf9494a336e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an inverse kinematics problem for a MultibodyPlant.  <a href="#a033a83ec6f3ed16305d6cdf9494a336e">More...</a><br /></td></tr>
+<tr class="memitem:a033a83ec6f3ed16305d6cdf9494a336e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#a033a83ec6f3ed16305d6cdf9494a336e">InverseKinematics</a> (const multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant)</td></tr>
+<tr class="memdesc:a033a83ec6f3ed16305d6cdf9494a336e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an inverse kinematics problem for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#a033a83ec6f3ed16305d6cdf9494a336e">More...</a><br /></td></tr>
 <tr class="separator:a033a83ec6f3ed16305d6cdf9494a336e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9cd94b6ef67d25a510671af607247f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html#ad9cd94b6ef67d25a510671af607247f9">AddPositionConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frameB, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_BQ, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;frameA, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_lower, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;p_AQ_upper)</td></tr>
 <tr class="memdesc:ad9cd94b6ef67d25a510671af607247f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the kinematic constraint that a point Q, fixed in frame B, should lie within a bounding box expressed in another frame A as p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper, where p_AQ is the position of point Q measured and expressed in frame A.  <a href="#ad9cd94b6ef67d25a510671af607247f9">More...</a><br /></td></tr>
@@ -137,7 +137,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a069b08fb67eeeb99c807dfc823ea3154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Solves an inverse kinematics (IK) problem on a MultibodyPlant, to find the postures of the robot satisfying certain constraints. </p>
+<div class="textblock"><p>Solves an inverse kinematics (IK) problem on a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>, to find the postures of the robot satisfying certain constraints. </p>
 <p>The decision variables include the generalized position of the robot. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a67f334d691594767c3ac1f81e96a7b0f"></a>
@@ -229,7 +229,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html">multibody_plant::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>plant</em></td><td>)</td>
           <td></td>
         </tr>
@@ -241,7 +241,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs an inverse kinematics problem for a MultibodyPlant. </p>
+<p>Constructs an inverse kinematics problem for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plant</td><td>The robot on which the inverse kinematics problem will be solved. </td></tr>

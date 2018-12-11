@@ -1,11 +1,5 @@
 var NAVTREEINDEX77 =
 {
-"structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[2,0,0,43,1],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[2,0,0,16,3],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[2,0,0,16,3,1],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[2,0,0,16,3,3],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a":[2,0,0,16,3,2],
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aee9e567dff5d8f017d7705118d22d31d":[2,0,0,16,3,0],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html":[2,0,0,16,15,0],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c":[2,0,0,16,15,0,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a70af31c7e36b58a0a371ab585a605ed0":[2,0,0,16,15,0,2],
@@ -216,8 +210,8 @@ var NAVTREEINDEX77 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01automotive_1_1_idm_controller_01_4.html":[2,0,0,18,10,3],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01automotive_1_1_pure_pursuit_controller_01_4.html":[2,0,0,18,10,4],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01automotive_1_1_trajectory_car_01_4.html":[2,0,0,18,10,5],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1_multibody_plant_01_4.html":[2,0,0,18,10,6],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1_multibody_tree_system_01_4.html":[2,0,0,18,10,7],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1multibody__plant_1_1_multibody_plant_01_4.html":[2,0,0,18,10,6],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html":[2,0,0,18,10,8],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[2,0,0,18,10,9],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html":[2,0,0,18,10,10],
@@ -249,5 +243,11 @@ var NAVTREEINDEX77 =
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[2,0,0,18,11,21,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae72a4d719987efa5639d3da15636f1b8":[2,0,0,18,11,21,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[2,0,0,18,11,21,2],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[2,0,0,18,11,22]
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[2,0,0,18,11,22],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[2,0,0,18,11,22,1],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ad57b2d00f790a83a293e9712d5c1805c":[2,0,0,18,11,22,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[2,0,0,18,11,22,2],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html":[2,0,0,18,11,23],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#a3fc5a3db41247932de0536acb4a82a6d":[2,0,0,18,11,23,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[2,0,0,18,11,23,1]
 };

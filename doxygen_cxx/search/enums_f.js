@@ -6,5 +6,5 @@ var searchData=
   ['roadpositionstrategy',['RoadPositionStrategy',['../namespacedrake_1_1automotive.html#a80c24f02d40ad1d60da3a88a412b08c3',1,'drake::automotive']]],
   ['role',['Role',['../namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951',1,'drake::geometry']]],
   ['rollpitchyawlimitoptions',['RollPitchYawLimitOptions',['../namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74',1,'drake::solvers']]],
-  ['rotationmatrixintervalbinning',['RotationMatrixIntervalBinning',['../mixed__integer__rotation__constraint__corner__test_8cc.html#a7c258059e8b6f312ef6d458662256056',1,'drake::solvers::@1629']]]
+  ['rotationmatrixintervalbinning',['RotationMatrixIntervalBinning',['../mixed__integer__rotation__constraint__corner__test_8cc.html#a7c258059e8b6f312ef6d458662256056',1,'drake::solvers::@1630']]]
 ];

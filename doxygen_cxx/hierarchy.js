@@ -125,8 +125,7 @@ var hierarchy =
     [ "ContactParam", "structdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_contact_param.html", null ],
     [ "ContactResultantForceCalculator< T >", "classdrake_1_1systems_1_1_contact_resultant_force_calculator.html", null ],
     [ "ContactResults< T >", "classdrake_1_1systems_1_1_contact_results.html", null ],
-    [ "ContactResults< T >", "classdrake_1_1multibody_1_1multibody__plant_1_1_contact_results.html", null ],
-    [ "ContactResults< double >", "classdrake_1_1multibody_1_1multibody__plant_1_1_contact_results.html", null ],
+    [ "ContactResults< T >", "classdrake_1_1multibody_1_1_contact_results.html", null ],
     [ "ContextMessageInterface", null, [
       [ "ContextBase", "classdrake_1_1systems_1_1_context_base.html", [
         [ "Context< AutoDiffXd >", "classdrake_1_1systems_1_1_context.html", [
@@ -156,8 +155,8 @@ var hierarchy =
     [ "ContinuousState< AutoDiffXd >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< double >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
-    [ "CoulombFriction< T >", "classdrake_1_1multibody_1_1multibody__plant_1_1_coulomb_friction.html", null ],
-    [ "CoulombFriction< double >", "classdrake_1_1multibody_1_1multibody__plant_1_1_coulomb_friction.html", null ],
+    [ "CoulombFriction< T >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
+    [ "CoulombFriction< double >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CubicPolynomial", "classdrake_1_1maliput_1_1multilane_1_1_cubic_polynomial.html", null ],
     [ "Curve2< T >", "classdrake_1_1automotive_1_1_curve2.html", null ],
     [ "KinematicsCache< T >::DataInCalcFrameSpatialVelocityJacobianInWorldFrame", "struct_kinematics_cache_1_1_data_in_calc_frame_spatial_velocity_jacobian_in_world_frame.html", null ],
@@ -470,7 +469,6 @@ var hierarchy =
     [ "ImageTraits< PixelType::kRgb8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html", null ],
     [ "ImageTraits< PixelType::kRgba8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html", null ],
     [ "ImplicitStribeckSolver< T >", "classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html", null ],
-    [ "ImplicitStribeckSolver< double >", "classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html", null ],
     [ "IndexFace", "classdrake_1_1maliput_1_1utility_1_1mesh_1_1_index_face.html", null ],
     [ "InitializeAutoDiffTupleHelper< Index >", "structdrake_1_1math_1_1internal_1_1_initialize_auto_diff_tuple_helper.html", null ],
     [ "InitializeAutoDiffTupleHelper< 0 >", "structdrake_1_1math_1_1internal_1_1_initialize_auto_diff_tuple_helper_3_010_01_4.html", null ],
@@ -680,6 +678,9 @@ var hierarchy =
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
+    [ "MultibodyPlant", null, [
+      [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
+    ] ],
     [ "MultibodyTree< T >", "classdrake_1_1multibody_1_1_multibody_tree.html", null ],
     [ "MultibodyTree< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_tree.html", null ],
     [ "MultibodyTree< double >", "classdrake_1_1multibody_1_1_multibody_tree.html", null ],
@@ -778,7 +779,7 @@ var hierarchy =
       [ "Traits< automotive::IdmController >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01automotive_1_1_idm_controller_01_4.html", null ],
       [ "Traits< automotive::PurePursuitController >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01automotive_1_1_pure_pursuit_controller_01_4.html", null ],
       [ "Traits< automotive::TrajectoryCar >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01automotive_1_1_trajectory_car_01_4.html", null ],
-      [ "Traits< drake::multibody::multibody_plant::MultibodyPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1multibody__plant_1_1_multibody_plant_01_4.html", null ],
+      [ "Traits< drake::multibody::MultibodyPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1_multibody_plant_01_4.html", null ],
       [ "Traits< drake::multibody::MultibodyTreeSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1_multibody_tree_system_01_4.html", null ],
       [ "Traits< examples::quadrotor::QuadrotorPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html", null ],
       [ "Traits< examples::rimless_wheel::RimlessWheel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html", null ],
@@ -821,7 +822,6 @@ var hierarchy =
     [ "Passkey< T >", "classdrake_1_1maliput_1_1geometry__base_1_1_passkey.html", null ],
     [ "PendulumParameters", "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html", null ],
     [ "PenetrationAsPointPair< T >", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
-    [ "PenetrationAsPointPair< double >", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
     [ "DynamicProgrammingOptions::PeriodicBoundaryCondition", "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html", null ],
     [ "PeriodicEventDataComparator", "structdrake_1_1systems_1_1_periodic_event_data_comparator.html", null ],
     [ "PickAndPlaceStateMachine", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_pick_and_place_state_machine.html", null ],
@@ -834,8 +834,7 @@ var hierarchy =
     [ "Point", "struct_point.html", null ],
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPair< T >", "structdrake_1_1multibody_1_1collision_1_1_point_pair.html", null ],
-    [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1multibody__plant_1_1_point_pair_contact_info.html", null ],
-    [ "PointPairContactInfo< double >", "classdrake_1_1multibody_1_1multibody__plant_1_1_point_pair_contact_info.html", null ],
+    [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "Polynomial< _CoefficientType >", "class_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< CoefficientType >", "class_polynomial.html", null ],
@@ -847,8 +846,8 @@ var hierarchy =
     [ "PositionIndices", "struct_position_indices.html", null ],
     [ "PositionKinematicsCache< T >", "classdrake_1_1multibody_1_1_position_kinematics_cache.html", null ],
     [ "Curve2< T >::PositionResult", "structdrake_1_1automotive_1_1_curve2_1_1_position_result.html", null ],
-    [ "Polynomial< _CoefficientType >::Product< Rhs, Lhs >", "struct_polynomial_1_1_product.html", null ],
     [ "TrigPoly< _CoefficientType >::Product< Rhs, Lhs >", "struct_trig_poly_1_1_product.html", null ],
+    [ "Polynomial< _CoefficientType >::Product< Rhs, Lhs >", "struct_polynomial_1_1_product.html", null ],
     [ "ProximityEngine< T >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
     [ "ProximityEngine< double >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
     [ "PurePursuit< T >", "classdrake_1_1automotive_1_1_pure_pursuit.html", null ],
@@ -889,8 +888,8 @@ var hierarchy =
     [ "ResizeDerivativesToMatchScalarImpl< Derived, Scalar >", "structdrake_1_1math_1_1internal_1_1_resize_derivatives_to_match_scalar_impl.html", null ],
     [ "ResizeDerivativesToMatchScalarImpl< Derived, Eigen::AutoDiffScalar< DerivType > >", "structdrake_1_1math_1_1internal_1_1_resize_derivatives_to_match_scalar_impl_3_01_derived_00_01_e4b12c7e286e912caa62a5d0fe1e24932.html", null ],
     [ "ResolvedContact", "classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_resolved_contact.html", null ],
-    [ "RightOfWayStateProvider::Result", "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_state_provider_1_1_result.html", null ],
     [ "RightOfWayPhaseProvider::Result", "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result.html", null ],
+    [ "RightOfWayStateProvider::Result", "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_state_provider_1_1_result.html", null ],
     [ "MixedIntegerRotationConstraintGenerator::ReturnType", "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html", null ],
     [ "RewritingRule", "classdrake_1_1symbolic_1_1_rewriting_rule.html", null ],
     [ "RgbdRenderer", "classdrake_1_1systems_1_1sensors_1_1_rgbd_renderer.html", [
@@ -1078,10 +1077,10 @@ var hierarchy =
     [ "SpatialVector< SpatialVelocity, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialVelocity< T >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
     ] ],
-    [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
-    [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
     [ "StartReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_reference_1_1_spec.html", null ],
+    [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
     [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
+    [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
     [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
     [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
     [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
@@ -1090,10 +1089,10 @@ var hierarchy =
     [ "SrhFace", "classdrake_1_1maliput_1_1utility_1_1mesh_1_1_srh_face.html", null ],
     [ "StartLane", "classdrake_1_1maliput_1_1multilane_1_1_start_lane.html", null ],
     [ "StartReference", "classdrake_1_1maliput_1_1multilane_1_1_start_reference.html", null ],
+    [ "RightOfWayRule::State", "classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html", null ],
     [ "State< T >", "classdrake_1_1systems_1_1_state.html", [
       [ "DiagramState< T >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
     ] ],
-    [ "RightOfWayRule::State", "classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html", null ],
     [ "State< AutoDiffXd >", "classdrake_1_1systems_1_1_state.html", null ],
     [ "State< double >", "classdrake_1_1systems_1_1_state.html", [
       [ "DiagramState< double >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
@@ -1159,12 +1158,10 @@ var hierarchy =
             [ "SolarSystem< T >", "classdrake_1_1examples_1_1solar__system_1_1_solar_system.html", null ],
             [ "VanDerPolOscillator< T >", "classdrake_1_1examples_1_1van__der__pol_1_1_van_der_pol_oscillator.html", null ],
             [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
-            [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1multibody__plant_1_1_contact_results_to_lcm_system.html", null ],
+            [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", null ],
             [ "MultibodyTreeSystem< T >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", [
-              [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html", [
-                [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
-              ] ],
-              [ "FreeRotatingBodyPlant< T >", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_free_rotating_body_plant.html", null ]
+              [ "FreeRotatingBodyPlant< T >", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_free_rotating_body_plant.html", null ],
+              [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
             ] ],
             [ "ActuatorEffortToRigidBodyPlantInputConverter< T >", "classdrake_1_1systems_1_1_actuator_effort_to_rigid_body_plant_input_converter.html", null ],
             [ "Adder< T >", "classdrake_1_1systems_1_1_adder.html", null ],
@@ -1309,9 +1306,7 @@ var hierarchy =
             [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", null ],
             [ "RgbdCamera", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html", null ],
             [ "ValkyriePDAndFeedForwardController", "classdrake_1_1systems_1_1_valkyrie_p_d_and_feed_forward_controller.html", null ],
-            [ "MultibodyTreeSystem< double >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", [
-              [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1multibody__plant_1_1_multibody_plant.html", null ]
-            ] ],
+            [ "MultibodyTreeSystem< double >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", null ],
             [ "RigidBodyPlant< double >", "classdrake_1_1systems_1_1_rigid_body_plant.html", null ],
             [ "Rod2D< double >", "classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html", null ],
             [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
@@ -1370,7 +1365,6 @@ var hierarchy =
     [ "TotalSizeAtCompileTime< Head >", "structdrake_1_1math_1_1internal_1_1_total_size_at_compile_time_3_01_head_01_4.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Traits< geometry::SceneGraph >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html", null ],
-    [ "Trajectory", "classdrake_1_1automotive_1_1_trajectory.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "PiecewiseTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
@@ -1378,6 +1372,7 @@ var hierarchy =
         [ "PiecewiseQuaternionSlerp< T >", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html", null ]
       ] ]
     ] ],
+    [ "Trajectory", "classdrake_1_1automotive_1_1_trajectory.html", null ],
     [ "Trajectory< double >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "PiecewiseTrajectory< double >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],

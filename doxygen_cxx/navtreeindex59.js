@@ -1,7 +1,5 @@
 var NAVTREEINDEX59 =
 {
-"inverse__kinematics__test__utilities_8cc.html#ad1b559878de179a7e363846fa67f58c0":[3,0,0,11,2,0,3,7],
-"inverse__kinematics__test__utilities_8h.html":[3,0,0,11,2,0,4],
 "inverse__kinematics__test__utilities_8h.html#a1350f024a6747443ab7a574d7c2f5c03":[3,0,0,11,2,0,4,5],
 "inverse__kinematics__test__utilities_8h.html#a2b38bd7300b0ecfe529b24d20563214c":[3,0,0,11,2,0,4,3],
 "inverse__kinematics__test__utilities_8h.html#a97df514cee18dd5f8c9fc72b056e5dbd":[3,0,0,11,2,0,4,4],
@@ -93,9 +91,9 @@ var NAVTREEINDEX59 =
 "jacobian_8h.html#a57457683becdddf605a55be881c065b4":[3,0,0,9,26,1],
 "jacobian_8h.html#a6dce37732e3e532f7b87cd517789da7f":[3,0,0,9,26,0],
 "jacobian__test_8cc.html":[3,0,0,9,0,11],
-"joint_8h.html":[3,0,0,11,6,18],
-"joint__actuator_8cc.html":[3,0,0,11,6,19],
-"joint__actuator_8h.html":[3,0,0,11,6,20],
+"joint_8h.html":[3,0,0,11,7,18],
+"joint__actuator_8cc.html":[3,0,0,11,7,19],
+"joint__actuator_8h.html":[3,0,0,11,7,20],
 "joint__compare__to__clone_8cc.html":[3,0,0,0,1,1,0,0],
 "joint__compare__to__clone_8cc.html#a03b3c9279c9f433abdef4fc826e2a048":[3,0,0,0,1,1,0,0,6],
 "joint__compare__to__clone_8cc.html#a1282b1f338dfd2614646f76b3bc96dda":[3,0,0,0,1,1,0,0,7],
@@ -118,7 +116,7 @@ var NAVTREEINDEX59 =
 "joint__limit__constraint__force__evaluator_8cc.html":[3,0,0,0,3,4,3],
 "joint__limit__constraint__force__evaluator_8h.html":[3,0,0,0,3,4,4],
 "joint__limit__constraint__force__evaluator__test_8cc.html":[3,0,0,0,3,4,0,2],
-"joint__limits__test_8cc.html":[3,0,0,11,4,1,0,4],
+"joint__limits__test_8cc.html":[3,0,0,11,6,0,6],
 "joint__test_8cc.html":[3,0,0,0,1,1,0,2],
 "joint__test_8cc.html#a052fdbb055c1be4184ab4bd567a2efaf":[3,0,0,0,1,1,0,2,1],
 "joint__test_8cc.html#a4acb5c50b8478ce5951b9ee271c4bd68":[3,0,0,0,1,1,0,2,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX59 =
 "lcm__translator__dictionary_8cc.html":[3,0,0,14,4,13],
 "lcm__translator__dictionary_8h.html":[3,0,0,14,4,14],
 "lcm__translator__dictionary__test_8cc.html":[3,0,0,14,4,0,5],
-"lcm__utils_8cc.html":[3,0,0,0,3,0,1,1]
+"lcm__utils_8cc.html":[3,0,0,0,3,0,1,1],
+"lcm__utils_8cc.html#a04cf7fe32c703903856aaf16d371dfd4":[3,0,0,0,3,0,1,1,16],
+"lcm__utils_8cc.html#a1d5aa70a8cb87ee2cdb8d3c26ea9f42e":[3,0,0,0,3,0,1,1,5]
 };

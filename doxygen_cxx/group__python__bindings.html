@@ -112,6 +112,9 @@ using drake::multibody::multibody_plant::{symbol};
 <p>You can implicit convert between <code>py::object</code> and its derived classes (such as <code>py::list</code>, <code>py::class_</code>, etc.), assuming the actual Python types agree. You may also implicitly convert from <code>py::object</code> (and its derived classes) to <code>py::handle</code>.</p>
 <p>If you wish to convert a <code>py::handle</code> (or <code>PyObject*</code>) to <code>py::object</code> or a derived class, you should use <a href="http://pybind11.readthedocs.io/en/stable/reference.html#_CPPv218reinterpret_borrow6handle"><code>py::reinterpret_borrow&lt;&gt;</code></a>.</p>
 <h1>Conventions</h1>
+<h2>API Names</h2>
+<p>Any Python bindings of C++ code will maintain C++ naming conventions, as well as Python code that is directly related to C++ symbols (e.g. shims, wrappers, or extensions on existing bound classes).</p>
+<p>All other Python code be Pythonic and use PEP 8 naming conventions.</p>
 <h2>Target Conventions</h2>
 <h3>Names</h3>
 <ul>

@@ -1,7 +1,5 @@
 var NAVTREEINDEX53 =
 {
-"directed__waypoint_8h.html":[3,0,0,1,0,4,9],
-"directed__waypoint__test_8cc.html":[3,0,0,1,0,4,0,2],
 "discontinuous__spring__mass__damper__system_8h.html":[3,0,0,14,0,1,3],
 "discrete__algebraic__riccati__equation_8cc.html":[3,0,0,9,12],
 "discrete__algebraic__riccati__equation_8cc.html#afcef78b318bd0da2f388b83bc6fafa81":[3,0,0,9,12,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX53 =
 "dreal__solver__test_8cc.html#a0bbb6b20a9d1286aad3c6d1f4e4f3b5c":[3,0,0,13,0,12,3],
 "dreal__solver__test_8cc.html#a1dc6998dc4bfd34ed64a0b5810a8840d":[3,0,0,13,0,12,10],
 "dreal__solver__test_8cc.html#a3007e85ba90a6dbc1717cf21ba2f1c8d":[3,0,0,13,0,12,2],
-"dreal__solver__test_8cc.html#a34af84543ab5a264a773d4aeff8b5900":[3,0,0,13,0,12,1]
+"dreal__solver__test_8cc.html#a34af84543ab5a264a773d4aeff8b5900":[3,0,0,13,0,12,1],
+"dreal__solver__test_8cc.html#a35ac7e3fa49ffba9899c9548d411620a":[3,0,0,13,0,12,6],
+"dreal__solver__test_8cc.html#a3d1619526f145282d66090dacc4d26f1":[3,0,0,13,0,12,12]
 };

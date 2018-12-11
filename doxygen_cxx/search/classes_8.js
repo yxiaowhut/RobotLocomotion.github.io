@@ -40,7 +40,6 @@ var searchData=
   ['imagewriter',['ImageWriter',['../classdrake_1_1systems_1_1sensors_1_1_image_writer.html',1,'drake::systems::sensors']]],
   ['impliciteulerintegrator',['ImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_implicit_euler_integrator.html',1,'drake::systems']]],
   ['implicitstribecksolver',['ImplicitStribeckSolver',['../classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html',1,'drake::multibody::implicit_stribeck']]],
-  ['implicitstribecksolver_3c_20double_20_3e',['ImplicitStribeckSolver&lt; double &gt;',['../classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html',1,'drake::multibody::implicit_stribeck']]],
   ['indexface',['IndexFace',['../classdrake_1_1maliput_1_1utility_1_1mesh_1_1_index_face.html',1,'drake::maliput::utility::mesh']]],
   ['infeasiblelinearprogramtest0',['InfeasibleLinearProgramTest0',['../classdrake_1_1solvers_1_1test_1_1_infeasible_linear_program_test0.html',1,'drake::solvers::test']]],
   ['initializeautodifftuplehelper',['InitializeAutoDiffTupleHelper',['../structdrake_1_1math_1_1internal_1_1_initialize_auto_diff_tuple_helper.html',1,'drake::math::internal']]],

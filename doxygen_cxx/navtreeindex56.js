@@ -1,7 +1,5 @@
 var NAVTREEINDEX56 =
 {
-"generate__obj_8cc.html":[3,0,0,1,0,8,1],
-"generate__obj_8cc.html#a9ca0996b95b162407ed432e9a41718b2":[3,0,0,1,0,8,1,0],
 "generate__obj_8h.html":[3,0,0,1,0,8,2],
 "generate__obj_8h.html#a9ca0996b95b162407ed432e9a41718b2":[3,0,0,1,0,8,2,1],
 "generate__obj__test_8cc.html":[3,0,0,1,0,8,0,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX56 =
 "group___dt__multibody__quantities.html":[0,2,0,0,0,3],
 "group__acrobot__systems.html":[0,1,10,0],
 "group__acrobot__systems.html#gaf0c82a177b14bf3b7bde207336f9cba1":[0,1,10,0,7],
-"group__algorithms.html":[0,2]
+"group__algorithms.html":[0,2],
+"group__analysis.html":[0,2,2],
+"group__analysis.html#ga071df4e961cc5771944611e4886bc9e5":[0,2,2,1]
 };

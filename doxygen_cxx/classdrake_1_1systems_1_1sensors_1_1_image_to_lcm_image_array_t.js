@@ -5,7 +5,7 @@ var classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t =
     [ "ImageToLcmImageArrayT", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a4564fab2abf555871eb10f82ec0d55a0", null ],
     [ "ImageToLcmImageArrayT", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#af32d1cc256cb4585661d88355431156e", null ],
     [ "color_image_input_port", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#ae66f07133ebd8d392afa5b7111e3e499", null ],
-    [ "DeclareImageInputPort", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a92ba7c50c87d0c498aee53af068ec38a", null ],
+    [ "DeclareImageInputPort", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a88d06be3e05fdb3ab12d40101e512bfb", null ],
     [ "depth_image_input_port", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a022d4b6d2b6bcfdbccb1c2d594e291a5", null ],
     [ "image_array_t_msg_output_port", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#a4ed0e2089e0d8bb2437a394056833609", null ],
     [ "label_image_input_port", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html#aa5237d190ba0ef4e01dd0dba901e3afb", null ],
