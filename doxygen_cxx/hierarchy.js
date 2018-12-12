@@ -504,6 +504,7 @@ var hierarchy =
     [ "InvalidDepth", "classdrake_1_1systems_1_1sensors_1_1_invalid_depth.html", null ],
     [ "InverseFunctionInterpolator", "classdrake_1_1maliput_1_1rndf_1_1_inverse_function_interpolator.html", null ],
     [ "InverseKinematics", "classdrake_1_1multibody_1_1_inverse_kinematics.html", null ],
+    [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", null ],
     [ "is_base_of", null, [
       [ "is_eigen_type< Derived >", "structdrake_1_1is__eigen__type.html", null ]
     ] ],
@@ -773,6 +774,7 @@ var hierarchy =
     [ "RightOfWayPhaseProvider::Result::Next", "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result_1_1_next.html", null ],
     [ "RightOfWayStateProvider::Result::Next", "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_state_provider_1_1_result_1_1_next.html", null ],
     [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", null ],
+    [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", null ],
     [ "NonConvexQPproblem1", "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html", null ],
     [ "NonConvexQPproblem2", "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem2.html", null ],
     [ "NonSymbolicTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html", [
@@ -803,6 +805,7 @@ var hierarchy =
     [ "GlobalInverseKinematics::Options", "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html", null ],
     [ "OptitrackConfiguration", "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html", null ],
     [ "OptitrackInfo", "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_info.html", null ],
+    [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", null ],
     [ "OutputPortBase", "classdrake_1_1systems_1_1_output_port_base.html", [
       [ "OutputPort< T >", "classdrake_1_1systems_1_1_output_port.html", [
         [ "DiagramOutputPort< T >", "classdrake_1_1systems_1_1_diagram_output_port.html", null ],
@@ -846,8 +849,8 @@ var hierarchy =
     [ "PositionIndices", "struct_position_indices.html", null ],
     [ "PositionKinematicsCache< T >", "classdrake_1_1multibody_1_1_position_kinematics_cache.html", null ],
     [ "Curve2< T >::PositionResult", "structdrake_1_1automotive_1_1_curve2_1_1_position_result.html", null ],
-    [ "TrigPoly< _CoefficientType >::Product< Rhs, Lhs >", "struct_trig_poly_1_1_product.html", null ],
     [ "Polynomial< _CoefficientType >::Product< Rhs, Lhs >", "struct_polynomial_1_1_product.html", null ],
+    [ "TrigPoly< _CoefficientType >::Product< Rhs, Lhs >", "struct_trig_poly_1_1_product.html", null ],
     [ "ProximityEngine< T >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
     [ "ProximityEngine< double >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
     [ "PurePursuit< T >", "classdrake_1_1automotive_1_1_pure_pursuit.html", null ],
@@ -1078,21 +1081,21 @@ var hierarchy =
       [ "SpatialVelocity< T >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
     ] ],
     [ "StartReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_reference_1_1_spec.html", null ],
-    [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
     [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
+    [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
     [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
     [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
-    [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
     [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
+    [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
     [ "SpeedLimitRule", "classdrake_1_1maliput_1_1api_1_1rules_1_1_speed_limit_rule.html", null ],
     [ "SRange", "classdrake_1_1maliput_1_1api_1_1rules_1_1_s_range.html", null ],
     [ "SrhFace", "classdrake_1_1maliput_1_1utility_1_1mesh_1_1_srh_face.html", null ],
     [ "StartLane", "classdrake_1_1maliput_1_1multilane_1_1_start_lane.html", null ],
     [ "StartReference", "classdrake_1_1maliput_1_1multilane_1_1_start_reference.html", null ],
-    [ "RightOfWayRule::State", "classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html", null ],
     [ "State< T >", "classdrake_1_1systems_1_1_state.html", [
       [ "DiagramState< T >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
     ] ],
+    [ "RightOfWayRule::State", "classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html", null ],
     [ "State< AutoDiffXd >", "classdrake_1_1systems_1_1_state.html", null ],
     [ "State< double >", "classdrake_1_1systems_1_1_state.html", [
       [ "DiagramState< double >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
@@ -1365,6 +1368,7 @@ var hierarchy =
     [ "TotalSizeAtCompileTime< Head >", "structdrake_1_1math_1_1internal_1_1_total_size_at_compile_time_3_01_head_01_4.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Traits< geometry::SceneGraph >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html", null ],
+    [ "Trajectory", "classdrake_1_1automotive_1_1_trajectory.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "PiecewiseTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
@@ -1372,7 +1376,6 @@ var hierarchy =
         [ "PiecewiseQuaternionSlerp< T >", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html", null ]
       ] ]
     ] ],
-    [ "Trajectory", "classdrake_1_1automotive_1_1_trajectory.html", null ],
     [ "Trajectory< double >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "PiecewiseTrajectory< double >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],

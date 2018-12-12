@@ -108,9 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeccfbaa73e7a744f9339d671ac2f3832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#aeccfbaa73e7a744f9339d671ac2f3832">Solve</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;<a class="el" href="nlopt__solver_8cc.html#a696e816beb9a54549c52c173a8b7ef04">prog</a>) const override</td></tr>
 <tr class="memdesc:aeccfbaa73e7a744f9339d671ac2f3832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets values for the decision variables on the given <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> <code>prog</code>, or:  <a href="#aeccfbaa73e7a744f9339d671ac2f3832">More...</a><br /></td></tr>
 <tr class="separator:aeccfbaa73e7a744f9339d671ac2f3832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcb59c9f532778e8656e681733a2f642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#abcb59c9f532778e8656e681733a2f642">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; Eigen::VectorXd &gt; &amp;, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *) const override</td></tr>
-<tr class="memdesc:abcb59c9f532778e8656e681733a2f642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program with optional initial guess and solver options.  <a href="#abcb59c9f532778e8656e681733a2f642">More...</a><br /></td></tr>
-<tr class="separator:abcb59c9f532778e8656e681733a2f642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae822f158c8b0b8bb10bc8e8350431d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#aae822f158c8b0b8bb10bc8e8350431d8">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;<a class="el" href="nlopt__solver_8cc.html#a696e816beb9a54549c52c173a8b7ef04">prog</a>, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; Eigen::VectorXd &gt; &amp;initial_guess, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *<a class="el" href="ipopt__solver_8cc.html#a1b96859d8d2b1bddf6e5c68171983df3">result</a>) const override</td></tr>
+<tr class="memdesc:aae822f158c8b0b8bb10bc8e8350431d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program with optional initial guess and solver options.  <a href="#aae822f158c8b0b8bb10bc8e8350431d8">More...</a><br /></td></tr>
+<tr class="separator:aae822f158c8b0b8bb10bc8e8350431d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace3da8c3a4a8bd641915f170d18e6c15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#ace3da8c3a4a8bd641915f170d18e6c15">solver_id</a> () const override</td></tr>
 <tr class="memdesc:ace3da8c3a4a8bd641915f170d18e6c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identifier of this solver.  <a href="#ace3da8c3a4a8bd641915f170d18e6c15">More...</a><br /></td></tr>
 <tr class="separator:ace3da8c3a4a8bd641915f170d18e6c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,6 +148,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a28a0f6b23d472a74f7bada5169e806e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a897b26da95cce4dd89d5eb4fbec9b829"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#a897b26da95cce4dd89d5eb4fbec9b829">ProgramAttributesSatisfied</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;<a class="el" href="nlopt__solver_8cc.html#a696e816beb9a54549c52c173a8b7ef04">prog</a>)</td></tr>
 <tr class="separator:a897b26da95cce4dd89d5eb4fbec9b829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d699fc132543d3de24b00cb2845577"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#a90d699fc132543d3de24b00cb2845577">ConstraintToleranceName</a> ()</td></tr>
+<tr class="memdesc:a90d699fc132543d3de24b00cb2845577"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for the double-valued constraint tolerance.  <a href="#a90d699fc132543d3de24b00cb2845577">More...</a><br /></td></tr>
+<tr class="separator:a90d699fc132543d3de24b00cb2845577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a186e878b791fef674bf4e8f7cf90c5fa"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#a186e878b791fef674bf4e8f7cf90c5fa">XRelativeToleranceName</a> ()</td></tr>
+<tr class="memdesc:a186e878b791fef674bf4e8f7cf90c5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for double-valued x relative tolerance.  <a href="#a186e878b791fef674bf4e8f7cf90c5fa">More...</a><br /></td></tr>
+<tr class="separator:a186e878b791fef674bf4e8f7cf90c5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55f50d257f24d9db388e77875fc229f4"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#a55f50d257f24d9db388e77875fc229f4">XAbsoluteToleranceName</a> ()</td></tr>
+<tr class="memdesc:a55f50d257f24d9db388e77875fc229f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for double-valued x absolute tolerance.  <a href="#a55f50d257f24d9db388e77875fc229f4">More...</a><br /></td></tr>
+<tr class="separator:a55f50d257f24d9db388e77875fc229f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b9627d85ecd724220754369a89b611"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html#a09b9627d85ecd724220754369a89b611">MaxEvalName</a> ()</td></tr>
+<tr class="memdesc:a09b9627d85ecd724220754369a89b611"><td class="mdescLeft">&#160;</td><td class="mdescRight">The key name for int-valued maximum number of evaluations.  <a href="#a09b9627d85ecd724220754369a89b611">More...</a><br /></td></tr>
+<tr class="separator:a09b9627d85ecd724220754369a89b611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a286cc15cf90013e9202cac5dfebe8c86"></a>
@@ -312,6 +324,33 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a90d699fc132543d3de24b00cb2845577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d699fc132543d3de24b00cb2845577">&#9670;&nbsp;</a></span>ConstraintToleranceName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ConstraintToleranceName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for the double-valued constraint tolerance. </p>
+
+</div>
+</div>
 <a id="a28a0f6b23d472a74f7bada5169e806e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28a0f6b23d472a74f7bada5169e806e6">&#9670;&nbsp;</a></span>id()</h2>
 
@@ -360,6 +399,33 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09b9627d85ecd724220754369a89b611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b9627d85ecd724220754369a89b611">&#9670;&nbsp;</a></span>MaxEvalName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MaxEvalName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for int-valued maximum number of evaluations. </p>
 
 </div>
 </div>
@@ -475,8 +541,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abcb59c9f532778e8656e681733a2f642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcb59c9f532778e8656e681733a2f642">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/2]</span></h2>
+<a id="aae822f158c8b0b8bb10bc8e8350431d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae822f158c8b0b8bb10bc8e8350431d8">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,7 +582,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -554,6 +620,60 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the identifier of this solver. </p>
 
 <p>Implements <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_solver_interface.html#a97e6e96f4fdf50c424c68b6583f33023">MathematicalProgramSolverInterface</a>.</p>
+
+</div>
+</div>
+<a id="a55f50d257f24d9db388e77875fc229f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f50d257f24d9db388e77875fc229f4">&#9670;&nbsp;</a></span>XAbsoluteToleranceName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XAbsoluteToleranceName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for double-valued x absolute tolerance. </p>
+
+</div>
+</div>
+<a id="a186e878b791fef674bf4e8f7cf90c5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a186e878b791fef674bf4e8f7cf90c5fa">&#9670;&nbsp;</a></span>XRelativeToleranceName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XRelativeToleranceName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The key name for double-valued x relative tolerance. </p>
 
 </div>
 </div>

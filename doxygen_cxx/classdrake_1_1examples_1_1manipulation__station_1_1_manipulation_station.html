@@ -105,14 +105,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5efa138ff632cf8bcc2bbb2b7a6f7f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the EMPTY station model.  <a href="#a5efa138ff632cf8bcc2bbb2b7a6f7f23">More...</a><br /></td></tr>
 <tr class="separator:a5efa138ff632cf8bcc2bbb2b7a6f7f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5ae700cfd75062f5279ca6f9e82058c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#af5ae700cfd75062f5279ca6f9e82058c">SetupDefaultStation</a> (<a class="el" href="namespacedrake_1_1examples_1_1manipulation__station.html#ad52e754b3d3e57fdbf865d450da88b8d">IiwaCollisionModel</a> collision_model=<a class="el" href="namespacedrake_1_1examples_1_1manipulation__station.html#ad52e754b3d3e57fdbf865d450da88b8dae9e690a25422e7ed157a6f924b06c20c">IiwaCollisionModel::kNoCollision</a>)</td></tr>
-<tr class="memdesc:af5ae700cfd75062f5279ca6f9e82058c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a default iiwa, wsg, cupboard, and 8020 frame for the MIT Intelligent Robot Manipulation class, then calls <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ab878a225869d0b3dfb3b26049485cdec" title="Notifies the ManipulationStation that the IIWA robot model instance can be identified by iiwa_instanc...">RegisterIiwaControllerModel()</a> and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aef5c56e27301038e481b69657ae5a465" title="Notifies the ManipulationStation that the WSG gripper model instance can be identified by wsg_instanc...">RegisterWsgControllerModel()</a> with the appropriate arguments.  <a href="#af5ae700cfd75062f5279ca6f9e82058c">More...</a><br /></td></tr>
+<tr class="memdesc:af5ae700cfd75062f5279ca6f9e82058c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a default iiwa, wsg, cupboard, and 8020 frame for the MIT Intelligent Robot Manipulation class, then calls <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a29150974d6cae8767ab9705c8aa1f18f" title="Notifies the ManipulationStation that the IIWA robot model instance can be identified by iiwa_instanc...">RegisterIiwaControllerModel()</a> and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a807001b50292ea12e2aac3cf95c4bf7d" title="Notifies the ManipulationStation that the WSG gripper model instance can be identified by wsg_instanc...">RegisterWsgControllerModel()</a> with the appropriate arguments.  <a href="#af5ae700cfd75062f5279ca6f9e82058c">More...</a><br /></td></tr>
 <tr class="separator:af5ae700cfd75062f5279ca6f9e82058c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab878a225869d0b3dfb3b26049485cdec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ab878a225869d0b3dfb3b26049485cdec">RegisterIiwaControllerModel</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;model_path, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> iiwa_instance, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;child_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC)</td></tr>
-<tr class="memdesc:ab878a225869d0b3dfb3b26049485cdec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> that the IIWA robot model instance can be identified by <code>iiwa_instance</code> as well as necessary information to reload model for the internal controller's use.  <a href="#ab878a225869d0b3dfb3b26049485cdec">More...</a><br /></td></tr>
-<tr class="separator:ab878a225869d0b3dfb3b26049485cdec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef5c56e27301038e481b69657ae5a465"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aef5c56e27301038e481b69657ae5a465">RegisterWsgControllerModel</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;model_path, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> wsg_instance, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;child_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC)</td></tr>
-<tr class="memdesc:aef5c56e27301038e481b69657ae5a465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> that the WSG gripper model instance can be identified by <code>wsg_instance</code>, as well as necessary information to reload model for the internal controller's use.  <a href="#aef5c56e27301038e481b69657ae5a465">More...</a><br /></td></tr>
-<tr class="separator:aef5c56e27301038e481b69657ae5a465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29150974d6cae8767ab9705c8aa1f18f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a29150974d6cae8767ab9705c8aa1f18f">RegisterIiwaControllerModel</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;model_path, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> iiwa_instance, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;child_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC)</td></tr>
+<tr class="memdesc:a29150974d6cae8767ab9705c8aa1f18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> that the IIWA robot model instance can be identified by <code>iiwa_instance</code> as well as necessary information to reload model for the internal controller's use.  <a href="#a29150974d6cae8767ab9705c8aa1f18f">More...</a><br /></td></tr>
+<tr class="separator:a29150974d6cae8767ab9705c8aa1f18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807001b50292ea12e2aac3cf95c4bf7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a807001b50292ea12e2aac3cf95c4bf7d">RegisterWsgControllerModel</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;model_path, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> wsg_instance, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;child_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC)</td></tr>
+<tr class="memdesc:a807001b50292ea12e2aac3cf95c4bf7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> that the WSG gripper model instance can be identified by <code>wsg_instance</code>, as well as necessary information to reload model for the internal controller's use.  <a href="#a807001b50292ea12e2aac3cf95c4bf7d">More...</a><br /></td></tr>
+<tr class="separator:a807001b50292ea12e2aac3cf95c4bf7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25036caccec91e7d1bb2e534dbe5c096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a25036caccec91e7d1bb2e534dbe5c096">RegisterRgbdCamera</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;<a class="el" href="geometry__base__test_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PCameraBody, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> geometry::dev::render::DepthCameraProperties &amp;properties)</td></tr>
+<tr class="memdesc:a25036caccec91e7d1bb2e534dbe5c096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a RGBD camera.  <a href="#a25036caccec91e7d1bb2e534dbe5c096">More...</a><br /></td></tr>
+<tr class="separator:a25036caccec91e7d1bb2e534dbe5c096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fee61d7a783cade1a3d07fe86284d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27">Finalize</a> ()</td></tr>
 <tr class="memdesc:a8fee61d7a783cade1a3d07fe86284d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Users <em>must</em> call <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a> after making any additions to the multibody plant and before using this class in the Systems framework.  <a href="#a8fee61d7a783cade1a3d07fe86284d27">More...</a><br /></td></tr>
 <tr class="separator:a8fee61d7a783cade1a3d07fe86284d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +161,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a35a5c0096b248ae2dc23a3a457a0c43f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a35a5c0096b248ae2dc23a3a457a0c43f">SetWsgVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> T &amp;v, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
 <tr class="memdesc:a35a5c0096b248ae2dc23a3a457a0c43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for setting the velocity of the Schunk WSG.  <a href="#a35a5c0096b248ae2dc23a3a457a0c43f">More...</a><br /></td></tr>
 <tr class="separator:a35a5c0096b248ae2dc23a3a457a0c43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae67f16eadbb12d0c9e3f29994993863e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::map&lt; std::string, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ae67f16eadbb12d0c9e3f29994993863e">get_camera_poses_in_world</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="memdesc:ae67f16eadbb12d0c9e3f29994993863e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera poses.  <a href="#ae67f16eadbb12d0c9e3f29994993863e">More...</a><br /></td></tr>
-<tr class="separator:ae67f16eadbb12d0c9e3f29994993863e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569ccd9ea20294e6c3cc302ad1021f8d"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a569ccd9ea20294e6c3cc302ad1021f8d">GetStaticCameraPosesInWorld</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memdesc:a569ccd9ea20294e6c3cc302ad1021f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a map from camera name to X_WCameraBody for all the static (rigidly attached to the world body) cameras that have been registered.  <a href="#a569ccd9ea20294e6c3cc302ad1021f8d">More...</a><br /></td></tr>
+<tr class="separator:a569ccd9ea20294e6c3cc302ad1021f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9cb4c905f0c1539c9630a9b0d2ba939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aa9cb4c905f0c1539c9630a9b0d2ba939">get_camera_names</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
 <tr class="memdesc:aa9cb4c905f0c1539c9630a9b0d2ba939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera names / unique ids.  <a href="#aa9cb4c905f0c1539c9630a9b0d2ba939">More...</a><br /></td></tr>
 <tr class="separator:aa9cb4c905f0c1539c9630a9b0d2ba939"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1057,7 +1060,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Users <em>must</em> call <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a> after making any additions to the multibody plant and before using this class in the Systems framework. </p>
-<p>This should be called exactly once. This assumes an IIWA and WSG have been added to the MultibodyPlant, and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ab878a225869d0b3dfb3b26049485cdec" title="Notifies the ManipulationStation that the IIWA robot model instance can be identified by iiwa_instanc...">RegisterIiwaControllerModel()</a> and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aef5c56e27301038e481b69657ae5a465" title="Notifies the ManipulationStation that the WSG gripper model instance can be identified by wsg_instanc...">RegisterWsgControllerModel()</a> have been called.</p>
+<p>This should be called exactly once. This assumes an IIWA and WSG have been added to the MultibodyPlant, and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a29150974d6cae8767ab9705c8aa1f18f" title="Notifies the ManipulationStation that the IIWA robot model instance can be identified by iiwa_instanc...">RegisterIiwaControllerModel()</a> and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a807001b50292ea12e2aac3cf95c4bf7d" title="Notifies the ManipulationStation that the WSG gripper model instance can be identified by wsg_instanc...">RegisterWsgControllerModel()</a> have been called.</p>
 <dl class="section see"><dt>See also</dt><dd>multibody::multibody_plant::MultibodyPlant&lt;T&gt;::Finalize() </dd></dl>
 
 </div>
@@ -1078,33 +1081,6 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Get the camera names / unique ids. </p>
-
-</div>
-</div>
-<a id="ae67f16eadbb12d0c9e3f29994993863e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae67f16eadbb12d0c9e3f29994993863e">&#9670;&nbsp;</a></span>get_camera_poses_in_world()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::map&lt;std::string, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt;&amp; get_camera_poses_in_world </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the camera poses. </p>
 
 </div>
 </div>
@@ -1288,6 +1264,25 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 </div>
 </div>
+<a id="a569ccd9ea20294e6c3cc302ad1021f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569ccd9ea20294e6c3cc302ad1021f8d">&#9670;&nbsp;</a></span>GetStaticCameraPosesInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt; GetStaticCameraPosesInWorld </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a map from camera name to X_WCameraBody for all the static (rigidly attached to the world body) cameras that have been registered. </p>
+
+</div>
+</div>
 <a id="aa6f75942e0e9416f2a17f0c383e7fde1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6f75942e0e9416f2a17f0c383e7fde1">&#9670;&nbsp;</a></span>GetWsgPosition()</h2>
 
@@ -1408,8 +1403,8 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="ab878a225869d0b3dfb3b26049485cdec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab878a225869d0b3dfb3b26049485cdec">&#9670;&nbsp;</a></span>RegisterIiwaControllerModel()</h2>
+<a id="a29150974d6cae8767ab9705c8aa1f18f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29150974d6cae8767ab9705c8aa1f18f">&#9670;&nbsp;</a></span>RegisterIiwaControllerModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1441,7 +1436,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>X_PC</em>&#160;</td>
         </tr>
         <tr>
@@ -1472,8 +1467,59 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="aef5c56e27301038e481b69657ae5a465"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef5c56e27301038e481b69657ae5a465">&#9670;&nbsp;</a></span>RegisterWsgControllerModel()</h2>
+<a id="a25036caccec91e7d1bb2e534dbe5c096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25036caccec91e7d1bb2e534dbe5c096">&#9670;&nbsp;</a></span>RegisterRgbdCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RegisterRgbdCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>parent_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>X_PCameraBody</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> geometry::dev::render::DepthCameraProperties &amp;&#160;</td>
+          <td class="paramname"><em>properties</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers a RGBD camera. </p>
+<p>Must be called before <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name for the camera. </td></tr>
+    <tr><td class="paramname">parent_frame</td><td>The parent frame (frame P). The body that <code>parent_frame</code> is attached to must have a corresponding <a class="el" href="namespacedrake_1_1geometry.html#a13b34d2644a785d87ebaaade93f287d3" title="Type used to identify geometry frames in SceneGraph. ">geometry::FrameId</a>. Otherwise, an exception will be thrown in <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a>. </td></tr>
+    <tr><td class="paramname">X_PCameraBody</td><td>Transformation between frame P and the camera body. see systems::sensors::dev::RgbdCamera for descriptions about how the camera body, RGB, and depth image frames are related. </td></tr>
+    <tr><td class="paramname">properties</td><td>Properties for the RGBD camera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a807001b50292ea12e2aac3cf95c4bf7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807001b50292ea12e2aac3cf95c4bf7d">&#9670;&nbsp;</a></span>RegisterWsgControllerModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1505,7 +1551,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>X_PC</em>&#160;</td>
         </tr>
         <tr>
@@ -1710,7 +1756,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Adds a default iiwa, wsg, cupboard, and 8020 frame for the MIT Intelligent Robot Manipulation class, then calls <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ab878a225869d0b3dfb3b26049485cdec" title="Notifies the ManipulationStation that the IIWA robot model instance can be identified by iiwa_instanc...">RegisterIiwaControllerModel()</a> and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aef5c56e27301038e481b69657ae5a465" title="Notifies the ManipulationStation that the WSG gripper model instance can be identified by wsg_instanc...">RegisterWsgControllerModel()</a> with the appropriate arguments. </p>
+<p>Adds a default iiwa, wsg, cupboard, and 8020 frame for the MIT Intelligent Robot Manipulation class, then calls <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a29150974d6cae8767ab9705c8aa1f18f" title="Notifies the ManipulationStation that the IIWA robot model instance can be identified by iiwa_instanc...">RegisterIiwaControllerModel()</a> and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a807001b50292ea12e2aac3cf95c4bf7d" title="Notifies the ManipulationStation that the WSG gripper model instance can be identified by wsg_instanc...">RegisterWsgControllerModel()</a> with the appropriate arguments. </p>
 <p>Must be called before <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">collision_model</td><td>Determines which sdf is loaded for the IIWA. </td></tr>

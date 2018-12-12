@@ -104,6 +104,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a04ea8b376f5773cb9d9f609f8bdfa3c7"><td class="memItemLeft" align="right" valign="top">multibody_plant::CoulombFriction&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a04ea8b376f5773cb9d9f609f8bdfa3c7">default_friction</a> ()</td></tr>
 <tr class="memdesc:a04ea8b376f5773cb9d9f609f8bdfa3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default value of the Coulomb's law coefficients of friction for when they are not specified in the URDF/SDF file.  <a href="#a04ea8b376f5773cb9d9f609f8bdfa3c7">More...</a><br /></td></tr>
 <tr class="separator:a04ea8b376f5773cb9d9f609f8bdfa3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="memItemLeft" align="right" valign="top">Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a0eca6e02e85ffc38a4d5dcd6ad52a07d">ToVector3</a> (const ignition::math::Vector3d &amp;<a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">vector</a>)</td></tr>
+<tr class="memdesc:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to express an ignition::math::Vector3d instance as a Vector3d instance.  <a href="#a0eca6e02e85ffc38a4d5dcd6ad52a07d">More...</a><br /></td></tr>
+<tr class="separator:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad13dbb8038dd521c47b627fee0f1c8f8"><td class="memItemLeft" align="right" valign="top">Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#ad13dbb8038dd521c47b627fee0f1c8f8">ToIsometry3</a> (const ignition::math::Pose3d &amp;<a class="el" href="pose__smoother__test_8cc.html#a52d2d9a6c62244da2b2367bf389d0546">pose</a>)</td></tr>
+<tr class="memdesc:ad13dbb8038dd521c47b627fee0f1c8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to express an ignition::math::Pose3d instance as an Isometry3d instance.  <a href="#ad13dbb8038dd521c47b627fee0f1c8f8">More...</a><br /></td></tr>
+<tr class="separator:ad13dbb8038dd521c47b627fee0f1c8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbf95e07a12bc0b8f407eb2bdf279eee"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#abbf95e07a12bc0b8f407eb2bdf279eee">GetFullPath</a> (const std::string &amp;file_name)</td></tr>
 <tr class="memdesc:abbf95e07a12bc0b8f407eb2bdf279eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the full path of .  <a href="#abbf95e07a12bc0b8f407eb2bdf279eee">More...</a><br /></td></tr>
 <tr class="separator:abbf95e07a12bc0b8f407eb2bdf279eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,14 +122,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a5b3676511637c127d84a8bb589d2d90f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html">GeometryInstance</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a5b3676511637c127d84a8bb589d2d90f">MakeGeometryInstanceFromSdfVisual</a> (const sdf::Visual &amp;sdf_visual)</td></tr>
 <tr class="memdesc:a5b3676511637c127d84a8bb589d2d90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">drake::geometry::GeometryInstance</a> object from this specification.  <a href="#a5b3676511637c127d84a8bb589d2d90f">More...</a><br /></td></tr>
 <tr class="separator:a5b3676511637c127d84a8bb589d2d90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae316355b614ffe49ee6e0a4f0a7dbfc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_visual_material.html">VisualMaterial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#ae316355b614ffe49ee6e0a4f0a7dbfc3">MakeVisualMaterialFromSdfVisual</a> (const sdf::Visual &amp;sdf_visual)</td></tr>
-<tr class="memdesc:ae316355b614ffe49ee6e0a4f0a7dbfc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new <a class="el" href="classdrake_1_1geometry_1_1_visual_material.html">VisualMaterial</a> object from the specification.  <a href="#ae316355b614ffe49ee6e0a4f0a7dbfc3">More...</a><br /></td></tr>
-<tr class="separator:ae316355b614ffe49ee6e0a4f0a7dbfc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a830c5cfd5f8d2b0979c74914e4517031"><td class="memItemLeft" align="right" valign="top">Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a830c5cfd5f8d2b0979c74914e4517031">MakeGeometryPoseFromSdfCollision</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
-<tr class="memdesc:a830c5cfd5f8d2b0979c74914e4517031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>sdf_collision</code> stemming from the parsing of a <code>&lt;collision&gt;</code> element in an SDF file, this method makes the pose <code>X_LG</code> of frame G for the geometry of that collision element in the frame L of the link it belongs to.  <a href="#a830c5cfd5f8d2b0979c74914e4517031">More...</a><br /></td></tr>
-<tr class="separator:a830c5cfd5f8d2b0979c74914e4517031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d595f48e91553a7233e3ee984bae4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#af8d595f48e91553a7233e3ee984bae4d">MakeVisualPropertiesFromSdfVisual</a> (const sdf::Visual &amp;sdf_visual)</td></tr>
+<tr class="separator:af8d595f48e91553a7233e3ee984bae4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b6dac0a30dc27eaec653be4cd81056"><td class="memItemLeft" align="right" valign="top">Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#aa0b6dac0a30dc27eaec653be4cd81056">MakeGeometryPoseFromSdfCollision</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
+<tr class="separator:aa0b6dac0a30dc27eaec653be4cd81056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72989d7f800971772b29a84014351aff"><td class="memItemLeft" align="right" valign="top">CoulombFriction&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a72989d7f800971772b29a84014351aff">MakeCoulombFrictionFromSdfCollisionOde</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
-<tr class="memdesc:a72989d7f800971772b29a84014351aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses friction coefficients from <code>sdf_collision</code>.  <a href="#a72989d7f800971772b29a84014351aff">More...</a><br /></td></tr>
+<tr class="memdesc:a72989d7f800971772b29a84014351aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the material properties from the given sdf::Visual object.  <a href="#a72989d7f800971772b29a84014351aff">More...</a><br /></td></tr>
 <tr class="separator:a72989d7f800971772b29a84014351aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0ffe5867d6427daab52ff5b28470c7"><td class="memItemLeft" align="right" valign="top">sdf::Visual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#abf0ffe5867d6427daab52ff5b28470c7">ResolveVisualUri</a> (const sdf::Visual &amp;original, const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">multibody::PackageMap</a> &amp;package_map, const std::string &amp;root_dir)</td></tr>
 <tr class="memdesc:abf0ffe5867d6427daab52ff5b28470c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new Visual object which resolves the uri for the mesh element, if present.  <a href="#abf0ffe5867d6427daab52ff5b28470c7">More...</a><br /></td></tr>
@@ -134,12 +138,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#ad4a6f4d8ac026dc19d7796e3e0db47aa">AddModelsFromSdfFile</a> (const std::string &amp;file_name, multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
 <tr class="memdesc:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses all <code>&lt;model&gt;</code> elements from the SDF file specified by <code>file_name</code> and adds them to <code>plant</code>.  <a href="#ad4a6f4d8ac026dc19d7796e3e0db47aa">More...</a><br /></td></tr>
 <tr class="separator:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="memItemLeft" align="right" valign="top">Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a0eca6e02e85ffc38a4d5dcd6ad52a07d">ToVector3</a> (const ignition::math::Vector3d &amp;<a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">vector</a>)</td></tr>
-<tr class="memdesc:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to express an ignition::math::Vector3d instance as a Vector3d instance.  <a href="#a0eca6e02e85ffc38a4d5dcd6ad52a07d">More...</a><br /></td></tr>
-<tr class="separator:a0eca6e02e85ffc38a4d5dcd6ad52a07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13dbb8038dd521c47b627fee0f1c8f8"><td class="memItemLeft" align="right" valign="top">Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#ad13dbb8038dd521c47b627fee0f1c8f8">ToIsometry3</a> (const ignition::math::Pose3d &amp;<a class="el" href="pose__smoother__test_8cc.html#a52d2d9a6c62244da2b2367bf389d0546">pose</a>)</td></tr>
-<tr class="memdesc:ad13dbb8038dd521c47b627fee0f1c8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to express an ignition::math::Pose3d instance as an Isometry3d instance.  <a href="#ad13dbb8038dd521c47b627fee0f1c8f8">More...</a><br /></td></tr>
-<tr class="separator:ad13dbb8038dd521c47b627fee0f1c8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ffa8aaeb73c0156e955ed126d012e7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a3ffa8aaeb73c0156e955ed126d012e7a">ParseStringAttribute</a> (const tinyxml2::XMLElement *node, const char *attribute_name, std::string *val)</td></tr>
 <tr class="memdesc:a3ffa8aaeb73c0156e955ed126d012e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a string attribute of <code>node</code> named <code>attribute_name</code> into <code>val</code>.  <a href="#a3ffa8aaeb73c0156e955ed126d012e7a">More...</a><br /></td></tr>
 <tr class="separator:a3ffa8aaeb73c0156e955ed126d012e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -440,8 +438,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Parses friction coefficients from <code>sdf_collision</code>. </p>
-<p>This method looks for the definitions specific to ODE, as given by the SDF specification in <code>&lt;collision&gt;&lt;surface&gt;&lt;friction&gt;&lt;ode&gt;</code>. Drake understands <code>&lt;mu&gt;</code> as the static coefficient of friction and <code>&lt;mu2&gt;</code> as the dynamic coefficient of friction. Consider the example below: </p><div class="fragment"><div class="line">&lt;<span class="keywordtype">collision</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">surface</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">friction</span>&gt;</div><div class="line">      &lt;<span class="keywordtype">ode</span>&gt;</div><div class="line">        &lt;<span class="keywordtype">mu</span>&gt;0.8&lt;/<span class="keywordtype">mu</span>&gt;</div><div class="line">        &lt;<span class="keywordtype">mu2</span>&gt;0.3&lt;/<span class="keywordtype">mu2</span>&gt;</div><div class="line">      &lt;/<span class="keywordtype">ode</span>&gt;</div><div class="line">    &lt;/<span class="keywordtype">friction</span>&gt;</div><div class="line">  &lt;/<span class="keywordtype">surface</span>&gt;</div><div class="line">&lt;/<span class="keywordtype">collision</span>&gt;</div></div><!-- fragment --><p> If a <code>&lt;surface&gt;</code> is not found, it returns the coefficients for a frictionless surface. If <code>&lt;surface&gt;</code> is found, all other nested elements are required and an exception is thrown if not present. </p>
+<p>Extracts the material properties from the given sdf::Visual object. </p>
+<p>The sdf::Visual object represents a corresponding &lt;visual&gt; tag from an SDF file. The material properties are placed into a <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html" title="The set of properties for geometry used in an &quot;illustration&quot; role. ">geometry::IllustrationProperties</a> as follows:</p>
+<table class="doxtable">
+<tr>
+<th align="center">Group </th><th align="center">Name </th><th align="center">Type </th><th align="left">Description  </th></tr>
+<tr>
+<td align="center">phong </td><td align="center">diffuse </td><td align="center">Vector4&lt;double&gt; </td><td align="left">The normalized rgba values for the diffuse color </td></tr>
+<tr>
+<td align="center">phong </td><td align="center">ambient </td><td align="center">Vector4&lt;double&gt; </td><td align="left">The normalized rgba values for the ambient color </td></tr>
+<tr>
+<td align="center">phong </td><td align="center">specular </td><td align="center">Vector4&lt;double&gt; </td><td align="left">The normalized rgba values for the specular color </td></tr>
+<tr>
+<td align="center">phong </td><td align="center">emissive </td><td align="center">Vector4&lt;double&gt; </td><td align="left">The normalized rgba values for the emissive color </td></tr>
+</table>
+<p>These are properties to be used in the <a href="https://en.wikipedia.org/wiki/Phong_reflection_model">Phong lighting model</a> and are taken from the similarly named property tags (see below). If any of <code>ambient</code>, <code>diffuse</code>, <code>specular</code>, or <code>emissive</code> tags are missing, that property will be omitted from the property set and the impact of those missing properties will depend on the downstream consumers documented handling of missing parameters.</p>
+<p>The material properties come from the child &lt;material&gt; tag. E.g., </p><div class="fragment"><div class="line">&lt;<span class="keywordtype">visual</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">geometry</span>&gt;</div><div class="line">  ...</div><div class="line">  &lt;/<span class="keywordtype">geometry</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">material</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">ambient</span>&gt;<span class="keyword">r_a</span> <span class="keyword">g_a</span> <span class="keyword">b_a</span> <span class="keyword">a_a</span>&lt;/<span class="keywordtype">ambient</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">diffuse</span>&gt;<span class="keyword">r_d</span> <span class="keyword">g_d</span> <span class="keyword">b_d</span> <span class="keyword">a_d</span>&lt;/<span class="keywordtype">diffuse</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">specular</span>&gt;<span class="keyword">r_s</span> <span class="keyword">g_s</span> <span class="keyword">b_s</span> <span class="keyword">a_s</span>&lt;/<span class="keywordtype">specular</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">emissive</span>&gt;<span class="keyword">r_e</span> <span class="keyword">g_e</span> <span class="keyword">b_e</span> <span class="keyword">a_e</span>&lt;/<span class="keywordtype">emissive</span>&gt;</div><div class="line">  &lt;/<span class="keywordtype">material</span>&gt;</div><div class="line">&lt;/<span class="keywordtype">visual</span>&gt;</div></div><!-- fragment --><p>An instance of <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html" title="The set of properties for geometry used in an &quot;illustration&quot; role. ">geometry::IllustrationProperties</a> will always be returned. If there is no material tag, no material property tags, or no successfully parsed material property tags, the property set will be empty. */ <a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html" title="The set of properties for geometry used in an &quot;illustration&quot; role. ">geometry::IllustrationProperties</a> MakeVisualPropertiesFromSdfVisual( const sdf::Visual&amp; sdf_visual);</p>
+<p>/** Given <code>sdf_collision</code> stemming from the parsing of a <code>&lt;collision&gt;</code> element in an SDF file, this method makes the pose <code>X_LG</code> of frame G for the geometry of that collision element in the frame L of the link it belongs to. */ Eigen::Isometry3d MakeGeometryPoseFromSdfCollision( const sdf::Collision&amp; sdf_collision);</p>
+<p>/** Parses friction coefficients from <code>sdf_collision</code>. This method looks for the definitions specific to ODE, as given by the SDF specification in <code>&lt;collision&gt;&lt;surface&gt;&lt;friction&gt;&lt;ode&gt;</code>. Drake understands <code>&lt;mu&gt;</code> as the static coefficient of friction and <code>&lt;mu2&gt;</code> as the dynamic coefficient of friction. Consider the example below: </p><div class="fragment"><div class="line">&lt;<span class="keywordtype">collision</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">surface</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">friction</span>&gt;</div><div class="line">      &lt;<span class="keywordtype">ode</span>&gt;</div><div class="line">        &lt;<span class="keywordtype">mu</span>&gt;0.8&lt;/<span class="keywordtype">mu</span>&gt;</div><div class="line">        &lt;<span class="keywordtype">mu2</span>&gt;0.3&lt;/<span class="keywordtype">mu2</span>&gt;</div><div class="line">      &lt;/<span class="keywordtype">ode</span>&gt;</div><div class="line">    &lt;/<span class="keywordtype">friction</span>&gt;</div><div class="line">  &lt;/<span class="keywordtype">surface</span>&gt;</div><div class="line">&lt;/<span class="keywordtype">collision</span>&gt;</div></div><!-- fragment --><p> If a <code>&lt;surface&gt;</code> is not found, it returns the coefficients for a frictionless surface. If <code>&lt;surface&gt;</code> is found, all other nested elements are required and an exception is thrown if not present. </p>
 
 </div>
 </div>
@@ -466,14 +480,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a830c5cfd5f8d2b0979c74914e4517031"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a830c5cfd5f8d2b0979c74914e4517031">&#9670;&nbsp;</a></span>MakeGeometryPoseFromSdfCollision()</h2>
+<a id="aa0b6dac0a30dc27eaec653be4cd81056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b6dac0a30dc27eaec653be4cd81056">&#9670;&nbsp;</a></span>MakeGeometryPoseFromSdfCollision()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Isometry3d MakeGeometryPoseFromSdfCollision </td>
+          <td class="memname">Isometry3d drake::multibody::detail::MakeGeometryPoseFromSdfCollision </td>
           <td>(</td>
           <td class="paramtype">const sdf::Collision &amp;&#160;</td>
           <td class="paramname"><em>sdf_collision</em></td><td>)</td>
@@ -481,8 +495,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Given <code>sdf_collision</code> stemming from the parsing of a <code>&lt;collision&gt;</code> element in an SDF file, this method makes the pose <code>X_LG</code> of frame G for the geometry of that collision element in the frame L of the link it belongs to. </p>
 
 </div>
 </div>
@@ -507,14 +519,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae316355b614ffe49ee6e0a4f0a7dbfc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae316355b614ffe49ee6e0a4f0a7dbfc3">&#9670;&nbsp;</a></span>MakeVisualMaterialFromSdfVisual()</h2>
+<a id="af8d595f48e91553a7233e3ee984bae4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d595f48e91553a7233e3ee984bae4d">&#9670;&nbsp;</a></span>MakeVisualPropertiesFromSdfVisual()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_visual_material.html">geometry::VisualMaterial</a> MakeVisualMaterialFromSdfVisual </td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_illustration_properties.html">IllustrationProperties</a> drake::multibody::detail::MakeVisualPropertiesFromSdfVisual </td>
           <td>(</td>
           <td class="paramtype">const sdf::Visual &amp;&#160;</td>
           <td class="paramname"><em>sdf_visual</em></td><td>)</td>
@@ -522,10 +534,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new <a class="el" href="classdrake_1_1geometry_1_1_visual_material.html">VisualMaterial</a> object from the specification. </p>
-<p>The visual material comes from the child &lt;material&gt; tag. E.g., </p><div class="fragment"><div class="line">&lt;<span class="keywordtype">visual</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">geometry</span>&gt;</div><div class="line">  ...</div><div class="line">  &lt;/<span class="keywordtype">geometry</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">material</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">ambient</span>&gt;<span class="keyword">r_a</span> <span class="keyword">g_a</span> <span class="keyword">b_a</span> <span class="keyword">a_a</span>&lt;/<span class="keywordtype">ambient</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">diffuse</span>&gt;<span class="keyword">r_d</span> <span class="keyword">g_d</span> <span class="keyword">b_d</span> <span class="keyword">a_d</span>&lt;/<span class="keywordtype">diffuse</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">specular</span>&gt;<span class="keyword">r_s</span> <span class="keyword">g_s</span> <span class="keyword">b_s</span> <span class="keyword">a_s</span>&lt;/<span class="keywordtype">specular</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">emissive</span>&gt;<span class="keyword">r_e</span> <span class="keyword">g_e</span> <span class="keyword">b_e</span> <span class="keyword">a_e</span>&lt;/<span class="keywordtype">emissive</span>&gt;</div><div class="line">  &lt;/<span class="keywordtype">material</span>&gt;</div><div class="line">&lt;/<span class="keywordtype">visual</span>&gt;</div></div><!-- fragment --><p> If there is no material tag, the supported material tags are missing, or there is an error parsing the supported values, the instantiated VisualMaterial will use default values. (See <a class="el" href="classdrake_1_1geometry_1_1_visual_material.html" title="Definition of material for simple visualization. ">geometry::VisualMaterial</a> for description of the default color.)</p>
-<dl class="section note"><dt>Note</dt><dd>Currently, only the diffuse value is included in the VisualMaterial. </dd></dl>
 
 </div>
 </div>

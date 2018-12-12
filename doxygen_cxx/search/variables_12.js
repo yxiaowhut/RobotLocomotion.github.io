@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['s',['S',['../struct_q_p_controller_debug_data.html#a1f3150ccf61b245d0363a198068ebf3d',1,'QPControllerDebugData::S()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::S()'],['../struct_trig_poly_1_1_sin_cos_vars.html#a28c7f75235c8f8d55c52bd169a0a335b',1,'TrigPoly::SinCosVars::s()'],['../structdrake_1_1solvers_1_1_scs_solver_details.html#aa19049e37f2ac70a89ed4a46ddb36b40',1,'drake::solvers::ScsSolverDetails::s()'],['../geometry__properties__test_8cc.html#aa8270a1ba8295884567e0a0c93135f05',1,'s():&#160;geometry_properties_test.cc']]],
+  ['s',['s',['../struct_trig_poly_1_1_sin_cos_vars.html#a28c7f75235c8f8d55c52bd169a0a335b',1,'TrigPoly::SinCosVars::s()'],['../structdrake_1_1solvers_1_1_scs_solver_details.html#aa19049e37f2ac70a89ed4a46ddb36b40',1,'drake::solvers::ScsSolverDetails::s()'],['../struct_q_p_controller_debug_data.html#a1f3150ccf61b245d0363a198068ebf3d',1,'QPControllerDebugData::S()'],['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d',1,'drake::systems::controllers::LinearQuadraticRegulatorResult::S()'],['../geometry__properties__test_8cc.html#aa8270a1ba8295884567e0a0c93135f05',1,'s():&#160;geometry_properties_test.cc']]],
   ['s1',['s1',['../struct_q_p_controller_debug_data.html#a5d57ebeed30aba2cb8a74098d815e568',1,'QPControllerDebugData']]],
   ['s1dot',['s1dot',['../struct_q_p_controller_debug_data.html#a7abdc66a678bc080fa08e0ec89a5e983',1,'QPControllerDebugData']]],
   ['s2dot',['s2dot',['../struct_q_p_controller_debug_data.html#a993a85cda35f7698e0d2077aa496479c',1,'QPControllerDebugData']]],
@@ -19,6 +19,7 @@ var searchData=
   ['sent1_5f',['sent1_',['../fixed__input__port__value__test_8cc.html#aa7dcf61395a3d71b220141e7868d4668',1,'fixed_input_port_value_test.cc']]],
   ['serial0_5f',['serial0_',['../fixed__input__port__value__test_8cc.html#a195f14aa9ff7453019b7962da74a7531',1,'fixed_input_port_value_test.cc']]],
   ['serial1_5f',['serial1_',['../fixed__input__port__value__test_8cc.html#a28508885f1f0d0a1dadf63c4dca6c2ab',1,'fixed_input_port_value_test.cc']]],
+  ['setup_5ftime',['setup_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb',1,'drake::solvers::OsqpSolverDetails']]],
   ['shape',['shape',['../class_drake_shapes_1_1_geometry.html#a8b9f7758a8bd2bef680aeecc40bcfe04',1,'DrakeShapes::Geometry']]],
   ['shoulder_5f',['shoulder_',['../acrobot__parser__test_8cc.html#a06a581a397dec0f3243b3ca4a5e24578',1,'shoulder_():&#160;acrobot_parser_test.cc'],['../multibody__plant__test_8cc.html#a06a581a397dec0f3243b3ca4a5e24578',1,'shoulder_():&#160;multibody_plant_test.cc']]],
   ['shoulder_5finboard_5fframe_5f',['shoulder_inboard_frame_',['../tree__from__mobilizers__test_8cc.html#a43c879cd011c4df816864abf2c0daeef',1,'tree_from_mobilizers_test.cc']]],
@@ -47,6 +48,7 @@ var searchData=
   ['solution_5f',['solution_',['../model__test_8cc.html#a6e739cfffbdec069eb5de993d666eeff',1,'solution_():&#160;model_test.cc'],['../rbt__collisions__test_8cc.html#ab266e20bec7be83e0d83a62a91e94236',1,'solution_():&#160;rbt_collisions_test.cc']]],
   ['solution_5fstatus',['solution_status',['../structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0',1,'drake::solvers::MosekSolverDetails']]],
   ['solve_5finertia',['solve_inertia',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09',1,'drake::multibody::constraint::ConstraintAccelProblemData::solve_inertia()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a16c5614af40edee599284c373fba9c09',1,'drake::multibody::constraint::ConstraintVelProblemData::solve_inertia()']]],
+  ['solve_5ftime',['solve_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21',1,'drake::solvers::OsqpSolverDetails']]],
   ['solver_5f',['solver_',['../constraint__solver__test_8cc.html#ac6a2ac84fdb689a7f9534f5d950c314a',1,'solver_():&#160;constraint_solver_test.cc'],['../implicit__stribeck__solver__test_8cc.html#a1a1d1d3854d3fa8b0b337d1b3998e750',1,'solver_():&#160;implicit_stribeck_solver_test.cc'],['../dreal__solver__test_8cc.html#a82f63d2fd20c40fe3afda2248b9ebb81',1,'solver_():&#160;dreal_solver_test.cc']]],
   ['solver_5fsol_5fvector',['solver_sol_vector',['../gurobi__solver_8cc.html#ac21de83f8eaddd37e1403187ceda97b6',1,'gurobi_solver.cc']]],
   ['some_5fdouble',['some_double',['../leaf__system__test_8cc.html#ae36ca4b811ad25b3f430df657e9556af',1,'leaf_system_test.cc']]],
@@ -90,7 +92,8 @@ var searchData=
   ['state_5fvalue_5foverride_5f',['state_value_override_',['../zero__order__hold__test_8cc.html#af61be6ff3f0a1d08952dd42fddb8c377',1,'zero_order_hold_test.cc']]],
   ['state_5fvector_5f',['state_vector_',['../classdrake_1_1systems_1_1_affine_linear_system_test.html#ac63e89d1252e48c5566459b9fce1632c',1,'drake::systems::AffineLinearSystemTest']]],
   ['static_5ffriction_5f',['static_friction_',['../contact__force__formula__test_8cc.html#aa820ef90b0e1f3a16efd0101e6786fca',1,'contact_force_formula_test.cc']]],
-  ['status',['status',['../structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html#aaf6a8034fc68445c84db4f8d0fcabc79',1,'drake::manipulation::planner::DifferentialInverseKinematicsResult']]],
+  ['status',['status',['../structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html#aaf6a8034fc68445c84db4f8d0fcabc79',1,'drake::manipulation::planner::DifferentialInverseKinematicsResult::status()'],['../structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00',1,'drake::solvers::IpoptSolverDetails::status()'],['../structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00',1,'drake::solvers::NloptSolverDetails::status()']]],
+  ['status_5fval',['status_val',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ae50bc0c53de4da41809fb75c465f04d6',1,'drake::solvers::OsqpSolverDetails']]],
   ['steer_5fangle',['steer_angle',['../dynamic__bicycle__car__test_8cc.html#a58527a85060b9de3c5220b5cf54c27c8',1,'dynamic_bicycle_car_test.cc']]],
   ['stiction_5ftolerance',['stiction_tolerance',['../structdrake_1_1multibody_1_1implicit__stribeck_1_1_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2',1,'drake::multibody::implicit_stribeck::Parameters']]],
   ['stiction_5ftolerance_5f',['stiction_tolerance_',['../inclined__plane__test_8cc.html#a755dcbdb4d5b0a2ff6bbd092a109bf21',1,'inclined_plane_test.cc']]],

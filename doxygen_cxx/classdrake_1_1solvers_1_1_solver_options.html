@@ -114,6 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af3650fa85849e382ab3a014d013ac927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f44fc1fef8c6686c3e1b877536d75f0"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a2f44fc1fef8c6686c3e1b877536d75f0">GetOptionsStr</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
 <tr class="separator:a2f44fc1fef8c6686c3e1b877536d75f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a6a8693d5410ab5dc7ee4c98752311"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af3a6a8693d5410ab5dc7ee4c98752311"><td class="memTemplItemLeft" align="right" valign="top">const std::unordered_map&lt; std::string, T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#af3a6a8693d5410ab5dc7ee4c98752311">GetOptions</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id) const</td></tr>
+<tr class="separator:af3a6a8693d5410ab5dc7ee4c98752311"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb7897acf1b099d60aa1d7d2696ef94f"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#acb7897acf1b099d60aa1d7d2696ef94f">GetSolverIds</a> () const</td></tr>
 <tr class="memdesc:acb7897acf1b099d60aa1d7d2696ef94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the IDs that have any option set.  <a href="#acb7897acf1b099d60aa1d7d2696ef94f">More...</a><br /></td></tr>
 <tr class="separator:acb7897acf1b099d60aa1d7d2696ef94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4854617fe031ba629b37432796068c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a4854617fe031ba629b37432796068c64">operator!=</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;other) const</td></tr>
 <tr class="memdesc:a4854617fe031ba629b37432796068c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negate operator==.  <a href="#a4854617fe031ba629b37432796068c64">More...</a><br /></td></tr>
 <tr class="separator:a4854617fe031ba629b37432796068c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b58e2b5bf8bb445762bf2c692c957c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a2b58e2b5bf8bb445762bf2c692c957c5">CheckOptionKeysForSolver</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id, const std::unordered_set&lt; std::string &gt; &amp;allowable_double_keys, const std::unordered_set&lt; std::string &gt; &amp;allowable_int_keys, const std::unordered_set&lt; std::string &gt; &amp;allowable_str_keys) const</td></tr>
+<tr class="memdesc:a2b58e2b5bf8bb445762bf2c692c957c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if for a given solver_id, the option keys are included in double_keys, int_keys and str_keys.  <a href="#a2b58e2b5bf8bb445762bf2c692c957c5">More...</a><br /></td></tr>
+<tr class="separator:a2b58e2b5bf8bb445762bf2c692c957c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ac5d150aa10bfd49088ecc4bc42a5e77b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#ac5d150aa10bfd49088ecc4bc42a5e77b">SolverOptions</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;)=default</td></tr>
 <tr class="separator:ac5d150aa10bfd49088ecc4bc42a5e77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,6 +229,89 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2b58e2b5bf8bb445762bf2c692c957c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b58e2b5bf8bb445762bf2c692c957c5">&#9670;&nbsp;</a></span>CheckOptionKeysForSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CheckOptionKeysForSolver </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td>
+          <td class="paramname"><em>solver_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>allowable_double_keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>allowable_int_keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_set&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>allowable_str_keys</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if for a given solver_id, the option keys are included in double_keys, int_keys and str_keys. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solver_id</td><td>If this <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html" title="Stores options for multiple solvers. ">SolverOptions</a> has set options for this solver_id, then we check if the option keys are a subset of <code>double_keys</code>, <code>int_keys</code> and <code>str_keys</code>. </td></tr>
+    <tr><td class="paramname">double_keys</td><td>The set of allowable keys for double options. </td></tr>
+    <tr><td class="paramname">int_keys</td><td>The set of allowable keys for int options. </td></tr>
+    <tr><td class="paramname">str_keys</td><td>The set of allowable keys for string options. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">invalid_argument</td><td>if the solver contains un-allowed options. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af3a6a8693d5410ab5dc7ee4c98752311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a6a8693d5410ab5dc7ee4c98752311">&#9670;&nbsp;</a></span>GetOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unordered_map&lt;std::string, T&gt;&amp; GetOptions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td>
+          <td class="paramname"><em>solver_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a89900b3f48066c1e08ecd82f13990a39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89900b3f48066c1e08ecd82f13990a39">&#9670;&nbsp;</a></span>GetOptionsDouble()</h2>
 

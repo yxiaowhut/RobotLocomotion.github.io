@@ -11,6 +11,7 @@ var searchData=
   ['oracularstateestimation',['OracularStateEstimation',['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_oracular_state_estimation.html',1,'drake::examples::kuka_iiwa_arm']]],
   ['orientationconstraint',['OrientationConstraint',['../classdrake_1_1multibody_1_1internal_1_1_orientation_constraint.html',1,'drake::multibody::internal']]],
   ['osqpsolver',['OsqpSolver',['../classdrake_1_1solvers_1_1_osqp_solver.html',1,'drake::solvers']]],
+  ['osqpsolverdetails',['OsqpSolverDetails',['../structdrake_1_1solvers_1_1_osqp_solver_details.html',1,'drake::solvers']]],
   ['outputport',['OutputPort',['../classdrake_1_1systems_1_1_output_port.html',1,'drake::systems']]],
   ['outputport_3c_20double_20_3e',['OutputPort&lt; double &gt;',['../classdrake_1_1systems_1_1_output_port.html',1,'drake::systems']]],
   ['outputportbase',['OutputPortBase',['../classdrake_1_1systems_1_1_output_port_base.html',1,'drake::systems']]],

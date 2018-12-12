@@ -116,9 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeccfbaa73e7a744f9339d671ac2f3832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#aeccfbaa73e7a744f9339d671ac2f3832">Solve</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;<a class="el" href="nlopt__solver_8cc.html#a696e816beb9a54549c52c173a8b7ef04">prog</a>) const override</td></tr>
 <tr class="memdesc:aeccfbaa73e7a744f9339d671ac2f3832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets values for the decision variables on the given <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> <code>prog</code>, or:  <a href="#aeccfbaa73e7a744f9339d671ac2f3832">More...</a><br /></td></tr>
 <tr class="separator:aeccfbaa73e7a744f9339d671ac2f3832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcb59c9f532778e8656e681733a2f642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#abcb59c9f532778e8656e681733a2f642">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; Eigen::VectorXd &gt; &amp;, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *) const override</td></tr>
-<tr class="memdesc:abcb59c9f532778e8656e681733a2f642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program with optional initial guess and solver options.  <a href="#abcb59c9f532778e8656e681733a2f642">More...</a><br /></td></tr>
-<tr class="separator:abcb59c9f532778e8656e681733a2f642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae822f158c8b0b8bb10bc8e8350431d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#aae822f158c8b0b8bb10bc8e8350431d8">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;<a class="el" href="nlopt__solver_8cc.html#a696e816beb9a54549c52c173a8b7ef04">prog</a>, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; Eigen::VectorXd &gt; &amp;initial_guess, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *<a class="el" href="ipopt__solver_8cc.html#a1b96859d8d2b1bddf6e5c68171983df3">result</a>) const override</td></tr>
+<tr class="memdesc:aae822f158c8b0b8bb10bc8e8350431d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program with optional initial guess and solver options.  <a href="#aae822f158c8b0b8bb10bc8e8350431d8">More...</a><br /></td></tr>
+<tr class="separator:aae822f158c8b0b8bb10bc8e8350431d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace3da8c3a4a8bd641915f170d18e6c15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#ace3da8c3a4a8bd641915f170d18e6c15">solver_id</a> () const override</td></tr>
 <tr class="memdesc:ace3da8c3a4a8bd641915f170d18e6c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identifier of this solver.  <a href="#ace3da8c3a4a8bd641915f170d18e6c15">More...</a><br /></td></tr>
 <tr class="separator:ace3da8c3a4a8bd641915f170d18e6c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,10 +129,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6443e6080dac0553904e9ac680ff64f8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a6443e6080dac0553904e9ac680ff64f8">Solve</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;) const</td></tr>
 <tr class="memdesc:a6443e6080dac0553904e9ac680ff64f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets values for the decision variables on the given <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> <code>prog</code>, or:  <a href="#a6443e6080dac0553904e9ac680ff64f8">More...</a><br /></td></tr>
 <tr class="separator:a6443e6080dac0553904e9ac680ff64f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57f0c676cb9cff8b39312706b046fd7"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:ab57f0c676cb9cff8b39312706b046fd7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#ab57f0c676cb9cff8b39312706b046fd7">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; Eigen::VectorXd &gt; &amp;, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *) const</td></tr>
+<tr class="memdesc:ab57f0c676cb9cff8b39312706b046fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program with optional initial guess and solver options.  <a href="#ab57f0c676cb9cff8b39312706b046fd7">More...</a><br /></td></tr>
+<tr class="separator:ab57f0c676cb9cff8b39312706b046fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6443e6080dac0553904e9ac680ff64f8"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a6443e6080dac0553904e9ac680ff64f8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a6443e6080dac0553904e9ac680ff64f8">Solve</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;) const</td></tr>
 <tr class="memdesc:a6443e6080dac0553904e9ac680ff64f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets values for the decision variables on the given <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> <code>prog</code>, or:  <a href="#a6443e6080dac0553904e9ac680ff64f8">More...</a><br /></td></tr>
 <tr class="separator:a6443e6080dac0553904e9ac680ff64f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57f0c676cb9cff8b39312706b046fd7"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:ab57f0c676cb9cff8b39312706b046fd7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#ab57f0c676cb9cff8b39312706b046fd7">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; Eigen::VectorXd &gt; &amp;, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *) const</td></tr>
+<tr class="memdesc:ab57f0c676cb9cff8b39312706b046fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program with optional initial guess and solver options.  <a href="#ab57f0c676cb9cff8b39312706b046fd7">More...</a><br /></td></tr>
+<tr class="separator:ab57f0c676cb9cff8b39312706b046fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a4fc26435a94d897ba5ebdc9239b44e3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html#a4fc26435a94d897ba5ebdc9239b44e3e">UnrevisedLemkeSolver</a> (const <a class="el" href="classdrake_1_1solvers_1_1_unrevised_lemke_solver.html">UnrevisedLemkeSolver</a> &amp;)=delete</td></tr>
 <tr class="separator:a4fc26435a94d897ba5ebdc9239b44e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -551,7 +559,7 @@ class drake::solvers::UnrevisedLemkeSolver&lt; T &gt;</h3>
 </div>
 </div>
 <a id="a6443e6080dac0553904e9ac680ff64f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6443e6080dac0553904e9ac680ff64f8">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6443e6080dac0553904e9ac680ff64f8">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -584,76 +592,8 @@ class drake::solvers::UnrevisedLemkeSolver&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a6443e6080dac0553904e9ac680ff64f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6443e6080dac0553904e9ac680ff64f8">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> Solve </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
-          <td class="paramname"><em>prog</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets values for the decision variables on the given <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> <code>prog</code>, or: </p>
-<ul>
-<li>If no solver is available, throws std::runtime_error</li>
-<li>If the solver returns an error, returns a nonzero SolutionResult. </li>
-</ul>
-
-<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_solver_interface.html#abc5c243ac382b9c7c5b1f328da86e3f3">MathematicalProgramSolverInterface</a>.</p>
-
-</div>
-</div>
-<a id="aeccfbaa73e7a744f9339d671ac2f3832"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeccfbaa73e7a744f9339d671ac2f3832">&#9670;&nbsp;</a></span>Solve() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> Solve </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
-          <td class="paramname"><em>prog</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets values for the decision variables on the given <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> <code>prog</code>, or: </p>
-<ul>
-<li>If no solver is available, throws std::runtime_error</li>
-<li>If the solver returns an error, returns a nonzero SolutionResult. </li>
-</ul>
-
-<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_solver_interface.html#abc5c243ac382b9c7c5b1f328da86e3f3">MathematicalProgramSolverInterface</a>.</p>
-
-</div>
-</div>
-<a id="abcb59c9f532778e8656e681733a2f642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcb59c9f532778e8656e681733a2f642">&#9670;&nbsp;</a></span>Solve() <span class="overload">[4/4]</span></h2>
+<a id="ab57f0c676cb9cff8b39312706b046fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57f0c676cb9cff8b39312706b046fd7">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,7 +633,181 @@ class drake::solvers::UnrevisedLemkeSolver&lt; T &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solves an optimization program with optional initial guess and solver options. </p>
+<p>Note that these initial guess and solver options are not written to <code>prog</code>. If the <code>prog</code> has set an option for a solver, and <code>solver_options</code> contains a different value for the same option on the same solver, then <code>solver_options</code> takes priority. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_solver_interface.html#a00a61e9a68e9e5e5889854febb32b051">MathematicalProgramSolverInterface</a>.</p>
+
+</div>
+</div>
+<a id="aeccfbaa73e7a744f9339d671ac2f3832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeccfbaa73e7a744f9339d671ac2f3832">&#9670;&nbsp;</a></span>Solve() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> Solve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets values for the decision variables on the given <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> <code>prog</code>, or: </p>
+<ul>
+<li>If no solver is available, throws std::runtime_error</li>
+<li>If the solver returns an error, returns a nonzero SolutionResult. </li>
+</ul>
+
+<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_solver_interface.html#abc5c243ac382b9c7c5b1f328da86e3f3">MathematicalProgramSolverInterface</a>.</p>
+
+</div>
+</div>
+<a id="aae822f158c8b0b8bb10bc8e8350431d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae822f158c8b0b8bb10bc8e8350431d8">&#9670;&nbsp;</a></span>Solve() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solve </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_guess</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solver_options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solves an optimization program with optional initial guess and solver options. </p>
+<p>Note that these initial guess and solver options are not written to <code>prog</code>. If the <code>prog</code> has set an option for a solver, and <code>solver_options</code> contains a different value for the same option on the same solver, then <code>solver_options</code> takes priority. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_solver_interface.html#a00a61e9a68e9e5e5889854febb32b051">MathematicalProgramSolverInterface</a>.</p>
+
+</div>
+</div>
+<a id="a6443e6080dac0553904e9ac680ff64f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6443e6080dac0553904e9ac680ff64f8">&#9670;&nbsp;</a></span>Solve() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a> Solve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets values for the decision variables on the given <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> <code>prog</code>, or: </p>
+<ul>
+<li>If no solver is available, throws std::runtime_error</li>
+<li>If the solver returns an error, returns a nonzero SolutionResult. </li>
+</ul>
+
+<p>Implements <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_solver_interface.html#abc5c243ac382b9c7c5b1f328da86e3f3">MathematicalProgramSolverInterface</a>.</p>
+
+</div>
+</div>
+<a id="ab57f0c676cb9cff8b39312706b046fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57f0c676cb9cff8b39312706b046fd7">&#9670;&nbsp;</a></span>Solve() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solve </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_guess</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solver_options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

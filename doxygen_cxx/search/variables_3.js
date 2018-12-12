@@ -70,6 +70,7 @@ var searchData=
   ['dt_5f',['dt_',['../implicit__euler__integrator__test_8cc.html#a4576cb7e6fdfffaf6bb85f3cb9efd7e7',1,'implicit_euler_integrator_test.cc']]],
   ['dtor_5fcalled',['dtor_called',['../copyable__unique__ptr__test_8cc.html#a485e67355f20430eedb7742beae9dba2',1,'copyable_unique_ptr_test.cc']]],
   ['dual_5fobjective',['dual_objective',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd',1,'drake::solvers::ScsSolverDetails']]],
+  ['dual_5fres',['dual_res',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4',1,'drake::solvers::OsqpSolverDetails']]],
   ['dummy_5f',['dummy_',['../output__port__test_8cc.html#a9454cfd5761813a9305c4b6b664f6bff',1,'output_port_test.cc']]],
   ['duration',['duration',['../struct_q_p_locomotion_plan_settings.html#ab9f68ef753113e9b47b3363a00156209',1,'QPLocomotionPlanSettings']]],
   ['duration_5funtil',['duration_until',['../structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result_1_1_next.html#a30953b5142a54ba70227467fdb5504db',1,'drake::maliput::api::rules::RightOfWayPhaseProvider::Result::Next::duration_until()'],['../structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_state_provider_1_1_result_1_1_next.html#a30953b5142a54ba70227467fdb5504db',1,'drake::maliput::api::rules::RightOfWayStateProvider::Result::Next::duration_until()']]],

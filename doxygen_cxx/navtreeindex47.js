@@ -1,17 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html":[2,0,0,18,9,0],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a047c83cd984d292a8472e9d907910d99":[2,0,0,18,9,0,4],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a0df69f4aad58a15a03ecf3f11f57fcfc":[2,0,0,18,9,0,5],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a1459c22c137e83e82c4087d77a8525d3":[2,0,0,18,9,0,6],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a283be66ef03eb096d116c4d3683c33e0":[2,0,0,18,9,0,7],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a5d9346b399b0ab493c0cd6c17e64d08a":[2,0,0,18,9,0,8],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a91267186805a40fe69873f55dbcb4dbc":[2,0,0,18,9,0,1],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a9da1c55543082dc66cf7ccb6a00427bb":[2,0,0,18,9,0,3],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#ad8cf517912d1b94071349470b1e23b29":[2,0,0,18,9,0,2],
-"classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#ae028b5a7443b6e4774c27e4fa5ec06c1":[2,0,0,18,9,0,0],
-"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html":[0,1,9,1],
-"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a08e2c5bab385f7c5e1069d61c45600c3":[0,1,9,1,5],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a3e7b10c80993d5689758c27cf5fdf220":[0,1,9,1,1],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a7185a9bb03c2b8faa2067ad2708b5899":[0,1,9,1,6],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#aa0ff3046d2bd112ab7b6be9b7808d293":[0,1,9,1,2],
@@ -249,5 +237,17 @@ var NAVTREEINDEX47 =
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope_output.html#a0994e236bb675a997603b72acd217b14":[2,0,0,18,11,14,5],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope_output.html#a897a63e909105ef82a8bebac53261442":[2,0,0,18,11,14,4],
 "classdrake_1_1systems_1_1sensors_1_1_gyroscope_output.html#aa061bd29329b562229c1106dccc3b8c4":[2,0,0,18,11,14,3],
-"classdrake_1_1systems_1_1sensors_1_1_gyroscope_output.html#ab71af89e5e56fbf8f12754726c6cdf2b":[2,0,0,18,11,14,0]
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope_output.html#ab71af89e5e56fbf8f12754726c6cdf2b":[2,0,0,18,11,14,0],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope_output.html#ac50eea067cbaff5c5bbccc56fdee5547":[2,0,0,18,11,14,2],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope_output.html#ace35a9a588d958e3b6d1de3753d3e5ee":[2,0,0,18,11,14,6],
+"classdrake_1_1systems_1_1sensors_1_1_gyroscope_output.html#adb4585057144a2bbf3e205db5a687a4a":[2,0,0,18,11,14,1],
+"classdrake_1_1systems_1_1sensors_1_1_image.html":[2,0,0,18,11,16],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a149e06f2677943852d4e59bdadf4e23f":[2,0,0,18,11,16,6],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a1950eac0081009de55c31671d31a876e":[2,0,0,18,11,16,7],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a2338c4484ceb8bfeb5461f6b15827432":[2,0,0,18,11,16,2],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a56bfa8fae91947eb5802d2e208405904":[2,0,0,18,11,16,12],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a61e017cbe872361d21096830708bcf94":[2,0,0,18,11,16,5],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a6fb996b03aacc705c967a2e759fca69d":[2,0,0,18,11,16,11],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a770fd0c30a2b985c180ebffb9747a07a":[2,0,0,18,11,16,15],
+"classdrake_1_1systems_1_1sensors_1_1_image.html#a8d35b0ffaf9e8758fd249ed726e4f7d8":[2,0,0,18,11,16,0]
 };

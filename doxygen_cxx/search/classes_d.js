@@ -12,6 +12,7 @@ var searchData=
   ['next',['Next',['../structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result_1_1_next.html',1,'RightOfWayPhaseProvider::Result::Next'],['../structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_state_provider_1_1_result_1_1_next.html',1,'RightOfWayStateProvider::Result::Next']]],
   ['nicetypename',['NiceTypeName',['../classdrake_1_1_nice_type_name.html',1,'drake']]],
   ['nloptsolver',['NloptSolver',['../classdrake_1_1solvers_1_1_nlopt_solver.html',1,'drake::solvers']]],
+  ['nloptsolverdetails',['NloptSolverDetails',['../structdrake_1_1solvers_1_1_nlopt_solver_details.html',1,'drake::solvers']]],
   ['nonconvexqpproblem1',['NonConvexQPproblem1',['../classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html',1,'drake::solvers::test']]],
   ['nonconvexqpproblem2',['NonConvexQPproblem2',['../classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem2.html',1,'drake::solvers::test']]],
   ['nonsymbolictraits',['NonSymbolicTraits',['../structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html',1,'drake::systems::scalar_conversion']]],

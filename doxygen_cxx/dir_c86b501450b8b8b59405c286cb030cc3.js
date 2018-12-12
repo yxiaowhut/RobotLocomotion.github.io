@@ -69,6 +69,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "integer_optimization_util.h", "integer__optimization__util_8h.html", "integer__optimization__util_8h" ],
     [ "ipopt_solver.cc", "ipopt__solver_8cc.html", "ipopt__solver_8cc" ],
     [ "ipopt_solver.h", "ipopt__solver_8h.html", [
+      [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", "structdrake_1_1solvers_1_1_ipopt_solver_details" ],
       [ "IpoptSolver", "classdrake_1_1solvers_1_1_ipopt_solver.html", "classdrake_1_1solvers_1_1_ipopt_solver" ]
     ] ],
     [ "ipopt_solver_common.cc", "ipopt__solver__common_8cc.html", null ],
@@ -106,6 +107,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "mosek_solver_common.cc", "mosek__solver__common_8cc.html", null ],
     [ "nlopt_solver.cc", "nlopt__solver_8cc.html", "nlopt__solver_8cc" ],
     [ "nlopt_solver.h", "nlopt__solver_8h.html", [
+      [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", "structdrake_1_1solvers_1_1_nlopt_solver_details" ],
       [ "NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html", "classdrake_1_1solvers_1_1_nlopt_solver" ]
     ] ],
     [ "nlopt_solver_common.cc", "nlopt__solver__common_8cc.html", null ],
@@ -120,6 +122,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "non_convex_optimization_util.h", "non__convex__optimization__util_8h.html", "non__convex__optimization__util_8h" ],
     [ "osqp_solver.cc", "osqp__solver_8cc.html", null ],
     [ "osqp_solver.h", "osqp__solver_8h.html", [
+      [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", "structdrake_1_1solvers_1_1_osqp_solver_details" ],
       [ "OsqpSolver", "classdrake_1_1solvers_1_1_osqp_solver.html", "classdrake_1_1solvers_1_1_osqp_solver" ]
     ] ],
     [ "osqp_solver_common.cc", "osqp__solver__common_8cc.html", null ],

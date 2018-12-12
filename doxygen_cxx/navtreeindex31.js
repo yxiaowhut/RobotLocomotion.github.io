@@ -1,17 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program4.html":[2,0,0,16,2,26],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program4.html#a05a85a4d0514a5801158fc436401f67f":[2,0,0,16,2,26,3],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program4.html#a065b13dfbf96950173e43edd2f4ed50b":[2,0,0,16,2,26,4],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program4.html#a20aabe6ec41a474f20447fda33286377":[2,0,0,16,2,26,6],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program4.html#a7c0c834e6557459b3e6099101c790be2":[2,0,0,16,2,26,0],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program4.html#a857bab6ed98d2030eb24b97d1f08119d":[2,0,0,16,2,26,2],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program4.html#ad17a32767b3a58c9da67c4379e25a870":[2,0,0,16,2,26,1],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program4.html#ad5b89c49c3ecb671024adc32312a9c10":[2,0,0,16,2,26,5],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program_test.html":[2,0,0,16,2,27],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program_test.html#a1a438074fb73e6f27eeecfd3b2ac4b33":[2,0,0,16,2,27,0],
-"classdrake_1_1solvers_1_1test_1_1_quadratic_program_test.html#ac1d80903882110be1aa9c1ec8dfb878c":[2,0,0,16,2,27,1],
-"classdrake_1_1solvers_1_1test_1_1_test_ellipsoids_separation.html":[2,0,0,16,2,28],
 "classdrake_1_1solvers_1_1test_1_1_test_ellipsoids_separation.html#a9771e3eb87d49cc8a6cb370c6ccf388d":[2,0,0,16,2,28,0],
 "classdrake_1_1solvers_1_1test_1_1_test_ellipsoids_separation.html#aac98fd7efd6c7ac95a95bc4dab93901e":[2,0,0,16,2,28,1],
 "classdrake_1_1solvers_1_1test_1_1_test_find_spring_equilibrium.html":[2,0,0,16,2,29],
@@ -249,5 +237,17 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_expression_add.html#a82a57a03e33d6450ee3475b25ffbdf63":[2,0,0,17,7,0],
 "classdrake_1_1symbolic_1_1_expression_add.html#aa3acb8f966e8bcc451ccd870c82c103b":[2,0,0,17,7,4],
 "classdrake_1_1symbolic_1_1_expression_add.html#aa7514419f77c393b36a65b899441a022":[2,0,0,17,7,12],
-"classdrake_1_1symbolic_1_1_expression_add.html#ae4fb457c881d49e1e698120eae9e4c52":[2,0,0,17,7,5]
+"classdrake_1_1symbolic_1_1_expression_add.html#ae4fb457c881d49e1e698120eae9e4c52":[2,0,0,17,7,5],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html":[2,0,0,17,8],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#a139908581ad5f26cd51585ccecfaf628":[2,0,0,17,8,9],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#a3696f2dede9b63b0171069b5fc888b0f":[2,0,0,17,8,6],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#a561566ef68a5d97fb55dc87dad56e0a8":[2,0,0,17,8,11],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#a57a110644a5bfbf19ed8a90b30dc040c":[2,0,0,17,8,3],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#a630bdbf820dbbb6fbc9e3698c2bf5955":[2,0,0,17,8,5],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#a80dae86bff511c04a1b345cf6a193b08":[2,0,0,17,8,4],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#a9529cc1d2d94b680c8289f423c8870c7":[2,0,0,17,8,0],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#a9cae04a651254a12de9545e88e55f86e":[2,0,0,17,8,1],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#aa9076c4acb7121f4a9790f1520038d5c":[2,0,0,17,8,10],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#ab5732e515fe5283f95c93d13c8ea7205":[2,0,0,17,8,8],
+"classdrake_1_1symbolic_1_1_expression_add_factory.html#abef2d65d616d4024b89feb7d0b9bc9c6":[2,0,0,17,8,7]
 };

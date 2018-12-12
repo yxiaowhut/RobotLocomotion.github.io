@@ -64,6 +64,7 @@ var searchData=
   ['inversefunctioninterpolator',['InverseFunctionInterpolator',['../classdrake_1_1maliput_1_1rndf_1_1_inverse_function_interpolator.html',1,'drake::maliput::rndf']]],
   ['inversekinematics',['InverseKinematics',['../classdrake_1_1multibody_1_1_inverse_kinematics.html',1,'drake::multibody']]],
   ['ipoptsolver',['IpoptSolver',['../classdrake_1_1solvers_1_1_ipopt_solver.html',1,'drake::solvers']]],
+  ['ipoptsolverdetails',['IpoptSolverDetails',['../structdrake_1_1solvers_1_1_ipopt_solver_details.html',1,'drake::solvers']]],
   ['is_5fbinding_5fcompatible',['is_binding_compatible',['../structdrake_1_1solvers_1_1detail_1_1is__binding__compatible.html',1,'drake::solvers::detail']]],
   ['is_5fconvertible_5fworkaround',['is_convertible_workaround',['../structdrake_1_1solvers_1_1detail_1_1is__convertible__workaround.html',1,'drake::solvers::detail']]],
   ['is_5fconvertible_5fworkaround_3c_20std_3a_3aunique_5fptr_3c_20a_20_3e_2c_20std_3a_3ashared_5fptr_3c_20b_20_3e_20_3e',['is_convertible_workaround&lt; std::unique_ptr&lt; A &gt;, std::shared_ptr&lt; B &gt; &gt;',['../structdrake_1_1solvers_1_1detail_1_1is__convertible__workaround_3_01std_1_1unique__ptr_3_01_a_016a35cedcd83581828da7b6ba97666877.html',1,'drake::solvers::detail']]],

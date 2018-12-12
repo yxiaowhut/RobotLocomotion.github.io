@@ -93,6 +93,6 @@ var searchData=
   ['isometry',['isometry',['../structdrake_1_1examples_1_1double__pendulum_1_1_framed_isometry3.html#af22e44966407866a6333204312c9ffd2',1,'drake::examples::double_pendulum::FramedIsometry3']]],
   ['isometry_5f',['isometry_',['../symbolic__expression__transform__test_8cc.html#a1f6a19587e95b0da084a7c6896bd3cc2',1,'symbolic_expression_transform_test.cc']]],
   ['isumm',['iSumm',['../snopt__solver__f2c_8cc.html#a64328223eae9c2787da8664ad0d9691f',1,'snopt_solver_f2c.cc']]],
-  ['iter',['iter',['../structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0',1,'drake::solvers::ScsSolverDetails']]],
+  ['iter',['iter',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0',1,'drake::solvers::OsqpSolverDetails::iter()'],['../structdrake_1_1solvers_1_1_scs_solver_details.html#aab6f168571c2073e01e240524b8a3da0',1,'drake::solvers::ScsSolverDetails::iter()']]],
   ['iw',['iw',['../snopt__solver__f2c_8cc.html#a2143e9e139104e2bc70ad883de03b8c4',1,'snopt_solver_f2c.cc']]]
 ];

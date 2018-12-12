@@ -1,17 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"classdrake_1_1systems_1_1_event_collection.html#aa5b31c976cc6734003d9950e731dfed3":[2,0,0,18,60,5],
-"classdrake_1_1systems_1_1_event_collection.html#aca9fc6eec20f19a17c1efc6131df8915":[2,0,0,18,60,6],
-"classdrake_1_1systems_1_1_event_collection.html#acc8ea2022f569349827a80d7f76a1aab":[2,0,0,18,60,8],
-"classdrake_1_1systems_1_1_event_collection.html#af025a9d6b00f00183fde53dd4f31662c":[2,0,0,18,60,7],
-"classdrake_1_1systems_1_1_event_data.html":[2,0,0,18,61],
-"classdrake_1_1systems_1_1_event_data.html#a10f3f69ae80434c5afaa69a62a366aa1":[2,0,0,18,61,6],
-"classdrake_1_1systems_1_1_event_data.html#a1adea944c1ac1adce784406f85490076":[2,0,0,18,61,5],
-"classdrake_1_1systems_1_1_event_data.html#a26a64909704015535dcbf219853989d6":[2,0,0,18,61,1],
-"classdrake_1_1systems_1_1_event_data.html#a4005602abe868bbb0ef30a58458f3a98":[2,0,0,18,61,4],
-"classdrake_1_1systems_1_1_event_data.html#a81d9969ab11ea5758033221531e98fe8":[2,0,0,18,61,0],
-"classdrake_1_1systems_1_1_event_data.html#a9323be9aeb00cc0bc7802769e4a78714":[2,0,0,18,61,7],
-"classdrake_1_1systems_1_1_event_data.html#ad605426df8f0214f090ca363648db027":[2,0,0,18,61,2],
 "classdrake_1_1systems_1_1_event_data.html#adef16a0c11f8bc1a011080510b6016a7":[2,0,0,18,61,3],
 "classdrake_1_1systems_1_1_explicit_euler_integrator.html":[2,0,0,18,62],
 "classdrake_1_1systems_1_1_explicit_euler_integrator.html#a31f2131e66fa33ea5d68f84b59b06a2a":[2,0,0,18,62,5],
@@ -249,5 +237,17 @@ var NAVTREEINDEX38 =
 "classdrake_1_1systems_1_1_integrator_base.html#ae878ce4cdab7a01165423d8a902df452":[2,0,0,18,73,63],
 "classdrake_1_1systems_1_1_integrator_base.html#ae9ec42d998ad39014c3dc64c50cfbc4d":[2,0,0,18,73,56],
 "classdrake_1_1systems_1_1_integrator_base.html#aed535a106827b243e5da116944e72ae9":[2,0,0,18,73,48],
-"classdrake_1_1systems_1_1_integrator_base.html#af5486345efbe28218f193275ef26896f":[2,0,0,18,73,29]
+"classdrake_1_1systems_1_1_integrator_base.html#af5486345efbe28218f193275ef26896f":[2,0,0,18,73,29],
+"classdrake_1_1systems_1_1_integrator_base.html#af88b1b96e061ad4e07a71561bf95fad4":[2,0,0,18,73,4],
+"classdrake_1_1systems_1_1_integrator_base.html#afa1597c69b7f633624a3693142ad3f04":[2,0,0,18,73,37],
+"classdrake_1_1systems_1_1_kinematics_results.html":[2,0,0,18,74],
+"classdrake_1_1systems_1_1_kinematics_results.html#a08d57d77fe088fccafdbde6aea7dab6e":[2,0,0,18,74,6],
+"classdrake_1_1systems_1_1_kinematics_results.html#a1ca526fae57fc002d842b2da024061f2":[2,0,0,18,74,0],
+"classdrake_1_1systems_1_1_kinematics_results.html#a2d058d7557f133059de2669abcf4383d":[2,0,0,18,74,8],
+"classdrake_1_1systems_1_1_kinematics_results.html#a30342f766e5b14049b65f710581f4bd1":[2,0,0,18,74,9],
+"classdrake_1_1systems_1_1_kinematics_results.html#a372731ef06a823324bfeda5c8a8a3ac8":[2,0,0,18,74,10],
+"classdrake_1_1systems_1_1_kinematics_results.html#a3c0166ee7985d11565c135beeebe9ef3":[2,0,0,18,74,17],
+"classdrake_1_1systems_1_1_kinematics_results.html#a417912ac0b849649e2a3109b75c9d563":[2,0,0,18,74,2],
+"classdrake_1_1systems_1_1_kinematics_results.html#a45328c1e8bf9239121ae84d82a66734c":[2,0,0,18,74,11],
+"classdrake_1_1systems_1_1_kinematics_results.html#a72af5b8f143732657f822759635dfb1e":[2,0,0,18,74,7]
 };

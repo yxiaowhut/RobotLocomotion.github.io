@@ -148,6 +148,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html">IpoptSolver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_ipopt_solver_details.html">IpoptSolverDetails</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The details of IPOPT solvers after calling Solve function.  <a href="structdrake_1_1solvers_1_1_ipopt_solver_details.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html">LinearComplementarityConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a constraint of the form:  <a href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,7 +223,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nlopt_solver.html">NloptSolver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_nlopt_solver_details.html">NloptSolverDetails</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NLopt solver details after calling <a class="el" href="namespacedrake_1_1solvers.html#abcb761412090871c2fa11e436e4acec6" title="Solves an optimization program, with optional initial guess and solver options. ">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_nlopt_solver_details.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_osqp_solver.html">OsqpSolver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_osqp_solver_details.html">OsqpSolverDetails</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The OSQP solver details after calling Solve function in <a class="el" href="classdrake_1_1solvers_1_1_osqp_solver.html">OsqpSolver</a>.  <a href="structdrake_1_1solvers_1_1_osqp_solver_details.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_polynomial_constraint.html">PolynomialConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">lb[i] &lt;= P<a href="x, y...">i</a> &lt;= ub[i], where each P[i] is a multivariate polynomial in x, y...  <a href="classdrake_1_1solvers_1_1_polynomial_constraint.html#details">More...</a><br /></td></tr>
@@ -433,6 +442,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a5da36bcb344fe1bbf2ea53d85a8225bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136f">SolutionResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a5da36bcb344fe1bbf2ea53d85a8225bb">SolveUnconstrainedQP</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;G, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;c, <a class="el" href="classdouble.html">double</a> feasibility_tol, Eigen::VectorXd *<a class="el" href="vtk__util__test_8cc.html#af88b946fb90d5f08b5fb740c70e98c10">x</a>)</td></tr>
 <tr class="memdesc:a5da36bcb344fe1bbf2ea53d85a8225bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the un-constrained QP problem min 0.5 * xᵀ * G * x + cᵀ * x.  <a href="#a5da36bcb344fe1bbf2ea53d85a8225bb">More...</a><br /></td></tr>
 <tr class="separator:a5da36bcb344fe1bbf2ea53d85a8225bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37274772e9a6849bc6a66f5b17cf60ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a37274772e9a6849bc6a66f5b17cf60ba">GetEqualityConstrainedQPSolverOptions</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;solver_options, EqualityConstrainedQPSolverOptions *equality_qp_solver_options)</td></tr>
+<tr class="separator:a37274772e9a6849bc6a66f5b17cf60ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af625a7985e13112d4eb9c0ec49c15fa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#a91ed74a4ca04549f64c547dfba0724d5">VectorXIndeterminate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#af625a7985e13112d4eb9c0ec49c15fa2">ConcatenateIndeterminatesRefList</a> (const <a class="el" href="namespacedrake_1_1solvers.html#ac27bca68509bbb001ab8073089b48031">IndeterminatesRefList</a> &amp;var_list)</td></tr>
 <tr class="memdesc:af625a7985e13112d4eb9c0ec49c15fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates each element in <code>var_list</code> into a single <a class="el" href="namespace_eigen.html">Eigen</a> vector of indeterminates, returns this concatenated vector.  <a href="#af625a7985e13112d4eb9c0ec49c15fa2">More...</a><br /></td></tr>
 <tr class="separator:af625a7985e13112d4eb9c0ec49c15fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -590,6 +601,8 @@ Choice" model.  <a href="#ac032c0bb26bc691f93d2d1d4e8f2e6e8">More...</a><br /></
 <tr class="separator:a1a0c3911ef9e7f3732f3468694abee4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72f5364dbbe94d39fbafcd0cdd75d499"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a72f5364dbbe94d39fbafcd0cdd75d499">GTEST_TEST</a> (SolverOptionsTest, Merge)</td></tr>
 <tr class="separator:a72f5364dbbe94d39fbafcd0cdd75d499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d193eb662273894c0acc19be831ce81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a0d193eb662273894c0acc19be831ce81">GTEST_TEST</a> (SolverOptionsTest, CheckOptionKeysForSolver)</td></tr>
+<tr class="separator:a0d193eb662273894c0acc19be831ce81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6ea19e2fde4f08993f4a9c590239614"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:ab6ea19e2fde4f08993f4a9c590239614"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ab6ea19e2fde4f08993f4a9c590239614">RunLCP</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;M, const Eigen::VectorXd &amp;q, const Eigen::VectorXd &amp;expected_z_in)</td></tr>
 <tr class="separator:ab6ea19e2fde4f08993f4a9c590239614"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2365,23 +2378,23 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="ac09a7480ca71fe38507954dff0e48f05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac09a7480ca71fe38507954dff0e48f05">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[1/26]</span></h2>
+<a id="a37274772e9a6849bc6a66f5b17cf60ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37274772e9a6849bc6a66f5b17cf60ba">&#9670;&nbsp;</a></span>GetEqualityConstrainedQPSolverOptions()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">drake::solvers::GTEST_TEST </td>
+          <td class="memname">void drake::solvers::GetEqualityConstrainedQPSolverOptions </td>
           <td>(</td>
-          <td class="paramtype">SolverOptionsTest&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>solver_options</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ToString&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramtype">EqualityConstrainedQPSolverOptions *&#160;</td>
+          <td class="paramname"><em>equality_qp_solver_options</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2394,7 +2407,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a7fe9f9549bb30d1cb7e9e58a95002879"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fe9f9549bb30d1cb7e9e58a95002879">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[2/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe9f9549bb30d1cb7e9e58a95002879">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[1/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2421,8 +2434,36 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
+<a id="ac09a7480ca71fe38507954dff0e48f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09a7480ca71fe38507954dff0e48f05">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[2/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">drake::solvers::GTEST_TEST </td>
+          <td>(</td>
+          <td class="paramtype">SolverOptionsTest&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ToString&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5c71df02318dbe13464ce42dca349f36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c71df02318dbe13464ce42dca349f36">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[3/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c71df02318dbe13464ce42dca349f36">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[3/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2450,7 +2491,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a13bb279caac109823bb1f90cd497443c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13bb279caac109823bb1f90cd497443c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[4/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13bb279caac109823bb1f90cd497443c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[4/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2478,7 +2519,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a9d50254c9544774d3a081747675277fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d50254c9544774d3a081747675277fa">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[5/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d50254c9544774d3a081747675277fa">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[5/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2505,36 +2546,8 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="a1a0c3911ef9e7f3732f3468694abee4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a0c3911ef9e7f3732f3468694abee4e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[6/26]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">drake::solvers::GTEST_TEST </td>
-          <td>(</td>
-          <td class="paramtype">SolverOptionsTest&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Ids&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aa14bf50420111bda5f717b4036998f87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa14bf50420111bda5f717b4036998f87">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[7/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14bf50420111bda5f717b4036998f87">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[6/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2561,8 +2574,36 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
+<a id="a1a0c3911ef9e7f3732f3468694abee4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a0c3911ef9e7f3732f3468694abee4e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[7/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">drake::solvers::GTEST_TEST </td>
+          <td>(</td>
+          <td class="paramtype">SolverOptionsTest&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ids&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af2071d99514765b2c15fe4faadaadf97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2071d99514765b2c15fe4faadaadf97">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[8/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af2071d99514765b2c15fe4faadaadf97">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[8/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2590,7 +2631,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a72f5364dbbe94d39fbafcd0cdd75d499"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72f5364dbbe94d39fbafcd0cdd75d499">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[9/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f5364dbbe94d39fbafcd0cdd75d499">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[9/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2618,7 +2659,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a41a87fd49661a1d2fb55e39233688bd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41a87fd49661a1d2fb55e39233688bd0">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[10/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a87fd49661a1d2fb55e39233688bd0">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[10/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2646,7 +2687,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a04f37a14edf0c3da882b8062f1d9676c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04f37a14edf0c3da882b8062f1d9676c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[11/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f37a14edf0c3da882b8062f1d9676c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[11/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2674,7 +2715,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="ad6d1054f80b61bfda83051ed353d5f98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6d1054f80b61bfda83051ed353d5f98">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[12/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d1054f80b61bfda83051ed353d5f98">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[12/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2702,7 +2743,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="ade8e6f95255450259a716d95c705afc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade8e6f95255450259a716d95c705afc6">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[13/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8e6f95255450259a716d95c705afc6">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[13/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2729,8 +2770,36 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
+<a id="a0d193eb662273894c0acc19be831ce81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d193eb662273894c0acc19be831ce81">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[14/27]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">drake::solvers::GTEST_TEST </td>
+          <td>(</td>
+          <td class="paramtype">SolverOptionsTest&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CheckOptionKeysForSolver&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad655c4c57c834c073163822667e6430e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad655c4c57c834c073163822667e6430e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[14/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad655c4c57c834c073163822667e6430e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[15/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2758,7 +2827,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a99b6ebe849f1aa91c2fc6b6991f7aa69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99b6ebe849f1aa91c2fc6b6991f7aa69">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[15/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b6ebe849f1aa91c2fc6b6991f7aa69">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[16/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2786,7 +2855,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="ad0d7a08fee1f513efd8b61a7eb301f9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0d7a08fee1f513efd8b61a7eb301f9b">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[16/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d7a08fee1f513efd8b61a7eb301f9b">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[17/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2814,7 +2883,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="ae60c2edc9704e9b2574195a32fbaf24e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae60c2edc9704e9b2574195a32fbaf24e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[17/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60c2edc9704e9b2574195a32fbaf24e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[18/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2842,7 +2911,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a93f39a2ed3beee7def9a2d9396678f46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93f39a2ed3beee7def9a2d9396678f46">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[18/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f39a2ed3beee7def9a2d9396678f46">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[19/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2870,7 +2939,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a42fd57b8208b10d84b4b38298edffc0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42fd57b8208b10d84b4b38298edffc0c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[19/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a42fd57b8208b10d84b4b38298edffc0c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[20/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2898,7 +2967,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a437be3694e7568b1752cb3e5a1d9af6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a437be3694e7568b1752cb3e5a1d9af6f">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[20/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a437be3694e7568b1752cb3e5a1d9af6f">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[21/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2926,7 +2995,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a4a2dea570a6e63ec4a081b8ff0d87fa0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a2dea570a6e63ec4a081b8ff0d87fa0">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[21/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a2dea570a6e63ec4a081b8ff0d87fa0">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[22/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2954,7 +3023,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a8b7247e6ee9592c85b20241fcef52302"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b7247e6ee9592c85b20241fcef52302">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[22/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7247e6ee9592c85b20241fcef52302">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[23/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2982,7 +3051,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a9817266cf8b779395acc8258de4d2d46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9817266cf8b779395acc8258de4d2d46">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[23/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9817266cf8b779395acc8258de4d2d46">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[24/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3010,7 +3079,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="ac5c5ffc42b42777527fb492952c5d8e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5c5ffc42b42777527fb492952c5d8e6">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[24/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c5ffc42b42777527fb492952c5d8e6">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[25/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3038,7 +3107,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="ac66d9ee8c760a08962e53081837cbe40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac66d9ee8c760a08962e53081837cbe40">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[25/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66d9ee8c760a08962e53081837cbe40">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[26/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3066,7 +3135,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a88e29c87e29832caf226370a6c26d298"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88e29c87e29832caf226370a6c26d298">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[26/26]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e29c87e29832caf226370a6c26d298">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[27/27]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -242,6 +242,14 @@ IIWA. This does not include the gripper.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.examples.manipulation_station.ManipulationStation.GetStaticCameraPosesInWorld">
+<code class="descname">GetStaticCameraPosesInWorld</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, pydrake.math.RigidTransform]<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.GetStaticCameraPosesInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a map from camera name to X_WCameraBody for all the static
+(rigidly attached to the world body) cameras that have been
+registered.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.GetWsgPosition">
 <code class="descname">GetWsgPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.GetWsgPosition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience method for getting the position of the Schunk WSG. Note
@@ -257,12 +265,12 @@ that the WSG position is the signed distance between the two fingers
 
 <dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.RegisterIiwaControllerModel">
-<code class="descname">RegisterIiwaControllerModel</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>arg0: unicode</em>, <em>arg1: pydrake.multibody.multibody_tree.ModelInstanceIndex</em>, <em>arg2: pydrake.multibody.multibody_tree.Frame</em>, <em>arg3: pydrake.multibody.multibody_tree.Frame</em>, <em>arg4: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.RegisterIiwaControllerModel" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RegisterIiwaControllerModel</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>arg0: unicode</em>, <em>arg1: pydrake.multibody.multibody_tree.ModelInstanceIndex</em>, <em>arg2: pydrake.multibody.multibody_tree.Frame</em>, <em>arg3: pydrake.multibody.multibody_tree.Frame</em>, <em>arg4: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.RegisterIiwaControllerModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.RegisterWsgControllerModel">
-<code class="descname">RegisterWsgControllerModel</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>arg0: unicode</em>, <em>arg1: pydrake.multibody.multibody_tree.ModelInstanceIndex</em>, <em>arg2: pydrake.multibody.multibody_tree.Frame</em>, <em>arg3: pydrake.multibody.multibody_tree.Frame</em>, <em>arg4: pydrake.common.eigen_geometry.Isometry3</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.RegisterWsgControllerModel" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RegisterWsgControllerModel</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>arg0: unicode</em>, <em>arg1: pydrake.multibody.multibody_tree.ModelInstanceIndex</em>, <em>arg2: pydrake.multibody.multibody_tree.Frame</em>, <em>arg3: pydrake.multibody.multibody_tree.Frame</em>, <em>arg4: pydrake.math.RigidTransform</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.RegisterWsgControllerModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -380,12 +388,6 @@ inputs.</dd>
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.get_camera_names">
 <code class="descname">get_camera_names</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; List[unicode]<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_camera_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the camera names / unique ids.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.examples.manipulation_station.ManipulationStation.get_camera_poses_in_world">
-<code class="descname">get_camera_poses_in_world</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em><span class="sig-paren">)</span> &#x2192; Dict[unicode, pydrake.math.RigidTransform]<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.get_camera_poses_in_world" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the camera poses.</p>
 </dd></dl>
 
 <dl class="method">

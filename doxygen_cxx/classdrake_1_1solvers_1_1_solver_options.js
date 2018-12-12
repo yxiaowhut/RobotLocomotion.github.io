@@ -3,6 +3,8 @@ var classdrake_1_1solvers_1_1_solver_options =
     [ "SolverOptions", "classdrake_1_1solvers_1_1_solver_options.html#a6ed5b563dbc1aeae6e6396cf04dc3d63", null ],
     [ "SolverOptions", "classdrake_1_1solvers_1_1_solver_options.html#ac5d150aa10bfd49088ecc4bc42a5e77b", null ],
     [ "SolverOptions", "classdrake_1_1solvers_1_1_solver_options.html#ae735ec2f66f7ac2bdc79307be1841cb5", null ],
+    [ "CheckOptionKeysForSolver", "classdrake_1_1solvers_1_1_solver_options.html#a2b58e2b5bf8bb445762bf2c692c957c5", null ],
+    [ "GetOptions", "classdrake_1_1solvers_1_1_solver_options.html#af3a6a8693d5410ab5dc7ee4c98752311", null ],
     [ "GetOptionsDouble", "classdrake_1_1solvers_1_1_solver_options.html#a89900b3f48066c1e08ecd82f13990a39", null ],
     [ "GetOptionsInt", "classdrake_1_1solvers_1_1_solver_options.html#af3650fa85849e382ab3a014d013ac927", null ],
     [ "GetOptionsStr", "classdrake_1_1solvers_1_1_solver_options.html#a2f44fc1fef8c6686c3e1b877536d75f0", null ],

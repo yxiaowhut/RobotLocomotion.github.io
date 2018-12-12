@@ -85,51 +85,25 @@ $(document).ready(function(){initNavTree('multibody_2parsing_2sdf__parser_8h.htm
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">sdf_parser.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/multibody_plant/multibody_plant.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/multibody_tree_indexes.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for sdf_parser.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multibody_2parsing_2sdf__parser_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="multibody_2parsing_2sdf__parser_8h__incl.svg" width="192" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="multibody_2parsing_2sdf__parser_8h__dep__incl.svg" width="100%" height="406"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="multibody_2parsing_2sdf__parser_8h__dep__incl.svg" width="247" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1multibody"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html">drake::multibody</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1multibody_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html">drake::multibody::detail</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a3e9bff0197c6c7f86f9ff6f8854def53"><td class="memItemLeft" align="right" valign="top">ModelInstanceIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a3e9bff0197c6c7f86f9ff6f8854def53">AddModelFromSdfFile</a> (const std::string &amp;file_name, const std::string &amp;model_name, multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:a3e9bff0197c6c7f86f9ff6f8854def53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a <code>&lt;model&gt;</code> element from the SDF file specified by <code>file_name</code> and adds it to <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1detail.html#a3e9bff0197c6c7f86f9ff6f8854def53">More...</a><br /></td></tr>
-<tr class="separator:a3e9bff0197c6c7f86f9ff6f8854def53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; ModelInstanceIndex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#ad4a6f4d8ac026dc19d7796e3e0db47aa">AddModelsFromSdfFile</a> (const std::string &amp;file_name, multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses all <code>&lt;model&gt;</code> elements from the SDF file specified by <code>file_name</code> and adds them to <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1detail.html#ad4a6f4d8ac026dc19d7796e3e0db47aa">More...</a><br /></td></tr>
-<tr class="separator:ad4a6f4d8ac026dc19d7796e3e0db47aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!--HTML footer for doxygen 1.8.13-->
 <!--start footer part-->

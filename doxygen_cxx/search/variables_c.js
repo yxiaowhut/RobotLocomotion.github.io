@@ -26,7 +26,7 @@ var searchData=
   ['mass_5f',['mass_',['../implicit__euler__integrator__test_8cc.html#acb4ec2008f5b390612930521dac86e57',1,'implicit_euler_integrator_test.cc']]],
   ['mat_5fdata_5f',['mat_data_',['../piecewise__polynomial__affine__system__test_8cc.html#ae50208322efe598ffe956a12aecb6d8d',1,'mat_data_():&#160;piecewise_polynomial_affine_system_test.cc'],['../piecewise__polynomial__linear__system__test_8cc.html#ae50208322efe598ffe956a12aecb6d8d',1,'mat_data_():&#160;piecewise_polynomial_linear_system_test.cc']]],
   ['material',['material',['../class_drake_shapes_1_1_visual_element.html#a0d591f25500c81892d2b2880df1750c7',1,'DrakeShapes::VisualElement']]],
-  ['materials_5f',['materials_',['../urdf__geometry__test_8cc.html#a5ca4a13de279c15d6c8b349a8f518208',1,'urdf_geometry_test.cc']]],
+  ['materials_5f',['materials_',['../detail__urdf__geometry__test_8cc.html#a5ca4a13de279c15d6c8b349a8f518208',1,'detail_urdf_geometry_test.cc']]],
   ['matrix_5fdouble_5f',['matrix_double_',['../symbolic__expression__matrix__test_8cc.html#acaca51220f98645a524cfcfe2106b647',1,'symbolic_expression_matrix_test.cc']]],
   ['matrix_5fexpr_5f1_5f',['matrix_expr_1_',['../symbolic__expression__matrix__test_8cc.html#a37206e0b7aaacb778b206fbf1f679811',1,'symbolic_expression_matrix_test.cc']]],
   ['matrix_5fexpr_5f2_5f',['matrix_expr_2_',['../symbolic__expression__matrix__test_8cc.html#afbf167e1e82d952c2e2ee99e056ba19e',1,'symbolic_expression_matrix_test.cc']]],

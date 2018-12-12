@@ -14,5 +14,7 @@ var equality__constrained__qp__solver__test_8cc =
     [ "GTEST_TEST", "equality__constrained__qp__solver__test_8cc.html#af7bd9b818f276b7e5a8c0df3ec3d4002", null ],
     [ "GTEST_TEST", "equality__constrained__qp__solver__test_8cc.html#a4563f07dd9ec3b221f0c73bce140411c", null ],
     [ "GTEST_TEST", "equality__constrained__qp__solver__test_8cc.html#a484bb7aad83e01ea025b25cdb233943f", null ],
-    [ "GTEST_TEST", "equality__constrained__qp__solver__test_8cc.html#a1beeaf33fc43f608b1d5f2edb5c7f4fb", null ]
+    [ "GTEST_TEST", "equality__constrained__qp__solver__test_8cc.html#a1beeaf33fc43f608b1d5f2edb5c7f4fb", null ],
+    [ "TEST_F", "equality__constrained__qp__solver__test_8cc.html#ac0abfe004dbaf5ca4ddeb9a562a4b58f", null ],
+    [ "TEST_F", "equality__constrained__qp__solver__test_8cc.html#a369be540be4e527d16ba6f27d4bb27ff", null ]
 ];
