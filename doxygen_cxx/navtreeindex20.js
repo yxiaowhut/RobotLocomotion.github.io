@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1multibody_1_1_articulated_body_inertia.html#ab1114b94d5f66d6df3605856fa2c6cc6":[2,0,0,12,9,0],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#acb919c29ad40fcea2d070cd32f8ff854":[2,0,0,12,9,4],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#accf02d86e540a40456f8803150b806fa":[2,0,0,12,9,16],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#ad47d1b4caefc3416208c61e09d221e18":[2,0,0,12,9,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1multibody_1_1_mobilizer.html#abf90093f037e7c5eebb57b8298a08815":[2,0,0,12,30,8],
 "classdrake_1_1multibody_1_1_mobilizer.html#ac1d21737dd8cda28722ab6a1ac38201e":[2,0,0,12,30,35],
 "classdrake_1_1multibody_1_1_mobilizer.html#ac9a84f0da88933802af930064c8458eb":[2,0,0,12,30,10],
-"classdrake_1_1multibody_1_1_mobilizer.html#ad26c8aff25bb56c2343cba3275c4c51e":[2,0,0,12,30,31],
-"classdrake_1_1multibody_1_1_mobilizer.html#addc3be43d9fe873001c79fcaada202e3":[2,0,0,12,30,27]
+"classdrake_1_1multibody_1_1_mobilizer.html#ad26c8aff25bb56c2343cba3275c4c51e":[2,0,0,12,30,31]
 };

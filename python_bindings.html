@@ -182,6 +182,51 @@ explicitly refer to each symbol:</p>
     <span class="n">pydrake</span><span class="o">.</span><span class="n">multibody</span><span class="o">.</span><span class="n">rigid_body_plant</span><span class="o">.</span><span class="n">RigidBodyPlant</span><span class="p">(</span><span class="n">tree</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="debugging-with-the-python-bindings">
+<h2>Debugging with the Python Bindings<a class="headerlink" href="#debugging-with-the-python-bindings" title="Permalink to this headline">¶</a></h2>
+<p>You may encounter issues with the Python Bindings that may arise from the
+underlying C++ code, and it may not always be obvious what the root cause is.</p>
+<p>The first step to debugging is to consider running your code using the
+<code class="docutils literal"><span class="pre">trace</span></code> module. It is best practice to always have a <code class="docutils literal"><span class="pre">main()</span></code> function, and
+have a <code class="docutils literal"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;</span></code> clause. If you do this, then it is easy to
+trace. As an example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">insert_awesome_code_here</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># main()  # This is what you would have, but the following is useful:</span>
+
+    <span class="c1"># These are temporary, for debugging, so meh for programming style.</span>
+    <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">trace</span>
+
+    <span class="c1"># If there are segfaults, it&#39;s a good idea to always use stderr as it</span>
+    <span class="c1"># always prints to the screen, so you should get as much output as</span>
+    <span class="c1"># possible.</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stderr</span>
+
+    <span class="c1"># Now trace execution:</span>
+    <span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="o">.</span><span class="n">Trace</span><span class="p">(</span><span class="n">trace</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/usr&quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">])</span>
+    <span class="n">tracer</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s1">&#39;main()&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are developing in Drake and are using the <code class="docutils literal"><span class="pre">drake_py_unittest</span></code>
+macro, you can specify the argument <code class="docutils literal"><span class="pre">--trace=user</span></code> to get the same
+behavior.</p>
+</div>
+<p>This generally should help you trace where the code is dying. However, if you
+still need to dig in, you can build the bindings in debug mode, without symbol
+stripping, so you can debug with <code class="docutils literal"><span class="pre">gdb</span></code> or <code class="docutils literal"><span class="pre">lldb</span></code>:</p>
+<div class="highlight-shell"><div class="highlight"><pre><span></span>cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug ../drake
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you have SNOPT enabled (either <code class="docutils literal"><span class="pre">-DWITH_SNOPT=ON</span></code> or
+<code class="docutils literal"><span class="pre">-DWITH_ROBOTLOCOMOTION_SNOPT=ON</span></code>), symbols will <em>still</em> be stripped.</p>
+</div>
 <div class="section" id="differences-with-c-api">
 <h3>Differences with C++ API<a class="headerlink" href="#differences-with-c-api" title="Permalink to this headline">¶</a></h3>
 <p>In general, the <a class="reference external" href="pydrake/index.html#://">Python API</a> should be close to the
@@ -307,7 +352,8 @@ for debugging, and other advice.</p>
 <li><a class="reference internal" href="#binary-installation-for-python">Binary Installation for Python</a></li>
 <li><a class="reference internal" href="#building-the-python-bindings">Building the Python Bindings</a></li>
 <li><a class="reference internal" href="#using-the-python-bindings">Using the Python Bindings</a></li>
-<li><a class="reference internal" href="#what-s-available-from-python">What’s Available from Python</a><ul>
+<li><a class="reference internal" href="#what-s-available-from-python">What’s Available from Python</a></li>
+<li><a class="reference internal" href="#debugging-with-the-python-bindings">Debugging with the Python Bindings</a><ul>
 <li><a class="reference internal" href="#differences-with-c-api">Differences with C++ API</a><ul>
 <li><a class="reference internal" href="#c-template-instantiations-in-python">C++ Template Instantiations in Python</a></li>
 <li><a class="reference internal" href="#scalar-types">Scalar Types</a></li>

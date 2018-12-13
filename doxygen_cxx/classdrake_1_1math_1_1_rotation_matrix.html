@@ -129,6 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b0f1ec6a175a2d827ff3140f9d9966a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a3b0f1ec6a175a2d827ff3140f9d9966a">inverse</a> () const</td></tr>
 <tr class="memdesc:a3b0f1ec6a175a2d827ff3140f9d9966a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>R_BA = R_AB⁻¹</code>, the inverse (transpose) of this RotationMatrix.  <a href="#a3b0f1ec6a175a2d827ff3140f9d9966a">More...</a><br /></td></tr>
 <tr class="separator:a3b0f1ec6a175a2d827ff3140f9d9966a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ff00690cd0b5145222c506a39946aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a12ff00690cd0b5145222c506a39946aa">transpose</a> () const</td></tr>
+<tr class="memdesc:a12ff00690cd0b5145222c506a39946aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>R_BA = R_AB⁻¹</code>, the transpose of this RotationMatrix.  <a href="#a12ff00690cd0b5145222c506a39946aa">More...</a><br /></td></tr>
+<tr class="separator:a12ff00690cd0b5145222c506a39946aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa3f1ea791e60612a37e57dcf8b4187c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#afa3f1ea791e60612a37e57dcf8b4187c">matrix</a> () const</td></tr>
 <tr class="memdesc:afa3f1ea791e60612a37e57dcf8b4187c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Matrix3 underlying a RotationMatrix.  <a href="#afa3f1ea791e60612a37e57dcf8b4187c">More...</a><br /></td></tr>
 <tr class="separator:afa3f1ea791e60612a37e57dcf8b4187c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1555,7 +1558,7 @@ Engineering and Computer Science, Massachusetts Institute of Technology" <a href
 </div><div class="memdoc">
 
 <p>Returns a quaternion q that represents <code>this</code> RotationMatrix. </p>
-<p>Since the quaternion <code>q</code> and <code>-q</code> represent the same RotationMatrix, the quaternion returned by this method chooses the quaternion with q(0) &gt;= 0. </p>
+<p>Since the quaternion <code>q</code> and <code>-q</code> represent the same RotationMatrix, this method chooses to return a canonical quaternion, i.e., with q(0) &gt;= 0. </p>
 
 </div>
 </div>
@@ -1584,13 +1587,13 @@ Engineering and Computer Science, Massachusetts Institute of Technology" <a href
 </div><div class="memdoc">
 
 <p>Returns a unit quaternion q associated with the 3x3 matrix M. </p>
-<p>Since the quaternion <code>q</code> and <code>-q</code> represent the same RotationMatrix, the quaternion returned by this method chooses the quaternion with q(0) &gt;= 0. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Since the quaternion <code>q</code> and <code>-q</code> represent the same RotationMatrix, this method chooses to return a canonical quaternion, i.e., with q(0) &gt;= 0. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">M</td><td>3x3 matrix to be made into a quaternion. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a unit quaternion q. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a unit quaternion q in canonical form, i.e., with q(0) &gt;= 0. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::logic_error</td><td>in debug builds if the quaternion <code>q</code> returned by this method cannot construct a valid RotationMatrix. For example, if <code>M</code> contains NaNs, <code>q</code> will not be a valid quaternion. </td></tr>
@@ -1660,6 +1663,34 @@ Engineering and Computer Science, Massachusetts Institute of Technology" <a href
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a978a8b146ac3388416fc5c72b553f91a" title="Returns a quaternion q that represents this RotationMatrix. ">ToQuaternion()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a12ff00690cd0b5145222c506a39946aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ff00690cd0b5145222c506a39946aa">&#9670;&nbsp;</a></span>transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt;T&gt; transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns <code>R_BA = R_AB⁻¹</code>, the transpose of this RotationMatrix. </p>
+<dl class="section note"><dt>Note</dt><dd>For a valid rotation matrix <code>R_BA = R_AB⁻¹ = R_ABᵀ</code>. </dd></dl>
 
 </div>
 </div>

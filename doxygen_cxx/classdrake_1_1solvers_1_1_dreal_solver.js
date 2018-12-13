@@ -20,6 +20,6 @@ var classdrake_1_1solvers_1_1_dreal_solver =
     [ "operator=", "classdrake_1_1solvers_1_1_dreal_solver.html#ab2dc5668b86300ed880a7943139360e1", null ],
     [ "ProgramAttributesSatisfied", "classdrake_1_1solvers_1_1_dreal_solver.html#a897b26da95cce4dd89d5eb4fbec9b829", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_dreal_solver.html#aeccfbaa73e7a744f9339d671ac2f3832", null ],
-    [ "Solve", "classdrake_1_1solvers_1_1_dreal_solver.html#abcb59c9f532778e8656e681733a2f642", null ],
+    [ "Solve", "classdrake_1_1solvers_1_1_dreal_solver.html#aae822f158c8b0b8bb10bc8e8350431d8", null ],
     [ "solver_id", "classdrake_1_1solvers_1_1_dreal_solver.html#ace3da8c3a4a8bd641915f170d18e6c15", null ]
 ];

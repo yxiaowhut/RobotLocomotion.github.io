@@ -489,6 +489,39 @@ that doesn’t throw an exception in Debug builds.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.multibody.multibody_tree.JacobianWrtVariable">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.</code><code class="descname">JacobianWrtVariable</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.JacobianWrtVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enumeration that distinguishes between flavors of Jacobians based on
+the variable with respect to which they are taken.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kQDot :</p>
+<p>kV : J = ∂V/∂q̇</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.JacobianWrtVariable.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.JacobianWrtVariable</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.JacobianWrtVariable.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.multibody_tree.JacobianWrtVariable.kQDot">
+<code class="descname">kQDot</code><em class="property"> = JacobianWrtVariable.kQDot</em><a class="headerlink" href="#pydrake.multibody.multibody_tree.JacobianWrtVariable.kQDot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.multibody_tree.JacobianWrtVariable.kV">
+<code class="descname">kV</code><em class="property"> = JacobianWrtVariable.kV</em><a class="headerlink" href="#pydrake.multibody.multibody_tree.JacobianWrtVariable.kV" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.multibody_tree.JacobianWrtVariable.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.JacobianWrtVariable.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.multibody.multibody_tree.Joint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.</code><code class="descname">Joint</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.Joint" title="Permalink to this definition">¶</a></dt>
 <dd><p>A Joint models the kinematical relationship which characterizes the
@@ -850,55 +883,13 @@ No other values for T are currently supported.</p>
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.MultibodyTree.CalcAllBodyPosesInWorld">
 <code class="descname">CalcAllBodyPosesInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.MultibodyTree, context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.common.eigen_geometry.Isometry3]<a class="headerlink" href="#pydrake.multibody.multibody_tree.MultibodyTree.CalcAllBodyPosesInWorld" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the world pose <code class="docutils literal"><span class="pre">X_WB(q)</span></code> of each body B in the model as a
-function of the generalized positions q stored in <code class="docutils literal"><span class="pre">context</span></code>.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model. It stores the
-generalized positions q of the model.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">X_WB</span></code>:</dt>
-<dd>On output this vector will contain the pose of each body in the
-model ordered by BodyIndex. The index of a body in the model can
-be obtained with Body::index(). This method throws an exception if
-<code class="docutils literal"><span class="pre">X_WB</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>. Vector <code class="docutils literal"><span class="pre">X_WB</span></code> is resized when needed to
-have size num_bodies().</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if X_WB is nullptr.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>See MultibodyPlant method.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.MultibodyTree.CalcAllBodySpatialVelocitiesInWorld">
 <code class="descname">CalcAllBodySpatialVelocitiesInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.MultibodyTree, context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; List[drake::multibody::SpatialVelocity&lt;double&gt;]<a class="headerlink" href="#pydrake.multibody.multibody_tree.MultibodyTree.CalcAllBodySpatialVelocitiesInWorld" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the spatial velocity <code class="docutils literal"><span class="pre">V_WB(q,</span> <span class="pre">v)</span></code> of each body B in the
-model, measured and expressed in the world frame W. The body spatial
-velocities are a function of the generalized positions q and
-generalized velocities v, both stored in <code class="docutils literal"><span class="pre">context</span></code>.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the model. It stores the
-generalized positions q and velocities v of the model.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">V_WB</span></code>:</dt>
-<dd>On output this vector will contain the spatial velocity of each
-body in the model ordered by BodyIndex. The index of a body in the
-model can be obtained with Body::index(). This method throws an
-exception if <code class="docutils literal"><span class="pre">V_WB</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>. Vector <code class="docutils literal"><span class="pre">V_WB</span></code> is resized
-when needed to have size num_bodies().</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if V_WB is nullptr.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>See MultibodyPlant method.</p>
 </dd></dl>
 
 <dl class="method">

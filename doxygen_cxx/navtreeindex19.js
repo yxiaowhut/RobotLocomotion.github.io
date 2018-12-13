@@ -194,6 +194,7 @@ var NAVTREEINDEX19 =
 "classdrake_1_1math_1_1_rotation_matrix.html#a0fc8d7c964ca22cb2070e9506a3c6719":[2,0,0,11,14,28],
 "classdrake_1_1math_1_1_rotation_matrix.html#a10729b40d2b64359d6b25c64fb6297e0":[2,0,0,11,14,2],
 "classdrake_1_1math_1_1_rotation_matrix.html#a1141e549f6e5d8a195f24c8c95e91797":[2,0,0,11,14,23],
+"classdrake_1_1math_1_1_rotation_matrix.html#a12ff00690cd0b5145222c506a39946aa":[2,0,0,11,14,39],
 "classdrake_1_1math_1_1_rotation_matrix.html#a143570ba23e5a444790c7070a7447f09":[2,0,0,11,14,15],
 "classdrake_1_1math_1_1_rotation_matrix.html#a1ecdff2808f2ecf66cc0fe97f5173b98":[2,0,0,11,14,18],
 "classdrake_1_1math_1_1_rotation_matrix.html#a20d41963e2c1b3fe99e04abd23d88f36":[2,0,0,11,14,8],
@@ -211,12 +212,12 @@ var NAVTREEINDEX19 =
 "classdrake_1_1math_1_1_rotation_matrix.html#a7a5e8235ea5f9bb34bfa71b745546864":[2,0,0,11,14,17],
 "classdrake_1_1math_1_1_rotation_matrix.html#a7d51dc7c0ba0f0cf4747d47e9203255f":[2,0,0,11,14,32],
 "classdrake_1_1math_1_1_rotation_matrix.html#a7f6eb5993bd83412f92e82aa49873ae6":[2,0,0,11,14,4],
-"classdrake_1_1math_1_1_rotation_matrix.html#a876971dbbbcca2807eccb07b068df383":[2,0,0,11,14,39],
+"classdrake_1_1math_1_1_rotation_matrix.html#a876971dbbbcca2807eccb07b068df383":[2,0,0,11,14,40],
 "classdrake_1_1math_1_1_rotation_matrix.html#a8b686ab545dd2e1fb9bf4fb28aac8560":[2,0,0,11,14,22],
 "classdrake_1_1math_1_1_rotation_matrix.html#a910cd85b8df9b3955bf70771cf37ec53":[2,0,0,11,14,37],
 "classdrake_1_1math_1_1_rotation_matrix.html#a941efa73d6aa26217b8703cdea1595a0":[2,0,0,11,14,29],
 "classdrake_1_1math_1_1_rotation_matrix.html#a94f554d89721df33e9d6fd2a2fb73ff9":[2,0,0,11,14,9],
-"classdrake_1_1math_1_1_rotation_matrix.html#a9771c03401395a6e30c398f5663799ed":[2,0,0,11,14,40],
+"classdrake_1_1math_1_1_rotation_matrix.html#a9771c03401395a6e30c398f5663799ed":[2,0,0,11,14,41],
 "classdrake_1_1math_1_1_rotation_matrix.html#a978a8b146ac3388416fc5c72b553f91a":[2,0,0,11,14,35],
 "classdrake_1_1math_1_1_rotation_matrix.html#aa1890eaa31728581cedbf2bd40457560":[2,0,0,11,14,21],
 "classdrake_1_1math_1_1_rotation_matrix.html#aa5d5438bbed70f2290a46a73e91cc78a":[2,0,0,11,14,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a789bb634fbbbc0569e5e9c59584b3657":[2,0,0,12,9,2],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a7d1bd7b221e380e1bac184d3792abf5f":[2,0,0,12,9,8],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a9b4bcc3ca011dbb3e484ebb19ce7faa5":[2,0,0,12,9,14],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#aa4218b7c32aa0b01cb0b9a6c2dc44a16":[2,0,0,12,9,7],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#ab1114b94d5f66d6df3605856fa2c6cc6":[2,0,0,12,9,0]
+"classdrake_1_1multibody_1_1_articulated_body_inertia.html#aa4218b7c32aa0b01cb0b9a6c2dc44a16":[2,0,0,12,9,7]
 };
