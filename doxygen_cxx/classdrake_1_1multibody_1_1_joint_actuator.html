@@ -114,7 +114,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac1dd511b968cee9545a54a228020546e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds into <code>forces</code> a force along one of the degrees of freedom of the <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> actuated by <code>this</code> actuator.  <a href="#ac1dd511b968cee9545a54a228020546e">More...</a><br /></td></tr>
 <tr class="separator:ac1dd511b968cee9545a54a228020546e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0124c80b63b5acc2980e3a57107c43be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0124c80b63b5acc2980e3a57107c43be">set_actuation_vector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; u) const</td></tr>
-<tr class="memdesc:a0124c80b63b5acc2980e3a57107c43be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the actuation values u_instance for <code>this</code> actuator, this method sets the actuation vector u for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model to which this actuator belongs to.  <a href="#a0124c80b63b5acc2980e3a57107c43be">More...</a><br /></td></tr>
+<tr class="memdesc:a0124c80b63b5acc2980e3a57107c43be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the actuation values u_instance for <code>this</code> actuator, this method sets the actuation vector u for the entire MultibodyTree model to which this actuator belongs to.  <a href="#a0124c80b63b5acc2980e3a57107c43be">More...</a><br /></td></tr>
 <tr class="separator:a0124c80b63b5acc2980e3a57107c43be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a51aefd06d016c29ee25018216a7d5ff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a51aefd06d016c29ee25018216a7d5ff2">JointActuator</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html">JointActuator</a> &amp;)=delete</td></tr>
@@ -137,7 +137,7 @@ Friends</h2></td></tr>
 class drake::multibody::JointActuator&lt; T &gt;</h3>
 
 <p>The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a given <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>. </p>
-<p>It helps to flag whether a given <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is actuated or not so that <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> clients can apply forces on actuated joints through their actuators, see <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#ac1dd511b968cee9545a54a228020546e" title="Adds into forces a force along one of the degrees of freedom of the Joint actuated by this actuator...">AddInOneForce()</a>.</p>
+<p>It helps to flag whether a given <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is actuated or not so that MultibodyTree clients can apply forces on actuated joints through their actuators, see <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#ac1dd511b968cee9545a54a228020546e" title="Adds into forces a force along one of the degrees of freedom of the Joint actuated by this actuator...">AddInOneForce()</a>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type. Must be a valid <a class="el" href="namespace_eigen.html">Eigen</a> scalar.</td></tr>
@@ -231,7 +231,7 @@ class drake::multibody::JointActuator&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Creates an actuator for <code>joint</code> with the given <code>name</code>. </p>
-<p>The name must be unique within the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model. This is enforced by <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a5096160ffb18ddc72e2e29c0edfc5064" title="Creates and adds a JointActuator model for an actuator acting on a given joint. ">MultibodyTree::AddJointActuator()</a>. </p>
+<p>The name must be unique within the given MultibodyTree model. This is enforced by <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a5096160ffb18ddc72e2e29c0edfc5064" title="Creates and adds a JointActuator model for an actuator acting on a given joint. ">MultibodyTree::AddJointActuator()</a>. </p>
 
 </div>
 </div>
@@ -412,11 +412,11 @@ class drake::multibody::JointActuator&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Given the actuation values u_instance for <code>this</code> actuator, this method sets the actuation vector u for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model to which this actuator belongs to. </p>
+<p>Given the actuation values u_instance for <code>this</code> actuator, this method sets the actuation vector u for the entire MultibodyTree model to which this actuator belongs to. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">u_instance</td><td>Actuation values for <code>this</code> actuator. It must be of size equal to the number of degrees of freedom of the actuated <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a>, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities describing this joint. ">Joint::num_velocities()</a>. For units and sign conventions refer to the specific <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> sub-class documentation. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">u</td><td>The vector containing the actuation values for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model to which <code>this</code> actuator belongs to. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">u</td><td>The vector containing the actuation values for the entire MultibodyTree model to which <code>this</code> actuator belongs to. </td></tr>
   </table>
   </dd>
 </dl>

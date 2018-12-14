@@ -84,6 +84,7 @@ var searchData=
   ['discrete_5fderivative_2ecc',['discrete_derivative.cc',['../discrete__derivative_8cc.html',1,'']]],
   ['discrete_5fderivative_2eh',['discrete_derivative.h',['../discrete__derivative_8h.html',1,'']]],
   ['discrete_5fderivative_5ftest_2ecc',['discrete_derivative_test.cc',['../discrete__derivative__test_8cc.html',1,'']]],
+  ['discrete_5fsystems_2eh',['discrete_systems.h',['../discrete__systems_8h.html',1,'']]],
   ['discrete_5fvalues_2ecc',['discrete_values.cc',['../discrete__values_8cc.html',1,'']]],
   ['discrete_5fvalues_2eh',['discrete_values.h',['../discrete__values_8h.html',1,'']]],
   ['discrete_5fvalues_5ftest_2ecc',['discrete_values_test.cc',['../discrete__values__test_8cc.html',1,'']]],

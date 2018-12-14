@@ -14,6 +14,7 @@ var searchData=
   ['kinematicsresults',['KinematicsResults',['../classdrake_1_1systems_1_1_kinematics_results.html',1,'drake::systems']]],
   ['kneesettings',['KneeSettings',['../struct_knee_settings.html',1,'']]],
   ['kukaiiwamodelbuilder',['KukaIiwaModelBuilder',['../classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1internal_1_1_kuka_iiwa_model_builder.html',1,'drake::multibody::benchmarks::kuka_iiwa_robot::internal']]],
+  ['kukaiiwamodeltests',['KukaIiwaModelTests',['../classdrake_1_1multibody_1_1multibody__plant_1_1test_1_1_kuka_iiwa_model_tests.html',1,'drake::multibody::multibody_plant::test']]],
   ['kukarobotjointreactionforces',['KukaRobotJointReactionForces',['../structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html',1,'drake::multibody::benchmarks::kuka_iiwa_robot']]],
   ['kukatorquecontroller',['KukaTorqueController',['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html',1,'drake::examples::kuka_iiwa_arm']]]
 ];

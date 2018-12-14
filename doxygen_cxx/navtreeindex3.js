@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"class_drake_shapes_1_1_box.html#a569f6c24207ee52a8d5f096d3fa6bec3":[2,0,1,0,5],
 "class_drake_shapes_1_1_box.html#a5779e82c72bd477d1d72042af3b6c38b":[2,0,1,0,4],
 "class_drake_shapes_1_1_box.html#a73230550e4555a95177c155c9cc9669f":[2,0,1,0,8],
 "class_drake_shapes_1_1_box.html#adb66e1b79694e7209b488efb55b06fd3":[2,0,1,0,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "class_kinematics_cache.html#a1adfe99441dd392a62a80977aa590d03":[2,0,38,11],
 "class_kinematics_cache.html#a2af3210f501c973f4f99973502e2e546":[2,0,38,21],
 "class_kinematics_cache.html#a2f00e95adfc3e45b54172b5fbe79cac8":[2,0,38,16],
-"class_kinematics_cache.html#a30342f766e5b14049b65f710581f4bd1":[2,0,38,9],
-"class_kinematics_cache.html#a372731ef06a823324bfeda5c8a8a3ac8":[2,0,38,10]
+"class_kinematics_cache.html#a30342f766e5b14049b65f710581f4bd1":[2,0,38,9]
 };

@@ -338,12 +338,12 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 : <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0c00066544e9e2b4ca941a3e13f622cb">MathematicalProgram</a>
 </li>
 <li>EvalBodyPoseInWorld()
-: <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aae776848d1a35d25966711e9df8ead6b">MultibodyPlant&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a27053b1ed343ccd9640259fd442d8e14">MultibodyTree&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a27053b1ed343ccd9640259fd442d8e14">MultibodyTree&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aae776848d1a35d25966711e9df8ead6b">MultibodyPlant&lt; T &gt;</a>
 </li>
 <li>EvalBodySpatialVelocityInWorld()
-: <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8377774b012b4975b46941b3197f29c3">MultibodyPlant&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a019e8c73d7084e073b4e09a1c0df3b18">MultibodyTree&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a019e8c73d7084e073b4e09a1c0df3b18">MultibodyTree&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8377774b012b4975b46941b3197f29c3">MultibodyPlant&lt; T &gt;</a>
 </li>
 <li>EvalCallback()
 : <a class="el" href="classdrake_1_1solvers_1_1_visualization_callback.html#a0ec59e8c7fa52e6bfb6a2d0f6b467245">VisualizationCallback</a>
@@ -393,8 +393,11 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 , <a class="el" href="class_relative_quat_constraint.html#ac15ebfff86fbc563ef94dc61e45060f5">RelativeQuatConstraint</a>
 , <a class="el" href="class_world_quat_constraint.html#ac15ebfff86fbc563ef94dc61e45060f5">WorldQuatConstraint</a>
 </li>
+<li>EvalPoseInWorld()
+: <a class="el" href="classdrake_1_1multibody_1_1_body.html#ac32fefa74db40501040b452da655554f">Body&lt; T &gt;</a>
+</li>
 <li>EvalPositionKinematics()
-: <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#aed59e6f62bfe30a418ba8d8c611580af">MultibodyTree&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#aed59e6f62bfe30a418ba8d8c611580af">MultibodyTree&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#aed59e6f62bfe30a418ba8d8c611580af">MultibodyTreeSystem&lt; T &gt;</a>
 </li>
 <li>evalPositions()
@@ -410,6 +413,9 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 <li>evalrpy()
 : <a class="el" href="class_euler_constraint.html#a2769a7286c1dbd27db98ef59c8fc3a7f">EulerConstraint</a>
 , <a class="el" href="class_world_euler_constraint.html#a686f5c54eca7613bdb1c2fd6eddc5431">WorldEulerConstraint</a>
+</li>
+<li>EvalSpatialVelocityInWorld()
+: <a class="el" href="classdrake_1_1multibody_1_1_body.html#a9c07832f25dde3f8403e98c73dd24d1b">Body&lt; T &gt;</a>
 </li>
 <li>EvalSpringDamperForces()
 : <a class="el" href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#adfb97422619ce05f36cd5a728be0255a">StiffDoubleMassSpringSystem&lt; T &gt;</a>
@@ -461,7 +467,7 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_rigid_body_plant.html#a87747e706455fc7737b29d6be7fbda2f">RigidBodyPlant&lt; T &gt;</a>
 </li>
 <li>EvaluateMultivariate()
-: <a class="el" href="class_polynomial.html#aac88cfce88febc6c21820ecb183c4f37">Polynomial&lt; _CoefficientType &gt;</a>
+: <a class="el" href="class_polynomial.html#a5051fa433a0a54ca36c422e8d86968b1">Polynomial&lt; _CoefficientType &gt;</a>
 , <a class="el" href="class_trig_poly.html#a5051fa433a0a54ca36c422e8d86968b1">TrigPoly&lt; _CoefficientType &gt;</a>
 </li>
 <li>EvaluateNth()
@@ -488,33 +494,33 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 : <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a9ab0b699b7b33fe163af28e437dd9e38">EvaluatorBase</a>
 </li>
 <li>EvaluatorConstraint()
-: <a class="el" href="classdrake_1_1solvers_1_1_evaluator_constraint.html#a260a1715b48134fad92a8221882a1076">EvaluatorConstraint&lt; EvaluatorType &gt;</a>
+: <a class="el" href="classdrake_1_1solvers_1_1_evaluator_constraint.html#ad84d7b3c1202bc9e275ee8c48606e23f">EvaluatorConstraint&lt; EvaluatorType &gt;</a>
 </li>
 <li>EvaluatorCost()
-: <a class="el" href="classdrake_1_1solvers_1_1_evaluator_cost.html#a670b1f6bcb72ae83f74565088504d58b">EvaluatorCost&lt; EvaluatorType &gt;</a>
+: <a class="el" href="classdrake_1_1solvers_1_1_evaluator_cost.html#a1fdd829cd580b7b4bba065313c9617c2">EvaluatorCost&lt; EvaluatorType &gt;</a>
 </li>
 <li>EvalVectorInput()
 : <a class="el" href="classdrake_1_1systems_1_1_system.html#aa184508e6a0494c1b8214dab77e34ce3">System&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1systems_1_1_vector_system.html#a8c6af63b91bf487bee37f57d8fa33777">VectorSystem&lt; T &gt;</a>
 </li>
 <li>EvalVelocityKinematics()
-: <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a4d0adc712bc2d51f9aa758e8d726276d">MultibodyTree&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a4d0adc712bc2d51f9aa758e8d726276d">MultibodyTree&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a4d0adc712bc2d51f9aa758e8d726276d">MultibodyTreeSystem&lt; T &gt;</a>
 </li>
 <li>EvalVisualizationCallbacks()
 : <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a856ded9f90eaac91a1c66f2c139566b5">MathematicalProgram</a>
 </li>
 <li>EvalWithMixedScalars()
-: <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html#ada1b2a05d17af5ffb574cd813b87d4fb">BarycentricMesh&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1math_1_1_barycentric_mesh.html#a247ef286093cfe5b95164c5fbced2737">BarycentricMesh&lt; T &gt;</a>
 </li>
 <li>Event()
-: <a class="el" href="classdrake_1_1systems_1_1_event.html#a89c6a7de03a69b3cb08061f5a9d16bd6">Event&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_event.html#a85b9e8172cffad1f169d55688e49a72f">Event&lt; T &gt;</a>
 </li>
 <li>EventCollection()
 : <a class="el" href="classdrake_1_1systems_1_1_event_collection.html#a37fc28314bb7c9267eb84ce5a6b97ee6">EventCollection&lt; EventType &gt;</a>
 </li>
 <li>EventData()
-: <a class="el" href="classdrake_1_1systems_1_1_event_data.html#ad605426df8f0214f090ca363648db027">EventData</a>
+: <a class="el" href="classdrake_1_1systems_1_1_event_data.html#a81d9969ab11ea5758033221531e98fe8">EventData</a>
 </li>
 <li>ExcludeCollisionsBetween()
 : <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a822b987f8d0fed87bcd53dd90345bce1">GeometryState&lt; T &gt;</a>
@@ -524,7 +530,7 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 <li>ExcludeCollisionsWithin()
 : <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a91e9026cf3cd253a4e7260c6dc054921">GeometryState&lt; T &gt;</a>
 , <a class="el" href="classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html#af4b15f27463a7bff79dc89d398167947">ProximityEngine&lt; T &gt;</a>
-, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#aa5ca602115aa33993e3fda600acd8ac0">SceneGraph&lt; T &gt;</a>
+, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921">SceneGraph&lt; T &gt;</a>
 </li>
 <li>Expand()
 : <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#a05c7caacbe62c00dba9f7bf755b68f0f">PointCloud</a>
@@ -562,10 +568,10 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 : <a class="el" href="structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#affa193ce61ecf0e83c9b547014a4675b">ExplicitErrorControlledIntegratorTest&lt; T &gt;</a>
 </li>
 <li>ExplicitEulerIntegrator()
-: <a class="el" href="classdrake_1_1systems_1_1_explicit_euler_integrator.html#a8a6de066cd2ebfcbeed4810b7371535b">ExplicitEulerIntegrator&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_explicit_euler_integrator.html#a38ae88f0d74dab300a3d318c1ddf5b44">ExplicitEulerIntegrator&lt; T &gt;</a>
 </li>
 <li>ExponentialPlusPiecewisePolynomial()
-: <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#aee0d01536c69b892fb45553cf4b67bb7">ExponentialPlusPiecewisePolynomial&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9f9ca6881495c3e9ce261df8ca9b5514">ExponentialPlusPiecewisePolynomial&lt; T &gt;</a>
 </li>
 <li>ExportInput()
 : <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa9119f88dbf1e1b8cb38608a3f1d9642">DiagramBuilder&lt; T &gt;</a>
@@ -574,7 +580,7 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a2b891f7957f3a1b619c31eac5914c05c">DiagramBuilder&lt; T &gt;</a>
 </li>
 <li>Expression()
-: <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#aed34f1f4b3b0d95aff592cc364b847a6">Expression</a>
+: <a class="el" href="classdrake_1_1symbolic_1_1_expression.html#ab80898f4f9f0131bad841b21c3db4122">Expression</a>
 </li>
 <li>ExpressionAbs()
 : <a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html#ae897689cf53055bc3307cb51fd4e0cc1">ExpressionAbs</a>
@@ -586,7 +592,7 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 : <a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html#a82a57a03e33d6450ee3475b25ffbdf63">ExpressionAdd</a>
 </li>
 <li>ExpressionAddFactory()
-: <a class="el" href="classdrake_1_1symbolic_1_1_expression_add_factory.html#a80dae86bff511c04a1b345cf6a193b08">ExpressionAddFactory</a>
+: <a class="el" href="classdrake_1_1symbolic_1_1_expression_add_factory.html#a57a110644a5bfbf19ed8a90b30dc040c">ExpressionAddFactory</a>
 </li>
 <li>ExpressionAsin()
 : <a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html#a0e07687d55b69dbd85e37446ea1b8810">ExpressionAsin</a>
@@ -640,7 +646,7 @@ $(document).ready(function(){initNavTree('functions_func_e.html','');});
 : <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html#a79ae8c3014d743031f941bf1c0dcadd5">ExpressionMul</a>
 </li>
 <li>ExpressionMulFactory()
-: <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul_factory.html#a2dd34154ac5a363dddc095ff3d7a9648">ExpressionMulFactory</a>
+: <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul_factory.html#a1009078cf5cdfc7c336b1fa26fe0fc37">ExpressionMulFactory</a>
 </li>
 <li>ExpressionNaN()
 : <a class="el" href="classdrake_1_1symbolic_1_1_expression_na_n.html#a400311f1740cee0714c0bd93e96e2c17">ExpressionNaN</a>

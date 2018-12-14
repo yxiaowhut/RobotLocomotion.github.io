@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1_type_safe_index.html#af6d7be101d0085f361dada1400dc0537":[2,0,0,52,21],
 "classdrake_1_1automotive_1_1_automotive_simulator.html":[2,0,0,1,0],
 "classdrake_1_1automotive_1_1_automotive_simulator.html#a087cb4ae5a8816cd0c1088b0312fb098":[2,0,0,1,0,10],
 "classdrake_1_1automotive_1_1_automotive_simulator.html#a0cf937b440651e775bc6b41a4de3f8f4":[2,0,0,1,0,20],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1automotive_1_1_trajectory_car.html#adfac597f76d12e975e1254820bb31c91":[0,1,4,0,5,4],
 "classdrake_1_1automotive_1_1_trajectory_car.html#aeb43f0e430ce7fa7ddfe9dda587ffc1d":[0,1,4,0,5,11],
 "classdrake_1_1automotive_1_1_trajectory_car.html#afe8645ed8b979bc444cbecf8d9ba9973":[0,1,4,0,5,7],
-"classdrake_1_1automotive_1_1_trajectory_car.html#afe8a73b048e73209fcac757eab6b7ad4":[0,1,4,0,5,5],
-"classdrake_1_1automotive_1_1_trajectory_follower.html":[0,1,4,0,6]
+"classdrake_1_1automotive_1_1_trajectory_car.html#afe8a73b048e73209fcac757eab6b7ad4":[0,1,4,0,5,5]
 };

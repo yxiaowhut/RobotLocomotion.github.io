@@ -598,7 +598,7 @@ satisfy the differentiated form of the constraints (typically,
 acceleration constraints), - a projection method for least-squares
 correction of violated higher-level constraints (position and velocity
 level), - a time-of-next-update method that can be used to adjust the
-integrator step size in preparation for a discrete update, - a method
+integrator step size in preparation for a discrete update, - methods
 that can update discrete variables when their update time is reached,
 - witness (guard) functions for event isolation, - event handlers
 (reset functions) for making appropriate changes to state and mode
@@ -607,37 +607,146 @@ variables when an event has been isolated.</p>
 integrator. Different integrators have different properties; you can
 choose the one that is most appropriate for your application or use
 the default which is adequate for most systems.</p>
-<p>This documentation is targeted toward users who have created a
-LeafSystem with multiple event types (unrestricted update, discrete
-update, and publish). For authors of such systems, it is useful to
-understand the simulation mechanics in order to attain the desired
-state over time, and this behavior is dependent on the ordering in
-which events are processed.</p>
-<p>In StepTo(), Simulator performs the following steps repeatedly: 1.
-Updates state variables without restriction (via an
-UnrestrictedUpdateEvent), 2. Updates discrete state variables (via a
-DiscreteUpdateEvent), 3. Updates continuous variables (both time and
-state), meaning integrating the smooth system (the ODE or DAE) forward
-in time- up to the next Event- by calling
-System::CalcTimeDerivatives() (<em>only called if the system has declared
-some continuous state</em>), 4. Generates any output (via a PublishEvent).</p>
+<p>&lt;h3&gt;How the simulation is stepped: simulation mechanics for authors of
+discrete and hybrid systems&lt;/h3&gt;</p>
+<p>This section is targeted toward users who have created a LeafSystem
+implementing a discrete or hybrid system. For authors of such systems,
+it can be useful to understand the simulation details in order to
+attain the desired state behavior over time. This behavior is
+dependent on the ordering in which discrete events and continuous
+updates are processed. (By “discrete events” we mean to include any of
+Drake’s event handlers.) The basic issues and terminology are
+introduced in the discrete_systems module; please look there first
+before proceeding.</p>
+<p>As pictured in discrete_systems, when a continuous-time system has
+discrete events, the state x can have two significant values at the
+event time t. These are - x⁻(t), the value of x <em>before</em> the discrete
+update occurs (○ markers), and - x⁺(t), the value of x <em>after</em> the
+discrete update occurs (● markers).</p>
+<p>Thus the value of the Context, which contains both time and state,
+advances from {t, x⁻(t)} to {t, x⁺(t)} as a result of the update.
+While those Context values are user-visible, the details of stepping
+here require an intermediate value which we’ll denote {t, x*(t)}.</p>
+<p>Recall that Drake’s state x is partitioned into continuous, discrete,
+and abstract partitions xc, xd, and xa, so <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">xc,</span> <span class="pre">xd,</span> <span class="pre">xa</span> <span class="pre">}</span></code>.
+Within a single step, these are updated in three stages: -</p>
+<p>Unrestricted update (can change x) -</p>
+<p>Discrete update (can change only xd) -</p>
+<p>Continuous update (changes t and xc)</p>
+<p>Where needed, we extend the above notation to xc⁻, xa⁺, etc. to
+indicate the value of an individual partition at a particular stage of
+the stepping algorithm.</p>
+<p>The following pseudocode uses the above notation to describe the
+algorithm that the Simulator uses to advance the system by a single
+time step, and to clarify the effects on time and state of each of the
+update stages above. This algorithm is given a starting Context value
+<code class="docutils literal"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal"><span class="pre">{tₑ,</span> <span class="pre">x⁻(tₑ)}</span></code>,
+where tₑ is <em>no later</em> than a given tₘₐₓ.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>// Advance time and state from start value {tₛ, x⁻(tₛ)} to an end value
+// {tₑ, x⁻(tₑ)}, where tₛ ≤ tₑ ≤ tₘₐₓ.
+procedure Step(tₛ, x⁻(tₛ), tₘₐₓ)
+
+// Update any variables (no restrictions).
+x*(tₛ) ← DoAnyUnrestrictedUpdates(tₛ, x⁻(tₛ))
+
+// ----------------------------------
+// Time and state are at {tₛ, x*(tₛ)}
+// ----------------------------------
+
+// Update discrete variables.
+xd⁺(tₛ) ← DoAnyDiscreteUpdates(tₛ, x*(tₛ))
+
+xc⁺(tₛ) ← xc*(tₛ)  // These values carry over from x*(tₛ).
+xa⁺(tₛ) ← xa*(tₛ)
+
+// ----------------------------------
+// Time and state are at {tₛ, x⁺(tₛ)}
+// ----------------------------------
+
+// See how far it is safe to integrate without missing any events.
+tₑᵥₑₙₜ ← CalcNextEventTime(tₛ, x⁺(tₛ))
+
+// Integrate continuous variables forward in time. Integration may terminate
+// before reaching tₛₜₒₚ due to witnessed events.
+tₛₜₒₚ ← min(tₑᵥₑₙₜ, tₘₐₓ)
+tₑ, xc⁻(tₑ) ← Integrate(tₛ, x⁺(tₛ), tₛₜₒₚ)
+
+xd⁻(tₑ) ← xd⁺(tₛ)  // Discrete values are held from x⁺(tₛ).
+xa⁻(tₑ) ← xa⁺(tₛ)
+
+// ----------------------------------
+// Time and state are at {tₑ, x⁻(tₑ)}
+// ----------------------------------
+
+DoAnyPublishes(tₑ, x⁻(tₑ))
+
+return {tₑ, x⁻(tₑ)}
+</pre></div>
+</div>
+<p>We can use the notation and pseudocode to flesh out the StepTo() and
+Initialize() functions:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
+procedure StepTo(tₘₐₓ)
+t ← current_time
+while t &lt; tₘₐₓ
+{tₑ, x⁻(tₑ)} ← Step(t, x⁻(t), tₘₐₓ)
+{t, x⁻(t)} ← {tₑ, x⁻(tₑ)}
+endwhile
+
+// Update time and state to {t₀, x⁻(t₀)}, the value the Context should contain
+// at the start of the first simulation step.
+procedure Initialize(t₀, x₀)
+x⁻(t₀) ← DoAnyUpdates as in Step()
+
+// ----------------------------------
+// Time and state are at {t₀, x⁻(t₀)}
+// ----------------------------------
+
+DoAnyPublishes(t₀, x⁻(t₀))
+</pre></div>
+</div>
+<p>Thus Initialize() performs initialization updates, does no
+integration, and processes any publish events that trigger at t₀.</p>
 <dl class="docutils">
 <dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
-<dd>The vector element type, which must be a valid Eigen scalar.
-Instantiated templates for the following kinds of T’s are provided
-and available to link against in the containing library: - double
-- AutoDiffXd</dd>
+<dd>The vector element type, which must be a valid Eigen scalar.</dd>
 </dl>
+<p>Instantiated templates for the following kinds of T’s are provided and
+available to link against in the containing library: - double -
+AutoDiffXd</p>
 <p>Other instantiations are permitted but take longer to compile.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_.Simulator_[float].Initialize">
 <code class="descname">Initialize</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].Initialize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Prepares the Simulator for a simulation. If the initial Context does
-not satisfy the System’s constraints, an attempt is made to modify the
-values of the continuous state variables to satisfy the constraints.
-This method will throw <code class="docutils literal"><span class="pre">RuntimeError</span></code> if the combination of options
-doesn’t make sense, and <code class="docutils literal"><span class="pre">RuntimeError</span></code> if it is unable to find a
-constraint-satisfying initial condition.</p>
+<dd><p>Prepares the Simulator for a simulation. Initialization events are
+triggered and handled, and time-triggered publish events that are
+scheduled for the initial time are handled also. The active
+integrator’s Initialize() method is invoked and statistics are reset.
+(See the class documentation for more information.) We recommend
+calling Initialize() explicitly prior to beginning a simulation so
+that error conditions will be discovered early. However, Initialize()
+will be called automatically by the first StepTo() call if it hasn’t
+already been called.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you make a change to the Context or to Simulator options
+between StepTo() calls you should consider whether to call
+Initialize() before resuming; StepTo() will not do that
+automatically for you. Whether to do so depends on whether you
+want the above initialization operations performed. For example,
+if you changed the time you will likely want the time-triggered
+events to be recalculated in case one is due at the new starting
+time.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Initialize() does not automatically attempt to satisfy System
+constraints – it is up to you to make sure that constraints are
+satisifed by the initial conditions.</p>
+</div>
+<p>This method will throw <code class="docutils literal"><span class="pre">RuntimeError</span></code> if the combination of options
+doesn’t make sense. Other failures are possible from the System and
+integrator in use.</p>
 </dd></dl>
 
 <dl class="method">
@@ -649,17 +758,23 @@ the context or some other termination condition occurs. A variety of
 conditions that may be thrown by the System when it is asked to
 perform computations. Be sure to enclose your simulation in a
 <code class="docutils literal"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal"><span class="pre">what()</span></code> message.</p>
-<p>We recommend that you call <code class="docutils literal"><span class="pre">Initialize()</span></code> prior to making the first
-call to <code class="docutils literal"><span class="pre">StepTo()</span></code>. However, if you don’t it will be called for you
-the first time that you attempt a step, possibly resulting in
-unexpected error conditions. See documentation for <code class="docutils literal"><span class="pre">Initialize()</span></code>
-for the error conditions it might produce.</p>
+<p>We recommend that you call Initialize() prior to making the first call
+to StepTo(). However, if you don’t it will be called for you the first
+time that you attempt a step, possibly resulting in unexpected error
+conditions. See documentation for <code class="docutils literal"><span class="pre">Initialize()</span></code> for the error
+conditions it might produce.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You should consider calling Initialize() if you alter the the
+Context or Simulator options between successive StepTo() calls.
+See Initialize() for more information.</p>
+</div>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">boundary_time</span></code>:</dt>
 <dd>The time to advance the context to.</dd>
 <dt>Precondition:</dt>
-<dd>The simulation state is valid (i.e., no discrete updates or state
-projections are necessary) at the present time.</dd>
+<dd>The internal Context satisfies all System constraints or will
+after pending Context updates are performed.</dd>
 </dl>
 </dd></dl>
 

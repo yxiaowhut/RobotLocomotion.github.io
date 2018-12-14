@@ -1,7 +1,7 @@
 var group__algorithms =
 [
     [ "Multibody Dynamics", "group__multibody.html", "group__multibody" ],
-    [ "Simulation", "group__simulation.html", "group__simulation" ],
+    [ "Simulation", "group__simulation.html", null ],
     [ "Analysis", "group__analysis.html", "group__analysis" ],
     [ "Planning", "group__planning.html", null ],
     [ "Feedback Control Design", "group__control.html", null ],

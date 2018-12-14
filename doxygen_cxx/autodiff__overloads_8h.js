@@ -10,6 +10,7 @@ var autodiff__overloads_8h =
     [ "if_then_else", "autodiff__overloads_8h.html#af52cba62721f6b29c99a83ec9b192873", null ],
     [ "isinf", "autodiff__overloads_8h.html#a4e0cf71aec9efa0001a9acac376990f0", null ],
     [ "isnan", "autodiff__overloads_8h.html#a359f994f61fb2223501e848026341190", null ],
+    [ "nexttoward", "autodiff__overloads_8h.html#a6622fc922ba2941ef48b02b717883f75", null ],
     [ "pow", "autodiff__overloads_8h.html#aed761067a3e3908708559594fab9c12b", null ],
     [ "round", "autodiff__overloads_8h.html#ac1217be143aca68b33af6812033c4656", null ]
 ];

@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1benchmarks_
 </div><!--header-->
 <div class="contents">
 
-<p>This class is a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model for a 7-DOF Kuka iiwa robot arm.  
+<p>This class is a MultibodyTree model for a 7-DOF Kuka iiwa robot arm.  
  <a href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/multibody/benchmarks/kuka_iiwa_robot/drake_kuka_iiwa_robot.h&gt;</code></p>
@@ -112,8 +112,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8fcedd77201a6ff4ee603c107277a650"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html">KukaRobotJointReactionForces</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a8fcedd77201a6ff4ee603c107277a650">CalcJointReactionForces</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;qDt, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;qDDt)</td></tr>
 <tr class="memdesc:a8fcedd77201a6ff4ee603c107277a650"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method calculates joint reaction torques/forces for a 7-DOF KUKA iiwa robot, from known joint angles and their 1st and 2nd time-derivatives.  <a href="#a8fcedd77201a6ff4ee603c107277a650">More...</a><br /></td></tr>
 <tr class="separator:a8fcedd77201a6ff4ee603c107277a650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a875f49ab037712aeeeddd091161bee45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a875f49ab037712aeeeddd091161bee45">tree</a> () const</td></tr>
+<tr class="memitem:a875f49ab037712aeeeddd091161bee45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a875f49ab037712aeeeddd091161bee45">tree</a> () const</td></tr>
 <tr class="separator:a875f49ab037712aeeeddd091161bee45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cc6237eaa898941ec89897b9fd0414"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab8cc6237eaa898941ec89897b9fd0414">plant</a> () const</td></tr>
+<tr class="separator:ab8cc6237eaa898941ec89897b9fd0414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ab01f43989767b1d4836d5ed824e121cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab01f43989767b1d4836d5ed824e121cd">DrakeKukaIIwaRobot</a> (const <a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html">DrakeKukaIIwaRobot</a> &amp;)=delete</td></tr>
 <tr class="separator:ab01f43989767b1d4836d5ed824e121cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,7 +130,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::multibody::benchmarks::kuka_iiwa_robot::DrakeKukaIIwaRobot&lt; T &gt;</h3>
 
-<p>This class is a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model for a 7-DOF Kuka iiwa robot arm. </p>
+<p>This class is a MultibodyTree model for a 7-DOF Kuka iiwa robot arm. </p>
 <p>It is used to compare Drake results for the robot end-effector (rigid linkG) relative to world (Newtonian frame linkN) versus <a class="el" href="namespace_motion_genesis.html">MotionGenesis</a> solution. This class takes input values for each of the 7 joint angles (q) as well as their 1st and 2nd time derivatives (q̇, q̈) and calculates the end-effector rotation matrix (relative to world), position (from world origin) angular velocity, velocity, angular acceleration, and acceleration. Geometrical and connectivity data is in file kuka_iiwa_robot.urdf. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab01f43989767b1d4836d5ed824e121cd"></a>
@@ -405,6 +407,31 @@ class drake::multibody::benchmarks::kuka_iiwa_robot::DrakeKukaIIwaRobot&lt; T &g
 
 </div>
 </div>
+<a id="ab8cc6237eaa898941ec89897b9fd0414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8cc6237eaa898941ec89897b9fd0414">&#9670;&nbsp;</a></span>plant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt;T&gt;&amp; plant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a875f49ab037712aeeeddd091161bee45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a875f49ab037712aeeeddd091161bee45">&#9670;&nbsp;</a></span>tree()</h2>
 
@@ -415,7 +442,7 @@ class drake::multibody::benchmarks::kuka_iiwa_robot::DrakeKukaIIwaRobot&lt; T &g
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt;T&gt;&amp; tree </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt;T&gt;&amp; tree </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

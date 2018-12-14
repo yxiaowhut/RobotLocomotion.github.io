@@ -408,9 +408,8 @@ the space of generalized forces with the geometric Jacobian
 velocity as <code class="docutils literal"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">J_WB(q)v</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the MultibodyTree model. It
-stores the generalized positions q and the generalized velocities
-v.</dd>
+<dd>The context containing the state of the model. It stores the
+generalized positions q and the generalized velocities v.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">Cv</span></code>:</dt>
 <dd>On output, <code class="docutils literal"><span class="pre">Cv</span></code> will contain the product <code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code>. It must
 be a valid (non-null) pointer to a column vector in <code class="docutils literal"><span class="pre">ℛⁿ</span></code> with n
@@ -435,6 +434,38 @@ conservative power, <code class="docutils literal"><span class="pre">Pc</span></
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.CalcForceElementsContribution">
+<code class="descname">CalcForceElementsContribution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], forces: pydrake.multibody.multibody_tree.MultibodyForces</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.CalcForceElementsContribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the combined force contribution of ForceElement objects in
+the model. A ForceElement can apply forces as a spatial force per body
+or as generalized forces, depending on the ForceElement model.
+ForceElement contributions are a function of the state and time only.
+The output from this method can immediately be used as input to
+CalcInverseDynamics() to include the effect of applied forces by force
+elements.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of this model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">forces</span></code>:</dt>
+<dd>A pointer to a valid, non nullptr, multibody forces object. On
+output <code class="docutils literal"><span class="pre">forces</span></code> will store the forces exerted by all the
+ForceElement objects in the model.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">forces</span></code> is null or not compatible with this</li>
+<li>model, per MultibodyForces::CheckInvariants().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.CalcFrameGeometricJacobianExpressedInWorld">
 <code class="descname">CalcFrameGeometricJacobianExpressedInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], frame_B: pydrake.multibody.multibody_tree.Frame, p_BoFo_B: numpy.ndarray[float64[3, 1]] = array([ 0.,  0.,  0.])</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, n]]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.CalcFrameGeometricJacobianExpressedInWorld" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -455,7 +486,7 @@ like so:</p>
 system.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context storing the state of the multibody model.</dd>
+<dd>The context storing the state of the model.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -469,6 +500,58 @@ gravity forces on the mechanical system. That is, <code class="docutils literal"
 corresponds to potential energy going into the system, as either
 mechanical kinetic energy, some other potential energy, or heat,
 and therefore to a decrease of the gravitational potential energy.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.CalcInverseDynamics">
+<code class="descname">CalcInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], known_vdot: numpy.ndarray[float64[m, 1]], external_forces: pydrake.multibody.multibody_tree.MultibodyForces</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.CalcInverseDynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the state of this model in <code class="docutils literal"><span class="pre">context</span></code> and a known vector of
+generalized accelerations <code class="docutils literal"><span class="pre">vdot</span></code>, this method computes the set of
+generalized forces <code class="docutils literal"><span class="pre">tau</span></code> that would need to be applied in order to
+attain the specified generalized accelerations. Mathematically, this
+method computes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>tau = M(q)v̇ + C(q, v)v - tau_app - ∑ J_WBᵀ(q) Fapp_Bo_W
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">M(q)</span></code> is the model’s mass matrix, <code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias
+term containing Coriolis and gyroscopic effects and <code class="docutils literal"><span class="pre">tau_app</span></code>
+consists of a vector applied generalized forces. The last term is a
+summation over all bodies in the model where <code class="docutils literal"><span class="pre">Fapp_Bo_W</span></code> is an
+applied spatial force on body B at <code class="docutils literal"><span class="pre">Bo</span></code> which gets projected into
+the space of generalized forces with the geometric Jacobian
+<code class="docutils literal"><span class="pre">J_WB(q)</span></code> which maps generalized velocities into body B spatial
+velocity as <code class="docutils literal"><span class="pre">V_WB</span> <span class="pre">=</span> <span class="pre">J_WB(q)v</span></code>. This method does not compute explicit
+expressions for the mass matrix nor for the bias term, which would be
+of at least <code class="docutils literal"><span class="pre">O(n²)</span></code> complexity, but it implements an <code class="docutils literal"><span class="pre">O(n)</span></code>
+Newton-Euler recursive algorithm, where n is the number of bodies in
+the model. The explicit formation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> would
+require the calculation of <code class="docutils literal"><span class="pre">O(n²)</span></code> entries while explicitly forming
+the product <code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)</span> <span class="pre">*</span> <span class="pre">v</span></code> could require up to <code class="docutils literal"><span class="pre">O(n³)</span></code> operations
+(see [Featherstone 1987, §4]), depending on the implementation. The
+recursive Newton-Euler algorithm is the most efficient currently known
+general method for solving inverse dynamics [Featherstone 2008].</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">known_vdot</span></code>:</dt>
+<dd>A vector with the known generalized accelerations <code class="docutils literal"><span class="pre">vdot</span></code> for the
+full model. Use the provided Joint APIs in order to access entries
+into this array.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">external_forces</span></code>:</dt>
+<dd>A set of forces to be applied to the system either as body spatial
+forces <code class="docutils literal"><span class="pre">Fapp_Bo_W</span></code> or generalized forces <code class="docutils literal"><span class="pre">tau_app</span></code>, see
+MultibodyForces for details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the vector of generalized forces that would need to be applied to
+the mechanical system in order to achieve the desired acceleration
+given by <code class="docutils literal"><span class="pre">known_vdot</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -565,8 +648,8 @@ in another frame A, as a function of the generalized positions q of
 the model.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the MultibodyTree model. It
-stores the generalized positions q of the model.</dd>
+<dd>The context containing the state of the model. It stores the
+generalized positions q of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">frame_B</span></code>:</dt>
 <dd>The frame B in which the positions <code class="docutils literal"><span class="pre">p_BQi</span></code> of a set of points
 <code class="docutils literal"><span class="pre">Qi</span></code> are given.</dd>
@@ -600,7 +683,7 @@ in the number of columns.</p>
 multibody model for the configuration given by <code class="docutils literal"><span class="pre">context</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the MultibodyTree model.</dd>
+<dd>The context containing the state of the model.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -622,8 +705,8 @@ can be computed from the position <code class="docutils literal"><span class="pr
 expressed in frame B using the transformation <code class="docutils literal"><span class="pre">p_AQ</span> <span class="pre">=</span> <span class="pre">X_AB⋅p_BQ</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the MultibodyTree model. It
-stores the generalized positions q of the model.</dd>
+<dd>The context containing the state of the model. It stores the
+generalized positions q of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">frame_A</span></code>:</dt>
 <dd>The target frame A in the computed relative transform <code class="docutils literal"><span class="pre">X_AB</span></code>.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">frame_B</span></code>:</dt>
@@ -635,12 +718,40 @@ stores the generalized positions q of the model.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.CalcSpatialAccelerationsFromVdot">
+<code class="descname">CalcSpatialAccelerationsFromVdot</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], known_vdot: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.multibody_tree.math.SpatialAcceleration]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.CalcSpatialAccelerationsFromVdot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the state of this model in <code class="docutils literal"><span class="pre">context</span></code> and a known vector of
+generalized accelerations <code class="docutils literal"><span class="pre">known_vdot</span></code>, this method computes the
+spatial acceleration <code class="docutils literal"><span class="pre">A_WB</span></code> for each body as measured and expressed
+in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of this model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">known_vdot</span></code>:</dt>
+<dd>A vector with the generalized accelerations for the full model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">A_WB_array</span></code>:</dt>
+<dd>A pointer to a valid, non nullptr, vector of spatial accelerations
+containing the spatial acceleration <code class="docutils literal"><span class="pre">A_WB</span></code> for each body. It
+must be of size equal to the number of bodies in the model. On
+output, entries will be ordered by BodyIndex.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if A_WB_array is not of size <code class="docutils literal"><span class="pre">num_bodies()</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.EvalBodyPoseInWorld">
 <code class="descname">EvalBodyPoseInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.multibody_tree.Body</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Isometry3<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.EvalBodyPoseInWorld" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a body B in the world frame W.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context storing the state of the MultibodyTree model.</dd>
+<dd>The context storing the state of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">body_B</span></code>:</dt>
 <dd>The body B for which the pose is requested.</dd>
 <dt>Returns <code class="docutils literal"><span class="pre">X_WB</span></code>:</dt>
@@ -667,7 +778,7 @@ stores the generalized positions q of the model.</dd>
 W.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context storing the state of the MultibodyTree model.</dd>
+<dd>The context storing the state of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">body_B</span></code>:</dt>
 <dd>The body B for which the spatial velocity is requested.</dd>
 </dl>
@@ -1174,9 +1285,9 @@ associated with <code class="docutils literal"><span class="pre">model_instance<
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetPositionsFromArray">
 <code class="descname">GetPositionsFromArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex, q: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetPositionsFromArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a vector of generalized positions for <code class="docutils literal"><span class="pre">model_instance</span></code> from
-a vector <code class="docutils literal"><span class="pre">q_array</span></code> of generalized positions for the entire
-MultibodyTree model. This method throws an exception if <code class="docutils literal"><span class="pre">q</span></code> is not
-of size MultibodyTree::num_positions().</p>
+a vector <code class="docutils literal"><span class="pre">q_array</span></code> of generalized positions for the entire model
+model. This method throws an exception if <code class="docutils literal"><span class="pre">q</span></code> is not of size
+MultibodyPlant::num_positions().</p>
 </dd></dl>
 
 <dl class="method">
@@ -1253,9 +1364,9 @@ given model instance.</p>
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetVelocitiesFromArray">
 <code class="descname">GetVelocitiesFromArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex, q: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetVelocitiesFromArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a vector of generalized positions for <code class="docutils literal"><span class="pre">model_instance</span></code> from
-a vector <code class="docutils literal"><span class="pre">q_array</span></code> of generalized positions for the entire
-MultibodyTree model. This method throws an exception if <code class="docutils literal"><span class="pre">q</span></code> is not
-of size MultibodyTree::num_positions().</p>
+a vector <code class="docutils literal"><span class="pre">q_array</span></code> of generalized positions for the entire model
+model. This method throws an exception if <code class="docutils literal"><span class="pre">q</span></code> is not of size
+MultibodyPlant::num_positions().</p>
 </dd></dl>
 
 <dl class="method">
@@ -1378,7 +1489,7 @@ Using the configuration <code class="docutils literal"><span class="pre">q</span
 method calculates <code class="docutils literal"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">N⁺(q)⋅q̇</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the MultibodyTree model.</dd>
+<dd>The context containing the state of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">qdot</span></code>:</dt>
 <dd>A vector containing the time derivatives of the generalized
 positions. This method aborts if <code class="docutils literal"><span class="pre">qdot</span></code> is not of size
@@ -1408,15 +1519,15 @@ configuration <code class="docutils literal"><span class="pre">q</span></code> s
 calculates <code class="docutils literal"><span class="pre">q̇</span> <span class="pre">=</span> <span class="pre">N(q)⋅v</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context containing the state of the MultibodyTree model.</dd>
+<dd>The context containing the state of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">v</span></code>:</dt>
-<dd>A vector of of generalized velocities for <code class="docutils literal"><span class="pre">this</span></code> MultibodyTree
-model. This method aborts if v is not of size num_velocities().</dd>
+<dd>A vector of of generalized velocities for this model. This method
+aborts if v is not of size num_velocities().</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">qdot</span></code>:</dt>
 <dd>A valid (non-null) pointer to a vector in <code class="docutils literal"><span class="pre">ℝⁿ</span></code> with n being the
-number of generalized positions in <code class="docutils literal"><span class="pre">this</span></code> MultibodyTree model,
-given by <code class="docutils literal"><span class="pre">num_positions()</span></code>. This method aborts if <code class="docutils literal"><span class="pre">qdot</span></code> is
-nullptr or if it is not of size num_positions().</dd>
+number of generalized positions in this model, given by
+<code class="docutils literal"><span class="pre">num_positions()</span></code>. This method aborts if <code class="docutils literal"><span class="pre">qdot</span></code> is nullptr or
+if it is not of size num_positions().</dd>
 </dl>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -1466,9 +1577,9 @@ later on be retrieved with get_source_id().</td>
 <code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex, u_instance: numpy.ndarray[float64[m, 1]], u: numpy.ndarray[float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.SetActuationInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given the actuation values <code class="docutils literal"><span class="pre">u_instance</span></code> for all actuators in
 <code class="docutils literal"><span class="pre">model_instance</span></code>, this method sets the actuation vector u for the
-entire MultibodyTree model to which this actuator belongs to. This
-method throws an exception if the size of <code class="docutils literal"><span class="pre">u_instance</span></code> is not equal
-to the number of degrees of freedom of all of the actuated joints in
+entire model to which this actuator belongs to. This method throws an
+exception if the size of <code class="docutils literal"><span class="pre">u_instance</span></code> is not equal to the number of
+degrees of freedom of all of the actuated joints in
 <code class="docutils literal"><span class="pre">model_instance</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">u_instance</span></code>:</dt>
@@ -1476,8 +1587,7 @@ to the number of degrees of freedom of all of the actuated joints in
 the number of degrees of freedom of all of the actuated joints in
 <code class="docutils literal"><span class="pre">model_instance</span></code>.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">u</span></code>:</dt>
-<dd>The vector containing the actuation values for the entire
-MultibodyTree.</dd>
+<dd>The vector containing the actuation values for the entire model.</dd>
 </dl>
 </dd></dl>
 
@@ -1643,8 +1753,8 @@ for the specified model instance.</p>
 <dd><p>Sets the vector of generalized positions for <code class="docutils literal"><span class="pre">model_instance</span></code> in
 <code class="docutils literal"><span class="pre">q</span></code> using <code class="docutils literal"><span class="pre">q_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal"><span class="pre">q</span></code> is not of size
-MultibodyTree::num_positions() or <code class="docutils literal"><span class="pre">q_instance</span></code> is not of size
-<code class="docutils literal"><span class="pre">MultibodyTree::num_positions(model_instance)</span></code>.</p>
+MultibodyPlant::num_positions() or <code class="docutils literal"><span class="pre">q_instance</span></code> is not of size
+<code class="docutils literal"><span class="pre">MultibodyPlant::num_positions(model_instance)</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1695,13 +1805,13 @@ the given vector.</p>
 <dd><p>Sets the vector of generalized velocities for <code class="docutils literal"><span class="pre">model_instance</span></code> in
 <code class="docutils literal"><span class="pre">v</span></code> using <code class="docutils literal"><span class="pre">v_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal"><span class="pre">v</span></code> is not of size
-MultibodyTree::num_velocities() or <code class="docutils literal"><span class="pre">v_instance</span></code> is not of size
-<code class="docutils literal"><span class="pre">MultibodyTree::num_positions(model_instance)</span></code>.</p>
+MultibodyPlant::num_velocities() or <code class="docutils literal"><span class="pre">v_instance</span></code> is not of size
+<code class="docutils literal"><span class="pre">MultibodyPlant::num_positions(model_instance)</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7fdf82fbdab0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7f7e2097eb30&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Welds frames A and B with relative pose <code class="docutils literal"><span class="pre">X_AB</span></code>. That is, the pose of
 frame B in frame A is fixed, with value <code class="docutils literal"><span class="pre">X_AB</span></code>. The call to this
 method creates and adds a new WeldJoint to the model. The new
@@ -1732,8 +1842,12 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_actuation_input_port">
-<code class="descname">get_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_actuation_input_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a constant reference to the input port for external actuation
+<code class="descname">get_actuation_input_port</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_actuation_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_actuation_input_port(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant) -&gt; pydrake.systems.framework.InputPort_[float]</li>
+</ol>
+<p>Returns a constant reference to the input port for external actuation
 for the case where only one model instance has actuated dofs. This
 input port is a vector valued port, which can be set with
 JointActuator::set_actuation_vector().</p>
@@ -1750,6 +1864,31 @@ JointActuator::set_actuation_vector().</p>
 <li>contain any actuators, or if multiple model instances have</li>
 <li>actuated dofs.</li>
 </ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>get_actuation_input_port(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, arg0: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.InputPort_[float]</li>
+</ol>
+<p>Returns a constant reference to the input port for external actuation
+for a specific model instance. This input port is a vector valued
+port, which can be set with JointActuator::set_actuation_vector().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Finalize() was already called on <code class="docutils literal"><span class="pre">this</span></code> plant.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if called before Finalize() or if the model instance</li>
+<li>does not contain any actuators.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the model instance does not exist.</p>
 </td>
 </tr>
 </tbody>
@@ -1798,13 +1937,41 @@ JointActuator::set_actuation_vector().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_continuous_state_output_port">
-<code class="descname">get_continuous_state_output_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_continuous_state_output_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a constant reference to the output port for the full
+<code class="descname">get_continuous_state_output_port</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.get_continuous_state_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_continuous_state_output_port(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
+</ol>
+<p>Returns a constant reference to the output port for the full
 continuous state of the model.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>Finalize() was already called on <code class="docutils literal"><span class="pre">this</span></code> plant.</dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li>get_continuous_state_output_port(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, arg0: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
+</ol>
+<p>Returns a constant reference to the output port for the continuous
+state of a specific model instance.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Finalize() was already called on <code class="docutils literal"><span class="pre">this</span></code> plant.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if called before Finalize() or if the model instance</li>
+<li>does not have any state.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the model instance does not exist.</p>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

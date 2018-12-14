@@ -21,6 +21,7 @@ var searchData=
   ['geometryproperties',['GeometryProperties',['../classdrake_1_1geometry_1_1_geometry_properties.html',1,'drake::geometry']]],
   ['geometryset',['GeometrySet',['../classdrake_1_1geometry_1_1_geometry_set.html',1,'drake::geometry']]],
   ['geometrystate',['GeometryState',['../classdrake_1_1geometry_1_1_geometry_state.html',1,'drake::geometry']]],
+  ['geometrystate_3c_20autodiffxd_20_3e',['GeometryState&lt; AutoDiffXd &gt;',['../classdrake_1_1geometry_1_1_geometry_state.html',1,'drake::geometry']]],
   ['geometrystate_3c_20double_20_3e',['GeometryState&lt; double &gt;',['../classdrake_1_1geometry_1_1_geometry_state.html',1,'drake::geometry']]],
   ['geonormal',['GeoNormal',['../classdrake_1_1maliput_1_1utility_1_1mesh_1_1_geo_normal.html',1,'drake::maliput::utility::mesh']]],
   ['geopositiont',['GeoPositionT',['../classdrake_1_1maliput_1_1api_1_1_geo_position_t.html',1,'drake::maliput::api']]],

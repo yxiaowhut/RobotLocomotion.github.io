@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_multibody_
 </div><!--header-->
 <div class="contents">
 
-<p>MultibodyTreeContext is an object that contains all the information needed to uniquely determine the state of a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>.  
+<p>MultibodyTreeContext is an object that contains all the information needed to uniquely determine the state of a MultibodyTree.  
  <a href="classdrake_1_1multibody_1_1_multibody_tree_context.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/multibody/tree/multibody_tree_context.h&gt;</code></p>
@@ -101,10 +101,10 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_multibody_
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa39d510a4feddd70a57918c03fd0b827"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_context.html#aa39d510a4feddd70a57918c03fd0b827">MultibodyTreeContext</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;topology)</td></tr>
-<tr class="memdesc:aa39d510a4feddd70a57918c03fd0b827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a MultibodyTreeContext for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> with a given <code>topology</code>.  <a href="#aa39d510a4feddd70a57918c03fd0b827">More...</a><br /></td></tr>
+<tr class="memdesc:aa39d510a4feddd70a57918c03fd0b827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a MultibodyTreeContext for a MultibodyTree with a given <code>topology</code>.  <a href="#aa39d510a4feddd70a57918c03fd0b827">More...</a><br /></td></tr>
 <tr class="separator:aa39d510a4feddd70a57918c03fd0b827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d8a68a38e4b329c3bd36db4c87f0efe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_context.html#a7d8a68a38e4b329c3bd36db4c87f0efe">MultibodyTreeContext</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;topology, <a class="el" href="classbool.html">bool</a> discrete_state)</td></tr>
-<tr class="memdesc:a7d8a68a38e4b329c3bd36db4c87f0efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a MultibodyTreeContext for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> with a given <code>topology</code>.  <a href="#a7d8a68a38e4b329c3bd36db4c87f0efe">More...</a><br /></td></tr>
+<tr class="memdesc:a7d8a68a38e4b329c3bd36db4c87f0efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a MultibodyTreeContext for a MultibodyTree with a given <code>topology</code>.  <a href="#a7d8a68a38e4b329c3bd36db4c87f0efe">More...</a><br /></td></tr>
 <tr class="separator:a7d8a68a38e4b329c3bd36db4c87f0efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_context.html#aba2887f0ca1fbbdfb49cf6b0ee21e553">num_positions</a> () const</td></tr>
 <tr class="memdesc:aba2887f0ca1fbbdfb49cf6b0ee21e553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the generalized positions vector.  <a href="#aba2887f0ca1fbbdfb49cf6b0ee21e553">More...</a><br /></td></tr>
@@ -541,8 +541,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::multibody::MultibodyTreeContext&lt; T &gt;</h3>
 
-<p>MultibodyTreeContext is an object that contains all the information needed to uniquely determine the state of a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>. </p>
-<p>MultibodyTreeContext provides a collection of convenient access methods to retrieve generalized positions and velocities. Users should not need to make calls to these methods directly but rather access portions of a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> state through the API provided by the different <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> elements such as <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a>, <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame), meaning that it is associated with a material point of a Body. ">Frame</a>, etc.</p>
+<p>MultibodyTreeContext is an object that contains all the information needed to uniquely determine the state of a MultibodyTree. </p>
+<p>MultibodyTreeContext provides a collection of convenient access methods to retrieve generalized positions and velocities. Users should not need to make calls to these methods directly but rather access portions of a MultibodyTree state through the API provided by the different MultibodyTree elements such as <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a>, <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame), meaning that it is associated with a material point of a Body. ">Frame</a>, etc.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The mathematical type of the context, which must be a valid <a class="el" href="namespace_eigen.html">Eigen</a> scalar.</td></tr>
@@ -632,7 +632,7 @@ class drake::multibody::MultibodyTreeContext&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Instantiates a MultibodyTreeContext for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> with a given <code>topology</code>. </p>
+<p>Instantiates a MultibodyTreeContext for a MultibodyTree with a given <code>topology</code>. </p>
 <p>The stored state is continuous. </p>
 
 </div>
@@ -671,7 +671,7 @@ class drake::multibody::MultibodyTreeContext&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Instantiates a MultibodyTreeContext for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> with a given <code>topology</code>. </p>
+<p>Instantiates a MultibodyTreeContext for a MultibodyTree with a given <code>topology</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">discrete_state</td><td><code>true</code> if the state is to be stored as discrete state. Otherwise the state is stored as continuous state. <code>false</code> if the state is to be stored as continuous state. </td></tr>

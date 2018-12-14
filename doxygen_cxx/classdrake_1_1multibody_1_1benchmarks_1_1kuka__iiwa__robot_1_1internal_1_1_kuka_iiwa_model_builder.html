@@ -98,9 +98,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1benchmarks_
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaeac807e9f5453f635529025ae0dcde2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1internal_1_1_kuka_iiwa_model_builder.html#aaeac807e9f5453f635529025ae0dcde2">KukaIiwaModelBuilder</a> (<a class="el" href="classbool.html">bool</a> finalize_model, <a class="el" href="classdouble.html">double</a> gravity)</td></tr>
-<tr class="memdesc:aaeac807e9f5453f635529025ae0dcde2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a builder to make a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model of the KUKA iiwa arm as specified in this class' documentation.  <a href="#aaeac807e9f5453f635529025ae0dcde2">More...</a><br /></td></tr>
+<tr class="memdesc:aaeac807e9f5453f635529025ae0dcde2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a builder to make a MultibodyTree model of the KUKA iiwa arm as specified in this class' documentation.  <a href="#aaeac807e9f5453f635529025ae0dcde2">More...</a><br /></td></tr>
 <tr class="separator:aaeac807e9f5453f635529025ae0dcde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2640af294288ea762a969ab85564afdd"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1internal_1_1_kuka_iiwa_model_builder.html#a2640af294288ea762a969ab85564afdd">Build</a> () const</td></tr>
+<tr class="memitem:a2640af294288ea762a969ab85564afdd"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1internal_1_1_kuka_iiwa_model_builder.html#a2640af294288ea762a969ab85564afdd">Build</a> () const</td></tr>
 <tr class="memdesc:a2640af294288ea762a969ab85564afdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a 7-DOF Kuka iiwa robot arm (from file kuka_iiwa_robot.urdf).  <a href="#a2640af294288ea762a969ab85564afdd">More...</a><br /></td></tr>
 <tr class="separator:a2640af294288ea762a969ab85564afdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
@@ -200,10 +200,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Instantiate a builder to make a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model of the KUKA iiwa arm as specified in this class' documentation. </p>
+<p>Instantiate a builder to make a MultibodyTree model of the KUKA iiwa arm as specified in this class' documentation. </p>
 <p>The world z-unit vector is vertically upward. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">finalize_model</td><td>If <code>true</code>, the model is finalized with <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a>. A non-finalized model can be requested if adding more multibody elements is desired. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">finalize_model</td><td>If <code>true</code>, the model is finalized with <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a>. A non-finalized model can be requested if adding more multibody elements is desired. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">gravity</td><td>The model's acceleration of gravity. <code>gravity &gt; 0</code> means the gravity field is directed opposite the world upward z-unit vector (i.e. downwards). </td></tr>
   </table>
   </dd>
@@ -219,7 +219,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &gt; Build </td>
+          <td class="memname">unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &gt; Build </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>

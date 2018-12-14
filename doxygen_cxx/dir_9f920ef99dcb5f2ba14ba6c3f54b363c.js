@@ -59,7 +59,9 @@ var dir_9f920ef99dcb5f2ba14ba6c3f54b363c =
       [ "SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator" ]
     ] ],
     [ "simulator.cc", "simulator_8cc.html", null ],
-    [ "simulator.h", "simulator_8h.html", null ],
+    [ "simulator.h", "simulator_8h.html", [
+      [ "Simulator", "classdrake_1_1systems_1_1_simulator.html", "classdrake_1_1systems_1_1_simulator" ]
+    ] ],
     [ "stepwise_dense_output.h", "stepwise__dense__output_8h.html", [
       [ "StepwiseDenseOutput", "classdrake_1_1systems_1_1_stepwise_dense_output.html", "classdrake_1_1systems_1_1_stepwise_dense_output" ]
     ] ]

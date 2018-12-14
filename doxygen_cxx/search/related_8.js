@@ -47,5 +47,6 @@ var searchData=
   ['is_5ftrue',['is_true',['../classdrake_1_1symbolic_1_1_formula.html#ac015488f4fe334717bbe5a47e1f1da87',1,'drake::symbolic::Formula']]],
   ['is_5funinterpreted_5ffunction',['is_uninterpreted_function',['../classdrake_1_1symbolic_1_1_expression.html#aa19665aa37ff4c0aff7aa1ca142eff46',1,'drake::symbolic::Expression']]],
   ['is_5fvariable',['is_variable',['../classdrake_1_1symbolic_1_1_expression.html#a3313ad6342effa904bba98f1ef811902',1,'drake::symbolic::Expression::is_variable()'],['../classdrake_1_1symbolic_1_1_formula.html#aebdc9659eb8cc2eb735925fc4f2828ac',1,'drake::symbolic::Formula::is_variable()']]],
-  ['jointimplementationbuilder_3c_20t_20_3e',['JointImplementationBuilder&lt; T &gt;',['../classdrake_1_1multibody_1_1_joint.html#a808e912cd9bc754f25ddbb84feb3f150',1,'drake::multibody::Joint']]]
+  ['jointimplementationbuilder_3c_20t_20_3e',['JointImplementationBuilder&lt; T &gt;',['../classdrake_1_1multibody_1_1_joint.html#a808e912cd9bc754f25ddbb84feb3f150',1,'drake::multibody::Joint']]],
+  ['multibodytree_3c_20t_20_3e',['MultibodyTree&lt; T &gt;',['../classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#a49109966f9505633199c07ad06b0632d',1,'drake::multibody::MultibodyTreeElement&lt; ElementType&lt; T &gt;, ElementIndexType &gt;']]]
 ];

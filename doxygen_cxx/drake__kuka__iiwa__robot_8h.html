@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('drake__kuka__iiwa__robot_8h.html','');
 <code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rigid__transform_8h.html">drake/math/rigid_transform.h</a>&quot;</code><br />
@@ -105,8 +106,9 @@ $(document).ready(function(){initNavTree('drake__kuka__iiwa__robot_8h.html','');
 <code>#include &quot;drake/multibody/multibody_tree/multibody_forces.h&quot;</code><br />
 <code>#include &quot;drake/multibody/multibody_tree/multibody_tree.h&quot;</code><br />
 <code>#include &quot;drake/multibody/multibody_tree/rigid_body.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="spatial__kinematics_8h.html">drake/multibody/multibody_tree/test_utilities/spatial_kinematics.h</a>&quot;</code><br />
 <code>#include &quot;drake/multibody/multibody_tree/uniform_gravity_field_element.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="spatial__kinematics_8h.html">drake/multibody/test_utilities/spatial_kinematics.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="context_8h.html">drake/systems/framework/context.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for drake_kuka_iiwa_robot.h:</div>
@@ -123,11 +125,13 @@ This graph shows which files directly or indirectly include this file:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant_tester.html">MultibodyPlantTester</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html">KukaRobotJointReactionForces&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility struct to assist with returning joint torques/forces.  <a href="structdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_kuka_robot_joint_reaction_forces.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html">DrakeKukaIIwaRobot&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model for a 7-DOF Kuka iiwa robot arm.  <a href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a MultibodyTree model for a 7-DOF Kuka iiwa robot arm.  <a href="classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>

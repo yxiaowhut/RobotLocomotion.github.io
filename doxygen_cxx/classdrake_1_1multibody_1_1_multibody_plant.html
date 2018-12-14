@@ -223,8 +223,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab99be499eb59f00037b05ec60b51e177"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab99be499eb59f00037b05ec60b51e177">GetModelInstanceName</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:ab99be499eb59f00037b05ec60b51e177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of a <code>model_instance</code>.  <a href="#ab99be499eb59f00037b05ec60b51e177">More...</a><br /></td></tr>
 <tr class="separator:ab99be499eb59f00037b05ec60b51e177"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c1029d223ec3d0db0dc14d643fa7c88"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1c1029d223ec3d0db0dc14d643fa7c88">model</a> () const</td></tr>
-<tr class="memdesc:a1c1029d223ec3d0db0dc14d643fa7c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the underlying <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model for <code>this</code> plant.  <a href="#a1c1029d223ec3d0db0dc14d643fa7c88">More...</a><br /></td></tr>
+<tr class="memitem:a1c1029d223ec3d0db0dc14d643fa7c88"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1c1029d223ec3d0db0dc14d643fa7c88">model</a> () const</td></tr>
+<tr class="memdesc:a1c1029d223ec3d0db0dc14d643fa7c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the underlying MultibodyTree model for <code>this</code> plant.  <a href="#a1c1029d223ec3d0db0dc14d643fa7c88">More...</a><br /></td></tr>
 <tr class="separator:a1c1029d223ec3d0db0dc14d643fa7c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf7bb2a3531c09a97fb3623ac582d840"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acf7bb2a3531c09a97fb3623ac582d840">is_finalized</a> () const</td></tr>
 <tr class="memdesc:acf7bb2a3531c09a97fb3623ac582d840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if this MultibodyPlant was finalized with a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">Finalize()</a>.  <a href="#acf7bb2a3531c09a97fb3623ac582d840">More...</a><br /></td></tr>
@@ -416,20 +416,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2a177e855cc5efe12d15adc4c697930f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index to the model instance that is uniquely identified by the string <code>name</code> in <code>this</code> MultibodyPlant.  <a href="#a2a177e855cc5efe12d15adc4c697930f">More...</a><br /></td></tr>
 <tr class="separator:a2a177e855cc5efe12d15adc4c697930f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Model instance accessors</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>Many functions on MultibodyTree expect vectors of tree state or joint actuator inputs which encompass the entire tree.</p>
+<tr><td colspan="2"><div class="groupText"><p>Many of this class's methods expect vectors of tree state or joint actuator inputs which encompass the entire tree.</p>
 <p>Methods in this section are convenience accessors for the portion of those vectors which apply to a single model instance only. </p>
 </div></td></tr>
 <tr class="memitem:aec851e17ae2c34da1b87a03ce85f460a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aec851e17ae2c34da1b87a03ce85f460a">SetActuationInArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; u) const</td></tr>
-<tr class="memdesc:aec851e17ae2c34da1b87a03ce85f460a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the actuation values <code>u_instance</code> for all actuators in <code>model_instance</code>, this method sets the actuation vector u for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model to which this actuator belongs to.  <a href="#aec851e17ae2c34da1b87a03ce85f460a">More...</a><br /></td></tr>
+<tr class="memdesc:aec851e17ae2c34da1b87a03ce85f460a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the actuation values <code>u_instance</code> for all actuators in <code>model_instance</code>, this method sets the actuation vector u for the entire model to which this actuator belongs to.  <a href="#aec851e17ae2c34da1b87a03ce85f460a">More...</a><br /></td></tr>
 <tr class="separator:aec851e17ae2c34da1b87a03ce85f460a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b8a17ef762452f820bdd351f8bb41b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9b8a17ef762452f820bdd351f8bb41b4">GetPositionsFromArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q) const</td></tr>
-<tr class="memdesc:a9b8a17ef762452f820bdd351f8bb41b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of generalized positions for <code>model_instance</code> from a vector <code>q_array</code> of generalized positions for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model.  <a href="#a9b8a17ef762452f820bdd351f8bb41b4">More...</a><br /></td></tr>
+<tr class="memdesc:a9b8a17ef762452f820bdd351f8bb41b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of generalized positions for <code>model_instance</code> from a vector <code>q_array</code> of generalized positions for the entire model model.  <a href="#a9b8a17ef762452f820bdd351f8bb41b4">More...</a><br /></td></tr>
 <tr class="separator:a9b8a17ef762452f820bdd351f8bb41b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3de72c319632f5a263fe6c9e96c70614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3de72c319632f5a263fe6c9e96c70614">SetPositionsInArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; q) const</td></tr>
 <tr class="memdesc:a3de72c319632f5a263fe6c9e96c70614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector of generalized positions for <code>model_instance</code> in <code>q</code> using <code>q_instance</code>, leaving all other elements in the array untouched.  <a href="#a3de72c319632f5a263fe6c9e96c70614">More...</a><br /></td></tr>
 <tr class="separator:a3de72c319632f5a263fe6c9e96c70614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab7edf9b06b97e2f1b7045cc1d9f56f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aab7edf9b06b97e2f1b7045cc1d9f56f9">GetVelocitiesFromArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v_array) const</td></tr>
-<tr class="memdesc:aab7edf9b06b97e2f1b7045cc1d9f56f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of generalized velocities for <code>model_instance</code> from a vector <code>v</code> of generalized velocities for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model.  <a href="#aab7edf9b06b97e2f1b7045cc1d9f56f9">More...</a><br /></td></tr>
+<tr class="memdesc:aab7edf9b06b97e2f1b7045cc1d9f56f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of generalized velocities for <code>model_instance</code> from a vector <code>v</code> of generalized velocities for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#aab7edf9b06b97e2f1b7045cc1d9f56f9">More...</a><br /></td></tr>
 <tr class="separator:aab7edf9b06b97e2f1b7045cc1d9f56f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3e24d7263c7886bdf1adab111e34f33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa3e24d7263c7886bdf1adab111e34f33">SetVelocitiesInArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;model_v, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; v_array) const</td></tr>
 <tr class="memdesc:aa3e24d7263c7886bdf1adab111e34f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector of generalized velocities for <code>model_instance</code> in <code>v</code> using <code>v_instance</code>, leaving all other elements in the array untouched.  <a href="#aa3e24d7263c7886bdf1adab111e34f33">More...</a><br /></td></tr>
@@ -477,6 +477,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a78c0dbd7529fadcbf1fd550a9fd2e80b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a78c0dbd7529fadcbf1fd550a9fd2e80b">CalcJacobianSpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_B, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;p_BP, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Jw_ABp_E) const</td></tr>
 <tr class="memdesc:a78c0dbd7529fadcbf1fd550a9fd2e80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the Jacobian of spatial velocity for a frame instantaneously moving with a specified frame in the model.  <a href="#a78c0dbd7529fadcbf1fd550a9fd2e80b">More...</a><br /></td></tr>
 <tr class="separator:a78c0dbd7529fadcbf1fd550a9fd2e80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa1c5393d7cab419a944009cc93aa6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aefa1c5393d7cab419a944009cc93aa6c">CalcSpatialAccelerationsFromVdot</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;known_vdot, <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&gt; *A_WB_array) const</td></tr>
+<tr class="memdesc:aefa1c5393d7cab419a944009cc93aa6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the state of this model in <code>context</code> and a known vector of generalized accelerations <code>known_vdot</code>, this method computes the spatial acceleration <code>A_WB</code> for each body as measured and expressed in the world frame W.  <a href="#aefa1c5393d7cab419a944009cc93aa6c">More...</a><br /></td></tr>
+<tr class="separator:aefa1c5393d7cab419a944009cc93aa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb4de9b58cb375d056da7e8ec30937a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afcb4de9b58cb375d056da7e8ec30937a">CalcInverseDynamics</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;known_vdot, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; &amp;external_forces) const</td></tr>
+<tr class="memdesc:afcb4de9b58cb375d056da7e8ec30937a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the state of this model in <code>context</code> and a known vector of generalized accelerations <code>vdot</code>, this method computes the set of generalized forces <code>tau</code> that would need to be applied in order to attain the specified generalized accelerations.  <a href="#afcb4de9b58cb375d056da7e8ec30937a">More...</a><br /></td></tr>
+<tr class="separator:afcb4de9b58cb375d056da7e8ec30937a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b54c8562f107e4d6e11b4b0f8d53c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae1b54c8562f107e4d6e11b4b0f8d53c5">CalcForceElementsContribution</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const</td></tr>
+<tr class="memdesc:ae1b54c8562f107e4d6e11b4b0f8d53c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the combined force contribution of <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model...">ForceElement</a> objects in the model.  <a href="#ae1b54c8562f107e4d6e11b4b0f8d53c5">More...</a><br /></td></tr>
+<tr class="separator:ae1b54c8562f107e4d6e11b4b0f8d53c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35681a2d7d9d4026b6bc61f08da861f8"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a35681a2d7d9d4026b6bc61f08da861f8">CalcPotentialEnergy</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a35681a2d7d9d4026b6bc61f08da861f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and returns the total potential energy stored in <code>this</code> multibody model for the configuration given by <code>context</code>.  <a href="#a35681a2d7d9d4026b6bc61f08da861f8">More...</a><br /></td></tr>
 <tr class="separator:a35681a2d7d9d4026b6bc61f08da861f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -495,6 +504,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab128a8bba10523922358bc35df103753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab128a8bba10523922358bc35df103753">MapQDotToVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;qdot, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; v) const</td></tr>
 <tr class="memdesc:ab128a8bba10523922358bc35df103753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the time derivative <code>qdot</code> of the generalized positions vector <code>q</code> (stored in <code>context</code>) to generalized velocities <code>v</code>.  <a href="#ab128a8bba10523922358bc35df103753">More...</a><br /></td></tr>
 <tr class="separator:ab128a8bba10523922358bc35df103753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a5c7b2e7b0c09b6479d25250405ffd0c4">MakeStateSelectorMatrix</a> (const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
+<tr class="memdesc:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows users to map the state of <code>this</code> model, x, into a vector of selected state xₛ with a given preferred ordering.  <a href="#a5c7b2e7b0c09b6479d25250405ffd0c4">More...</a><br /></td></tr>
+<tr class="separator:a5c7b2e7b0c09b6479d25250405ffd0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7f5496735d233ea0b984c5a290671f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a0d7f5496735d233ea0b984c5a290671f">MakeActuatorSelectorMatrix</a> (const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a> &gt; &amp;user_to_actuator_index_map) const</td></tr>
+<tr class="memdesc:a0d7f5496735d233ea0b984c5a290671f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows user to map a vector <code>uₛ</code> containing the actuation for a set of selected actuators into the vector u containing the actuation values for <code>this</code> full model.  <a href="#a0d7f5496735d233ea0b984c5a290671f">More...</a><br /></td></tr>
+<tr class="separator:a0d7f5496735d233ea0b984c5a290671f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a029244fdbe2f10a7bfaf5c21175d834c">MakeActuatorSelectorMatrix</a> (const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;user_to_joint_index_map) const</td></tr>
+<tr class="memdesc:a029244fdbe2f10a7bfaf5c21175d834c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative signature to build an actuation selector matrix <code>Su</code> such that <code>u = Su⋅uₛ</code>, where u is the vector of actuation values for the full model (ordered by JointActuatorIndex) and uₛ is a vector of actuation values for the actuators acting on the joints listed by <code>user_to_joint_index_map</code>.  <a href="#a029244fdbe2f10a7bfaf5c21175d834c">More...</a><br /></td></tr>
+<tr class="separator:a029244fdbe2f10a7bfaf5c21175d834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3238273c2c927101e4515147bed17f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac3238273c2c927101e4515147bed17f6">CalcMassMatrixViaInverseDynamics</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; H) const</td></tr>
 <tr class="memdesc:ac3238273c2c927101e4515147bed17f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the computation of the mass matrix <code>M(q)</code> of the model using inverse dynamics, where the generalized positions q are stored in <code>context</code>.  <a href="#ac3238273c2c927101e4515147bed17f6">More...</a><br /></td></tr>
 <tr class="separator:ac3238273c2c927101e4515147bed17f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -554,7 +572,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3ce165180ba1d40e2a120eea631e4cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stiction tolerance <code>v_stiction</code> for the Stribeck model, where <code>v_stiction</code> must be specified in m/s (meters per second.) <code>v_stiction</code> defaults to a value of 1 millimeter per second.  <a href="#a3ce165180ba1d40e2a120eea631e4cb1">More...</a><br /></td></tr>
 <tr class="separator:a3ce165180ba1d40e2a120eea631e4cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html">MultibodyTreeSystem&lt; T &gt;</a></td></tr>
-<tr class="memitem:a29ac82c4ca3b12b3935919a40fcdfc87 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a29ac82c4ca3b12b3935919a40fcdfc87">MultibodyTreeSystem</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a>, <a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
+<tr class="memitem:a29ac82c4ca3b12b3935919a40fcdfc87 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a29ac82c4ca3b12b3935919a40fcdfc87">MultibodyTreeSystem</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a>, <a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
 <tr class="memdesc:a29ac82c4ca3b12b3935919a40fcdfc87 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ownership of the given <code>tree</code>, finalizes it if it hasn't already been finalized, and then allocates the resources it needs.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a29ac82c4ca3b12b3935919a40fcdfc87">More...</a><br /></td></tr>
 <tr class="separator:a29ac82c4ca3b12b3935919a40fcdfc87 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af312ef47f7435c49a29dbf2e2224836b inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
@@ -565,8 +583,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac880a9afb311815456efc733e8840d18 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac87e33717da832d66c6587cac66f56a9 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a> () const</td></tr>
 <tr class="separator:ac87e33717da832d66c6587cac66f56a9 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a875f49ab037712aeeeddd091161bee45 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a> () const</td></tr>
-<tr class="memdesc:a875f49ab037712aeeeddd091161bee45 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> owned by this class.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">More...</a><br /></td></tr>
+<tr class="memitem:a875f49ab037712aeeeddd091161bee45 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a> () const</td></tr>
+<tr class="memdesc:a875f49ab037712aeeeddd091161bee45 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the MultibodyTree owned by this class.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">More...</a><br /></td></tr>
 <tr class="separator:a875f49ab037712aeeeddd091161bee45 inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed59e6f62bfe30a418ba8d8c611580af inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_position_kinematics_cache.html">PositionKinematicsCache</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#aed59e6f62bfe30a418ba8d8c611580af">EvalPositionKinematics</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:aed59e6f62bfe30a418ba8d8c611580af inherit pub_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the up to date <a class="el" href="classdrake_1_1multibody_1_1_position_kinematics_cache.html" title="This class is one of the cache entries in MultibodyTreeContext. ">PositionKinematicsCache</a> in the given Context, recalculating it first if necessary.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#aed59e6f62bfe30a418ba8d8c611580af">More...</a><br /></td></tr>
@@ -1050,13 +1068,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ae73edc00d493b3f15ba7679cc14830a0 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ae73edc00d493b3f15ba7679cc14830a0">SetDefaultState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const override</td></tr>
 <tr class="separator:ae73edc00d493b3f15ba7679cc14830a0 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30385052678018b5c05a87203b54c4c2 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a30385052678018b5c05a87203b54c4c2">MultibodyTreeSystem</a> (<a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
-<tr class="memdesc:a30385052678018b5c05a87203b54c4c2 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor allocates a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>, with the intent that it will be filled in later, using <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86" title="Returns a mutable reference to the MultibodyTree owned by this class. ">mutable_tree()</a> for access.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a30385052678018b5c05a87203b54c4c2">More...</a><br /></td></tr>
+<tr class="memdesc:a30385052678018b5c05a87203b54c4c2 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor allocates a MultibodyTree, with the intent that it will be filled in later, using <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86" title="Returns a mutable reference to the MultibodyTree owned by this class. ">mutable_tree()</a> for access.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a30385052678018b5c05a87203b54c4c2">More...</a><br /></td></tr>
 <tr class="separator:a30385052678018b5c05a87203b54c4c2 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39d5d85eecca0289abecd6069a32e58e inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a39d5d85eecca0289abecd6069a32e58e">MultibodyTreeSystem</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">systems::SystemScalarConverter</a> converter, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a>, <a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
+<tr class="memitem:a39d5d85eecca0289abecd6069a32e58e inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a39d5d85eecca0289abecd6069a32e58e">MultibodyTreeSystem</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">systems::SystemScalarConverter</a> converter, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a>, <a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
 <tr class="memdesc:a39d5d85eecca0289abecd6069a32e58e inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that specifies scalar-type conversion support.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a39d5d85eecca0289abecd6069a32e58e">More...</a><br /></td></tr>
 <tr class="separator:a39d5d85eecca0289abecd6069a32e58e inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08e63a0ff4a8a795ac82bfaca651fa86 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86">mutable_tree</a> () const</td></tr>
-<tr class="memdesc:a08e63a0ff4a8a795ac82bfaca651fa86 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> owned by this class.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86">More...</a><br /></td></tr>
+<tr class="memitem:a08e63a0ff4a8a795ac82bfaca651fa86 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86">mutable_tree</a> () const</td></tr>
+<tr class="memdesc:a08e63a0ff4a8a795ac82bfaca651fa86 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the MultibodyTree owned by this class.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86">More...</a><br /></td></tr>
 <tr class="separator:a08e63a0ff4a8a795ac82bfaca651fa86 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fee61d7a783cade1a3d07fe86284d27 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27">Finalize</a> ()</td></tr>
 <tr class="memdesc:a8fee61d7a783cade1a3d07fe86284d27 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_tree_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize the tree if that hasn't already been done, complete System construction, and declare any needed Context resources for the tree.  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27">More...</a><br /></td></tr>
@@ -1465,7 +1483,7 @@ Registering geometry with a SceneGraph</h1>
 Finalize() stage</h1>
 <p>Once the user is done adding modeling elements and registering geometry, a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">Finalize()</a> must be performed. This call will:</p>
 <ul>
-<li>Build the underlying <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> topology, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> for details,</li>
+<li>Build the underlying MultibodyTree topology, see <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> for details,</li>
 <li>declare the plant's state,</li>
 <li>declare the plant's input and output ports,</li>
 <li>declare input and output ports for communication with a SceneGraph. <h3>References </h3>
@@ -1745,7 +1763,7 @@ Finalize() stage</h1>
 </div><div class="memdoc">
 
 <p>This method adds a <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> of type <code>JointType</code> between two bodies. </p>
-<p>For more information, see the below overload of <code>AddJoint&lt;&gt;</code>, and the related <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a437f86026a2268c0fb06936b899ba8d7" title="This method adds a Joint of type JointType between the frames specified by the joint. ">MultibodyTree::AddJoint</a>&lt;&gt;</code> method. </p>
+<p>For more information, see the below overload of <code>AddJoint&lt;&gt;</code>, and the related <code><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a437f86026a2268c0fb06936b899ba8d7" title="This method adds a Joint of type JointType between the frames specified by the joint. ">MultibodyTree::AddJoint</a>&lt;&gt;</code> method. </p>
 
 </div>
 </div>
@@ -2194,7 +2212,7 @@ Finalize() stage</h1>
 </pre><p> where <code>M(q)</code> is the multibody model's mass matrix and <code>tau_app</code> consists of a vector applied generalized forces. The last term is a summation over all bodies in the model where <code>Fapp_Bo_W</code> is an applied spatial force on body B at <code>Bo</code> which gets projected into the space of generalized forces with the geometric Jacobian <code>J_WB(q)</code> which maps generalized velocities into body B spatial velocity as <code>V_WB = J_WB(q)v</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the MultibodyTree model. It stores the generalized positions q and the generalized velocities v. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. It stores the generalized positions q and the generalized velocities v. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">Cv</td><td>On output, <code>Cv</code> will contain the product <code>C(q, v)v</code>. It must be a valid (non-null) pointer to a column vector in <code>ℛⁿ</code> with n the number of generalized velocities (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">num_velocities()</a>) of the model. This method aborts if Cv is nullptr or if it does not have the proper size. </td></tr>
   </table>
   </dd>
@@ -2229,6 +2247,50 @@ Finalize() stage</h1>
 <p>Computes and returns the power generated by conservative forces in the multibody model. </p>
 <p>This quantity is defined to be positive when the potential energy is decreasing. In other words, if <code>U(q)</code> is the potential energy as defined by <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a35681a2d7d9d4026b6bc61f08da861f8" title="Computes and returns the total potential energy stored in this multibody model for the configuration ...">CalcPotentialEnergy()</a>, then the conservative power, <code>Pc</code>, is <code>Pc = -U̇(q)</code>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a35681a2d7d9d4026b6bc61f08da861f8" title="Computes and returns the total potential energy stored in this multibody model for the configuration ...">CalcPotentialEnergy()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ae1b54c8562f107e4d6e11b4b0f8d53c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b54c8562f107e4d6e11b4b0f8d53c5">&#9670;&nbsp;</a></span>CalcForceElementsContribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcForceElementsContribution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>forces</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the combined force contribution of <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model...">ForceElement</a> objects in the model. </p>
+<p>A <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model...">ForceElement</a> can apply forces as a spatial force per body or as generalized forces, depending on the <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model...">ForceElement</a> model. <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model...">ForceElement</a> contributions are a function of the state and time only. The output from this method can immediately be used as input to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afcb4de9b58cb375d056da7e8ec30937a" title="Given the state of this model in context and a known vector of generalized accelerations vdot...">CalcInverseDynamics()</a> to include the effect of applied forces by force elements.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of this model. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>A pointer to a valid, non nullptr, multibody forces object. On output <code>forces</code> will store the forces exerted by all the <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model...">ForceElement</a> objects in the model. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>forces</code> is null or not compatible with this model, per MultibodyForces::CheckInvariants(). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2334,11 +2396,67 @@ Finalize() stage</h1>
 </pre><p> where <code>tau_app</code> includes any other generalized forces applied on the system.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state of the multibody model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state of the model. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>tau_g A vector containing the generalized forces due to gravity. The generalized forces are consistent with the vector of generalized velocities <code>v</code> for <code>this</code> so that the inner product <code>v⋅tau_g</code> corresponds to the power applied by the gravity forces on the mechanical system. That is, <code>v⋅tau_g &gt; 0</code> corresponds to potential energy going into the system, as either mechanical kinetic energy, some other potential energy, or heat, and therefore to a decrease of the gravitational potential energy. </dd></dl>
+
+</div>
+</div>
+<a id="afcb4de9b58cb375d056da7e8ec30937a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb4de9b58cb375d056da7e8ec30937a">&#9670;&nbsp;</a></span>CalcInverseDynamics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; CalcInverseDynamics </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>known_vdot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>external_forces</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given the state of this model in <code>context</code> and a known vector of generalized accelerations <code>vdot</code>, this method computes the set of generalized forces <code>tau</code> that would need to be applied in order to attain the specified generalized accelerations. </p>
+<p>Mathematically, this method computes: </p><pre>
+  tau = M(q)v̇ + C(q, v)v - tau_app - ∑ J_WBᵀ(q) Fapp_Bo_W
+</pre><p> where <code>M(q)</code> is the model's mass matrix, <code>C(q, v)v</code> is the bias term containing Coriolis and gyroscopic effects and <code>tau_app</code> consists of a vector applied generalized forces. The last term is a summation over all bodies in the model where <code>Fapp_Bo_W</code> is an applied spatial force on body B at <code>Bo</code> which gets projected into the space of generalized forces with the geometric Jacobian <code>J_WB(q)</code> which maps generalized velocities into body B spatial velocity as <code>V_WB = J_WB(q)v</code>. This method does not compute explicit expressions for the mass matrix nor for the bias term, which would be of at least <code>O(n²)</code> complexity, but it implements an <code>O(n)</code> Newton-Euler recursive algorithm, where n is the number of bodies in the model. The explicit formation of the mass matrix <code>M(q)</code> would require the calculation of <code>O(n²)</code> entries while explicitly forming the product <code>C(q, v) * v</code> could require up to <code>O(n³)</code> operations (see [Featherstone 1987, §4]), depending on the implementation. The recursive Newton-Euler algorithm is the most efficient currently known general method for solving inverse dynamics [Featherstone 2008].</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">known_vdot</td><td>A vector with the known generalized accelerations <code>vdot</code> for the full model. Use the provided <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> APIs in order to access entries into this array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">external_forces</td><td>A set of forces to be applied to the system either as body spatial forces <code>Fapp_Bo_W</code> or generalized forces <code>tau_app</code>, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="A class to hold a set of forces applied to a MultibodyTree system. ">MultibodyForces</a> for details.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the vector of generalized forces that would need to be applied to the mechanical system in order to achieve the desired acceleration given by <code>known_vdot</code>. </dd></dl>
 
 </div>
 </div>
@@ -2472,10 +2590,10 @@ Finalize() stage</h1>
 </div><div class="memdoc">
 
 <p>Performs the computation of the mass matrix <code>M(q)</code> of the model using inverse dynamics, where the generalized positions q are stored in <code>context</code>. </p>
-<p>See CalcInverseDynamics().</p>
+<p>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afcb4de9b58cb375d056da7e8ec30937a" title="Given the state of this model in context and a known vector of generalized accelerations vdot...">CalcInverseDynamics()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the MultibodyTree model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">H</td><td>A valid (non-null) pointer to a squared matrix in <code>ℛⁿˣⁿ</code> with n the number of generalized velocities (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">num_velocities()</a>) of the model. This method aborts if H is nullptr or if it does not have the proper size.</td></tr>
   </table>
   </dd>
@@ -2770,7 +2888,7 @@ Finalize() stage</h1>
 <p>Given the positions <code>p_BQi</code> for a set of points <code>Qi</code> measured and expressed in a frame B, this method computes the positions <code>p_AQi(q)</code> of each point <code>Qi</code> in the set as measured and expressed in another frame A, as a function of the generalized positions q of the model. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the MultibodyTree model. It stores the generalized positions q of the model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. It stores the generalized positions q of the model. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The frame B in which the positions <code>p_BQi</code> of a set of points <code>Qi</code> are given. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">p_BQi</td><td>The input positions of each point <code>Qi</code> in frame B. <code>p_BQi ∈ ℝ³ˣⁿᵖ</code> with <code>np</code> the number of points in the set. Each column of <code>p_BQi</code> corresponds to a vector in ℝ³ holding the position of one of the points in the set as measured and expressed in frame B. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame A in which it is desired to compute the positions <code>p_AQi</code> of each point <code>Qi</code> in the set. </td></tr>
@@ -2809,7 +2927,7 @@ Finalize() stage</h1>
 <p>Computes and returns the total potential energy stored in <code>this</code> multibody model for the configuration given by <code>context</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the MultibodyTree model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2950,7 +3068,7 @@ Finalize() stage</h1>
 <p>That is, the position <code>p_AQ</code> of a point Q measured and expressed in frame A can be computed from the position <code>p_BQ</code> of this point measured and expressed in frame B using the transformation <code>p_AQ = X_AB⋅p_BQ</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the MultibodyTree model. It stores the generalized positions q of the model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. It stores the generalized positions q of the model. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The target frame A in the computed relative transform <code>X_AB</code>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_B</td><td>The source frame B in the computed relative transform <code>X_AB</code>. </td></tr>
   </table>
@@ -2959,6 +3077,56 @@ Finalize() stage</h1>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">X_AB</td><td>The relative transform from frame B to frame A, such that <code>p_AQ = X_AB⋅p_BQ</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aefa1c5393d7cab419a944009cc93aa6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa1c5393d7cab419a944009cc93aa6c">&#9670;&nbsp;</a></span>CalcSpatialAccelerationsFromVdot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcSpatialAccelerationsFromVdot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>known_vdot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&gt; *&#160;</td>
+          <td class="paramname"><em>A_WB_array</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given the state of this model in <code>context</code> and a known vector of generalized accelerations <code>known_vdot</code>, this method computes the spatial acceleration <code>A_WB</code> for each body as measured and expressed in the world frame W. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of this model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">known_vdot</td><td>A vector with the generalized accelerations for the full model. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">A_WB_array</td><td>A pointer to a valid, non nullptr, vector of spatial accelerations containing the spatial acceleration <code>A_WB</code> for each body. It must be of size equal to the number of bodies in the model. On output, entries will be ordered by BodyIndex. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if A_WB_array is not of size <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af92b53211e54243aff4490a700168eb4" title="Returns the number of bodies in the model, including the &quot;world&quot; body, which is always part of the mo...">num_bodies()</a></code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3073,7 +3241,7 @@ Finalize() stage</h1>
 <p>Evaluate the pose <code>X_WB</code> of a body B in the world frame W. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state of the MultibodyTree model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state of the model. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">body_B</td><td>The body B for which the pose is requested. </td></tr>
   </table>
   </dd>
@@ -3130,7 +3298,7 @@ Finalize() stage</h1>
 <p>Evaluate the spatial velocity <code>V_WB</code> of a body B in the world frame W. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state of the MultibodyTree model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context storing the state of the model. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">body_B</td><td>The body B for which the spatial velocity is requested. </td></tr>
   </table>
   </dd>
@@ -4553,8 +4721,8 @@ Finalize() stage</h1>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a vector of generalized positions for <code>model_instance</code> from a vector <code>q_array</code> of generalized positions for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model. </p>
-<p>This method throws an exception if <code>q</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of generalized positions of the model. ">MultibodyTree::num_positions()</a>. </p>
+<p>Returns a vector of generalized positions for <code>model_instance</code> from a vector <code>q_array</code> of generalized positions for the entire model model. </p>
+<p>This method throws an exception if <code>q</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model. ">MultibodyPlant::num_positions()</a>. </p>
 
 </div>
 </div>
@@ -4750,8 +4918,8 @@ Finalize() stage</h1>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a vector of generalized velocities for <code>model_instance</code> from a vector <code>v</code> of generalized velocities for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model. </p>
-<p>This method throws an exception if the input array is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities of the model. ">MultibodyTree::num_velocities()</a>. </p>
+<p>Returns a vector of generalized velocities for <code>model_instance</code> from a vector <code>v</code> of generalized velocities for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
+<p>This method throws an exception if the input array is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">MultibodyPlant::num_velocities()</a>. </p>
 
 </div>
 </div>
@@ -5145,6 +5313,108 @@ Finalize() stage</h1>
 
 </div>
 </div>
+<a id="a0d7f5496735d233ea0b984c5a290671f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d7f5496735d233ea0b984c5a290671f">&#9670;&nbsp;</a></span>MakeActuatorSelectorMatrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; MakeActuatorSelectorMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>user_to_actuator_index_map</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method allows user to map a vector <code>uₛ</code> containing the actuation for a set of selected actuators into the vector u containing the actuation values for <code>this</code> full model. </p>
+<p>The mapping, or selection, is returned in the form of a selector matrix Su such that <code>u = Su⋅uₛ</code>. The size nₛ of uₛ is always smaller or equal than the size of the full vector of actuation values u. That is, a user might be interested in only a given subset of actuators in the model.</p>
+<p>This selection matrix is particularly useful when adding PID control on a portion of the state, see <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html" title="Implements the PID controller. ">systems::controllers::PidController</a>.</p>
+<p>A user specifies the preferred order in uₛ via <code>user_to_actuator_index_map</code>. The actuation values in uₛ are a concatenation of the values for each actuator in the order they appear in <code>user_to_actuator_index_map</code>. The full vector of actuation values u is ordered by JointActuatorIndex. </p>
+
+</div>
+</div>
+<a id="a029244fdbe2f10a7bfaf5c21175d834c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029244fdbe2f10a7bfaf5c21175d834c">&#9670;&nbsp;</a></span>MakeActuatorSelectorMatrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; MakeActuatorSelectorMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>user_to_joint_index_map</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Alternative signature to build an actuation selector matrix <code>Su</code> such that <code>u = Su⋅uₛ</code>, where u is the vector of actuation values for the full model (ordered by JointActuatorIndex) and uₛ is a vector of actuation values for the actuators acting on the joints listed by <code>user_to_joint_index_map</code>. </p>
+<p>It is assumed that all joints referenced by <code>user_to_joint_index_map</code> are actuated. See MakeActuatorSelectorMatrix(const std::vector&lt;JointActuatorIndex&gt;&amp;) for details. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>if any of the joints in <code>user_to_joint_index_map</code> does not have an actuator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c7b2e7b0c09b6479d25250405ffd0c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c7b2e7b0c09b6479d25250405ffd0c4">&#9670;&nbsp;</a></span>MakeStateSelectorMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; MakeStateSelectorMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>user_to_joint_index_map</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method allows users to map the state of <code>this</code> model, x, into a vector of selected state xₛ with a given preferred ordering. </p>
+<p>The mapping, or selection, is returned in the form of a selector matrix Sx such that <code>xₛ = Sx⋅x</code>. The size nₛ of xₛ is always smaller or equal than the size of the full state x. That is, a user might be interested in only a given portion of the full state x.</p>
+<p>This selection matrix is particularly useful when adding PID control on a portion of the state, see <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html" title="Implements the PID controller. ">systems::controllers::PidController</a>.</p>
+<p>A user specifies the preferred order in xₛ via <code>user_to_joint_index_map</code>. The selected state is built such that selected positions are followed by selected velocities, as in <code>xₛ = [qₛ, vₛ]</code>. The positions in qₛ are a concatenation of the positions for each joint in the order they appear in <code>user_to_joint_index_map</code>. That is, the positions for <code>user_to_joint_index_map[0]</code> are first, followed by the positions for <code>user_to_joint_index_map[1]</code>, etc. Similarly for the selected velocities vₛ.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>if there are repeated indexes in <code>user_to_joint_index_map</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab128a8bba10523922358bc35df103753"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab128a8bba10523922358bc35df103753">&#9670;&nbsp;</a></span>MapQDotToVelocity()</h2>
 
@@ -5189,7 +5459,7 @@ Finalize() stage</h1>
 <p><code>v</code> and <code>q̇</code> are related linearly by <code>q̇ = N(q)⋅v</code>. Although <code>N(q)</code> is not necessarily square, its left pseudo-inverse <code>N⁺(q)</code> can be used to invert that relationship without residual error, provided that <code>qdot</code> is in the range space of <code>N(q)</code> (that is, if it <em>could</em> have been produced as <code>q̇ = N(q)⋅v</code> for some <code>v</code>). Using the configuration <code>q</code> stored in the given <code>context</code> this method calculates <code>v = N⁺(q)⋅q̇</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the MultibodyTree model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">qdot</td><td>A vector containing the time derivatives of the generalized positions. This method aborts if <code>qdot</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model. ">num_positions()</a>. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">v</td><td>A valid (non-null) pointer to a vector in <code>ℛⁿ</code> with n the number of generalized velocities. This method aborts if v is nullptr or if it is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">num_velocities()</a>.</td></tr>
   </table>
@@ -5245,9 +5515,9 @@ Finalize() stage</h1>
 <p><code>v</code> and <code>qdot</code> are related linearly by <code>q̇ = N(q)⋅v</code>. Using the configuration <code>q</code> stored in the given <code>context</code> this method calculates <code>q̇ = N(q)⋅v</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the MultibodyTree model. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A vector of of generalized velocities for <code>this</code> MultibodyTree model. This method aborts if v is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">num_velocities()</a>. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">qdot</td><td>A valid (non-null) pointer to a vector in <code>ℝⁿ</code> with n being the number of generalized positions in <code>this</code> MultibodyTree model, given by <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model. ">num_positions()</a></code>. This method aborts if <code>qdot</code> is nullptr or if it is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model. ">num_positions()</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A vector of of generalized velocities for this model. This method aborts if v is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">num_velocities()</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">qdot</td><td>A valid (non-null) pointer to a vector in <code>ℝⁿ</code> with n being the number of generalized positions in this model, given by <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model. ">num_positions()</a></code>. This method aborts if <code>qdot</code> is nullptr or if it is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model. ">num_positions()</a>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -5267,7 +5537,7 @@ Finalize() stage</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt;T&gt;&amp; model </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt;T&gt;&amp; model </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -5280,7 +5550,7 @@ Finalize() stage</h1>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a constant reference to the underlying <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model for <code>this</code> plant. </p>
+<p>Returns a constant reference to the underlying MultibodyTree model for <code>this</code> plant. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">Finalize()</a>. </td></tr>
@@ -6138,11 +6408,11 @@ Finalize() stage</h1>
 </table>
 </div><div class="memdoc">
 
-<p>Given the actuation values <code>u_instance</code> for all actuators in <code>model_instance</code>, this method sets the actuation vector u for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> model to which this actuator belongs to. </p>
+<p>Given the actuation values <code>u_instance</code> for all actuators in <code>model_instance</code>, this method sets the actuation vector u for the entire model to which this actuator belongs to. </p>
 <p>This method throws an exception if the size of <code>u_instance</code> is not equal to the number of degrees of freedom of all of the actuated joints in <code>model_instance</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">u_instance</td><td>Actuation values for the actuators. It must be of size equal to the number of degrees of freedom of all of the actuated joints in <code>model_instance</code>. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">u</td><td>The vector containing the actuation values for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">u</td><td>The vector containing the actuation values for the entire model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6777,7 +7047,7 @@ Finalize() stage</h1>
 </div><div class="memdoc">
 
 <p>Sets the vector of generalized positions for <code>model_instance</code> in <code>q</code> using <code>q_instance</code>, leaving all other elements in the array untouched. </p>
-<p>This method throws an exception if <code>q</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the number of generalized positions of the model. ">MultibodyTree::num_positions()</a> or <code>q_instance</code> is not of size <code>MultibodyTree::num_positions(model_instance)</code>. </p>
+<p>This method throws an exception if <code>q</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model. ">MultibodyPlant::num_positions()</a> or <code>q_instance</code> is not of size <code>MultibodyPlant::num_positions(model_instance)</code>. </p>
 
 </div>
 </div>
@@ -6916,7 +7186,7 @@ Finalize() stage</h1>
 </div><div class="memdoc">
 
 <p>Sets the vector of generalized velocities for <code>model_instance</code> in <code>v</code> using <code>v_instance</code>, leaving all other elements in the array untouched. </p>
-<p>This method throws an exception if <code>v</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#ae0163ac0976659d811e3337647ff0313" title="Returns the number of generalized velocities of the model. ">MultibodyTree::num_velocities()</a> or <code>v_instance</code> is not of size <code>MultibodyTree::num_positions(model_instance)</code>. </p>
+<p>This method throws an exception if <code>v</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">MultibodyPlant::num_velocities()</a> or <code>v_instance</code> is not of size <code>MultibodyPlant::num_positions(model_instance)</code>. </p>
 
 </div>
 </div>
@@ -7072,7 +7342,7 @@ Finalize() stage</h1>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class MultibodyPlantTester</td>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant_tester.html">MultibodyPlantTester</a></td>
         </tr>
       </table>
   </td>

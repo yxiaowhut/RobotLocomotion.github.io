@@ -112,7 +112,9 @@ $(document).ready(function(){initNavTree('simulator__test_8cc.html','');});
 <code>#include &quot;<a class="el" href="my__spring__mass__system_8h.html">drake/systems/analysis/test_utilities/my_spring_mass_system.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="stateless__system_8h.html">drake/systems/analysis/test_utilities/stateless_system.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="event_8h.html">drake/systems/framework/event.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="spring__mass__system_8h.html">drake/systems/plants/spring_mass_system/spring_mass_system.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="signal__logger_8h.html">drake/systems/primitives/signal_logger.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for simulator_test.cc:</div>
 <div class="dyncontent">
@@ -159,6 +161,95 @@ Typedefs</h2></td></tr>
           <td class="memname">using <a class="el" href="simulator__test_8cc.html#acfdf9f1fa71b7ae3f370b99428c036f7">StatelessSystem</a> =  <a class="el" href="classdrake_1_1systems_1_1analysis__test_1_1_stateless_system.html">drake::systems::analysis_test::StatelessSystem</a>&lt;<a class="el" href="classdouble.html">double</a>&gt;</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ad1cb8167f82ff91a28f440ec40cda1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1cb8167f82ff91a28f440ec40cda1db">&#9670;&nbsp;</a></span>kPeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> kPeriod = 1/50.</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a2f115f8fdb19c988422feb81f67857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a2f115f8fdb19c988422feb81f67857">&#9670;&nbsp;</a></span>kPublishOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> kPublishOffset = 0.</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a095c38c242ea4ea0870b56c5c6c6c20b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095c38c242ea4ea0870b56c5c6c6c20b">&#9670;&nbsp;</a></span>kSinusoidalFrequency</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> kSinusoidalFrequency = 1.234</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a979b0ddff6bda2f0818fa1184ebbf984"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979b0ddff6bda2f0818fa1184ebbf984">&#9670;&nbsp;</a></span>kUpdatePeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdouble.html">double</a> kUpdatePeriod = 0.25</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

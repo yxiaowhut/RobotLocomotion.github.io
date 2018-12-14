@@ -126,10 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a495bd9825594c59827df7f89d3d06c2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a29cdcf85f1a6abd167e7517b4a264ef1">BodyNodeIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_body_node_topology.html#a495bd9825594c59827df7f89d3d06c2a">index</a> {}</td></tr>
-<tr class="memdesc:a495bd9825594c59827df7f89d3d06c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique index of this node in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>.  <a href="#a495bd9825594c59827df7f89d3d06c2a">More...</a><br /></td></tr>
+<tr class="memdesc:a495bd9825594c59827df7f89d3d06c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique index of this node in the MultibodyTree.  <a href="#a495bd9825594c59827df7f89d3d06c2a">More...</a><br /></td></tr>
 <tr class="separator:a495bd9825594c59827df7f89d3d06c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf4d33ee4cff36f69b924471174dcb11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_body_node_topology.html#acf4d33ee4cff36f69b924471174dcb11">level</a> {-1}</td></tr>
-<tr class="memdesc:acf4d33ee4cff36f69b924471174dcb11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth level in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>, level = 0 for the world.  <a href="#acf4d33ee4cff36f69b924471174dcb11">More...</a><br /></td></tr>
+<tr class="memdesc:acf4d33ee4cff36f69b924471174dcb11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth level in the MultibodyTree, level = 0 for the world.  <a href="#acf4d33ee4cff36f69b924471174dcb11">More...</a><br /></td></tr>
 <tr class="separator:acf4d33ee4cff36f69b924471174dcb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd3f0c421c338f97abffcc368d5838b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a29cdcf85f1a6abd167e7517b4a264ef1">BodyNodeIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_body_node_topology.html#aabd3f0c421c338f97abffcc368d5838b">parent_body_node</a></td></tr>
 <tr class="memdesc:aabd3f0c421c338f97abffcc368d5838b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The unique index to the parent BodyNode of this node.  <a href="#aabd3f0c421c338f97abffcc368d5838b">More...</a><br /></td></tr>
@@ -166,7 +166,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data structure to store the topological information associated with a tree node. </p>
-<p>A tree node essentially consists of a body and its inboard mobilizer. A body node is in charge of the computations associated to that body and mobilizer, especially within a base-to-tip or tip-to-base recursion. As the topological entity associated with a tree node (and specifically a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> node), this struct contains information regarding parent and child nodes, parent and child bodies, etc. </p>
+<p>A tree node essentially consists of a body and its inboard mobilizer. A body node is in charge of the computations associated to that body and mobilizer, especially within a base-to-tip or tip-to-base recursion. As the topological entity associated with a tree node (and specifically a MultibodyTree node), this struct contains information regarding parent and child nodes, parent and child bodies, etc. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab7819b792a376a3f3ec016174206d46a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7819b792a376a3f3ec016174206d46a">&#9670;&nbsp;</a></span>BodyNodeTopology() <span class="overload">[1/4]</span></h2>
@@ -500,7 +500,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unique index of this node in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>. </p>
+<p>Unique index of this node in the MultibodyTree. </p>
 
 </div>
 </div>
@@ -516,7 +516,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Depth level in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>, level = 0 for the world. </p>
+<p>Depth level in the MultibodyTree, level = 0 for the world. </p>
 
 </div>
 </div>

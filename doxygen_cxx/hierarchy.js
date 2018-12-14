@@ -126,6 +126,8 @@ var hierarchy =
     [ "ContactResultantForceCalculator< T >", "classdrake_1_1systems_1_1_contact_resultant_force_calculator.html", null ],
     [ "ContactResults< T >", "classdrake_1_1systems_1_1_contact_results.html", null ],
     [ "ContactResults< T >", "classdrake_1_1multibody_1_1_contact_results.html", null ],
+    [ "ContactResults< AutoDiffXd >", "classdrake_1_1multibody_1_1_contact_results.html", null ],
+    [ "ContactResults< double >", "classdrake_1_1multibody_1_1_contact_results.html", null ],
     [ "ContextMessageInterface", null, [
       [ "ContextBase", "classdrake_1_1systems_1_1_context_base.html", [
         [ "Context< AutoDiffXd >", "classdrake_1_1systems_1_1_context.html", [
@@ -418,6 +420,7 @@ var hierarchy =
     ] ],
     [ "GeometrySet", "classdrake_1_1geometry_1_1_geometry_set.html", null ],
     [ "GeometryState< T >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
+    [ "GeometryState< AutoDiffXd >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
     [ "GeometryState< double >", "classdrake_1_1geometry_1_1_geometry_state.html", null ],
     [ "GeoNormal", "classdrake_1_1maliput_1_1utility_1_1mesh_1_1_geo_normal.html", null ],
     [ "GeoPositionT< T >", "classdrake_1_1maliput_1_1api_1_1_geo_position_t.html", null ],
@@ -469,6 +472,8 @@ var hierarchy =
     [ "ImageTraits< PixelType::kRgb8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html", null ],
     [ "ImageTraits< PixelType::kRgba8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html", null ],
     [ "ImplicitStribeckSolver< T >", "classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html", null ],
+    [ "ImplicitStribeckSolver< AutoDiffXd >", "classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html", null ],
+    [ "ImplicitStribeckSolver< double >", "classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html", null ],
     [ "IndexFace", "classdrake_1_1maliput_1_1utility_1_1mesh_1_1_index_face.html", null ],
     [ "InitializeAutoDiffTupleHelper< Index >", "structdrake_1_1math_1_1internal_1_1_initialize_auto_diff_tuple_helper.html", null ],
     [ "InitializeAutoDiffTupleHelper< 0 >", "structdrake_1_1math_1_1internal_1_1_initialize_auto_diff_tuple_helper_3_010_01_4.html", null ],
@@ -682,9 +687,10 @@ var hierarchy =
     [ "MultibodyPlant", null, [
       [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
     ] ],
-    [ "MultibodyTree< T >", "classdrake_1_1multibody_1_1_multibody_tree.html", null ],
-    [ "MultibodyTree< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_tree.html", null ],
-    [ "MultibodyTree< double >", "classdrake_1_1multibody_1_1_multibody_tree.html", null ],
+    [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", null ],
+    [ "MultibodyTree< T >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html", null ],
+    [ "MultibodyTree< AutoDiffXd >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html", null ],
+    [ "MultibodyTree< double >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html", null ],
     [ "MultibodyTreeElement", null, [
       [ "Body< AutoDiffXd >", "classdrake_1_1multibody_1_1_body.html", [
         [ "RigidBody< AutoDiffXd >", "classdrake_1_1multibody_1_1_rigid_body.html", null ]
@@ -825,6 +831,8 @@ var hierarchy =
     [ "Passkey< T >", "classdrake_1_1maliput_1_1geometry__base_1_1_passkey.html", null ],
     [ "PendulumParameters", "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html", null ],
     [ "PenetrationAsPointPair< T >", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
+    [ "PenetrationAsPointPair< AutoDiffXd >", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
+    [ "PenetrationAsPointPair< double >", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", null ],
     [ "DynamicProgrammingOptions::PeriodicBoundaryCondition", "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html", null ],
     [ "PeriodicEventDataComparator", "structdrake_1_1systems_1_1_periodic_event_data_comparator.html", null ],
     [ "PickAndPlaceStateMachine", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_pick_and_place_state_machine.html", null ],
@@ -838,6 +846,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPair< T >", "structdrake_1_1multibody_1_1collision_1_1_point_pair.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
+    [ "PointPairContactInfo< AutoDiffXd >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
+    [ "PointPairContactInfo< double >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "Polynomial< _CoefficientType >", "class_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< CoefficientType >", "class_polynomial.html", null ],
@@ -852,6 +862,7 @@ var hierarchy =
     [ "Polynomial< _CoefficientType >::Product< Rhs, Lhs >", "struct_polynomial_1_1_product.html", null ],
     [ "TrigPoly< _CoefficientType >::Product< Rhs, Lhs >", "struct_trig_poly_1_1_product.html", null ],
     [ "ProximityEngine< T >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
+    [ "ProximityEngine< AutoDiffXd >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
     [ "ProximityEngine< double >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
     [ "PurePursuit< T >", "classdrake_1_1automotive_1_1_pure_pursuit.html", null ],
     [ "PythonApi< Derived >", "classdrake_1_1common_1_1internal_1_1_python_api.html", null ],
@@ -1018,6 +1029,7 @@ var hierarchy =
     [ "ScalarInitialValueProblem< T >", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", null ],
     [ "ScalarInitialValueProblem< double >", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", null ],
     [ "SceneGraphInspector< T >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
+    [ "SceneGraphInspector< AutoDiffXd >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
     [ "SceneGraphInspector< double >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", null ],
     [ "ScreenCoord", "structdrake_1_1systems_1_1sensors_1_1test_1_1_screen_coord.html", null ],
     [ "ScsSolverDetails", "structdrake_1_1solvers_1_1_scs_solver_details.html", null ],
@@ -1085,8 +1097,8 @@ var hierarchy =
     [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
     [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
     [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
-    [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
     [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
+    [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
     [ "SpeedLimitRule", "classdrake_1_1maliput_1_1api_1_1rules_1_1_speed_limit_rule.html", null ],
     [ "SRange", "classdrake_1_1maliput_1_1api_1_1rules_1_1_s_range.html", null ],
     [ "SrhFace", "classdrake_1_1maliput_1_1utility_1_1mesh_1_1_srh_face.html", null ],
@@ -1229,7 +1241,10 @@ var hierarchy =
         ] ],
         [ "System< AutoDiffXd >", "classdrake_1_1systems_1_1_system.html", [
           [ "LeafSystem< AutoDiffXd >", "classdrake_1_1systems_1_1_leaf_system.html", [
-            [ "MultibodyTreeSystem< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", null ]
+            [ "MultibodyTreeSystem< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", [
+              [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
+            ] ],
+            [ "SceneGraph< AutoDiffXd >", "classdrake_1_1geometry_1_1_scene_graph.html", null ]
           ] ]
         ] ],
         [ "System< double >", "classdrake_1_1systems_1_1_system.html", [
@@ -1256,6 +1271,7 @@ var hierarchy =
             [ "AcrobotStateSender", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html", null ],
             [ "AllegroCommandReceiver", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html", null ],
             [ "AllegroStatusSender", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html", null ],
+            [ "FibonacciDifferenceEquation", "classdrake_1_1examples_1_1fibonacci_1_1_fibonacci_difference_equation.html", null ],
             [ "RobotStateMsgToHumanoidStatusSystem", "classdrake_1_1examples_1_1humanoid__controller_1_1_robot_state_msg_to_humanoid_status_system.html", null ],
             [ "JacoCommandReceiver", "classdrake_1_1examples_1_1kinova__jaco__arm_1_1_jaco_command_receiver.html", null ],
             [ "JacoCommandSender", "classdrake_1_1examples_1_1kinova__jaco__arm_1_1_jaco_command_sender.html", null ],
@@ -1309,7 +1325,9 @@ var hierarchy =
             [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", null ],
             [ "RgbdCamera", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html", null ],
             [ "ValkyriePDAndFeedForwardController", "classdrake_1_1systems_1_1_valkyrie_p_d_and_feed_forward_controller.html", null ],
-            [ "MultibodyTreeSystem< double >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", null ],
+            [ "MultibodyTreeSystem< double >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", [
+              [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
+            ] ],
             [ "RigidBodyPlant< double >", "classdrake_1_1systems_1_1_rigid_body_plant.html", null ],
             [ "Rod2D< double >", "classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html", null ],
             [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
@@ -1343,6 +1361,7 @@ var hierarchy =
     [ "Test", null, [
       [ "IiwaKinematicConstraintTest", "classdrake_1_1multibody_1_1internal_1_1_iiwa_kinematic_constraint_test.html", null ],
       [ "TwoFreeBodiesConstraintTest", "classdrake_1_1multibody_1_1internal_1_1_two_free_bodies_constraint_test.html", null ],
+      [ "KukaIiwaModelTests", "classdrake_1_1multibody_1_1multibody__plant_1_1test_1_1_kuka_iiwa_model_tests.html", null ],
       [ "MobilizerTester", "classdrake_1_1multibody_1_1multibody__tree_1_1_mobilizer_tester.html", null ],
       [ "InfeasibleLinearProgramTest0", "classdrake_1_1solvers_1_1test_1_1_infeasible_linear_program_test0.html", null ],
       [ "UnboundedLinearProgramTest0", "classdrake_1_1solvers_1_1test_1_1_unbounded_linear_program_test0.html", null ],
@@ -1443,6 +1462,7 @@ var hierarchy =
       [ "hash< drake::systems::sensors::PixelType >", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ]
     ] ],
     [ "unique_ptr< T >", null, [
+      [ "copyable_unique_ptr< drake::geometry::internal::ProximityEngine< AutoDiffXd > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::internal::ProximityEngine< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::internal::ProximityEngine< T > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::Shape >", "classdrake_1_1copyable__unique__ptr.html", null ],

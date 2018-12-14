@@ -15,5 +15,5 @@ var classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_
     [ "operator=", "classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#a44c29b2482e8e41b59b3ba0b81952771", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#a1a0a81528a9aa9035dcfa8b54eaf301c", null ],
     [ "SetTopology", "classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#a34ee8a1b905c778c50419a09b4f819d0", null ],
-    [ "MultibodyTree< T >", "classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#af5bd69e98e7e9da9c4f789690e3635a8", null ]
+    [ "internal::MultibodyTree< T >", "classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#a49109966f9505633199c07ad06b0632d", null ]
 ];

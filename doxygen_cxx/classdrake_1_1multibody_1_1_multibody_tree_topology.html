@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_multibody_
 </div><!--header-->
 <div class="contents">
 
-<p>Data structure to store the topological information associated with an entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>.  
+<p>Data structure to store the topological information associated with an entire MultibodyTree.  
  <a href="classdrake_1_1multibody_1_1_multibody_tree_topology.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/multibody/tree/multibody_tree_topology.h&gt;</code></p>
@@ -158,7 +158,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3fd186743d02a0768760323975d366cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and adds a new <a class="el" href="structdrake_1_1multibody_1_1_joint_actuator_topology.html" title="Data structure to store the topological information associated with a JointActuator. ">JointActuatorTopology</a> for a joint with <code>num_dofs</code> degrees of freedom.  <a href="#a3fd186743d02a0768760323975d366cf">More...</a><br /></td></tr>
 <tr class="separator:a3fd186743d02a0768760323975d366cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fee61d7a783cade1a3d07fe86284d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html#a8fee61d7a783cade1a3d07fe86284d27">Finalize</a> ()</td></tr>
-<tr class="memdesc:a8fee61d7a783cade1a3d07fe86284d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must be called by <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> after all topological elements in the tree (corresponding to joints, bodies, force elements, constraints) were added and before any computations are performed.  <a href="#a8fee61d7a783cade1a3d07fe86284d27">More...</a><br /></td></tr>
+<tr class="memdesc:a8fee61d7a783cade1a3d07fe86284d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must be called by <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> after all topological elements in the tree (corresponding to joints, bodies, force elements, constraints) were added and before any computations are performed.  <a href="#a8fee61d7a783cade1a3d07fe86284d27">More...</a><br /></td></tr>
 <tr class="separator:a8fee61d7a783cade1a3d07fe86284d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca0e76fa665125f1e50bd1ed8dbd213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html#a8ca0e76fa665125f1e50bd1ed8dbd213">is_valid</a> () const</td></tr>
 <tr class="memdesc:a8ca0e76fa665125f1e50bd1ed8dbd213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called by MultibodyTree::Finalize() after all topological elements in the tree (c...">Finalize()</a> was already called on <code>this</code> topology.  <a href="#a8ca0e76fa665125f1e50bd1ed8dbd213">More...</a><br /></td></tr>
@@ -195,7 +195,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4cc48151d829ada9e37d95c25ea993a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Data structure to store the topological information associated with an entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>. </p>
+<div class="textblock"><p>Data structure to store the topological information associated with an entire MultibodyTree. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6900ac614a7b17ea781ff1c45b0bedf8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6900ac614a7b17ea781ff1c45b0bedf8">&#9670;&nbsp;</a></span>MultibodyTreeTopology() <span class="overload">[1/3]</span></h2>
@@ -273,7 +273,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default constructor creates an empty, invalid topology. </p>
-<p>The minimum valid topology for a minimum valid <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> contains at least the <a class="el" href="structdrake_1_1multibody_1_1_body_topology.html" title="Data structure to store the topological information associated with a Body. ">BodyTopology</a> for the world. The topology for the <em>world</em> body does not get added until <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> construction, which creates a <em>world</em> body and adds it to the tree. </p>
+<p>The minimum valid topology for a minimum valid MultibodyTree contains at least the <a class="el" href="structdrake_1_1multibody_1_1_body_topology.html" title="Data structure to store the topological information associated with a Body. ">BodyTopology</a> for the world. The topology for the <em>world</em> body does not get added until MultibodyTree construction, which creates a <em>world</em> body and adds it to the tree. </p>
 
 </div>
 </div>
@@ -541,7 +541,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This method must be called by <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> after all topological elements in the tree (corresponding to joints, bodies, force elements, constraints) were added and before any computations are performed. </p>
+<p>This method must be called by <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> after all topological elements in the tree (corresponding to joints, bodies, force elements, constraints) were added and before any computations are performed. </p>
 <p>It essentially compiles all the necessary "topological information", i.e. how bodies, joints and, any other elements connect with each other, and performs all the required pre-processing to perform computations at a later stage. This preprocessing includes:</p>
 <ul>
 <li>sorting in BFT order for fast recursions through the tree,</li>
@@ -879,7 +879,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the number of bodies in the multibody tree. </p>
-<p>This includes the "world" body and therefore the minimum number of bodies after <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> will always be one, not zero. </p>
+<p>This includes the "world" body and therefore the minimum number of bodies after <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> will always be one, not zero. </p>
 
 </div>
 </div>

@@ -40,10 +40,11 @@ var NAVTREEINDEX1 =
 "autodiff__overloads_8h.html#a359f994f61fb2223501e848026341190":[3,0,0,3,5,9],
 "autodiff__overloads_8h.html#a485195278d0780b9879d5727b4f46d78":[3,0,0,3,5,3],
 "autodiff__overloads_8h.html#a4e0cf71aec9efa0001a9acac376990f0":[3,0,0,3,5,8],
+"autodiff__overloads_8h.html#a6622fc922ba2941ef48b02b717883f75":[3,0,0,3,5,10],
 "autodiff__overloads_8h.html#aa9721f3a5897b05ef2168f7a6d886dc8":[3,0,0,3,5,5],
-"autodiff__overloads_8h.html#ac1217be143aca68b33af6812033c4656":[3,0,0,3,5,11],
+"autodiff__overloads_8h.html#ac1217be143aca68b33af6812033c4656":[3,0,0,3,5,12],
 "autodiff__overloads_8h.html#ad3d4c3be4fb326d35dce104a7d6f86b5":[3,0,0,3,5,4],
-"autodiff__overloads_8h.html#aed761067a3e3908708559594fab9c12b":[3,0,0,3,5,10],
+"autodiff__overloads_8h.html#aed761067a3e3908708559594fab9c12b":[3,0,0,3,5,11],
 "autodiff__overloads_8h.html#af52cba62721f6b29c99a83ec9b192873":[3,0,0,3,5,7],
 "autodiff__overloads_8h.html#af8c0e9e4214ab7f97568cc8792859e32":[3,0,0,3,5,2],
 "autodiff__overloads__test_8cc.html":[3,0,0,3,1,0],
@@ -231,8 +232,8 @@ var NAVTREEINDEX1 =
 "bot__core__lcm__encode__decode__test_8cc.html":[3,0,0,8,4,0,0],
 "bouncing__ball_8cc.html":[3,0,0,5,3,1],
 "bouncing__ball_8h.html":[3,0,0,5,3,2],
-"bouncing__ball__plant_8cc.html":[3,0,0,5,20,0],
-"bouncing__ball__plant_8h.html":[3,0,0,5,20,1],
+"bouncing__ball__plant_8cc.html":[3,0,0,5,21,0],
+"bouncing__ball__plant_8h.html":[3,0,0,5,21,1],
 "bouncing__ball__test_8cc.html":[3,0,0,5,3,0,0],
 "bouncing__ball__test_8cc.html#a2c7e5c9b4efaf279941d9c29b084908b":[3,0,0,5,3,0,0,2],
 "bouncing__ball__test_8cc.html#a4bde03f9e01fff72913dc5b6b6b34ecb":[3,0,0,5,3,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "bowling__ball_8cc.html#a670f26876f395483fb685b550b60c2dd":[3,0,0,5,5,0,4],
 "bowling__ball_8cc.html#a8016850b617ea0502a01c5ec711cf9a7":[3,0,0,5,5,0,8],
 "bowling__ball_8cc.html#a92110a21b30918f8fc184be31cd06b27":[3,0,0,5,5,0,6],
-"bowling__ball_8cc.html#aa8584634f2c53f8730e2abbbc76cbf3a":[3,0,0,5,5,0,11],
-"bowling__ball_8cc.html#aaee04dc9988734b361deea97ff8ddd21":[3,0,0,5,5,0,5]
+"bowling__ball_8cc.html#aa8584634f2c53f8730e2abbbc76cbf3a":[3,0,0,5,5,0,11]
 };

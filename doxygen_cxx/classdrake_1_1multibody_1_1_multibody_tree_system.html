@@ -95,14 +95,14 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_multibody_
 </div><!--header-->
 <div class="contents">
 
-<p>This is a bare Drake System providing just enough functionality to allow standalone exercise of a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>.  
+<p>This is a bare Drake System providing just enough functionality to allow standalone exercise of a MultibodyTree.  
  <a href="classdrake_1_1multibody_1_1_multibody_tree_system.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/multibody/tree/multibody_tree_system.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a29ac82c4ca3b12b3935919a40fcdfc87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a29ac82c4ca3b12b3935919a40fcdfc87">MultibodyTreeSystem</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a>, <a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
+<tr class="memitem:a29ac82c4ca3b12b3935919a40fcdfc87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a29ac82c4ca3b12b3935919a40fcdfc87">MultibodyTreeSystem</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a>, <a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
 <tr class="memdesc:a29ac82c4ca3b12b3935919a40fcdfc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes ownership of the given <code>tree</code>, finalizes it if it hasn't already been finalized, and then allocates the resources it needs.  <a href="#a29ac82c4ca3b12b3935919a40fcdfc87">More...</a><br /></td></tr>
 <tr class="separator:a29ac82c4ca3b12b3935919a40fcdfc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af312ef47f7435c49a29dbf2e2224836b"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
@@ -113,8 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac880a9afb311815456efc733e8840d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac87e33717da832d66c6587cac66f56a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a> () const</td></tr>
 <tr class="separator:ac87e33717da832d66c6587cac66f56a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a875f49ab037712aeeeddd091161bee45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a> () const</td></tr>
-<tr class="memdesc:a875f49ab037712aeeeddd091161bee45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> owned by this class.  <a href="#a875f49ab037712aeeeddd091161bee45">More...</a><br /></td></tr>
+<tr class="memitem:a875f49ab037712aeeeddd091161bee45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a> () const</td></tr>
+<tr class="memdesc:a875f49ab037712aeeeddd091161bee45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the MultibodyTree owned by this class.  <a href="#a875f49ab037712aeeeddd091161bee45">More...</a><br /></td></tr>
 <tr class="separator:a875f49ab037712aeeeddd091161bee45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed59e6f62bfe30a418ba8d8c611580af"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_position_kinematics_cache.html">PositionKinematicsCache</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#aed59e6f62bfe30a418ba8d8c611580af">EvalPositionKinematics</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:aed59e6f62bfe30a418ba8d8c611580af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the up to date <a class="el" href="classdrake_1_1multibody_1_1_position_kinematics_cache.html" title="This class is one of the cache entries in MultibodyTreeContext. ">PositionKinematicsCache</a> in the given Context, recalculating it first if necessary.  <a href="#aed59e6f62bfe30a418ba8d8c611580af">More...</a><br /></td></tr>
@@ -514,17 +514,17 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae73edc00d493b3f15ba7679cc14830a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ae73edc00d493b3f15ba7679cc14830a0">SetDefaultState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const override</td></tr>
 <tr class="separator:ae73edc00d493b3f15ba7679cc14830a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Alternate API for derived classes</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>Derived classes may use these methods to create a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html" title="This is a bare Drake System providing just enough functionality to allow standalone exercise of a Mul...">MultibodyTreeSystem</a> that owns an empty <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>, then incrementally build it, and finalize it when done.</p>
+<tr><td colspan="2"><div class="groupText"><p>Derived classes may use these methods to create a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html" title="This is a bare Drake System providing just enough functionality to allow standalone exercise of a Mul...">MultibodyTreeSystem</a> that owns an empty MultibodyTree, then incrementally build it, and finalize it when done.</p>
 <p>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> for a working example. </p>
 </div></td></tr>
 <tr class="memitem:a30385052678018b5c05a87203b54c4c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a30385052678018b5c05a87203b54c4c2">MultibodyTreeSystem</a> (<a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
-<tr class="memdesc:a30385052678018b5c05a87203b54c4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor allocates a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>, with the intent that it will be filled in later, using <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86" title="Returns a mutable reference to the MultibodyTree owned by this class. ">mutable_tree()</a> for access.  <a href="#a30385052678018b5c05a87203b54c4c2">More...</a><br /></td></tr>
+<tr class="memdesc:a30385052678018b5c05a87203b54c4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor allocates a MultibodyTree, with the intent that it will be filled in later, using <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86" title="Returns a mutable reference to the MultibodyTree owned by this class. ">mutable_tree()</a> for access.  <a href="#a30385052678018b5c05a87203b54c4c2">More...</a><br /></td></tr>
 <tr class="separator:a30385052678018b5c05a87203b54c4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39d5d85eecca0289abecd6069a32e58e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a39d5d85eecca0289abecd6069a32e58e">MultibodyTreeSystem</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">systems::SystemScalarConverter</a> converter, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a>, <a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
+<tr class="memitem:a39d5d85eecca0289abecd6069a32e58e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a39d5d85eecca0289abecd6069a32e58e">MultibodyTreeSystem</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">systems::SystemScalarConverter</a> converter, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a875f49ab037712aeeeddd091161bee45">tree</a>, <a class="el" href="classbool.html">bool</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#ac87e33717da832d66c6587cac66f56a9">is_discrete</a>=false)</td></tr>
 <tr class="memdesc:a39d5d85eecca0289abecd6069a32e58e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that specifies scalar-type conversion support.  <a href="#a39d5d85eecca0289abecd6069a32e58e">More...</a><br /></td></tr>
 <tr class="separator:a39d5d85eecca0289abecd6069a32e58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08e63a0ff4a8a795ac82bfaca651fa86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86">mutable_tree</a> () const</td></tr>
-<tr class="memdesc:a08e63a0ff4a8a795ac82bfaca651fa86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> owned by this class.  <a href="#a08e63a0ff4a8a795ac82bfaca651fa86">More...</a><br /></td></tr>
+<tr class="memitem:a08e63a0ff4a8a795ac82bfaca651fa86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86">mutable_tree</a> () const</td></tr>
+<tr class="memdesc:a08e63a0ff4a8a795ac82bfaca651fa86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the MultibodyTree owned by this class.  <a href="#a08e63a0ff4a8a795ac82bfaca651fa86">More...</a><br /></td></tr>
 <tr class="separator:a08e63a0ff4a8a795ac82bfaca651fa86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fee61d7a783cade1a3d07fe86284d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27">Finalize</a> ()</td></tr>
 <tr class="memdesc:a8fee61d7a783cade1a3d07fe86284d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize the tree if that hasn't already been done, complete System construction, and declare any needed Context resources for the tree.  <a href="#a8fee61d7a783cade1a3d07fe86284d27">More...</a><br /></td></tr>
@@ -979,10 +979,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
 
-<p>This is a bare Drake System providing just enough functionality to allow standalone exercise of a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>. </p>
-<p><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> requires a few System services to allocate and access the resources it needs in a Context.</p>
-<p>MultibodyTreeSystem serves as the base class for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> System, which provides much more functionality, including full integration with the Drake System Framework. MultibodyTreeSystem alone is useful for unit testing of <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>, and on those rare occasions where nothing but tree functionality is needed.</p>
-<p>To use MultibodyTreeSystem alone, first create and populate a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>, then transfer ownership of it in the constructor for MultibodyTreeSystem, which will finalize the tree if that hasn't already been done, interrogate it for the Context resources it needs, and allocate them. No further changes are possible to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> once it is owned by MultibodyTreeSystem. For example, </p><div class="fragment"><div class="line"><span class="comment">// Create an empty model.</span></div><div class="line"><span class="keyword">auto</span> mb_tree = std::make_unique&lt;MultibodyTree&lt;double&gt;&gt;</div><div class="line">mb_tree-&gt;AddBody&lt;<a class="code" href="class_rigid_body.html">RigidBody</a>&gt;(...);</div><div class="line">mb_tree-&gt;AddMobilizer&lt;RevoluteMobilizer&gt;(...);</div><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="comment">// Done adding modeling elements. Transfer tree to system, get Context.</span></div><div class="line"><span class="keyword">auto</span> system = std::make_unique&lt;MultibodyTreeSystem&lt;double&gt;&gt;(std::move(model));</div><div class="line"><span class="keyword">auto</span> context = system-&gt;CreateDefaultContext();</div></div><!-- fragment --><p>Derived classes may use an alternate protected interface that provides for incremental construction of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> owned by a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html" title="This is a bare Drake System providing just enough functionality to allow standalone exercise of a Mul...">MultibodyTreeSystem</a>. See documentation for the protected methods below, and look at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> for an example. </p>
+<p>This is a bare Drake System providing just enough functionality to allow standalone exercise of a MultibodyTree. </p>
+<p>MultibodyTree requires a few System services to allocate and access the resources it needs in a Context.</p>
+<p>MultibodyTreeSystem serves as the base class for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> System, which provides much more functionality, including full integration with the Drake System Framework. MultibodyTreeSystem alone is useful for unit testing of MultibodyTree, and on those rare occasions where nothing but tree functionality is needed.</p>
+<p>To use MultibodyTreeSystem alone, first create and populate a MultibodyTree, then transfer ownership of it in the constructor for MultibodyTreeSystem, which will finalize the tree if that hasn't already been done, interrogate it for the Context resources it needs, and allocate them. No further changes are possible to the MultibodyTree once it is owned by MultibodyTreeSystem. For example, </p><div class="fragment"><div class="line"><span class="comment">// Create an empty model.</span></div><div class="line"><span class="keyword">auto</span> mb_tree = std::make_unique&lt;MultibodyTree&lt;double&gt;&gt;</div><div class="line">mb_tree-&gt;AddBody&lt;<a class="code" href="class_rigid_body.html">RigidBody</a>&gt;(...);</div><div class="line">mb_tree-&gt;AddMobilizer&lt;RevoluteMobilizer&gt;(...);</div><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="comment">// Done adding modeling elements. Transfer tree to system, get Context.</span></div><div class="line"><span class="keyword">auto</span> system = std::make_unique&lt;MultibodyTreeSystem&lt;double&gt;&gt;(std::move(model));</div><div class="line"><span class="keyword">auto</span> context = system-&gt;CreateDefaultContext();</div></div><!-- fragment --><p>Derived classes may use an alternate protected interface that provides for incremental construction of the MultibodyTree owned by a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html" title="This is a bare Drake System providing just enough functionality to allow standalone exercise of a Mul...">MultibodyTreeSystem</a>. See documentation for the protected methods below, and look at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> for an example. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa86dec781683d58a9af99f0cd06458f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa86dec781683d58a9af99f0cd06458f">&#9670;&nbsp;</a></span>MultibodyTreeSystem() <span class="overload">[1/6]</span></h2>
@@ -1048,7 +1048,7 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html">MultibodyTreeSystem</a> </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt;&#160;</td>
           <td class="paramname"><em>tree</em>, </td>
         </tr>
         <tr>
@@ -1074,8 +1074,8 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
 <p>You cannot modify the tree after that. The <code>tree</code> cannot be null.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>An already-complete <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">is_discrete</td><td>Whether to allocate discrete state variables for the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> kinematics. Otherwise allocates continuous state variables.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>An already-complete MultibodyTree. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_discrete</td><td>Whether to allocate discrete state variables for the MultibodyTree kinematics. Otherwise allocates continuous state variables.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1166,7 +1166,7 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Default constructor allocates a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a>, with the intent that it will be filled in later, using <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86" title="Returns a mutable reference to the MultibodyTree owned by this class. ">mutable_tree()</a> for access. </p>
+<p>Default constructor allocates a MultibodyTree, with the intent that it will be filled in later, using <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a08e63a0ff4a8a795ac82bfaca651fa86" title="Returns a mutable reference to the MultibodyTree owned by this class. ">mutable_tree()</a> for access. </p>
 <p>You must call <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">Finalize()</a> when done before performing any computations. </p>
 
 </div>
@@ -1189,7 +1189,7 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt;&gt;&#160;</td>
           <td class="paramname"><em>tree</em>, </td>
         </tr>
         <tr>
@@ -1215,7 +1215,7 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
 <p>If <code>tree</code> is given, we'll finalize it. Otherwise, we'll allocate an empty one and leave it not finalized. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">converter</td><td>Scalar-type conversion support helper. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>Already-complete <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> if supplied. If nullptr, an empty <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> is allocated internally. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>Already-complete MultibodyTree if supplied. If nullptr, an empty MultibodyTree is allocated internally. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">is_discrete</td><td>Whether to use discrete state variables for tree kinematics. Otherwise uses continuous state variables q and v. </td></tr>
   </table>
   </dd>
@@ -1373,7 +1373,7 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp; mutable_tree </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp; mutable_tree </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1386,7 +1386,7 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a mutable reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> owned by this class. </p>
+<p>Returns a mutable reference to the MultibodyTree owned by this class. </p>
 <p>The tree must <em>not</em> have been finalized. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::logic_error</td><td>if the tree has already been finalized. </td></tr>
@@ -1494,7 +1494,7 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt;T&gt;&amp; tree </td>
+          <td class="memname">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt;T&gt;&amp; tree </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1507,7 +1507,7 @@ class drake::multibody::MultibodyTreeSystem&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a const reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> owned by this class. </p>
+<p>Returns a const reference to the MultibodyTree owned by this class. </p>
 
 </div>
 </div>

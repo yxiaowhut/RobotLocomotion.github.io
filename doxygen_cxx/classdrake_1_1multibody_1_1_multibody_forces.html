@@ -93,14 +93,14 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_multibody_
 </div><!--header-->
 <div class="contents">
 
-<p>A class to hold a set of forces applied to a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> system.  
+<p>A class to hold a set of forces applied to a MultibodyTree system.  
  <a href="classdrake_1_1multibody_1_1_multibody_forces.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/multibody/tree/multibody_forces.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ade698012545dda65a2e864b1468e7c12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#ade698012545dda65a2e864b1468e7c12">MultibodyForces</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;model)</td></tr>
+<tr class="memitem:ade698012545dda65a2e864b1468e7c12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#ade698012545dda65a2e864b1468e7c12">MultibodyForces</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;model)</td></tr>
 <tr class="memdesc:ade698012545dda65a2e864b1468e7c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a force object to store a set of forces to be applied to <code>model</code>.  <a href="#ade698012545dda65a2e864b1468e7c12">More...</a><br /></td></tr>
 <tr class="separator:ade698012545dda65a2e864b1468e7c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed1238347a4f31beff28491602ac411"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a7ed1238347a4f31beff28491602ac411">SetZero</a> ()</td></tr>
@@ -127,7 +127,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bebeb0fade3383fdb4acbab2bcc4c3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a4bebeb0fade3383fdb4acbab2bcc4c3b">AddInForces</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; &amp;addend)</td></tr>
 <tr class="memdesc:a4bebeb0fade3383fdb4acbab2bcc4c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds into <code>this</code> the force contribution stored in <code>addend</code>.  <a href="#a4bebeb0fade3383fdb4acbab2bcc4c3b">More...</a><br /></td></tr>
 <tr class="separator:a4bebeb0fade3383fdb4acbab2bcc4c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afff4d445548e5d2a70445470ef667757"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#afff4d445548e5d2a70445470ef667757">CheckHasRightSizeForModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;model) const</td></tr>
+<tr class="memitem:afff4d445548e5d2a70445470ef667757"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#afff4d445548e5d2a70445470ef667757">CheckHasRightSizeForModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;model) const</td></tr>
 <tr class="memdesc:afff4d445548e5d2a70445470ef667757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility that checks that the forces stored by <code>this</code> object have the proper sizes to represent the set of forces for the given <code>model</code>.  <a href="#afff4d445548e5d2a70445470ef667757">More...</a><br /></td></tr>
 <tr class="separator:afff4d445548e5d2a70445470ef667757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 
-<p>A class to hold a set of forces applied to a <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> system. </p>
+<p>A class to hold a set of forces applied to a MultibodyTree system. </p>
 <p>Forces can include generalized forces as well as body spatial forces.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -224,7 +224,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>model</em></td><td>)</td>
           <td></td>
         </tr>
@@ -237,7 +237,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Constructs a force object to store a set of forces to be applied to <code>model</code>. </p>
-<p>Forces are initialized to zero, meaning no forces are applied to <code>model</code>. <code>model</code> must have been already finalized with <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> or this constructor will abort. </p>
+<p>Forces are initialized to zero, meaning no forces are applied to <code>model</code>. <code>model</code> must have been already finalized with <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> or this constructor will abort. </p>
 
 </div>
 </div>
@@ -299,7 +299,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classbool.html">bool</a> CheckHasRightSizeForModel </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>model</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -416,7 +416,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Returns the number of bodies for which <code>this</code> force object applies. </p>
-<p>Determined at construction from the given model <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> object. </p>
+<p>Determined at construction from the given model MultibodyTree object. </p>
 
 </div>
 </div>
@@ -444,7 +444,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Returns the number of generalized velocities for the model to which these forces apply. </p>
-<p>The number of generalized forces in a multibody model always equals the number of generalized velocities. Determined at construction from the given model <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> object. </p>
+<p>The number of generalized forces in a multibody model always equals the number of generalized velocities. Determined at construction from the given model MultibodyTree object. </p>
 
 </div>
 </div>

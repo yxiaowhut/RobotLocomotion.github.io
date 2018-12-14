@@ -1,5 +1,6 @@
 var multibody__plant__test_8cc =
 [
+    [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", "classdrake_1_1multibody_1_1_multibody_plant_tester" ],
     [ "acrobot_benchmark_", "multibody__plant__test_8cc.html#abc35e616520e81f12e03ba437d203ae9", null ],
     [ "context_", "multibody__plant__test_8cc.html#ad8b2d6d03c5f48ff4e9f2b5607386d2d", null ],
     [ "derivatives_", "multibody__plant__test_8cc.html#a146ac1478019a449c3e6a81afc657a3b", null ],

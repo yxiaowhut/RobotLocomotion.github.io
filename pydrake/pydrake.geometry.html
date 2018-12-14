@@ -462,6 +462,45 @@ point pairs.</td>
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.geometry.QueryObject.ComputeSignedDistancePairwiseClosestPoints">
+<code class="descname">ComputeSignedDistancePairwiseClosestPoints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject</em><span class="sig-paren">)</span> &#x2192; List[drake::geometry::SignedDistancePair&lt;double&gt;]<a class="headerlink" href="#pydrake.geometry.QueryObject.ComputeSignedDistancePairwiseClosestPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the signed distance together with the nearest points across
+all pairs of geometries in the world. Reports both the separating
+geometries and penetrating geometries.</p>
+<p>This query provides φ(A, B), the signed distance between two objects A
+and B.</p>
+<p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
+the minimal distance between the two objects. More formally: φ =
+min(<a href="#id1"><span class="problematic" id="id2">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
+not be unique (think of two parallel planes).</p>
+</div>
+<p>If the objects touch or overlap (i.e., A ⋂ B ≠ ∅), φ ≤ 0 and can be
+interpreted as the negative penetration depth. It is the smallest
+length of the vector v, such that by shifting one object along that
+vector relative to the other, the two objects will no longer be
+overlapping. More formally, φ(A, B) = -min <a href="#id3"><span class="problematic" id="id4">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+where Tᵥ is a rigid transformation that displaces A by the vector v,
+namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
+Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
+Aₚ + v = Bₚ, Aₚ ∈ A ∩ B, Bₚ ∈ A ∩ B. These points are the witnesses to
+the penetration.</p>
+<p>This method is affected by collision filtering; geometry pairs that
+have been filtered will not produce signed distance query results.</p>
+<p>Notice that this is an O(N²) operation, where N is the number of
+geometries remaining in the world after applying collision filter. We
+report the distance between dynamic objects, and between dynamic and
+anchored objects. We DO NOT report the distance between two anchored
+objects.</p>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal"><span class="pre">near_pairs</span></code>:</dt>
+<dd>The signed distance for all unfiltered geometry pairs.</dd>
+</dl>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pydrake.geometry.QueryObject.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.QueryObject.__init__" title="Permalink to this definition">¶</a></dt>
@@ -759,6 +798,46 @@ registered.</p>
 <dt id="pydrake.geometry.SceneGraphInspector.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.SceneGraphInspector.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.SignedDistancePair">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SignedDistancePair</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.geometry.SignedDistancePair.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SignedDistancePair</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.SignedDistancePair.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.SignedDistancePair.distance">
+<code class="descname">distance</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair.distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The distance between p_A_A and p_B_B (measured in a common frame).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.SignedDistancePair.id_A">
+<code class="descname">id_A</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair.id_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the first geometry in the pair.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.SignedDistancePair.id_B">
+<code class="descname">id_B</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair.id_B" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the second geometry in the pair.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.SignedDistancePair.p_ACa">
+<code class="descname">p_ACa</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair.p_ACa" title="Permalink to this definition">¶</a></dt>
+<dd><p>The witness point on geometry A’s surface, expressed in A’s frame.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.SignedDistancePair.p_BCb">
+<code class="descname">p_BCb</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair.p_BCb" title="Permalink to this definition">¶</a></dt>
+<dd><p>The witness point on geometry B’s surface, expressed in B’s frame.</p>
 </dd></dl>
 
 </dd></dl>

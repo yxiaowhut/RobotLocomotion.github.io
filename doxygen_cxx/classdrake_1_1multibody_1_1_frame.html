@@ -119,8 +119,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a74f25457eab76e5b448584e52ac113ca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a74f25457eab76e5b448584e52ac113ca">GetFixedOffsetPoseInBody</a> (const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; T &gt; &amp;X_FQ) const</td></tr>
 <tr class="memdesc:a74f25457eab76e5b448584e52ac113ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variant of <a class="el" href="classdrake_1_1multibody_1_1_frame.html#abfb904f94c884fb2bdc67df8af5db35a" title="Given the offset pose X_FQ of a frame Q in this frame F, this method computes the pose X_BQ of frame ...">CalcOffsetPoseInBody()</a> that given the offset pose <code>X_FQ</code> of a frame Q in <code>this</code> frame F, returns the pose <code>X_BQ</code> of frame Q in the body frame B to which this frame is attached.  <a href="#a74f25457eab76e5b448584e52ac113ca">More...</a><br /></td></tr>
 <tr class="separator:a74f25457eab76e5b448584e52ac113ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99abe9e3c2ce3ab511a3099d16d7fda9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a99abe9e3c2ce3ab511a3099d16d7fda9">CalcPoseInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a99abe9e3c2ce3ab511a3099d16d7fda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and returns the pose <code>X_WF</code> of <code>this</code> frame F in the world frame W as a function of the state of the model stored in <code>context</code>.  <a href="#a99abe9e3c2ce3ab511a3099d16d7fda9">More...</a><br /></td></tr>
+<tr class="separator:a99abe9e3c2ce3ab511a3099d16d7fda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3bb7470dfc5190f85e51179e3f6fc8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#af3bb7470dfc5190f85e51179e3f6fc8c">CalcPose</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_M) const</td></tr>
+<tr class="memdesc:af3bb7470dfc5190f85e51179e3f6fc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and returns the pose <code>X_MF</code> of <code>this</code> frame F in measured in <code>frame_M</code> as a function of the state of the model stored in <code>context</code>.  <a href="#af3bb7470dfc5190f85e51179e3f6fc8c">More...</a><br /></td></tr>
+<tr class="separator:af3bb7470dfc5190f85e51179e3f6fc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e26d78710628e036f86e991d3434d4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a2e26d78710628e036f86e991d3434d4b">CalcSpatialVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a2e26d78710628e036f86e991d3434d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and returns the spatial velocity <code>V_WF</code> of <code>this</code> frame F in the world frame W as a function of the state of the model stored in <code>context</code>.  <a href="#a2e26d78710628e036f86e991d3434d4b">More...</a><br /></td></tr>
+<tr class="separator:a2e26d78710628e036f86e991d3434d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afebfd42eb5a5a2b1ff8c5d5686359f77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#afebfd42eb5a5a2b1ff8c5d5686359f77">CalcSpatialVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_M, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E) const</td></tr>
+<tr class="memdesc:afebfd42eb5a5a2b1ff8c5d5686359f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and returns the spatial velocity <code>V_MF_E</code> of <code>this</code> frame F measured in <code>frame_M</code> and expressed in <code>frame_E</code> as a function of the state of the model stored in <code>context</code>.  <a href="#afebfd42eb5a5a2b1ff8c5d5686359f77">More...</a><br /></td></tr>
+<tr class="separator:afebfd42eb5a5a2b1ff8c5d5686359f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a900020a0e377e9f90f170b9b06c0a233"><td class="memTemplParams" colspan="2">template&lt;typename ToScalar &gt; </td></tr>
-<tr class="memitem:a900020a0e377e9f90f170b9b06c0a233"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; ToScalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a900020a0e377e9f90f170b9b06c0a233">CloneToScalar</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; ToScalar &gt; &amp;tree_clone) const</td></tr>
+<tr class="memitem:a900020a0e377e9f90f170b9b06c0a233"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; ToScalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a900020a0e377e9f90f170b9b06c0a233">CloneToScalar</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; ToScalar &gt; &amp;tree_clone) const</td></tr>
 <tr class="memdesc:a900020a0e377e9f90f170b9b06c0a233"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI to <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a7316a3c9513a51dfe238ec61d119e2ef" title="Clones this Frame (templated on T) to a frame templated on double. ">DoCloneToScalar()</a> templated on the scalar type of the new clone to be created.  <a href="#a900020a0e377e9f90f170b9b06c0a233">More...</a><br /></td></tr>
 <tr class="separator:a900020a0e377e9f90f170b9b06c0a233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
@@ -142,13 +154,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload to permit constructing an unnamed frame.  <a href="#a930d3e9d3ee5044dde9f4aaaec16b78a">More...</a><br /></td></tr>
 <tr class="separator:a930d3e9d3ee5044dde9f4aaaec16b78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>These methods are meant to be called by <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#aa867ed6fe063cc08113ff54918da55a7" title="Creates a deep copy of this MultibodyTree templated on the scalar type ToScalar. ">MultibodyTree::CloneToScalar()</a> when making a clone of the entire tree or a new instance templated on a different scalar type.</p>
-<p>The only const argument to these methods is the new <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> clone under construction. Specific Frame subclasses might specify a number of prerequisites on the cloned tree and therefore require it to be at a given state of cloning. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#aa867ed6fe063cc08113ff54918da55a7" title="Creates a deep copy of this MultibodyTree templated on the scalar type ToScalar. ">MultibodyTree::CloneToScalar()</a> for a list of prerequisites that are guaranteed to be satisfied during the cloning process. </p>
+<tr><td colspan="2"><div class="groupText"><p>These methods are meant to be called by <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#aa867ed6fe063cc08113ff54918da55a7" title="Creates a deep copy of this MultibodyTree templated on the scalar type ToScalar. ">MultibodyTree::CloneToScalar()</a> when making a clone of the entire tree or a new instance templated on a different scalar type.</p>
+<p>The only const argument to these methods is the new MultibodyTree clone under construction. Specific Frame subclasses might specify a number of prerequisites on the cloned tree and therefore require it to be at a given state of cloning. See <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#aa867ed6fe063cc08113ff54918da55a7" title="Creates a deep copy of this MultibodyTree templated on the scalar type ToScalar. ">MultibodyTree::CloneToScalar()</a> for a list of prerequisites that are guaranteed to be satisfied during the cloning process. </p>
 </div></td></tr>
-<tr class="memitem:a7316a3c9513a51dfe238ec61d119e2ef"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a7316a3c9513a51dfe238ec61d119e2ef">DoCloneToScalar</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const =0</td></tr>
+<tr class="memitem:a7316a3c9513a51dfe238ec61d119e2ef"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a7316a3c9513a51dfe238ec61d119e2ef">DoCloneToScalar</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree_clone) const =0</td></tr>
 <tr class="memdesc:a7316a3c9513a51dfe238ec61d119e2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on <code>double</code>.  <a href="#a7316a3c9513a51dfe238ec61d119e2ef">More...</a><br /></td></tr>
 <tr class="separator:a7316a3c9513a51dfe238ec61d119e2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc197a1c46cd77afcf80cdafc90bab5"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a6cc197a1c46cd77afcf80cdafc90bab5">DoCloneToScalar</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
+<tr class="memitem:a6cc197a1c46cd77afcf80cdafc90bab5"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a6cc197a1c46cd77afcf80cdafc90bab5">DoCloneToScalar</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;tree_clone) const =0</td></tr>
 <tr class="memdesc:a6cc197a1c46cd77afcf80cdafc90bab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones this Frame (templated on T) to a frame templated on AutoDiffXd.  <a href="#a6cc197a1c46cd77afcf80cdafc90bab5">More...</a><br /></td></tr>
 <tr class="separator:a6cc197a1c46cd77afcf80cdafc90bab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1multibody_1_1_frame_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1multibody_1_1_frame_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_frame_base.html">FrameBase&lt; T &gt;</a></td></tr>
@@ -364,6 +376,45 @@ class drake::multibody::Frame&lt; T &gt;</h3>
 
 </div>
 </div>
+<a id="af3bb7470dfc5190f85e51179e3f6fc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3bb7470dfc5190f85e51179e3f6fc8c">&#9670;&nbsp;</a></span>CalcPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt;T&gt; CalcPose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_M</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes and returns the pose <code>X_MF</code> of <code>this</code> frame F in measured in <code>frame_M</code> as a function of the state of the model stored in <code>context</code>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a99abe9e3c2ce3ab511a3099d16d7fda9" title="Computes and returns the pose X_WF of this frame F in the world frame W as a function of the state of...">CalcPoseInWorld()</a>. </dd></dl>
+
+</div>
+</div>
 <a id="aa845b84b6bd23d0137f60c5cf9ee3b2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa845b84b6bd23d0137f60c5cf9ee3b2b">&#9670;&nbsp;</a></span>CalcPoseInBodyFrame()</h2>
 
@@ -395,6 +446,109 @@ class drake::multibody::Frame&lt; T &gt;</h3>
 
 </div>
 </div>
+<a id="a99abe9e3c2ce3ab511a3099d16d7fda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99abe9e3c2ce3ab511a3099d16d7fda9">&#9670;&nbsp;</a></span>CalcPoseInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt;T&gt; CalcPoseInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes and returns the pose <code>X_WF</code> of <code>this</code> frame F in the world frame W as a function of the state of the model stored in <code>context</code>. </p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_body.html#ac32fefa74db40501040b452da655554f" title="Returns the pose X_WB of this body B in the world frame W as a function of the state of the model sto...">Body::EvalPoseInWorld()</a> provides a more efficient way to obtain the pose for a body frame. </dd></dl>
+
+</div>
+</div>
+<a id="afebfd42eb5a5a2b1ff8c5d5686359f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afebfd42eb5a5a2b1ff8c5d5686359f77">&#9670;&nbsp;</a></span>CalcSpatialVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt;T&gt; CalcSpatialVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_E</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes and returns the spatial velocity <code>V_MF_E</code> of <code>this</code> frame F measured in <code>frame_M</code> and expressed in <code>frame_E</code> as a function of the state of the model stored in <code>context</code>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a2e26d78710628e036f86e991d3434d4b" title="Computes and returns the spatial velocity V_WF of this frame F in the world frame W as a function of ...">CalcSpatialVelocityInWorld()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a2e26d78710628e036f86e991d3434d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e26d78710628e036f86e991d3434d4b">&#9670;&nbsp;</a></span>CalcSpatialVelocityInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt;T&gt; CalcSpatialVelocityInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes and returns the spatial velocity <code>V_WF</code> of <code>this</code> frame F in the world frame W as a function of the state of the model stored in <code>context</code>. </p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_body.html#a9c07832f25dde3f8403e98c73dd24d1b" title="Returns the spatial velocity V_WB of this body B in the world frame W as a function of the state of t...">Body::EvalSpatialVelocityInWorld()</a> provides a more efficient way to obtain the spatial velocity for a body frame. </dd></dl>
+
+</div>
+</div>
 <a id="a900020a0e377e9f90f170b9b06c0a233"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a900020a0e377e9f90f170b9b06c0a233">&#9670;&nbsp;</a></span>CloneToScalar()</h2>
 
@@ -407,7 +561,7 @@ class drake::multibody::Frame&lt; T &gt;</h3>
         <tr>
           <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;ToScalar&gt; &gt; CloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; ToScalar &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; ToScalar &gt; &amp;&#160;</td>
           <td class="paramname"><em>tree_clone</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -420,7 +574,7 @@ class drake::multibody::Frame&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>NVI to <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a7316a3c9513a51dfe238ec61d119e2ef" title="Clones this Frame (templated on T) to a frame templated on double. ">DoCloneToScalar()</a> templated on the scalar type of the new clone to be created. </p>
-<p>This method is mostly intended to be called by <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#aa867ed6fe063cc08113ff54918da55a7" title="Creates a deep copy of this MultibodyTree templated on the scalar type ToScalar. ">MultibodyTree::CloneToScalar()</a>. Most users should not call this clone method directly but rather clone the entire parent <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> if needed. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html#aa867ed6fe063cc08113ff54918da55a7" title="Creates a deep copy of this MultibodyTree templated on the scalar type ToScalar. ">MultibodyTree::CloneToScalar()</a> </dd></dl>
+<p>This method is mostly intended to be called by <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#aa867ed6fe063cc08113ff54918da55a7" title="Creates a deep copy of this MultibodyTree templated on the scalar type ToScalar. ">MultibodyTree::CloneToScalar()</a>. Most users should not call this clone method directly but rather clone the entire parent MultibodyTree if needed. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#aa867ed6fe063cc08113ff54918da55a7" title="Creates a deep copy of this MultibodyTree templated on the scalar type ToScalar. ">MultibodyTree::CloneToScalar()</a> </dd></dl>
 
 </div>
 </div>
@@ -436,7 +590,7 @@ class drake::multibody::Frame&lt; T &gt;</h3>
         <tr>
           <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>tree_clone</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -466,7 +620,7 @@ class drake::multibody::Frame&lt; T &gt;</h3>
         <tr>
           <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt; &gt; DoCloneToScalar </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html">MultibodyTree</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>tree_clone</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -582,8 +736,8 @@ class drake::multibody::Frame&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a8e197bedf7aa897596ace36baca53361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e197bedf7aa897596ace36baca53361">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a486765b5bb3145d29946d6dae95a9332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486765b5bb3145d29946d6dae95a9332">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -594,7 +748,7 @@ class drake::multibody::Frame&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -608,8 +762,8 @@ class drake::multibody::Frame&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a486765b5bb3145d29946d6dae95a9332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486765b5bb3145d29946d6dae95a9332">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a8e197bedf7aa897596ace36baca53361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e197bedf7aa897596ace36baca53361">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -620,7 +774,7 @@ class drake::multibody::Frame&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

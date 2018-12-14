@@ -17,11 +17,9 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "body.h", "body_8h.html", [
       [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],
       [ "BodyFrame", "classdrake_1_1multibody_1_1_body_frame.html", "classdrake_1_1multibody_1_1_body_frame" ],
-      [ "MultibodyTree", "classdrake_1_1multibody_1_1_multibody_tree.html", "classdrake_1_1multibody_1_1_multibody_tree" ],
       [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ]
     ] ],
     [ "body_node.h", "body__node_8h.html", [
-      [ "MultibodyTree", "classdrake_1_1multibody_1_1_multibody_tree.html", "classdrake_1_1multibody_1_1_multibody_tree" ],
       [ "BodyNode", "classdrake_1_1multibody_1_1internal_1_1_body_node.html", "classdrake_1_1multibody_1_1internal_1_1_body_node" ]
     ] ],
     [ "body_node_impl.cc", "body__node__impl_8cc.html", "body__node__impl_8cc" ],
@@ -34,7 +32,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "fixed_offset_frame.cc", "fixed__offset__frame_8cc.html", null ],
     [ "fixed_offset_frame.h", "fixed__offset__frame_8h.html", [
       [ "BodyFrame", "classdrake_1_1multibody_1_1_body_frame.html", "classdrake_1_1multibody_1_1_body_frame" ],
-      [ "MultibodyTree", "classdrake_1_1multibody_1_1_multibody_tree.html", "classdrake_1_1multibody_1_1_multibody_tree" ],
       [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
       [ "FixedOffsetFrame", "classdrake_1_1multibody_1_1_fixed_offset_frame.html", "classdrake_1_1multibody_1_1_fixed_offset_frame" ]
     ] ],
@@ -76,7 +73,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "model_instance.h", "model__instance_8h.html", "model__instance_8h" ],
     [ "multibody_forces.cc", "multibody__forces_8cc.html", null ],
     [ "multibody_forces.h", "multibody__forces_8h.html", [
-      [ "MultibodyTree", "classdrake_1_1multibody_1_1_multibody_tree.html", "classdrake_1_1multibody_1_1_multibody_tree" ],
       [ "MultibodyForces", "classdrake_1_1multibody_1_1_multibody_forces.html", "classdrake_1_1multibody_1_1_multibody_forces" ]
     ] ],
     [ "multibody_tree.cc", "multibody__tree_8cc.html", "multibody__tree_8cc" ],
@@ -86,13 +82,12 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
       [ "MultibodyTreeContext", "classdrake_1_1multibody_1_1_multibody_tree_context.html", "classdrake_1_1multibody_1_1_multibody_tree_context" ]
     ] ],
     [ "multibody_tree_element.h", "multibody__tree__element_8h.html", [
-      [ "MultibodyTree", "classdrake_1_1multibody_1_1_multibody_tree.html", "classdrake_1_1multibody_1_1_multibody_tree" ],
       [ "MultibodyTreeElement< ElementType< T >, ElementIndexType >", "classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html", "classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4" ]
     ] ],
+    [ "multibody_tree_forward_decl.h", "multibody__tree__forward__decl_8h.html", "multibody__tree__forward__decl_8h" ],
     [ "multibody_tree_indexes.h", "multibody__tree__indexes_8h.html", "multibody__tree__indexes_8h" ],
     [ "multibody_tree_system.cc", "multibody__tree__system_8cc.html", null ],
     [ "multibody_tree_system.h", "multibody__tree__system_8h.html", [
-      [ "MultibodyTree", "classdrake_1_1multibody_1_1_multibody_tree.html", "classdrake_1_1multibody_1_1_multibody_tree" ],
       [ "MultibodyTreeSystem", "classdrake_1_1multibody_1_1_multibody_tree_system.html", "classdrake_1_1multibody_1_1_multibody_tree_system" ],
       [ "Traits< drake::multibody::MultibodyTreeSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1_multibody_tree_system_01_4.html", null ]
     ] ],
@@ -131,7 +126,6 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     ] ],
     [ "rigid_body.cc", "multibody_2tree_2rigid__body_8cc.html", null ],
     [ "rigid_body.h", "multibody_2tree_2rigid__body_8h.html", [
-      [ "MultibodyTree", "classdrake_1_1multibody_1_1_multibody_tree.html", "classdrake_1_1multibody_1_1_multibody_tree" ],
       [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ]
     ] ],
     [ "rotational_inertia.cc", "rotational__inertia_8cc.html", null ],

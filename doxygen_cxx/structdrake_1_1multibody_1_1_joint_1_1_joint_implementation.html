@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1multibody_1_1_joint_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>(Advanced) A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is implemented in terms of <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> elements such as bodies, mobilizers, force elements and constraints.  
+<p>(Advanced) A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is implemented in terms of MultibodyTree elements such as bodies, mobilizers, force elements and constraints.  
  <a href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#details">More...</a></p>
 
 <p><code>#include &lt;drake/multibody/tree/joint.h&gt;</code></p>
@@ -121,8 +121,8 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 struct drake::multibody::Joint&lt; T &gt;::JointImplementation</h3>
 
-<p>(Advanced) A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is implemented in terms of <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> elements such as bodies, mobilizers, force elements and constraints. </p>
-<p>This object contains the internal details of the <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> implementation for a joint. The implementation does not own the MBT elements, it just keeps references to them. This is intentionally made a protected member so that derived classes have access to its definition. </p>
+<p>(Advanced) A <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> is implemented in terms of MultibodyTree elements such as bodies, mobilizers, force elements and constraints. </p>
+<p>This object contains the internal details of the MultibodyTree implementation for a joint. The implementation does not own the MBT elements, it just keeps references to them. This is intentionally made a protected member so that derived classes have access to its definition. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a003ffd6a91f75e2a858b2fefaa2a061c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a003ffd6a91f75e2a858b2fefaa2a061c">&#9670;&nbsp;</a></span>JointImplementation() <span class="overload">[1/2]</span></h2>
