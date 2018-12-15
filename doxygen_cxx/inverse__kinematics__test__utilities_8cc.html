@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('inverse__kinematics__test__utilities_8
 <div class="textblock"><code>#include &quot;<a class="el" href="inverse__kinematics__test__utilities_8h.html">drake/multibody/inverse_kinematics/test/inverse_kinematics_test_utilities.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="find__resource_8h.html">drake/common/find_resource.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="parser_8h.html">drake/multibody/parsing/parser.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for inverse_kinematics_test_utilities.cc:</div>
 <div class="dyncontent">
@@ -108,6 +109,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html">drake::multibody</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1multibody_1_1internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1internal.html">drake::multibody::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -115,13 +118,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a97df514cee18dd5f8c9fc72b056e5dbd"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; MultibodyTree&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a97df514cee18dd5f8c9fc72b056e5dbd">ConstructTwoFreeBodies</a> ()</td></tr>
 <tr class="memdesc:a97df514cee18dd5f8c9fc72b056e5dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a MultibodyTree consisting of two free bodies.  <a href="namespacedrake_1_1multibody.html#a97df514cee18dd5f8c9fc72b056e5dbd">More...</a><br /></td></tr>
 <tr class="separator:a97df514cee18dd5f8c9fc72b056e5dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1350f024a6747443ab7a574d7c2f5c03"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1350f024a6747443ab7a574d7c2f5c03"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; multibody_plant::MultibodyPlant&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a1350f024a6747443ab7a574d7c2f5c03">ConstructTwoFreeBodiesPlant</a> ()</td></tr>
-<tr class="memdesc:a1350f024a6747443ab7a574d7c2f5c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> consisting of two free bodies.  <a href="namespacedrake_1_1multibody.html#a1350f024a6747443ab7a574d7c2f5c03">More...</a><br /></td></tr>
-<tr class="separator:a1350f024a6747443ab7a574d7c2f5c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b38bd7300b0ecfe529b24d20563214c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a2b38bd7300b0ecfe529b24d20563214c">ConstructIiwaPlant</a> (const std::string &amp;iiwa_sdf_name, <a class="el" href="classdouble.html">double</a> time_step)</td></tr>
-<tr class="memdesc:a2b38bd7300b0ecfe529b24d20563214c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> consisting of an Iiwa robot.  <a href="namespacedrake_1_1multibody.html#a2b38bd7300b0ecfe529b24d20563214c">More...</a><br /></td></tr>
-<tr class="separator:a2b38bd7300b0ecfe529b24d20563214c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2f6174954936ece815473bc3a2ca36"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aad2f6174954936ece815473bc3a2ca36"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; MultibodyPlant&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#aad2f6174954936ece815473bc3a2ca36">ConstructTwoFreeBodiesPlant</a> ()</td></tr>
+<tr class="memdesc:aad2f6174954936ece815473bc3a2ca36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> consisting of two free bodies.  <a href="namespacedrake_1_1multibody.html#aad2f6174954936ece815473bc3a2ca36">More...</a><br /></td></tr>
+<tr class="separator:aad2f6174954936ece815473bc3a2ca36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a55b8bd646895cd92f6c012ce351a0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#af1a55b8bd646895cd92f6c012ce351a0">ConstructIiwaPlant</a> (const std::string &amp;iiwa_sdf_name, <a class="el" href="classdouble.html">double</a> time_step)</td></tr>
+<tr class="memdesc:af1a55b8bd646895cd92f6c012ce351a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> consisting of an Iiwa robot.  <a href="namespacedrake_1_1multibody.html#af1a55b8bd646895cd92f6c012ce351a0">More...</a><br /></td></tr>
+<tr class="separator:af1a55b8bd646895cd92f6c012ce351a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1b559878de179a7e363846fa67f58c0"><td class="memItemLeft" align="right" valign="top">Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad1b559878de179a7e363846fa67f58c0">QuaternionToVectorWxyz</a> (const Eigen::Quaterniond &amp;q)</td></tr>
 <tr class="memdesc:ad1b559878de179a7e363846fa67f58c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an Eigen::Quaternion to a vector 4d in the order (w, x, y, z).  <a href="namespacedrake_1_1multibody.html#ad1b559878de179a7e363846fa67f58c0">More...</a><br /></td></tr>
 <tr class="separator:ad1b559878de179a7e363846fa67f58c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,10 +132,10 @@ Functions</h2></td></tr>
 <tr class="separator:a8fbbc4b9b1f005d5e07b196fa295c2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00e4d8b80930ff29042b867ac7de8c18"><td class="memItemLeft" align="right" valign="top">template std::unique_ptr&lt; MultibodyTree&lt; AutoDiffXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a00e4d8b80930ff29042b867ac7de8c18">ConstructTwoFreeBodies&lt; AutoDiffXd &gt;</a> ()</td></tr>
 <tr class="separator:a00e4d8b80930ff29042b867ac7de8c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a041603bf5bc2087fa5947184fc3bbc1a"><td class="memItemLeft" align="right" valign="top">template std::unique_ptr&lt; multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a041603bf5bc2087fa5947184fc3bbc1a">ConstructTwoFreeBodiesPlant&lt; double &gt;</a> ()</td></tr>
-<tr class="separator:a041603bf5bc2087fa5947184fc3bbc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e1d628e950bd9673bab765cca12ae9c"><td class="memItemLeft" align="right" valign="top">template std::unique_ptr&lt; multibody_plant::MultibodyPlant&lt; AutoDiffXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a3e1d628e950bd9673bab765cca12ae9c">ConstructTwoFreeBodiesPlant&lt; AutoDiffXd &gt;</a> ()</td></tr>
-<tr class="separator:a3e1d628e950bd9673bab765cca12ae9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0063636bbde0deaf89b6e6a4b32773"><td class="memItemLeft" align="right" valign="top">template std::unique_ptr&lt; MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a0a0063636bbde0deaf89b6e6a4b32773">ConstructTwoFreeBodiesPlant&lt; double &gt;</a> ()</td></tr>
+<tr class="separator:a0a0063636bbde0deaf89b6e6a4b32773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f4a52065d2a964b519f92ac5e14016"><td class="memItemLeft" align="right" valign="top">template std::unique_ptr&lt; MultibodyPlant&lt; AutoDiffXd &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a51f4a52065d2a964b519f92ac5e14016">ConstructTwoFreeBodiesPlant&lt; AutoDiffXd &gt;</a> ()</td></tr>
+<tr class="separator:a51f4a52065d2a964b519f92ac5e14016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

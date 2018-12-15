@@ -9,7 +9,7 @@ var searchData=
   ['optitracklcmframesender',['OptitrackLcmFrameSender',['../classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html',1,'drake::systems::sensors']]],
   ['optitrackposeextractor',['OptitrackPoseExtractor',['../classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html',1,'drake::manipulation::perception']]],
   ['oracularstateestimation',['OracularStateEstimation',['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_oracular_state_estimation.html',1,'drake::examples::kuka_iiwa_arm']]],
-  ['orientationconstraint',['OrientationConstraint',['../classdrake_1_1multibody_1_1internal_1_1_orientation_constraint.html',1,'drake::multibody::internal']]],
+  ['orientationconstraint',['OrientationConstraint',['../classdrake_1_1multibody_1_1_orientation_constraint.html',1,'drake::multibody']]],
   ['osqpsolver',['OsqpSolver',['../classdrake_1_1solvers_1_1_osqp_solver.html',1,'drake::solvers']]],
   ['osqpsolverdetails',['OsqpSolverDetails',['../structdrake_1_1solvers_1_1_osqp_solver_details.html',1,'drake::solvers']]],
   ['outputport',['OutputPort',['../classdrake_1_1systems_1_1_output_port.html',1,'drake::systems']]],

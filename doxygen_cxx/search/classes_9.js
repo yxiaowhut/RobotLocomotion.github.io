@@ -15,5 +15,5 @@ var searchData=
   ['jointlimitconstraintforceevaluator',['JointLimitConstraintForceEvaluator',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_joint_limit_constraint_force_evaluator.html',1,'drake::systems::trajectory_optimization']]],
   ['jointnames',['JointNames',['../struct_joint_names.html',1,'']]],
   ['jointsoftlimitparams',['JointSoftLimitParams',['../struct_joint_soft_limit_params.html',1,'']]],
-  ['junction',['Junction',['../classdrake_1_1maliput_1_1rndf_1_1_junction.html',1,'Junction'],['../classdrake_1_1maliput_1_1api_1_1_junction.html',1,'Junction'],['../classdrake_1_1maliput_1_1dragway_1_1_junction.html',1,'Junction'],['../classdrake_1_1maliput_1_1geometry__base_1_1_junction.html',1,'Junction'],['../classdrake_1_1maliput_1_1multilane_1_1_junction.html',1,'Junction']]]
+  ['junction',['Junction',['../classdrake_1_1maliput_1_1multilane_1_1_junction.html',1,'Junction'],['../classdrake_1_1maliput_1_1rndf_1_1_junction.html',1,'Junction'],['../classdrake_1_1maliput_1_1api_1_1_junction.html',1,'Junction'],['../classdrake_1_1maliput_1_1dragway_1_1_junction.html',1,'Junction'],['../classdrake_1_1maliput_1_1geometry__base_1_1_junction.html',1,'Junction']]]
 ];

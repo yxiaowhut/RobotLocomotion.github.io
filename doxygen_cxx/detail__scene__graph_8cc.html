@@ -99,10 +99,10 @@ $(document).ready(function(){initNavTree('detail__scene__graph_8cc.html','');});
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;sdf/sdf.hh&gt;</code><br />
 <code>#include &quot;<a class="el" href="geometry__instance_8h.html">drake/geometry/geometry_instance.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/multibody_plant/coulomb_friction.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="detail__common_8h.html">drake/multibody/parsing/detail_common.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="detail__ignition_8h.html">drake/multibody/parsing/detail_ignition.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="detail__path__utils_8h.html">drake/multibody/parsing/detail_path_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="coulomb__friction_8h.html">drake/multibody/plant/coulomb_friction.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for detail_scene_graph.cc:</div>
 <div class="dyncontent">
@@ -131,9 +131,9 @@ Functions</h2></td></tr>
 <tr class="separator:af8d595f48e91553a7233e3ee984bae4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0b6dac0a30dc27eaec653be4cd81056"><td class="memItemLeft" align="right" valign="top">Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#aa0b6dac0a30dc27eaec653be4cd81056">MakeGeometryPoseFromSdfCollision</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
 <tr class="separator:aa0b6dac0a30dc27eaec653be4cd81056"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72989d7f800971772b29a84014351aff"><td class="memItemLeft" align="right" valign="top">CoulombFriction&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a72989d7f800971772b29a84014351aff">MakeCoulombFrictionFromSdfCollisionOde</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
-<tr class="memdesc:a72989d7f800971772b29a84014351aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the material properties from the given sdf::Visual object.  <a href="namespacedrake_1_1multibody_1_1detail.html#a72989d7f800971772b29a84014351aff">More...</a><br /></td></tr>
-<tr class="separator:a72989d7f800971772b29a84014351aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48445aa248ebb7363d2a3be05f7c17a"><td class="memItemLeft" align="right" valign="top">CoulombFriction&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#af48445aa248ebb7363d2a3be05f7c17a">MakeCoulombFrictionFromSdfCollisionOde</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
+<tr class="memdesc:af48445aa248ebb7363d2a3be05f7c17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the material properties from the given sdf::Visual object.  <a href="namespacedrake_1_1multibody_1_1detail.html#af48445aa248ebb7363d2a3be05f7c17a">More...</a><br /></td></tr>
+<tr class="separator:af48445aa248ebb7363d2a3be05f7c17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0ffe5867d6427daab52ff5b28470c7"><td class="memItemLeft" align="right" valign="top">sdf::Visual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#abf0ffe5867d6427daab52ff5b28470c7">ResolveVisualUri</a> (const sdf::Visual &amp;original, const multibody::PackageMap &amp;package_map, const std::string &amp;root_dir)</td></tr>
 <tr class="memdesc:abf0ffe5867d6427daab52ff5b28470c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new Visual object which resolves the uri for the mesh element, if present.  <a href="namespacedrake_1_1multibody_1_1detail.html#abf0ffe5867d6427daab52ff5b28470c7">More...</a><br /></td></tr>
 <tr class="separator:abf0ffe5867d6427daab52ff5b28470c7"><td class="memSeparator" colspan="2">&#160;</td></tr>

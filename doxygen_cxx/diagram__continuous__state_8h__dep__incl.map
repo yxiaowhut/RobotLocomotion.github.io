@@ -1,101 +1,101 @@
 <map id="drake/systems/framework/diagram_continuous_state.h" name="drake/systems/framework/diagram_continuous_state.h">
-<area shape="rect" id="node2" href="$diagram_8h.html" title="drake/systems/framework\l/diagram.h" alt="" coords="7733,303,7926,344"/>
-<area shape="rect" id="node95" href="$diagram__context_8h.html" title="drake/systems/framework\l/diagram_context.h" alt="" coords="8017,102,8210,143"/>
-<area shape="rect" id="node99" href="$diagram__continuous__state_8cc.html" title="drake/systems/framework\l/diagram_continuous_state.cc" alt="" coords="8235,102,8451,143"/>
-<area shape="rect" id="node100" href="$continuous__state__test_8cc.html" title="drake/systems/framework\l/test/continuous_state\l_test.cc" alt="" coords="8475,95,8669,151"/>
-<area shape="rect" id="node3" href="$simulate__plant__to__rest_8cc.html" title="drake/attic/manipulation\l/scene_generation/simulate\l_plant_to_rest.cc" alt="" coords="13305,503,13508,559"/>
-<area shape="rect" id="node4" href="$simulate__plant__to__rest_8h.html" title="drake/attic/manipulation\l/scene_generation/simulate\l_plant_to_rest.h" alt="" coords="5021,503,5224,559"/>
-<area shape="rect" id="node5" href="$xtion_8h.html" title="drake/attic/manipulation\l/sensors/xtion.h" alt="" coords="805,399,987,441"/>
-<area shape="rect" id="node6" href="$sim__diagram__builder_8h.html" title="drake/attic/manipulation\l/util/sim_diagram_builder.h" alt="" coords="5757,511,5957,552"/>
-<area shape="rect" id="node7" href="$rigid__body__tree__clone__test_8cc.html" title="drake/attic/multibody\l/test/rigid_body_tree\l/rigid_body_tree_clone\l_test.cc" alt="" coords="5982,496,6151,567"/>
-<area shape="rect" id="node8" href="$rbt__inverse__dynamics__controller_8h.html" title="drake/attic/systems\l/controllers/rbt_inverse\l_dynamics_controller.h" alt="" coords="1835,392,2008,448"/>
-<area shape="rect" id="node9" href="$automotive__simulator_8h.html" title="drake/automotive/automotive\l_simulator.h" alt="" coords="8015,511,8233,552"/>
-<area shape="rect" id="node13" href="$framework__py__systems_8cc.html" title="drake/bindings/pydrake\l/systems/framework_py\l_systems.cc" alt="" coords="2083,392,2261,448"/>
-<area shape="rect" id="node14" href="$acrobot__plant_8cc.html" title="drake/examples/acrobot\l/acrobot_plant.cc" alt="" coords="469,511,649,552"/>
-<area shape="rect" id="node15" href="$acrobot__plant_8h.html" title="drake/examples/acrobot\l/acrobot_plant.h" alt="" coords="1011,399,1191,441"/>
-<area shape="rect" id="node17" href="$acrobot_2run__lqr_8cc.html" title="drake/examples/acrobot\l/run_lqr.cc" alt="" coords="877,511,1057,552"/>
-<area shape="rect" id="node18" href="$run__lqr__w__estimator_8cc.html" title="drake/examples/acrobot\l/run_lqr_w_estimator.cc" alt="" coords="1081,511,1261,552"/>
-<area shape="rect" id="node19" href="$run__passive_8cc.html" title="drake/examples/acrobot\l/run_passive.cc" alt="" coords="1285,511,1465,552"/>
-<area shape="rect" id="node23" href="$run__swing__up__traj__optimization_8cc.html" title="drake/examples/acrobot\l/test/run_swing_up_traj\l_optimization.cc" alt="" coords="1693,503,1873,559"/>
-<area shape="rect" id="node25" href="$allegro__single__object__simulation_8cc.html" title="This file set up a simulation environment of an allegro hand and an object. " alt="" coords="6175,503,6385,559"/>
-<area shape="rect" id="node26" href="$run__allegro__constant__load__demo_8cc.html" title="This demo sets up a simple dynamic simulation for the Allegro hand using the multi&#45;body library..." alt="" coords="6409,503,6610,559"/>
-<area shape="rect" id="node27" href="$double__pendulum__demo_8cc.html" title="drake/examples/double\l_pendulum/double_pendulum\l_demo.cc" alt="" coords="6634,503,6849,559"/>
-<area shape="rect" id="node28" href="$humanoid__controller_8h.html" title="drake/examples/humanoid\l_controller/humanoid_controller.h" alt="" coords="8359,511,8601,552"/>
-<area shape="rect" id="node30" href="$jaco__controller_8cc.html" title="Implements a controller for a Kinova Jaco arm. " alt="" coords="6873,511,7079,552"/>
-<area shape="rect" id="node31" href="$run__passive__jaco__demo_8cc.html" title="This demo sets up a simple passive dynamics simulation of the Kinova Jaco arm. " alt="" coords="7103,503,7278,559"/>
-<area shape="rect" id="node32" href="$jaco__lcm__test_8cc.html" title="drake/examples/kinova\l_jaco_arm/test/jaco_lcm\l_test.cc" alt="" coords="7302,503,7482,559"/>
-<area shape="rect" id="node33" href="$iiwa__controller_8cc.html" title="Implements a controller for a KUKA iiwa arm. " alt="" coords="5249,511,5455,552"/>
-<area shape="rect" id="node34" href="$iiwa__wsg__diagram__factory_8h.html" title="drake/examples/kuka\l_iiwa_arm/iiwa_world\l/iiwa_wsg_diagram_factory.h" alt="" coords="2961,392,3173,448"/>
-<area shape="rect" id="node37" href="$iiwa__wsg__simulation_8cc.html" title="Implements a simulation of the KUKA iiwa arm with a Schunk WSG 50 attached as an end effector..." alt="" coords="2997,511,3243,552"/>
-<area shape="rect" id="node38" href="$kuka__simulation_8cc.html" title="Implements a simulation of the KUKA iiwa arm. " alt="" coords="2311,511,2529,552"/>
-<area shape="rect" id="node39" href="$kuka__torque__controller_8h.html" title="drake/examples/kuka\l_iiwa_arm/kuka_torque\l_controller.h" alt="" coords="2387,392,2562,448"/>
-<area shape="rect" id="node42" href="$lcm__plan__interpolator_8h.html" title="drake/examples/kuka\l_iiwa_arm/lcm_plan_interpolator.h" alt="" coords="5483,399,5730,441"/>
-<area shape="rect" id="node44" href="$manipulation__station_8h.html" title="drake/examples/manipulation\l_station/manipulation_station.h" alt="" coords="3973,399,4201,441"/>
-<area shape="rect" id="node47" href="$mock__station__simulation_8cc.html" title="drake/examples/manipulation\l_station/mock_station_simulation.cc" alt="" coords="3267,511,3527,552"/>
-<area shape="rect" id="node48" href="$proof__of__life_8cc.html" title="drake/examples/manipulation\l_station/proof_of_life.cc" alt="" coords="3551,511,3769,552"/>
-<area shape="rect" id="node50" href="$manipulation__station__hardware__interface_8h.html" title="drake/examples/manipulation\l_station/manipulation_station\l_hardware_interface.h" alt="" coords="4766,392,4983,448"/>
-<area shape="rect" id="node53" href="$uniformly__accelerated__particle_8cc.html" title="drake/examples/particles\l/uniformly_accelerated\l_particle.cc" alt="" coords="7507,503,7693,559"/>
-<area shape="rect" id="node54" href="$energy__shaping__simulation_8cc.html" title="drake/examples/pendulum\l/energy_shaping_simulation.cc" alt="" coords="7718,511,7941,552"/>
-<area shape="rect" id="node55" href="$lqr__simulation_8cc.html" title="drake/examples/pendulum\l/lqr_simulation.cc" alt="" coords="8625,511,8821,552"/>
-<area shape="rect" id="node56" href="$pendulum_2passive__simulation_8cc.html" title="drake/examples/pendulum\l/passive_simulation.cc" alt="" coords="8845,511,9041,552"/>
-<area shape="rect" id="node57" href="$trajectory__optimization__simulation_8cc.html" title="drake/examples/pendulum\l/trajectory_optimization\l_simulation.cc" alt="" coords="12231,615,12427,671"/>
-<area shape="rect" id="node58" href="$manipulator__joint__space__controller_8h.html" title="drake/examples/qp_inverse\l_dynamics/manipulator_joint\l_space_controller.h" alt="" coords="9071,392,9281,448"/>
-<area shape="rect" id="node61" href="$run__quadrotor__dynamics_8cc.html" title="This demo sets up a passive Quadrotor plant in a world described by the warehouse model..." alt="" coords="9545,511,9751,552"/>
-<area shape="rect" id="node62" href="$run__quadrotor__lqr_8cc.html" title="This demo sets up a controlled Quadrotor that uses a Linear Quadratic Regulator to (locally) stabiliz..." alt="" coords="9775,511,9969,552"/>
-<area shape="rect" id="node63" href="$quadrotor__dynamics__test_8cc.html" title="drake/examples/quadrotor\l/test/quadrotor_dynamics\l_test.cc" alt="" coords="9993,503,10188,559"/>
-<area shape="rect" id="node64" href="$rod2d__sim_8cc.html" title="drake/examples/rod2d\l/rod2d_sim.cc" alt="" coords="10212,511,10380,552"/>
-<area shape="rect" id="node65" href="$scene__graph_2bouncing__ball__run__dynamics_8cc.html" title="drake/examples/scene\l_graph/bouncing_ball\l_run_dynamics.cc" alt="" coords="10405,503,10574,559"/>
-<area shape="rect" id="node66" href="$schunk__wsg__simulation_8cc.html" title="Implements a simulation of the Schunk WSG 50 gripper. " alt="" coords="14653,511,14885,552"/>
-<area shape="rect" id="node67" href="$plot__limit__cycle_8cc.html" title="drake/examples/van\l_der_pol/plot_limit\l_cycle.cc" alt="" coords="10599,503,10753,559"/>
-<area shape="rect" id="node68" href="$schunk__wsg__controller_8h.html" title="drake/manipulation\l/schunk_wsg/schunk_wsg\l_controller.h" alt="" coords="14233,392,14421,448"/>
-<area shape="rect" id="node71" href="$schunk__wsg__plain__controller_8h.html" title="drake/manipulation\l/schunk_wsg/schunk_wsg\l_plain_controller.h" alt="" coords="13829,392,14017,448"/>
-<area shape="rect" id="node76" href="$controlled__spring__mass__system_8h.html" title="drake/systems/analysis\l/test_utilities/controlled\l_spring_mass_system.h" alt="" coords="10851,392,11029,448"/>
-<area shape="rect" id="node80" href="$inverse__dynamics__controller_8h.html" title="drake/systems/controllers\l/inverse_dynamics_controller.h" alt="" coords="4502,399,4727,441"/>
-<area shape="rect" id="node81" href="$pid__controlled__system_8h.html" title="drake/systems/controllers\l/pid_controlled_system.h" alt="" coords="12594,511,12785,552"/>
-<area shape="rect" id="node82" href="$pid__controlled__system__test_8cc.html" title="drake/systems/controllers\l/test/pid_controlled_system\l_test.cc" alt="" coords="12761,615,12964,671"/>
-<area shape="rect" id="node83" href="$linear__model__predictive__controller__test_8cc.html" title="drake/systems/controllers\l/test/linear_model_predictive\l_controller_test.cc" alt="" coords="11186,503,11398,559"/>
-<area shape="rect" id="node84" href="$diagram_8cc.html" title="drake/systems/framework\l/diagram.cc" alt="" coords="12019,399,12213,441"/>
-<area shape="rect" id="node85" href="$diagram__builder_8h.html" title="drake/systems/framework\l/diagram_builder.h" alt="" coords="8082,399,8275,441"/>
-<area shape="rect" id="node86" href="$diagram__builder__test_8cc.html" title="drake/systems/framework\l/test/diagram_builder\l_test.cc" alt="" coords="11422,503,11615,559"/>
-<area shape="rect" id="node87" href="$diagram__test_8cc.html" title="drake/systems/framework\l/test/diagram_test.cc" alt="" coords="11639,511,11833,552"/>
-<area shape="rect" id="node88" href="$output__port__test_8cc.html" title="drake/systems/framework\l/test/output_port_test.cc" alt="" coords="12098,511,12291,552"/>
-<area shape="rect" id="node89" href="$connect__lcm__scope__test_8cc.html" title="drake/systems/lcm/test\l/connect_lcm_scope_test.cc" alt="" coords="12367,511,12569,552"/>
-<area shape="rect" id="node90" href="$random__source__test_8cc.html" title="drake/systems/primitives\l/test/random_source_test.cc" alt="" coords="12860,511,13065,552"/>
-<area shape="rect" id="node91" href="$beam__model__test_8cc.html" title="drake/systems/sensors\l/test/beam_model_test.cc" alt="" coords="13090,511,13281,552"/>
-<area shape="rect" id="node92" href="$rgbd__camera__test_8cc.html" title="drake/systems/sensors\l/test/rgbd_camera_test.cc" alt="" coords="14910,511,15101,552"/>
-<area shape="rect" id="node93" href="$discrete__derivative_8h.html" title="drake/systems/primitives\l/discrete_derivative.h" alt="" coords="4262,399,4450,441"/>
-<area shape="rect" id="node94" href="$rgbd__camera_8h.html" title="drake/systems/sensors\l/rgbd_camera.h" alt="" coords="14834,399,15006,441"/>
-<area shape="rect" id="node10" href="$automotive__demo_8cc.html" title="drake/automotive/automotive\l_demo.cc" alt="" coords="8015,622,8233,663"/>
-<area shape="rect" id="node11" href="$automotive__simulator_8cc.html" title="drake/automotive/automotive\l_simulator.cc" alt="" coords="7774,622,7991,663"/>
-<area shape="rect" id="node12" href="$automotive__simulator__test_8cc.html" title="drake/automotive/test\l/automotive_simulator\l_test.cc" alt="" coords="8257,615,8428,671"/>
-<area shape="rect" id="node16" href="$acrobot__py_8cc.html" title="drake/bindings/pydrake\l/examples/acrobot_py.cc" alt="" coords="260,511,444,552"/>
-<area shape="rect" id="node20" href="$run__plant__w__lcm_8cc.html" title="drake/examples/acrobot\l/run_plant_w_lcm.cc" alt="" coords="1489,511,1669,552"/>
-<area shape="rect" id="node21" href="$run__swing__up_8cc.html" title="drake/examples/acrobot\l/run_swing_up.cc" alt="" coords="673,622,853,663"/>
-<area shape="rect" id="node22" href="$spong__controller_8h.html" title="drake/examples/acrobot\l/spong_controller.h" alt="" coords="673,511,853,552"/>
-<area shape="rect" id="node24" href="$acrobot_2test_2urdf__dynamics__test_8cc.html" title="drake/examples/acrobot\l/test/urdf_dynamics_test.cc" alt="" coords="34,511,235,552"/>
-<area shape="rect" id="node29" href="$valkyrie__balancing__demo_8cc.html" title="drake/examples/humanoid\l_controller/valkyrie_balancing\l_demo.cc" alt="" coords="8452,615,8671,671"/>
-<area shape="rect" id="node35" href="$iiwa__wsg__diagram__factory_8cc.html" title="drake/examples/kuka\l_iiwa_arm/iiwa_world\l/iiwa_wsg_diagram_factory.cc" alt="" coords="2753,503,2972,559"/>
-<area shape="rect" id="node36" href="$iiwa__wsg__diagram__factory__test_8cc.html" title="drake/examples/kuka\l_iiwa_arm/iiwa_world\l/test/iiwa_wsg_diagram\l_factory_test.cc" alt="" coords="2553,496,2729,567"/>
-<area shape="rect" id="node40" href="$kuka__torque__controller_8cc.html" title="drake/examples/kuka\l_iiwa_arm/kuka_torque\l_controller.cc" alt="" coords="2111,503,2286,559"/>
-<area shape="rect" id="node41" href="$kuka__torque__controller__test_8cc.html" title="drake/examples/kuka\l_iiwa_arm/test/kuka\l_torque_controller_test.cc" alt="" coords="1897,503,2087,559"/>
-<area shape="rect" id="node43" href="$lcm__plan__interpolator_8cc.html" title="drake/examples/kuka\l_iiwa_arm/lcm_plan_interpolator.cc" alt="" coords="5480,511,5733,552"/>
-<area shape="rect" id="node45" href="$manipulation__station__py_8cc.html" title="drake/bindings/pydrake\l/examples/manipulation\l_station_py.cc" alt="" coords="4034,503,4214,559"/>
-<area shape="rect" id="node46" href="$manipulation__station_8cc.html" title="drake/examples/manipulation\l_station/manipulation_station.cc" alt="" coords="4239,511,4473,552"/>
-<area shape="rect" id="node49" href="$manipulation__station__test_8cc.html" title="drake/examples/manipulation\l_station/test/manipulation\l_station_test.cc" alt="" coords="3793,503,4010,559"/>
-<area shape="rect" id="node51" href="$manipulation__station__hardware__interface_8cc.html" title="drake/examples/manipulation\l_station/manipulation_station\l_hardware_interface.cc" alt="" coords="4779,503,4997,559"/>
-<area shape="rect" id="node52" href="$manipulation__station__hardware__interface__test_8cc.html" title="drake/examples/manipulation\l_station/test/manipulation\l_station_hardware_interface_test.cc" alt="" coords="4498,503,4755,559"/>
-<area shape="rect" id="node59" href="$manipulator__joint__space__controller_8cc.html" title="drake/examples/qp_inverse\l_dynamics/manipulator_joint\l_space_controller.cc" alt="" coords="9311,503,9521,559"/>
-<area shape="rect" id="node60" href="$manipulator__joint__space__controller__test_8cc.html" title="drake/examples/qp_inverse\l_dynamics/test/manipulator\l_joint_space_controller_test.cc" alt="" coords="9065,503,9287,559"/>
-<area shape="rect" id="node69" href="$schunk__wsg__controller_8cc.html" title="drake/manipulation\l/schunk_wsg/schunk_wsg\l_controller.cc" alt="" coords="14233,503,14421,559"/>
-<area shape="rect" id="node70" href="$schunk__wsg__controller__test_8cc.html" title="drake/manipulation\l/schunk_wsg/test/schunk\l_wsg_controller_test.cc" alt="" coords="14445,503,14629,559"/>
-<area shape="rect" id="node72" href="$multi__arm__with__gripper__demo_8cc.html" title="drake/examples/kuka\l_iiwa_arm/iiwa_world\l/multi_arm_with_gripper\l_demo.cc" alt="" coords="14027,496,14208,567"/>
-<area shape="rect" id="node73" href="$schunk__wsg__lift__test_8cc.html" title="This file implements a test that the Schunk WSG50 gripper can grip a box which is sitting on the worl..." alt="" coords="12559,615,12737,671"/>
-<area shape="rect" id="node74" href="$simulated__schunk__wsg__system__test_8cc.html" title="drake/examples/schunk\l_wsg/test/simulated_schunk\l_wsg_system_test.cc" alt="" coords="13533,503,13739,559"/>
-<area shape="rect" id="node75" href="$schunk__wsg__plain__controller_8cc.html" title="drake/manipulation\l/schunk_wsg/schunk_wsg\l_plain_controller.cc" alt="" coords="13763,503,13951,559"/>
-<area shape="rect" id="node77" href="$simulator__test_8cc.html" title="drake/systems/analysis\l/test/simulator_test.cc" alt="" coords="10777,511,10953,552"/>
-<area shape="rect" id="node78" href="$controlled__spring__mass__system_8cc.html" title="drake/systems/analysis\l/test_utilities/controlled\l_spring_mass_system.cc" alt="" coords="10977,503,11161,559"/>
-<area shape="rect" id="node79" href="$controlled__spring__mass__system__test_8cc.html" title="drake/systems/analysis\l/test_utilities/test/controlled\l_spring_mass_system_test.cc" alt="" coords="11857,503,12073,559"/>
-<area shape="rect" id="node96" href="$diagram__context_8cc.html" title="drake/systems/framework\l/diagram_context.cc" alt="" coords="7691,206,7885,247"/>
-<area shape="rect" id="node97" href="$diagram__output__port_8h.html" title="drake/systems/framework\l/diagram_output_port.h" alt="" coords="7909,206,8102,247"/>
-<area shape="rect" id="node98" href="$diagram__context__test_8cc.html" title="drake/systems/framework\l/test/diagram_context\l_test.cc" alt="" coords="8126,199,8319,255"/>
+<area shape="rect" id="node2" href="$diagram_8h.html" title="drake/systems/framework\l/diagram.h" alt="" coords="8864,303,9057,344"/>
+<area shape="rect" id="node95" href="$diagram__context_8h.html" title="drake/systems/framework\l/diagram_context.h" alt="" coords="9200,102,9393,143"/>
+<area shape="rect" id="node99" href="$diagram__continuous__state_8cc.html" title="drake/systems/framework\l/diagram_continuous_state.cc" alt="" coords="9418,102,9634,143"/>
+<area shape="rect" id="node100" href="$continuous__state__test_8cc.html" title="drake/systems/framework\l/test/continuous_state\l_test.cc" alt="" coords="9659,95,9852,151"/>
+<area shape="rect" id="node3" href="$simulate__plant__to__rest_8cc.html" title="drake/attic/manipulation\l/scene_generation/simulate\l_plant_to_rest.cc" alt="" coords="4685,503,4887,559"/>
+<area shape="rect" id="node4" href="$simulate__plant__to__rest_8h.html" title="drake/attic/manipulation\l/scene_generation/simulate\l_plant_to_rest.h" alt="" coords="3821,503,4023,559"/>
+<area shape="rect" id="node5" href="$xtion_8h.html" title="drake/attic/manipulation\l/sensors/xtion.h" alt="" coords="11676,399,11859,441"/>
+<area shape="rect" id="node6" href="$sim__diagram__builder_8h.html" title="drake/attic/manipulation\l/util/sim_diagram_builder.h" alt="" coords="4047,511,4247,552"/>
+<area shape="rect" id="node7" href="$rigid__body__tree__clone__test_8cc.html" title="drake/attic/multibody\l/test/rigid_body_tree\l/rigid_body_tree_clone\l_test.cc" alt="" coords="4272,496,4441,567"/>
+<area shape="rect" id="node8" href="$rbt__inverse__dynamics__controller_8h.html" title="drake/attic/systems\l/controllers/rbt_inverse\l_dynamics_controller.h" alt="" coords="11883,392,12057,448"/>
+<area shape="rect" id="node9" href="$rgbd__camera_8h.html" title="drake/attic/systems\l/sensors/rgbd_camera.h" alt="" coords="12081,399,12259,441"/>
+<area shape="rect" id="node10" href="$rgbd__camera__test_8cc.html" title="drake/attic/systems\l/sensors/test/rgbd_camera\l_test.cc" alt="" coords="4466,503,4661,559"/>
+<area shape="rect" id="node11" href="$automotive__simulator_8h.html" title="drake/automotive/automotive\l_simulator.h" alt="" coords="6243,511,6460,552"/>
+<area shape="rect" id="node15" href="$framework__py__systems_8cc.html" title="drake/bindings/pydrake\l/systems/framework_py\l_systems.cc" alt="" coords="12283,392,12462,448"/>
+<area shape="rect" id="node16" href="$acrobot__plant_8cc.html" title="drake/examples/acrobot\l/acrobot_plant.cc" alt="" coords="1716,511,1896,552"/>
+<area shape="rect" id="node17" href="$acrobot__plant_8h.html" title="drake/examples/acrobot\l/acrobot_plant.h" alt="" coords="900,399,1080,441"/>
+<area shape="rect" id="node19" href="$acrobot_2run__lqr_8cc.html" title="drake/examples/acrobot\l/run_lqr.cc" alt="" coords="5,511,185,552"/>
+<area shape="rect" id="node20" href="$run__lqr__w__estimator_8cc.html" title="drake/examples/acrobot\l/run_lqr_w_estimator.cc" alt="" coords="1308,511,1488,552"/>
+<area shape="rect" id="node21" href="$run__passive_8cc.html" title="drake/examples/acrobot\l/run_passive.cc" alt="" coords="1512,511,1692,552"/>
+<area shape="rect" id="node25" href="$run__swing__up__traj__optimization_8cc.html" title="drake/examples/acrobot\l/test/run_swing_up_traj\l_optimization.cc" alt="" coords="900,503,1080,559"/>
+<area shape="rect" id="node27" href="$allegro__single__object__simulation_8cc.html" title="This file set up a simulation environment of an allegro hand and an object. " alt="" coords="4912,503,5121,559"/>
+<area shape="rect" id="node28" href="$run__allegro__constant__load__demo_8cc.html" title="This demo sets up a simple dynamic simulation for the Allegro hand using the multi&#45;body library..." alt="" coords="5145,503,5347,559"/>
+<area shape="rect" id="node29" href="$double__pendulum__demo_8cc.html" title="drake/examples/double\l_pendulum/double_pendulum\l_demo.cc" alt="" coords="5371,503,5585,559"/>
+<area shape="rect" id="node30" href="$humanoid__controller_8h.html" title="drake/examples/humanoid\l_controller/humanoid_controller.h" alt="" coords="6484,511,6725,552"/>
+<area shape="rect" id="node32" href="$jaco__controller_8cc.html" title="Implements a controller for a Kinova Jaco arm. " alt="" coords="5609,511,5816,552"/>
+<area shape="rect" id="node33" href="$run__passive__jaco__demo_8cc.html" title="This demo sets up a simple passive dynamics simulation of the Kinova Jaco arm. " alt="" coords="5840,503,6015,559"/>
+<area shape="rect" id="node34" href="$jaco__lcm__test_8cc.html" title="drake/examples/kinova\l_jaco_arm/test/jaco_lcm\l_test.cc" alt="" coords="6039,503,6219,559"/>
+<area shape="rect" id="node35" href="$iiwa__controller_8cc.html" title="Implements a controller for a KUKA iiwa arm. " alt="" coords="3100,511,3307,552"/>
+<area shape="rect" id="node36" href="$iiwa__wsg__diagram__factory_8h.html" title="drake/examples/kuka\l_iiwa_arm/iiwa_world\l/iiwa_wsg_diagram_factory.h" alt="" coords="2248,392,2460,448"/>
+<area shape="rect" id="node39" href="$iiwa__wsg__simulation_8cc.html" title="Implements a simulation of the KUKA iiwa arm with a Schunk WSG 50 attached as an end effector..." alt="" coords="2121,511,2368,552"/>
+<area shape="rect" id="node40" href="$kuka__simulation_8cc.html" title="Implements a simulation of the KUKA iiwa arm. " alt="" coords="12506,511,12725,552"/>
+<area shape="rect" id="node41" href="$kuka__torque__controller_8h.html" title="drake/examples/kuka\l_iiwa_arm/kuka_torque\l_controller.h" alt="" coords="11127,392,11301,448"/>
+<area shape="rect" id="node44" href="$lcm__plan__interpolator_8h.html" title="drake/examples/kuka\l_iiwa_arm/lcm_plan_interpolator.h" alt="" coords="3547,399,3793,441"/>
+<area shape="rect" id="node46" href="$manipulation__station_8h.html" title="drake/examples/manipulation\l_station/manipulation_station.h" alt="" coords="13121,399,13349,441"/>
+<area shape="rect" id="node49" href="$mock__station__simulation_8cc.html" title="drake/examples/manipulation\l_station/mock_station_simulation.cc" alt="" coords="12749,511,13009,552"/>
+<area shape="rect" id="node50" href="$proof__of__life_8cc.html" title="drake/examples/manipulation\l_station/proof_of_life.cc" alt="" coords="13533,511,13751,552"/>
+<area shape="rect" id="node52" href="$manipulation__station__hardware__interface_8h.html" title="drake/examples/manipulation\l_station/manipulation_station\l_hardware_interface.h" alt="" coords="13885,392,14103,448"/>
+<area shape="rect" id="node55" href="$uniformly__accelerated__particle_8cc.html" title="drake/examples/particles\l/uniformly_accelerated\l_particle.cc" alt="" coords="7869,503,8055,559"/>
+<area shape="rect" id="node56" href="$energy__shaping__simulation_8cc.html" title="drake/examples/pendulum\l/energy_shaping_simulation.cc" alt="" coords="8080,511,8303,552"/>
+<area shape="rect" id="node57" href="$lqr__simulation_8cc.html" title="drake/examples/pendulum\l/lqr_simulation.cc" alt="" coords="8327,511,8523,552"/>
+<area shape="rect" id="node58" href="$pendulum_2passive__simulation_8cc.html" title="drake/examples/pendulum\l/passive_simulation.cc" alt="" coords="8547,511,8743,552"/>
+<area shape="rect" id="node59" href="$trajectory__optimization__simulation_8cc.html" title="drake/examples/pendulum\l/trajectory_optimization\l_simulation.cc" alt="" coords="8019,615,8215,671"/>
+<area shape="rect" id="node60" href="$manipulator__joint__space__controller_8h.html" title="drake/examples/qp_inverse\l_dynamics/manipulator_joint\l_space_controller.h" alt="" coords="8855,392,9066,448"/>
+<area shape="rect" id="node63" href="$run__quadrotor__dynamics_8cc.html" title="This demo sets up a passive Quadrotor plant in a world described by the warehouse model..." alt="" coords="9247,511,9453,552"/>
+<area shape="rect" id="node64" href="$run__quadrotor__lqr_8cc.html" title="This demo sets up a controlled Quadrotor that uses a Linear Quadratic Regulator to (locally) stabiliz..." alt="" coords="9477,511,9671,552"/>
+<area shape="rect" id="node65" href="$quadrotor__dynamics__test_8cc.html" title="drake/examples/quadrotor\l/test/quadrotor_dynamics\l_test.cc" alt="" coords="9695,503,9890,559"/>
+<area shape="rect" id="node66" href="$rod2d__sim_8cc.html" title="drake/examples/rod2d\l/rod2d_sim.cc" alt="" coords="9914,511,10082,552"/>
+<area shape="rect" id="node67" href="$scene__graph_2bouncing__ball__run__dynamics_8cc.html" title="drake/examples/scene\l_graph/bouncing_ball\l_run_dynamics.cc" alt="" coords="10107,503,10276,559"/>
+<area shape="rect" id="node68" href="$schunk__wsg__simulation_8cc.html" title="Implements a simulation of the Schunk WSG 50 gripper. " alt="" coords="2843,511,3075,552"/>
+<area shape="rect" id="node69" href="$plot__limit__cycle_8cc.html" title="drake/examples/van\l_der_pol/plot_limit\l_cycle.cc" alt="" coords="10301,503,10455,559"/>
+<area shape="rect" id="node70" href="$schunk__wsg__controller_8h.html" title="drake/manipulation\l/schunk_wsg/schunk_wsg\l_controller.h" alt="" coords="2865,392,3053,448"/>
+<area shape="rect" id="node73" href="$schunk__wsg__plain__controller_8h.html" title="drake/manipulation\l/schunk_wsg/schunk_wsg\l_plain_controller.h" alt="" coords="7004,392,7192,448"/>
+<area shape="rect" id="node78" href="$inverse__kinematics__test__utilities_8h.html" title="drake/multibody/inverse\l_kinematics/test/inverse\l_kinematics_test_utilities.h" alt="" coords="14496,392,14697,448"/>
+<area shape="rect" id="node81" href="$controlled__spring__mass__system_8h.html" title="drake/systems/analysis\l/test_utilities/controlled\l_spring_mass_system.h" alt="" coords="12699,392,12878,448"/>
+<area shape="rect" id="node82" href="$inverse__dynamics__controller_8h.html" title="drake/systems/controllers\l/inverse_dynamics_controller.h" alt="" coords="11427,399,11652,441"/>
+<area shape="rect" id="node83" href="$pid__controlled__system_8h.html" title="drake/systems/controllers\l/pid_controlled_system.h" alt="" coords="7603,511,7793,552"/>
+<area shape="rect" id="node84" href="$pid__controlled__system__test_8cc.html" title="drake/systems/controllers\l/test/pid_controlled_system\l_test.cc" alt="" coords="7597,615,7799,671"/>
+<area shape="rect" id="node85" href="$linear__model__predictive__controller__test_8cc.html" title="drake/systems/controllers\l/test/linear_model_predictive\l_controller_test.cc" alt="" coords="10480,503,10692,559"/>
+<area shape="rect" id="node86" href="$diagram_8cc.html" title="drake/systems/framework\l/diagram.cc" alt="" coords="12903,399,13096,441"/>
+<area shape="rect" id="node87" href="$diagram__builder_8h.html" title="drake/systems/framework\l/diagram_builder.h" alt="" coords="7443,399,7636,441"/>
+<area shape="rect" id="node88" href="$diagram__builder__test_8cc.html" title="drake/systems/framework\l/test/diagram_builder\l_test.cc" alt="" coords="10716,503,10909,559"/>
+<area shape="rect" id="node89" href="$diagram__test_8cc.html" title="drake/systems/framework\l/test/diagram_test.cc" alt="" coords="10933,511,11127,552"/>
+<area shape="rect" id="node90" href="$output__port__test_8cc.html" title="drake/systems/framework\l/test/output_port_test.cc" alt="" coords="11151,511,11344,552"/>
+<area shape="rect" id="node91" href="$connect__lcm__scope__test_8cc.html" title="drake/systems/lcm/test\l/connect_lcm_scope_test.cc" alt="" coords="11369,511,11571,552"/>
+<area shape="rect" id="node92" href="$random__source__test_8cc.html" title="drake/systems/primitives\l/test/random_source_test.cc" alt="" coords="11595,511,11801,552"/>
+<area shape="rect" id="node93" href="$beam__model__test_8cc.html" title="drake/systems/sensors\l/test/beam_model_test.cc" alt="" coords="11825,511,12016,552"/>
+<area shape="rect" id="node94" href="$discrete__derivative_8h.html" title="drake/systems/primitives\l/discrete_derivative.h" alt="" coords="12487,399,12675,441"/>
+<area shape="rect" id="node12" href="$automotive__demo_8cc.html" title="drake/automotive/automotive\l_demo.cc" alt="" coords="6007,622,6224,663"/>
+<area shape="rect" id="node13" href="$automotive__simulator_8cc.html" title="drake/automotive/automotive\l_simulator.cc" alt="" coords="6248,622,6465,663"/>
+<area shape="rect" id="node14" href="$automotive__simulator__test_8cc.html" title="drake/automotive/test\l/automotive_simulator\l_test.cc" alt="" coords="7823,615,7994,671"/>
+<area shape="rect" id="node18" href="$acrobot__py_8cc.html" title="drake/bindings/pydrake\l/examples/acrobot_py.cc" alt="" coords="435,511,619,552"/>
+<area shape="rect" id="node22" href="$run__plant__w__lcm_8cc.html" title="drake/examples/acrobot\l/run_plant_w_lcm.cc" alt="" coords="1104,511,1284,552"/>
+<area shape="rect" id="node23" href="$run__swing__up_8cc.html" title="drake/examples/acrobot\l/run_swing_up.cc" alt="" coords="772,622,952,663"/>
+<area shape="rect" id="node24" href="$spong__controller_8h.html" title="drake/examples/acrobot\l/spong_controller.h" alt="" coords="644,511,824,552"/>
+<area shape="rect" id="node26" href="$acrobot_2test_2urdf__dynamics__test_8cc.html" title="drake/examples/acrobot\l/test/urdf_dynamics_test.cc" alt="" coords="209,511,411,552"/>
+<area shape="rect" id="node31" href="$valkyrie__balancing__demo_8cc.html" title="drake/examples/humanoid\l_controller/valkyrie_balancing\l_demo.cc" alt="" coords="6495,615,6714,671"/>
+<area shape="rect" id="node37" href="$iiwa__wsg__diagram__factory_8cc.html" title="drake/examples/kuka\l_iiwa_arm/iiwa_world\l/iiwa_wsg_diagram_factory.cc" alt="" coords="2393,503,2611,559"/>
+<area shape="rect" id="node38" href="$iiwa__wsg__diagram__factory__test_8cc.html" title="drake/examples/kuka\l_iiwa_arm/iiwa_world\l/test/iiwa_wsg_diagram\l_factory_test.cc" alt="" coords="1921,496,2097,567"/>
+<area shape="rect" id="node42" href="$kuka__torque__controller_8cc.html" title="drake/examples/kuka\l_iiwa_arm/kuka_torque\l_controller.cc" alt="" coords="12040,503,12215,559"/>
+<area shape="rect" id="node43" href="$kuka__torque__controller__test_8cc.html" title="drake/examples/kuka\l_iiwa_arm/test/kuka\l_torque_controller_test.cc" alt="" coords="12291,503,12481,559"/>
+<area shape="rect" id="node45" href="$lcm__plan__interpolator_8cc.html" title="drake/examples/kuka\l_iiwa_arm/lcm_plan_interpolator.cc" alt="" coords="3543,511,3797,552"/>
+<area shape="rect" id="node47" href="$manipulation__station__py_8cc.html" title="drake/bindings/pydrake\l/examples/manipulation\l_station_py.cc" alt="" coords="14016,503,14196,559"/>
+<area shape="rect" id="node48" href="$manipulation__station_8cc.html" title="drake/examples/manipulation\l_station/manipulation_station.cc" alt="" coords="13033,511,13267,552"/>
+<area shape="rect" id="node51" href="$manipulation__station__test_8cc.html" title="drake/examples/manipulation\l_station/test/manipulation\l_station_test.cc" alt="" coords="13292,503,13509,559"/>
+<area shape="rect" id="node53" href="$manipulation__station__hardware__interface_8cc.html" title="drake/examples/manipulation\l_station/manipulation_station\l_hardware_interface.cc" alt="" coords="13775,503,13992,559"/>
+<area shape="rect" id="node54" href="$manipulation__station__hardware__interface__test_8cc.html" title="drake/examples/manipulation\l_station/test/manipulation\l_station_hardware_interface_test.cc" alt="" coords="14220,503,14477,559"/>
+<area shape="rect" id="node61" href="$manipulator__joint__space__controller_8cc.html" title="drake/examples/qp_inverse\l_dynamics/manipulator_joint\l_space_controller.cc" alt="" coords="9013,503,9223,559"/>
+<area shape="rect" id="node62" href="$manipulator__joint__space__controller__test_8cc.html" title="drake/examples/qp_inverse\l_dynamics/test/manipulator\l_joint_space_controller_test.cc" alt="" coords="8767,503,8989,559"/>
+<area shape="rect" id="node71" href="$schunk__wsg__controller_8cc.html" title="drake/manipulation\l/schunk_wsg/schunk_wsg\l_controller.cc" alt="" coords="3331,503,3519,559"/>
+<area shape="rect" id="node72" href="$schunk__wsg__controller__test_8cc.html" title="drake/manipulation\l/schunk_wsg/test/schunk\l_wsg_controller_test.cc" alt="" coords="2635,503,2819,559"/>
+<area shape="rect" id="node74" href="$multi__arm__with__gripper__demo_8cc.html" title="drake/examples/kuka\l_iiwa_arm/iiwa_world\l/multi_arm_with_gripper\l_demo.cc" alt="" coords="6750,496,6931,567"/>
+<area shape="rect" id="node75" href="$schunk__wsg__lift__test_8cc.html" title="This file implements a test that the Schunk WSG50 gripper can grip a box which is sitting on the worl..." alt="" coords="7395,615,7572,671"/>
+<area shape="rect" id="node76" href="$simulated__schunk__wsg__system__test_8cc.html" title="drake/examples/schunk\l_wsg/test/simulated_schunk\l_wsg_system_test.cc" alt="" coords="7219,503,7425,559"/>
+<area shape="rect" id="node77" href="$schunk__wsg__plain__controller_8cc.html" title="drake/manipulation\l/schunk_wsg/schunk_wsg\l_plain_controller.cc" alt="" coords="7007,503,7195,559"/>
+<area shape="rect" id="node79" href="$angle__between__vectors__constraint__test_8cc.html" title="drake/multibody/inverse\l_kinematics/test/angle\l_between_vectors_constraint\l_test.cc" alt="" coords="14716,496,14928,567"/>
+<area shape="rect" id="node80" href="$gaze__target__constraint__test_8cc.html" title="drake/multibody/inverse\l_kinematics/test/gaze\l_target_constraint_test.cc" alt="" coords="14501,503,14692,559"/>
+<area shape="rect" id="node96" href="$diagram__context_8cc.html" title="drake/systems/framework\l/diagram_context.cc" alt="" coords="15053,206,15247,247"/>
+<area shape="rect" id="node97" href="$diagram__output__port_8h.html" title="drake/systems/framework\l/diagram_output_port.h" alt="" coords="9268,206,9461,247"/>
+<area shape="rect" id="node98" href="$diagram__context__test_8cc.html" title="drake/systems/framework\l/test/diagram_context\l_test.cc" alt="" coords="8999,199,9192,255"/>
 </map>

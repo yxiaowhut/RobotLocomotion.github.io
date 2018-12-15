@@ -759,7 +759,7 @@ Friends</h2></td></tr>
 <p>Derived classes must implement this so that it performs the complete deep copy of the context, including all base class members but not fixing up base class pointers. </p>
 <p>To do that, implement a protected copy constructor that inherits from the base class copy constructor (which doesn't repair the pointers), then implement <a class="el" href="classdrake_1_1systems_1_1_context_base.html#a41778cd897c51068829979a180db058b" title="Derived classes must implement this so that it performs the complete deep copy of the context...">DoCloneWithoutPointers()</a> as <code>return unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes. ">ContextBase</a>&gt;(new DerivedType(*this));</code>. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html#a2cebca23cc4b76f4506dae5d968a09fd">LeafContext&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html#a2cebca23cc4b76f4506dae5d968a09fd">LeafContext&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html#a2cebca23cc4b76f4506dae5d968a09fd">LeafContext&lt; AutoDiffXd &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html#a2cebca23cc4b76f4506dae5d968a09fd">LeafContext&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_leaf_context.html#a2cebca23cc4b76f4506dae5d968a09fd">LeafContext&lt; double &gt;</a>.</p>
 
 </div>
 </div>

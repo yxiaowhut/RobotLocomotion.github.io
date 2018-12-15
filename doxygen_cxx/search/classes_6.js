@@ -4,7 +4,7 @@ var searchData=
   ['gazeconstraint',['GazeConstraint',['../class_gaze_constraint.html',1,'']]],
   ['gazedirconstraint',['GazeDirConstraint',['../class_gaze_dir_constraint.html',1,'']]],
   ['gazeorientconstraint',['GazeOrientConstraint',['../class_gaze_orient_constraint.html',1,'']]],
-  ['gazetargetconstraint',['GazeTargetConstraint',['../classdrake_1_1multibody_1_1internal_1_1_gaze_target_constraint.html',1,'GazeTargetConstraint'],['../class_gaze_target_constraint.html',1,'GazeTargetConstraint']]],
+  ['gazetargetconstraint',['GazeTargetConstraint',['../classdrake_1_1multibody_1_1_gaze_target_constraint.html',1,'GazeTargetConstraint'],['../class_gaze_target_constraint.html',1,'GazeTargetConstraint']]],
   ['generalizedconstraintforceevaluator',['GeneralizedConstraintForceEvaluator',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_generalized_constraint_force_evaluator.html',1,'drake::systems::trajectory_optimization']]],
   ['genericplan',['GenericPlan',['../classdrake_1_1systems_1_1controllers_1_1plan__eval_1_1_generic_plan.html',1,'drake::systems::controllers::plan_eval']]],
   ['genericplan_3c_20double_20_3e',['GenericPlan&lt; double &gt;',['../classdrake_1_1systems_1_1controllers_1_1plan__eval_1_1_generic_plan.html',1,'drake::systems::controllers::plan_eval']]],

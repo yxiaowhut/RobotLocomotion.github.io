@@ -114,11 +114,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5080a49370b2bc51d3a570c591ba2339"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a5080a49370b2bc51d3a570c591ba2339">GetPreferredJointOrdering</a> ()</td></tr>
 <tr class="memdesc:a5080a49370b2bc51d3a570c591ba2339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the desired ordering of the finger joints by name.  <a href="#a5080a49370b2bc51d3a570c591ba2339">More...</a><br /></td></tr>
 <tr class="separator:a5080a49370b2bc51d3a570c591ba2339"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8bfe1dca75c913ef863d2f895f270bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#aa8bfe1dca75c913ef863d2f895f270bd">GetControlPortMapping</a> (const MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *Sx, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *Sy)</td></tr>
-<tr class="separator:aa8bfe1dca75c913ef863d2f895f270bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3eb4155afe328df3524647f1788fe83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#aa3eb4155afe328df3524647f1788fe83">GetControlPortMapping</a> (const multibody::multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *Sx, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *Sy)</td></tr>
-<tr class="memdesc:aa3eb4155afe328df3524647f1788fe83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates selector matrices which extract state xₛ in a known order from the plant's full x (<code>xₛ = Sx⋅x</code>) and promote the controller's ordered yₛ into the full plant's input actuation (<code>u = Su⋅uₛ</code>).  <a href="#aa3eb4155afe328df3524647f1788fe83">More...</a><br /></td></tr>
-<tr class="separator:aa3eb4155afe328df3524647f1788fe83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b2a62810ae430eef5c6cd9597327e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a67b2a62810ae430eef5c6cd9597327e1">GetControlPortMapping</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *Sx, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *Sy)</td></tr>
+<tr class="memdesc:a67b2a62810ae430eef5c6cd9597327e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates selector matrices which extract state xₛ in a known order from the plant's full x (<code>xₛ = Sx⋅x</code>) and promote the controller's ordered yₛ into the full plant's input actuation (<code>u = Su⋅uₛ</code>).  <a href="#a67b2a62810ae430eef5c6cd9597327e1">More...</a><br /></td></tr>
+<tr class="separator:a67b2a62810ae430eef5c6cd9597327e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab01b50c7da40cdb74f8a00b81f382d85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#ab01b50c7da40cdb74f8a00b81f382d85">DEFINE_double</a> (constant_load, 0, &quot;the constant load on each joint, Unit [Nm].&quot; &quot;Suggested load is in the order of 0.01 Nm. When input <a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>&quot; &quot;equals to 0 (default), the program runs a passive simulation.&quot;)</td></tr>
 <tr class="separator:ab01b50c7da40cdb74f8a00b81f382d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a035c7578639026c73153a67f64786957"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1allegro__hand.html#a035c7578639026c73153a67f64786957">DEFINE_double</a> (simulation_time, 5, &quot;Desired duration of the simulation in seconds&quot;)</td></tr>
@@ -379,16 +377,16 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa3eb4155afe328df3524647f1788fe83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3eb4155afe328df3524647f1788fe83">&#9670;&nbsp;</a></span>GetControlPortMapping() <span class="overload">[1/2]</span></h2>
+<a id="a67b2a62810ae430eef5c6cd9597327e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b2a62810ae430eef5c6cd9597327e1">&#9670;&nbsp;</a></span>GetControlPortMapping()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void drake::examples::allegro_hand::GetControlPortMapping </td>
+          <td class="memname">void GetControlPortMapping </td>
           <td>(</td>
-          <td class="paramtype">const multibody::multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>plant</em>, </td>
         </tr>
         <tr>
@@ -422,40 +420,6 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="aa8bfe1dca75c913ef863d2f895f270bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8bfe1dca75c913ef863d2f895f270bd">&#9670;&nbsp;</a></span>GetControlPortMapping() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::examples::allegro_hand::GetControlPortMapping </td>
-          <td>(</td>
-          <td class="paramtype">const MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>plant</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>Sx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
-          <td class="paramname"><em>Sy</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

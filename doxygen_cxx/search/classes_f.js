@@ -63,7 +63,7 @@ var searchData=
   ['posevector_3c_20double_20_3e',['PoseVector&lt; double &gt;',['../classdrake_1_1systems_1_1rendering_1_1_pose_vector.html',1,'drake::systems::rendering']]],
   ['posevelocity',['PoseVelocity',['../classdrake_1_1automotive_1_1_pose_velocity.html',1,'drake::automotive']]],
   ['posevelocityinputports',['PoseVelocityInputPorts',['../structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html',1,'drake::systems::rendering']]],
-  ['positionconstraint',['PositionConstraint',['../classdrake_1_1multibody_1_1internal_1_1_position_constraint.html',1,'PositionConstraint'],['../class_position_constraint.html',1,'PositionConstraint']]],
+  ['positionconstraint',['PositionConstraint',['../classdrake_1_1multibody_1_1_position_constraint.html',1,'PositionConstraint'],['../class_position_constraint.html',1,'PositionConstraint']]],
   ['positionconstraintforceevaluator',['PositionConstraintForceEvaluator',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_position_constraint_force_evaluator.html',1,'drake::systems::trajectory_optimization']]],
   ['positionindices',['PositionIndices',['../struct_position_indices.html',1,'']]],
   ['positionkinematicscache',['PositionKinematicsCache',['../classdrake_1_1multibody_1_1_position_kinematics_cache.html',1,'drake::multibody']]],

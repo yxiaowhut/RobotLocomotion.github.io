@@ -1,8 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"classdrake_1_1automotive_1_1_trajectory_follower.html":[0,1,4,0,6],
-"classdrake_1_1automotive_1_1_trajectory_follower.html#a0f52e0701eb455b4a43db5a91ae4156f":[0,1,4,0,6,5],
-"classdrake_1_1automotive_1_1_trajectory_follower.html#a1440c7a4c0b33823387bb084be9e7e06":[0,1,4,0,6,7],
 "classdrake_1_1automotive_1_1_trajectory_follower.html#a23a0ced0c7dd83609a75a7198538ff04":[0,1,4,0,6,8],
 "classdrake_1_1automotive_1_1_trajectory_follower.html#a3984f6938cd18692bb520d64852dffb9":[0,1,4,0,6,3],
 "classdrake_1_1automotive_1_1_trajectory_follower.html#a3a934406a5dd3cd2e60c6f5cefd996ad":[0,1,4,0,6,6],
@@ -249,5 +246,8 @@ var NAVTREEINDEX9 =
 "classdrake_1_1examples_1_1humanoid__controller_1_1_humanoid_controller.html#a5d1e56507fed5e43209cd4bf80f87f59":[2,0,0,6,6,2,1],
 "classdrake_1_1examples_1_1humanoid__controller_1_1_humanoid_controller.html#a97c99da279073b141b9b9fe092748576":[2,0,0,6,6,2,2],
 "classdrake_1_1examples_1_1humanoid__controller_1_1_humanoid_controller.html#ac6e2132d76f1ce94b6e3b11e98a71de0":[2,0,0,6,6,2,0],
-"classdrake_1_1examples_1_1humanoid__controller_1_1_humanoid_plan_eval_system.html":[2,0,0,6,6,3]
+"classdrake_1_1examples_1_1humanoid__controller_1_1_humanoid_plan_eval_system.html":[2,0,0,6,6,3],
+"classdrake_1_1examples_1_1humanoid__controller_1_1_humanoid_plan_eval_system.html#a062741ad7a6a3225906680db94a3383c":[2,0,0,6,6,3,0],
+"classdrake_1_1examples_1_1humanoid__controller_1_1_humanoid_plan_eval_system.html#a2187a0b8e301b640580a3eaaf0daf702":[2,0,0,6,6,3,4],
+"classdrake_1_1examples_1_1humanoid__controller_1_1_humanoid_plan_eval_system.html#a4ef85e9301acd2aeb473ea689fa7224c":[2,0,0,6,6,3,1]
 };

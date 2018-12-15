@@ -6,9 +6,9 @@ var group__manipulation__station__systems =
       [ "ManipulationStation", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a5efa138ff632cf8bcc2bbb2b7a6f7f23", null ],
       [ "Finalize", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27", null ],
       [ "get_camera_names", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aa9cb4c905f0c1539c9630a9b0d2ba939", null ],
-      [ "get_controller_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#abe92713d2d3b7a33b36c5271de013024", null ],
-      [ "get_multibody_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ae844bad2929f9bf19edae99ecdaa607a", null ],
-      [ "get_mutable_multibody_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a48c34857dc9519b0514efbc3a704319b", null ],
+      [ "get_controller_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a383826f5e1d24ca83b51a0a4337e6338", null ],
+      [ "get_multibody_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a1f94d1c2b9f9f4bfba53ce45e3ec917e", null ],
+      [ "get_mutable_multibody_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a9ef9bcc1fa2f4f3250cd5d3f93f16c54", null ],
       [ "get_mutable_scene_graph", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a196f98e5d68f6075be19efa313e68e10", null ],
       [ "get_scene_graph", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a17e62927aa3fcd951414114295385150", null ],
       [ "GetIiwaPosition", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#af7fbeb092bc60714bcf5212044823c6d", null ],
@@ -38,7 +38,7 @@ var group__manipulation__station__systems =
       [ "ManipulationStationHardwareInterface", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a6803130d56d2c063fa12d00d2ff5f1b5", null ],
       [ "Connect", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a1d3fc0d4c85abaf406ed7804bcdb0f4b", null ],
       [ "get_camera_names", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#ac0949efe8aeb22829c0015c8f966410f", null ],
-      [ "get_controller_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a21e47e409fc93722b29d6cbe002c77b9", null ],
+      [ "get_controller_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a3b5ba57cf5346d9976b6be9549c75105", null ],
       [ "operator=", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#acbf2e9924477224146ce4954d72cb791", null ],
       [ "operator=", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a234bb0eabe565003129badc62da56f5f", null ]
     ] ]

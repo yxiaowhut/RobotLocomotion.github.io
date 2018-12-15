@@ -50,7 +50,7 @@ var searchData=
   ['box',['Box',['../classdrake_1_1geometry_1_1_box.html',1,'Box'],['../class_drake_shapes_1_1_box.html',1,'Box']]],
   ['branchpoint',['BranchPoint',['../classdrake_1_1maliput_1_1rndf_1_1_branch_point.html',1,'BranchPoint'],['../classdrake_1_1maliput_1_1api_1_1_branch_point.html',1,'BranchPoint'],['../classdrake_1_1maliput_1_1dragway_1_1_branch_point.html',1,'BranchPoint'],['../classdrake_1_1maliput_1_1geometry__base_1_1_branch_point.html',1,'BranchPoint'],['../classdrake_1_1maliput_1_1multilane_1_1_branch_point.html',1,'BranchPoint']]],
   ['btoverlapfiltercallback',['btOverlapFilterCallback',['../classbt_overlap_filter_callback.html',1,'']]],
-  ['builder',['Builder',['../classdrake_1_1maliput_1_1rndf_1_1_builder.html',1,'Builder'],['../classdrake_1_1maliput_1_1multilane_1_1_builder.html',1,'Builder']]],
+  ['builder',['Builder',['../classdrake_1_1maliput_1_1multilane_1_1_builder.html',1,'Builder'],['../classdrake_1_1maliput_1_1rndf_1_1_builder.html',1,'Builder']]],
   ['builderbase',['BuilderBase',['../classdrake_1_1maliput_1_1multilane_1_1_builder_base.html',1,'drake::maliput::multilane']]],
   ['builderfactory',['BuilderFactory',['../classdrake_1_1maliput_1_1multilane_1_1_builder_factory.html',1,'drake::maliput::multilane']]],
   ['builderfactorybase',['BuilderFactoryBase',['../classdrake_1_1maliput_1_1multilane_1_1_builder_factory_base.html',1,'drake::maliput::multilane']]],

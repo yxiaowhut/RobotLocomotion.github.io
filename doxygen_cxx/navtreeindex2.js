@@ -1,8 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"bowling__ball_8cc.html#aaee04dc9988734b361deea97ff8ddd21":[3,0,0,5,5,0,5],
-"bowling__ball_8cc.html#ab212a0b11bf20bc1bc9c2695c506af57":[3,0,0,5,5,0,1],
-"bowling__ball_8cc.html#ae2397743b0f0bc85d97494b588990990":[3,0,0,5,5,0,10],
 "bowling__ball_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[3,0,0,5,5,0,13],
 "bowling__ball_8cc.html#af01c6a9418c0111866fff7ffb90fe752":[3,0,0,5,5,0,9],
 "box__test_8cc.html":[3,0,0,11,5,0,0],
@@ -249,5 +246,8 @@ var NAVTREEINDEX2 =
 "class_drake_shapes_1_1_box.html#a07cb33165cf371cdae61f03e5e4ca84c":[2,0,1,0,1],
 "class_drake_shapes_1_1_box.html#a1a27e3bd2ef587e47958fa7d9a155a32":[2,0,1,0,2],
 "class_drake_shapes_1_1_box.html#a36defcc13d307d415ba2d446c6c2aa1d":[2,0,1,0,6],
-"class_drake_shapes_1_1_box.html#a4d4b250a8fb777f8ebf3280f4ef094c4":[2,0,1,0,3]
+"class_drake_shapes_1_1_box.html#a4d4b250a8fb777f8ebf3280f4ef094c4":[2,0,1,0,3],
+"class_drake_shapes_1_1_box.html#a569f6c24207ee52a8d5f096d3fa6bec3":[2,0,1,0,5],
+"class_drake_shapes_1_1_box.html#a5779e82c72bd477d1d72042af3b6c38b":[2,0,1,0,4],
+"class_drake_shapes_1_1_box.html#a73230550e4555a95177c155c9cc9669f":[2,0,1,0,8]
 };

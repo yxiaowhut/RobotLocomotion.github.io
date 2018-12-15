@@ -102,8 +102,8 @@ var hierarchy =
       [ "LeafCompositeEventCollection< double >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
     [ "ConditionTraits< symbolic::Formula >", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", null ],
-    [ "Connection", "classdrake_1_1maliput_1_1rndf_1_1_connection.html", null ],
     [ "Connection", "classdrake_1_1maliput_1_1multilane_1_1_connection.html", null ],
+    [ "Connection", "classdrake_1_1maliput_1_1rndf_1_1_connection.html", null ],
     [ "PidControlledSystem< T >::ConnectResult", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html", null ],
     [ "MapKeyRange< K, V >::ConstIterator", "classdrake_1_1geometry_1_1internal_1_1_map_key_range_1_1_const_iterator.html", null ],
     [ "ConstrainedValues", "classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_constrained_values.html", [
@@ -130,11 +130,7 @@ var hierarchy =
     [ "ContactResults< double >", "classdrake_1_1multibody_1_1_contact_results.html", null ],
     [ "ContextMessageInterface", null, [
       [ "ContextBase", "classdrake_1_1systems_1_1_context_base.html", [
-        [ "Context< AutoDiffXd >", "classdrake_1_1systems_1_1_context.html", [
-          [ "LeafContext< AutoDiffXd >", "classdrake_1_1systems_1_1_leaf_context.html", [
-            [ "MultibodyTreeContext< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_tree_context.html", null ]
-          ] ]
-        ] ],
+        [ "Context< AutoDiffXd >", "classdrake_1_1systems_1_1_context.html", null ],
         [ "Context< double >", "classdrake_1_1systems_1_1_context.html", [
           [ "DiagramContext< double >", "classdrake_1_1systems_1_1_diagram_context.html", null ],
           [ "LeafContext< double >", "classdrake_1_1systems_1_1_leaf_context.html", [
@@ -247,10 +243,10 @@ var hierarchy =
     [ "GeoNormal::Equiv", "structdrake_1_1maliput_1_1utility_1_1mesh_1_1_geo_normal_1_1_equiv.html", null ],
     [ "EvaluatorBase", "classdrake_1_1solvers_1_1_evaluator_base.html", [
       [ "Constraint", "classdrake_1_1solvers_1_1_constraint.html", [
-        [ "AngleBetweenVectorsConstraint", "classdrake_1_1multibody_1_1internal_1_1_angle_between_vectors_constraint.html", null ],
-        [ "GazeTargetConstraint", "classdrake_1_1multibody_1_1internal_1_1_gaze_target_constraint.html", null ],
-        [ "OrientationConstraint", "classdrake_1_1multibody_1_1internal_1_1_orientation_constraint.html", null ],
-        [ "PositionConstraint", "classdrake_1_1multibody_1_1internal_1_1_position_constraint.html", null ],
+        [ "AngleBetweenVectorsConstraint", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html", null ],
+        [ "GazeTargetConstraint", "classdrake_1_1multibody_1_1_gaze_target_constraint.html", null ],
+        [ "OrientationConstraint", "classdrake_1_1multibody_1_1_orientation_constraint.html", null ],
+        [ "PositionConstraint", "classdrake_1_1multibody_1_1_position_constraint.html", null ],
         [ "EvaluatorConstraint< EvaluatorType >", "classdrake_1_1solvers_1_1_evaluator_constraint.html", null ],
         [ "ExpressionConstraint", "classdrake_1_1solvers_1_1_expression_constraint.html", null ],
         [ "LinearComplementarityConstraint", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html", null ],
@@ -684,9 +680,6 @@ var hierarchy =
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
-    [ "MultibodyPlant", null, [
-      [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
-    ] ],
     [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", null ],
     [ "MultibodyTree< T >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html", null ],
     [ "MultibodyTree< AutoDiffXd >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html", null ],
@@ -1075,7 +1068,7 @@ var hierarchy =
     [ "SortedPair< T >", "structdrake_1_1_sorted_pair.html", null ],
     [ "SpatialInertia< T >", "classdrake_1_1multibody_1_1_spatial_inertia.html", null ],
     [ "SpatialInertia< double >", "classdrake_1_1multibody_1_1_spatial_inertia.html", null ],
-    [ "SpatialKinematicsPVA< T >", "classdrake_1_1multibody_1_1multibody__tree_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html", null ],
+    [ "SpatialKinematicsPVA< T >", "classdrake_1_1multibody_1_1test__utilities_1_1_spatial_kinematics_p_v_a.html", null ],
     [ "SpatialVector< SV, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", null ],
     [ "SpatialVector< SpatialAcceleration, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialAcceleration< T >", "classdrake_1_1multibody_1_1_spatial_acceleration.html", null ]
@@ -1092,13 +1085,13 @@ var hierarchy =
     [ "SpatialVector< SpatialVelocity, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialVelocity< T >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
     ] ],
-    [ "StartReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_reference_1_1_spec.html", null ],
-    [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
     [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
     [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
+    [ "StartReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_reference_1_1_spec.html", null ],
+    [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
+    [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
     [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
     [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
-    [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
     [ "SpeedLimitRule", "classdrake_1_1maliput_1_1api_1_1rules_1_1_speed_limit_rule.html", null ],
     [ "SRange", "classdrake_1_1maliput_1_1api_1_1rules_1_1_s_range.html", null ],
     [ "SrhFace", "classdrake_1_1maliput_1_1utility_1_1mesh_1_1_srh_face.html", null ],
@@ -1108,7 +1101,6 @@ var hierarchy =
       [ "DiagramState< T >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
     ] ],
     [ "RightOfWayRule::State", "classdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_rule_1_1_state.html", null ],
-    [ "State< AutoDiffXd >", "classdrake_1_1systems_1_1_state.html", null ],
     [ "State< double >", "classdrake_1_1systems_1_1_state.html", [
       [ "DiagramState< double >", "classdrake_1_1systems_1_1_diagram_state.html", null ]
     ] ],
@@ -1175,8 +1167,10 @@ var hierarchy =
             [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", null ],
             [ "MultibodyTreeSystem< T >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", [
-              [ "FreeRotatingBodyPlant< T >", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_free_rotating_body_plant.html", null ],
-              [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
+              [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", [
+                [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
+              ] ],
+              [ "FreeRotatingBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_free_rotating_body_plant.html", null ]
             ] ],
             [ "ActuatorEffortToRigidBodyPlantInputConverter< T >", "classdrake_1_1systems_1_1_actuator_effort_to_rigid_body_plant_input_converter.html", null ],
             [ "Adder< T >", "classdrake_1_1systems_1_1_adder.html", null ],
@@ -1361,8 +1355,8 @@ var hierarchy =
     [ "Test", null, [
       [ "IiwaKinematicConstraintTest", "classdrake_1_1multibody_1_1internal_1_1_iiwa_kinematic_constraint_test.html", null ],
       [ "TwoFreeBodiesConstraintTest", "classdrake_1_1multibody_1_1internal_1_1_two_free_bodies_constraint_test.html", null ],
-      [ "KukaIiwaModelTests", "classdrake_1_1multibody_1_1multibody__plant_1_1test_1_1_kuka_iiwa_model_tests.html", null ],
-      [ "MobilizerTester", "classdrake_1_1multibody_1_1multibody__tree_1_1_mobilizer_tester.html", null ],
+      [ "MobilizerTester", "classdrake_1_1multibody_1_1_mobilizer_tester.html", null ],
+      [ "KukaIiwaModelTests", "classdrake_1_1multibody_1_1test_1_1_kuka_iiwa_model_tests.html", null ],
       [ "InfeasibleLinearProgramTest0", "classdrake_1_1solvers_1_1test_1_1_infeasible_linear_program_test0.html", null ],
       [ "UnboundedLinearProgramTest0", "classdrake_1_1solvers_1_1test_1_1_unbounded_linear_program_test0.html", null ],
       [ "UnboundedLinearProgramTest1", "classdrake_1_1solvers_1_1test_1_1_unbounded_linear_program_test1.html", null ],

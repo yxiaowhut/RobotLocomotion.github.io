@@ -5,7 +5,7 @@ var classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_har
     [ "ManipulationStationHardwareInterface", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a6803130d56d2c063fa12d00d2ff5f1b5", null ],
     [ "Connect", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a1d3fc0d4c85abaf406ed7804bcdb0f4b", null ],
     [ "get_camera_names", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#ac0949efe8aeb22829c0015c8f966410f", null ],
-    [ "get_controller_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a21e47e409fc93722b29d6cbe002c77b9", null ],
+    [ "get_controller_plant", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a3b5ba57cf5346d9976b6be9549c75105", null ],
     [ "operator=", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#acbf2e9924477224146ce4954d72cb791", null ],
     [ "operator=", "classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station_hardware_interface.html#a234bb0eabe565003129badc62da56f5f", null ]
 ];

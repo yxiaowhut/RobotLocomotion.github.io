@@ -1,5 +1,9 @@
 var NAVTREEINDEX75 =
 {
+"struct_q_p_locomotion_plan_settings.html#a8baa14bbc9c28c2907369ff16aafe39d":[2,0,60,4],
+"struct_q_p_locomotion_plan_settings.html#a8c6eec0c7b8d40c90057d54686be8506":[2,0,60,10],
+"struct_q_p_locomotion_plan_settings.html#a8c7c8ccd9dc8289ab8dfb5ea80375024":[2,0,60,31],
+"struct_q_p_locomotion_plan_settings.html#a91408ec36b6557c3f2a70d61f99e6cf0":[2,0,60,3],
 "struct_q_p_locomotion_plan_settings.html#a9f7808aa08881fd65f5a9c2f803f4f46":[2,0,60,28],
 "struct_q_p_locomotion_plan_settings.html#aa46e429b7e4ddeabe99dc48cddf18aed":[2,0,60,27],
 "struct_q_p_locomotion_plan_settings.html#aaa111a4a491f21acd9c7f2006d304dad":[2,0,60,34],
@@ -245,9 +249,5 @@ var NAVTREEINDEX75 =
 "structdrake_1_1maliput_1_1api_1_1_lane_end.html#afd38b6ff3ad84a158d0d33fdf35ce097":[2,0,0,9,0,8,3],
 "structdrake_1_1maliput_1_1api_1_1_lane_end_1_1_strict_order.html":[2,0,0,9,0,8,0],
 "structdrake_1_1maliput_1_1api_1_1_lane_end_1_1_strict_order.html#ad5af0d5a4ccb68c02dcdda0641c58647":[2,0,0,9,0,8,0,0],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html":[2,0,0,9,0,13],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html#a052f1bed10d7aad444802177f1d7d18b":[2,0,0,9,0,13,3],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html#a4ed2e763b9bcf2c840b6ff56c17de59b":[2,0,0,9,0,13,0],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html#a7c3987ba959bbbbeafba43c0db4c24d8":[2,0,0,9,0,13,1],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html#a7f4404a6c9065d06842311b7308a6cba":[2,0,0,9,0,13,2]
+"structdrake_1_1maliput_1_1api_1_1_road_position.html":[2,0,0,9,0,13]
 };

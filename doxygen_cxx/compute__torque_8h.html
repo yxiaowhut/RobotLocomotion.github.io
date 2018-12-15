@@ -94,23 +94,21 @@ $(document).ready(function(){initNavTree('compute__torque_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/kinematics_cache.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/math/spatial_acceleration.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/math/spatial_force.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/multibody_plant/multibody_plant.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/position_kinematics_cache.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/velocity_kinematics_cache.h&quot;</code><br />
-<code>#include &quot;drake/multibody/rigid_body_tree.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="spatial__acceleration_8h.html">drake/multibody/math/spatial_acceleration.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="spatial__force_8h.html">drake/multibody/math/spatial_force.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="position__kinematics__cache_8h.html">drake/multibody/tree/position_kinematics_cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="velocity__kinematics__cache_8h.html">drake/multibody/tree/velocity_kinematics_cache.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for compute_torque.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="compute__torque_8h__incl.svg" width="100%" height="495"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="compute__torque_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="compute__torque_8h__dep__incl.svg" width="100%" height="439"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="compute__torque_8h__dep__incl.svg" width="416" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -125,10 +123,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1dd2125a88d2f0649082b032b8025dcc"><td class="memItemLeft" align="right" valign="top">VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1controllers__test.html#a1dd2125a88d2f0649082b032b8025dcc">ComputeTorque</a> (const <a class="el" href="class_rigid_body_tree.html">RigidBodyTree</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;tree, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;v, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vd_d)</td></tr>
-<tr class="separator:a1dd2125a88d2f0649082b032b8025dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a628fc6e1fd1f0bb4b26ba08d7b5f58a2"><td class="memItemLeft" align="right" valign="top">VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1controllers__test.html#a628fc6e1fd1f0bb4b26ba08d7b5f58a2">ComputeTorque</a> (const multibody::multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;v, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vd_d, systems::Context&lt; <a class="el" href="classdouble.html">double</a> &gt; *context)</td></tr>
-<tr class="separator:a628fc6e1fd1f0bb4b26ba08d7b5f58a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66eda6d10bb53572748c1f28aaf5d6ab"><td class="memItemLeft" align="right" valign="top">VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1controllers__test.html#a66eda6d10bb53572748c1f28aaf5d6ab">ComputeTorque</a> (const multibody::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;q, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;v, const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;vd_d, systems::Context&lt; <a class="el" href="classdouble.html">double</a> &gt; *context)</td></tr>
+<tr class="separator:a66eda6d10bb53572748c1f28aaf5d6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

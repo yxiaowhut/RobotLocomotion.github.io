@@ -42,21 +42,6 @@ var group__sensor__systems =
       [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#ad75f0fc988a8d82c3b45614c4e296ab2", null ],
       [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html#a9138e7b7ef3459968b28c912cc953aba", null ]
     ] ],
-    [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", [
-      [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a", null ],
-      [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5645c21f2752969e24185b05d223b20a", null ],
-      [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a6ff95253bd4a47e6ed4d349ff3290b16", null ],
-      [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a339a93a49733a0a196b08687a1340ef0", null ],
-      [ "get_depth_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a0b6e739d0155aa20aec56d2fb7e13505", null ],
-      [ "get_event_random_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a631d161f2ccaa5a50659a72ebb2c4a0c", null ],
-      [ "get_hit_random_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a4c9ef6be21e15437cc7451c59dc28468", null ],
-      [ "get_mutable_parameters", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a3f509b5c42da7da91c14d31ece7c06ab", null ],
-      [ "get_short_random_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a635ebef4d13de6fe17ce728ca2c43932", null ],
-      [ "get_uniform_random_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0", null ],
-      [ "max_range", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#ad5dd463d80e310948143e675e71197de", null ],
-      [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a23a62490645a6a4b334b019c6894c597", null ],
-      [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#afab4d0f4a234cdb8f46a1ba19cc3fec3", null ]
-    ] ],
     [ "RgbdCamera", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html", [
       [ "RgbdCamera", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html#aa6e566192562f51ff41e0b8f7ccc979d", null ],
       [ "RgbdCamera", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html#ada38f3520c571c1c989d373bec1c25cc", null ],
@@ -79,6 +64,21 @@ var group__sensor__systems =
       [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html#a0ccfc79398600a11b1b7de5239d29a8d", null ],
       [ "state_input_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html#a04b24e61dc401c93102b354ab9c46c3b", null ],
       [ "tree", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html#a92752f9005e47aeca9ce94bba76b29d6", null ]
+    ] ],
+    [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", [
+      [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a", null ],
+      [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5645c21f2752969e24185b05d223b20a", null ],
+      [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a6ff95253bd4a47e6ed4d349ff3290b16", null ],
+      [ "BeamModel", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a339a93a49733a0a196b08687a1340ef0", null ],
+      [ "get_depth_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a0b6e739d0155aa20aec56d2fb7e13505", null ],
+      [ "get_event_random_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a631d161f2ccaa5a50659a72ebb2c4a0c", null ],
+      [ "get_hit_random_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a4c9ef6be21e15437cc7451c59dc28468", null ],
+      [ "get_mutable_parameters", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a3f509b5c42da7da91c14d31ece7c06ab", null ],
+      [ "get_short_random_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a635ebef4d13de6fe17ce728ca2c43932", null ],
+      [ "get_uniform_random_input_port", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0", null ],
+      [ "max_range", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#ad5dd463d80e310948143e675e71197de", null ],
+      [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a23a62490645a6a4b334b019c6894c597", null ],
+      [ "operator=", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#afab4d0f4a234cdb8f46a1ba19cc3fec3", null ]
     ] ],
     [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", [
       [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#adddc16fb008fab4bdbc6c83e00033c0a", null ],

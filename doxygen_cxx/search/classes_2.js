@@ -24,7 +24,7 @@ var searchData=
   ['compositeeventcollection_3c_20autodiffxd_20_3e',['CompositeEventCollection&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
   ['compositeeventcollection_3c_20double_20_3e',['CompositeEventCollection&lt; double &gt;',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
   ['conditiontraits_3c_20symbolic_3a_3aformula_20_3e',['ConditionTraits&lt; symbolic::Formula &gt;',['../structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html',1,'drake::assert']]],
-  ['connection',['Connection',['../classdrake_1_1maliput_1_1rndf_1_1_connection.html',1,'Connection'],['../classdrake_1_1maliput_1_1multilane_1_1_connection.html',1,'Connection']]],
+  ['connection',['Connection',['../classdrake_1_1maliput_1_1multilane_1_1_connection.html',1,'Connection'],['../classdrake_1_1maliput_1_1rndf_1_1_connection.html',1,'Connection']]],
   ['connectresult',['ConnectResult',['../structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html',1,'drake::systems::controllers::PidControlledSystem']]],
   ['constantvaluesource',['ConstantValueSource',['../classdrake_1_1systems_1_1_constant_value_source.html',1,'drake::systems']]],
   ['constantvectorsource',['ConstantVectorSource',['../classdrake_1_1systems_1_1_constant_vector_source.html',1,'drake::systems']]],

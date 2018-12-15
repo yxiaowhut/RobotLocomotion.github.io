@@ -17,8 +17,8 @@ var classdrake_1_1geometry_1_1_scene_graph_inspector =
     [ "NumFramesForSource", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a351bd36048a5437b445fe7419d8ebef6", null ],
     [ "NumGeometriesForFrame", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a606ba5b86da6b6306dd900187ac4fc6b", null ],
     [ "NumGeometriesWithRole", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#aab26f2d2a53102c9f4915433cf90e443", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a7b176f170af189d4f31f33371e7d732c", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a9174b38bac2fe383418fa6fa711ee153", null ],
+    [ "operator=", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a7b176f170af189d4f31f33371e7d732c", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ae1a7db1a4349ffeebee18617b3db82e4", null ],
     [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a09e32deb354fd5ca0cc04c6f6110bcb7", null ],
     [ "SceneGraphInspectorTester", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a6e9f389685137462f277662ef2937886", null ]

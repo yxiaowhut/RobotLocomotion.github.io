@@ -1,8 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"class_kinematics_cache.html#a372731ef06a823324bfeda5c8a8a3ac8":[2,0,38,10],
-"class_kinematics_cache.html#a505c3253c49b9bb9708f7d6862be8bc0":[2,0,38,19],
-"class_kinematics_cache.html#a52ec89ff6f98b6b66916455806f6ec68":[2,0,38,2],
 "class_kinematics_cache.html#a59760a242775429554371c7dc2d09afc":[2,0,38,15],
 "class_kinematics_cache.html#a5a9959b4d890dc02980ecdfd32922b39":[2,0,38,13],
 "class_kinematics_cache.html#a7106bae0cd4a2f0045fdaeab6e2d403a":[2,0,38,6],
@@ -249,5 +246,8 @@ var NAVTREEINDEX4 =
 "class_polynomial.html#a4fb9d0b2269ab915f93bb26e1fcd7b9f":[2,0,49,32],
 "class_polynomial.html#a5051fa433a0a54ca36c422e8d86968b1":[2,0,49,17],
 "class_polynomial.html#a5590d23d37495f26e4e0226674af2436":[2,0,49,47],
-"class_polynomial.html#a56dea1c182be53c20a023d0491bd232c":[2,0,49,40]
+"class_polynomial.html#a56dea1c182be53c20a023d0491bd232c":[2,0,49,40],
+"class_polynomial.html#a5dae276a9030db1fcf07df9a1ffdf6bd":[2,0,49,43],
+"class_polynomial.html#a6b2fc1d3e138053b9dc8864815059fe0":[2,0,49,4],
+"class_polynomial.html#a7f7703398f420e19d121b92c13e2b416":[2,0,49,46]
 };

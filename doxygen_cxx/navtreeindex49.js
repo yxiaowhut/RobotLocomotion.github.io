@@ -1,5 +1,17 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eae84b43f3081dc3fbbf43394ed5a05":[2,0,0,18,13,1,2],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eea9354674efc1c07bf537319628ead":[2,0,0,18,13,1,6],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a643ccb05dea44d65aa2d91b422f20f12":[2,0,0,18,13,1,0],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a66022c63d007d32a9812270a90890e7f":[2,0,0,18,13,1,10],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a6ce6c2bf02e868cb54161dd4d8a26e29":[2,0,0,18,13,1,1],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[2,0,0,18,13,1,4],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a89e2693c8bf829dbf08466fca0f15e07":[2,0,0,18,13,1,9],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[2,0,0,18,13,1,5],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ae3f1c577ee698959014f42a2937d6730":[2,0,0,18,13,1,3],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html":[2,0,0,18,13,2],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a154d9533a82660b186e2c6a47f360373":[2,0,0,18,13,2,3],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a2257e99613e8e2241db334b2a3a4c6ad":[2,0,0,18,13,2,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a22a7433c13b1c3710731b688e73d6e66":[2,0,0,18,13,2,7],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a2c268668939a95461b66449298155a49":[2,0,0,18,13,2,8],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a5f5ccf485fb4f56a9b1bffc8762e5863":[2,0,0,18,13,2,9],
@@ -237,17 +249,5 @@ var NAVTREEINDEX49 =
 "collision__py_8cc.html#acbd11f32e366326d18582e410c89e76f":[3,0,0,2,0,4,1,0],
 "color__palette_8h.html":[3,0,0,14,8,5],
 "color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[3,0,0,14,8,5,5],
-"color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[3,0,0,14,8,5,4],
-"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[3,0,0,14,8,5,3],
-"common_2autodiff_8h.html":[3,0,0,3,4],
-"common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[3,0,0,3,4,0],
-"common_2trajectories_2trajectory_8h.html":[3,0,0,3,3,9],
-"common__parser__test_8cc.html":[3,0,0,11,4,0,1],
-"common__parser__test_8cc.html#a5793658985fba3f4f9b875c1ea93762c":[3,0,0,11,4,0,1,0],
-"common__parser__test_8cc.html#a60594e6893c4ddd30c168f948b1a366f":[3,0,0,11,4,0,1,1],
-"common__parser__test_8cc.html#ab43b28dbf314dd21e9937a22b8708bc5":[3,0,0,11,4,0,1,2],
-"compass__gait_2simulate_8cc.html":[3,0,0,5,4,3],
-"compass__gait_2simulate_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[3,0,0,5,4,3,0],
-"compass__gait_8cc.html":[3,0,0,5,4,1],
-"compass__gait_8h.html":[3,0,0,5,4,2]
+"color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[3,0,0,14,8,5,4]
 };

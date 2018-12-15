@@ -96,8 +96,8 @@ $(document).ready(function(){initNavTree('detail__scene__graph_8h.html','');});
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;sdf/sdf.hh&gt;</code><br />
 <code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/multibody_plant/coulomb_friction.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody_2parsing_2package__map_8h.html">drake/multibody/parsing/package_map.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="coulomb__friction_8h.html">drake/multibody/plant/coulomb_friction.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for detail_scene_graph.h:</div>
 <div class="dyncontent">
@@ -128,9 +128,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5b3676511637c127d84a8bb589d2d90f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; GeometryInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a5b3676511637c127d84a8bb589d2d90f">MakeGeometryInstanceFromSdfVisual</a> (const sdf::Visual &amp;sdf_visual)</td></tr>
 <tr class="memdesc:a5b3676511637c127d84a8bb589d2d90f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">drake::geometry::GeometryInstance</a> object from this specification.  <a href="namespacedrake_1_1multibody_1_1detail.html#a5b3676511637c127d84a8bb589d2d90f">More...</a><br /></td></tr>
 <tr class="separator:a5b3676511637c127d84a8bb589d2d90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72989d7f800971772b29a84014351aff"><td class="memItemLeft" align="right" valign="top">CoulombFriction&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a72989d7f800971772b29a84014351aff">MakeCoulombFrictionFromSdfCollisionOde</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
-<tr class="memdesc:a72989d7f800971772b29a84014351aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the material properties from the given sdf::Visual object.  <a href="namespacedrake_1_1multibody_1_1detail.html#a72989d7f800971772b29a84014351aff">More...</a><br /></td></tr>
-<tr class="separator:a72989d7f800971772b29a84014351aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48445aa248ebb7363d2a3be05f7c17a"><td class="memItemLeft" align="right" valign="top">CoulombFriction&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#af48445aa248ebb7363d2a3be05f7c17a">MakeCoulombFrictionFromSdfCollisionOde</a> (const sdf::Collision &amp;sdf_collision)</td></tr>
+<tr class="memdesc:af48445aa248ebb7363d2a3be05f7c17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the material properties from the given sdf::Visual object.  <a href="namespacedrake_1_1multibody_1_1detail.html#af48445aa248ebb7363d2a3be05f7c17a">More...</a><br /></td></tr>
+<tr class="separator:af48445aa248ebb7363d2a3be05f7c17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0ffe5867d6427daab52ff5b28470c7"><td class="memItemLeft" align="right" valign="top">sdf::Visual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#abf0ffe5867d6427daab52ff5b28470c7">ResolveVisualUri</a> (const sdf::Visual &amp;original, const multibody::PackageMap &amp;package_map, const std::string &amp;root_dir)</td></tr>
 <tr class="memdesc:abf0ffe5867d6427daab52ff5b28470c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an sdf::Visual object representing a &lt;visual&gt; element from an SDF file, this method makes a new Visual object which resolves the uri for the mesh element, if present.  <a href="namespacedrake_1_1multibody_1_1detail.html#abf0ffe5867d6427daab52ff5b28470c7">More...</a><br /></td></tr>
 <tr class="separator:abf0ffe5867d6427daab52ff5b28470c7"><td class="memSeparator" colspan="2">&#160;</td></tr>

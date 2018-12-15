@@ -52,7 +52,7 @@ var searchData=
   ['framevelocity',['FrameVelocity',['../classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html',1,'drake::systems::rendering']]],
   ['framevisualizer',['FrameVisualizer',['../classdrake_1_1systems_1_1_frame_visualizer.html',1,'drake::systems']]],
   ['freebody',['FreeBody',['../classdrake_1_1benchmarks_1_1free__body_1_1_free_body.html',1,'drake::benchmarks::free_body']]],
-  ['freerotatingbodyplant',['FreeRotatingBodyPlant',['../classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_free_rotating_body_plant.html',1,'drake::multibody::multibody_tree::test']]],
+  ['freerotatingbodyplant',['FreeRotatingBodyPlant',['../classdrake_1_1multibody_1_1test_1_1_free_rotating_body_plant.html',1,'drake::multibody::test']]],
   ['fromdoubletraits',['FromDoubleTraits',['../structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html',1,'drake::systems::scalar_conversion']]],
   ['function_5finfo',['function_info',['../structdrake_1_1pydrake_1_1detail_1_1function__info.html',1,'drake::pydrake::detail']]],
   ['functionevaluator',['FunctionEvaluator',['../classdrake_1_1solvers_1_1_function_evaluator.html',1,'drake::solvers']]],

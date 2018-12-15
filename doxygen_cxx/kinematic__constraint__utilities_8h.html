@@ -94,7 +94,9 @@ $(document).ready(function(){initNavTree('kinematic__constraint__utilities_8h.ht
 <div class="contents">
 <div class="textblock"><code>#include &lt;limits&gt;</code><br />
 <code>#include &quot;<a class="el" href="autodiff__gradient_8h.html">drake/math/autodiff_gradient.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/multibody_tree_context.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody__tree__context_8h.html">drake/multibody/tree/multibody_tree_context.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="context_8h.html">drake/systems/framework/context.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for kinematic_constraint_utilities.h:</div>
 <div class="dyncontent">
@@ -125,10 +127,16 @@ Functions</h2></td></tr>
 <tr class="memitem:aa6a8afa1567567354d25130c40370f1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1internal.html#aa6a8afa1567567354d25130c40370f1e">UpdateContextConfiguration</a> (const Eigen::Ref&lt; const VectorX&lt; AutoDiffXd &gt;&gt; &amp;q, MultibodyTreeContext&lt; AutoDiffXd &gt; *mbt_context)</td></tr>
 <tr class="memdesc:aa6a8afa1567567354d25130c40370f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the generalized positions in <code>mbt_context</code> are the same as <code>q</code>.  <a href="namespacedrake_1_1multibody_1_1internal.html#aa6a8afa1567567354d25130c40370f1e">More...</a><br /></td></tr>
 <tr class="separator:aa6a8afa1567567354d25130c40370f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07dea6f2856fa92482e21641b369db66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1internal.html#a07dea6f2856fa92482e21641b369db66">UpdateContextConfiguration</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">drake::systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context, const MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;plant, const Eigen::Ref&lt; const VectorX&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; &amp;q)</td></tr>
+<tr class="memdesc:a07dea6f2856fa92482e21641b369db66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the generalized positions in <code>context</code> are the same as <code>q</code>.  <a href="namespacedrake_1_1multibody_1_1internal.html#a07dea6f2856fa92482e21641b369db66">More...</a><br /></td></tr>
+<tr class="separator:a07dea6f2856fa92482e21641b369db66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66cf14a3e671fa9816ea654641f3c3e"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA &gt; </td></tr>
 <tr class="memitem:ae66cf14a3e671fa9816ea654641f3c3e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; is_eigen_vector_of&lt; DerivedA, <a class="el" href="classdouble.html">double</a> &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>, Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, DerivedA::RowsAtCompileTime, 1 &gt; &gt;::<a class="el" href="multilane_2loader_8cc.html#adb5798caab72849ba8da861ddc3acccd">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1internal.html#ae66cf14a3e671fa9816ea654641f3c3e">NormalizeVector</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;a)</td></tr>
 <tr class="memdesc:ae66cf14a3e671fa9816ea654641f3c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize an <a class="el" href="namespace_eigen.html">Eigen</a> vector of doubles.  <a href="namespacedrake_1_1multibody_1_1internal.html#ae66cf14a3e671fa9816ea654641f3c3e">More...</a><br /></td></tr>
 <tr class="separator:ae66cf14a3e671fa9816ea654641f3c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b00ce32f72c0cbc96849ec5a357c44"><td class="memItemLeft" align="right" valign="top">const MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1internal.html#ae9b00ce32f72c0cbc96849ec5a357c44">RefFromPtrOrThrow</a> (const MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *const plant)</td></tr>
+<tr class="memdesc:ae9b00ce32f72c0cbc96849ec5a357c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <code>plant</code> is not nullptr, return a reference to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> to which it points.  <a href="namespacedrake_1_1multibody_1_1internal.html#ae9b00ce32f72c0cbc96849ec5a357c44">More...</a><br /></td></tr>
+<tr class="separator:ae9b00ce32f72c0cbc96849ec5a357c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

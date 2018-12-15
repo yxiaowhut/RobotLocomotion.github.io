@@ -1,5 +1,9 @@
 var NAVTREEINDEX79 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[2,0,7,8],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[2,0,7,9],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_polynomial_01_4.html":[2,0,7,10],
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_variable_01_4.html":[2,0,7,11],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_variables_01_4.html":[2,0,7,12],
 "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html":[2,0,7,13],
 "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html":[2,0,7,14],
@@ -245,9 +249,5 @@ var NAVTREEINDEX79 =
 "symbolic__expression_8h.html#aabae426c9b32ec48a5655f1e2bafd44c":[3,0,0,3,66,69],
 "symbolic__expression_8h.html#ab049cfca69564b8713a3fd0a0e3bbba9":[3,0,0,3,66,57],
 "symbolic__expression_8h.html#ab069e1d04f34ba9f9eff1ee8e97cca6e":[3,0,0,3,66,53],
-"symbolic__expression_8h.html#ab24b40e467980140b850478ea0b9e766":[3,0,0,3,66,18],
-"symbolic__expression_8h.html#ab296e6587d7bf86a4f1b54b5005df4a6":[3,0,0,3,66,52],
-"symbolic__expression_8h.html#ab6046c9bad9a1c5a1ba51ec6157376c3":[3,0,0,3,66,42],
-"symbolic__expression_8h.html#ab75d66dc4baea3c6fc9f8f44a938f3a4":[3,0,0,3,66,84],
-"symbolic__expression_8h.html#abd176811046c1f4fab6d56404b270d66":[3,0,0,3,66,108]
+"symbolic__expression_8h.html#ab24b40e467980140b850478ea0b9e766":[3,0,0,3,66,18]
 };

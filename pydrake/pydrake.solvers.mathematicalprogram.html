@@ -1175,14 +1175,13 @@ is ignored.</p>
 <code class="descname">AddSosConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddSosConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Polynomial, arg1: numpy.ndarray[object[m, 1]]) -&gt; Tuple[drake::solvers::Binding&lt;drake::solvers::PositiveSemidefiniteConstraint&gt;, drake::solvers::Binding&lt;drake::solvers::LinearEqualityConstraint&gt;]</li>
+<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Polynomial, arg1: numpy.ndarray[object[m, 1]]) -&gt; Tuple[numpy.ndarray[object[m, n]], drake::solvers::Binding&lt;drake::solvers::LinearEqualityConstraint&gt;]</li>
 </ol>
 <p>Adds constraints that a given polynomial <code class="docutils literal"><span class="pre">p</span></code> is a sums-of-squares
 (SOS), that is, <code class="docutils literal"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal"><span class="pre">mᵀQm</span></code>, where m is the
-<code class="docutils literal"><span class="pre">monomial_basis</span></code>. It returns a pair of constraint bindings
-expressing:</p>
+<code class="docutils literal"><span class="pre">monomial_basis</span></code>. It returns a pair expressing:</p>
 <ul class="simple">
-<li>The coefficients matrix Q is PSD (positive semidefinite).</li>
+<li>The coefficients matrix Q, which is positive semidefinite.</li>
 </ul>
 <blockquote>
 <div><ul class="simple">
@@ -1190,7 +1189,7 @@ expressing:</p>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Polynomial) -&gt; Tuple[drake::solvers::Binding&lt;drake::solvers::PositiveSemidefiniteConstraint&gt;, drake::solvers::Binding&lt;drake::solvers::LinearEqualityConstraint&gt;]</li>
+<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Polynomial) -&gt; Tuple[numpy.ndarray[object[m, n]], drake::solvers::Binding&lt;drake::solvers::LinearEqualityConstraint&gt;]</li>
 </ol>
 <p>Adds constraints that a given polynomial <code class="docutils literal"><span class="pre">p</span></code> is a sums-of-squares
 (SOS), that is, <code class="docutils literal"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal"><span class="pre">mᵀQm</span></code>, where m is the
@@ -1198,7 +1197,7 @@ monomial basis of all indeterminates in the program with degree equal
 to half the TotalDegree of <code class="docutils literal"><span class="pre">p</span></code>. It returns a pair of constraint
 bindings expressing:</p>
 <ul class="simple">
-<li>The coefficients matrix Q is PSD (positive semidefinite).</li>
+<li>The coefficients matrix Q, which is positive semidefinite.</li>
 </ul>
 <blockquote>
 <div><ul class="simple">
@@ -1206,7 +1205,7 @@ bindings expressing:</p>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression, arg1: numpy.ndarray[object[m, 1]]) -&gt; Tuple[drake::solvers::Binding&lt;drake::solvers::PositiveSemidefiniteConstraint&gt;, drake::solvers::Binding&lt;drake::solvers::LinearEqualityConstraint&gt;]</li>
+<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression, arg1: numpy.ndarray[object[m, 1]]) -&gt; Tuple[numpy.ndarray[object[m, n]], drake::solvers::Binding&lt;drake::solvers::LinearEqualityConstraint&gt;]</li>
 </ol>
 <p>Adds constraints that a given symbolic expression <code class="docutils literal"><span class="pre">e</span></code> is a
 sums-of-squares (SOS), that is, <code class="docutils literal"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal"><span class="pre">mᵀQm</span></code>,
@@ -1214,7 +1213,7 @@ where m is the <code class="docutils literal"><span class="pre">monomial_basis</
 a polynomial with respect to <code class="docutils literal"><span class="pre">indeterminates()</span></code> in this mathematical
 program. It returns a pair of constraint bindings expressing:</p>
 <ul class="simple">
-<li>The coefficients matrix Q is PSD (positive semidefinite).</li>
+<li>The coefficients matrix Q, which is positive semidefinite.</li>
 </ul>
 <blockquote>
 <div><ul class="simple">
@@ -1222,7 +1221,7 @@ program. It returns a pair of constraint bindings expressing:</p>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="4">
-<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression) -&gt; Tuple[drake::solvers::Binding&lt;drake::solvers::PositiveSemidefiniteConstraint&gt;, drake::solvers::Binding&lt;drake::solvers::LinearEqualityConstraint&gt;]</li>
+<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression) -&gt; Tuple[numpy.ndarray[object[m, n]], drake::solvers::Binding&lt;drake::solvers::LinearEqualityConstraint&gt;]</li>
 </ol>
 <p>Adds constraints that a given symbolic expression <code class="docutils literal"><span class="pre">e</span></code> is a
 sums-of-squares (SOS), that is, <code class="docutils literal"><span class="pre">e</span></code> can be decomposed into <code class="docutils literal"><span class="pre">mTQm</span></code>.
@@ -1230,7 +1229,7 @@ Note that it decomposes <code class="docutils literal"><span class="pre">e</span
 <code class="docutils literal"><span class="pre">indeterminates()</span></code> in this mathematical program. It returns a pair
 of constraint bindings expressing:</p>
 <ul class="simple">
-<li>The coefficients matrix Q is PSD (positive semidefinite).</li>
+<li>The coefficients matrix Q, which is positive semidefinite.</li>
 </ul>
 <blockquote>
 <div><ul class="simple">
@@ -1655,27 +1654,26 @@ ease readability.</p>
 <code class="descname">NewSosPolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.NewSosPolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[object[m, 1]]) -&gt; Tuple[pydrake.symbolic.Polynomial, drake::solvers::Binding&lt;drake::solvers::PositiveSemidefiniteConstraint&gt;]</li>
+<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[object[m, 1]]) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
-<p>Returns a pair of a SOS polynomial p = mᵀQm and a PSD constraint for a
-new coefficients matrix Q, where m is the <code class="docutils literal"><span class="pre">monomial</span></code> basis. For
-example, <code class="docutils literal"><span class="pre">NewSosPolynomial(Vector2&lt;Monomial&gt;{x,y})</span></code> returns a
-polynomial p = Q₍₀,₀₎x² + 2Q₍₁,₀₎xy + Q₍₁,₁₎y² and a PSD constraint
-over Q.</p>
+<p>Returns a pair of a SOS polynomial p = mᵀQm and the coefficient matrix
+Q, where m is the <code class="docutils literal"><span class="pre">monomial</span></code> basis. For example,
+<code class="docutils literal"><span class="pre">NewSosPolynomial(Vector2&lt;Monomial&gt;{x,y})</span></code> returns a polynomial p =
+Q₍₀,₀₎x² + 2Q₍₁,₀₎xy + Q₍₁,₁₎y² and Q.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Q is a symmetric monomial_basis.rows() x monomial_basis.rows()
 matrix.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Variables, arg1: int) -&gt; Tuple[pydrake.symbolic.Polynomial, drake::solvers::Binding&lt;drake::solvers::PositiveSemidefiniteConstraint&gt;]</li>
+<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Variables, arg1: int) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
 <p>Returns a pair of a SOS polynomial p = m(x)ᵀQm(x) of degree <code class="docutils literal"><span class="pre">degree</span></code>
-and a PSD constraint for the coefficients matrix Q, where m(x) is the
+and the coefficient matrix Q that should be PSD, where m(x) is the
 result of calling <code class="docutils literal"><span class="pre">MonomialBasis(indeterminates,</span> <span class="pre">degree/2)</span></code>. For
 example, <code class="docutils literal"><span class="pre">NewSosPolynomial({x},</span> <span class="pre">4)</span></code> returns a pair of a polynomial p
 = Q₍₀,₀₎x⁴ + 2Q₍₁,₀₎ x³ + (2Q₍₂,₀₎ + Q₍₁,₁₎)x² + 2Q₍₂,₁₎x + Q₍₂,₂₎ and
-a PSD constraint over Q.</p>
+Q.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

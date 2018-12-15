@@ -99,14 +99,14 @@ $(document).ready(function(){initNavTree('detail__urdf__parser_8cc.html','');});
 <code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &lt;tinyxml2.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="rotation__matrix_8h.html">drake/math/rotation_matrix.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/fixed_offset_frame.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/joints/prismatic_joint.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/joints/revolute_joint.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/joints/weld_joint.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="detail__path__utils_8h.html">drake/multibody/parsing/detail_path_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="detail__tinyxml_8h.html">drake/multibody/parsing/detail_tinyxml.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="detail__urdf__geometry_8h.html">drake/multibody/parsing/detail_urdf_geometry.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody_2parsing_2package__map_8h.html">drake/multibody/parsing/package_map.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fixed__offset__frame_8h.html">drake/multibody/tree/fixed_offset_frame.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody_2tree_2prismatic__joint_8h.html">drake/multibody/tree/prismatic_joint.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody_2tree_2revolute__joint_8h.html">drake/multibody/tree/revolute_joint.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="weld__joint_8h.html">drake/multibody/tree/weld_joint.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for detail_urdf_parser.cc:</div>
 <div class="dyncontent">
@@ -125,9 +125,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac2cda52c606875d88f4010be466088d4"><td class="memItemLeft" align="right" valign="top">ModelInstanceIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#ac2cda52c606875d88f4010be466088d4">AddModelFromUrdfFile</a> (const std::string &amp;file_name, const std::string &amp;model_name, multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:ac2cda52c606875d88f4010be466088d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a <code>&lt;robot&gt;</code> element from the URDF file specified by <code>file_name</code> and adds it to <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1detail.html#ac2cda52c606875d88f4010be466088d4">More...</a><br /></td></tr>
-<tr class="separator:ac2cda52c606875d88f4010be466088d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe997951e02d2b6f51ee33083c3bbb2e"><td class="memItemLeft" align="right" valign="top">ModelInstanceIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#abe997951e02d2b6f51ee33083c3bbb2e">AddModelFromUrdfFile</a> (const std::string &amp;file_name, const std::string &amp;model_name, MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
+<tr class="memdesc:abe997951e02d2b6f51ee33083c3bbb2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a <code>&lt;robot&gt;</code> element from the URDF file specified by <code>file_name</code> and adds it to <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1detail.html#abe997951e02d2b6f51ee33083c3bbb2e">More...</a><br /></td></tr>
+<tr class="separator:abe997951e02d2b6f51ee33083c3bbb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

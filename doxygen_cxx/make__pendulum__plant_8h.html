@@ -98,8 +98,8 @@ $(document).ready(function(){initNavTree('make__pendulum__plant_8h.html','');});
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/joints/revolute_joint.h&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/multibody_plant/multibody_plant.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody_2tree_2revolute__joint_8h.html">drake/multibody/tree/revolute_joint.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for make_pendulum_plant.h:</div>
 <div class="dyncontent">
@@ -116,7 +116,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html">PendulumParameters</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is used to store the numerical parameters defining the model of a simple pendulum with the method <a class="el" href="namespacedrake_1_1multibody_1_1benchmarks_1_1pendulum.html#aa4924a63ab7a0ce5a3d997859baf8fac" title="This method makes a MultibodyPlant model of an idealized pendulum with a point mass at the end of a m...">MakePendulumPlant()</a>.  <a href="classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is used to store the numerical parameters defining the model of a simple pendulum with the method <a class="el" href="namespacedrake_1_1multibody_1_1benchmarks_1_1pendulum.html#a6f58f2ed12c71936c7cf52a021443b0b" title="This method makes a MultibodyPlant model of an idealized pendulum with a point mass at the end of a m...">MakePendulumPlant()</a>.  <a href="classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -132,9 +132,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa4924a63ab7a0ce5a3d997859baf8fac"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; drake::multibody::multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1benchmarks_1_1pendulum.html#aa4924a63ab7a0ce5a3d997859baf8fac">MakePendulumPlant</a> (const PendulumParameters &amp;default_parameters, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:aa4924a63ab7a0ce5a3d997859baf8fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method makes a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model of an idealized pendulum with a point mass at the end of a massless rigid rod.  <a href="namespacedrake_1_1multibody_1_1benchmarks_1_1pendulum.html#aa4924a63ab7a0ce5a3d997859baf8fac">More...</a><br /></td></tr>
-<tr class="separator:aa4924a63ab7a0ce5a3d997859baf8fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f58f2ed12c71936c7cf52a021443b0b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1benchmarks_1_1pendulum.html#a6f58f2ed12c71936c7cf52a021443b0b">MakePendulumPlant</a> (const PendulumParameters &amp;default_parameters, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
+<tr class="memdesc:a6f58f2ed12c71936c7cf52a021443b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method makes a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model of an idealized pendulum with a point mass at the end of a massless rigid rod.  <a href="namespacedrake_1_1multibody_1_1benchmarks_1_1pendulum.html#a6f58f2ed12c71936c7cf52a021443b0b">More...</a><br /></td></tr>
+<tr class="separator:a6f58f2ed12c71936c7cf52a021443b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

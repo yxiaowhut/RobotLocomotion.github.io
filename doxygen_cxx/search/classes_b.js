@@ -45,7 +45,6 @@ var searchData=
   ['leafcompositeeventcollection_3c_20autodiffxd_20_3e',['LeafCompositeEventCollection&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_leaf_composite_event_collection.html',1,'drake::systems']]],
   ['leafcompositeeventcollection_3c_20double_20_3e',['LeafCompositeEventCollection&lt; double &gt;',['../classdrake_1_1systems_1_1_leaf_composite_event_collection.html',1,'drake::systems']]],
   ['leafcontext',['LeafContext',['../classdrake_1_1systems_1_1_leaf_context.html',1,'drake::systems']]],
-  ['leafcontext_3c_20autodiffxd_20_3e',['LeafContext&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_leaf_context.html',1,'drake::systems']]],
   ['leafcontext_3c_20double_20_3e',['LeafContext&lt; double &gt;',['../classdrake_1_1systems_1_1_leaf_context.html',1,'drake::systems']]],
   ['leafeventcollection',['LeafEventCollection',['../classdrake_1_1systems_1_1_leaf_event_collection.html',1,'drake::systems']]],
   ['leafoutputport',['LeafOutputPort',['../classdrake_1_1systems_1_1_leaf_output_port.html',1,'drake::systems']]],

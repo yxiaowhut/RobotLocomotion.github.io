@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('test__loaders_8h.html','');});
 <div class="textblock"><code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
-<code>#include &quot;drake/multibody/multibody_tree/multibody_plant/multibody_plant.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for test_loaders.h:</div>
 <div class="dyncontent">
@@ -121,18 +121,18 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a45d63ce2d4f6e3e9eb893d158125c146"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const std::string &amp;base_name, multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#a45d63ce2d4f6e3e9eb893d158125c146">ModelLoadFunction</a></td></tr>
-<tr class="memdesc:a45d63ce2d4f6e3e9eb893d158125c146"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a function signature used to parameterize unit tests by which loading mechanism they use.  <a href="namespacedrake_1_1multibody_1_1test.html#a45d63ce2d4f6e3e9eb893d158125c146">More...</a><br /></td></tr>
-<tr class="separator:a45d63ce2d4f6e3e9eb893d158125c146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99e7e534358b41cb51a4a00e964a71d"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const std::string &amp;base_name, MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#ab99e7e534358b41cb51a4a00e964a71d">ModelLoadFunction</a></td></tr>
+<tr class="memdesc:ab99e7e534358b41cb51a4a00e964a71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a function signature used to parameterize unit tests by which loading mechanism they use.  <a href="namespacedrake_1_1multibody_1_1test.html#ab99e7e534358b41cb51a4a00e964a71d">More...</a><br /></td></tr>
+<tr class="separator:ab99e7e534358b41cb51a4a00e964a71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a958bdf0064d4fc4f791116d5270b242a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#a958bdf0064d4fc4f791116d5270b242a">LoadFromSdf</a> (const std::string &amp;base_name, multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph)</td></tr>
-<tr class="memdesc:a958bdf0064d4fc4f791116d5270b242a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the model from an SDF with a resource path stem of <code>base_name</code> into <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1test.html#a958bdf0064d4fc4f791116d5270b242a">More...</a><br /></td></tr>
-<tr class="separator:a958bdf0064d4fc4f791116d5270b242a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dac18c3001290ed24bac8ef8002da2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#a1dac18c3001290ed24bac8ef8002da2d">LoadFromUrdf</a> (const std::string &amp;base_name, multibody_plant::MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph)</td></tr>
-<tr class="memdesc:a1dac18c3001290ed24bac8ef8002da2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the model from an URDF with a resource path stem of <code>base_name</code> into <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1test.html#a1dac18c3001290ed24bac8ef8002da2d">More...</a><br /></td></tr>
-<tr class="separator:a1dac18c3001290ed24bac8ef8002da2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd7388a69b36a71f0ee8520f8fd623a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#abcd7388a69b36a71f0ee8520f8fd623a">LoadFromSdf</a> (const std::string &amp;base_name, MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph)</td></tr>
+<tr class="memdesc:abcd7388a69b36a71f0ee8520f8fd623a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the model from an SDF with a resource path stem of <code>base_name</code> into <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1test.html#abcd7388a69b36a71f0ee8520f8fd623a">More...</a><br /></td></tr>
+<tr class="separator:abcd7388a69b36a71f0ee8520f8fd623a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee0be1fb8801c4da0d6bb140d7148b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html#adee0be1fb8801c4da0d6bb140d7148b1">LoadFromUrdf</a> (const std::string &amp;base_name, MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph)</td></tr>
+<tr class="memdesc:adee0be1fb8801c4da0d6bb140d7148b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the model from an URDF with a resource path stem of <code>base_name</code> into <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1test.html#adee0be1fb8801c4da0d6bb140d7148b1">More...</a><br /></td></tr>
+<tr class="separator:adee0be1fb8801c4da0d6bb140d7148b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

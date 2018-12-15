@@ -8,7 +8,6 @@ var dir_892460009e18f4b08a77d36884a88a01 =
       [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", "classdrake_1_1systems_1_1sensors_1_1_camera_info" ]
     ] ],
     [ "color_palette.h", "color__palette_8h.html", "color__palette_8h" ],
-    [ "depth_shaders.h", "depth__shaders_8h.html", "depth__shaders_8h" ],
     [ "image.cc", "image_8cc.html", null ],
     [ "image.h", "image_8h.html", "image_8h" ],
     [ "image_to_lcm_image_array_t.cc", "image__to__lcm__image__array__t_8cc.html", null ],
@@ -47,24 +46,6 @@ var dir_892460009e18f4b08a77d36884a88a01 =
       [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender" ]
     ] ],
     [ "pixel_types.h", "pixel__types_8h.html", "pixel__types_8h" ],
-    [ "rgbd_camera.cc", "rgbd__camera_8cc.html", null ],
-    [ "rgbd_camera.h", "rgbd__camera_8h.html", [
-      [ "RgbdCameraDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera_discrete.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera_discrete" ]
-    ] ],
-    [ "rgbd_camera_publish_lcm_example.cc", "rgbd__camera__publish__lcm__example_8cc.html", "rgbd__camera__publish__lcm__example_8cc" ],
-    [ "rgbd_renderer.cc", "rgbd__renderer_8cc.html", "rgbd__renderer_8cc" ],
-    [ "rgbd_renderer.h", "rgbd__renderer_8h.html", [
-      [ "RenderingConfig", "structdrake_1_1systems_1_1sensors_1_1_rendering_config.html", "structdrake_1_1systems_1_1sensors_1_1_rendering_config" ],
-      [ "RgbdRenderer", "classdrake_1_1systems_1_1sensors_1_1_rgbd_renderer.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_renderer" ]
-    ] ],
-    [ "rgbd_renderer_ospray.cc", "rgbd__renderer__ospray_8cc.html", "rgbd__renderer__ospray_8cc" ],
-    [ "rgbd_renderer_ospray.h", "rgbd__renderer__ospray_8h.html", [
-      [ "RgbdRendererOSPRay", "classdrake_1_1systems_1_1sensors_1_1_rgbd_renderer_o_s_p_ray.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_renderer_o_s_p_ray" ]
-    ] ],
-    [ "rgbd_renderer_vtk.cc", "rgbd__renderer__vtk_8cc.html", "rgbd__renderer__vtk_8cc" ],
-    [ "rgbd_renderer_vtk.h", "rgbd__renderer__vtk_8h.html", [
-      [ "RgbdRendererVTK", "classdrake_1_1systems_1_1sensors_1_1_rgbd_renderer_v_t_k.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_renderer_v_t_k" ]
-    ] ],
     [ "rotary_encoders.cc", "rotary__encoders_8cc.html", null ],
     [ "rotary_encoders.h", "rotary__encoders_8h.html", null ],
     [ "vtk_util.cc", "vtk__util_8cc.html", "vtk__util_8cc" ],

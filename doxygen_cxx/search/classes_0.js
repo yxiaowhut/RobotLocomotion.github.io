@@ -30,7 +30,7 @@ var searchData=
   ['allegrocommandreceiver',['AllegroCommandReceiver',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html',1,'drake::examples::allegro_hand']]],
   ['allegrohandmotionstate',['AllegroHandMotionState',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html',1,'drake::examples::allegro_hand']]],
   ['allegrostatussender',['AllegroStatusSender',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html',1,'drake::examples::allegro_hand']]],
-  ['anglebetweenvectorsconstraint',['AngleBetweenVectorsConstraint',['../classdrake_1_1multibody_1_1internal_1_1_angle_between_vectors_constraint.html',1,'drake::multibody::internal']]],
+  ['anglebetweenvectorsconstraint',['AngleBetweenVectorsConstraint',['../classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html',1,'drake::multibody']]],
   ['antiderivativefunction',['AntiderivativeFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html',1,'drake::systems']]],
   ['antiderivativefunction_3c_20double_20_3e',['AntiderivativeFunction&lt; double &gt;',['../classdrake_1_1systems_1_1_antiderivative_function.html',1,'drake::systems']]],
   ['arclengthparameterizedspline',['ArcLengthParameterizedSpline',['../classdrake_1_1maliput_1_1rndf_1_1_arc_length_parameterized_spline.html',1,'drake::maliput::rndf']]],
@@ -49,5 +49,5 @@ var searchData=
   ['autodifftovaluematrix',['AutoDiffToValueMatrix',['../structdrake_1_1math_1_1_auto_diff_to_value_matrix.html',1,'drake::math']]],
   ['autodiffxdtest',['AutoDiffXdTest',['../classdrake_1_1test_1_1_auto_diff_xd_test.html',1,'drake::test']]],
   ['automotivesimulator',['AutomotiveSimulator',['../classdrake_1_1automotive_1_1_automotive_simulator.html',1,'drake::automotive']]],
-  ['axiallysymmetricfreebodyplant',['AxiallySymmetricFreeBodyPlant',['../classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_axially_symmetric_free_body_plant.html',1,'drake::multibody::multibody_tree::test']]]
+  ['axiallysymmetricfreebodyplant',['AxiallySymmetricFreeBodyPlant',['../classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html',1,'drake::multibody::test']]]
 ];

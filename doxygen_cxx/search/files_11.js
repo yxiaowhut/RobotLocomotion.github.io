@@ -11,6 +11,7 @@ var searchData=
   ['random_5fsource_2eh',['random_source.h',['../random__source_8h.html',1,'']]],
   ['random_5fsource_5ftest_2ecc',['random_source_test.cc',['../random__source__test_8cc.html',1,'']]],
   ['rbt_5fcollisions_5ftest_2ecc',['rbt_collisions_test.cc',['../rbt__collisions__test_8cc.html',1,'']]],
+  ['rbt_5fcompute_5ftorque_2eh',['rbt_compute_torque.h',['../rbt__compute__torque_8h.html',1,'']]],
   ['rbt_5fdifferential_5finverse_5fkinematics_2ecc',['rbt_differential_inverse_kinematics.cc',['../rbt__differential__inverse__kinematics_8cc.html',1,'']]],
   ['rbt_5fdifferential_5finverse_5fkinematics_2eh',['rbt_differential_inverse_kinematics.h',['../rbt__differential__inverse__kinematics_8h.html',1,'']]],
   ['rbt_5finverse_5fdynamics_2ecc',['rbt_inverse_dynamics.cc',['../rbt__inverse__dynamics_8cc.html',1,'']]],

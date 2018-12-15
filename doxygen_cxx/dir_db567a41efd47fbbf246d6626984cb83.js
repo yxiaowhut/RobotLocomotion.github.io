@@ -4,18 +4,18 @@ var dir_db567a41efd47fbbf246d6626984cb83 =
     [ "articulated_body_inertia_test.cc", "articulated__body__inertia__test_8cc.html", null ],
     [ "floating_body_plant.cc", "floating__body__plant_8cc.html", null ],
     [ "floating_body_plant.h", "floating__body__plant_8h.html", [
-      [ "AxiallySymmetricFreeBodyPlant", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_axially_symmetric_free_body_plant.html", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_axially_symmetric_free_body_plant" ]
+      [ "AxiallySymmetricFreeBodyPlant", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant" ]
     ] ],
     [ "floating_body_test.cc", "floating__body__test_8cc.html", null ],
     [ "frames_test.cc", "frames__test_8cc.html", "frames__test_8cc" ],
     [ "free_rotating_body_plant.cc", "free__rotating__body__plant_8cc.html", null ],
     [ "free_rotating_body_plant.h", "free__rotating__body__plant_8h.html", [
-      [ "FreeRotatingBodyPlant", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_free_rotating_body_plant.html", "classdrake_1_1multibody_1_1multibody__tree_1_1test_1_1_free_rotating_body_plant" ]
+      [ "FreeRotatingBodyPlant", "classdrake_1_1multibody_1_1test_1_1_free_rotating_body_plant.html", "classdrake_1_1multibody_1_1test_1_1_free_rotating_body_plant" ]
     ] ],
     [ "free_rotating_body_test.cc", "free__rotating__body__test_8cc.html", null ],
     [ "linear_spring_damper_test.cc", "linear__spring__damper__test_8cc.html", "linear__spring__damper__test_8cc" ],
     [ "mobilizer_tester.h", "mobilizer__tester_8h.html", [
-      [ "MobilizerTester", "classdrake_1_1multibody_1_1multibody__tree_1_1_mobilizer_tester.html", "classdrake_1_1multibody_1_1multibody__tree_1_1_mobilizer_tester" ]
+      [ "MobilizerTester", "classdrake_1_1multibody_1_1_mobilizer_tester.html", "classdrake_1_1multibody_1_1_mobilizer_tester" ]
     ] ],
     [ "model_instance_test.cc", "model__instance__test_8cc.html", null ],
     [ "multibody_forces_test.cc", "multibody__forces__test_8cc.html", "multibody__forces__test_8cc" ],

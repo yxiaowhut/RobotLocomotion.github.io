@@ -1,5 +1,10 @@
 var NAVTREEINDEX67 =
 {
+"optimization__examples_8h.html#a18bb567ee09e76a01884a4b00c087335":[3,0,0,13,0,44,17],
+"optimization__examples_8h.html#a418c5a20b60dcbe3b75bfeaea81b060f":[3,0,0,13,0,44,15],
+"optimization__examples_8h.html#a55c08578d206d8fe3178cf8eb42c4590":[3,0,0,13,0,44,16],
+"optimization__examples_8h.html#a8d9ec9d33ea9a835a8a6f0748971d6f1":[3,0,0,13,0,44,13],
+"optimization__examples_8h.html#a8d9ec9d33ea9a835a8a6f0748971d6f1a3f44b41f503cad5057b7bb55bda0c101":[3,0,0,13,0,44,13,0],
 "optimization__examples_8h.html#a8d9ec9d33ea9a835a8a6f0748971d6f1a65ca281a53f8b496baa0f4d8d05e6024":[3,0,0,13,0,44,13,2],
 "optimization__examples_8h.html#a8d9ec9d33ea9a835a8a6f0748971d6f1a9d99771136750c6307d8cfe26f29c679":[3,0,0,13,0,44,13,1],
 "optimization__examples_8h.html#a8d9ec9d33ea9a835a8a6f0748971d6f1abd7db33d6f2f2a98d2caa626364b5b8f":[3,0,0,13,0,44,13,3],
@@ -24,8 +29,8 @@ var NAVTREEINDEX67 =
 "optitrack__pose__extractor__test_8cc.html#a409f0fc00f5231042c95ccf5fe8fda5f":[3,0,0,8,1,0,0,4],
 "optitrack__pose__extractor__test_8cc.html#a713cdb9d8ca65989d7d69f64ad73cae4":[3,0,0,8,1,0,0,0],
 "optitrack__pose__extractor__test_8cc.html#aa43692cb2085a227b2036befd465b66d":[3,0,0,8,1,0,0,2],
-"optitrack__sender_8cc.html":[3,0,0,14,8,18],
-"optitrack__sender_8h.html":[3,0,0,14,8,19],
+"optitrack__sender_8cc.html":[3,0,0,14,8,17],
+"optitrack__sender_8h.html":[3,0,0,14,8,18],
 "optitrack__sender__test_8cc.html":[3,0,0,14,8,0,6],
 "optitrack__sender__test_8cc.html#aef8225384074d9688bed53b4e6153270":[3,0,0,14,8,0,6,0],
 "optitrack__test_8cc.html":[3,0,0,5,11,3,2],
@@ -35,9 +40,6 @@ var NAVTREEINDEX67 =
 "orientation__constraint_8cc.html":[3,0,0,11,2,9],
 "orientation__constraint_8h.html":[3,0,0,11,2,10],
 "orientation__constraint__test_8cc.html":[3,0,0,11,2,0,5],
-"orientation__constraint__test_8cc.html#a8dfd18df3a66462649635339c238e8f3":[3,0,0,11,2,0,5,1],
-"orientation__constraint__test_8cc.html#aace25a8f85c3595917d3fd46c302a1a2":[3,0,0,11,2,0,5,0],
-"orientation__constraint__test_8cc.html#abc721251a0b6a5e02623ed513d502075":[3,0,0,11,2,0,5,2],
 "orthonormal__basis_8cc.html":[3,0,0,9,31],
 "orthonormal__basis_8h.html":[3,0,0,9,32],
 "orthonormal__basis_8h.html#a5a25d66185d603162f5702d31136b31c":[3,0,0,9,32,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "piecewise__polynomial__affine__system__test_8cc.html#a57f276ed1b4fb0f254b4484231eecc2d":[3,0,0,14,6,0,18,1],
 "piecewise__polynomial__affine__system__test_8cc.html#a75febec92a52461460fae22c17a92079":[3,0,0,14,6,0,18,5],
 "piecewise__polynomial__affine__system__test_8cc.html#a98ac758dabf5abc9a9777b2ac5a66564":[3,0,0,14,6,0,18,2],
-"piecewise__polynomial__affine__system__test_8cc.html#a9cbb1c9e570d4d5984a221b9a24850d7":[3,0,0,14,6,0,18,6],
-"piecewise__polynomial__affine__system__test_8cc.html#aa025d72bbf07f4edf716cc03d32484a5":[3,0,0,14,6,0,18,7],
-"piecewise__polynomial__affine__system__test_8cc.html#ad8f817c3b96c652d8f195024e4e851a0":[3,0,0,14,6,0,18,0]
+"piecewise__polynomial__affine__system__test_8cc.html#a9cbb1c9e570d4d5984a221b9a24850d7":[3,0,0,14,6,0,18,6]
 };
