@@ -1,8 +1,5 @@
 var NAVTREEINDEX74 =
 {
-"spatial__acceleration_8cc.html":[3,0,0,11,3,1],
-"spatial__acceleration_8h.html":[3,0,0,11,3,2],
-"spatial__algebra_8h.html":[3,0,0,11,3,3],
 "spatial__algebra__test_8cc.html":[3,0,0,11,3,0,0],
 "spatial__algebra__test_8cc.html#a00a4592ec00a566bf70a1eff58f375e2":[3,0,0,11,3,0,0,2],
 "spatial__algebra__test_8cc.html#a0e57a9f1a49a2e96ad1b53f743ac0910":[3,0,0,11,3,0,0,6],
@@ -249,5 +246,8 @@ var NAVTREEINDEX74 =
 "struct_q_p_locomotion_plan_settings.html#a7a8b08ce0042b6675a7f11dae6bea9c9":[2,0,60,7],
 "struct_q_p_locomotion_plan_settings.html#a7b32bccbbdc707ed35d482500f3289fe":[2,0,60,9],
 "struct_q_p_locomotion_plan_settings.html#a80a8fd553bbb7917729bf3bb3a050a0c":[2,0,60,8],
-"struct_q_p_locomotion_plan_settings.html#a868b0fd7257c72113df65001c80603b3":[2,0,60,25]
+"struct_q_p_locomotion_plan_settings.html#a868b0fd7257c72113df65001c80603b3":[2,0,60,25],
+"struct_q_p_locomotion_plan_settings.html#a8baa14bbc9c28c2907369ff16aafe39d":[2,0,60,4],
+"struct_q_p_locomotion_plan_settings.html#a8c6eec0c7b8d40c90057d54686be8506":[2,0,60,10],
+"struct_q_p_locomotion_plan_settings.html#a8c7c8ccd9dc8289ab8dfb5ea80375024":[2,0,60,31]
 };

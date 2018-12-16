@@ -1,8 +1,5 @@
 var NAVTREEINDEX76 =
 {
-"structdrake_1_1maliput_1_1api_1_1_road_position.html#a052f1bed10d7aad444802177f1d7d18b":[2,0,0,9,0,13,3],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html#a4ed2e763b9bcf2c840b6ff56c17de59b":[2,0,0,9,0,13,0],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html#a7c3987ba959bbbbeafba43c0db4c24d8":[2,0,0,9,0,13,1],
 "structdrake_1_1maliput_1_1api_1_1_road_position.html#a7f4404a6c9065d06842311b7308a6cba":[2,0,0,9,0,13,2],
 "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result.html":[2,0,0,9,0,0,5,0],
 "structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result.html#a4a5aaf99676c824ab10aed1aeca67db5":[2,0,0,9,0,0,5,0,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX76 =
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a09f8d0da960e3eed8859508f7efdb421":[2,0,0,12,2,0,0],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06":[2,0,0,12,2,0,7],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a148f4adaece02fe36243c84bafd8d467":[2,0,0,12,2,0,2],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09":[2,0,0,12,2,0,18]
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09":[2,0,0,12,2,0,18],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a1b267a517e862262fc1f50dd62c48f41":[2,0,0,12,2,0,1],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a1ea36727a50f62443fbf5770544a69d4":[2,0,0,12,2,0,13],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[2,0,0,12,2,0,14]
 };

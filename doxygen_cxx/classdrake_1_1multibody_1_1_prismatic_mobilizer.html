@@ -230,9 +230,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abf179b5c1328d17a41d9a31c01821e92 inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973e3098a8f916b64f625b6e1f6bc653 inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html">Mobilizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a973e3098a8f916b64f625b6e1f6bc653">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html">Mobilizer</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a973e3098a8f916b64f625b6e1f6bc653 inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1d21737dd8cda28722ab6a1ac38201e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#ac1d21737dd8cda28722ab6a1ac38201e">set_zero_configuration</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:ac1d21737dd8cda28722ab6a1ac38201e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state stored in <code>context</code> to a <em>zero configuration</em> as defined by <a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a5aa27a24c2c9e5ddc38d771e455c3b88" title="Sets the state to what will be considered to be the zero configuration for this mobilizer. ">set_zero_state()</a>.  <a href="classdrake_1_1multibody_1_1_mobilizer.html#ac1d21737dd8cda28722ab6a1ac38201e">More...</a><br /></td></tr>
-<tr class="separator:ac1d21737dd8cda28722ab6a1ac38201e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a102742f11ab814a1e801552786f52e3e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a102742f11ab814a1e801552786f52e3e">CalcNMatrix</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; N) const</td></tr>
 <tr class="memdesc:a102742f11ab814a1e801552786f52e3e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the kinematic mapping matrix <code>N(q)</code> that maps generalized velocities for this mobilizer to time derivatives of the generalized positions for this mobilizer according to <code>q̇ = N(q)⋅v</code>.  <a href="classdrake_1_1multibody_1_1_mobilizer.html#a102742f11ab814a1e801552786f52e3e">More...</a><br /></td></tr>
 <tr class="separator:a102742f11ab814a1e801552786f52e3e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -489,15 +486,13 @@ class drake::multibody::PrismaticMobilizer&lt; T &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Computes the across-mobilizer velocity <code>V_FM(q, v)</code> of the outboard frame M measured and expressed in frame F as a function of the translation taken from <code>context</code> and input translational velocity <code>v</code> along this mobilizer's axis (see <a class="el" href="classdrake_1_1multibody_1_1_prismatic_mobilizer.html#af6693bdd8cd7c223b8ac7b6015dd2ab4">translation_axis()</a>). </p>
 <p>The generalized coordinate q for <code>this</code> mobilizer (the translation distance) is read from in <code>context</code>. This method aborts in Debug builds if <code>v.size()</code> is not one. </p>
-
-<p>Implements <a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a22309313c4735a8585e0f065d09abd60">Mobilizer&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -520,14 +515,12 @@ class drake::multibody::PrismaticMobilizer&lt; T &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Computes the across-mobilizer transform <code>X_FM(q)</code> between the inboard frame F and the outboard frame M as a function of the translation distance along this mobilizer's axis (see <a class="el" href="classdrake_1_1multibody_1_1_prismatic_mobilizer.html#af6693bdd8cd7c223b8ac7b6015dd2ab4">translation_axis()</a>.) The generalized coordinate q for <code>this</code> mobilizer (the translation distance) is read from in <code>context</code>. </p>
-
-<p>Implements <a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a3e96fa796678267f386cafa2315e1302">Mobilizer&lt; T &gt;</a>.</p>
 
 </div>
 </div>

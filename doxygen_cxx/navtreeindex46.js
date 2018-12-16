@@ -1,8 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_robot_kinematic_state.html#a1ead62a449f4d5c629baa5c4e4dfd12d":[2,0,0,18,2,1,15,6],
-"classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_robot_kinematic_state.html#a2508e029223ea11872a531a886d0a55f":[2,0,0,18,2,1,15,16],
-"classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_robot_kinematic_state.html#a2554de70f1e6487329ad77691da7ab13":[2,0,0,18,2,1,15,15],
 "classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_robot_kinematic_state.html#a293c6f17575dd1dbd5807d9f8944fc91":[2,0,0,18,2,1,15,9],
 "classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_robot_kinematic_state.html#a33c855c17c61f71e87aead45b3a0e87a":[2,0,0,18,2,1,15,2],
 "classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_robot_kinematic_state.html#a373f558c41ec0e7507f0b7de0f831881":[2,0,0,18,2,1,15,3],
@@ -249,5 +246,8 @@ var NAVTREEINDEX46 =
 "classdrake_1_1systems_1_1lcm_1_1_utime_message_to_seconds.html#aa70c4e196f0896925bc143cc8a8490d4":[2,0,0,18,7,11,2],
 "classdrake_1_1systems_1_1lcm_1_1_utime_message_to_seconds.html#af6d91ee6c04b16e3b82be22bf66506bb":[2,0,0,18,7,11,4],
 "classdrake_1_1systems_1_1plants_1_1_i_k_trajectory_helper.html":[2,0,0,18,8,2],
-"classdrake_1_1systems_1_1plants_1_1_i_k_trajectory_helper.html#a04754f6d35e48cbf2b5a26f2d1256b09":[2,0,0,18,8,2,7]
+"classdrake_1_1systems_1_1plants_1_1_i_k_trajectory_helper.html#a04754f6d35e48cbf2b5a26f2d1256b09":[2,0,0,18,8,2,7],
+"classdrake_1_1systems_1_1plants_1_1_i_k_trajectory_helper.html#a12ae196564e0fc7d445a35031ce5bfd7":[2,0,0,18,8,2,12],
+"classdrake_1_1systems_1_1plants_1_1_i_k_trajectory_helper.html#a29afffc2de4268d9f7491e1344d3613b":[2,0,0,18,8,2,14],
+"classdrake_1_1systems_1_1plants_1_1_i_k_trajectory_helper.html#a2cd76e095ab945c50a000aaac4399d28":[2,0,0,18,8,2,9]
 };

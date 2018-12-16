@@ -1,8 +1,5 @@
 var NAVTREEINDEX61 =
 {
-"linear__program__examples_8h.html#a1168f56e191046967c1c588ed7b9e716a309f2065c43e90cb6af41646d7256b22":[3,0,0,13,0,25,9,4],
-"linear__program__examples_8h.html#a1168f56e191046967c1c588ed7b9e716a787fc13e78155f83f884d606377ec903":[3,0,0,13,0,25,9,2],
-"linear__program__examples_8h.html#a1168f56e191046967c1c588ed7b9e716a860458a823f97b6a95f42fa4fc3b163b":[3,0,0,13,0,25,9,3],
 "linear__program__examples_8h.html#a1168f56e191046967c1c588ed7b9e716adc8dd9cf5e2f249d0b20bbde257d5ced":[3,0,0,13,0,25,9,1],
 "linear__quadratic__regulator_8cc.html":[3,0,0,14,1,10],
 "linear__quadratic__regulator_8cc.html#ga08ea3ecda57dc822ca734303be2ad888":[3,0,0,14,1,10,3],
@@ -249,5 +246,8 @@ var NAVTREEINDEX61 =
 "mathematical__program__test_8cc.html#a2e74ca90b8b76950cfe4f308a6af6f25":[3,0,0,13,0,28,24],
 "mathematical__program__test_8cc.html#a2ece331e517cf804236d1509719f1b58":[3,0,0,13,0,28,75],
 "mathematical__program__test_8cc.html#a31ae15c4b1e2a840fd8a30f701ba79f2":[3,0,0,13,0,28,28],
-"mathematical__program__test_8cc.html#a33667daaa60e6f55caf0776bb71e6c3e":[3,0,0,13,0,28,101]
+"mathematical__program__test_8cc.html#a33667daaa60e6f55caf0776bb71e6c3e":[3,0,0,13,0,28,101],
+"mathematical__program__test_8cc.html#a3371485937400abf77601e6e7ca5e4ba":[3,0,0,13,0,28,93],
+"mathematical__program__test_8cc.html#a348bdbd9962009a8f52f4e50aa9be064":[3,0,0,13,0,28,29],
+"mathematical__program__test_8cc.html#a397815407727c875cb30af50f1366380":[3,0,0,13,0,28,79]
 };

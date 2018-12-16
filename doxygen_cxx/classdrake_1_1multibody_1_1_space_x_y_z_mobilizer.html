@@ -234,9 +234,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abf179b5c1328d17a41d9a31c01821e92 inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973e3098a8f916b64f625b6e1f6bc653 inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html">Mobilizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a973e3098a8f916b64f625b6e1f6bc653">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html">Mobilizer</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a973e3098a8f916b64f625b6e1f6bc653 inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1d21737dd8cda28722ab6a1ac38201e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#ac1d21737dd8cda28722ab6a1ac38201e">set_zero_configuration</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:ac1d21737dd8cda28722ab6a1ac38201e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state stored in <code>context</code> to a <em>zero configuration</em> as defined by <a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a5aa27a24c2c9e5ddc38d771e455c3b88" title="Sets the state to what will be considered to be the zero configuration for this mobilizer. ">set_zero_state()</a>.  <a href="classdrake_1_1multibody_1_1_mobilizer.html#ac1d21737dd8cda28722ab6a1ac38201e">More...</a><br /></td></tr>
-<tr class="separator:ac1d21737dd8cda28722ab6a1ac38201e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a102742f11ab814a1e801552786f52e3e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a102742f11ab814a1e801552786f52e3e">CalcNMatrix</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; N) const</td></tr>
 <tr class="memdesc:a102742f11ab814a1e801552786f52e3e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the kinematic mapping matrix <code>N(q)</code> that maps generalized velocities for this mobilizer to time derivatives of the generalized positions for this mobilizer according to <code>q̇ = N(q)⋅v</code>.  <a href="classdrake_1_1multibody_1_1_mobilizer.html#a102742f11ab814a1e801552786f52e3e">More...</a><br /></td></tr>
 <tr class="separator:a102742f11ab814a1e801552786f52e3e inherit pub_methods_classdrake_1_1multibody_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,7 +305,7 @@ class drake::multibody::SpaceXYZMobilizer&lt; T &gt;</h3>
 <p>No translational motion of M in F is allowed and the inboard frame origin <code>Fo</code> and the outboard frame origin <code>Mo</code> are coincident at all times.</p>
 <p>The orientation <code>R_FM</code> of the outboard frame M in F is parameterized with space <code>x-y-z</code> Euler angles (also known as extrinsic angles). That is, the generalized coordinates for this mobilizer correspond to angles θ₁, θ₂, θ₃, for a sequence of rotations about the x̂, ŷ, ẑ axes solidary with frame F, respectively. Mathematically, rotation <code>R_FM</code> is given in terms of angles θ₁, θ₂, θ₃ by: </p><pre>
   R_FM(q) = Rz(θ₃) * Ry(θ₂) * Rx(θ₁)
-</pre><p> where <code>Rx(θ)</code>, <code>Ry(θ)</code> and <code>Rz(θ)</code> correspond to the elemental rotations in amount of θ about the x, y and z axes respectively. Zero θ₁, θ₂, θ₃ angles define the "zero configuration" which corresponds to frames F and M being coincident, see <a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#ac1d21737dd8cda28722ab6a1ac38201e" title="Sets the state stored in context to a zero configuration as defined by set_zero_state(). ">set_zero_configuration()</a>. Angles θ₁, θ₂, θ₃ are defined to be positive according to the right-hand-rule with the thumb aligned in the direction of their respective axes.</p>
+</pre><p> where <code>Rx(θ)</code>, <code>Ry(θ)</code> and <code>Rz(θ)</code> correspond to the elemental rotations in amount of θ about the x, y and z axes respectively. Zero θ₁, θ₂, θ₃ angles define the "zero configuration" which corresponds to frames F and M being coincident, see <a class="el" href="classdrake_1_1multibody_1_1_space_x_y_z_mobilizer.html#ab5a7651bb8b15c07bade18e44d742697" title="Sets state to store zero space x-y-z angles θ₁, θ₂, θ₃ and zero across mobilizer angular velocity ...">set_zero_state()</a>. Angles θ₁, θ₂, θ₃ are defined to be positive according to the right-hand-rule with the thumb aligned in the direction of their respective axes.</p>
 <p>The generalized velocities for this mobilizer correspond to the angular velocity <code>w_FM</code> of frame M in F, expressed in frame F. <a class="el" href="classdrake_1_1multibody_1_1_space_x_y_z_mobilizer.html#a454d7d787d38bc132c75ce36217169ea" title="Maps the generalized velocity v, which corresponds to the angular velocity w_FM, to time derivatives ...">MapVelocityToQDot()</a> maps the angular velocity <code>w_FM</code> to Euler angles's rates while <a class="el" href="classdrake_1_1multibody_1_1_space_x_y_z_mobilizer.html#a9b3f8e222f0f86dc9ea56d5307061dbc" title="Maps time derivatives of the space x-y-z angles θ₁, θ₂, θ₃ in qdot to the generalized velocity v...">MapQDotToVelocity()</a> maps Euler angles's rates to angular velocity <code>w_FM</code>. While the mapping <a class="el" href="classdrake_1_1multibody_1_1_space_x_y_z_mobilizer.html#a454d7d787d38bc132c75ce36217169ea" title="Maps the generalized velocity v, which corresponds to the angular velocity w_FM, to time derivatives ...">MapVelocityToQDot()</a> always exists, its inverse <a class="el" href="classdrake_1_1multibody_1_1_space_x_y_z_mobilizer.html#a9b3f8e222f0f86dc9ea56d5307061dbc" title="Maps time derivatives of the space x-y-z angles θ₁, θ₂, θ₃ in qdot to the generalized velocity v...">MapQDotToVelocity()</a> is singular for values of θ₂ (many times referred to as the pitch angle) such that <code>θ₂ = π/2 + kπ, ∀ k ∈ ℤ</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Space <code>x-y-z</code> angles (extrinsic) are equivalent to <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> <code>z-y-x</code> angles (intrinsic).</dd>
 <dd>
@@ -489,14 +486,12 @@ The mapping from angular velocity to Euler angle's rates is singular for angle <
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Computes the across-mobilizer velocity <code>V_FM(q, v)</code> of the outboard frame M measured and expressed in frame F as a function of the space x-y-z angles θ₁, θ₂, θ₃ stored in <code>context</code> and of the input generalized velocity v which contains the components of the angular velocity <code>w_FM</code> expressed in frame F. </p>
-
-<p>Implements <a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a22309313c4735a8585e0f065d09abd60">Mobilizer&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -519,14 +514,12 @@ The mapping from angular velocity to Euler angle's rates is singular for angle <
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Computes the across-mobilizer transform <code>X_FM(q)</code> between the inboard frame F and the outboard frame M as a function of the space x-y-z angles θ₁, θ₂, θ₃ stored in <code>context</code>. </p>
-
-<p>Implements <a class="el" href="classdrake_1_1multibody_1_1_mobilizer.html#a3e96fa796678267f386cafa2315e1302">Mobilizer&lt; T &gt;</a>.</p>
 
 </div>
 </div>
