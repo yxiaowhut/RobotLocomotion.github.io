@@ -131,6 +131,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a196f98e5d68f6075be19efa313e68e10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a196f98e5d68f6075be19efa313e68e10">get_mutable_scene_graph</a> ()</td></tr>
 <tr class="memdesc:a196f98e5d68f6075be19efa313e68e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the SceneGraph responsible for all of the geometry for the robot and the environment.  <a href="#a196f98e5d68f6075be19efa313e68e10">More...</a><br /></td></tr>
 <tr class="separator:a196f98e5d68f6075be19efa313e68e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50abc7ca931244ca10f30250cede1374"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> geometry::dev::SceneGraph&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a50abc7ca931244ca10f30250cede1374">get_render_scene_graph</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memdesc:a50abc7ca931244ca10f30250cede1374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the SceneGraph used for rendering camera images.  <a href="#a50abc7ca931244ca10f30250cede1374">More...</a><br /></td></tr>
+<tr class="separator:a50abc7ca931244ca10f30250cede1374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599c57549f4b1da5dbc4086d99117a41"><td class="memItemLeft" align="right" valign="top">geometry::dev::SceneGraph&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a599c57549f4b1da5dbc4086d99117a41">get_mutable_render_scene_graph</a> ()</td></tr>
+<tr class="memdesc:a599c57549f4b1da5dbc4086d99117a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the SceneGraph used for rendering camera images.  <a href="#a599c57549f4b1da5dbc4086d99117a41">More...</a><br /></td></tr>
+<tr class="separator:a599c57549f4b1da5dbc4086d99117a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a383826f5e1d24ca83b51a0a4337e6338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a383826f5e1d24ca83b51a0a4337e6338">get_controller_plant</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
 <tr class="memdesc:a383826f5e1d24ca83b51a0a4337e6338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the plant used by the inverse dynamics controller (which contains only a model of the iiwa + equivalent mass of the gripper).  <a href="#a383826f5e1d24ca83b51a0a4337e6338">More...</a><br /></td></tr>
 <tr class="separator:a383826f5e1d24ca83b51a0a4337e6338"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1062,7 +1068,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 <p>Users <em>must</em> call <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a> after making any additions to the multibody plant and before using this class in the Systems framework. </p>
 <p>This should be called exactly once. This assumes an IIWA and WSG have been added to the MultibodyPlant, and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a29150974d6cae8767ab9705c8aa1f18f" title="Notifies the ManipulationStation that the IIWA robot model instance can be identified by iiwa_instanc...">RegisterIiwaControllerModel()</a> and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a807001b50292ea12e2aac3cf95c4bf7d" title="Notifies the ManipulationStation that the WSG gripper model instance can be identified by wsg_instanc...">RegisterWsgControllerModel()</a> have been called.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">multibody::MultibodyPlant&lt;T&gt;::Finalize()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">multibody::MultibodyPlant&lt;T&gt;::Finalize()</a> </dd></dl>
 
 </div>
 </div>
@@ -1168,6 +1174,34 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 </div>
 </div>
+<a id="a599c57549f4b1da5dbc4086d99117a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599c57549f4b1da5dbc4086d99117a41">&#9670;&nbsp;</a></span>get_mutable_render_scene_graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry::dev::SceneGraph&lt;T&gt;&amp; get_mutable_render_scene_graph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the SceneGraph used for rendering camera images. </p>
+<p>Since the SceneGraph for rendering is constructed in <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a>, this throws when called before <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a>. Note: the current implementation of the manipulation station uses a separate development version of SceneGraph for rendering (as opposed to the one returned by <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a17e62927aa3fcd951414114295385150" title="Returns a reference to the SceneGraph responsible for all of the geometry for the robot and the envir...">get_scene_graph()</a> used for contact detection and visualization). This method will be deprecated soon. </p>
+
+</div>
+</div>
 <a id="a196f98e5d68f6075be19efa313e68e10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a196f98e5d68f6075be19efa313e68e10">&#9670;&nbsp;</a></span>get_mutable_scene_graph()</h2>
 
@@ -1193,6 +1227,34 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 <p>Returns a mutable reference to the SceneGraph responsible for all of the geometry for the robot and the environment. </p>
 <p>This can be used to, e.g., add additional elements into the world before calling <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a>. </p>
+
+</div>
+</div>
+<a id="a50abc7ca931244ca10f30250cede1374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50abc7ca931244ca10f30250cede1374">&#9670;&nbsp;</a></span>get_render_scene_graph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> geometry::dev::SceneGraph&lt;T&gt;&amp; get_render_scene_graph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the SceneGraph used for rendering camera images. </p>
+<p>Since the SceneGraph for rendering is constructed in <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a>, this throws when called before <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a>. Note: the current implementation of the manipulation station uses a separate development version of SceneGraph for rendering (as opposed to the one returned by <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a17e62927aa3fcd951414114295385150" title="Returns a reference to the SceneGraph responsible for all of the geometry for the robot and the envir...">get_scene_graph()</a> used for contact detection and visualization). This method will be deprecated soon. </p>
 
 </div>
 </div>

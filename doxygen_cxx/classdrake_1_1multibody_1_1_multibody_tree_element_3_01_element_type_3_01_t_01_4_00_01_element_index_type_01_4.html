@@ -141,10 +141,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ac082304046ba458060848948139c12f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#ac082304046ba458060848948139c12f8">MultibodyTreeElement</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#acd2192bbd60e8c8d2c14763041d66d50">model_instance</a>)</td></tr>
 <tr class="memdesc:ac082304046ba458060848948139c12f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which allows specifying a model instance.  <a href="#ac082304046ba458060848948139c12f8">More...</a><br /></td></tr>
 <tr class="separator:ac082304046ba458060848948139c12f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34ee8a1b905c778c50419a09b4f819d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#a34ee8a1b905c778c50419a09b4f819d0">SetTopology</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;tree)</td></tr>
+<tr class="memitem:a34ee8a1b905c778c50419a09b4f819d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#a34ee8a1b905c778c50419a09b4f819d0">SetTopology</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;tree)</td></tr>
 <tr class="memdesc:a34ee8a1b905c778c50419a09b4f819d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives MultibodyTree elements the opportunity to retrieve their topology when <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> is invoked.  <a href="#a34ee8a1b905c778c50419a09b4f819d0">More...</a><br /></td></tr>
 <tr class="separator:a34ee8a1b905c778c50419a09b4f819d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa87c4cb756887f041a9953b887caa6f7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#aa87c4cb756887f041a9953b887caa6f7">DoSetTopology</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;tree)=0</td></tr>
+<tr class="memitem:aa87c4cb756887f041a9953b887caa6f7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#aa87c4cb756887f041a9953b887caa6f7">DoSetTopology</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;tree)=0</td></tr>
 <tr class="memdesc:aa87c4cb756887f041a9953b887caa6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html#a34ee8a1b905c778c50419a09b4f819d0" title="Gives MultibodyTree elements the opportunity to retrieve their topology when MultibodyTree::Finalize(...">SetTopology()</a>.  <a href="#aa87c4cb756887f041a9953b887caa6f7">More...</a><br /></td></tr>
 <tr class="separator:aa87c4cb756887f041a9953b887caa6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -313,7 +313,7 @@ class drake::multibody::MultibodyTreeElement&lt; ElementType&lt; T &gt;, Element
         <tr>
           <td class="memname">virtual void DoSetTopology </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;&#160;</td>
           <td class="paramname"><em>tree</em></td><td>)</td>
           <td></td>
         </tr>
@@ -562,7 +562,7 @@ class drake::multibody::MultibodyTreeElement&lt; ElementType&lt; T &gt;, Element
         <tr>
           <td class="memname">void SetTopology </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_topology.html">MultibodyTreeTopology</a> &amp;&#160;</td>
           <td class="paramname"><em>tree</em></td><td>)</td>
           <td></td>
         </tr>

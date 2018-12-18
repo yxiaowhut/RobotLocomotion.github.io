@@ -40,8 +40,6 @@ var searchData=
   ['alias_5fcc_5ftest_2ecc',['alias_cc_test.cc',['../alias__cc__test_8cc.html',1,'']]],
   ['allegro_5fcommon_2ecc',['allegro_common.cc',['../allegro__common_8cc.html',1,'']]],
   ['allegro_5fcommon_2eh',['allegro_common.h',['../allegro__common_8h.html',1,'']]],
-  ['allegro_5fhand_5fsdf_5ftest_2ecc',['allegro_hand_sdf_test.cc',['../allegro__hand__sdf__test_8cc.html',1,'']]],
-  ['allegro_5fhand_5furdf_5ftest_2ecc',['allegro_hand_urdf_test.cc',['../allegro__hand__urdf__test_8cc.html',1,'']]],
   ['allegro_5flcm_2ecc',['allegro_lcm.cc',['../allegro__lcm_8cc.html',1,'']]],
   ['allegro_5flcm_2eh',['allegro_lcm.h',['../allegro__lcm_8h.html',1,'']]],
   ['allegro_5flcm_5ftest_2ecc',['allegro_lcm_test.cc',['../allegro__lcm__test_8cc.html',1,'']]],

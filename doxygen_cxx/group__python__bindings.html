@@ -94,9 +94,9 @@ $(document).ready(function(){initNavTree('group__python__bindings.html','');});
 <p>Drake uses <a href="http://pybind11.readthedocs.io/en/stable/">pybind11</a> for binding its C++ API to Python.</p>
 <p>At present, a fork of <code><a class="el" href="namespacepybind11.html">pybind11</a></code> is used which permits bindings matrices with <code>dtype=object</code>, passing <code>unique_ptr</code> objects, and prevents aliasing for Python classes derived from <code><a class="el" href="namespacepybind11.html">pybind11</a></code> classes.</p>
 <h2>Module Organization</h2>
-<p>The structure of the bindings generally follow the <em>directory structure</em>, not the namespace structure. As an example, if in C++ you do: </p><pre class="fragment">#include &lt;drake/multibody/multibody_tree/multibody_plant/{header}.h&gt;
-using drake::multibody::multibody_plant::{symbol};
-</pre><p>then in Python you would do: </p><pre class="fragment">from pydrake.multibody.multibody_tree.multibody_plant import {symbol}
+<p>The structure of the bindings generally follow the <em>directory structure</em>, not the namespace structure. As an example, if in C++ you do: </p><pre class="fragment">#include &lt;drake/multibody/plant/{header}.h&gt;
+using drake::multibody::{symbol};
+</pre><p>then in Python you would do: </p><pre class="fragment">from pydrake.multibody.plant import {symbol}
 </pre><p>Some (but not all) exceptions:</p>
 <ul>
 <li>Some of <code>drake/common</code> is incorporated into <code>pydrake.util</code>. (This will be remedied in the future.)</li>

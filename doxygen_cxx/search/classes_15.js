@@ -14,7 +14,7 @@ var searchData=
   ['vectorsetpoint',['VectorSetpoint',['../classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html',1,'drake::systems::controllers']]],
   ['vectorsystem',['VectorSystem',['../classdrake_1_1systems_1_1_vector_system.html',1,'drake::systems']]],
   ['vectorsystem_3c_20double_20_3e',['VectorSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_vector_system.html',1,'drake::systems']]],
-  ['velocitykinematicscache',['VelocityKinematicsCache',['../classdrake_1_1multibody_1_1_velocity_kinematics_cache.html',1,'drake::multibody']]],
+  ['velocitykinematicscache',['VelocityKinematicsCache',['../classdrake_1_1multibody_1_1internal_1_1_velocity_kinematics_cache.html',1,'drake::multibody::internal']]],
   ['vertex',['Vertex',['../structdrake_1_1maliput_1_1utility_1_1mesh_1_1_index_face_1_1_vertex.html',1,'drake::maliput::utility::mesh::IndexFace']]],
   ['viewerdrawtranslator',['ViewerDrawTranslator',['../classdrake_1_1systems_1_1_viewer_draw_translator.html',1,'drake::systems']]],
   ['visualelement',['VisualElement',['../class_drake_shapes_1_1_visual_element.html',1,'DrakeShapes']]],

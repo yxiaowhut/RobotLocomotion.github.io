@@ -23,7 +23,7 @@ var searchData=
   ['traits_3c_20piecewisepolynomialaffinesystem_20_3e',['Traits&lt; PiecewisePolynomialAffineSystem &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_piecewise_polynomial_affine_system_01_4.html',1,'drake::systems::scalar_conversion']]],
   ['traits_3c_20piecewisepolynomiallinearsystem_20_3e',['Traits&lt; PiecewisePolynomialLinearSystem &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_piecewise_polynomial_linear_system_01_4.html',1,'drake::systems::scalar_conversion']]],
   ['traits_3c_20rigidbodyplant_20_3e',['Traits&lt; RigidBodyPlant &gt;',['../structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_rigid_body_plant_01_4.html',1,'drake::systems::scalar_conversion']]],
-  ['trajectory',['Trajectory',['../classdrake_1_1automotive_1_1_trajectory.html',1,'Trajectory'],['../classdrake_1_1trajectories_1_1_trajectory.html',1,'Trajectory&lt; T &gt;']]],
+  ['trajectory',['Trajectory',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'Trajectory&lt; T &gt;'],['../classdrake_1_1automotive_1_1_trajectory.html',1,'Trajectory']]],
   ['trajectory_3c_20double_20_3e',['Trajectory&lt; double &gt;',['../classdrake_1_1trajectories_1_1_trajectory.html',1,'drake::trajectories']]],
   ['trajectorycar',['TrajectoryCar',['../classdrake_1_1automotive_1_1_trajectory_car.html',1,'drake::automotive']]],
   ['trajectoryfollower',['TrajectoryFollower',['../classdrake_1_1automotive_1_1_trajectory_follower.html',1,'drake::automotive']]],

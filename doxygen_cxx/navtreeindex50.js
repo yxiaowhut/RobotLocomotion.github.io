@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"common_2autodiff_8h.html":[3,0,0,3,4],
+"common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[3,0,0,3,4,0],
 "common_2trajectories_2trajectory_8h.html":[3,0,0,3,3,9],
 "common__parser__test_8cc.html":[3,0,0,11,4,0,1],
 "common__parser__test_8cc.html#a5793658985fba3f4f9b875c1ea93762c":[3,0,0,11,4,0,1,0],
@@ -75,10 +77,10 @@ var NAVTREEINDEX50 =
 "constraint_8h.html":[3,0,0,13,9],
 "constraint__doxygen_8h.html":[3,0,0,11,1,1],
 "constraint__problem__data_8h.html":[3,0,0,11,1,2],
-"constraint__relaxing__ik_8cc.html":[3,0,0,0,0,0,1],
-"constraint__relaxing__ik_8h.html":[3,0,0,0,0,0,2],
-"constraint__relaxing__ik__test_8cc.html":[3,0,0,0,0,0,0,0],
-"constraint__relaxing__ik__test_8cc.html#a682fdd09868bf2b48b3ffa688a93f25b":[3,0,0,0,0,0,0,0,0],
+"constraint__relaxing__ik_8cc.html":[3,0,0,0,0,1,1],
+"constraint__relaxing__ik_8h.html":[3,0,0,0,0,1,2],
+"constraint__relaxing__ik__test_8cc.html":[3,0,0,0,0,1,0,0],
+"constraint__relaxing__ik__test_8cc.html#a682fdd09868bf2b48b3ffa688a93f25b":[3,0,0,0,0,1,0,0,0],
 "constraint__solver_8cc.html":[3,0,0,11,1,3],
 "constraint__solver_8h.html":[3,0,0,11,1,4],
 "constraint__solver__test_8cc.html":[3,0,0,11,1,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31badd652546039b18970b8dcf2cff824268":[3,0,0,3,1,25,0,0],
 "copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31bae8606d021da140a92c7eba8d9b8af84f":[3,0,0,3,1,25,0,2],
 "copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31bae87e63774b67a23b012ac1d74efeba99":[3,0,0,3,1,25,0,1],
-"cost_8cc.html":[3,0,0,13,10],
-"cost_8cc.html#ad6f1c737bf49569abd6d9e6b9fe362e9":[3,0,0,13,10,0],
-"cost_8cc.html#aed114307c55c4cc7a446e92bf52a7bab":[3,0,0,13,10,1]
+"cost_8cc.html":[3,0,0,13,10]
 };

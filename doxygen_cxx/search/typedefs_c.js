@@ -24,7 +24,7 @@ var searchData=
   ['meshgrid',['MeshGrid',['../classdrake_1_1math_1_1_barycentric_mesh.html#acf440376bd2dbb2eb54dade972c10942',1,'drake::math::BarycentricMesh']]],
   ['mipnodecallbackfunction',['MipNodeCallbackFunction',['../classdrake_1_1solvers_1_1_gurobi_solver.html#a060a36d3c72cd6fd5caceff23ea0e3a7',1,'drake::solvers::GurobiSolver']]],
   ['mipsolcallbackfunction',['MipSolCallbackFunction',['../classdrake_1_1solvers_1_1_gurobi_solver.html#a8829ecdc721932e0108b16bec36094c5',1,'drake::solvers::GurobiSolver']]],
-  ['mobilizerindex',['MobilizerIndex',['../namespacedrake_1_1multibody.html#a5296da869e93358c7ea8fd7e15a8757c',1,'drake::multibody']]],
+  ['mobilizerindex',['MobilizerIndex',['../namespacedrake_1_1multibody_1_1internal.html#a5296da869e93358c7ea8fd7e15a8757c',1,'drake::multibody::internal']]],
   ['modelinstanceidtable',['ModelInstanceIdTable',['../namespacedrake_1_1parsers.html#a161e257dbc76cf0de6196932ffeb428e',1,'drake::parsers']]],
   ['modelinstanceindex',['ModelInstanceIndex',['../namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0',1,'drake::multibody']]],
   ['modelloadfunction',['ModelLoadFunction',['../namespacedrake_1_1multibody_1_1test.html#ab99e7e534358b41cb51a4a00e964a71d',1,'drake::multibody::test']]],

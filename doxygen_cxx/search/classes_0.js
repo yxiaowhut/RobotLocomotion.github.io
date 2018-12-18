@@ -2,7 +2,7 @@ var searchData=
 [
   ['abstractvalue',['AbstractValue',['../classdrake_1_1systems_1_1_abstract_value.html',1,'drake::systems']]],
   ['abstractvalues',['AbstractValues',['../classdrake_1_1systems_1_1_abstract_values.html',1,'drake::systems']]],
-  ['accelerationkinematicscache',['AccelerationKinematicsCache',['../classdrake_1_1multibody_1_1_acceleration_kinematics_cache.html',1,'drake::multibody']]],
+  ['accelerationkinematicscache',['AccelerationKinematicsCache',['../classdrake_1_1multibody_1_1internal_1_1_acceleration_kinematics_cache.html',1,'drake::multibody::internal']]],
   ['accelerometer',['Accelerometer',['../classdrake_1_1systems_1_1sensors_1_1_accelerometer.html',1,'drake::systems::sensors']]],
   ['accelerometerexamplediagram',['AccelerometerExampleDiagram',['../classdrake_1_1systems_1_1sensors_1_1_accelerometer_example_diagram.html',1,'drake::systems::sensors']]],
   ['accelerometeroutput',['AccelerometerOutput',['../classdrake_1_1systems_1_1sensors_1_1_accelerometer_output.html',1,'drake::systems::sensors']]],
@@ -38,7 +38,7 @@ var searchData=
   ['arcoffsetmatcher',['ArcOffsetMatcher',['../classdrake_1_1maliput_1_1multilane_1_1test_1_1_arc_offset_matcher.html',1,'drake::maliput::multilane::test']]],
   ['arcroadcurve',['ArcRoadCurve',['../classdrake_1_1maliput_1_1multilane_1_1_arc_road_curve.html',1,'drake::maliput::multilane']]],
   ['articulatedbodyinertia',['ArticulatedBodyInertia',['../classdrake_1_1multibody_1_1_articulated_body_inertia.html',1,'drake::multibody']]],
-  ['articulatedbodyinertiacache',['ArticulatedBodyInertiaCache',['../classdrake_1_1multibody_1_1_articulated_body_inertia_cache.html',1,'drake::multibody']]],
+  ['articulatedbodyinertiacache',['ArticulatedBodyInertiaCache',['../classdrake_1_1multibody_1_1internal_1_1_articulated_body_inertia_cache.html',1,'drake::multibody::internal']]],
   ['assert_5fdefault_5fconstructible',['assert_default_constructible',['../structdrake_1_1detail_1_1assert__default__constructible.html',1,'drake::detail']]],
   ['assert_5fif_5fis_5fconstraint',['assert_if_is_constraint',['../structdrake_1_1solvers_1_1detail_1_1assert__if__is__constraint.html',1,'drake::solvers::detail']]],
   ['assertion_5ferror',['assertion_error',['../classdrake_1_1detail_1_1assertion__error.html',1,'drake::detail']]],

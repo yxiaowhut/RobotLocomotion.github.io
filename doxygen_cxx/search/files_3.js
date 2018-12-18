@@ -159,7 +159,7 @@ var searchData=
   ['driving_5fcommand_5fmux_2ecc',['driving_command_mux.cc',['../driving__command__mux_8cc.html',1,'']]],
   ['driving_5fcommand_5fmux_2eh',['driving_command_mux.h',['../driving__command__mux_8h.html',1,'']]],
   ['driving_5fcommand_5fmux_5ftest_2ecc',['driving_command_mux_test.cc',['../driving__command__mux__test_8cc.html',1,'']]],
-  ['dual_5fiiwa14_5fpolytope_5fcollision_5ftest_2ecc',['dual_iiwa14_polytope_collision_test.cc',['../dual__iiwa14__polytope__collision__test_8cc.html',1,'']]],
+  ['dual_5fiiwa14_5fpolytope_5fcollision_5ftest_2ecc',['dual_iiwa14_polytope_collision_test.cc',['../attic_2manipulation_2models_2test_2dual__iiwa14__polytope__collision__test_8cc.html',1,'(Global Namespace)'],['../manipulation_2models_2iiwa__description_2urdf_2test_2dual__iiwa14__polytope__collision__test_8cc.html',1,'(Global Namespace)']]],
   ['dummy_5fvalue_2eh',['dummy_value.h',['../dummy__value_8h.html',1,'']]],
   ['dummy_5fvalue_5ftest_2ecc',['dummy_value_test.cc',['../dummy__value__test_8cc.html',1,'']]],
   ['dynamic_5fbicycle_5fcar_2ecc',['dynamic_bicycle_car.cc',['../dynamic__bicycle__car_8cc.html',1,'']]],

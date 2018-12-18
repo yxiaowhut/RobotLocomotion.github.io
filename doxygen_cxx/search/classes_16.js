@@ -1,7 +1,7 @@
 var searchData=
 [
   ['weldjoint',['WeldJoint',['../classdrake_1_1multibody_1_1_weld_joint.html',1,'drake::multibody']]],
-  ['weldmobilizer',['WeldMobilizer',['../classdrake_1_1multibody_1_1_weld_mobilizer.html',1,'drake::multibody']]],
+  ['weldmobilizer',['WeldMobilizer',['../classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html',1,'drake::multibody::internal']]],
   ['wholebodyparams',['WholeBodyParams',['../struct_whole_body_params.html',1,'']]],
   ['witnessfunction',['WitnessFunction',['../classdrake_1_1systems_1_1_witness_function.html',1,'drake::systems']]],
   ['witnessfunction_3c_20double_20_3e',['WitnessFunction&lt; double &gt;',['../classdrake_1_1systems_1_1_witness_function.html',1,'drake::systems']]],

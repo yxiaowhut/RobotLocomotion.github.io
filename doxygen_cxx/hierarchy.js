@@ -7,7 +7,7 @@ var hierarchy =
       [ "Value< T >", "classdrake_1_1systems_1_1_value.html", null ]
     ] ],
     [ "AbstractValues", "classdrake_1_1systems_1_1_abstract_values.html", null ],
-    [ "AccelerationKinematicsCache< T >", "classdrake_1_1multibody_1_1_acceleration_kinematics_cache.html", null ],
+    [ "AccelerationKinematicsCache< T >", "classdrake_1_1multibody_1_1internal_1_1_acceleration_kinematics_cache.html", null ],
     [ "AccelerometerOutputConstants", "structdrake_1_1systems_1_1sensors_1_1_accelerometer_output_constants.html", null ],
     [ "Acrobot< T >", "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html", null ],
     [ "Acrobot< double >", "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html", null ],
@@ -23,7 +23,7 @@ var hierarchy =
     [ "ArcLengthParameterizedSpline", "classdrake_1_1maliput_1_1rndf_1_1_arc_length_parameterized_spline.html", null ],
     [ "ArcOffset", "classdrake_1_1maliput_1_1multilane_1_1_arc_offset.html", null ],
     [ "ArticulatedBodyInertia< T >", "classdrake_1_1multibody_1_1_articulated_body_inertia.html", null ],
-    [ "ArticulatedBodyInertiaCache< T >", "classdrake_1_1multibody_1_1_articulated_body_inertia_cache.html", null ],
+    [ "ArticulatedBodyInertiaCache< T >", "classdrake_1_1multibody_1_1internal_1_1_articulated_body_inertia_cache.html", null ],
     [ "assert_default_constructible< T >", "structdrake_1_1detail_1_1assert__default__constructible.html", null ],
     [ "assert_if_is_constraint< F >", "structdrake_1_1solvers_1_1detail_1_1assert__if__is__constraint.html", null ],
     [ "AssertionResultCollector", "classdrake_1_1maliput_1_1api_1_1rules_1_1test_1_1_assertion_result_collector.html", null ],
@@ -50,9 +50,9 @@ var hierarchy =
     [ "BodyAcceleration", "classdrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics_1_1_body_acceleration.html", null ],
     [ "BodyMotionData", "class_body_motion_data.html", null ],
     [ "BodyMotionParams", "struct_body_motion_params.html", null ],
-    [ "BodyNodeTopology", "structdrake_1_1multibody_1_1_body_node_topology.html", null ],
+    [ "BodyNodeTopology", "structdrake_1_1multibody_1_1internal_1_1_body_node_topology.html", null ],
     [ "BodyOfInterest", "classdrake_1_1examples_1_1humanoid__controller_1_1_body_of_interest.html", null ],
-    [ "BodyTopology", "structdrake_1_1multibody_1_1_body_topology.html", null ],
+    [ "BodyTopology", "structdrake_1_1multibody_1_1internal_1_1_body_topology.html", null ],
     [ "Bounds", "struct_bounds.html", null ],
     [ "BranchPoint", "classdrake_1_1maliput_1_1api_1_1_branch_point.html", [
       [ "BranchPoint", "classdrake_1_1maliput_1_1dragway_1_1_branch_point.html", null ],
@@ -134,7 +134,7 @@ var hierarchy =
         [ "Context< double >", "classdrake_1_1systems_1_1_context.html", [
           [ "DiagramContext< double >", "classdrake_1_1systems_1_1_diagram_context.html", null ],
           [ "LeafContext< double >", "classdrake_1_1systems_1_1_leaf_context.html", [
-            [ "MultibodyTreeContext< double >", "classdrake_1_1multibody_1_1_multibody_tree_context.html", null ]
+            [ "MultibodyTreeContext< double >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html", null ]
           ] ]
         ] ],
         [ "Context< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_context.html", null ],
@@ -142,7 +142,7 @@ var hierarchy =
           [ "DiagramContext< T >", "classdrake_1_1systems_1_1_diagram_context.html", null ],
           [ "LeafContext< T >", "classdrake_1_1systems_1_1_leaf_context.html", [
             [ "GeometryContext< T >", "classdrake_1_1geometry_1_1_geometry_context.html", null ],
-            [ "MultibodyTreeContext< T >", "classdrake_1_1multibody_1_1_multibody_tree_context.html", null ]
+            [ "MultibodyTreeContext< T >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html", null ]
           ] ]
         ] ]
       ] ]
@@ -357,7 +357,7 @@ var hierarchy =
     [ "FixedInputPortValue", "classdrake_1_1systems_1_1_fixed_input_port_value.html", null ],
     [ "FloatingJointConstants", "structdrake_1_1parsers_1_1_floating_joint_constants.html", null ],
     [ "FNV1aHasher", "classdrake_1_1detail_1_1_f_n_v1a_hasher.html", null ],
-    [ "ForceElementTopology", "structdrake_1_1multibody_1_1_force_element_topology.html", null ],
+    [ "ForceElementTopology", "structdrake_1_1multibody_1_1internal_1_1_force_element_topology.html", null ],
     [ "ForceTorqueMeasurement", "struct_force_torque_measurement.html", null ],
     [ "Formula", "classdrake_1_1symbolic_1_1_formula.html", null ],
     [ "FormulaCell", "classdrake_1_1symbolic_1_1_formula_cell.html", [
@@ -384,7 +384,7 @@ var hierarchy =
     [ "FrameCache< T >", "classdrake_1_1examples_1_1double__pendulum_1_1_frame_cache.html", null ],
     [ "FramedIsometry3< T >", "structdrake_1_1examples_1_1double__pendulum_1_1_framed_isometry3.html", null ],
     [ "FrameKinematicsVector< KinematicsValue >", "classdrake_1_1geometry_1_1_frame_kinematics_vector.html", null ],
-    [ "FrameTopology", "structdrake_1_1multibody_1_1_frame_topology.html", null ],
+    [ "FrameTopology", "structdrake_1_1multibody_1_1internal_1_1_frame_topology.html", null ],
     [ "FreeBody", "classdrake_1_1benchmarks_1_1free__body_1_1_free_body.html", null ],
     [ "FromDoubleTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html", null ],
     [ "function_info< Func, Return, Args >", "structdrake_1_1pydrake_1_1detail_1_1function__info.html", null ],
@@ -515,7 +515,7 @@ var hierarchy =
     ] ],
     [ "IsoLaneVelocity", "structdrake_1_1maliput_1_1api_1_1_iso_lane_velocity.html", null ],
     [ "IterationStats", "structdrake_1_1multibody_1_1implicit__stribeck_1_1_iteration_stats.html", null ],
-    [ "JointActuatorTopology", "structdrake_1_1multibody_1_1_joint_actuator_topology.html", null ],
+    [ "JointActuatorTopology", "structdrake_1_1multibody_1_1internal_1_1_joint_actuator_topology.html", null ],
     [ "Joint< T >::JointImplementation", "structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html", null ],
     [ "JointNames", "struct_joint_names.html", null ],
     [ "JointSoftLimitParams", "struct_joint_soft_limit_params.html", null ],
@@ -666,7 +666,7 @@ var hierarchy =
     [ "MixedIntegerBranchAndBoundNode", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html", null ],
     [ "MixedIntegerRotationConstraintGenerator", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html", null ],
     [ "ConstraintSolver< T >::MlcpToLcpData", "structdrake_1_1multibody_1_1constraint_1_1_constraint_solver_1_1_mlcp_to_lcp_data.html", null ],
-    [ "MobilizerTopology", "structdrake_1_1multibody_1_1_mobilizer_topology.html", null ],
+    [ "MobilizerTopology", "structdrake_1_1multibody_1_1internal_1_1_mobilizer_topology.html", null ],
     [ "MobyLcpSolverId", "classdrake_1_1solvers_1_1_moby_lcp_solver_id.html", null ],
     [ "Model", "classdrake_1_1multibody_1_1collision_1_1_model.html", [
       [ "BulletModel", "classdrake_1_1multibody_1_1collision_1_1_bullet_model.html", null ],
@@ -710,6 +710,23 @@ var hierarchy =
         [ "BodyNodeImpl< T, num_positions, num_velocities >", "classdrake_1_1multibody_1_1internal_1_1_body_node_impl.html", null ],
         [ "BodyNodeWelded< T >", "classdrake_1_1multibody_1_1internal_1_1_body_node_welded.html", null ]
       ] ],
+      [ "Mobilizer< T >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer.html", [
+        [ "MobilizerImpl< T, compile_time_num_positions, compile_time_num_velocities >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html", [
+          [ "QuaternionFloatingMobilizer< T >", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html", null ]
+        ] ],
+        [ "MobilizerImpl< T, 0, 0 >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html", [
+          [ "WeldMobilizer< T >", "classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html", null ]
+        ] ],
+        [ "MobilizerImpl< T, 1, 1 >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html", [
+          [ "PrismaticMobilizer< T >", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html", null ],
+          [ "RevoluteMobilizer< T >", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html", null ]
+        ] ],
+        [ "MobilizerImpl< T, 2, 2 >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html", null ],
+        [ "MobilizerImpl< T, 3, 3 >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html", [
+          [ "SpaceXYZMobilizer< T >", "classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer.html", null ]
+        ] ],
+        [ "MobilizerImpl< T, 7, 6 >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html", null ]
+      ] ],
       [ "ModelInstance< T >", "classdrake_1_1multibody_1_1internal_1_1_model_instance.html", null ],
       [ "Joint< T >", "classdrake_1_1multibody_1_1_joint.html", [
         [ "PrismaticJoint< T >", "classdrake_1_1multibody_1_1_prismatic_joint.html", null ],
@@ -717,23 +734,6 @@ var hierarchy =
         [ "WeldJoint< T >", "classdrake_1_1multibody_1_1_weld_joint.html", null ]
       ] ],
       [ "JointActuator< T >", "classdrake_1_1multibody_1_1_joint_actuator.html", null ],
-      [ "Mobilizer< T >", "classdrake_1_1multibody_1_1_mobilizer.html", [
-        [ "MobilizerImpl< T, compile_time_num_positions, compile_time_num_velocities >", "classdrake_1_1multibody_1_1_mobilizer_impl.html", null ],
-        [ "MobilizerImpl< T, 0, 0 >", "classdrake_1_1multibody_1_1_mobilizer_impl.html", [
-          [ "WeldMobilizer< T >", "classdrake_1_1multibody_1_1_weld_mobilizer.html", null ]
-        ] ],
-        [ "MobilizerImpl< T, 1, 1 >", "classdrake_1_1multibody_1_1_mobilizer_impl.html", [
-          [ "PrismaticMobilizer< T >", "classdrake_1_1multibody_1_1_prismatic_mobilizer.html", null ],
-          [ "RevoluteMobilizer< T >", "classdrake_1_1multibody_1_1_revolute_mobilizer.html", null ]
-        ] ],
-        [ "MobilizerImpl< T, 2, 2 >", "classdrake_1_1multibody_1_1_mobilizer_impl.html", null ],
-        [ "MobilizerImpl< T, 3, 3 >", "classdrake_1_1multibody_1_1_mobilizer_impl.html", [
-          [ "SpaceXYZMobilizer< T >", "classdrake_1_1multibody_1_1_space_x_y_z_mobilizer.html", null ]
-        ] ],
-        [ "MobilizerImpl< T, 7, 6 >", "classdrake_1_1multibody_1_1_mobilizer_impl.html", [
-          [ "QuaternionFloatingMobilizer< T >", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html", null ]
-        ] ]
-      ] ],
       [ "ForceElement< AutoDiffXd >", "classdrake_1_1multibody_1_1_force_element.html", null ],
       [ "ForceElement< double >", "classdrake_1_1multibody_1_1_force_element.html", null ],
       [ "FrameBase< AutoDiffXd >", "classdrake_1_1multibody_1_1_frame_base.html", [
@@ -750,13 +750,13 @@ var hierarchy =
       [ "Joint< double >", "classdrake_1_1multibody_1_1_joint.html", null ],
       [ "JointActuator< AutoDiffXd >", "classdrake_1_1multibody_1_1_joint_actuator.html", null ],
       [ "JointActuator< double >", "classdrake_1_1multibody_1_1_joint_actuator.html", null ],
-      [ "Mobilizer< AutoDiffXd >", "classdrake_1_1multibody_1_1_mobilizer.html", null ],
-      [ "Mobilizer< double >", "classdrake_1_1multibody_1_1_mobilizer.html", null ],
+      [ "Mobilizer< AutoDiffXd >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer.html", null ],
+      [ "Mobilizer< double >", "classdrake_1_1multibody_1_1internal_1_1_mobilizer.html", null ],
       [ "ModelInstance< AutoDiffXd >", "classdrake_1_1multibody_1_1internal_1_1_model_instance.html", null ],
       [ "ModelInstance< double >", "classdrake_1_1multibody_1_1internal_1_1_model_instance.html", null ]
     ] ],
     [ "MultibodyTreeElement< ElementType< T >, ElementIndexType >", "classdrake_1_1multibody_1_1_multibody_tree_element_3_01_element_type_3_01_t_01_4_00_01_element_index_type_01_4.html", null ],
-    [ "MultibodyTreeTopology", "classdrake_1_1multibody_1_1_multibody_tree_topology.html", null ],
+    [ "MultibodyTreeTopology", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_topology.html", null ],
     [ "MultilaneOnrampMerge", "classdrake_1_1automotive_1_1_multilane_onramp_merge.html", null ],
     [ "MultilaneRoadCharacteristics", "structdrake_1_1automotive_1_1_multilane_road_characteristics.html", null ],
     [ "MultiplyEigenSizes< a, b >", "structdrake_1_1_multiply_eigen_sizes.html", null ],
@@ -850,7 +850,7 @@ var hierarchy =
     [ "PoseVelocity", "classdrake_1_1automotive_1_1_pose_velocity.html", null ],
     [ "PoseVelocityInputPorts< T >", "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html", null ],
     [ "PositionIndices", "struct_position_indices.html", null ],
-    [ "PositionKinematicsCache< T >", "classdrake_1_1multibody_1_1_position_kinematics_cache.html", null ],
+    [ "PositionKinematicsCache< T >", "classdrake_1_1multibody_1_1internal_1_1_position_kinematics_cache.html", null ],
     [ "Curve2< T >::PositionResult", "structdrake_1_1automotive_1_1_curve2_1_1_position_result.html", null ],
     [ "Polynomial< _CoefficientType >::Product< Rhs, Lhs >", "struct_polynomial_1_1_product.html", null ],
     [ "TrigPoly< _CoefficientType >::Product< Rhs, Lhs >", "struct_trig_poly_1_1_product.html", null ],
@@ -1085,12 +1085,12 @@ var hierarchy =
     [ "SpatialVector< SpatialVelocity, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialVelocity< T >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
     ] ],
-    [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
-    [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
     [ "StartReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_reference_1_1_spec.html", null ],
     [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
-    [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
+    [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
+    [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
     [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
+    [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
     [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
     [ "SpeedLimitRule", "classdrake_1_1maliput_1_1api_1_1rules_1_1_speed_limit_rule.html", null ],
     [ "SRange", "classdrake_1_1maliput_1_1api_1_1rules_1_1_s_range.html", null ],
@@ -1166,11 +1166,13 @@ var hierarchy =
             [ "VanDerPolOscillator< T >", "classdrake_1_1examples_1_1van__der__pol_1_1_van_der_pol_oscillator.html", null ],
             [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", null ],
-            [ "MultibodyTreeSystem< T >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", [
+            [ "MultibodyTreeSystem< T >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html", [
               [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", [
                 [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
               ] ],
-              [ "FreeRotatingBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_free_rotating_body_plant.html", null ]
+              [ "FreeRotatingBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_free_rotating_body_plant.html", null ],
+              [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ],
+              [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
             ] ],
             [ "ActuatorEffortToRigidBodyPlantInputConverter< T >", "classdrake_1_1systems_1_1_actuator_effort_to_rigid_body_plant_input_converter.html", null ],
             [ "Adder< T >", "classdrake_1_1systems_1_1_adder.html", null ],
@@ -1235,9 +1237,7 @@ var hierarchy =
         ] ],
         [ "System< AutoDiffXd >", "classdrake_1_1systems_1_1_system.html", [
           [ "LeafSystem< AutoDiffXd >", "classdrake_1_1systems_1_1_leaf_system.html", [
-            [ "MultibodyTreeSystem< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", [
-              [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
-            ] ],
+            [ "MultibodyTreeSystem< AutoDiffXd >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html", null ],
             [ "SceneGraph< AutoDiffXd >", "classdrake_1_1geometry_1_1_scene_graph.html", null ]
           ] ]
         ] ],
@@ -1319,9 +1319,7 @@ var hierarchy =
             [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", null ],
             [ "RgbdCamera", "classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html", null ],
             [ "ValkyriePDAndFeedForwardController", "classdrake_1_1systems_1_1_valkyrie_p_d_and_feed_forward_controller.html", null ],
-            [ "MultibodyTreeSystem< double >", "classdrake_1_1multibody_1_1_multibody_tree_system.html", [
-              [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
-            ] ],
+            [ "MultibodyTreeSystem< double >", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html", null ],
             [ "RigidBodyPlant< double >", "classdrake_1_1systems_1_1_rigid_body_plant.html", null ],
             [ "Rod2D< double >", "classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html", null ],
             [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
@@ -1381,7 +1379,6 @@ var hierarchy =
     [ "TotalSizeAtCompileTime< Head >", "structdrake_1_1math_1_1internal_1_1_total_size_at_compile_time_3_01_head_01_4.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Traits< geometry::SceneGraph >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html", null ],
-    [ "Trajectory", "classdrake_1_1automotive_1_1_trajectory.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "PiecewiseTrajectory< T >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< T >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
@@ -1389,6 +1386,7 @@ var hierarchy =
         [ "PiecewiseQuaternionSlerp< T >", "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html", null ]
       ] ]
     ] ],
+    [ "Trajectory", "classdrake_1_1automotive_1_1_trajectory.html", null ],
     [ "Trajectory< double >", "classdrake_1_1trajectories_1_1_trajectory.html", [
       [ "PiecewiseTrajectory< double >", "classdrake_1_1trajectories_1_1_piecewise_trajectory.html", [
         [ "ExponentialPlusPiecewisePolynomial< double >", "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html", null ],
@@ -1506,7 +1504,7 @@ var hierarchy =
       [ "BasicVector< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
     [ "VectorSetpoint< Scalar >", "classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html", null ],
-    [ "VelocityKinematicsCache< T >", "classdrake_1_1multibody_1_1_velocity_kinematics_cache.html", null ],
+    [ "VelocityKinematicsCache< T >", "classdrake_1_1multibody_1_1internal_1_1_velocity_kinematics_cache.html", null ],
     [ "IndexFace::Vertex", "structdrake_1_1maliput_1_1utility_1_1mesh_1_1_index_face_1_1_vertex.html", null ],
     [ "VisualMaterial", "classdrake_1_1geometry_1_1_visual_material.html", null ],
     [ "VRefIntegratorParams", "struct_v_ref_integrator_params.html", null ],

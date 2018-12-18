@@ -10,7 +10,7 @@ var searchData=
   ['jointactuator',['JointActuator',['../classdrake_1_1multibody_1_1_joint_actuator.html',1,'drake::multibody']]],
   ['jointactuator_3c_20autodiffxd_20_3e',['JointActuator&lt; AutoDiffXd &gt;',['../classdrake_1_1multibody_1_1_joint_actuator.html',1,'drake::multibody']]],
   ['jointactuator_3c_20double_20_3e',['JointActuator&lt; double &gt;',['../classdrake_1_1multibody_1_1_joint_actuator.html',1,'drake::multibody']]],
-  ['jointactuatortopology',['JointActuatorTopology',['../structdrake_1_1multibody_1_1_joint_actuator_topology.html',1,'drake::multibody']]],
+  ['jointactuatortopology',['JointActuatorTopology',['../structdrake_1_1multibody_1_1internal_1_1_joint_actuator_topology.html',1,'drake::multibody::internal']]],
   ['jointimplementation',['JointImplementation',['../structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html',1,'drake::multibody::Joint']]],
   ['jointlimitconstraintforceevaluator',['JointLimitConstraintForceEvaluator',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_joint_limit_constraint_force_evaluator.html',1,'drake::systems::trajectory_optimization']]],
   ['jointnames',['JointNames',['../struct_joint_names.html',1,'']]],

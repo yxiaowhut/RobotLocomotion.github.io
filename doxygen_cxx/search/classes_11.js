@@ -26,7 +26,7 @@ var searchData=
   ['result',['Result',['../structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_phase_provider_1_1_result.html',1,'RightOfWayPhaseProvider::Result'],['../structdrake_1_1maliput_1_1api_1_1rules_1_1_right_of_way_state_provider_1_1_result.html',1,'RightOfWayStateProvider::Result']]],
   ['returntype',['ReturnType',['../structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html',1,'drake::solvers::MixedIntegerRotationConstraintGenerator']]],
   ['revolutejoint',['RevoluteJoint',['../classdrake_1_1multibody_1_1_revolute_joint.html',1,'RevoluteJoint&lt; T &gt;'],['../class_revolute_joint.html',1,'RevoluteJoint']]],
-  ['revolutemobilizer',['RevoluteMobilizer',['../classdrake_1_1multibody_1_1_revolute_mobilizer.html',1,'drake::multibody']]],
+  ['revolutemobilizer',['RevoluteMobilizer',['../classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html',1,'drake::multibody::internal']]],
   ['rewritingrule',['RewritingRule',['../classdrake_1_1symbolic_1_1_rewriting_rule.html',1,'drake::symbolic']]],
   ['rgbdcamera',['RgbdCamera',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_camera.html',1,'drake::systems::sensors']]],
   ['rgbdcameradiscrete',['RgbdCameraDiscrete',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_camera_discrete.html',1,'drake::systems::sensors']]],

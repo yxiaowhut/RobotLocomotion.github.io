@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eea9354674efc1c07bf537319628ead":[2,0,0,18,13,1,6],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a643ccb05dea44d65aa2d91b422f20f12":[2,0,0,18,13,1,0],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a66022c63d007d32a9812270a90890e7f":[2,0,0,18,13,1,10],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a6ce6c2bf02e868cb54161dd4d8a26e29":[2,0,0,18,13,1,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[2,0,0,18,13,1,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "color__palette_8h.html":[3,0,0,14,8,5],
 "color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[3,0,0,14,8,5,5],
 "color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[3,0,0,14,8,5,4],
-"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[3,0,0,14,8,5,3],
-"common_2autodiff_8h.html":[3,0,0,3,4],
-"common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[3,0,0,3,4,0]
+"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[3,0,0,14,8,5,3]
 };

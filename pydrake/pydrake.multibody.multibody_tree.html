@@ -38,7 +38,7 @@
     <link rel="top" title="pydrake  documentation" href="index.html"/>
         <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
         <link rel="next" title="pydrake.multibody.multibody_tree.all" href="pydrake.multibody.multibody_tree.all.html"/>
-        <link rel="prev" title="pydrake.multibody.joints" href="pydrake.multibody.joints.html"/> 
+        <link rel="prev" title="pydrake.multibody.math" href="pydrake.multibody.math.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -105,6 +105,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.collision.html">pydrake.multibody.collision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.joints.html">pydrake.multibody.joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.multibody_tree</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pydrake.multibody.multibody_tree.all.html">pydrake.multibody.multibody_tree.all</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pydrake.multibody.multibody_tree.math.html">pydrake.multibody.multibody_tree.math</a></li>
@@ -114,10 +115,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsers.html">pydrake.multibody.parsers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.plant.html">pydrake.multibody.plant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body.html">pydrake.multibody.rigid_body</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_plant.html">pydrake.multibody.rigid_body_plant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.rigid_body_tree.html">pydrake.multibody.rigid_body_tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.shapes.html">pydrake.multibody.shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.tree.html">pydrake.multibody.tree</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
@@ -199,7 +202,11 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.multibody_tree.parsing.html">pydrake.multibody.multibody_tree.parsing</a></li>
 </ul>
 </div>
-<span class="target" id="module-pydrake.multibody.multibody_tree"></span><p>MultibodyTree functionality.</p>
+<span class="target" id="module-pydrake.multibody.multibody_tree"></span><p>Bindings for MultibodyTree.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This module will soon be deprecated. Please use <code class="docutils literal"><span class="pre">pydrake.multibody.tree</span></code> instead.</p>
+</div>
 <dl class="class">
 <dt id="pydrake.multibody.multibody_tree.Body">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.</code><code class="descname">Body</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.Body" title="Permalink to this definition">¶</a></dt>
@@ -320,7 +327,8 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="class">
 <dt id="pydrake.multibody.multibody_tree.BodyNodeIndex">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.</code><code class="descname">BodyNodeIndex</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.BodyNodeIndex" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type used to identify tree nodes by index within a multibody tree system.</p>
+<dd><p>Type used to identify tree nodes by index within a multibody tree
+system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.BodyNodeIndex.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.BodyNodeIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.BodyNodeIndex.__init__" title="Permalink to this definition">¶</a></dt>
@@ -387,7 +395,8 @@ non-conservative forces.</li>
 <dl class="class">
 <dt id="pydrake.multibody.multibody_tree.ForceElementIndex">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.</code><code class="descname">ForceElementIndex</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.ForceElementIndex" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type used to identify force elements by index within a multibody tree system.</p>
+<dd><p>Type used to identify force elements by index within a multibody tree
+system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.ForceElementIndex.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.ForceElementIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.ForceElementIndex.__init__" title="Permalink to this definition">¶</a></dt>
@@ -747,7 +756,8 @@ No other values for T are currently supported.</p>
 <dl class="class">
 <dt id="pydrake.multibody.multibody_tree.JointActuatorIndex">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.</code><code class="descname">JointActuatorIndex</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.JointActuatorIndex" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type used to identify actuators by index within a multibody tree system.</p>
+<dd><p>Type used to identify actuators by index within a multibody tree
+system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.JointActuatorIndex.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.JointActuatorIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.JointActuatorIndex.__init__" title="Permalink to this definition">¶</a></dt>
@@ -810,7 +820,8 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="class">
 <dt id="pydrake.multibody.multibody_tree.ModelInstanceIndex">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.</code><code class="descname">ModelInstanceIndex</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.ModelInstanceIndex" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type used to identify model instances by index within a multibody tree system.</p>
+<dd><p>Type used to identify model instances by index within a multibody tree
+system.</p>
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.ModelInstanceIndex.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.ModelInstanceIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.ModelInstanceIndex.__init__" title="Permalink to this definition">¶</a></dt>
@@ -1418,7 +1429,7 @@ index and it is always zero.</p>
         <a href="pydrake.multibody.multibody_tree.all.html" class="btn btn-neutral float-right" title="pydrake.multibody.multibody_tree.all" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.multibody.joints.html" class="btn btn-neutral" title="pydrake.multibody.joints" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.multibody.math.html" class="btn btn-neutral" title="pydrake.multibody.math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
