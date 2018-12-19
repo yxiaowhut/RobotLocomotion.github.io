@@ -469,9 +469,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a589dbafbe9df2c711789428c7964b838"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a589dbafbe9df2c711789428c7964b838">AddPositiveDiagonallyDominantMatrixConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;X)</td></tr>
 <tr class="memdesc:a589dbafbe9df2c711789428c7964b838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that a symmetric matrix is diagonally dominant with non-negative diagonal entries.  <a href="#a589dbafbe9df2c711789428c7964b838">More...</a><br /></td></tr>
 <tr class="separator:a589dbafbe9df2c711789428c7964b838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35d050759f5f740a1e116aea34aa2d10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake.html#a06406a5da633da84f911e2979aa48549">Matrix2</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a35d050759f5f740a1e116aea34aa2d10">AddScaledDiagonallyDominantMatrixConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;X)</td></tr>
-<tr class="memdesc:a35d050759f5f740a1e116aea34aa2d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the constraint that a symmetric matrix is scaled diagonally dominant (sdd).  <a href="#a35d050759f5f740a1e116aea34aa2d10">More...</a><br /></td></tr>
-<tr class="separator:a35d050759f5f740a1e116aea34aa2d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1d190e8e690c020760bb1eb14405759"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake_1_1solvers.html#ac04cfbe6b8d63ecb463fc087385ce061">MatrixXDecisionVariable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_equality_constraint.html">LinearEqualityConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ad1d190e8e690c020760bb1eb14405759">AddSosConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">symbolic::Polynomial</a> &amp;p, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">symbolic::Monomial</a> &gt;&gt; &amp;monomial_basis)</td></tr>
 <tr class="memdesc:ad1d190e8e690c020760bb1eb14405759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds constraints that a given polynomial <code>p</code> is a sums-of-squares (SOS), that is, <code>p</code> can be decomposed into <code>mᵀQm</code>, where m is the <code>monomial_basis</code>.  <a href="#ad1d190e8e690c020760bb1eb14405759">More...</a><br /></td></tr>
 <tr class="separator:ad1d190e8e690c020760bb1eb14405759"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -659,6 +656,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1935f9e12a11b66c67eda33fd165b4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6bf33171369a5b673c956f7e21e1c5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ad6bf33171369a5b673c956f7e21e1c5f">operator=</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:ad6bf33171369a5b673c956f7e21e1c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">scaled diagonally dominant matrix constraint</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="addsdd"></a></p>
+<p>Adds the constraint that a symmetric matrix is scaled diagonally dominant (sdd). A matrix X is sdd if there exists a diagonal matrix D, such that the product DXD is diagonally dominant with non-negative diagonal entries, namely d(i)X(i, i) ≥ ∑ⱼ |d(j)X(i, j)| ∀ j ≠ i where d(i) = D(i, i). X being sdd is equivalent to the existence of symmetric matrices Mⁱʲ∈ ℝⁿˣⁿ, i &lt; j, such that all entries in Mⁱʲ are 0, except Mⁱʲ(i, i), Mⁱʲ(i, j), Mⁱʲ(j, j). (Mⁱʲ(i, i), Mⁱʲ(j, j), Mⁱʲ(i, j)) is in the rotated Lorentz cone, and X = ∑ᵢⱼ Mⁱʲ.</p>
+<p>The users can refer to "DSOS and SDSOS Optimization: More Tractable
+Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi and Anirudha Majumdar, with arXiv link <a href="https://arxiv.org/abs/1706.02586">https://arxiv.org/abs/1706.02586</a>. </p>
+</div></td></tr>
+<tr class="memitem:a35d050759f5f740a1e116aea34aa2d10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake.html#a06406a5da633da84f911e2979aa48549">Matrix2</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a35d050759f5f740a1e116aea34aa2d10">AddScaledDiagonallyDominantMatrixConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;X)</td></tr>
+<tr class="memdesc:a35d050759f5f740a1e116aea34aa2d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded variant of <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#addsdd">scaled diagonally dominant matrix constraint</a>.  <a href="#a35d050759f5f740a1e116aea34aa2d10">More...</a><br /></td></tr>
+<tr class="separator:a35d050759f5f740a1e116aea34aa2d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc0f171dcf3d56002c1f2560e430d89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake.html#a06406a5da633da84f911e2979aa48549">Matrix2</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a4fc0f171dcf3d56002c1f2560e430d89">AddScaledDiagonallyDominantMatrixConstraint</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;X)</td></tr>
+<tr class="memdesc:a4fc0f171dcf3d56002c1f2560e430d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an overloaded variant of <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#addsdd">scaled diagonally dominant matrix constraint</a>.  <a href="#a4fc0f171dcf3d56002c1f2560e430d89">More...</a><br /></td></tr>
+<tr class="separator:a4fc0f171dcf3d56002c1f2560e430d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -4182,7 +4191,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a35d050759f5f740a1e116aea34aa2d10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35d050759f5f740a1e116aea34aa2d10">&#9670;&nbsp;</a></span>AddScaledDiagonallyDominantMatrixConstraint()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d050759f5f740a1e116aea34aa2d10">&#9670;&nbsp;</a></span>AddScaledDiagonallyDominantMatrixConstraint() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4197,11 +4206,10 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
       </table>
 </div><div class="memdoc">
 
-<p>Adds the constraint that a symmetric matrix is scaled diagonally dominant (sdd). </p>
-<p>A matrix X is sdd if there exists a diagonal matrix D, such that the product DXD is diagonally dominant with non-negative diagonal entries, namely d(i)X(i, i) ≥ ∑ⱼ |d(j)X(i, j)| ∀ j ≠ i where d(i) = D(i, i). X being sdd is equivalent to the existence of symmetric matrices Mⁱʲ∈ ℝⁿˣⁿ i &lt; j, such that all entries in Mⁱʲ are 0, except Mⁱʲ(i, i), Mⁱʲ(i, j), Mⁱʲ(j, j). (Mⁱʲ(i, i), Mⁱʲ(j, j), Mⁱʲ(i, j)) is in the rotated Lorentz cone, and X = ∑ᵢⱼ Mⁱʲ The users can refer to "DSOS and SDSOS Optimization: More Tractable
-Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi and Anirudha Majumdar, with arXiv link <a href="https://arxiv.org/abs/1706.02586">https://arxiv.org/abs/1706.02586</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This is an overloaded variant of <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#addsdd">scaled diagonally dominant matrix constraint</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">X</td><td>The matrix X. We will use 0.5(X+Xᵀ) as the "symmetric version" of X. </td></tr>
+    <tr><td class="paramname">X</td><td>The matrix X to be constrained scaled diagonally dominant. X. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4210,6 +4218,33 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 [Mⁱʲ(i, i), Mⁱʲ(i, j)]
 [Mⁱʲ(i, j), Mⁱʲ(j, j)].
 </pre> Note that M[i][j](0, 1) = Mⁱʲ(i, j) = (X(i, j) + X(j, i)) / 2 for i &gt;= j, M[i][j] is the zero matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a4fc0f171dcf3d56002c1f2560e430d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc0f171dcf3d56002c1f2560e430d89">&#9670;&nbsp;</a></span>AddScaledDiagonallyDominantMatrixConstraint() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake.html#a06406a5da633da84f911e2979aa48549">Matrix2</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &gt; &gt; AddScaledDiagonallyDominantMatrixConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>X</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is an overloaded variant of <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#addsdd">scaled diagonally dominant matrix constraint</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">X</td><td>The symmetric matrix X to be constrained scaled diagonally dominant. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>M For i &lt; j M[i][j] contains the slack variables, mentioned in <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#addsdd">scaled diagonally dominant matrix constraint</a>. For i &gt;= j, M[i][j] contains dummy variables. </dd></dl>
 
 </div>
 </div>

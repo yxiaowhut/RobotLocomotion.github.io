@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a82a1442aee9cba455c098c3915a5c9d2":[2,0,0,18,11,10,7],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a899e11317d804c8b1d8b83a091a48190":[2,0,0,18,11,10,14],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#aa67dc0b05eac02881b0fa2d7b6fb25db":[2,0,0,18,11,10,9],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#ac490f0bca9acfda73e1601ed12da08f9":[2,0,0,18,11,10,4],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#acdbb6370693adfdb890dbf63cb67a51e":[2,0,0,18,11,10,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[2,0,0,18,13,0,3],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[2,0,0,18,13,0,0],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html":[2,0,0,18,13,1],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[2,0,0,18,13,1,7],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e":[2,0,0,18,13,1,8],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eae84b43f3081dc3fbbf43394ed5a05":[2,0,0,18,13,1,2]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[2,0,0,18,13,1,7]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[3,0,0,14,8,5,4],
+"color__palette_8h.html#a87fc6f26714bf65536e2945638c52c87":[3,0,0,14,8,5,3],
 "common_2autodiff_8h.html":[3,0,0,3,4],
 "common_2autodiff_8h.html#ab65ef0f1286b6a44416fd0424a3da982":[3,0,0,3,4,0],
 "common_2trajectories_2trajectory_8h.html":[3,0,0,3,3,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31b":[3,0,0,3,1,25,0],
 "copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31baa6ddc0995d7b58e0302675f581845cce":[3,0,0,3,1,25,0,3],
 "copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31badd652546039b18970b8dcf2cff824268":[3,0,0,3,1,25,0,0],
-"copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31bae8606d021da140a92c7eba8d9b8af84f":[3,0,0,3,1,25,0,2],
-"copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31bae87e63774b67a23b012ac1d74efeba99":[3,0,0,3,1,25,0,1],
-"cost_8cc.html":[3,0,0,13,10]
+"copyable__unique__ptr__test_8cc.html#af5faff882d7cbf37739cd0aa9d24b31bae8606d021da140a92c7eba8d9b8af84f":[3,0,0,3,1,25,0,2]
 };

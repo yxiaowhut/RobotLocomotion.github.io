@@ -581,10 +581,16 @@ Choice" model.  <a href="#ac032c0bb26bc691f93d2d1d4e8f2e6e8">More...</a><br /></
 <tr class="memitem:a3fbd516f86ffa7ef73d1bf89d94ed421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a3fbd516f86ffa7ef73d1bf89d94ed421">DrawBoxSphereIntersection</a> (const Eigen::Vector3d &amp;bmin, const Eigen::Vector3d &amp;bmax, const Eigen::RowVector3d &amp;color=Eigen::RowVector3d(1, 0, 0))</td></tr>
 <tr class="memdesc:a3fbd516f86ffa7ef73d1bf89d94ed421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the boundary of the intersection region, between the box bmin &lt;= x &lt;= bmax, and the unit sphere.  <a href="#a3fbd516f86ffa7ef73d1bf89d94ed421">More...</a><br /></td></tr>
 <tr class="separator:a3fbd516f86ffa7ef73d1bf89d94ed421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3bd4ba5a82e4d340b8fd15d9d55ff1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aff3bd4ba5a82e4d340b8fd15d9d55ff1">is_zero</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;v)</td></tr>
+<tr class="separator:aff3bd4ba5a82e4d340b8fd15d9d55ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4459ac90b94c3bae3d8fea5221b42d2d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4459ac90b94c3bae3d8fea5221b42d2d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a4459ac90b94c3bae3d8fea5221b42d2d">CheckOffDiagonalTerms</a> (<a class="el" href="classint.html">int</a> nx)</td></tr>
+<tr class="separator:a4459ac90b94c3bae3d8fea5221b42d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13bb279caac109823bb1f90cd497443c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a13bb279caac109823bb1f90cd497443c">GTEST_TEST</a> (ScaledDiagonallyDominantMatrixTest, AddConstraint)</td></tr>
 <tr class="separator:a13bb279caac109823bb1f90cd497443c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634266ecd1f89fc47e79983ddf9d26a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a634266ecd1f89fc47e79983ddf9d26a8">CheckSDDMatrix</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;X_val, <a class="el" href="classbool.html">bool</a> is_sdd)</td></tr>
-<tr class="separator:a634266ecd1f89fc47e79983ddf9d26a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2e6d7ad5a0992dfd34f7216f5d0c0b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acb2e6d7ad5a0992dfd34f7216f5d0c0b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#acb2e6d7ad5a0992dfd34f7216f5d0c0b">CheckSDDMatrix</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;X_val, <a class="el" href="classbool.html">bool</a> is_sdd)</td></tr>
+<tr class="separator:acb2e6d7ad5a0992dfd34f7216f5d0c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3de4ebf5a79fca037516ad25eef4475d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a3de4ebf5a79fca037516ad25eef4475d">IsMatrixSDD</a> (const Eigen::Ref&lt; Eigen::MatrixXd &gt; &amp;X)</td></tr>
 <tr class="separator:a3de4ebf5a79fca037516ad25eef4475d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade8e6f95255450259a716d95c705afc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ade8e6f95255450259a716d95c705afc6">GTEST_TEST</a> (ScaledDiagonallyDominantMatrixTest, TestSDDMatrix)</td></tr>
@@ -1833,8 +1839,26 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="a634266ecd1f89fc47e79983ddf9d26a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a634266ecd1f89fc47e79983ddf9d26a8">&#9670;&nbsp;</a></span>CheckSDDMatrix()</h2>
+<a id="a4459ac90b94c3bae3d8fea5221b42d2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4459ac90b94c3bae3d8fea5221b42d2d">&#9670;&nbsp;</a></span>CheckOffDiagonalTerms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::solvers::CheckOffDiagonalTerms </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>nx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb2e6d7ad5a0992dfd34f7216f5d0c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2e6d7ad5a0992dfd34f7216f5d0c0b">&#9670;&nbsp;</a></span>CheckSDDMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2494,36 +2518,8 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="a13bb279caac109823bb1f90cd497443c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13bb279caac109823bb1f90cd497443c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[4/29]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">drake::solvers::GTEST_TEST </td>
-          <td>(</td>
-          <td class="paramtype">ScaledDiagonallyDominantMatrixTest&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">AddConstraint&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a9d50254c9544774d3a081747675277fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d50254c9544774d3a081747675277fa">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[5/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d50254c9544774d3a081747675277fa">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[4/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2551,7 +2547,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="aa14bf50420111bda5f717b4036998f87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa14bf50420111bda5f717b4036998f87">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[6/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa14bf50420111bda5f717b4036998f87">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[5/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2579,7 +2575,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a1a0c3911ef9e7f3732f3468694abee4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a0c3911ef9e7f3732f3468694abee4e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[7/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a0c3911ef9e7f3732f3468694abee4e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[6/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2607,7 +2603,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="af2071d99514765b2c15fe4faadaadf97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2071d99514765b2c15fe4faadaadf97">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[8/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af2071d99514765b2c15fe4faadaadf97">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[7/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2622,6 +2618,34 @@ The particular representation/algorithm here was developed in an attempt:<ul>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">DimensionalMismatch&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13bb279caac109823bb1f90cd497443c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13bb279caac109823bb1f90cd497443c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[8/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">drake::solvers::GTEST_TEST </td>
+          <td>(</td>
+          <td class="paramtype">ScaledDiagonallyDominantMatrixTest&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AddConstraint&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -2802,36 +2826,8 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="ade8e6f95255450259a716d95c705afc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade8e6f95255450259a716d95c705afc6">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[15/29]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">drake::solvers::GTEST_TEST </td>
-          <td>(</td>
-          <td class="paramtype">ScaledDiagonallyDominantMatrixTest&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TestSDDMatrix&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad0d7a08fee1f513efd8b61a7eb301f9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0d7a08fee1f513efd8b61a7eb301f9b">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[16/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d7a08fee1f513efd8b61a7eb301f9b">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[15/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2858,8 +2854,8 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="a99b6ebe849f1aa91c2fc6b6991f7aa69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99b6ebe849f1aa91c2fc6b6991f7aa69">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[17/29]</span></h2>
+<a id="ade8e6f95255450259a716d95c705afc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8e6f95255450259a716d95c705afc6">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[16/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2873,7 +2869,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">TestNotSDDMatrix&#160;</td>
+          <td class="paramtype">TestSDDMatrix&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -2887,7 +2883,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="ae60c2edc9704e9b2574195a32fbaf24e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae60c2edc9704e9b2574195a32fbaf24e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[18/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60c2edc9704e9b2574195a32fbaf24e">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[17/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2915,7 +2911,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a93f39a2ed3beee7def9a2d9396678f46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93f39a2ed3beee7def9a2d9396678f46">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[19/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f39a2ed3beee7def9a2d9396678f46">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[18/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2942,8 +2938,8 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="a1dbde9e7366495765059dc546f7c3d13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dbde9e7366495765059dc546f7c3d13">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[20/29]</span></h2>
+<a id="a99b6ebe849f1aa91c2fc6b6991f7aa69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b6ebe849f1aa91c2fc6b6991f7aa69">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[19/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2951,13 +2947,13 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="memname">drake::solvers::GTEST_TEST </td>
           <td>(</td>
-          <td class="paramtype">SdsosTest&#160;</td>
+          <td class="paramtype">ScaledDiagonallyDominantMatrixTest&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SdsosPolynomial&#160;</td>
+          <td class="paramtype">TestNotSDDMatrix&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -2971,7 +2967,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a42fd57b8208b10d84b4b38298edffc0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42fd57b8208b10d84b4b38298edffc0c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[21/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a42fd57b8208b10d84b4b38298edffc0c">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[20/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2998,8 +2994,8 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 
 </div>
 </div>
-<a id="a2cce0cf6090204682c8e196b27e6ced8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cce0cf6090204682c8e196b27e6ced8">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[22/29]</span></h2>
+<a id="a1dbde9e7366495765059dc546f7c3d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbde9e7366495765059dc546f7c3d13">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[21/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3013,7 +3009,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">NotSdsosPolynomial&#160;</td>
+          <td class="paramtype">SdsosPolynomial&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -3027,7 +3023,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </div>
 </div>
 <a id="a437be3694e7568b1752cb3e5a1d9af6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a437be3694e7568b1752cb3e5a1d9af6f">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[23/29]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a437be3694e7568b1752cb3e5a1d9af6f">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[22/29]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3042,6 +3038,34 @@ The particular representation/algorithm here was developed in an attempt:<ul>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">TestProblem6&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cce0cf6090204682c8e196b27e6ced8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cce0cf6090204682c8e196b27e6ced8">&#9670;&nbsp;</a></span>GTEST_TEST() <span class="overload">[23/29]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">drake::solvers::GTEST_TEST </td>
+          <td>(</td>
+          <td class="paramtype">SdsosTest&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NotSdsosPolynomial&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -3284,6 +3308,24 @@ The particular representation/algorithm here was developed in an attempt:<ul>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff3bd4ba5a82e4d340b8fd15d9d55ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff3bd4ba5a82e4d340b8fd15d9d55ff1">&#9670;&nbsp;</a></span>is_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classbool.html">bool</a> drake::solvers::is_zero </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

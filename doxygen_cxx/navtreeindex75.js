@@ -1,5 +1,9 @@
 var NAVTREEINDEX75 =
 {
+"struct_q_p_locomotion_plan_settings.html#a7b32bccbbdc707ed35d482500f3289fe":[2,0,60,9],
+"struct_q_p_locomotion_plan_settings.html#a80a8fd553bbb7917729bf3bb3a050a0c":[2,0,60,8],
+"struct_q_p_locomotion_plan_settings.html#a868b0fd7257c72113df65001c80603b3":[2,0,60,25],
+"struct_q_p_locomotion_plan_settings.html#a8baa14bbc9c28c2907369ff16aafe39d":[2,0,60,4],
 "struct_q_p_locomotion_plan_settings.html#a8c6eec0c7b8d40c90057d54686be8506":[2,0,60,10],
 "struct_q_p_locomotion_plan_settings.html#a8c7c8ccd9dc8289ab8dfb5ea80375024":[2,0,60,31],
 "struct_q_p_locomotion_plan_settings.html#a91408ec36b6557c3f2a70d61f99e6cf0":[2,0,60,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX75 =
 "structdrake_1_1maliput_1_1api_1_1_lane_end.html#a76832237d5d837232469a6c46f1eeff2aaf95f6aef1f9f36214053d164ccb5ff8":[2,0,0,9,0,8,1,0],
 "structdrake_1_1maliput_1_1api_1_1_lane_end.html#a76832237d5d837232469a6c46f1eeff2aff577f73e6ea4af10a732b6cb362eb22":[2,0,0,9,0,8,1,1],
 "structdrake_1_1maliput_1_1api_1_1_lane_end.html#a7f4404a6c9065d06842311b7308a6cba":[2,0,0,9,0,8,5],
-"structdrake_1_1maliput_1_1api_1_1_lane_end.html#afd38b6ff3ad84a158d0d33fdf35ce097":[2,0,0,9,0,8,3],
-"structdrake_1_1maliput_1_1api_1_1_lane_end_1_1_strict_order.html":[2,0,0,9,0,8,0],
-"structdrake_1_1maliput_1_1api_1_1_lane_end_1_1_strict_order.html#ad5af0d5a4ccb68c02dcdda0641c58647":[2,0,0,9,0,8,0,0],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html":[2,0,0,9,0,13],
-"structdrake_1_1maliput_1_1api_1_1_road_position.html#a052f1bed10d7aad444802177f1d7d18b":[2,0,0,9,0,13,3]
+"structdrake_1_1maliput_1_1api_1_1_lane_end.html#afd38b6ff3ad84a158d0d33fdf35ce097":[2,0,0,9,0,8,3]
 };

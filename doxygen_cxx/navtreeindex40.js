@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1systems_1_1_my_vector.html":[2,0,0,18,86],
+"classdrake_1_1systems_1_1_my_vector.html#a1255d449a24ba6e27fd8d4c71763f20e":[2,0,0,18,86,7],
 "classdrake_1_1systems_1_1_my_vector.html#a1d9b8fec329a646df01f5b8afc02fa1d":[2,0,0,18,86,6],
 "classdrake_1_1systems_1_1_my_vector.html#a3679dac5307a1340b468d1a139d51f34":[2,0,0,18,86,5],
 "classdrake_1_1systems_1_1_my_vector.html#a3bd56678456c9cf23e57d4f238982070":[2,0,0,18,86,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1systems_1_1_robot_state_encoder.html#a471ea6700e609697f175a8b6f29fc748":[2,0,0,18,102,9],
 "classdrake_1_1systems_1_1_robot_state_encoder.html#a4c5d48afceac838ac1f902b990440077":[2,0,0,18,102,2],
 "classdrake_1_1systems_1_1_robot_state_encoder.html#a680ac1b97e1044319aa2558d33e72379":[2,0,0,18,102,7],
-"classdrake_1_1systems_1_1_robot_state_encoder.html#a6db4e125f5758f8e8d7b0745263462f4":[2,0,0,18,102,6],
-"classdrake_1_1systems_1_1_robot_state_encoder.html#a9756a39aba9f6e206900ec11b1c3f399":[2,0,0,18,102,1],
-"classdrake_1_1systems_1_1_robot_state_encoder.html#ab588265df28e3ca6432887dddc97421b":[2,0,0,18,102,3]
+"classdrake_1_1systems_1_1_robot_state_encoder.html#a6db4e125f5758f8e8d7b0745263462f4":[2,0,0,18,102,6]
 };

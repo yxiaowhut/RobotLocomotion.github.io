@@ -1,5 +1,7 @@
 var NAVTREEINDEX34 =
 {
+"classdrake_1_1symbolic_1_1_formula_var.html#aeabbbb6c69ba676155d0965880d6c8dd":[2,0,0,17,51,7],
+"classdrake_1_1symbolic_1_1_formula_var.html#af3366a56a2a8c2942ee6fdd6a2d064b1":[2,0,0,17,51,5],
 "classdrake_1_1symbolic_1_1_monomial.html":[2,0,0,17,53],
 "classdrake_1_1symbolic_1_1_monomial.html#a07e43dd6afaaafb0291e1067a4479212":[2,0,0,17,53,20],
 "classdrake_1_1symbolic_1_1_monomial.html#a142e59e0b2b6c055a07ac2fec890ead0":[2,0,0,17,53,17],
@@ -247,7 +249,5 @@ var NAVTREEINDEX34 =
 "classdrake_1_1systems_1_1_abstract_values.html#af9593d4a5ff4274efaf429cb4f9e57cc":[2,0,0,18,15,13],
 "classdrake_1_1systems_1_1_accelerometer_test_logger.html":[2,0,0,18,16],
 "classdrake_1_1systems_1_1_accelerometer_test_logger.html#a004e55e3f1583d3ea4d4d0bbff3ab23f":[2,0,0,18,16,11],
-"classdrake_1_1systems_1_1_accelerometer_test_logger.html#a142f842b1069b18ed9276d6dad86a97d":[2,0,0,18,16,2],
-"classdrake_1_1systems_1_1_accelerometer_test_logger.html#a45692dcf64d0d737592c3c1206c923cd":[2,0,0,18,16,4],
-"classdrake_1_1systems_1_1_accelerometer_test_logger.html#a45bf524f24b17c4173f9803b258565dd":[2,0,0,18,16,5]
+"classdrake_1_1systems_1_1_accelerometer_test_logger.html#a142f842b1069b18ed9276d6dad86a97d":[2,0,0,18,16,2]
 };

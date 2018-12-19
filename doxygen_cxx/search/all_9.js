@@ -474,7 +474,7 @@ var searchData=
   ['is_5fweld_5fmobilizer',['is_weld_mobilizer',['../structdrake_1_1multibody_1_1internal_1_1_mobilizer_topology.html#a920206f3d21d9e3df5082cff79e08c3c',1,'drake::multibody::internal::MobilizerTopology']]],
   ['is_5fworld',['is_world',['../classdrake_1_1geometry_1_1internal_1_1_internal_frame.html#a3d78b3fb35343d097c585315bb05e3c4',1,'drake::geometry::internal::InternalFrame']]],
   ['is_5fwrite',['is_write',['../classdrake_1_1lcm_1_1_drake_lcm_log.html#aa0eced80d7591ebe55498b3b52657f95',1,'drake::lcm::DrakeLcmLog']]],
-  ['is_5fzero',['is_zero',['../classdrake_1_1maliput_1_1multilane_1_1_cubic_polynomial.html#a1bb52c780e6dfc8e1c99409f91df7e58',1,'drake::maliput::multilane::CubicPolynomial::is_zero()'],['../namespacedrake_1_1symbolic.html#a07f09fda9abe80d7b775527445374c06',1,'drake::symbolic::is_zero()']]],
+  ['is_5fzero',['is_zero',['../classdrake_1_1maliput_1_1multilane_1_1_cubic_polynomial.html#a1bb52c780e6dfc8e1c99409f91df7e58',1,'drake::maliput::multilane::CubicPolynomial::is_zero()'],['../namespacedrake_1_1symbolic.html#a07f09fda9abe80d7b775527445374c06',1,'drake::symbolic::is_zero()'],['../namespacedrake_1_1solvers.html#aff3bd4ba5a82e4d340b8fd15d9d55ff1',1,'drake::solvers::is_zero()']]],
   ['isactive',['isActive',['../class_quasi_static_constraint.html#a354c7d206ec624b9bdbb81f3b788f826',1,'QuasiStaticConstraint']]],
   ['isaffine',['IsAffine',['../class_polynomial.html#a0a83f7960aa020c56d20f435dba4d3cd',1,'Polynomial']]],
   ['isallfingersstuck',['IsAllFingersStuck',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#ac3eabc49f382cf9c9a18aa81703c64df',1,'drake::examples::allegro_hand::AllegroHandMotionState']]],

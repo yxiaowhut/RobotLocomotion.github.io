@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"optimization__examples_8h.html#a18bb567ee09e76a01884a4b00c087335":[3,0,0,13,0,44,17],
+"optimization__examples_8h.html#a418c5a20b60dcbe3b75bfeaea81b060f":[3,0,0,13,0,44,15],
 "optimization__examples_8h.html#a55c08578d206d8fe3178cf8eb42c4590":[3,0,0,13,0,44,16],
 "optimization__examples_8h.html#a8d9ec9d33ea9a835a8a6f0748971d6f1":[3,0,0,13,0,44,13],
 "optimization__examples_8h.html#a8d9ec9d33ea9a835a8a6f0748971d6f1a3f44b41f503cad5057b7bb55bda0c101":[3,0,0,13,0,44,13,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "piecewise__polynomial__affine__system__test_8cc.html#a2401ac25984065d28c526f1d22b6dd3f":[3,0,0,14,6,0,18,10],
 "piecewise__polynomial__affine__system__test_8cc.html#a57f276ed1b4fb0f254b4484231eecc2d":[3,0,0,14,6,0,18,1],
 "piecewise__polynomial__affine__system__test_8cc.html#a75febec92a52461460fae22c17a92079":[3,0,0,14,6,0,18,5],
-"piecewise__polynomial__affine__system__test_8cc.html#a98ac758dabf5abc9a9777b2ac5a66564":[3,0,0,14,6,0,18,2],
-"piecewise__polynomial__affine__system__test_8cc.html#a9cbb1c9e570d4d5984a221b9a24850d7":[3,0,0,14,6,0,18,6],
-"piecewise__polynomial__affine__system__test_8cc.html#aa025d72bbf07f4edf716cc03d32484a5":[3,0,0,14,6,0,18,7]
+"piecewise__polynomial__affine__system__test_8cc.html#a98ac758dabf5abc9a9777b2ac5a66564":[3,0,0,14,6,0,18,2]
 };

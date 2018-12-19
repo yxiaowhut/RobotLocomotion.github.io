@@ -148,6 +148,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a279e31367e76849d4a45fd7db0f116f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a279e31367e76849d4a45fd7db0f116f1">num_actuated_dofs</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a279e31367e76849d4a45fd7db0f116f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of actuated degrees of freedom for a specific model instance.  <a href="#a279e31367e76849d4a45fd7db0f116f1">More...</a><br /></td></tr>
 <tr class="separator:a279e31367e76849d4a45fd7db0f116f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dc238d06e942e23f0d948f96bc3cfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa4dc238d06e942e23f0d948f96bc3cfb">MakeActuationMatrix</a> () const</td></tr>
+<tr class="memdesc:aa4dc238d06e942e23f0d948f96bc3cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <code>tau_u = B * u</code>, where B is a matrix of size <code>nv x nu</code> with <code>nu</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc" title="Returns the number of joint actuators in the model. ">num_actuators()</a> and <code>nv</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">num_velocities()</a>.  <a href="#aa4dc238d06e942e23f0d948f96bc3cfb">More...</a><br /></td></tr>
+<tr class="separator:aa4dc238d06e942e23f0d948f96bc3cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a6d28ce9c8119bee923e827eb6f02ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a32581e3a9c8879bcf23192e248df49c7">geometry::SourceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a4a6d28ce9c8119bee923e827eb6f02ed">RegisterAsSourceForSceneGraph</a> (<a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; *scene_graph)</td></tr>
 <tr class="memdesc:a4a6d28ce9c8119bee923e827eb6f02ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers <code>this</code> plant to serve as a source for an instance of SceneGraph.  <a href="#a4a6d28ce9c8119bee923e827eb6f02ed">More...</a><br /></td></tr>
 <tr class="separator:a4a6d28ce9c8119bee923e827eb6f02ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5310,6 +5313,26 @@ Finalize() stage</h1>
 
 <p>Returns <code>true</code> if this MultibodyPlant was finalized with a call to <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">Finalize()</a>. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">Finalize()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="aa4dc238d06e942e23f0d948f96bc3cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4dc238d06e942e23f0d948f96bc3cfb">&#9670;&nbsp;</a></span>MakeActuationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt; MakeActuationMatrix </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method creates an actuation matrix B mapping a vector of actuation values u into generalized forces <code>tau_u = B * u</code>, where B is a matrix of size <code>nv x nu</code> with <code>nu</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc" title="Returns the number of joint actuators in the model. ">num_actuators()</a> and <code>nv</code> equal to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model. ">num_velocities()</a>. </p>
+<p>The vector u of actuation values is of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc" title="Returns the number of joint actuators in the model. ">num_actuators()</a>. For a given <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html" title="The JointActuator class is mostly a simple bookkeeping structure to represent an actuator acting on a...">JointActuator</a>, <code>u[JointActuator::index()]</code> stores the value for the external actuation corresponding to that actuator. <code>tau_u</code> on the other hand is indexed by generalized velocity indexes according to <code><a class="el" href="classdrake_1_1multibody_1_1_joint.html#ae24835fcef569246252959b18d0027d6" title="Returns the index to the first generalized velocity for this joint within the vector v of generalized...">Joint::velocity_start()</a></code>. </p><dl class="section warning"><dt>Warning</dt><dd>B is a permutation matrix. While making a permutation has <code>O(n)</code> complexity, making a full B matrix has <code>O(n²)</code> complexity. For most applications this cost can be neglected but it could become significant for very large systems. </dd></dl>
 
 </div>
 </div>

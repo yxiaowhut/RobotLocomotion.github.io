@@ -103,6 +103,7 @@ var group__solvers =
       [ "AddRotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a1c0b88b023b5603a6534662bf98af309", null ],
       [ "AddRotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#af5a5ef4b6da552936dabb22caae98f4b", null ],
       [ "AddScaledDiagonallyDominantMatrixConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a35d050759f5f740a1e116aea34aa2d10", null ],
+      [ "AddScaledDiagonallyDominantMatrixConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a4fc0f171dcf3d56002c1f2560e430d89", null ],
       [ "AddSosConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#ad1d190e8e690c020760bb1eb14405759", null ],
       [ "AddSosConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a69e6a59cb48bb8b82a39f44f0eb5fae5", null ],
       [ "AddSosConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a6e00f880b6d61bbc722f04ee19dc7ece", null ],

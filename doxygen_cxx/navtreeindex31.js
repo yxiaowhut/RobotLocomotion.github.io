@@ -1,5 +1,7 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a6b8dbb993c3fecc623f624e92ba89e21":[2,0,0,16,2,19,1],
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a972cb68bec853c85ef78855ff5c51b38":[2,0,0,16,2,19,7],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#ac8371f4e015886a9abb36f7bfda1a433":[2,0,0,16,2,19,4],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#ac9f6fdfc288c6f0162cb5551fc18d51e":[2,0,0,16,2,19,6],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#ad1dcdf0fa73e409ef96432e2a2ff3c91":[2,0,0,16,2,19,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_expression.html#ab95b25d57c1266fcbd7f8674b5c8e592":[2,0,0,17,4,112],
 "classdrake_1_1symbolic_1_1_expression.html#abb771e5bf5c37eb4753daf77f77adab0":[2,0,0,17,4,7],
 "classdrake_1_1symbolic_1_1_expression.html#abe49b865a3783f92bb71a8c1f26bc0d0":[2,0,0,17,4,25],
-"classdrake_1_1symbolic_1_1_expression.html#abe8a6c3d1b0e26682c8b695c71156a9c":[2,0,0,17,4,21],
-"classdrake_1_1symbolic_1_1_expression.html#abf0184a9c70a7d6803b4652ae2ea9db5":[2,0,0,17,4,74],
-"classdrake_1_1symbolic_1_1_expression.html#ac056f5e5153e7519ba8b78432b2b5d6a":[2,0,0,17,4,18]
+"classdrake_1_1symbolic_1_1_expression.html#abe8a6c3d1b0e26682c8b695c71156a9c":[2,0,0,17,4,21]
 };

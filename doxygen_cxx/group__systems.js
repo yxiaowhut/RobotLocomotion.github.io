@@ -146,6 +146,7 @@ var group__systems =
       [ "HasJointNamed", "classdrake_1_1multibody_1_1_multibody_plant.html#ac7ebee03109f4cb8990124949e97caa1", null ],
       [ "HasModelInstanceNamed", "classdrake_1_1multibody_1_1_multibody_plant.html#a05b71664c8e2e91bc3fc92fef222a9bf", null ],
       [ "is_finalized", "classdrake_1_1multibody_1_1_multibody_plant.html#acf7bb2a3531c09a97fb3623ac582d840", null ],
+      [ "MakeActuationMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#aa4dc238d06e942e23f0d948f96bc3cfb", null ],
       [ "MakeActuatorSelectorMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#a0d7f5496735d233ea0b984c5a290671f", null ],
       [ "MakeActuatorSelectorMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#a029244fdbe2f10a7bfaf5c21175d834c", null ],
       [ "MakeStateSelectorMatrix", "classdrake_1_1multibody_1_1_multibody_plant.html#a5c7b2e7b0c09b6479d25250405ffd0c4", null ],
