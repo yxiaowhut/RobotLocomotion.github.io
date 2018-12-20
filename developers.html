@@ -191,7 +191,8 @@ supported for CMake builds using the “Unix Makefiles” generator.</p>
 </td>
 <td>OpenJDK 11</td>
 <td rowspan="3">R2018b</td>
-<td rowspan="3">2.7.15</td>
+<td>2.7.15
+3.6.7</td>
 </tr>
 <tr class="row-odd"><td>macOS High Sierra (10.13)</td>
 <td rowspan="2"><div class="first last line-block">
@@ -201,13 +202,20 @@ supported for CMake builds using the “Unix Makefiles” generator.</p>
 </td>
 <td rowspan="2">Apple LLVM 10.0</td>
 <td rowspan="2">Oracle 11</td>
+<td rowspan="2">2.7.15</td>
 </tr>
 <tr class="row-even"><td>macOS Mojave (10.14)</td>
 </tr>
 </tbody>
 </table>
-<p>macOS Mojave C++ and Python support and macOS and Ubuntu Bionic MATLAB support
-is experimental and untested in continuous integration.</p>
+<p>CPython is the only Python implementation supported. On all platforms, Python 2
+is the default version.</p>
+<p>The following configurations are presently untested in continuous integration:</p>
+<ul class="simple">
+<li>macOS Mojave: C++, Python</li>
+<li>macOS, Ubuntu Bionic: MATLAB</li>
+<li>Ubuntu Bionic: Python 3</li>
+</ul>
 <div class="section" id="binary-packages">
 <span id="id3"></span><h3><a class="toc-backref" href="#id9">Binary Packages</a><a class="headerlink" href="#binary-packages" title="Permalink to this headline">¶</a></h3>
 <p>The binary releases of Drake are built with GCC 5.4 on Ubuntu Xenial, GCC 7.3

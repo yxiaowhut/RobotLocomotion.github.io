@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('detail__sdf__parser_8h.html','');});
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="multibody_2parsing_2package__map_8h.html">drake/multibody/parsing/package_map.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__tree__indexes_8h.html">drake/multibody/tree/multibody_tree_indexes.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -106,7 +107,7 @@ Include dependency graph for detail_sdf_parser.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="detail__sdf__parser_8h__dep__incl.svg" width="100%" height="417"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="detail__sdf__parser_8h__dep__incl.svg" width="603" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -121,12 +122,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a58c9c8fdd67d9fec13d0f55bef5e97cf"><td class="memItemLeft" align="right" valign="top">ModelInstanceIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a58c9c8fdd67d9fec13d0f55bef5e97cf">AddModelFromSdfFile</a> (const std::string &amp;file_name, const std::string &amp;model_name, MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:a58c9c8fdd67d9fec13d0f55bef5e97cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a <code>&lt;model&gt;</code> element from the SDF file specified by <code>file_name</code> and adds it to <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1detail.html#a58c9c8fdd67d9fec13d0f55bef5e97cf">More...</a><br /></td></tr>
-<tr class="separator:a58c9c8fdd67d9fec13d0f55bef5e97cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a672055fa38cfbb30e1304017f3bfbff1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; ModelInstanceIndex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a672055fa38cfbb30e1304017f3bfbff1">AddModelsFromSdfFile</a> (const std::string &amp;file_name, MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:a672055fa38cfbb30e1304017f3bfbff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses all <code>&lt;model&gt;</code> elements from the SDF file specified by <code>file_name</code> and adds them to <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1detail.html#a672055fa38cfbb30e1304017f3bfbff1">More...</a><br /></td></tr>
-<tr class="separator:a672055fa38cfbb30e1304017f3bfbff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12845da0430bac558be18798011f5c0a"><td class="memItemLeft" align="right" valign="top">ModelInstanceIndex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#a12845da0430bac558be18798011f5c0a">AddModelFromSdfFile</a> (const std::string &amp;file_name, const std::string &amp;model_name, const PackageMap &amp;package_map, MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
+<tr class="memdesc:a12845da0430bac558be18798011f5c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a <code>&lt;model&gt;</code> element from the SDF file specified by <code>file_name</code> and adds it to <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1detail.html#a12845da0430bac558be18798011f5c0a">More...</a><br /></td></tr>
+<tr class="separator:a12845da0430bac558be18798011f5c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce5c2ee07186c7d8bc5fa96eafaf16e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; ModelInstanceIndex &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html#adce5c2ee07186c7d8bc5fa96eafaf16e">AddModelsFromSdfFile</a> (const std::string &amp;file_name, const PackageMap &amp;package_map, MultibodyPlant&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, geometry::SceneGraph&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
+<tr class="memdesc:adce5c2ee07186c7d8bc5fa96eafaf16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses all <code>&lt;model&gt;</code> elements from the SDF file specified by <code>file_name</code> and adds them to <code>plant</code>.  <a href="namespacedrake_1_1multibody_1_1detail.html#adce5c2ee07186c7d8bc5fa96eafaf16e">More...</a><br /></td></tr>
+<tr class="separator:adce5c2ee07186c7d8bc5fa96eafaf16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

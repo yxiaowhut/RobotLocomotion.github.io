@@ -111,7 +111,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gadba18b4f0bfc092569b3b6d86d7711cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extends a Diagram with the required components to publish contact results to drake_visualizer.  <a href="group__visualization.html#gadba18b4f0bfc092569b3b6d86d7711cd">More...</a><br /></td></tr>
 <tr class="separator:gadba18b4f0bfc092569b3b6d86d7711cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5d6dbc1e84129798acfb614bdef8e1be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html">systems::lcm::LcmPublisherSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__visualization.html#ga5d6dbc1e84129798acfb614bdef8e1be">ConnectContactResultsToDrakeVisualizer</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;multibody_plant, const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;contact_results_port, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
-<tr class="memdesc:ga5d6dbc1e84129798acfb614bdef8e1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements ConnectContactResultsToDrakeVisualizer, but using <code>contact_results_port</code> to explicitly specify the output port used to get contact results for <code>multibody_plant</code>.  <a href="group__visualization.html#ga5d6dbc1e84129798acfb614bdef8e1be">More...</a><br /></td></tr>
+<tr class="memdesc:ga5d6dbc1e84129798acfb614bdef8e1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements ConnectContactResultsToDrakeVisualizer, but using <code>contact_results_port</code> to explicitly specify the output port used to get contact results for <code><a class="el" href="namespacedrake_1_1multibody_1_1multibody__plant.html">multibody_plant</a></code>.  <a href="group__visualization.html#ga5d6dbc1e84129798acfb614bdef8e1be">More...</a><br /></td></tr>
 <tr class="separator:ga5d6dbc1e84129798acfb614bdef8e1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -160,18 +160,18 @@ Connections to <a href="https://github.com/rdeits/meshcat">MeshCat</a> are avail
 <p>This is a convenience method to simplify some common boilerplate for adding contact results visualization capability to a Diagram. What it does is:</p>
 <ul>
 <li>adds systems <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html" title="A System that encodes ContactResults into a lcmt_contact_results_for_viz message. ...">ContactResultsToLcmSystem</a> and LcmPublisherSystem to the Diagram and connects the draw message output to the publisher input,</li>
-<li>connects the <code>multibody_plant</code> contact results output to the <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html" title="A System that encodes ContactResults into a lcmt_contact_results_for_viz message. ...">ContactResultsToLcmSystem</a> system, and</li>
+<li>connects the <code><a class="el" href="namespacedrake_1_1multibody_1_1multibody__plant.html">multibody_plant</a></code> contact results output to the <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html" title="A System that encodes ContactResults into a lcmt_contact_results_for_viz message. ...">ContactResultsToLcmSystem</a> system, and</li>
 <li>sets the publishing rate to 1/60 of a second (simulated time).</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">builder</td><td>The diagram builder being used to construct the Diagram. </td></tr>
-    <tr><td class="paramname">multibody_plant</td><td>The System in <code>builder</code> containing the plant whose contact results are to be visualized. </td></tr>
+    <tr><td class="paramname"><a class="el" href="namespacedrake_1_1multibody_1_1multibody__plant.html">multibody_plant</a></td><td>The System in <code>builder</code> containing the plant whose contact results are to be visualized. </td></tr>
     <tr><td class="paramname">lcm</td><td>An optional lcm interface through which lcm messages will be dispatched. Will be allocated internally if none is supplied.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The given <code>multibody_plant</code> must be contained within the supplied DiagramBuilder.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The given <code><a class="el" href="namespacedrake_1_1multibody_1_1multibody__plant.html">multibody_plant</a></code> must be contained within the supplied DiagramBuilder.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the LcmPublisherSystem (in case callers, e.g., need to change the default publishing rate). </dd></dl>
 
 </div>
@@ -214,9 +214,9 @@ Connections to <a href="https://github.com/rdeits/meshcat">MeshCat</a> are avail
       </table>
 </div><div class="memdoc">
 
-<p>Implements ConnectContactResultsToDrakeVisualizer, but using <code>contact_results_port</code> to explicitly specify the output port used to get contact results for <code>multibody_plant</code>. </p>
+<p>Implements ConnectContactResultsToDrakeVisualizer, but using <code>contact_results_port</code> to explicitly specify the output port used to get contact results for <code><a class="el" href="namespacedrake_1_1multibody_1_1multibody__plant.html">multibody_plant</a></code>. </p>
 <p>This is required, for instance, when the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> is inside a Diagram, and the Diagram exports the pose bundle port.</p>
-<dl class="section pre"><dt>Precondition</dt><dd>contact_results_port must be connected to the contact_results_port of <code>multibody_plant</code>.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>contact_results_port must be connected to the contact_results_port of <code><a class="el" href="namespacedrake_1_1multibody_1_1multibody__plant.html">multibody_plant</a></code>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__visualization.html#gadba18b4f0bfc092569b3b6d86d7711cd" title="Extends a Diagram with the required components to publish contact results to drake_visualizer. ">ConnectContactResultsToDrakeVisualizer()</a>. </dd></dl>
 
 </div>

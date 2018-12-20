@@ -12,5 +12,6 @@ var dir_2cfde1bc2e31096ff4452bcd48edbbfa =
     [ "scalar_initial_value_problem_test.cc", "scalar__initial__value__problem__test_8cc.html", "scalar__initial__value__problem__test_8cc" ],
     [ "scalar_view_dense_output_test.cc", "scalar__view__dense__output__test_8cc.html", "scalar__view__dense__output__test_8cc" ],
     [ "semi_explicit_euler_integrator_test.cc", "semi__explicit__euler__integrator__test_8cc.html", null ],
+    [ "simulator_denorm_test.cc", "simulator__denorm__test_8cc.html", null ],
     [ "simulator_test.cc", "simulator__test_8cc.html", "simulator__test_8cc" ]
 ];

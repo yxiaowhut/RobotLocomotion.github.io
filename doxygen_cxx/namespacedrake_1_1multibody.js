@@ -8,6 +8,7 @@ var namespacedrake_1_1multibody =
     [ "parsers", "namespacedrake_1_1multibody_1_1parsers.html", null ],
     [ "test", "namespacedrake_1_1multibody_1_1test.html", "namespacedrake_1_1multibody_1_1test" ],
     [ "test_utilities", "namespacedrake_1_1multibody_1_1test__utilities.html", "namespacedrake_1_1multibody_1_1test__utilities" ],
+    [ "AddMultibodyPlantSceneGraphResult", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result" ],
     [ "AngleBetweenVectorsConstraint", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html", "classdrake_1_1multibody_1_1_angle_between_vectors_constraint" ],
     [ "ArticulatedBodyInertia", "classdrake_1_1multibody_1_1_articulated_body_inertia.html", "classdrake_1_1multibody_1_1_articulated_body_inertia" ],
     [ "Body", "classdrake_1_1multibody_1_1_body.html", "classdrake_1_1multibody_1_1_body" ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX42 =
 {
+"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a49447f38d806d93361646bb4ccec81c0":[0,1,0,7,3],
+"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a58bd3ef530552c6a99cf76bf402434cd":[0,1,0,7,8],
+"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a9ae0e5670ce1d3893356b0771fbaeb24":[0,1,0,7,2],
+"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a9c3937505bdb9d7b7b3ac00cc9fbbb38":[0,1,0,7,6],
+"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#af37b12ca90f8fd9705939855ae554710":[0,1,0,7,0],
+"classdrake_1_1systems_1_1_stepwise_dense_output.html":[2,0,0,18,120],
 "classdrake_1_1systems_1_1_stepwise_dense_output.html#a6718eefb391aa19c8e48a484f85d278b":[2,0,0,18,120,2],
 "classdrake_1_1systems_1_1_stepwise_dense_output.html#a6eca86e7c39b925cd21c469ab40c7a71":[2,0,0,18,120,4],
 "classdrake_1_1systems_1_1_stepwise_dense_output.html#a7258dbb7ed57310a3e3a96b63543f45d":[2,0,0,18,120,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX42 =
 "classdrake_1_1systems_1_1_system_constraint.html#a2836b765f1026c2ce68efe3ef5616b81":[2,0,0,18,125,9],
 "classdrake_1_1systems_1_1_system_constraint.html#a290e041bd3a8025e0db998efee366d6c":[2,0,0,18,125,11],
 "classdrake_1_1systems_1_1_system_constraint.html#a36c85b060c434857b59b0992f9f95619":[2,0,0,18,125,4],
-"classdrake_1_1systems_1_1_system_constraint.html#a3899e4ce18e02c4370c47d0feebbc9e3":[2,0,0,18,125,5],
-"classdrake_1_1systems_1_1_system_constraint.html#a3a891b6eb5fc29038c849ab777d4cbf5":[2,0,0,18,125,3],
-"classdrake_1_1systems_1_1_system_constraint.html#a69c497e09fe90969c3f9d46692eb668f":[2,0,0,18,125,6],
-"classdrake_1_1systems_1_1_system_constraint.html#a8c282c78b146bd23199bcd894eada1cf":[2,0,0,18,125,0],
-"classdrake_1_1systems_1_1_system_constraint.html#abcafbae944197bced07e5fad982d9341":[2,0,0,18,125,7],
-"classdrake_1_1systems_1_1_system_constraint.html#ac0fa536a0e3c81936e10068edb44dd0d":[2,0,0,18,125,1],
-"classdrake_1_1systems_1_1_system_constraint.html#af9593d4a5ff4274efaf429cb4f9e57cc":[2,0,0,18,125,10]
+"classdrake_1_1systems_1_1_system_constraint.html#a3899e4ce18e02c4370c47d0feebbc9e3":[2,0,0,18,125,5]
 };

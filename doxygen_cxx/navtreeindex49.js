@@ -1,5 +1,11 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a5f5ccf485fb4f56a9b1bffc8762e5863":[2,0,0,18,13,0,7],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[2,0,0,18,13,0,4],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[2,0,0,18,13,0,3],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[2,0,0,18,13,0,0],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html":[2,0,0,18,13,1],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[2,0,0,18,13,1,7],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e":[2,0,0,18,13,1,8],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eae84b43f3081dc3fbbf43394ed5a05":[2,0,0,18,13,1,2],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a5eea9354674efc1c07bf537319628ead":[2,0,0,18,13,1,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX49 =
 "collision__filter_8h.html#a00986eb20639d7ee55a20011f9ca8c03":[3,0,0,0,1,0,4,6],
 "collision__filter_8h.html#aa8778acf4ef100c6746c07b8d83fc490":[3,0,0,0,1,0,4,4],
 "collision__filter_8h.html#ae1d5273d6709476f9503629f6743b70d":[3,0,0,0,1,0,4,3],
-"collision__filter_8h.html#ae946238edee96d53c3ad14beeadbcfc4":[3,0,0,0,1,0,4,5],
-"collision__filter__doxygen_8h.html":[3,0,0,0,1,0,5],
-"collision__filter__group__test_8cc.html":[3,0,0,0,1,0,0,1],
-"collision__py_8cc.html":[3,0,0,2,0,4,1],
-"collision__py_8cc.html#acbd11f32e366326d18582e410c89e76f":[3,0,0,2,0,4,1,0],
-"color__palette_8h.html":[3,0,0,14,8,5],
-"color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[3,0,0,14,8,5,5]
+"collision__filter_8h.html#ae946238edee96d53c3ad14beeadbcfc4":[3,0,0,0,1,0,4,5]
 };

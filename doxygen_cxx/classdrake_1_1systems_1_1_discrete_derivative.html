@@ -957,7 +957,7 @@ class drake::systems::DiscreteDerivative&lt; T &gt;</h3>
   x₁[n+1] = x₀[n],
   y(t) = (x₀[n]-x₁[n])/h.
   x₀[0] and x₁[0] are initialized in the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> (default is zeros).
-</pre><p>Note: The reason for this specific implementation is a little subtle. Since drake systems do not control the evaluation time of their output ports, a downstream system may ask for the output at any continuous time. The estimate y(t) = (u(t) - u[n])/(t-n*h), which is a more continuous-time derivative, would require fewer state variables, and introduce less delay. But the inconsistent time interval (which could be arbitrarily close to zero) makes it numerically unreliable. Prefer the discrete-time derivative implemented here.</p>
+</pre><dl class="section note"><dt>Note</dt><dd>For dynamical systems, a derivative should not be computed in continuous-time, i.e. <code>y(t) = (u(t) - u[n])/(t-n*h)</code>. This is numerically unstable since the time interval <code>t-n*h</code> could be arbitrarily close to zero. Prefer the discrete-time implementation for robustness.</dd></dl>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td><table cellspacing="0" cellpadding="0">

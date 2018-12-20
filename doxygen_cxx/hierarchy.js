@@ -16,6 +16,7 @@ var hierarchy =
       [ "IiwaMove", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_iiwa_move.html", null ],
       [ "WsgAction", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_wsg_action.html", null ]
     ] ],
+    [ "AddMultibodyPlantSceneGraphResult< T >", "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html", null ],
     [ "AddRotationMatrixBoxSphereIntersectionReturn", "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html", null ],
     [ "AllegroHandMotionState", "classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html", null ],
     [ "AntiderivativeFunction< T >", "classdrake_1_1systems_1_1_antiderivative_function.html", null ],
@@ -1089,8 +1090,8 @@ var hierarchy =
     [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
     [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
     [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
-    [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
     [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
+    [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
     [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
     [ "SpeedLimitRule", "classdrake_1_1maliput_1_1api_1_1rules_1_1_speed_limit_rule.html", null ],
     [ "SRange", "classdrake_1_1maliput_1_1api_1_1rules_1_1_s_range.html", null ],

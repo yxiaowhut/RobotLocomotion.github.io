@@ -89,6 +89,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.attic.html">pydrake.attic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
@@ -201,6 +202,70 @@
 <p class="first admonition-title">Warning</p>
 <p class="last">This module will soon be deprecated. Please use <code class="docutils literal"><span class="pre">pydrake.multibody.plant</span></code> instead.</p>
 </div>
+<dl class="function">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.AddMultibodyPlantSceneGraph">
+<code class="descclassname">pydrake.multibody.multibody_tree.multibody_plant.</code><code class="descname">AddMultibodyPlantSceneGraph</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant = None, scene_graph: pydrake.geometry.SceneGraph = None</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.AddMultibodyPlantSceneGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a MultibodyPlant and a SceneGraph instance to a diagram builder,
+connecting the geometry ports.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">builder</span></code>:</dt>
+<dd>Builder to add to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>(optional) Constructed plant (e.g. for using a discrete plant). By
+default, a continuous plant is used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">scene_graph</span></code>:</dt>
+<dd>(optional) Constructed scene graph. If none is provided, one will
+be created and used.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Pair of the registered plant and scene graph.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">builder</span></code> must be non-null.</dd>
+</dl>
+<p>Recommended usages:</p>
+<p>Assign to a MultibodyPlant reference (ignoring the SceneGraph):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;&amp;</span> <span class="n">plant</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+  <span class="n">plant</span><span class="o">.</span><span class="n">DoFoo</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This flavor is the simplest, when the SceneGraph is not explicitly
+needed. (It can always be retrieved later via
+GetSubsystemByName(“scene_graph”).)</p>
+<p>Assign to auto, and use the named public fields:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">items</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+  <span class="n">items</span><span class="o">.</span><span class="n">plant</span><span class="o">.</span><span class="n">DoFoo</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+  <span class="n">items</span><span class="o">.</span><span class="n">scene_graph</span><span class="o">.</span><span class="n">DoBar</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">auto</span> <span class="n">items</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+  <span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;&amp;</span> <span class="n">plant</span> <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">plant</span><span class="p">;</span>
+  <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;&amp;</span> <span class="n">scene_graph</span> <span class="o">=</span> <span class="n">items</span><span class="o">.</span><span class="n">scene_graph</span><span class="p">;</span>
+  <span class="o">...</span>
+  <span class="n">plant</span><span class="o">.</span><span class="n">DoFoo</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+  <span class="n">scene_graph</span><span class="o">.</span><span class="n">DoBar</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This is the easiest way to use both the plant and scene_graph.</p>
+<p>Assign to already-declared pointer variables:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;*</span> <span class="n">plant</span><span class="p">{};</span>
+  <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;*</span> <span class="n">scene_graph</span><span class="p">{};</span>
+  <span class="n">std</span><span class="p">::</span><span class="n">tie</span><span class="p">(</span><span class="n">plant</span><span class="p">,</span> <span class="n">scene_graph</span><span class="p">)</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
+  <span class="n">plant</span><span class="o">-&gt;</span><span class="n">DoFoo</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+  <span class="n">scene_graph</span><span class="o">-&gt;</span><span class="n">DoBar</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This flavor is most useful when the pointers are class member fields
+(and so perhaps cannot be references).</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.ContactResults">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.multibody_tree.multibody_plant.</code><code class="descname">ContactResults</code><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.ContactResults" title="Permalink to this definition">¶</a></dt>
@@ -1818,7 +1883,7 @@ MultibodyPlant::num_velocities() or <code class="docutils literal"><span class="
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7f65b15ddb30&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7fd0c9430930&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Welds frames A and B with relative pose <code class="docutils literal"><span class="pre">X_AB</span></code>. That is, the pose of
 frame B in frame A is fixed, with value <code class="docutils literal"><span class="pre">X_AB</span></code>. The call to this
 method creates and adds a new WeldJoint to the model. The new

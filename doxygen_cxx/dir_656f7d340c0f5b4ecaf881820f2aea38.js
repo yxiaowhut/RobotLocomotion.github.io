@@ -16,7 +16,5 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     [ "implicit_stribeck_solver.cc", "implicit__stribeck__solver_8cc.html", null ],
     [ "implicit_stribeck_solver.h", "implicit__stribeck__solver_8h.html", "implicit__stribeck__solver_8h" ],
     [ "multibody_plant.cc", "multibody__plant_8cc.html", "multibody__plant_8cc" ],
-    [ "multibody_plant.h", "multibody__plant_8h.html", [
-      [ "Traits< drake::multibody::MultibodyPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1_multibody_plant_01_4.html", null ]
-    ] ]
+    [ "multibody_plant.h", "multibody__plant_8h.html", "multibody__plant_8h" ]
 ];

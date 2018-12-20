@@ -3,6 +3,7 @@ var dir_adbb1ee2d3f43f66610ca2f4101eae2a =
     [ "box_test.cc", "box__test_8cc.html", null ],
     [ "contact_results_to_lcm_test.cc", "contact__results__to__lcm__test_8cc.html", null ],
     [ "coulomb_friction_test.cc", "coulomb__friction__test_8cc.html", null ],
+    [ "external_forces_test.cc", "external__forces__test_8cc.html", null ],
     [ "frame_kinematics_test.cc", "frame__kinematics__test_8cc.html", null ],
     [ "implicit_stribeck_solver_test.cc", "implicit__stribeck__solver__test_8cc.html", "implicit__stribeck__solver__test_8cc" ],
     [ "implicit_stribeck_solver_test_util.h", "implicit__stribeck__solver__test__util_8h.html", "implicit__stribeck__solver__test__util_8h" ],

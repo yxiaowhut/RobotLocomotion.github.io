@@ -1,4 +1,4 @@
 var make__inclined__plane__plant_8cc =
 [
-    [ "MakeInclinedPlanePlant", "make__inclined__plane__plant_8cc.html#ade389e8a7ebfd4cac23796dfdf247242", null ]
+    [ "AddInclinedPlaneToPlant", "make__inclined__plane__plant_8cc.html#a6d3353546cd7ff95a5061c56fe656c46", null ]
 ];

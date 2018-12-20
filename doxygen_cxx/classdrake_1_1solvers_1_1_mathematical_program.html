@@ -562,11 +562,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a27e3ce329f648aae3bea248179013b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for linear matrix inequality constraint.  <a href="#a27e3ce329f648aae3bea248179013b34">More...</a><br /></td></tr>
 <tr class="separator:a27e3ce329f648aae3bea248179013b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad90403c02bdb7c61d7a8de5dd39e9c39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ad90403c02bdb7c61d7a8de5dd39e9c39">GetAllCosts</a> () const</td></tr>
-<tr class="memdesc:ad90403c02bdb7c61d7a8de5dd39e9c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter returning all costs (for now linear costs appended to generic costs, then quadratic costs appended to generic costs).  <a href="#ad90403c02bdb7c61d7a8de5dd39e9c39">More...</a><br /></td></tr>
+<tr class="memdesc:ad90403c02bdb7c61d7a8de5dd39e9c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter returning all costs.  <a href="#ad90403c02bdb7c61d7a8de5dd39e9c39">More...</a><br /></td></tr>
 <tr class="separator:ad90403c02bdb7c61d7a8de5dd39e9c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17fe85b6ddbc665b74e8cf9c6bf02d3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a17fe85b6ddbc665b74e8cf9c6bf02d3e">GetAllLinearConstraints</a> () const</td></tr>
 <tr class="memdesc:a17fe85b6ddbc665b74e8cf9c6bf02d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter returning all linear constraints (both linear equality and inequality constraints).  <a href="#a17fe85b6ddbc665b74e8cf9c6bf02d3e">More...</a><br /></td></tr>
 <tr class="separator:a17fe85b6ddbc665b74e8cf9c6bf02d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee45efd038cc24341094591bf1cbdbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#afee45efd038cc24341094591bf1cbdbc">GetAllConstraints</a> () const</td></tr>
+<tr class="memdesc:afee45efd038cc24341094591bf1cbdbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for returning all constraints.  <a href="#afee45efd038cc24341094591bf1cbdbc">More...</a><br /></td></tr>
+<tr class="separator:afee45efd038cc24341094591bf1cbdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af39c3045633d664d62c161a5ef4f3c4c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af39c3045633d664d62c161a5ef4f3c4c">bounding_box_constraints</a> () const</td></tr>
 <tr class="memdesc:af39c3045633d664d62c161a5ef4f3c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for all bounding box constraints.  <a href="#af39c3045633d664d62c161a5ef4f3c4c">More...</a><br /></td></tr>
 <tr class="separator:af39c3045633d664d62c161a5ef4f3c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -618,6 +621,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aac012f5939e75603d8318ab593b8d04b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structdrake_1_1is__eigen__vector.html">is_eigen_vector</a>&lt; DerivedX &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; typename DerivedX::Scalar &gt; &gt;::<a class="el" href="multilane_2loader_8cc.html#adb5798caab72849ba8da861ddc3acccd">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aac012f5939e75603d8318ab593b8d04b">EvalBinding</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; C &gt; &amp;binding, const Eigen::MatrixBase&lt; DerivedX &gt; &amp;prog_var_vals) const</td></tr>
 <tr class="memdesc:aac012f5939e75603d8318ab593b8d04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the value of some binding, for some input value for all decision variables.  <a href="#aac012f5939e75603d8318ab593b8d04b">More...</a><br /></td></tr>
 <tr class="separator:aac012f5939e75603d8318ab593b8d04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a588201aaba06e4f4e6b1b76b7270d1bf"><td class="memTemplParams" colspan="2">template&lt;typename C , typename DerivedX &gt; </td></tr>
+<tr class="memitem:a588201aaba06e4f4e6b1b76b7270d1bf"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structdrake_1_1is__eigen__vector.html">is_eigen_vector</a>&lt; DerivedX &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; typename DerivedX::Scalar &gt; &gt;::<a class="el" href="multilane_2loader_8cc.html#adb5798caab72849ba8da861ddc3acccd">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a588201aaba06e4f4e6b1b76b7270d1bf">EvalBindings</a> (const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; C &gt;&gt; &amp;bindings, const Eigen::MatrixBase&lt; DerivedX &gt; &amp;prog_var_vals) const</td></tr>
+<tr class="memdesc:a588201aaba06e4f4e6b1b76b7270d1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a set of bindings (plural version of <code>EvalBinding</code>).  <a href="#a588201aaba06e4f4e6b1b76b7270d1bf">More...</a><br /></td></tr>
+<tr class="separator:a588201aaba06e4f4e6b1b76b7270d1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a856ded9f90eaac91a1c66f2c139566b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a856ded9f90eaac91a1c66f2c139566b5">EvalVisualizationCallbacks</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;prog_var_vals) const</td></tr>
 <tr class="memdesc:a856ded9f90eaac91a1c66f2c139566b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates all visualization callbacks registered with the <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>.  <a href="#a856ded9f90eaac91a1c66f2c139566b5">More...</a><br /></td></tr>
 <tr class="separator:a856ded9f90eaac91a1c66f2c139566b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4611,7 +4618,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the size does not match. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>if the size of <code>prog_var_vals</code> is invalid. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4673,6 +4680,59 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 
 <p>Evaluates the evaluator in <code>binding</code> at the solution value. </p>
 <dl class="section return"><dt>Returns</dt><dd>The value of <code>binding</code> at the solution value. </dd></dl>
+
+</div>
+</div>
+<a id="a588201aaba06e4f4e6b1b76b7270d1bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a588201aaba06e4f4e6b1b76b7270d1bf">&#9670;&nbsp;</a></span>EvalBindings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;<a class="el" href="structdrake_1_1is__eigen__vector.html">is_eigen_vector</a>&lt;DerivedX&gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;typename DerivedX::Scalar&gt; &gt;::<a class="el" href="multilane_2loader_8cc.html#adb5798caab72849ba8da861ddc3acccd">type</a> EvalBindings </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; C &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>bindings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedX &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prog_var_vals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluates a set of bindings (plural version of <code>EvalBinding</code>). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bindings</td><td>List of bindings. </td></tr>
+    <tr><td class="paramname">prog</td><td></td></tr>
+    <tr><td class="paramname">prog_var_vals</td><td>The value of all the decision variables in this program. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>All binding values, concatenated into a single vector. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::logic_error</td><td>if the size of <code>prog_var_vals</code> is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -4833,6 +4893,35 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 
 </div>
 </div>
+<a id="afee45efd038cc24341094591bf1cbdbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee45efd038cc24341094591bf1cbdbc">&#9670;&nbsp;</a></span>GetAllConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a>&gt; &gt; GetAllConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for returning all constraints. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of all constraint bindings. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The group ordering may change as more constraint types are added. </dd></dl>
+
+</div>
+</div>
 <a id="ad90403c02bdb7c61d7a8de5dd39e9c39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad90403c02bdb7c61d7a8de5dd39e9c39">&#9670;&nbsp;</a></span>GetAllCosts()</h2>
 
@@ -4856,7 +4945,9 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </table>
 </div><div class="memdoc">
 
-<p>Getter returning all costs (for now linear costs appended to generic costs, then quadratic costs appended to generic costs). </p>
+<p>Getter returning all costs. </p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of all cost bindings. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The group ordering may change as more cost types are added. </dd></dl>
 
 </div>
 </div>
@@ -4884,6 +4975,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div><div class="memdoc">
 
 <p>Getter returning all linear constraints (both linear equality and inequality constraints). </p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of all linear constraint bindings. </dd></dl>
 
 </div>
 </div>

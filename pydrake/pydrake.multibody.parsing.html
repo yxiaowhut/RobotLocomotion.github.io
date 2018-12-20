@@ -89,6 +89,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.attic.html">pydrake.attic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
@@ -220,14 +221,14 @@ no package named <code class="docutils literal"><span class="pre">package_name</
 <dt id="pydrake.multibody.parsing.PackageMap.PopulateFromEnvironment">
 <code class="descname">PopulateFromEnvironment</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.PackageMap</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.PopulateFromEnvironment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Obtains one or more paths from environment variable
-<code class="docutils literal"><span class="pre">environment_variable</span></code>. Crawls downard through the directory tree(s)
-starting from the path(s) searching for <code class="docutils literal"><span class="pre">package.xml</span></code> files. For
-each of these files, this method adds a new entry into this PackageMap
-where the key is the package name as specified within <code class="docutils literal"><span class="pre">package.xml</span></code>
-and the value is the path to the <code class="docutils literal"><span class="pre">package.xml</span></code> file. Multiple paths
-can be specified by separating them using the ‘:’ symbol. For example,
-the environment variable can contain [path 1]:[path 2]:[path 3] to
-search three different paths.</p>
+<code class="docutils literal"><span class="pre">environment_variable</span></code>. Crawls downward through the directory
+tree(s) starting from the path(s) searching for <code class="docutils literal"><span class="pre">package.xml</span></code> files.
+For each of these files, this method adds a new entry into this
+PackageMap where the key is the package name as specified within
+<code class="docutils literal"><span class="pre">package.xml</span></code> and the value is the path to the <code class="docutils literal"><span class="pre">package.xml</span></code> file.
+Multiple paths can be specified by separating them using the ‘:’
+symbol. For example, the environment variable can contain [path
+1]:[path 2]:[path 3] to search three different paths.</p>
 </dd></dl>
 
 <dl class="method">
@@ -342,6 +343,12 @@ model(s) will be added; <code class="docutils literal"><span class="pre">plant-&
 registration (either to model visual or contact geometry). May be
 nullptr.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.parsing.Parser.package_map">
+<code class="descname">package_map</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.Parser</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.parsing.PackageMap<a class="headerlink" href="#pydrake.multibody.parsing.Parser.package_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a mutable reference to the PackageMap used by this parser.</p>
 </dd></dl>
 
 </dd></dl>

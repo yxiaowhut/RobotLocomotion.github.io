@@ -87,7 +87,8 @@ $(document).ready(function(){initNavTree('multibody__plant_8h.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">multibody_plant.h File Reference</div>  </div>
 </div><!--header-->
@@ -95,6 +96,7 @@ $(document).ready(function(){initNavTree('multibody__plant_8h.html','');});
 <div class="textblock"><code>#include &lt;map&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -112,6 +114,7 @@ $(document).ready(function(){initNavTree('multibody__plant_8h.html','');});
 <code>#include &quot;<a class="el" href="multibody_2tree_2rigid__body_8h.html">drake/multibody/tree/rigid_body.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="uniform__gravity__field__element_8h.html">drake/multibody/tree/uniform_gravity_field_element.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="weld__joint_8h.html">drake/multibody/tree/weld_joint.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="leaf__system_8h.html">drake/systems/framework/leaf_system.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="scalar__conversion__traits_8h.html">drake/systems/framework/scalar_conversion_traits.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -132,6 +135,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MultibodyPlant is a Drake system framework representation (see <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">systems::System</a>) for the model of a physical system consisting of a collection of interconnected bodies.  <a href="classdrake_1_1multibody_1_1_multibody_plant.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary result from <code>AddMultibodyPlantSceneGraph</code>.  <a href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary result from <code>AddMultibodyPlantSceneGraph</code>.  <a href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1_multibody_plant_01_4.html">Traits&lt; drake::multibody::MultibodyPlant &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -145,6 +154,13 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1systems_1_1scalar__conversion"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1scalar__conversion.html">drake::systems::scalar_conversion</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a184cfe8f301cf07076f5707501197d88"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a184cfe8f301cf07076f5707501197d88"><td class="memTemplItemLeft" align="right" valign="top">AddMultibodyPlantSceneGraphResult&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a184cfe8f301cf07076f5707501197d88">AddMultibodyPlantSceneGraph</a> (systems::DiagramBuilder&lt; T &gt; *builder, std::unique_ptr&lt; MultibodyPlant&lt; T &gt;&gt; plant=nullptr, std::unique_ptr&lt; geometry::SceneGraph&lt; T &gt;&gt; scene_graph=nullptr)</td></tr>
+<tr class="memdesc:a184cfe8f301cf07076f5707501197d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a SceneGraph instance to a diagram builder, connecting the geometry ports.  <a href="namespacedrake_1_1multibody.html#a184cfe8f301cf07076f5707501197d88">More...</a><br /></td></tr>
+<tr class="separator:a184cfe8f301cf07076f5707501197d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

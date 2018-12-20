@@ -3,6 +3,7 @@ var classdrake_1_1multibody_1_1_multibody_forces =
     [ "MultibodyForces", "classdrake_1_1multibody_1_1_multibody_forces.html#a64a7bf5e2e15cf6080635e435d9294c0", null ],
     [ "MultibodyForces", "classdrake_1_1multibody_1_1_multibody_forces.html#ac93c68c274df369dca980144a897a4b0", null ],
     [ "MultibodyForces", "classdrake_1_1multibody_1_1_multibody_forces.html#ade698012545dda65a2e864b1468e7c12", null ],
+    [ "MultibodyForces", "classdrake_1_1multibody_1_1_multibody_forces.html#aa067d0a4ebd6ec6987718fbc6b6d219e", null ],
     [ "AddInForces", "classdrake_1_1multibody_1_1_multibody_forces.html#a4bebeb0fade3383fdb4acbab2bcc4c3b", null ],
     [ "body_forces", "classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65", null ],
     [ "CheckHasRightSizeForModel", "classdrake_1_1multibody_1_1_multibody_forces.html#afff4d445548e5d2a70445470ef667757", null ],

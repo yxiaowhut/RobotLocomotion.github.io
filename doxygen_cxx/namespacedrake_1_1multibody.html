@@ -116,6 +116,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody_1_1multibody__model"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1multibody__model.html">multibody_model</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacedrake_1_1multibody_1_1multibody__plant"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1multibody__plant.html">multibody_plant</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody_1_1parsers"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsers.html">parsers</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody_1_1test"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1test.html">test</a></td></tr>
@@ -125,6 +127,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary result from <code>AddMultibodyPlantSceneGraph</code>.  <a href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html">AngleBetweenVectorsConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrains that the angle between a vector <code>a</code> and another vector <code>b</code> is between [θ_lower, θ_upper].  <a href="classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -379,12 +384,20 @@ Functions</h2></td></tr>
 <tr class="memdesc:gadba18b4f0bfc092569b3b6d86d7711cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extends a Diagram with the required components to publish contact results to drake_visualizer.  <a href="group__visualization.html#gadba18b4f0bfc092569b3b6d86d7711cd">More...</a><br /></td></tr>
 <tr class="separator:gadba18b4f0bfc092569b3b6d86d7711cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5d6dbc1e84129798acfb614bdef8e1be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html">systems::lcm::LcmPublisherSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__visualization.html#ga5d6dbc1e84129798acfb614bdef8e1be">ConnectContactResultsToDrakeVisualizer</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;multibody_plant, const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;contact_results_port, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">lcm::DrakeLcmInterface</a> *lcm=nullptr)</td></tr>
-<tr class="memdesc:ga5d6dbc1e84129798acfb614bdef8e1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements ConnectContactResultsToDrakeVisualizer, but using <code>contact_results_port</code> to explicitly specify the output port used to get contact results for <code>multibody_plant</code>.  <a href="group__visualization.html#ga5d6dbc1e84129798acfb614bdef8e1be">More...</a><br /></td></tr>
+<tr class="memdesc:ga5d6dbc1e84129798acfb614bdef8e1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements ConnectContactResultsToDrakeVisualizer, but using <code>contact_results_port</code> to explicitly specify the output port used to get contact results for <code><a class="el" href="namespacedrake_1_1multibody_1_1multibody__plant.html">multibody_plant</a></code>.  <a href="group__visualization.html#ga5d6dbc1e84129798acfb614bdef8e1be">More...</a><br /></td></tr>
 <tr class="separator:ga5d6dbc1e84129798acfb614bdef8e1be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aada1fb90629198ff0ee920969d517335"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aada1fb90629198ff0ee920969d517335"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#aada1fb90629198ff0ee920969d517335">CalcContactFrictionFromSurfaceProperties</a> (const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction</a>&lt; T &gt; &amp;surface_properties1, const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction</a>&lt; T &gt; &amp;surface_properties2)</td></tr>
 <tr class="memdesc:aada1fb90629198ff0ee920969d517335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the surface properties of two different surfaces, this method computes the Coulomb's law coefficients of friction characterizing the interaction by friction of the given surface pair.  <a href="#aada1fb90629198ff0ee920969d517335">More...</a><br /></td></tr>
 <tr class="separator:aada1fb90629198ff0ee920969d517335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184cfe8f301cf07076f5707501197d88"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a184cfe8f301cf07076f5707501197d88"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a184cfe8f301cf07076f5707501197d88">AddMultibodyPlantSceneGraph</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt;&gt; plant=nullptr, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt;&gt; scene_graph=nullptr)</td></tr>
+<tr class="memdesc:a184cfe8f301cf07076f5707501197d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a SceneGraph instance to a diagram builder, connecting the geometry ports.  <a href="#a184cfe8f301cf07076f5707501197d88">More...</a><br /></td></tr>
+<tr class="separator:a184cfe8f301cf07076f5707501197d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43aab2e5433e79fe89b99920b4b0f013"><td class="memItemLeft" align="right" valign="top">template <a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a43aab2e5433e79fe89b99920b4b0f013">AddMultibodyPlantSceneGraph</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *builder, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; plant, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt; scene_graph)</td></tr>
+<tr class="separator:a43aab2e5433e79fe89b99920b4b0f013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba4cdd226bf672f6eecb87eea4628b7"><td class="memItemLeft" align="right" valign="top">template <a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a3ba4cdd226bf672f6eecb87eea4628b7">AddMultibodyPlantSceneGraph</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *builder, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt; plant, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt; scene_graph)</td></tr>
+<tr class="separator:a3ba4cdd226bf672f6eecb87eea4628b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a777a2894881e59d27fc9eb7b4413406f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a777a2894881e59d27fc9eb7b4413406f">world_model_instance</a> ()</td></tr>
 <tr class="memdesc:a777a2894881e59d27fc9eb7b4413406f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model instance containing the <em>world</em> body.  <a href="#a777a2894881e59d27fc9eb7b4413406f">More...</a><br /></td></tr>
 <tr class="separator:a777a2894881e59d27fc9eb7b4413406f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -607,6 +620,124 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a184cfe8f301cf07076f5707501197d88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184cfe8f301cf07076f5707501197d88">&#9670;&nbsp;</a></span>AddMultibodyPlantSceneGraph() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; T &gt; AddMultibodyPlantSceneGraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>plant</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>scene_graph</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a SceneGraph instance to a diagram builder, connecting the geometry ports. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">builder</td><td>Builder to add to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plant</td><td>(optional) Constructed plant (e.g. for using a discrete plant). By default, a continuous plant is used. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene_graph</td><td>(optional) Constructed scene graph. If none is provided, one will be created and used. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pair of the registered plant and scene graph. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>builder</code> must be non-null.</dd></dl>
+<p>Recommended usages:</p>
+<p>Assign to a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> reference (ignoring the SceneGraph): </p><div class="fragment"><div class="line">MultibodyPlant&lt;double&gt;&amp; plant = <a class="code" href="namespacedrake_1_1multibody.html#a184cfe8f301cf07076f5707501197d88">AddMultibodyPlantSceneGraph</a>(&amp;builder);</div><div class="line">plant.DoFoo(...);</div></div><!-- fragment --><p> This flavor is the simplest, when the SceneGraph is not explicitly needed. (It can always be retrieved later via GetSubsystemByName("scene_graph").)</p>
+<p>Assign to auto, and use the named public fields: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> items = <a class="code" href="namespacedrake_1_1multibody.html#a184cfe8f301cf07076f5707501197d88">AddMultibodyPlantSceneGraph</a>(&amp;builder);</div><div class="line">items.plant.DoFoo(...);</div><div class="line">items.scene_graph.DoBar(...);</div></div><!-- fragment --><p> or </p><div class="fragment"><div class="line"><span class="keyword">auto</span> items = <a class="code" href="namespacedrake_1_1multibody.html#a184cfe8f301cf07076f5707501197d88">AddMultibodyPlantSceneGraph</a>(&amp;builder);</div><div class="line">MultibodyPlant&lt;double&gt;&amp; plant = items.plant;</div><div class="line">SceneGraph&lt;double&gt;&amp; scene_graph = items.scene_graph;</div><div class="line">...</div><div class="line">plant.DoFoo(...);</div><div class="line">scene_graph.DoBar(...);</div></div><!-- fragment --><p> This is the easiest way to use both the plant and scene_graph.</p>
+<p>Assign to already-declared pointer variables: </p><div class="fragment"><div class="line">MultibodyPlant&lt;double&gt;* plant{};</div><div class="line">SceneGraph&lt;double&gt;* scene_graph{};</div><div class="line">std::tie(plant, scene_graph) = <a class="code" href="namespacedrake_1_1multibody.html#a184cfe8f301cf07076f5707501197d88">AddMultibodyPlantSceneGraph</a>(&amp;builder);</div><div class="line">plant-&gt;DoFoo(...);</div><div class="line">scene_graph-&gt;DoBar(...);</div></div><!-- fragment --><p> This flavor is most useful when the pointers are class member fields (and so perhaps cannot be references). </p>
+
+</div>
+</div>
+<a id="a43aab2e5433e79fe89b99920b4b0f013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43aab2e5433e79fe89b99920b4b0f013">&#9670;&nbsp;</a></span>AddMultibodyPlantSceneGraph() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">template <a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt;<a class="el" href="classdouble.html">double</a>&gt; drake::multibody::AddMultibodyPlantSceneGraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>scene_graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ba4cdd226bf672f6eecb87eea4628b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ba4cdd226bf672f6eecb87eea4628b7">&#9670;&nbsp;</a></span>AddMultibodyPlantSceneGraph() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">template <a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt; drake::multibody::AddMultibodyPlantSceneGraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>plant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>scene_graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

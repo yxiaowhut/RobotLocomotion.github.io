@@ -103,6 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2a3870fb0f175a5841b63b621acf15d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a2a3870fb0f175a5841b63b621acf15d5">Parser</a> (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *plant, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *scene_graph=nullptr)</td></tr>
 <tr class="memdesc:a2a3870fb0f175a5841b63b621acf15d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses SDF and URDF input files into a MultibodyPlant and (optionally) a SceneGraph. ">Parser</a> that adds models to the given plant and (optionally) scene_graph.  <a href="#a2a3870fb0f175a5841b63b621acf15d5">More...</a><br /></td></tr>
 <tr class="separator:a2a3870fb0f175a5841b63b621acf15d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb031b4b56411c477d6f19f9f1dc65f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#afb031b4b56411c477d6f19f9f1dc65f0">package_map</a> ()</td></tr>
+<tr class="memdesc:afb031b4b56411c477d6f19f9f1dc65f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a mutable reference to the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system. ">PackageMap</a> used by this parser.  <a href="#afb031b4b56411c477d6f19f9f1dc65f0">More...</a><br /></td></tr>
+<tr class="separator:afb031b4b56411c477d6f19f9f1dc65f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bf54b71dcab2af5561244f6f92c1b94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a1bf54b71dcab2af5561244f6f92c1b94">AddAllModelsFromFile</a> (const std::string &amp;file_name)</td></tr>
 <tr class="memdesc:a1bf54b71dcab2af5561244f6f92c1b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SDF or URDF file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>.  <a href="#a1bf54b71dcab2af5561244f6f92c1b94">More...</a><br /></td></tr>
 <tr class="separator:a1bf54b71dcab2af5561244f6f92c1b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,8 +303,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aeebdf7001a0290c2891454d506c67a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeebdf7001a0290c2891454d506c67a74">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a07d3b27db39a9a28d3ae2fc018ba9288"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07d3b27db39a9a28d3ae2fc018ba9288">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d3b27db39a9a28d3ae2fc018ba9288">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -326,8 +355,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aeebdf7001a0290c2891454d506c67a74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeebdf7001a0290c2891454d506c67a74">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="afb031b4b56411c477d6f19f9f1dc65f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb031b4b56411c477d6f19f9f1dc65f0">&#9670;&nbsp;</a></span>package_map()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,19 +365,20 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a>&amp; package_map </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_parser.html">Parser</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets a mutable reference to the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system. ">PackageMap</a> used by this parser. </p>
 
 </div>
 </div>

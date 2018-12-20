@@ -3,6 +3,8 @@ var classdrake_1_1multibody_1_1_body =
     [ "Body", "classdrake_1_1multibody_1_1_body.html#a621333fb4661e24ffc0a51891118b2e5", null ],
     [ "Body", "classdrake_1_1multibody_1_1_body.html#a4b949853e910c2c3e835137a2985c608", null ],
     [ "Body", "classdrake_1_1multibody_1_1_body.html#ac492376d260219d3231f554c0875c5f0", null ],
+    [ "AddInForce", "classdrake_1_1multibody_1_1_body.html#a325184199e87f0e800c11f57995dc6dc", null ],
+    [ "AddInForceInWorld", "classdrake_1_1multibody_1_1_body.html#af930f1ce53fbf03646175b2af5346de5", null ],
     [ "body_frame", "classdrake_1_1multibody_1_1_body.html#ae594f732e1f00317aeb8c6cd83591db5", null ],
     [ "CalcCenterOfMassInBodyFrame", "classdrake_1_1multibody_1_1_body.html#a29067ba5f0718addfe0ec13a0f342632", null ],
     [ "CalcSpatialInertiaInBodyFrame", "classdrake_1_1multibody_1_1_body.html#ac16e1d4003b61ff6d3f4839e93b20842", null ],

@@ -89,6 +89,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.attic.html">pydrake.attic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
@@ -858,11 +859,23 @@ Forces can include generalized forces as well as body spatial forces.</p>
 No other values for T are currently supported.</p>
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.MultibodyForces.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.MultibodyForces</em>, <em>model: drake::multibody::internal::MultibodyTree&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.multibody_tree.MultibodyForces.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a force object to store a set of forces to be applied to
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.MultibodyForces.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.multibody_tree.MultibodyForces, model: drake::multibody::internal::MultibodyTree&lt;double&gt;) -&gt; None</li>
+</ol>
+<p>Constructs a force object to store a set of forces to be applied to
 <code class="docutils literal"><span class="pre">model</span></code>. Forces are initialized to zero, meaning no forces are
 applied to <code class="docutils literal"><span class="pre">model</span></code>. <cite>model</cite> must have been already finalized with
 MultibodyTree::Finalize() or this constructor will abort.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.multibody_tree.MultibodyForces, plant: drake::multibody::MultibodyPlant&lt;double&gt;) -&gt; None</li>
+</ol>
+<p>Constructs a force object to store a set of forces to be applied to
+the multibody model for <code class="docutils literal"><span class="pre">plant</span></code>. Forces are initialized to zero,
+meaning no forces are applied. <code class="docutils literal"><span class="pre">plant</span></code> must have been already
+finalized with MultibodyPlant::Finalize() or this constructor will
+abort.</p>
 </dd></dl>
 
 </dd></dl>

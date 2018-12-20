@@ -137,6 +137,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c07832f25dde3f8403e98c73dd24d1b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a9c07832f25dde3f8403e98c73dd24d1b">EvalSpatialVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a9c07832f25dde3f8403e98c73dd24d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the spatial velocity <code>V_WB</code> of this body B in the world frame W as a function of the state of the model stored in <code>context</code>.  <a href="#a9c07832f25dde3f8403e98c73dd24d1b">More...</a><br /></td></tr>
 <tr class="separator:a9c07832f25dde3f8403e98c73dd24d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af930f1ce53fbf03646175b2af5346de5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#af930f1ce53fbf03646175b2af5346de5">AddInForceInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F_Bo_W, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const</td></tr>
+<tr class="memdesc:af930f1ce53fbf03646175b2af5346de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the spatial force on <code>this</code> body B, applied at body B's origin Bo and expressed in the world frame W into <code>forces</code>.  <a href="#af930f1ce53fbf03646175b2af5346de5">More...</a><br /></td></tr>
+<tr class="separator:af930f1ce53fbf03646175b2af5346de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a325184199e87f0e800c11f57995dc6dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a325184199e87f0e800c11f57995dc6dc">AddInForce</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BP_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F_Bp_E, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const</td></tr>
+<tr class="memdesc:a325184199e87f0e800c11f57995dc6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the spatial force on <code>this</code> body B, applied at point P and expressed in a frame E into <code>forces</code>.  <a href="#a325184199e87f0e800c11f57995dc6dc">More...</a><br /></td></tr>
+<tr class="separator:a325184199e87f0e800c11f57995dc6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c454535bef9ec240f5e15e75ec7266c"><td class="memTemplParams" colspan="2">template&lt;typename ToScalar &gt; </td></tr>
 <tr class="memitem:a2c454535bef9ec240f5e15e75ec7266c"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; ToScalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a2c454535bef9ec240f5e15e75ec7266c">CloneToScalar</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; ToScalar &gt; &amp;tree_clone) const</td></tr>
 <tr class="memdesc:a2c454535bef9ec240f5e15e75ec7266c"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI (Non-Virtual Interface) to <a class="el" href="classdrake_1_1multibody_1_1_body.html#a142380bdf5a08b94c7c8a5b91b1a882d" title="Clones this Body (templated on T) to a body templated on double. ">DoCloneToScalar()</a> templated on the scalar type of the new clone to be created.  <a href="#a2c454535bef9ec240f5e15e75ec7266c">More...</a><br /></td></tr>
@@ -280,6 +286,122 @@ class drake::multibody::Body&lt; T &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a325184199e87f0e800c11f57995dc6dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325184199e87f0e800c11f57995dc6dc">&#9670;&nbsp;</a></span>AddInForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddInForce </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>p_BP_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>F_Bp_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>forces</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds the spatial force on <code>this</code> body B, applied at point P and expressed in a frame E into <code>forces</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the current state of the model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_BP_E</td><td>The position of point P in B, expressed in a frame E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">F_Bp_E</td><td>The spatial force to be applied on body B at point P, expressed in frame E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The expressed-in frame E. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">forces</td><td>A multibody forces objects that on output will have <code>F_Bp_E</code> added. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>forces</code> is nullptr or if it is not consistent with the model to which <code>this</code> body belongs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af930f1ce53fbf03646175b2af5346de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af930f1ce53fbf03646175b2af5346de5">&#9670;&nbsp;</a></span>AddInForceInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddInForceInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>F_Bo_W</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>forces</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds the spatial force on <code>this</code> body B, applied at body B's origin Bo and expressed in the world frame W into <code>forces</code>. </p>
+
+</div>
+</div>
 <a id="ae594f732e1f00317aeb8c6cd83591db5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae594f732e1f00317aeb8c6cd83591db5">&#9670;&nbsp;</a></span>body_frame()</h2>
 

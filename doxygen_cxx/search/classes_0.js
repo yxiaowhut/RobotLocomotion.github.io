@@ -22,6 +22,7 @@ var searchData=
   ['actuatorefforttorigidbodyplantinputconverter',['ActuatorEffortToRigidBodyPlantInputConverter',['../classdrake_1_1systems_1_1_actuator_effort_to_rigid_body_plant_input_converter.html',1,'drake::systems']]],
   ['adder',['Adder',['../classdrake_1_1systems_1_1_adder.html',1,'drake::systems']]],
   ['adder_3c_20double_20_3e',['Adder&lt; double &gt;',['../classdrake_1_1systems_1_1_adder.html',1,'drake::systems']]],
+  ['addmultibodyplantscenegraphresult',['AddMultibodyPlantSceneGraphResult',['../structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html',1,'drake::multibody']]],
   ['addrotationmatrixboxsphereintersectionreturn',['AddRotationMatrixBoxSphereIntersectionReturn',['../structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html',1,'drake::solvers']]],
   ['affinelinearsystemtest',['AffineLinearSystemTest',['../classdrake_1_1systems_1_1_affine_linear_system_test.html',1,'drake::systems']]],
   ['affinesystem',['AffineSystem',['../classdrake_1_1systems_1_1_affine_system.html',1,'drake::systems']]],

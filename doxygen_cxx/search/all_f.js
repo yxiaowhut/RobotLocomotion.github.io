@@ -25,6 +25,7 @@ var searchData=
   ['operator_20bool',['operator bool',['../classdrake_1_1_eigen_ptr.html#a67b76affb3b5d35fa419ac234144038b',1,'drake::EigenPtr::operator bool()'],['../classdrake_1_1symbolic_1_1_formula.html#a67b76affb3b5d35fa419ac234144038b',1,'drake::symbolic::Formula::operator bool()']]],
   ['operator_20const_20t_20_26',['operator const T &amp;',['../classdrake_1_1reset__after__move.html#a619905eb6bcfb8d0424234c5e2e65954',1,'drake::reset_after_move::operator const T &amp;()'],['../classdrake_1_1reset__on__copy.html#aa21e380b520fb649d3d8c0403f98f48a',1,'drake::reset_on_copy::operator const T &amp;()']]],
   ['operator_20int',['operator int',['../classdrake_1_1_type_safe_index.html#a48d27bd92e68c69527589ea65a9af69f',1,'drake::TypeSafeIndex']]],
+  ['operator_20multibodyplant_3c_20t_20_3e_20_26',['operator MultibodyPlant&lt; T &gt; &amp;',['../structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#add5c7dbef28836cc86021cd2d41307af',1,'drake::multibody::AddMultibodyPlantSceneGraphResult']]],
   ['operator_20pythonremotevariable',['operator PythonRemoteVariable',['../classdrake_1_1common_1_1internal_1_1_python_accessor.html#ad64c8b4b67c5c05776f2b3f362be962d',1,'drake::common::internal::PythonAccessor']]],
   ['operator_20size_5ft',['operator size_t',['../classdrake_1_1detail_1_1_f_n_v1a_hasher.html#a3dd1ce7fa6afbbd542272bf0eaf6a81e',1,'drake::detail::FNV1aHasher']]],
   ['operator_20t_20_26',['operator T &amp;',['../classdrake_1_1reset__after__move.html#ac73d0bb75a158722f20b850af5a756f8',1,'drake::reset_after_move::operator T &amp;()'],['../classdrake_1_1reset__on__copy.html#a6ceeab0526636cedb9ccf57adf1ce379',1,'drake::reset_on_copy::operator T &amp;()']]],
@@ -84,7 +85,7 @@ var searchData=
   ['oracular_5fstate_5festimator_2eh',['oracular_state_estimator.h',['../oracular__state__estimator_8h.html',1,'']]],
   ['oracularstateestimation',['OracularStateEstimation',['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_oracular_state_estimation.html',1,'OracularStateEstimation&lt; T &gt;'],['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_oracular_state_estimation.html#abe7f2f7d64828a48d2a82b0c843f11d3',1,'drake::examples::kuka_iiwa_arm::OracularStateEstimation::OracularStateEstimation()']]],
   ['order',['order',['../classdrake_1_1maliput_1_1multilane_1_1_cubic_polynomial.html#abcc41a4e499b9ebcdc71c5e213c7c22f',1,'drake::maliput::multilane::CubicPolynomial']]],
-  ['orientation',['Orientation',['../classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#ab73122e1e2a158ae2c8e51f3ef5b2517',1,'drake::maliput::multilane::RoadCurve::Orientation()'],['../classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e9245a4aacc4f96b26b3af9d0d5665',1,'drake::trajectories::PiecewiseQuaternionSlerp::orientation()']]],
+  ['orientation',['orientation',['../classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e9245a4aacc4f96b26b3af9d0d5665',1,'drake::trajectories::PiecewiseQuaternionSlerp::orientation()'],['../classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#ab73122e1e2a158ae2c8e51f3ef5b2517',1,'drake::maliput::multilane::RoadCurve::Orientation()']]],
   ['orientation_5fconstraint_2ecc',['orientation_constraint.cc',['../orientation__constraint_8cc.html',1,'']]],
   ['orientation_5fconstraint_2eh',['orientation_constraint.h',['../orientation__constraint_8h.html',1,'']]],
   ['orientation_5fconstraint_5ftest_2ecc',['orientation_constraint_test.cc',['../orientation__constraint__test_8cc.html',1,'']]],
@@ -131,5 +132,6 @@ var searchData=
   ['overlapfiltercallback',['OverlapFilterCallback',['../structdrake_1_1multibody_1_1collision_1_1_overlap_filter_callback.html',1,'drake::multibody::collision']]],
   ['overload_5fcast_5fexplicit',['overload_cast_explicit',['../namespacedrake_1_1pydrake.html#a3001fa4c52ff2d0f13a58523f67be8e0',1,'drake::pydrake']]],
   ['overload_5fcast_5fimpl',['overload_cast_impl',['../structdrake_1_1pydrake_1_1overload__cast__impl.html',1,'drake::pydrake']]],
-  ['owns_5fany_5fvariables_5for_5fparameters',['owns_any_variables_or_parameters',['../classdrake_1_1systems_1_1_context_base.html#abbdee63008e17504bb1048e05c30e2a0',1,'drake::systems::ContextBase']]]
+  ['owns_5fany_5fvariables_5for_5fparameters',['owns_any_variables_or_parameters',['../classdrake_1_1systems_1_1_context_base.html#abbdee63008e17504bb1048e05c30e2a0',1,'drake::systems::ContextBase']]],
+  ['tuple_3c_20multibodyplant_3c_20t_20_3e_20_2a_26_2c_20geometry_3a_3ascenegraph_3c_20t_20_3e_20_2a_26_20_3e',['tuple&lt; MultibodyPlant&lt; T &gt; *&amp;, geometry::SceneGraph&lt; T &gt; *&amp; &gt;',['../structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a32ee0a0b506d1c9344665d6446f22ab9',1,'drake::multibody::AddMultibodyPlantSceneGraphResult']]]
 ];

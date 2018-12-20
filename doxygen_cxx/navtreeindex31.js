@@ -1,5 +1,11 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#ac5e9dd317e3e156cb0c43374e7b9a084":[2,0,0,16,2,18,2],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#ad03c7753c08323ca049303909c98d790":[2,0,0,16,2,18,6],
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html":[2,0,0,16,2,19],
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a313157717b1a6f3db7b9408943d0f918":[2,0,0,16,2,19,2],
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a3dca6351eeb1e5824b767665cc858deb":[2,0,0,16,2,19,5],
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a583350acb943c1295904ebf57de00cd5":[2,0,0,16,2,19,3],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a6b8dbb993c3fecc623f624e92ba89e21":[2,0,0,16,2,19,1],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a972cb68bec853c85ef78855ff5c51b38":[2,0,0,16,2,19,7],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#ac8371f4e015886a9abb36f7bfda1a433":[2,0,0,16,2,19,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_expression.html#ab25c184099b9829299a3b739f04561f0":[2,0,0,17,4,6],
 "classdrake_1_1symbolic_1_1_expression.html#ab296e6587d7bf86a4f1b54b5005df4a6":[2,0,0,17,4,53],
 "classdrake_1_1symbolic_1_1_expression.html#ab6046c9bad9a1c5a1ba51ec6157376c3":[2,0,0,17,4,44],
-"classdrake_1_1symbolic_1_1_expression.html#ab73b3ce4e5998cc0ea0a8f0cb649ba4a":[2,0,0,17,4,20],
-"classdrake_1_1symbolic_1_1_expression.html#ab80898f4f9f0131bad841b21c3db4122":[2,0,0,17,4,0],
-"classdrake_1_1symbolic_1_1_expression.html#ab930ec31d23675be1e2ac2c5ed69fbe3":[2,0,0,17,4,97],
-"classdrake_1_1symbolic_1_1_expression.html#ab95b25d57c1266fcbd7f8674b5c8e592":[2,0,0,17,4,112],
-"classdrake_1_1symbolic_1_1_expression.html#abb771e5bf5c37eb4753daf77f77adab0":[2,0,0,17,4,7],
-"classdrake_1_1symbolic_1_1_expression.html#abe49b865a3783f92bb71a8c1f26bc0d0":[2,0,0,17,4,25],
-"classdrake_1_1symbolic_1_1_expression.html#abe8a6c3d1b0e26682c8b695c71156a9c":[2,0,0,17,4,21]
+"classdrake_1_1symbolic_1_1_expression.html#ab73b3ce4e5998cc0ea0a8f0cb649ba4a":[2,0,0,17,4,20]
 };

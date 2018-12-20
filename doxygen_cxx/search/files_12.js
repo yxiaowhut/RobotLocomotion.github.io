@@ -116,6 +116,7 @@ var searchData=
   ['simulated_5fschunk_5fwsg_5fsystem_5ftest_2ecc',['simulated_schunk_wsg_system_test.cc',['../simulated__schunk__wsg__system__test_8cc.html',1,'']]],
   ['simulator_2ecc',['simulator.cc',['../simulator_8cc.html',1,'']]],
   ['simulator_2eh',['simulator.h',['../simulator_8h.html',1,'']]],
+  ['simulator_5fdenorm_5ftest_2ecc',['simulator_denorm_test.cc',['../simulator__denorm__test_8cc.html',1,'']]],
   ['simulator_5ftest_2ecc',['simulator_test.cc',['../simulator__test_8cc.html',1,'']]],
   ['sine_2dinl_2eh',['sine-inl.h',['../sine-inl_8h.html',1,'']]],
   ['sine_2ecc',['sine.cc',['../sine_8cc.html',1,'']]],

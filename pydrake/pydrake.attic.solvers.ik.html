@@ -1,0 +1,802 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.attic.solvers.ik &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.attic.solvers" href="pydrake.attic.solvers.html"/>
+        <link rel="next" title="pydrake.autodiffutils" href="pydrake.autodiffutils.html"/>
+        <link rel="prev" title="pydrake.attic.solvers.all" href="pydrake.attic.solvers.all.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.attic.html">pydrake.attic</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.attic.all.html">pydrake.attic.all</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="pydrake.attic.solvers.html">pydrake.attic.solvers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pydrake.attic.solvers.all.html">pydrake.attic.solvers.all</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pydrake.attic.solvers.ik</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.automotive.html">pydrake.automotive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.maliput.html">pydrake.maliput</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.util.html">pydrake.util</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.attic.html">pydrake.attic</a> &raquo;</li>
+        
+          <li><a href="pydrake.attic.solvers.html">pydrake.attic.solvers</a> &raquo;</li>
+        
+      <li>pydrake.attic.solvers.ik</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.attic.solvers.ik">
+<span id="pydrake-attic-solvers-ik"></span><h1>pydrake.attic.solvers.ik<a class="headerlink" href="#module-pydrake.attic.solvers.ik" title="Permalink to this headline">¶</a></h1>
+<p>RigidBodyTree inverse kinematics</p>
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.IKResults">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">IKResults</code><a class="headerlink" href="#pydrake.attic.solvers.ik.IKResults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return type for simplified versions of IK functions.</p>
+<dl class="attribute">
+<dt id="pydrake.attic.solvers.ik.IKResults.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.attic.solvers.ik.IKResults.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.attic.solvers.ik.IKResults.infeasible_constraints">
+<code class="descname">infeasible_constraints</code><a class="headerlink" href="#pydrake.attic.solvers.ik.IKResults.infeasible_constraints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.attic.solvers.ik.IKResults.info">
+<code class="descname">info</code><a class="headerlink" href="#pydrake.attic.solvers.ik.IKResults.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.attic.solvers.ik.IKResults.q_sol">
+<code class="descname">q_sol</code><a class="headerlink" href="#pydrake.attic.solvers.ik.IKResults.q_sol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.IKoptions">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">IKoptions</code><a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: RigidBodyTree&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getAdditionaltSamples">
+<code class="descname">getAdditionaltSamples</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[1, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getAdditionaltSamples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getDebug">
+<code class="descname">getDebug</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getDebug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getFixInitialState">
+<code class="descname">getFixInitialState</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getFixInitialState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getIterationsLimit">
+<code class="descname">getIterationsLimit</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getIterationsLimit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getMajorFeasibilityTolerance">
+<code class="descname">getMajorFeasibilityTolerance</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getMajorFeasibilityTolerance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getMajorIterationsLimit">
+<code class="descname">getMajorIterationsLimit</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getMajorIterationsLimit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getMajorOptimalityTolerance">
+<code class="descname">getMajorOptimalityTolerance</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getMajorOptimalityTolerance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getQ">
+<code class="descname">getQ</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getQ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getQa">
+<code class="descname">getQa</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getQa" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getQv">
+<code class="descname">getQv</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getQv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getSequentialSeedFlag">
+<code class="descname">getSequentialSeedFlag</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getSequentialSeedFlag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getSuperbasicsLimit">
+<code class="descname">getSuperbasicsLimit</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getSuperbasicsLimit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getq0">
+<code class="descname">getq0</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getq0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getqd0">
+<code class="descname">getqd0</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getqd0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.getqdf">
+<code class="descname">getqdf</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.getqdf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setAdditionaltSamples">
+<code class="descname">setAdditionaltSamples</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[1, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setAdditionaltSamples" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setDebug">
+<code class="descname">setDebug</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setDebug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setFixInitialState">
+<code class="descname">setFixInitialState</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setFixInitialState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setIterationsLimit">
+<code class="descname">setIterationsLimit</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setIterationsLimit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setMajorFeasibilityTolerance">
+<code class="descname">setMajorFeasibilityTolerance</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setMajorFeasibilityTolerance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setMajorIterationsLimit">
+<code class="descname">setMajorIterationsLimit</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setMajorIterationsLimit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setMajorOptimalityTolerance">
+<code class="descname">setMajorOptimalityTolerance</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setMajorOptimalityTolerance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setQ">
+<code class="descname">setQ</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setQ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the quadratic cost matrix Q where the cost for the optimization
+is formulated as q_err’ Q q_err, where q_err = q - q_nominal</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setQa">
+<code class="descname">setQa</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setQa" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setQv">
+<code class="descname">setQv</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setQv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setSequentialSeedFlag">
+<code class="descname">setSequentialSeedFlag</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setSequentialSeedFlag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setSuperbasicsLimit">
+<code class="descname">setSuperbasicsLimit</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setSuperbasicsLimit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setq0">
+<code class="descname">setq0</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setq0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setqd0">
+<code class="descname">setqd0</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setqd0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.IKoptions.setqdf">
+<code class="descname">setqdf</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.IKoptions, arg0: numpy.ndarray[float64[m, 1]], arg1: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.IKoptions.setqdf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.attic.solvers.ik.InverseKin">
+<code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">InverseKin</code><span class="sig-paren">(</span><em>arg0: RigidBodyTree&lt;double&gt;, arg1: numpy.ndarray[float64[m, 1]], arg2: numpy.ndarray[float64[m, 1]], arg3: List[pydrake.attic.solvers.ik.RigidBodyConstraint], arg4: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; IKResults<a class="headerlink" href="#pydrake.attic.solvers.ik.InverseKin" title="Permalink to this definition">¶</a></dt>
+<dd><p>inverseKin solves the inverse kinematics problem min_q
+(q-q_nom)’<a href="#id1"><span class="problematic" id="id2">*</span></a>Q*(q-q_nom) s.t lb&lt;=constraint(q)&lt;=ub</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">q_seed</span></code>:</dt>
+<dd>an nq x 1 double vector. The initial guess for the optimization
+problem</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">q_nom</span></code>:</dt>
+<dd>an nq x 1 double vector. The nominal posture that the robot wants
+to stay close to</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_constraints</span></code>:</dt>
+<dd>The number of RigidBodyConstraints</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">constraint_array</span></code>:</dt>
+<dd>Each entry in constraint_array is a RigidBodyConstraint type.
+Currently support QuasiStaticConstraintType,
+PostureConstraintType, SingleTimeKinematicConstraintType and
+SingleTimeLinearPostureConstraintType.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">q_sol an nq x 1 double vector. The optimized posture</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">info = 1 The optimization is successful = 3 The optimization is
+successful. But optimality is not strictly satisfied = 4 The
+optimization is successful. But feasibility is not strictly
+satisfied = 5 The optimization is successful. But SNOPT runs out
+of iterations = 6 The optimization is successful. But SNOPT runs
+out of major iterations = 12 Fails to find a solution. The linear
+constraints are not satisfied = 13 Fails to find a solution. The
+nonlinear constraints are not satisfied = 31 Fails to find a
+solution. The iterations limit is reached. Set iterations limit in
+ikoptions = 32 Fails to find a solution. The major iterations
+limit is reached. Set major iterations limit in ikoptions = 41
+Fails to find a solution because the numerics of the problem is
+bad. for more information of these info, check SNOPT manual for
+reference www.stanford.edu/group/SOL/guides/sndoc7.pdf</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">infeasible_constraint. When the problem is infeasible,
+infeasible_constraint contains the name of the infeasible
+constraints</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">ikoptions</span></code>:</dt>
+<dd>The options to set parameters of IK problem.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.attic.solvers.ik.InverseKinPointwise">
+<code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">InverseKinPointwise</code><span class="sig-paren">(</span><em>arg0: RigidBodyTree&lt;double&gt;, arg1: numpy.ndarray[float64[m, 1]], arg2: numpy.ndarray[float64[m, n]], arg3: numpy.ndarray[float64[m, n]], arg4: List[pydrake.attic.solvers.ik.RigidBodyConstraint], arg5: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; IKResults<a class="headerlink" href="#pydrake.attic.solvers.ik.InverseKinPointwise" title="Permalink to this definition">¶</a></dt>
+<dd><p>inverseKinPointwise solves inverse kinematics problem at each t[i]
+individually</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">nT</span></code>:</dt>
+<dd>The length of time samples</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">t</span></code>:</dt>
+<dd>t[i] is the i’th time to solve the inverse kinematics problem</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">q_seed</span></code>:</dt>
+<dd>An nq x nT double matrix. q_seed.col(i) is the seed for the
+inverse kinematics problem at t[i]</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">q_nom</span></code>:</dt>
+<dd>An nq x nT double matrix. q_nom.col(i) is the nominal posture for
+the inverse kinematics problem at t[i]</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_constraints</span></code>:</dt>
+<dd>Same as in inverseKin</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">constraint_array</span></code>:</dt>
+<dd>Same as in inverseKin</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">q_sol An nq x nT double matrix. q_sol.col(i) is the solution to
+inverse kinematics problem at t[i]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">info info[i] is the info for the inverse kinematics problem at
+t[i]. The meaning of info[i] is explained in inverseKin</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">infeasible_constraint infeasible_constraint[i] are the names of
+infeasible constraints at t[i]</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">ikoptions</span></code>:</dt>
+<dd>The options to set parameters of IK problem. if
+ikoptions.sequentialSeedFlag = true, then the at time t[i], if
+t[i-1] is solved successfully, then q_sol.col(i-1) would be used
+as the seed for t[i]. If the solver fails to find a posture at
+t[i-1], then q_seed.col(i) would be used as the seed for t[i] if
+ikoptions.sequentialSeedFlag = false, then q_seed.col(i) would
+always be used as the seed at t[i]</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.attic.solvers.ik.InverseKinTraj">
+<code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">InverseKinTraj</code><span class="sig-paren">(</span><em>arg0: RigidBodyTree&lt;double&gt;, arg1: numpy.ndarray[float64[m, 1]], arg2: numpy.ndarray[float64[m, n]], arg3: numpy.ndarray[float64[m, n]], arg4: List[pydrake.attic.solvers.ik.RigidBodyConstraint], arg5: pydrake.attic.solvers.ik.IKoptions</em><span class="sig-paren">)</span> &#x2192; IKResults<a class="headerlink" href="#pydrake.attic.solvers.ik.InverseKinTraj" title="Permalink to this definition">¶</a></dt>
+<dd><p>inverseKinTraj solves the inverse kinematics problem at all time
+together. Try to generate a smooth trajectory by assuming cubic spline
+for the posture, and minimize the acceleration of the interpolated
+trajectory min_(q, qdot, qddot)
+sum(q(t(i))-q_nom(t(i)))’<a href="#id3"><span class="problematic" id="id4">*</span></a>Q*(q(t(i))-q_nom(t(i)))+qdot(t(i))’<a href="#id5"><span class="problematic" id="id6">*</span></a>Qv*qdot(t(i))+qddot(t(i))’<a href="#id7"><span class="problematic" id="id8">*</span></a>Qa*qddot(t(i))</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">nT</span></code>:</dt>
+<dd>The length of time samples</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">t</span></code>:</dt>
+<dd>t[i] is the i’th time</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">q_seed</span></code>:</dt>
+<dd>An nq x nT double matrix. q_seed.col(i) is the seed for the
+inverse kinematics problem at t[i]</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">q_nom</span></code>:</dt>
+<dd>An nq x nT double matrix. q_nom.col(i) is the seed for the inverse
+kinematics problem at t[i]</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_constraints</span></code>:</dt>
+<dd>The number of constraints</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">constraint_array</span></code>:</dt>
+<dd>Accept all categories of RigidBodyConstraint</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">q_sol An nq x nT double matrix. q_sol.col(i) is the solution
+posture at time t[i]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">qdot_sol An nq x nT double matrix. qdot_sol.col(i) is the solution
+posture velocity at time t[i]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">qddot_sol An nq x nT double matrix. qddot_sol.col(i) is the
+solution posture acceleration at time t[i]</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">info Same as in inverseKin</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">infeasible_constraint Same as in inverseKin</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">ikoptions Set parameters for inverse kinematics problem
+ikoptions.fixInitialState = True The initial posture and velocity
+at time t[0] will be fixed to the seed posture q_seed.col(0) and
+seed velocity qdot0_seed ikoptions.fixInitialState = False The
+solver will search for the initial posture and velocity</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.MinDistanceConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">MinDistanceConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.MinDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.MinDistanceConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.MinDistanceConstraint, model: RigidBodyTree&lt;double&gt;, min_distance: float, active_bodies_idx: List[int], active_group_names: Set[unicode], tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.MinDistanceConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.PostureConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">PostureConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.PostureConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<p>Constrain the joint limits.</p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.PostureConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.PostureConstraint</em>, <em>model: RigidBodyTree&lt;double&gt;</em>, <em>tspan: numpy.ndarray[float64[2</em>, <em>1]] = array([-inf</em>, <em>inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.PostureConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrain the joint limits.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">model</span></code>:</dt>
+<dd>$Parameter <code class="docutils literal"><span class="pre">tspan</span></code>:</dd>
+</dl>
+<p>Time span of the constraint being valid</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.PostureConstraint.setJointLimits">
+<code class="descname">setJointLimits</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.PostureConstraint, arg0: numpy.ndarray[int32[m, 1]], arg1: numpy.ndarray[float64[m, 1]], arg2: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.PostureConstraint.setJointLimits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.QuasiStaticConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">QuasiStaticConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.QuasiStaticConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<p>Constrain the Center of Mass (CoM) within the support polygon. The
+support polygon is a shrunk area of the contact polygon/</p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.QuasiStaticConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.attic.solvers.ik.QuasiStaticConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.attic.solvers.ik.QuasiStaticConstraint, model: RigidBodyTree&lt;double&gt;, tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])) -&gt; None</li>
+</ol>
+<p>Constrain the Center of Mass (CoM) within the support polygon.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">robot</span></code>:</dt>
+<dd>$Parameter <code class="docutils literal"><span class="pre">tspan</span></code>:</dd>
+</dl>
+<p>The time span of this constraint being active</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">model_instance_id_set</span></code>:</dt>
+<dd>The set of the robots in the RigidBodyTree for which the CoM is
+computed</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.attic.solvers.ik.QuasiStaticConstraint, arg0: RigidBodyTree&lt;double&gt;, arg1: numpy.ndarray[float64[2, 1]], arg2: Set[int]) -&gt; None</li>
+</ol>
+<p>Constrain the Center of Mass (CoM) within the support polygon.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">robot</span></code>:</dt>
+<dd>$Parameter <code class="docutils literal"><span class="pre">tspan</span></code>:</dd>
+</dl>
+<p>The time span of this constraint being active</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">model_instance_id_set</span></code>:</dt>
+<dd>The set of the robots in the RigidBodyTree for which the CoM is
+computed</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.QuasiStaticConstraint.addContact">
+<code class="descname">addContact</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.QuasiStaticConstraint, arg0: List[int], arg1: numpy.ndarray[float64[3, n]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.QuasiStaticConstraint.addContact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.QuasiStaticConstraint.bounds">
+<code class="descname">bounds</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.QuasiStaticConstraint, arg0: float, arg1: numpy.ndarray[float64[m, 1]], arg2: numpy.ndarray[float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.QuasiStaticConstraint.bounds" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.QuasiStaticConstraint.setActive">
+<code class="descname">setActive</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.QuasiStaticConstraint</em>, <em>arg0: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.QuasiStaticConstraint.setActive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.QuasiStaticConstraint.setShrinkFactor">
+<code class="descname">setShrinkFactor</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.QuasiStaticConstraint</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.QuasiStaticConstraint.setShrinkFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the factor to shrink the contact polygon. The shrunk area is the
+support polygon.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.RelativeGazeDirConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">RelativeGazeDirConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.RelativeGazeDirConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.RelativeGazeDirConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.RelativeGazeDirConstraint, model: RigidBodyTree&lt;double&gt;, bodyA_idx: int, bodyB_idx: int, axis: numpy.ndarray[float64[3, 1]], dir: numpy.ndarray[float64[3, 1]], conethreshold: float, tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.RelativeGazeDirConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.RelativePositionConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">RelativePositionConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.RelativePositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.RelativePositionConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.RelativePositionConstraint, model: RigidBodyTree&lt;double&gt;, pts: numpy.ndarray[float64[3, n]], lb: numpy.ndarray[float64[m, n]], ub: numpy.ndarray[float64[m, n]], bodyA_idx: int, bodyB_idx: int, bTbp: numpy.ndarray[float64[7, 1]], tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.RelativePositionConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.RelativeQuatConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">RelativeQuatConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.RelativeQuatConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.RelativeQuatConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.RelativeQuatConstraint, model: RigidBodyTree&lt;double&gt;, bodyA_idx: int, bodyB_idx: int, quat_des: numpy.ndarray[float64[4, 1]], tol: float, tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.RelativeQuatConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.RigidBodyConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">RigidBodyConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract base class. All constraints used in the inverse kinematics
+problem are inherited from RigidBodyConstraint. There are 6 main
+categories of the RigidBodyConstraint, each category has its own
+interface</p>
+<dl class="attribute">
+<dt id="pydrake.attic.solvers.ik.RigidBodyConstraint.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.attic.solvers.ik.RigidBodyConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.WorldEulerConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">WorldEulerConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.WorldEulerConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.WorldEulerConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.WorldEulerConstraint, model: RigidBodyTree&lt;double&gt;, body: int, lb: numpy.ndarray[float64[3, 1]], ub: numpy.ndarray[float64[3, 1]], tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.WorldEulerConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.WorldGazeDirConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">WorldGazeDirConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.WorldGazeDirConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.WorldGazeDirConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.WorldGazeDirConstraint, model: RigidBodyTree&lt;double&gt;, body: int, axis: numpy.ndarray[float64[3, 1]], dir: numpy.ndarray[float64[3, 1]], conethreshold: float, tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.WorldGazeDirConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.WorldGazeTargetConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">WorldGazeTargetConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.WorldGazeTargetConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.WorldGazeTargetConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.WorldGazeTargetConstraint, model: RigidBodyTree&lt;double&gt;, body: int, axis: numpy.ndarray[float64[3, 1]], target: numpy.ndarray[float64[3, 1]], gaze_origin: numpy.ndarray[float64[3, 1]], conethreshold: float, tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.WorldGazeTargetConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.WorldPositionConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">WorldPositionConstraint</code><span class="sig-paren">(</span><em>model</em>, <em>body</em>, <em>pts</em>, <em>lb</em>, <em>ub</em>, <em>tspan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.attic.solvers.ik.WorldPositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik._WorldPositionConstraint</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.WorldPositionInFrameConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">WorldPositionInFrameConstraint</code><span class="sig-paren">(</span><em>model</em>, <em>body</em>, <em>pts</em>, <em>T_world_to_frame</em>, <em>lb</em>, <em>ub</em>, <em>tspan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.attic.solvers.ik.WorldPositionInFrameConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik._WorldPositionInFrameConstraint</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.attic.solvers.ik.WorldQuatConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.attic.solvers.ik.</code><code class="descname">WorldQuatConstraint</code><a class="headerlink" href="#pydrake.attic.solvers.ik.WorldQuatConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.attic.solvers.ik.RigidBodyConstraint" title="pydrake.attic.solvers.ik.RigidBodyConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.attic.solvers.ik.RigidBodyConstraint</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.attic.solvers.ik.WorldQuatConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.attic.solvers.ik.WorldQuatConstraint, model: RigidBodyTree&lt;double&gt;, body: int, quat_des: numpy.ndarray[float64[4, 1]], tol: float, tspan: numpy.ndarray[float64[2, 1]] = array([-inf,  inf])</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.attic.solvers.ik.WorldQuatConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.autodiffutils.html" class="btn btn-neutral float-right" title="pydrake.autodiffutils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.attic.solvers.all.html" class="btn btn-neutral" title="pydrake.attic.solvers.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -103,6 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ade698012545dda65a2e864b1468e7c12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#ade698012545dda65a2e864b1468e7c12">MultibodyForces</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;model)</td></tr>
 <tr class="memdesc:ade698012545dda65a2e864b1468e7c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a force object to store a set of forces to be applied to <code>model</code>.  <a href="#ade698012545dda65a2e864b1468e7c12">More...</a><br /></td></tr>
 <tr class="separator:ade698012545dda65a2e864b1468e7c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa067d0a4ebd6ec6987718fbc6b6d219e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#aa067d0a4ebd6ec6987718fbc6b6d219e">MultibodyForces</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html">MultibodyTreeSystem</a>&lt; T &gt; &amp;plant)</td></tr>
+<tr class="memdesc:aa067d0a4ebd6ec6987718fbc6b6d219e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a force object to store a set of forces to be applied to the multibody model for <code>plant</code>.  <a href="#aa067d0a4ebd6ec6987718fbc6b6d219e">More...</a><br /></td></tr>
+<tr class="separator:aa067d0a4ebd6ec6987718fbc6b6d219e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed1238347a4f31beff28491602ac411"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a7ed1238347a4f31beff28491602ac411">SetZero</a> ()</td></tr>
 <tr class="memdesc:a7ed1238347a4f31beff28491602ac411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>this</code> to store zero forces (no applied forces).  <a href="#a7ed1238347a4f31beff28491602ac411">More...</a><br /></td></tr>
 <tr class="separator:a7ed1238347a4f31beff28491602ac411"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,16 +116,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae0163ac0976659d811e3337647ff0313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of generalized velocities for the model to which these forces apply.  <a href="#ae0163ac0976659d811e3337647ff0313">More...</a><br /></td></tr>
 <tr class="separator:ae0163ac0976659d811e3337647ff0313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8823f94494d680a558889504d46a6f6e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a8823f94494d680a558889504d46a6f6e">generalized_forces</a> () const</td></tr>
-<tr class="memdesc:a8823f94494d680a558889504d46a6f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the vector of generalized forces stored by <code>this</code> forces object.  <a href="#a8823f94494d680a558889504d46a6f6e">More...</a><br /></td></tr>
+<tr class="memdesc:a8823f94494d680a558889504d46a6f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns a constant reference to the vector of generalized forces stored by <code>this</code> forces object.  <a href="#a8823f94494d680a558889504d46a6f6e">More...</a><br /></td></tr>
 <tr class="separator:a8823f94494d680a558889504d46a6f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa49f61a7a12d45b3e94308cc9d8148c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#aa49f61a7a12d45b3e94308cc9d8148c1">mutable_generalized_forces</a> ()</td></tr>
-<tr class="memdesc:aa49f61a7a12d45b3e94308cc9d8148c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutable version of <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a8823f94494d680a558889504d46a6f6e" title="Returns a constant reference to the vector of generalized forces stored by this forces object...">generalized_forces()</a>.  <a href="#aa49f61a7a12d45b3e94308cc9d8148c1">More...</a><br /></td></tr>
+<tr class="memdesc:aa49f61a7a12d45b3e94308cc9d8148c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Mutable version of <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a8823f94494d680a558889504d46a6f6e" title="(Advanced) Returns a constant reference to the vector of generalized forces stored by this forces obj...">generalized_forces()</a>.  <a href="#aa49f61a7a12d45b3e94308cc9d8148c1">More...</a><br /></td></tr>
 <tr class="separator:aa49f61a7a12d45b3e94308cc9d8148c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91264c805be8c0a30df5eb481316dd65"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65">body_forces</a> () const</td></tr>
-<tr class="memdesc:a91264c805be8c0a30df5eb481316dd65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the vector of spatial body forces <code>F_BBo_W</code> on each body B in the model, at the body's frame origin <code>Bo</code>, expressed in the world frame W.  <a href="#a91264c805be8c0a30df5eb481316dd65">More...</a><br /></td></tr>
+<tr class="memdesc:a91264c805be8c0a30df5eb481316dd65"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns a constant reference to the vector of spatial body forces <code>F_BBo_W</code> on each body B in the model, at the body's frame origin <code>Bo</code>, expressed in the world frame W.  <a href="#a91264c805be8c0a30df5eb481316dd65">More...</a><br /></td></tr>
 <tr class="separator:a91264c805be8c0a30df5eb481316dd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8305e8fcc4884808d757748513b4855e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a8305e8fcc4884808d757748513b4855e">mutable_body_forces</a> ()</td></tr>
-<tr class="memdesc:a8305e8fcc4884808d757748513b4855e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutable version of <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65" title="Returns a constant reference to the vector of spatial body forces F_BBo_W on each body B in the model...">body_forces()</a>.  <a href="#a8305e8fcc4884808d757748513b4855e">More...</a><br /></td></tr>
+<tr class="memdesc:a8305e8fcc4884808d757748513b4855e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Mutable version of <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65" title="(Advanced) Returns a constant reference to the vector of spatial body forces F_BBo_W on each body B i...">body_forces()</a>.  <a href="#a8305e8fcc4884808d757748513b4855e">More...</a><br /></td></tr>
 <tr class="separator:a8305e8fcc4884808d757748513b4855e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bebeb0fade3383fdb4acbab2bcc4c3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a4bebeb0fade3383fdb4acbab2bcc4c3b">AddInForces</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; &amp;addend)</td></tr>
 <tr class="memdesc:a4bebeb0fade3383fdb4acbab2bcc4c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds into <code>this</code> the force contribution stored in <code>addend</code>.  <a href="#a4bebeb0fade3383fdb4acbab2bcc4c3b">More...</a><br /></td></tr>
@@ -161,7 +164,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 <p>They are already available to link against in the containing library. No other values for T are currently supported. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a64a7bf5e2e15cf6080635e435d9294c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64a7bf5e2e15cf6080635e435d9294c0">&#9670;&nbsp;</a></span>MultibodyForces() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a7bf5e2e15cf6080635e435d9294c0">&#9670;&nbsp;</a></span>MultibodyForces() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +190,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </div>
 </div>
 <a id="ac93c68c274df369dca980144a897a4b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac93c68c274df369dca980144a897a4b0">&#9670;&nbsp;</a></span>MultibodyForces() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93c68c274df369dca980144a897a4b0">&#9670;&nbsp;</a></span>MultibodyForces() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +216,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </div>
 </div>
 <a id="ade698012545dda65a2e864b1468e7c12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade698012545dda65a2e864b1468e7c12">&#9670;&nbsp;</a></span>MultibodyForces() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ade698012545dda65a2e864b1468e7c12">&#9670;&nbsp;</a></span>MultibodyForces() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,6 +241,35 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 
 <p>Constructs a force object to store a set of forces to be applied to <code>model</code>. </p>
 <p>Forces are initialized to zero, meaning no forces are applied to <code>model</code>. <code>model</code> must have been already finalized with <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the tree (joints, bodies, force elements, constraints) were added and before any computations are performed. ">MultibodyTree::Finalize()</a> or this constructor will abort. </p>
+
+</div>
+</div>
+<a id="aa067d0a4ebd6ec6987718fbc6b6d219e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa067d0a4ebd6ec6987718fbc6b6d219e">&#9670;&nbsp;</a></span>MultibodyForces() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html">MultibodyTreeSystem</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>plant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a force object to store a set of forces to be applied to the multibody model for <code>plant</code>. </p>
+<p>Forces are initialized to zero, meaning no forces are applied. <code>plant</code> must have been already finalized with <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_system.html#a8fee61d7a783cade1a3d07fe86284d27" title="Finalize the tree if that hasn&#39;t already been done, complete System construction, and declare any nee...">MultibodyPlant::Finalize()</a> or this constructor will abort. </p>
 
 </div>
 </div>
@@ -285,7 +317,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a constant reference to the vector of spatial body forces <code>F_BBo_W</code> on each body B in the model, at the body's frame origin <code>Bo</code>, expressed in the world frame W. </p>
+<p>(Advanced) Returns a constant reference to the vector of spatial body forces <code>F_BBo_W</code> on each body B in the model, at the body's frame origin <code>Bo</code>, expressed in the world frame W. </p>
 <dl class="section note"><dt>Note</dt><dd>Entries are ordered by BodyNodeIndex. </dd></dl>
 
 </div>
@@ -334,7 +366,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a constant reference to the vector of generalized forces stored by <code>this</code> forces object. </p>
+<p>(Advanced) Returns a constant reference to the vector of generalized forces stored by <code>this</code> forces object. </p>
 
 </div>
 </div>
@@ -361,7 +393,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Mutable version of <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65" title="Returns a constant reference to the vector of spatial body forces F_BBo_W on each body B in the model...">body_forces()</a>. </p>
+<p>(Advanced) Mutable version of <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a91264c805be8c0a30df5eb481316dd65" title="(Advanced) Returns a constant reference to the vector of spatial body forces F_BBo_W on each body B i...">body_forces()</a>. </p>
 
 </div>
 </div>
@@ -388,7 +420,7 @@ class drake::multibody::MultibodyForces&lt; T &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Mutable version of <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a8823f94494d680a558889504d46a6f6e" title="Returns a constant reference to the vector of generalized forces stored by this forces object...">generalized_forces()</a>. </p>
+<p>(Advanced) Mutable version of <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html#a8823f94494d680a558889504d46a6f6e" title="(Advanced) Returns a constant reference to the vector of generalized forces stored by this forces obj...">generalized_forces()</a>. </p>
 
 </div>
 </div>
