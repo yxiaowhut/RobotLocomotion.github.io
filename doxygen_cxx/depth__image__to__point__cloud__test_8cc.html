@@ -93,7 +93,8 @@ $(document).ready(function(){initNavTree('depth__image__to__point__cloud__test_8
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="depth__image__to__point__cloud_8h.html">drake/perception/depth_image_to_point_cloud.h</a>&quot;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
-<code>#include &lt;random&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;gtest/gtest.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="eigen__matrix__compare_8h.html">drake/common/test_utilities/eigen_matrix_compare.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="rigid__transform_8h.html">drake/math/rigid_transform.h</a>&quot;</code><br />
@@ -113,8 +114,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="abe833b6cf2f8d84712a7b00adcea3574"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe833b6cf2f8d84712a7b00adcea3574">&#9670;&nbsp;</a></span>actual_point_cloud_</h2>
+<a id="a71aa7be87c900d57873d63b6fe64946e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71aa7be87c900d57873d63b6fe64946e">&#9670;&nbsp;</a></span>kConfiguredPixelType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,139 +124,7 @@ Namespaces</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Matrix3Xf actual_point_cloud_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a08601512db7a4bd6be22c0e23adc682a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08601512db7a4bd6be22c0e23adc682a">&#9670;&nbsp;</a></span>camera_info_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const systems::sensors::CameraInfo camera_info_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4bde03f9e01fff72913dc5b6b6b34ecb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bde03f9e01fff72913dc5b6b6b34ecb">&#9670;&nbsp;</a></span>context_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;systems::Context&lt;<a class="el" href="classdouble.html">double</a>&gt; &gt; context_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a66688dc91009cb0a8932d06b2a64a159"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66688dc91009cb0a8932d06b2a64a159">&#9670;&nbsp;</a></span>converter_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;DepthImageToPointCloud&gt; converter_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a33f9cfff5d510e802bcfec098957c3e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33f9cfff5d510e802bcfec098957c3e4">&#9670;&nbsp;</a></span>depth_image_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">systems::sensors::ImageDepth32F depth_image_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af6702e77e6e1884bbf3014a02d9152cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6702e77e6e1884bbf3014a02d9152cb">&#9670;&nbsp;</a></span>input_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;systems::AbstractValue&gt; input_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa168d26bfd6965db4ec57d9ab9ff9e41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa168d26bfd6965db4ec57d9ab9ff9e41">&#9670;&nbsp;</a></span>kDepthHeight</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="classint.html">int</a> kDepthHeight = 40</td>
+          <td class="memname">constexpr PixelType kConfiguredPixelType = <a class="el" href="depth__image__to__point__cloud__test_8cc.html#a3d5269d304d0b7c19987d717a1e9021a">Config::kPixelType</a></td>
         </tr>
       </table>
   </td>
@@ -267,8 +136,8 @@ Namespaces</h2></td></tr>
 
 </div>
 </div>
-<a id="ae7bed7eff5ef9afd03d89a40ebbfaea3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7bed7eff5ef9afd03d89a40ebbfaea3">&#9670;&nbsp;</a></span>kDepthWidth</h2>
+<a id="a3d5269d304d0b7c19987d717a1e9021a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d5269d304d0b7c19987d717a1e9021a">&#9670;&nbsp;</a></span>kPixelType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +146,7 @@ Namespaces</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="classint.html">int</a> kDepthWidth = 60</td>
+          <td class="memname">constexpr PixelType kPixelType = PixelType::kDepth16U</td>
         </tr>
       </table>
   </td>
@@ -289,8 +158,8 @@ Namespaces</h2></td></tr>
 
 </div>
 </div>
-<a id="aa03db3dd26ef595097f41b692e106d36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa03db3dd26ef595097f41b692e106d36">&#9670;&nbsp;</a></span>kFocal</h2>
+<a id="aad59da9207d580794af31c282c8c8493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad59da9207d580794af31c282c8c8493">&#9670;&nbsp;</a></span>kUseSystem</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,7 +168,7 @@ Namespaces</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr float kFocal = 500.f</td>
+          <td class="memname">constexpr <a class="el" href="classbool.html">bool</a> kUseSystem = true</td>
         </tr>
       </table>
   </td>
@@ -311,8 +180,8 @@ Namespaces</h2></td></tr>
 
 </div>
 </div>
-<a id="ae4b06c9c7f83307dd3acf7614164465a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4b06c9c7f83307dd3acf7614164465a">&#9670;&nbsp;</a></span>output_</h2>
+<a id="aabfbc4d2503e75814a23cf4aa57d9cbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabfbc4d2503e75814a23cf4aa57d9cbf">&#9670;&nbsp;</a></span>random_transform_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +190,52 @@ Namespaces</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;systems::AbstractValue&gt; output_</td>
+          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#afdc48b2f77bba9b5873dc56ec1b7248d">RigidTransformd</a> random_transform_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">    <a class="code" href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a752cee7d06a108142e5a63947d7431fe">RollPitchYawd</a>(0.1, -0.2, 0.3), Vector3d(1.1, -1.2, 1.3)}</div><div class="ttc" id="classdrake_1_1math_1_1_roll_pitch_yaw_html_a752cee7d06a108142e5a63947d7431fe"><div class="ttname"><a href="classdrake_1_1math_1_1_roll_pitch_yaw.html#a752cee7d06a108142e5a63947d7431fe">drake::math::RollPitchYaw::RollPitchYawd</a></div><div class="ttdeci">RollPitchYaw&lt; double &gt; RollPitchYawd</div><div class="ttdoc">Abbreviation (alias/typedef) for a RollPitchYaw double scalar type. </div><div class="ttdef"><b>Definition:</b> roll_pitch_yaw.h:639</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a55a0e71c637cc8aa890987d01c96fac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a0e71c637cc8aa890987d01c96fac5">&#9670;&nbsp;</a></span>single_pixel_camera_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">CameraInfo</a> single_pixel_camera_ {1, 1, 1.0, 1.0, 0.5, 0.5}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0dd898468dc59a30aaeddad062227f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0dd898468dc59a30aaeddad062227f8">&#9670;&nbsp;</a></span>z_translation_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#afdc48b2f77bba9b5873dc56ec1b7248d">RigidTransformd</a> z_translation_ {Vector3d(0.0, 0.0, 1.3)}</td>
         </tr>
       </table>
   </td>

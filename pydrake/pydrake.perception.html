@@ -221,34 +221,47 @@
 <p>Converts a depth image to a point cloud.</p>
 <p>&#64;system{ DepthImageToPointCloud, &#64;input_port{depth_image}
 &#64;input_port{camera_pose (optional)}, &#64;output_port{point_cloud} }</p>
-<p>The system has an input port that takes a
-systems::sensors::ImageDepth32F and an additional optional input port
-that takes a math::RigidTransform for the camera_pose. If this port is
-connected, then the point cloud is represented in the parent frame
-(e.g. if camera_pose is the pose of the camera in the world frame,
-then the point_cloud output will be a PointCloud in the world frame).
-If the camera_pose input is not connected, the PointCloud will be
-represented in the camera frame.</p>
+<p>The system has an input port that takes a depth image and an
+additional optional input port that takes the camera_pose, X_PC. If
+the camera_pose input is connected, then the point cloud is
+represented in the parent frame (e.g., if camera_pose is the pose of
+the camera in the world frame, then the point_cloud output will be a
+PointCloud in the world frame). If the camera_pose input is not
+connected, the PointCloud will be represented in the camera frame.</p>
+<p>If a pixel is NaN, the converted point will be (NaN, NaN, NaN). If a
+pixel is kTooClose or kTooFar (as defined by ImageTraits), the
+converted point will be (+Inf, +Inf, +Inf). Note that this matches the
+convention used by the Point Cloud Library (PCL).</p>
 <dl class="method">
 <dt id="pydrake.perception.DepthImageToPointCloud.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.perception.DepthImageToPointCloud</em>, <em>camera_info: pydrake.systems.sensors.CameraInfo</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.perception.DepthImageToPointCloud</em>, <em>camera_info: pydrake.systems.sensors.CameraInfo</em>, <em>pixel_type: pydrake.systems.sensors.PixelType = PixelType.kDepth32F</em>, <em>scale: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the converter.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">camera_info</span></code>:</dt>
 <dd>The camera info.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">pixel_type</span></code>:</dt>
+<dd>The pixel type of the depth image input. Only 16U and 32F are
+supported.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">scale</span></code>:</dt>
+<dd>The depth image input is multiplied by this scale factor before
+projecting to a point cloud. (This is useful for converting mm to
+meters, etc.)</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.perception.DepthImageToPointCloud.depth_image_input_port">
 <code class="descname">depth_image_input_port</code><span class="sig-paren">(</span><em>self: pydrake.perception.DepthImageToPointCloud</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud.depth_image_input_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the abstract valued input port that contains an ImageDepth32F.</p>
+<dd><p>Returns the abstract valued input port that expects either an
+ImageDepth16U or ImageDepth32F (depending on the constructor
+argument).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.perception.DepthImageToPointCloud.point_cloud_output_port">
 <code class="descname">point_cloud_output_port</code><span class="sig-paren">(</span><em>self: pydrake.perception.DepthImageToPointCloud</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud.point_cloud_output_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the abstract valued output port that contains a PointCloud.</p>
+<dd><p>Returns the abstract valued output port that provides a PointCloud.
+Only the XYZ channel of the point cloud is present.</p>
 </dd></dl>
 
 </dd></dl>
@@ -401,7 +414,7 @@ the fields indicated this parameter.</dd>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.perception.PointCloud.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.perception.PointCloud, new_size: int = 0, fields: pydrake.perception.Fields = &lt;pydrake.perception.Fields object at 0x7fd0c8178e70&gt;) -&gt; None</li>
+<li>__init__(self: pydrake.perception.PointCloud, new_size: int = 0, fields: pydrake.perception.Fields = &lt;pydrake.perception.Fields object at 0x7f6abe85b130&gt;) -&gt; None</li>
 </ol>
 <p>Constructs a point cloud of a given <code class="docutils literal"><span class="pre">new_size</span></code>, with the prescribed
 <code class="docutils literal"><span class="pre">fields</span></code>. If <code class="docutils literal"><span class="pre">kDescriptors</span></code> is one of the fields, then

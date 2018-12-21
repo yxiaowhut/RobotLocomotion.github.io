@@ -65,7 +65,7 @@ var searchData=
   ['rimlesswheel',['RimlessWheel',['../classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html',1,'drake::examples::rimless_wheel']]],
   ['roadcharacteristics',['RoadCharacteristics',['../structdrake_1_1maliput_1_1rndf_1_1_road_characteristics.html',1,'drake::maliput::rndf']]],
   ['roadcurve',['RoadCurve',['../classdrake_1_1maliput_1_1multilane_1_1_road_curve.html',1,'drake::maliput::multilane']]],
-  ['roadgeometry',['RoadGeometry',['../classdrake_1_1maliput_1_1dragway_1_1_road_geometry.html',1,'RoadGeometry'],['../classdrake_1_1maliput_1_1multilane_1_1_road_geometry.html',1,'RoadGeometry'],['../classdrake_1_1maliput_1_1rndf_1_1_road_geometry.html',1,'RoadGeometry'],['../classdrake_1_1maliput_1_1api_1_1_road_geometry.html',1,'RoadGeometry'],['../classdrake_1_1maliput_1_1geometry__base_1_1_road_geometry.html',1,'RoadGeometry']]],
+  ['roadgeometry',['RoadGeometry',['../classdrake_1_1maliput_1_1multilane_1_1_road_geometry.html',1,'RoadGeometry'],['../classdrake_1_1maliput_1_1rndf_1_1_road_geometry.html',1,'RoadGeometry'],['../classdrake_1_1maliput_1_1dragway_1_1_road_geometry.html',1,'RoadGeometry'],['../classdrake_1_1maliput_1_1api_1_1_road_geometry.html',1,'RoadGeometry'],['../classdrake_1_1maliput_1_1geometry__base_1_1_road_geometry.html',1,'RoadGeometry']]],
   ['roadodometry',['RoadOdometry',['../structdrake_1_1automotive_1_1_road_odometry.html',1,'drake::automotive']]],
   ['roadpath',['RoadPath',['../classdrake_1_1automotive_1_1_road_path.html',1,'drake::automotive']]],
   ['roadposition',['RoadPosition',['../structdrake_1_1maliput_1_1api_1_1_road_position.html',1,'drake::maliput::api']]],

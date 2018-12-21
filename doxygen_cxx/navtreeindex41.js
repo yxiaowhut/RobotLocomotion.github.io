@@ -1,5 +1,11 @@
 var NAVTREEINDEX41 =
 {
+"classdrake_1_1systems_1_1_robot_state_decoder.html#af9d986b46017d3155cd20887c985e2ad":[2,0,0,18,101,3],
+"classdrake_1_1systems_1_1_robot_state_encoder.html":[2,0,0,18,102],
+"classdrake_1_1systems_1_1_robot_state_encoder.html#a0429f09dc1e0fe6d40e166fb792560e3":[2,0,0,18,102,11],
+"classdrake_1_1systems_1_1_robot_state_encoder.html#a0e944ebfbb929833ec7e74b4cca5c498":[2,0,0,18,102,8],
+"classdrake_1_1systems_1_1_robot_state_encoder.html#a161eca4cd9fe094fb71a214695b523f6":[2,0,0,18,102,12],
+"classdrake_1_1systems_1_1_robot_state_encoder.html#a1d0e6ea044e332e7b5a5140cd7dab4ea":[2,0,0,18,102,5],
 "classdrake_1_1systems_1_1_robot_state_encoder.html#a303427961e95d8bad979693b1d73d3cd":[2,0,0,18,102,10],
 "classdrake_1_1systems_1_1_robot_state_encoder.html#a32a23f9d36618bf3074342440e438464":[2,0,0,18,102,4],
 "classdrake_1_1systems_1_1_robot_state_encoder.html#a471ea6700e609697f175a8b6f29fc748":[2,0,0,18,102,9],
@@ -243,11 +249,5 @@ var NAVTREEINDEX41 =
 "classdrake_1_1systems_1_1_state.html#acdeb8df5c64ce2494984c9e08b74eb9d":[2,0,0,18,117,11],
 "classdrake_1_1systems_1_1_state.html#ad7067e986dfaf92cf8c44f748d2fb9d1":[2,0,0,18,117,17],
 "classdrake_1_1systems_1_1_state.html#ad927e361adb396aadd58db6e5bad2d7d":[2,0,0,18,117,1],
-"classdrake_1_1systems_1_1_state.html#aed7197313b69f1f0fa543cc19a542ffe":[2,0,0,18,117,4],
-"classdrake_1_1systems_1_1_state.html#af792a48ad2c93163065743e8a53c0fd4":[2,0,0,18,117,14],
-"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html":[0,1,0,7],
-"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a2030c7bdf1e9fda50f3a6b63b5a355ee":[0,1,0,7,7],
-"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a25265df82f15c7eb03b0dd9516696ff4":[0,1,0,7,4],
-"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a3b689004040660502e57c9a8f6998ce3":[0,1,0,7,5],
-"classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a43992d28865a8a7ffd46830f88dcc568":[0,1,0,7,1]
+"classdrake_1_1systems_1_1_state.html#aed7197313b69f1f0fa543cc19a542ffe":[2,0,0,18,117,4]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1systems_1_1_matrix_gain.html#aeda9ecd319ed79c6c53845dc76d2eecc":[0,1,0,13,6],
+"classdrake_1_1systems_1_1_matrix_gain.html#af0fa387fe40009b10648c19019b05ff1":[0,1,0,13,4],
+"classdrake_1_1systems_1_1_multiplexer.html":[0,1,0,14],
+"classdrake_1_1systems_1_1_multiplexer.html#a0c8a526baff8c5660a5feaf5ccc39b4e":[0,1,0,14,2],
+"classdrake_1_1systems_1_1_multiplexer.html#a27b61c4fdf63f1cebf6b975e0dc9b151":[0,1,0,14,3],
+"classdrake_1_1systems_1_1_multiplexer.html#a4dcb4fb0e76f378b4a7c2802eb5c1dc6":[0,1,0,14,8],
 "classdrake_1_1systems_1_1_multiplexer.html#a5d8542ac859a8c65440f39c89f5e5662":[0,1,0,14,0],
 "classdrake_1_1systems_1_1_multiplexer.html#a775f1ca26802517045001969110ce89d":[0,1,0,14,5],
 "classdrake_1_1systems_1_1_multiplexer.html#a7f3bc0b1d7aeaf996d894415b543be82":[0,1,0,14,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1systems_1_1_robot_state_decoder.html#aad34a8307a2294d52727cc0f05fbac4e":[2,0,0,18,101,4],
 "classdrake_1_1systems_1_1_robot_state_decoder.html#ade26e8d52511b01dee67afa182bc20fa":[2,0,0,18,101,1],
 "classdrake_1_1systems_1_1_robot_state_decoder.html#ae056ea4d6a8759058b6d6f03255b9e4e":[2,0,0,18,101,0],
-"classdrake_1_1systems_1_1_robot_state_decoder.html#ae36319d9061f7f1656089d4c53c805a7":[2,0,0,18,101,2],
-"classdrake_1_1systems_1_1_robot_state_decoder.html#af9d986b46017d3155cd20887c985e2ad":[2,0,0,18,101,3],
-"classdrake_1_1systems_1_1_robot_state_encoder.html":[2,0,0,18,102],
-"classdrake_1_1systems_1_1_robot_state_encoder.html#a0429f09dc1e0fe6d40e166fb792560e3":[2,0,0,18,102,11],
-"classdrake_1_1systems_1_1_robot_state_encoder.html#a0e944ebfbb929833ec7e74b4cca5c498":[2,0,0,18,102,8],
-"classdrake_1_1systems_1_1_robot_state_encoder.html#a161eca4cd9fe094fb71a214695b523f6":[2,0,0,18,102,12],
-"classdrake_1_1systems_1_1_robot_state_encoder.html#a1d0e6ea044e332e7b5a5140cd7dab4ea":[2,0,0,18,102,5]
+"classdrake_1_1systems_1_1_robot_state_decoder.html#ae36319d9061f7f1656089d4c53c805a7":[2,0,0,18,101,2]
 };

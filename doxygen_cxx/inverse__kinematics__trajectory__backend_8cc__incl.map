@@ -1,62 +1,63 @@
 <map id="drake/attic/multibody/inverse_kinematics_trajectory_backend.cc" name="drake/attic/multibody/inverse_kinematics_trajectory_backend.cc">
-<area shape="rect" id="node6" href="$drake__assert_8h.html" title="Provides Drake&#39;s assertion implementation. " alt="" coords="7648,899,7809,940"/>
-<area shape="rect" id="node8" href="$math_2autodiff_8h.html" title="Utilities for arithmetic on AutoDiffScalar. " alt="" coords="655,638,819,665"/>
-<area shape="rect" id="node28" href="$autodiff__gradient_8h.html" title="Utilities that relate simultaneously to both autodiff matrices and gradient matrices. " alt="" coords="647,541,799,583"/>
+<area shape="rect" id="node6" href="$drake__assert_8h.html" title="Provides Drake&#39;s assertion implementation. " alt="" coords="7807,899,7968,940"/>
+<area shape="rect" id="node8" href="$math_2autodiff_8h.html" title="Utilities for arithmetic on AutoDiffScalar. " alt="" coords="549,638,713,665"/>
+<area shape="rect" id="node28" href="$autodiff__gradient_8h.html" title="Utilities that relate simultaneously to both autodiff matrices and gradient matrices. " alt="" coords="555,541,707,583"/>
 <area shape="rect" id="node30" href="$gradient_8h.html" title="Utilities for arithmetic on gradients. " alt="" coords="5,638,172,665"/>
-<area shape="rect" id="node37" href="$constraint_8h.html" title="drake/solvers/constraint.h" alt="" coords="3187,288,3377,315"/>
-<area shape="rect" id="node80" href="$mathematical__program_8h.html" title="drake/solvers/mathematical\l_program.h" alt="" coords="4897,109,5102,151"/>
-<area shape="rect" id="node12" href="$common_2autodiff_8h.html" title="drake/common/autodiff.h" alt="" coords="895,727,1082,754"/>
-<area shape="rect" id="node27" href="$unused_8h.html" title="drake/common/unused.h" alt="" coords="299,727,481,754"/>
-<area shape="rect" id="node14" href="$eigen__autodiff__limits_8h.html" title="drake/common/eigen\l_autodiff_limits.h" alt="" coords="551,899,711,940"/>
-<area shape="rect" id="node16" href="$eigen__autodiff__types_8h.html" title="This file contains abbreviated definitions for certain uses of AutoDiffScalar that are commonly used ..." alt="" coords="1407,809,1567,851"/>
-<area shape="rect" id="node20" href="$autodiffxd_8h.html" title="drake/common/autodiffxd.h" alt="" coords="879,817,1082,843"/>
-<area shape="rect" id="node22" href="$autodiff__overloads_8h.html" title="Overloads for STL mathematical operations on AutoDiffScalar. " alt="" coords="1157,809,1332,851"/>
+<area shape="rect" id="node37" href="$constraint_8h.html" title="drake/solvers/constraint.h" alt="" coords="3421,288,3612,315"/>
+<area shape="rect" id="node81" href="$mathematical__program_8h.html" title="drake/solvers/mathematical\l_program.h" alt="" coords="7135,109,7341,151"/>
+<area shape="rect" id="node12" href="$common_2autodiff_8h.html" title="drake/common/autodiff.h" alt="" coords="725,727,911,754"/>
+<area shape="rect" id="node27" href="$unused_8h.html" title="drake/common/unused.h" alt="" coords="229,727,412,754"/>
+<area shape="rect" id="node14" href="$eigen__autodiff__limits_8h.html" title="drake/common/eigen\l_autodiff_limits.h" alt="" coords="598,899,758,940"/>
+<area shape="rect" id="node16" href="$eigen__autodiff__types_8h.html" title="This file contains abbreviated definitions for certain uses of AutoDiffScalar that are commonly used ..." alt="" coords="1541,809,1701,851"/>
+<area shape="rect" id="node20" href="$autodiffxd_8h.html" title="drake/common/autodiffxd.h" alt="" coords="482,817,685,843"/>
+<area shape="rect" id="node22" href="$autodiff__overloads_8h.html" title="Overloads for STL mathematical operations on AutoDiffScalar. " alt="" coords="1139,809,1313,851"/>
 <area shape="rect" id="node17" href="$eigen__types_8h.html" title="This file contains abbreviated definitions for certain specializations of Eigen::Matrix that are comm..." alt="" coords="1895,899,2055,940"/>
 <area shape="rect" id="node18" href="$constants_8h.html" title="drake/common/constants.h" alt="" coords="1876,995,2075,1022"/>
-<area shape="rect" id="node19" href="$drake__copyable_8h.html" title="Provides careful macros to selectively enable or disable the special member functions for copy&#45;constr..." alt="" coords="4907,988,5068,1029"/>
-<area shape="rect" id="node23" href="$cond_8h.html" title="drake/common/cond.h" alt="" coords="1603,906,1769,933"/>
-<area shape="rect" id="node26" href="$dummy__value_8h.html" title="drake/common/dummy\l_value.h" alt="" coords="1157,899,1332,940"/>
-<area shape="rect" id="node25" href="$double__overloads_8h.html" title="Provides necessary operations on double to have it as a ScalarType in drake. " alt="" coords="1602,988,1770,1029"/>
-<area shape="rect" id="node44" href="$polynomial_8h.html" title="drake/common/polynomial.h" alt="" coords="2644,638,2853,665"/>
-<area shape="rect" id="node49" href="$symbolic_8h.html" title="Provides public header files of Drake&#39;s symbolic library. " alt="" coords="4595,459,4790,486"/>
-<area shape="rect" id="node77" href="$decision__variable_8h.html" title="drake/solvers/decision\l_variable.h" alt="" coords="2485,363,2653,404"/>
-<area shape="rect" id="node78" href="$evaluator__base_8h.html" title="drake/solvers/evaluator\l_base.h" alt="" coords="3747,363,3923,404"/>
-<area shape="rect" id="node79" href="$function_8h.html" title="drake/solvers/function.h" alt="" coords="1837,459,2015,486"/>
-<area shape="rect" id="node50" href="$symbolic__variable_8h.html" title="drake/common/symbolic\l_variable.h" alt="" coords="5692,631,5875,672"/>
-<area shape="rect" id="node58" href="$symbolic__variables_8h.html" title="drake/common/symbolic\l_variables.h" alt="" coords="4723,631,4905,672"/>
-<area shape="rect" id="node60" href="$symbolic__environment_8h.html" title="drake/common/symbolic\l_environment.h" alt="" coords="4413,631,4596,672"/>
-<area shape="rect" id="node61" href="$symbolic__expression_8h.html" title="drake/common/symbolic\l_expression.h" alt="" coords="3841,541,4024,583"/>
-<area shape="rect" id="node67" href="$symbolic__expression__visitor_8h.html" title="drake/common/symbolic\l_expression_visitor.h" alt="" coords="7487,631,7669,672"/>
-<area shape="rect" id="node68" href="$symbolic__monomial_8h.html" title="drake/common/symbolic\l_monomial.h" alt="" coords="5379,631,5561,672"/>
-<area shape="rect" id="node69" href="$symbolic__monomial__util_8h.html" title="drake/common/symbolic\l_monomial_util.h" alt="" coords="3695,631,3877,672"/>
-<area shape="rect" id="node70" href="$symbolic__polynomial_8h.html" title="drake/common/symbolic\l_polynomial.h" alt="" coords="3132,631,3315,672"/>
-<area shape="rect" id="node71" href="$symbolic__rational__function_8h.html" title="drake/common/symbolic\l_rational_function.h" alt="" coords="4459,541,4641,583"/>
-<area shape="rect" id="node72" href="$symbolic__formula_8h.html" title="drake/common/symbolic\l_formula.h" alt="" coords="6176,631,6359,672"/>
-<area shape="rect" id="node74" href="$symbolic__formula__visitor_8h.html" title="drake/common/symbolic\l_formula_visitor.h" alt="" coords="7887,541,8069,583"/>
-<area shape="rect" id="node75" href="$symbolic__simplification_8h.html" title="drake/common/symbolic\l_simplification.h" alt="" coords="4252,541,4435,583"/>
-<area shape="rect" id="node76" href="$symbolic__codegen_8h.html" title="drake/common/symbolic\l_codegen.h" alt="" coords="4207,631,4389,672"/>
-<area shape="rect" id="node52" href="$hash_8h.html" title="drake/common/hash.h" alt="" coords="6324,727,6491,754"/>
-<area shape="rect" id="node54" href="$drake__optional_8h.html" title="Provides drake::optional as an alias for the appropriate implementation of std::optional or std::expe..." alt="" coords="6633,809,6795,851"/>
-<area shape="rect" id="node57" href="$drake__throw_8h.html" title="Provides a convenient wrapper to throw an exception when a condition is unmet. " alt="" coords="7276,809,7437,851"/>
-<area shape="rect" id="node62" href="$extract__double_8h.html" title="drake/common/extract\l_double.h" alt="" coords="4930,631,5101,672"/>
-<area shape="rect" id="node63" href="$nice__type__name_8h.html" title="drake/common/nice_type\l_name.h" alt="" coords="9382,720,9569,761"/>
-<area shape="rect" id="node65" href="$never__destroyed_8h.html" title="drake/common/never\l_destroyed.h" alt="" coords="9511,809,9672,851"/>
-<area shape="rect" id="node73" href="$drake__bool_8h.html" title="drake/common/drake\l_bool.h" alt="" coords="6036,720,6197,761"/>
-<area shape="rect" id="node82" href="$drake__deprecated_8h.html" title="Provides a portable macro for use in generating compile&#45;time warnings for use of code that is permitt..." alt="" coords="4828,363,4989,404"/>
-<area shape="rect" id="node83" href="$binding_8h.html" title="drake/solvers/binding.h" alt="" coords="4852,288,5027,315"/>
-<area shape="rect" id="node84" href="$cost_8h.html" title="drake/solvers/cost.h" alt="" coords="7461,288,7615,315"/>
-<area shape="rect" id="node85" href="$create__constraint_8h.html" title="drake/solvers/create\l_constraint.h" alt="" coords="4622,199,4777,240"/>
-<area shape="rect" id="node86" href="$create__cost_8h.html" title="drake/solvers/create\l_cost.h" alt="" coords="7403,199,7558,240"/>
-<area shape="rect" id="node87" href="$indeterminate_8h.html" title="drake/solvers/indeterminate.h" alt="" coords="2090,370,2309,397"/>
-<area shape="rect" id="node88" href="$mathematical__program__result_8h.html" title="drake/solvers/mathematical\l_program_result.h" alt="" coords="9397,452,9602,493"/>
-<area shape="rect" id="node89" href="$solution__result_8h.html" title="drake/solvers/solution\l_result.h" alt="" coords="8532,541,8699,583"/>
-<area shape="rect" id="node90" href="$solver__result_8h.html" title="drake/solvers/solver\l_result.h" alt="" coords="7107,541,7262,583"/>
-<area shape="rect" id="node96" href="$mathematical__program__solver__interface_8h.html" title="drake/solvers/mathematical\l_program_solver_interface.h" alt="" coords="7573,363,7781,404"/>
-<area shape="rect" id="node97" href="$solver__options_8h.html" title="drake/solvers/solver\l_options.h" alt="" coords="7286,541,7441,583"/>
-<area shape="rect" id="node99" href="$program__attribute_8h.html" title="drake/solvers/program\l_attribute.h" alt="" coords="7591,541,7760,583"/>
-<area shape="rect" id="node93" href="$value_8h.html" title="drake/systems/framework\l/value.h" alt="" coords="9588,631,9781,672"/>
-<area shape="rect" id="node91" href="$solver__id_8h.html" title="drake/solvers/solver_id.h" alt="" coords="7124,638,7309,665"/>
-<area shape="rect" id="node92" href="$reset__after__move_8h.html" title="drake/common/reset\l_after_move.h" alt="" coords="7731,720,7889,761"/>
-<area shape="rect" id="node94" href="$copyable__unique__ptr_8h.html" title="drake/common/copyable\l_unique_ptr.h" alt="" coords="9593,720,9776,761"/>
-<area shape="rect" id="node95" href="$is__cloneable_8h.html" title="drake/common/is_cloneable.h" alt="" coords="9953,906,10171,933"/>
+<area shape="rect" id="node19" href="$drake__copyable_8h.html" title="Provides careful macros to selectively enable or disable the special member functions for copy&#45;constr..." alt="" coords="5688,988,5849,1029"/>
+<area shape="rect" id="node23" href="$cond_8h.html" title="drake/common/cond.h" alt="" coords="1491,906,1657,933"/>
+<area shape="rect" id="node26" href="$dummy__value_8h.html" title="drake/common/dummy\l_value.h" alt="" coords="1189,899,1364,940"/>
+<area shape="rect" id="node25" href="$double__overloads_8h.html" title="Provides necessary operations on double to have it as a ScalarType in drake. " alt="" coords="1490,988,1658,1029"/>
+<area shape="rect" id="node44" href="$polynomial_8h.html" title="drake/common/polynomial.h" alt="" coords="2916,638,3125,665"/>
+<area shape="rect" id="node49" href="$symbolic_8h.html" title="Provides public header files of Drake&#39;s symbolic library. " alt="" coords="4681,459,4875,486"/>
+<area shape="rect" id="node78" href="$decision__variable_8h.html" title="drake/solvers/decision\l_variable.h" alt="" coords="2402,363,2570,404"/>
+<area shape="rect" id="node79" href="$evaluator__base_8h.html" title="drake/solvers/evaluator\l_base.h" alt="" coords="4690,363,4866,404"/>
+<area shape="rect" id="node80" href="$function_8h.html" title="drake/solvers/function.h" alt="" coords="1703,459,1882,486"/>
+<area shape="rect" id="node50" href="$symbolic__variable_8h.html" title="drake/common/symbolic\l_variable.h" alt="" coords="3639,631,3821,672"/>
+<area shape="rect" id="node58" href="$symbolic__variables_8h.html" title="drake/common/symbolic\l_variables.h" alt="" coords="5361,631,5544,672"/>
+<area shape="rect" id="node60" href="$symbolic__environment_8h.html" title="drake/common/symbolic\l_environment.h" alt="" coords="4872,631,5055,672"/>
+<area shape="rect" id="node62" href="$symbolic__expression_8h.html" title="drake/common/symbolic\l_expression.h" alt="" coords="4471,541,4653,583"/>
+<area shape="rect" id="node68" href="$symbolic__expression__visitor_8h.html" title="drake/common/symbolic\l_expression_visitor.h" alt="" coords="7920,631,8103,672"/>
+<area shape="rect" id="node69" href="$symbolic__monomial_8h.html" title="drake/common/symbolic\l_monomial.h" alt="" coords="3951,631,4133,672"/>
+<area shape="rect" id="node70" href="$symbolic__monomial__util_8h.html" title="drake/common/symbolic\l_monomial_util.h" alt="" coords="5649,631,5832,672"/>
+<area shape="rect" id="node71" href="$symbolic__polynomial_8h.html" title="drake/common/symbolic\l_polynomial.h" alt="" coords="2328,631,2511,672"/>
+<area shape="rect" id="node72" href="$symbolic__rational__function_8h.html" title="drake/common/symbolic\l_rational_function.h" alt="" coords="4212,541,4395,583"/>
+<area shape="rect" id="node73" href="$symbolic__formula_8h.html" title="drake/common/symbolic\l_formula.h" alt="" coords="4563,631,4745,672"/>
+<area shape="rect" id="node75" href="$symbolic__formula__visitor_8h.html" title="drake/common/symbolic\l_formula_visitor.h" alt="" coords="8072,541,8255,583"/>
+<area shape="rect" id="node76" href="$symbolic__simplification_8h.html" title="drake/common/symbolic\l_simplification.h" alt="" coords="4005,541,4188,583"/>
+<area shape="rect" id="node77" href="$symbolic__codegen_8h.html" title="drake/common/symbolic\l_codegen.h" alt="" coords="7269,631,7452,672"/>
+<area shape="rect" id="node52" href="$hash_8h.html" title="drake/common/hash.h" alt="" coords="6184,727,6351,754"/>
+<area shape="rect" id="node54" href="$drake__optional_8h.html" title="Provides drake::optional as an alias for the appropriate implementation of std::optional or std::expe..." alt="" coords="6308,809,6469,851"/>
+<area shape="rect" id="node57" href="$drake__throw_8h.html" title="Provides a convenient wrapper to throw an exception when a condition is unmet. " alt="" coords="6493,809,6655,851"/>
+<area shape="rect" id="node61" href="$random_8h.html" title="drake/common/random.h" alt="" coords="3818,727,4005,754"/>
+<area shape="rect" id="node63" href="$extract__double_8h.html" title="drake/common/extract\l_double.h" alt="" coords="5079,631,5250,672"/>
+<area shape="rect" id="node64" href="$nice__type__name_8h.html" title="drake/common/nice_type\l_name.h" alt="" coords="9855,720,10042,761"/>
+<area shape="rect" id="node66" href="$never__destroyed_8h.html" title="drake/common/never\l_destroyed.h" alt="" coords="9829,809,9991,851"/>
+<area shape="rect" id="node74" href="$drake__bool_8h.html" title="drake/common/drake\l_bool.h" alt="" coords="4131,720,4292,761"/>
+<area shape="rect" id="node83" href="$drake__deprecated_8h.html" title="Provides a portable macro for use in generating compile&#45;time warnings for use of code that is permitt..." alt="" coords="8339,363,8500,404"/>
+<area shape="rect" id="node84" href="$binding_8h.html" title="drake/solvers/binding.h" alt="" coords="8435,288,8609,315"/>
+<area shape="rect" id="node85" href="$cost_8h.html" title="drake/solvers/cost.h" alt="" coords="8713,288,8867,315"/>
+<area shape="rect" id="node86" href="$create__constraint_8h.html" title="drake/solvers/create\l_constraint.h" alt="" coords="7686,199,7841,240"/>
+<area shape="rect" id="node87" href="$create__cost_8h.html" title="drake/solvers/create\l_cost.h" alt="" coords="8641,199,8795,240"/>
+<area shape="rect" id="node88" href="$indeterminate_8h.html" title="drake/solvers/indeterminate.h" alt="" coords="2109,370,2327,397"/>
+<area shape="rect" id="node89" href="$mathematical__program__result_8h.html" title="drake/solvers/mathematical\l_program_result.h" alt="" coords="9293,452,9498,493"/>
+<area shape="rect" id="node90" href="$solution__result_8h.html" title="drake/solvers/solution\l_result.h" alt="" coords="7229,541,7396,583"/>
+<area shape="rect" id="node91" href="$solver__result_8h.html" title="drake/solvers/solver\l_result.h" alt="" coords="6925,541,7079,583"/>
+<area shape="rect" id="node97" href="$mathematical__program__solver__interface_8h.html" title="drake/solvers/mathematical\l_program_solver_interface.h" alt="" coords="7278,363,7486,404"/>
+<area shape="rect" id="node98" href="$solver__options_8h.html" title="drake/solvers/solver\l_options.h" alt="" coords="7522,541,7677,583"/>
+<area shape="rect" id="node100" href="$program__attribute_8h.html" title="drake/solvers/program\l_attribute.h" alt="" coords="7701,541,7871,583"/>
+<area shape="rect" id="node94" href="$value_8h.html" title="drake/systems/framework\l/value.h" alt="" coords="9852,631,10045,672"/>
+<area shape="rect" id="node92" href="$solver__id_8h.html" title="drake/solvers/solver_id.h" alt="" coords="7008,638,7193,665"/>
+<area shape="rect" id="node93" href="$reset__after__move_8h.html" title="drake/common/reset\l_after_move.h" alt="" coords="7338,720,7495,761"/>
+<area shape="rect" id="node95" href="$copyable__unique__ptr_8h.html" title="drake/common/copyable\l_unique_ptr.h" alt="" coords="9597,720,9780,761"/>
+<area shape="rect" id="node96" href="$is__cloneable_8h.html" title="drake/common/is_cloneable.h" alt="" coords="10179,906,10396,933"/>
 </map>

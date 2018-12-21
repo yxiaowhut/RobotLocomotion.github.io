@@ -1,5 +1,11 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1_discrete_derivative.html#aacb738d28aede718f8d1b86689e831d4":[0,1,0,6,0],
+"classdrake_1_1systems_1_1_discrete_derivative.html#ac3a310d490afb0c7d60d80053bb151c0":[0,1,0,6,8],
+"classdrake_1_1systems_1_1_discrete_derivative.html#ac9decad70f99b9a02921ac5cb35e3256":[0,1,0,6,7],
+"classdrake_1_1systems_1_1_discrete_derivative.html#add4fa4c0f5ed5fad6500ecb351aa07ad":[0,1,0,6,5],
+"classdrake_1_1systems_1_1_discrete_update_event.html":[2,0,0,18,56],
+"classdrake_1_1systems_1_1_discrete_update_event.html#a1a06f6eec978952211bea0bf5120b464":[2,0,0,18,56,1],
 "classdrake_1_1systems_1_1_discrete_update_event.html#a23625c08032a7d524544f45d76b66e77":[2,0,0,18,56,0],
 "classdrake_1_1systems_1_1_discrete_update_event.html#a44236deee9b714f46d9c6df31ee674fc":[2,0,0,18,56,4],
 "classdrake_1_1systems_1_1_discrete_update_event.html#a6411929eebb98e856021335d43bcb7f4":[2,0,0,18,56,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1systems_1_1_integrator_base.html":[2,0,0,18,73],
 "classdrake_1_1systems_1_1_integrator_base.html#a00778f31642c811fde02c61333aa5a25":[2,0,0,18,73,53],
 "classdrake_1_1systems_1_1_integrator_base.html#a07ea35d1b2a56ca9f9eebb7764ca9dfa":[2,0,0,18,73,65],
-"classdrake_1_1systems_1_1_integrator_base.html#a07fc321896adb6729b2e9f82a647019f":[2,0,0,18,73,9],
-"classdrake_1_1systems_1_1_integrator_base.html#a0ada2c620af585fefd269bbf0a7ff1e9":[2,0,0,18,73,16],
-"classdrake_1_1systems_1_1_integrator_base.html#a0ca73e48fb4c24fcf1893459f57eb86a":[2,0,0,18,73,17],
-"classdrake_1_1systems_1_1_integrator_base.html#a0cdd4796b7f98a09da058b9764f13b86":[2,0,0,18,73,68],
-"classdrake_1_1systems_1_1_integrator_base.html#a0dafbc057f2a5a4828813e7ea5e3f99e":[2,0,0,18,73,26],
-"classdrake_1_1systems_1_1_integrator_base.html#a0e5d79c4be26ab9ff12fac51584dd3f5":[2,0,0,18,73,52],
-"classdrake_1_1systems_1_1_integrator_base.html#a0f186af10e0fc1fc8f32fafa4fed7ba7":[2,0,0,18,73,64]
+"classdrake_1_1systems_1_1_integrator_base.html#a07fc321896adb6729b2e9f82a647019f":[2,0,0,18,73,9]
 };

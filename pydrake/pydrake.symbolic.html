@@ -219,26 +219,52 @@ so, you check the following:</p>
 <ol class="arabic simple">
 <li>Evaluate(self: pydrake.symbolic.Expression, env: Dict[pydrake.symbolic.Variable, float] = {}) -&gt; float</li>
 </ol>
-<p>Evaluates under a given environment (by default, an empty
-environment).</p>
+<p>Evaluates using a given environment (by default, an empty environment)
+and a random number generator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if NaN is detected during evaluation.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if there exists a non-random variable in this</li>
+<li>expression whose assignment is not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if a random variable is detected while</li>
+<li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if NaN is detected during evaluation.</p>
+</td>
 </tr>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
 <li>Evaluate(self: pydrake.symbolic.Expression, arg0: Dict[pydrake.symbolic.Variable, float]) -&gt; float</li>
 </ol>
-<p>Evaluates under a given environment (by default, an empty
-environment).</p>
+<p>Evaluates using a given environment (by default, an empty environment)
+and a random number generator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if NaN is detected during evaluation.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if there exists a non-random variable in this</li>
+<li>expression whose assignment is not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if a random variable is detected while</li>
+<li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if NaN is detected during evaluation.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -488,15 +514,21 @@ codebase. In general, a user of this class should explicitly call
 <dl class="method">
 <dt id="pydrake.symbolic.Formula.Evaluate">
 <code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Formula, arg0: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Formula.Evaluate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates under a given environment (by default, an empty
-environment).</p>
+<dd><p>Evaluates using a given environment (by default, an empty environment)
+and a random number generator.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
 <li>RuntimeError if a variable <code class="docutils literal"><span class="pre">v</span></code> is needed for an evaluation but</li>
 <li>not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if a random variable is detected while</li>
+<li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -921,6 +953,16 @@ of this polynomial.</p>
 <dt id="pydrake.symbolic.Variable">
 <em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">Variable</code><a class="headerlink" href="#pydrake.symbolic.Variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a symbolic variable.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Expression::Evaluate and Formula::Evaluate methods take a symbolic
+environment (Variable → double) and a random number generator.
+When an expression or a formula includes random variables,
+<code class="docutils literal"><span class="pre">Evaluate</span></code> methods use the random number generator to draw a
+number for a random variable from the given distribution. Then
+this numeric value is used to substitute all the occurrences of
+the corresponding random variable in an expression or a formula.</p>
+</div>
 <dl class="method">
 <dt id="pydrake.symbolic.Variable.EqualTo">
 <code class="descname">EqualTo</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variable</em>, <em>arg0: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variable.EqualTo" title="Permalink to this definition">¶</a></dt>

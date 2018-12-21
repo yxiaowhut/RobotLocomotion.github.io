@@ -554,9 +554,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a86b350169906f6d5e07e9db46e36d57a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">AbstractParameterIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class AbstractParameterTag &gt;</td></tr>
 <tr class="memdesc:a86b350169906f6d5e07e9db46e36d57a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serves as the local index for abstract parameters within a given <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a> and its corresponding <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>.  <a href="#a86b350169906f6d5e07e9db46e36d57a">More...</a><br /></td></tr>
 <tr class="separator:a86b350169906f6d5e07e9db46e36d57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad96f28f81be35c3eb7fa5e19b48db26e"><td class="memItemLeft" align="right" valign="top">typedef std::mt19937&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#ad96f28f81be35c3eb7fa5e19b48db26e">RandomGenerator</a></td></tr>
-<tr class="memdesc:ad96f28f81be35c3eb7fa5e19b48db26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the implementation of the stdc++ concept UniformRandomBitGenerator to be used by the Systems classes.  <a href="#ad96f28f81be35c3eb7fa5e19b48db26e">More...</a><br /></td></tr>
-<tr class="separator:ad96f28f81be35c3eb7fa5e19b48db26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69608eb99ec6982ed17d1ac6d3d6dce1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1">SystemConstraintIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class SystemConstraintTag &gt;</td></tr>
 <tr class="separator:a69608eb99ec6982ed17d1ac6d3d6dce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4016b27b10d9ab57130411af79e99954"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a4016b27b10d9ab57130411af79e99954">MyVector1d</a> = <a class="el" href="classdrake_1_1systems_1_1_my_vector.html">MyVector</a>&lt; 1, <a class="el" href="classdouble.html">double</a> &gt;</td></tr>
@@ -948,23 +945,6 @@ Variables</h2></td></tr>
 
 <p>Serves as the local index for the output ports of a given <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input...">System</a>. </p>
 <p>The indexes used by a subsystem and its corresponding subcontext are the same. </p>
-
-</div>
-</div>
-<a id="ad96f28f81be35c3eb7fa5e19b48db26e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad96f28f81be35c3eb7fa5e19b48db26e">&#9670;&nbsp;</a></span>RandomGenerator</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::mt19937 <a class="el" href="namespacedrake_1_1systems.html#ad96f28f81be35c3eb7fa5e19b48db26e">RandomGenerator</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Defines the implementation of the stdc++ concept UniformRandomBitGenerator to be used by the Systems classes. </p>
-<p>This is provided as a work-around to enable the use of the generator in virtual methods (which cannot be templated on the generator type). </p>
 
 </div>
 </div>

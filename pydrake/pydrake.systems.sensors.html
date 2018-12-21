@@ -335,7 +335,7 @@ system in pixels.</dd>
 <dl class="template">
 <dt id="pydrake.systems.sensors.Image">
 <em class="property">template </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">Image</code><a class="headerlink" href="#pydrake.systems.sensors.Image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]" title="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kRgba8U]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kLabel16I]</span></code></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]" title="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kRgba8U]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kDepth16U]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kLabel16I]</span></code></p>
 <dl class="class">
 <dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]">
 <em class="property">class </em><code class="descname">Image[PixelType.kRgba8U]</code><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]" title="Permalink to this definition">¶</a></dt>
@@ -436,6 +436,12 @@ channels in a pixel</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.systems.sensors.ImageDepth16U">
+<code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageDepth16U</code><a class="headerlink" href="#pydrake.systems.sensors.ImageDepth16U" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth16U]</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageDepth32F">
 <code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageDepth32F</code><a class="headerlink" href="#pydrake.systems.sensors.ImageDepth32F" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth32F]</span></code></p>
@@ -456,7 +462,7 @@ channels in a pixel</p>
 <dl class="template">
 <dt id="pydrake.systems.sensors.ImageTraits">
 <em class="property">template </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageTraits</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kDepth16U]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></p>
 <dl class="class">
 <dt id="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]">
 <em class="property">class </em><code class="descname">ImageTraits[PixelType.kRgba8U]</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]" title="Permalink to this definition">¶</a></dt>
@@ -570,9 +576,15 @@ channels in a pixel</p>
 <p>kDepth32F</p>
 <p>kLabel16I</p>
 <p>kRgba8U</p>
+<p>kDepth16U</p>
 <dl class="method">
 <dt id="pydrake.systems.sensors.PixelType.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.PixelType</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.PixelType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.sensors.PixelType.kDepth16U">
+<code class="descname">kDepth16U</code><em class="property"> = PixelType.kDepth16U</em><a class="headerlink" href="#pydrake.systems.sensors.PixelType.kDepth16U" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">

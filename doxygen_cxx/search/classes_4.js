@@ -40,6 +40,7 @@ var searchData=
   ['eventdata',['EventData',['../classdrake_1_1systems_1_1_event_data.html',1,'drake::systems']]],
   ['expliciterrorcontrolledintegratortest',['ExplicitErrorControlledIntegratorTest',['../structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html',1,'drake::systems::analysis_test']]],
   ['expliciteulerintegrator',['ExplicitEulerIntegrator',['../classdrake_1_1systems_1_1_explicit_euler_integrator.html',1,'drake::systems']]],
+  ['exponential_5fdistribution_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['exponential_distribution&lt; drake::symbolic::Expression &gt;',['../classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html',1,'std']]],
   ['exponentialpluspiecewisepolynomial',['ExponentialPlusPiecewisePolynomial',['../classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html',1,'drake::trajectories']]],
   ['exponentialpluspiecewisepolynomial_3c_20double_20_3e',['ExponentialPlusPiecewisePolynomial&lt; double &gt;',['../classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html',1,'drake::trajectories']]],
   ['expression',['Expression',['../classdrake_1_1symbolic_1_1_expression.html',1,'drake::symbolic']]],

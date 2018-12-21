@@ -31,6 +31,7 @@ var searchData=
   ['sigma_5fv',['sigma_v',['../structdrake_1_1maliput_1_1api_1_1_iso_lane_velocity.html#a8afd1c855602caaabe7b7a9c75e8268b',1,'drake::maliput::api::IsoLaneVelocity']]],
   ['simplify_5fmesh_5fthreshold',['simplify_mesh_threshold',['../structdrake_1_1maliput_1_1utility_1_1_obj_features.html#ac2330d38902bbab705a5846786e9f71f',1,'drake::maliput::utility::ObjFeatures']]],
   ['simulator_5f',['simulator_',['../linear__model__predictive__controller__test_8cc.html#aa3f9adf847fd0d3d47c8dfd96fd46420',1,'linear_model_predictive_controller_test.cc']]],
+  ['single_5fpixel_5fcamera_5f',['single_pixel_camera_',['../depth__image__to__point__cloud__test_8cc.html#a55a0e71c637cc8aa890987d01c96fac5',1,'depth_image_to_point_cloud_test.cc']]],
   ['singletimekinematicconstraintcategory',['SingleTimeKinematicConstraintCategory',['../class_rigid_body_constraint.html#a9ba6cfccb4847ed6d8638ac5afca264c',1,'RigidBodyConstraint']]],
   ['singletimelinearpostureconstraintcategory',['SingleTimeLinearPostureConstraintCategory',['../class_rigid_body_constraint.html#ab3838e326a18895ae3ffb6d5f01bc7aa',1,'RigidBodyConstraint']]],
   ['singletimelinearpostureconstrainttype',['SingleTimeLinearPostureConstraintType',['../class_rigid_body_constraint.html#ade0061fe9e3fc6ca8818522c23046d49',1,'RigidBodyConstraint']]],

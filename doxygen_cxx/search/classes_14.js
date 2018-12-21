@@ -4,6 +4,7 @@ var searchData=
   ['unaryexpressioncell',['UnaryExpressionCell',['../classdrake_1_1symbolic_1_1_unary_expression_cell.html',1,'drake::symbolic']]],
   ['unboundedlinearprogramtest0',['UnboundedLinearProgramTest0',['../classdrake_1_1solvers_1_1test_1_1_unbounded_linear_program_test0.html',1,'drake::solvers::test']]],
   ['unboundedlinearprogramtest1',['UnboundedLinearProgramTest1',['../classdrake_1_1solvers_1_1test_1_1_unbounded_linear_program_test1.html',1,'drake::solvers::test']]],
+  ['uniform_5freal_5fdistribution_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['uniform_real_distribution&lt; drake::symbolic::Expression &gt;',['../classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html',1,'std']]],
   ['uniformgravityfieldelement',['UniformGravityFieldElement',['../classdrake_1_1multibody_1_1_uniform_gravity_field_element.html',1,'drake::multibody']]],
   ['uniqueindexer',['UniqueIndexer',['../classdrake_1_1maliput_1_1utility_1_1mesh_1_1_unique_indexer.html',1,'drake::maliput::utility::mesh']]],
   ['uniqueindexer_3c_20drake_3a_3amaliput_3a_3autility_3a_3amesh_3a_3ageonormal_2c_20drake_3a_3auhash_2c_20drake_3a_3amaliput_3a_3autility_3a_3amesh_3a_3ageonormal_3a_3aequiv_20_3e',['UniqueIndexer&lt; drake::maliput::utility::mesh::GeoNormal, drake::uhash, drake::maliput::utility::mesh::GeoNormal::Equiv &gt;',['../classdrake_1_1maliput_1_1utility_1_1mesh_1_1_unique_indexer.html',1,'drake::maliput::utility::mesh']]],

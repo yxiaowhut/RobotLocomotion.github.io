@@ -1,5 +1,11 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html#ad662aa32b5e0497d28900ed4995773f4":[0,1,3,1,6],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html":[2,0,0,18,11,10],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a0b313ba8a3fa239f826b3e0aaaebd20b":[2,0,0,18,11,10,1],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a0ccb0b1bf5719e58f2282c8e461216de":[2,0,0,18,11,10,13],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a103ac0851c14e739d2d0c13edc8cff96":[2,0,0,18,11,10,12],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a30d3a65e3e8f3c214ea55eea38df6097":[2,0,0,18,11,10,6],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a4145348e1555f7df9be5fd72d9ea6711":[2,0,0,18,11,10,15],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a49e5f4459e9ea69eef9a7cab8190e908":[2,0,0,18,11,10,11],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor_output.html#a4f981b4fdffa38a4bab63a8ca31026a4":[2,0,0,18,11,10,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#aacf0b1d05d1e88bf122ee9e217b8dfb5":[2,0,0,18,11,0,0,18],
 "classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#ab908a7139127900f14405d4287644ffd":[2,0,0,18,11,0,0,22],
 "classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#abd709152c4c411cbec030529a1aa197f":[2,0,0,18,11,0,0,20],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#ad900f89274eabad847ed676d25d1259a":[2,0,0,18,11,0,0,5],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#add520b211bfbd8c0d74cdb41c43b1dd8":[2,0,0,18,11,0,0,7],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html":[2,0,0,18,13,0],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a2c268668939a95461b66449298155a49":[2,0,0,18,13,0,6],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a349ad5ec4200a43a04bd3b2e854da962":[2,0,0,18,13,0,2],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4af045674d7737ba9da18fbe2b604743":[2,0,0,18,13,0,5],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[2,0,0,18,13,0,1]
+"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#ad900f89274eabad847ed676d25d1259a":[2,0,0,18,11,0,0,5]
 };

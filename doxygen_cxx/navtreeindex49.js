@@ -1,5 +1,11 @@
 var NAVTREEINDEX49 =
 {
+"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#add520b211bfbd8c0d74cdb41c43b1dd8":[2,0,0,18,11,0,0,7],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html":[2,0,0,18,13,0],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a2c268668939a95461b66449298155a49":[2,0,0,18,13,0,6],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a349ad5ec4200a43a04bd3b2e854da962":[2,0,0,18,13,0,2],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4af045674d7737ba9da18fbe2b604743":[2,0,0,18,13,0,5],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[2,0,0,18,13,0,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a5f5ccf485fb4f56a9b1bffc8762e5863":[2,0,0,18,13,0,7],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[2,0,0,18,13,0,4],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[2,0,0,18,13,0,3],
@@ -238,16 +244,10 @@ var NAVTREEINDEX49 =
 "classdrake_1_1trajectories_1_1_trajectory.html#aec58a75947d06ba435adda6fd990678e":[2,0,0,20,4,0],
 "classdrake_1_1trajectories_1_1_trajectory.html#af752fbd39919690fbbe2110639682be7":[2,0,0,20,4,2],
 "classes.html":[2,1],
-"classstd_1_1numeric__limits_3_01_eigen_1_1_auto_diff_scalar_3_01_t_01_4_01_4.html":[2,0,7,22],
-"classvariant__caster.html":[2,0,90],
-"collision_2element_8cc.html":[3,0,0,0,1,0,8],
-"collision_2element_8cc.html#a6964fd8ecc0d8729ab582d3c0cadd0a8":[3,0,0,0,1,0,8,0],
-"collision_2element_8h.html":[3,0,0,0,1,0,9],
-"collision_2element_8h.html#abedcf22a55257b04e6b7a12700ae4c22":[3,0,0,0,1,0,9,2],
-"collision__filter_8cc.html":[3,0,0,0,1,0,3],
-"collision__filter_8h.html":[3,0,0,0,1,0,4],
-"collision__filter_8h.html#a00986eb20639d7ee55a20011f9ca8c03":[3,0,0,0,1,0,4,6],
-"collision__filter_8h.html#aa8778acf4ef100c6746c07b8d83fc490":[3,0,0,0,1,0,4,4],
-"collision__filter_8h.html#ae1d5273d6709476f9503629f6743b70d":[3,0,0,0,1,0,4,3],
-"collision__filter_8h.html#ae946238edee96d53c3ad14beeadbcfc4":[3,0,0,0,1,0,4,5]
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[2,0,7,3],
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[2,0,7,3,11],
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a04a274a495def8512740b2abae7247dd":[2,0,7,3,2],
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[2,0,7,3,0],
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[2,0,7,3,9],
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[2,0,7,3,8]
 };

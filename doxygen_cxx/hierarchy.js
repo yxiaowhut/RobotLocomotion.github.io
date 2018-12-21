@@ -315,6 +315,7 @@ var hierarchy =
         [ "SymbolicError", "classdrake_1_1solvers_1_1internal_1_1_symbolic_error.html", null ]
       ] ]
     ] ],
+    [ "exponential_distribution< drake::symbolic::Expression >", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html", null ],
     [ "ExpressionAddFactory", "classdrake_1_1symbolic_1_1_expression_add_factory.html", null ],
     [ "ExpressionCell", "classdrake_1_1symbolic_1_1_expression_cell.html", [
@@ -789,6 +790,7 @@ var hierarchy =
       [ "Traits< PiecewisePolynomialLinearSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_piecewise_polynomial_linear_system_01_4.html", null ],
       [ "Traits< RigidBodyPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_rigid_body_plant_01_4.html", null ]
     ] ],
+    [ "normal_distribution< drake::symbolic::Expression >", "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "ObjFeatures", "structdrake_1_1maliput_1_1utility_1_1_obj_features.html", null ],
     [ "OptimizationProgram", "classdrake_1_1solvers_1_1test_1_1_optimization_program.html", [
       [ "LinearFeasibilityProgram", "classdrake_1_1solvers_1_1test_1_1_linear_feasibility_program.html", null ],
@@ -853,8 +855,8 @@ var hierarchy =
     [ "PositionIndices", "struct_position_indices.html", null ],
     [ "PositionKinematicsCache< T >", "classdrake_1_1multibody_1_1internal_1_1_position_kinematics_cache.html", null ],
     [ "Curve2< T >::PositionResult", "structdrake_1_1automotive_1_1_curve2_1_1_position_result.html", null ],
-    [ "Polynomial< _CoefficientType >::Product< Rhs, Lhs >", "struct_polynomial_1_1_product.html", null ],
     [ "TrigPoly< _CoefficientType >::Product< Rhs, Lhs >", "struct_trig_poly_1_1_product.html", null ],
+    [ "Polynomial< _CoefficientType >::Product< Rhs, Lhs >", "struct_polynomial_1_1_product.html", null ],
     [ "ProximityEngine< T >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
     [ "ProximityEngine< AutoDiffXd >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
     [ "ProximityEngine< double >", "classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html", null ],
@@ -1086,13 +1088,13 @@ var hierarchy =
     [ "SpatialVector< SpatialVelocity, T >", "classdrake_1_1multibody_1_1_spatial_vector.html", [
       [ "SpatialVelocity< T >", "classdrake_1_1multibody_1_1_spatial_velocity.html", null ]
     ] ],
+    [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
     [ "StartReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_reference_1_1_spec.html", null ],
     [ "StartLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_start_lane_1_1_spec.html", null ],
     [ "EndReference::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_reference_1_1_spec.html", null ],
-    [ "EndLane::Spec", "classdrake_1_1maliput_1_1multilane_1_1_end_lane_1_1_spec.html", null ],
+    [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
     [ "ScalarInitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_specified_values.html", null ],
     [ "AntiderivativeFunction< T >::SpecifiedValues", "structdrake_1_1systems_1_1_antiderivative_function_1_1_specified_values.html", null ],
-    [ "InitialValueProblem< T >::SpecifiedValues", "structdrake_1_1systems_1_1_initial_value_problem_1_1_specified_values.html", null ],
     [ "SpeedLimitRule", "classdrake_1_1maliput_1_1api_1_1rules_1_1_speed_limit_rule.html", null ],
     [ "SRange", "classdrake_1_1maliput_1_1api_1_1rules_1_1_s_range.html", null ],
     [ "SrhFace", "classdrake_1_1maliput_1_1utility_1_1mesh_1_1_srh_face.html", null ],
@@ -1454,6 +1456,7 @@ var hierarchy =
       [ "hash< drake::systems::sensors::Color< T > >", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_color_3_01_t_01_4_01_4.html", null ],
       [ "hash< drake::systems::sensors::PixelType >", "structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html", null ]
     ] ],
+    [ "uniform_real_distribution< drake::symbolic::Expression >", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "unique_ptr< T >", null, [
       [ "copyable_unique_ptr< drake::geometry::internal::ProximityEngine< AutoDiffXd > >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::internal::ProximityEngine< double > >", "classdrake_1_1copyable__unique__ptr.html", null ],

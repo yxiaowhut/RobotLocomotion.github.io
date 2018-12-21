@@ -45,6 +45,7 @@ var dir_892460009e18f4b08a77d36884a88a01 =
     [ "optitrack_sender.h", "optitrack__sender_8h.html", [
       [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender" ]
     ] ],
+    [ "pixel_types.cc", "pixel__types_8cc.html", null ],
     [ "pixel_types.h", "pixel__types_8h.html", "pixel__types_8h" ],
     [ "rotary_encoders.cc", "rotary__encoders_8cc.html", null ],
     [ "rotary_encoders.h", "rotary__encoders_8h.html", null ],

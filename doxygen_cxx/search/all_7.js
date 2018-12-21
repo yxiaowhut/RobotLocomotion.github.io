@@ -40,7 +40,7 @@ var searchData=
   ['generate_5fobj_2eh',['generate_obj.h',['../generate__obj_8h.html',1,'']]],
   ['generate_5fobj_5ftest_2ecc',['generate_obj_test.cc',['../generate__obj__test_8cc.html',1,'']]],
   ['generate_5funique_5fseed',['generate_unique_seed',['../namespacedrake_1_1systems_1_1internal.html#afa0389aaca07b1fe85f604934abe65f8',1,'drake::systems::internal']]],
-  ['generate_5funique_5fseed_3c_20std_3a_3amt19937_20_3e',['generate_unique_seed&lt; std::mt19937 &gt;',['../namespacedrake_1_1systems_1_1internal.html#ab030ab784192154df6b851676e53c134',1,'drake::systems::internal']]],
+  ['generate_5funique_5fseed_3c_20randomgenerator_20_3e',['generate_unique_seed&lt; RandomGenerator &gt;',['../namespacedrake_1_1systems_1_1internal.html#add0824a6b428e618ca60c1d1d13e0d62',1,'drake::systems::internal']]],
   ['generate_5furdf_2ecc',['generate_urdf.cc',['../generate__urdf_8cc.html',1,'']]],
   ['generate_5furdf_2eh',['generate_urdf.h',['../generate__urdf_8h.html',1,'']]],
   ['generate_5furdf_5ftest_2ecc',['generate_urdf_test.cc',['../generate__urdf__test_8cc.html',1,'']]],

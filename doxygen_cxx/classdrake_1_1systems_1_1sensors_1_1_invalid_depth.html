@@ -112,11 +112,11 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aab64925e3e79c9d69d27e11bc322c1f4"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_invalid_depth.html#aab64925e3e79c9d69d27e11bc322c1f4">kTooFar</a> {std::numeric_limits&lt;float&gt;::infinity()}</td></tr>
+<tr class="memitem:aab64925e3e79c9d69d27e11bc322c1f4"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_invalid_depth.html#aab64925e3e79c9d69d27e11bc322c1f4">kTooFar</a></td></tr>
 <tr class="memdesc:aab64925e3e79c9d69d27e11bc322c1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The depth value when the max sensing range is exceeded.  <a href="#aab64925e3e79c9d69d27e11bc322c1f4">More...</a><br /></td></tr>
 <tr class="separator:aab64925e3e79c9d69d27e11bc322c1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4300ef047c5a8ef9de76e725b072d40b"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_invalid_depth.html#a4300ef047c5a8ef9de76e725b072d40b">kTooClose</a> {0.f}</td></tr>
-<tr class="memdesc:a4300ef047c5a8ef9de76e725b072d40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The depth value when the min sensing range is violated because the object being sensed is too close.  <a href="#a4300ef047c5a8ef9de76e725b072d40b">More...</a><br /></td></tr>
+<tr class="memitem:a4300ef047c5a8ef9de76e725b072d40b"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_invalid_depth.html#a4300ef047c5a8ef9de76e725b072d40b">kTooClose</a></td></tr>
+<tr class="memdesc:a4300ef047c5a8ef9de76e725b072d40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The depth value when the min sensing range is exceeded.  <a href="#a4300ef047c5a8ef9de76e725b072d40b">More...</a><br /></td></tr>
 <tr class="separator:a4300ef047c5a8ef9de76e725b072d40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -239,7 +239,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr float kTooClose {0.f}</td>
+          <td class="memname">constexpr float kTooClose</td>
         </tr>
       </table>
   </td>
@@ -248,9 +248,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>The depth value when the min sensing range is violated because the object being sensed is too close. </p>
-<p>Note that this <a href="http://www.ros.org/reps/rep-0117.html">differs from ROS</a>, which uses negative infinity in this scenario. Drake uses zero because it results in less devastating bugs when users fail to check for the lower limit being hit and using negative infinity does not prevent users from writing bad code. </p>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <a class="code" href="structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#aeb935c8fba6e9dffcc75fa9151d1638c">ImageTraits&lt;PixelType::kDepth32F&gt;::kTooClose</a></div></div><!-- fragment -->
+<p>The depth value when the min sensing range is exceeded. </p>
 
 </div>
 </div>
@@ -264,7 +263,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr float kTooFar {std::numeric_limits&lt;float&gt;::infinity()}</td>
+          <td class="memname">constexpr float kTooFar</td>
         </tr>
       </table>
   </td>
@@ -273,7 +272,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      <a class="code" href="structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ab848e3723044386945ac82f37b024f5f">ImageTraits&lt;PixelType::kDepth32F&gt;::kTooFar</a></div></div><!-- fragment -->
 <p>The depth value when the max sensing range is exceeded. </p>
 
 </div>

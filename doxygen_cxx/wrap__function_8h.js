@@ -10,7 +10,7 @@ var wrap__function_8h =
     [ "wrap_arg_functions< std::function< Signature > >", "structdrake_1_1pydrake_1_1detail_1_1wrap__function__impl_1_1wrap__arg__functions_3_01std_1_1function_3_01_signature_01_4_01_4.html", null ],
     [ "wrap_arg_default", "structdrake_1_1pydrake_1_1wrap__arg__default.html", "structdrake_1_1pydrake_1_1wrap__arg__default" ],
     [ "enable_if_lambda_t", "wrap__function_8h.html#a5a3dcf8b23be71f180cdb834a4ec0093", null ],
-    [ "wrap_arg_function", "wrap__function_8h.html#a9cc3f5301fc06c488ddf2dbd24373074", null ],
+    [ "wrap_arg_function", "wrap__function_8h.html#aa57b6e385f53e61dff1d75c28016e0f6", null ],
     [ "infer_function_info", "wrap__function_8h.html#a051bdcb8b86b93d89e1dc1ea316dab94", null ],
     [ "infer_function_info", "wrap__function_8h.html#a54224dd97a36a9804796ff586a0a01a2", null ],
     [ "infer_function_info", "wrap__function_8h.html#a417316e0a23eba14caea0b61e4754556", null ],

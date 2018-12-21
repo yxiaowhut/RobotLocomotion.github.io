@@ -432,6 +432,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a180d8e6bc7dcb53a32335226b15cca20"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a180d8e6bc7dcb53a32335226b15cca20"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a180d8e6bc7dcb53a32335226b15cca20">is_cloneable</a> = is_cloneable_detail::is_cloneable_helper&lt; T, void &gt;</td></tr>
 <tr class="separator:a180d8e6bc7dcb53a32335226b15cca20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab262f8e82f09d8df2990d0dc5869c34f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> = std::mt19937</td></tr>
+<tr class="memdesc:ab262f8e82f09d8df2990d0dc5869c34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the implementation of the stdc++ concept UniformRandomBitGenerator to be used in Drake.  <a href="#ab262f8e82f09d8df2990d0dc5869c34f">More...</a><br /></td></tr>
+<tr class="separator:ab262f8e82f09d8df2990d0dc5869c34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -452,7 +455,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a2f8fb09132c1375ac50b011cd4c47559"><td class="memTemplItemLeft" align="right" valign="top">Tpl&lt; Ts... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a2f8fb09132c1375ac50b011cd4c47559">type_bind</a> (<a class="el" href="structdrake_1_1type__pack.html">type_pack</a>&lt; Ts... &gt;)</td></tr>
 <tr class="memdesc:a2f8fb09132c1375ac50b011cd4c47559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an expression (only to be used in <code>decltype</code>) for inferring and binding a parameter pack to a template.  <a href="#a2f8fb09132c1375ac50b011cd4c47559">More...</a><br /></td></tr>
 <tr class="separator:a2f8fb09132c1375ac50b011cd4c47559"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7421f3f5801e3e393c7a52105aeb876e"><td class="memTemplParams" colspan="2">template&lt;class VisitWith  = type_visit_with_default, template&lt; typename &gt; class Predicate = type_check_always_true, typename Visitor  = void, typename ... Ts&gt; </td></tr>
+<tr class="memitem:a7421f3f5801e3e393c7a52105aeb876e"><td class="memTemplParams" colspan="2">template&lt;class VisitWith  = type_visit_with_default, template&lt; typename &gt; class Predicate = type_check_always_true, typename Visitor  = void, typename... Ts&gt; </td></tr>
 <tr class="memitem:a7421f3f5801e3e393c7a52105aeb876e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a7421f3f5801e3e393c7a52105aeb876e">type_visit</a> (Visitor &amp;&amp;visitor, <a class="el" href="structdrake_1_1type__pack.html">type_pack</a>&lt; Ts... &gt;={}, <a class="el" href="structdrake_1_1template__single__tag.html">template_single_tag</a>&lt; Predicate &gt;={})</td></tr>
 <tr class="memdesc:a7421f3f5801e3e393c7a52105aeb876e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits each type in a type pack.  <a href="#a7421f3f5801e3e393c7a52105aeb876e">More...</a><br /></td></tr>
 <tr class="separator:a7421f3f5801e3e393c7a52105aeb876e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1189,6 +1192,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ab262f8e82f09d8df2990d0dc5869c34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab262f8e82f09d8df2990d0dc5869c34f">&#9670;&nbsp;</a></span>RandomGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> =  std::mt19937</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines the implementation of the stdc++ concept UniformRandomBitGenerator to be used in Drake. </p>
+<p>This is provided as a work-around to enable the use of the generator in virtual methods (which cannot be templated on the generator type) of system classes. </p>
+
+</div>
+</div>
 <a id="aa06fbebac1e1ffc23617b782f072d79b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa06fbebac1e1ffc23617b782f072d79b">&#9670;&nbsp;</a></span>Result</h2>
 
@@ -1605,7 +1625,7 @@ Variables</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a72383be4710d27584d0821effc6506a5a3ea9f7aca87fd7b64469a0d1119f0b50"></a>kUniform&#160;</td><td class="fielddoc"><p>Vector elements are independent and uniformly distributed ∈ [0.0, 1.0). </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a72383be4710d27584d0821effc6506a5ab933cd0242085c2dbf804dbf288ce7f0"></a>kGaussian&#160;</td><td class="fielddoc"><p>Vector elements are independent and drawn from a mean-zero, unit-variance normal distribution. </p>
+<tr><td class="fieldname"><a id="a72383be4710d27584d0821effc6506a5ab933cd0242085c2dbf804dbf288ce7f0"></a>kGaussian&#160;</td><td class="fielddoc"><p>Vector elements are independent and drawn from a mean-zero, unit-variance normal (Gaussian) distribution. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a72383be4710d27584d0821effc6506a5a601bf5851ffd28f5e6219c0f1945c8d6"></a>kExponential&#160;</td><td class="fielddoc"><p>Vector elements are independent and drawn from an exponential distribution with λ=1.0. </p>
 </td></tr>

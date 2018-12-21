@@ -63,6 +63,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "pointer_cast.h", "pointer__cast_8h.html", "pointer__cast_8h" ],
     [ "polynomial.cc", "polynomial_8cc.html", "polynomial_8cc" ],
     [ "polynomial.h", "polynomial_8h.html", "polynomial_8h" ],
+    [ "random.h", "random_8h.html", "random_8h" ],
     [ "reset_after_move.h", "reset__after__move_8h.html", [
       [ "reset_after_move", "classdrake_1_1reset__after__move.html", "classdrake_1_1reset__after__move" ]
     ] ],
@@ -83,9 +84,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     [ "symbolic_decompose.cc", "symbolic__decompose_8cc.html", "symbolic__decompose_8cc" ],
     [ "symbolic_decompose.h", "symbolic__decompose_8h.html", "symbolic__decompose_8h" ],
     [ "symbolic_environment.cc", "symbolic__environment_8cc.html", "symbolic__environment_8cc" ],
-    [ "symbolic_environment.h", "symbolic__environment_8h.html", [
-      [ "Environment", "classdrake_1_1symbolic_1_1_environment.html", "classdrake_1_1symbolic_1_1_environment" ]
-    ] ],
+    [ "symbolic_environment.h", "symbolic__environment_8h.html", "symbolic__environment_8h" ],
     [ "symbolic_expression.cc", "symbolic__expression_8cc.html", "symbolic__expression_8cc" ],
     [ "symbolic_expression.h", "symbolic__expression_8h.html", "symbolic__expression_8h" ],
     [ "symbolic_expression_cell.cc", "symbolic__expression__cell_8cc.html", "symbolic__expression__cell_8cc" ],

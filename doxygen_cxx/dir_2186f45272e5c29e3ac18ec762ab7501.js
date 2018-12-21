@@ -141,7 +141,9 @@ var dir_2186f45272e5c29e3ac18ec762ab7501 =
       [ "Supervector", "classdrake_1_1systems_1_1_supervector.html", "classdrake_1_1systems_1_1_supervector" ]
     ] ],
     [ "system.cc", "system_8cc.html", null ],
-    [ "system.h", "system_8h.html", "system_8h" ],
+    [ "system.h", "system_8h.html", [
+      [ "System", "classdrake_1_1systems_1_1_system.html", "classdrake_1_1systems_1_1_system" ]
+    ] ],
     [ "system_base.cc", "system__base_8cc.html", null ],
     [ "system_base.h", "system__base_8h.html", [
       [ "SystemBase", "classdrake_1_1systems_1_1_system_base.html", "classdrake_1_1systems_1_1_system_base" ]

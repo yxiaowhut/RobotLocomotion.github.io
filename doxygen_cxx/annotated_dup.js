@@ -11,6 +11,7 @@ var annotated_dup =
       [ "equal_to< drake::symbolic::Expression >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4" ],
       [ "equal_to< drake::symbolic::Formula >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_formula_01_4" ],
       [ "equal_to< drake::symbolic::Variable >", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_variable_01_4" ],
+      [ "exponential_distribution< drake::symbolic::Expression >", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4" ],
       [ "hash< drake::geometry::Identifier< Tag > >", "structstd_1_1hash_3_01drake_1_1geometry_1_1_identifier_3_01_tag_01_4_01_4.html", "structstd_1_1hash_3_01drake_1_1geometry_1_1_identifier_3_01_tag_01_4_01_4" ],
       [ "hash< drake::maliput::api::TypeSpecificIdentifier< T > >", "structstd_1_1hash_3_01drake_1_1maliput_1_1api_1_1_type_specific_identifier_3_01_t_01_4_01_4.html", null ],
       [ "hash< drake::solvers::SolverId >", "structstd_1_1hash_3_01drake_1_1solvers_1_1_solver_id_01_4.html", null ],
@@ -29,8 +30,10 @@ var annotated_dup =
       [ "less< drake::symbolic::Expression >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4.html", "structstd_1_1less_3_01drake_1_1symbolic_1_1_expression_01_4" ],
       [ "less< drake::symbolic::Formula >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4.html", "structstd_1_1less_3_01drake_1_1symbolic_1_1_formula_01_4" ],
       [ "less< drake::symbolic::Variable >", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html", "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4" ],
+      [ "normal_distribution< drake::symbolic::Expression >", "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4" ],
       [ "numeric_limits< drake::symbolic::Expression >", "structstd_1_1numeric__limits_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
-      [ "numeric_limits< Eigen::AutoDiffScalar< T > >", "classstd_1_1numeric__limits_3_01_eigen_1_1_auto_diff_scalar_3_01_t_01_4_01_4.html", null ]
+      [ "numeric_limits< Eigen::AutoDiffScalar< T > >", "classstd_1_1numeric__limits_3_01_eigen_1_1_auto_diff_scalar_3_01_t_01_4_01_4.html", null ],
+      [ "uniform_real_distribution< drake::symbolic::Expression >", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4" ]
     ] ],
     [ "AllBodiesClosestDistanceConstraint", "class_all_bodies_closest_distance_constraint.html", "class_all_bodies_closest_distance_constraint" ],
     [ "Attachment", "class_attachment.html", "class_attachment" ],

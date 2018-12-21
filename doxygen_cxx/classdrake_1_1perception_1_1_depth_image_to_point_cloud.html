@@ -101,17 +101,17 @@ $(document).ready(function(){initNavTree('classdrake_1_1perception_1_1_depth_ima
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6db818bbe5e15d11b67c2248548308ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#a6db818bbe5e15d11b67c2248548308ed">DepthImageToPointCloud</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;camera_info)</td></tr>
-<tr class="memdesc:a6db818bbe5e15d11b67c2248548308ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the converter.  <a href="#a6db818bbe5e15d11b67c2248548308ed">More...</a><br /></td></tr>
-<tr class="separator:a6db818bbe5e15d11b67c2248548308ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab598d91bf5649d1b5b11f956b12a36e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#ab598d91bf5649d1b5b11f956b12a36e8">DepthImageToPointCloud</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;camera_info, <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d">systems::sensors::PixelType</a> pixel_type=<a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c">systems::sensors::PixelType::kDepth32F</a>, float scale=1.0)</td></tr>
+<tr class="memdesc:ab598d91bf5649d1b5b11f956b12a36e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the converter.  <a href="#ab598d91bf5649d1b5b11f956b12a36e8">More...</a><br /></td></tr>
+<tr class="separator:ab598d91bf5649d1b5b11f956b12a36e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6a32da3bd81bca8c548521f88e179c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#ad6a32da3bd81bca8c548521f88e179c4">depth_image_input_port</a> () const</td></tr>
-<tr class="memdesc:ad6a32da3bd81bca8c548521f88e179c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract valued input port that contains an ImageDepth32F.  <a href="#ad6a32da3bd81bca8c548521f88e179c4">More...</a><br /></td></tr>
+<tr class="memdesc:ad6a32da3bd81bca8c548521f88e179c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract valued input port that expects either an ImageDepth16U or ImageDepth32F (depending on the constructor argument).  <a href="#ad6a32da3bd81bca8c548521f88e179c4">More...</a><br /></td></tr>
 <tr class="separator:ad6a32da3bd81bca8c548521f88e179c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab679449f78cec66d74afbf37ddfcf7f6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#ab679449f78cec66d74afbf37ddfcf7f6">camera_pose_input_port</a> () const</td></tr>
-<tr class="memdesc:ab679449f78cec66d74afbf37ddfcf7f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract valued input port that contains an Isometry3d.  <a href="#ab679449f78cec66d74afbf37ddfcf7f6">More...</a><br /></td></tr>
+<tr class="memdesc:ab679449f78cec66d74afbf37ddfcf7f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract valued input port that expects X_PC as a RigidTransformd.  <a href="#ab679449f78cec66d74afbf37ddfcf7f6">More...</a><br /></td></tr>
 <tr class="separator:ab679449f78cec66d74afbf37ddfcf7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af19f280ee9422d87e08822602add1e8f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#af19f280ee9422d87e08822602add1e8f">point_cloud_output_port</a> () const</td></tr>
-<tr class="memdesc:af19f280ee9422d87e08822602add1e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract valued output port that contains a <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient...">PointCloud</a>.  <a href="#af19f280ee9422d87e08822602add1e8f">More...</a><br /></td></tr>
+<tr class="memdesc:af19f280ee9422d87e08822602add1e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the abstract valued output port that provides a <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient...">PointCloud</a>.  <a href="#af19f280ee9422d87e08822602add1e8f">More...</a><br /></td></tr>
 <tr class="separator:af19f280ee9422d87e08822602add1e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:acf2685fd77ab4746970c94ed45ee0293"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#acf2685fd77ab4746970c94ed45ee0293">DepthImageToPointCloud</a> (const <a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html">DepthImageToPointCloud</a> &amp;)=delete</td></tr>
@@ -194,13 +194,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad047317ab91889c6743d5e47a64c7f08 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e6ee413f4f47a20f6dcc2cbd831b88 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ab4e6ee413f4f47a20f6dcc2cbd831b88">SetDefaultContext</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context) const</td></tr>
 <tr class="separator:ab4e6ee413f4f47a20f6dcc2cbd831b88 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47a8dc372e0063851c9851ee15da74e9 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a47a8dc372e0063851c9851ee15da74e9">SetRandomState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *state, <a class="el" href="namespacedrake_1_1systems.html#ad96f28f81be35c3eb7fa5e19b48db26e">RandomGenerator</a> *generator) const</td></tr>
+<tr class="memitem:a47a8dc372e0063851c9851ee15da74e9 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a47a8dc372e0063851c9851ee15da74e9">SetRandomState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *state, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *generator) const</td></tr>
 <tr class="memdesc:a47a8dc372e0063851c9851ee15da74e9 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns random values to all elements of the state.  <a href="classdrake_1_1systems_1_1_system.html#a47a8dc372e0063851c9851ee15da74e9">More...</a><br /></td></tr>
 <tr class="separator:a47a8dc372e0063851c9851ee15da74e9 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7a8969fd7784256a68402b391f8902b inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#af7a8969fd7784256a68402b391f8902b">SetRandomParameters</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *parameters, <a class="el" href="namespacedrake_1_1systems.html#ad96f28f81be35c3eb7fa5e19b48db26e">RandomGenerator</a> *generator) const</td></tr>
+<tr class="memitem:af7a8969fd7784256a68402b391f8902b inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#af7a8969fd7784256a68402b391f8902b">SetRandomParameters</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *parameters, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *generator) const</td></tr>
 <tr class="memdesc:af7a8969fd7784256a68402b391f8902b inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns random values to all parameters.  <a href="classdrake_1_1systems_1_1_system.html#af7a8969fd7784256a68402b391f8902b">More...</a><br /></td></tr>
 <tr class="separator:af7a8969fd7784256a68402b391f8902b inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a5a403983483dda39f8196a241225f2 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a6a5a403983483dda39f8196a241225f2">SetRandomContext</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context, <a class="el" href="namespacedrake_1_1systems.html#ad96f28f81be35c3eb7fa5e19b48db26e">RandomGenerator</a> *generator) const</td></tr>
+<tr class="memitem:a6a5a403983483dda39f8196a241225f2 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a6a5a403983483dda39f8196a241225f2">SetRandomContext</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *generator) const</td></tr>
 <tr class="separator:a6a5a403983483dda39f8196a241225f2 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47ec86445724fd77391af7874bfc4848 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a47ec86445724fd77391af7874bfc4848">AllocateFixedInputs</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context) const</td></tr>
 <tr class="memdesc:a47ec86445724fd77391af7874bfc4848 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each input port, allocates a fixed input of the concrete type that this System requires, and binds it to the port, disconnecting any prior input.  <a href="classdrake_1_1systems_1_1_system.html#a47ec86445724fd77391af7874bfc4848">More...</a><br /></td></tr>
@@ -497,9 +497,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aeaa41fe9eb81bd43c4ba116552e1a983"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#aeaa41fe9eb81bd43c4ba116552e1a983">Convert</a> (const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">systems::sensors::ImageDepth32F</a> &amp;depth_image, const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;camera_info, Eigen::Matrix3Xf *point_cloud)</td></tr>
-<tr class="memdesc:aeaa41fe9eb81bd43c4ba116552e1a983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a depth image obtained from RgbdCamera to a point cloud.  <a href="#aeaa41fe9eb81bd43c4ba116552e1a983">More...</a><br /></td></tr>
-<tr class="separator:aeaa41fe9eb81bd43c4ba116552e1a983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b7fe5ba2e9d494021829a64c643ae0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#ac6b7fe5ba2e9d494021829a64c643ae0">Convert</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;camera_info, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; math::RigidTransformd &gt; &amp;camera_pose, const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">systems::sensors::ImageDepth32F</a> &amp;depth_image, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; float &gt; &amp;scale, <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> *cloud)</td></tr>
+<tr class="memdesc:ac6b7fe5ba2e9d494021829a64c643ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a depth image to a point cloud using direct arguments instead of System input and output ports.  <a href="#ac6b7fe5ba2e9d494021829a64c643ae0">More...</a><br /></td></tr>
+<tr class="separator:ac6b7fe5ba2e9d494021829a64c643ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ebc8f37ffcba94a59925432416e727"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#af7ebc8f37ffcba94a59925432416e727">Convert</a> (const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;camera_info, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; math::RigidTransformd &gt; &amp;camera_pose, const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">systems::sensors::ImageDepth16U</a> &amp;depth_image, const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; float &gt; &amp;scale, <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> *cloud)</td></tr>
+<tr class="memdesc:af7ebc8f37ffcba94a59925432416e727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a depth image to a point cloud using direct arguments instead of System input and output ports.  <a href="#af7ebc8f37ffcba94a59925432416e727">More...</a><br /></td></tr>
+<tr class="separator:af7ebc8f37ffcba94a59925432416e727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; double &gt;</a></td></tr>
 <tr class="memitem:a12dccd7061415e910fff3a252ece2a88 inherit pub_static_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; S&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a12dccd7061415e910fff3a252ece2a88">ToAutoDiffXd</a> (const S&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;from)</td></tr>
 <tr class="memdesc:a12dccd7061415e910fff3a252ece2a88 inherit pub_static_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of <code>from</code>, transmogrified to use the autodiff scalar type, with a dynamic-sized vector of partial derivatives.  <a href="classdrake_1_1systems_1_1_system.html#a12dccd7061415e910fff3a252ece2a88">More...</a><br /></td></tr>
@@ -934,7 +937,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </td></tr>
 </table>
-<p>The system has an input port that takes a <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b" title="The type for depth image where the channel has the type of float. ">systems::sensors::ImageDepth32F</a> and an additional optional input port that takes a <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html" title="This class represents a proper rigid transform between two frames which can be regarded in two ways...">math::RigidTransform</a> for the camera_pose. If this port is connected, then the point cloud is represented in the parent frame (e.g. if camera_pose is the pose of the camera in the world frame, then the point_cloud output will be a <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient...">PointCloud</a> in the world frame). If the camera_pose input is not connected, the <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient...">PointCloud</a> will be represented in the camera frame. </p>
+<p>The system has an input port that takes a depth image and an additional optional input port that takes the camera_pose, X_PC. If the camera_pose input is connected, then the point cloud is represented in the parent frame (e.g., if camera_pose is the pose of the camera in the world frame, then the point_cloud output will be a <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient...">PointCloud</a> in the world frame). If the camera_pose input is not connected, the <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient...">PointCloud</a> will be represented in the camera frame.</p>
+<p>If a pixel is NaN, the converted point will be (NaN, NaN, NaN). If a pixel is kTooClose or kTooFar (as defined by ImageTraits), the converted point will be (+Inf, +Inf, +Inf). Note that this matches the convention used by the <a class="el" href="struct_point.html">Point</a> Cloud Library (PCL). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acf2685fd77ab4746970c94ed45ee0293"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf2685fd77ab4746970c94ed45ee0293">&#9670;&nbsp;</a></span>DepthImageToPointCloud() <span class="overload">[1/3]</span></h2>
@@ -988,8 +992,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6db818bbe5e15d11b67c2248548308ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6db818bbe5e15d11b67c2248548308ed">&#9670;&nbsp;</a></span>DepthImageToPointCloud() <span class="overload">[3/3]</span></h2>
+<a id="ab598d91bf5649d1b5b11f956b12a36e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab598d91bf5649d1b5b11f956b12a36e8">&#9670;&nbsp;</a></span>DepthImageToPointCloud() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1001,8 +1005,24 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html">DepthImageToPointCloud</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>camera_info</em></td><td>)</td>
+          <td class="paramname"><em>camera_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3d">systems::sensors::PixelType</a>&#160;</td>
+          <td class="paramname"><em>pixel_type</em> = <code><a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c">systems::sensors::PixelType::kDepth32F</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1016,6 +1036,8 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">camera_info</td><td>The camera info. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pixel_type</td><td>The pixel type of the depth image input. Only 16U and 32F are supported. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scale</td><td>The depth image input is multiplied by this scale factor before projecting to a point cloud. (This is useful for converting mm to meters, etc.) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1046,12 +1068,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the abstract valued input port that contains an Isometry3d. </p>
+<p>Returns the abstract valued input port that expects X_PC as a RigidTransformd. </p>
+<p>(This input port does not necessarily need to be connected; refer to the class overview for details.) </p>
 
 </div>
 </div>
-<a id="aeaa41fe9eb81bd43c4ba116552e1a983"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeaa41fe9eb81bd43c4ba116552e1a983">&#9670;&nbsp;</a></span>Convert()</h2>
+<a id="ac6b7fe5ba2e9d494021829a64c643ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b7fe5ba2e9d494021829a64c643ae0">&#9670;&nbsp;</a></span>Convert() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1062,20 +1085,32 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Convert </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">systems::sensors::ImageDepth32F</a> &amp;&#160;</td>
-          <td class="paramname"><em>depth_image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;&#160;</td>
           <td class="paramname"><em>camera_info</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Eigen::Matrix3Xf *&#160;</td>
-          <td class="paramname"><em>point_cloud</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; math::RigidTransformd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>camera_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a0558960d25000bd7cc8607cef2fd223b">systems::sensors::ImageDepth32F</a> &amp;&#160;</td>
+          <td class="paramname"><em>depth_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> *&#160;</td>
+          <td class="paramname"><em>cloud</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1090,13 +1125,74 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Converts a depth image obtained from RgbdCamera to a point cloud. </p>
-<p>If a pixel in the depth image has NaN depth value, all the <code>(x, y, z)</code> values in the converted point will be NaN. Similarly, if a pixel has either InvalidDepth::kTooFar or InvalidDepth::kTooClose, the converted point will be InvalidDepth::kTooFar. Note that this matches the convention used by the <a class="el" href="struct_point.html">Point</a> Cloud Library (PCL).</p>
+<p>Converts a depth image to a point cloud using direct arguments instead of System input and output ports. </p>
+<p>The semantics are the same as documented in the class overview and constructor.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">depth_image</td><td>The input depth image obtained from RgbdCamera.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">camera_info</td><td>The input camera info which is used for conversion.</td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">point_cloud</td><td>A pointer to a valid, non nullptr, point cloud of <a class="el" href="namespace_eigen.html">Eigen</a> Matrix3Xf type. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cloud</td><td>Destination for point data; must not be nullptr. The <code>cloud</code> will be resized to match the size of the depth image. The <code>cloud</code> must have the XYZ channel enabled. If other channels such as RGB are present, their existing data will only be disturbed insofar as we need to resize the cloud, obeying the the <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301" title="Conservative resize; will maintain existing data, and initialize new data to their invalid values...">PointCloud::resize()</a> semantics. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af7ebc8f37ffcba94a59925432416e727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7ebc8f37ffcba94a59925432416e727">&#9670;&nbsp;</a></span>Convert() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Convert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html">systems::sensors::CameraInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>camera_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; math::RigidTransformd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>camera_pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8">systems::sensors::ImageDepth16U</a> &amp;&#160;</td>
+          <td class="paramname"><em>depth_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">PointCloud</a> *&#160;</td>
+          <td class="paramname"><em>cloud</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a depth image to a point cloud using direct arguments instead of System input and output ports. </p>
+<p>The semantics are the same as documented in the class overview and constructor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cloud</td><td>Destination for point data; must not be nullptr. The <code>cloud</code> will be resized to match the size of the depth image. The <code>cloud</code> must have the XYZ channel enabled. If other channels such as RGB are present, their existing data will only be disturbed insofar as we need to resize the cloud, obeying the the <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301" title="Conservative resize; will maintain existing data, and initialize new data to their invalid values...">PointCloud::resize()</a> semantics. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1126,7 +1222,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the abstract valued input port that contains an ImageDepth32F. </p>
+<p>Returns the abstract valued input port that expects either an ImageDepth16U or ImageDepth32F (depending on the constructor argument). </p>
 
 </div>
 </div>
@@ -1205,7 +1301,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the abstract valued output port that contains a <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient...">PointCloud</a>. </p>
+<p>Returns the abstract valued output port that provides a <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient...">PointCloud</a>. </p>
+<p>Only the XYZ channel of the point cloud is present. </p>
 
 </div>
 </div>
