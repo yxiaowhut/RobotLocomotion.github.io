@@ -40,7 +40,7 @@ var searchData=
   ['directcollocationconstraint',['DirectCollocationConstraint',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html',1,'drake::systems::trajectory_optimization']]],
   ['directededgeindex',['DirectedEdgeIndex',['../structdrake_1_1maliput_1_1utility_1_1mesh_1_1_directed_edge_index.html',1,'drake::maliput::utility::mesh']]],
   ['directedwaypoint',['DirectedWaypoint',['../classdrake_1_1maliput_1_1rndf_1_1_directed_waypoint.html',1,'drake::maliput::rndf']]],
-  ['directionchangelimiter',['DirectionChangeLimiter',['../structdrake_1_1multibody_1_1implicit__stribeck_1_1internal_1_1_direction_change_limiter.html',1,'drake::multibody::implicit_stribeck::internal']]],
+  ['directionchangelimiter',['DirectionChangeLimiter',['../structdrake_1_1multibody_1_1internal_1_1_direction_change_limiter.html',1,'drake::multibody::internal']]],
   ['directtranscription',['DirectTranscription',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html',1,'drake::systems::trajectory_optimization']]],
   ['discontinuousspringmassdampersystem',['DiscontinuousSpringMassDamperSystem',['../classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html',1,'drake::systems::implicit_integrator_test']]],
   ['discretederivative',['DiscreteDerivative',['../classdrake_1_1systems_1_1_discrete_derivative.html',1,'drake::systems']]],

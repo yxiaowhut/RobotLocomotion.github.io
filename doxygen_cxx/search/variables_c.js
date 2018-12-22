@@ -35,7 +35,7 @@ var searchData=
   ['max',['max',['../struct_bounds.html#a150937c71e671ac7fee18d5ff6a0d9ff',1,'Bounds']]],
   ['max_5fdot_5fproduct',['max_dot_product',['../sos__basis__generator_8cc.html#a66701025b5ad7f34f6f216c1ff914bc7',1,'sos_basis_generator.cc']]],
   ['max_5fgrid_5funit',['max_grid_unit',['../structdrake_1_1maliput_1_1utility_1_1_obj_features.html#a8d57f3351b5df764c8b78ee5f5fcf9ef',1,'drake::maliput::utility::ObjFeatures']]],
-  ['max_5fiterations',['max_iterations',['../structdrake_1_1multibody_1_1implicit__stribeck_1_1_parameters.html#a82eead8e5a402b5c5da8b449073bad45',1,'drake::multibody::implicit_stribeck::Parameters']]],
+  ['max_5fiterations',['max_iterations',['../structdrake_1_1multibody_1_1_implicit_stribeck_solver_parameters.html#a82eead8e5a402b5c5da8b449073bad45',1,'drake::multibody::ImplicitStribeckSolverParameters']]],
   ['max_5fjoint_5fposition_5fchange',['max_joint_position_change',['../pick__and__place__state__machine_8cc.html#a70b9929a2d8be29b06187021683b6e24',1,'pick_and_place_state_machine.cc']]],
   ['max_5fnum_5fpositions',['MAX_NUM_POSITIONS',['../class_drake_joint.html#a2b1190f02a1f8667613b663949e11509',1,'DrakeJoint']]],
   ['max_5fnum_5fvelocities',['MAX_NUM_VELOCITIES',['../class_drake_joint.html#a0ee57f5c17049f0def4a5162715759f1',1,'DrakeJoint']]],

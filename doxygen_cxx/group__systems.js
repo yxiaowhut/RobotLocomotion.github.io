@@ -178,7 +178,6 @@ var group__systems =
       [ "set_penetration_allowance", "classdrake_1_1multibody_1_1_multibody_plant.html#a8cdb3408c412b2af94476886dc35cc71", null ],
       [ "set_stiction_tolerance", "classdrake_1_1multibody_1_1_multibody_plant.html#a3ce165180ba1d40e2a120eea631e4cb1", null ],
       [ "SetActuationInArray", "classdrake_1_1multibody_1_1_multibody_plant.html#aec851e17ae2c34da1b87a03ce85f460a", null ],
-      [ "SetDefaultContext", "classdrake_1_1multibody_1_1_multibody_plant.html#a098f3fd21ecb96e2769dbd4bb4c124f2", null ],
       [ "SetDefaultState", "classdrake_1_1multibody_1_1_multibody_plant.html#ae73edc00d493b3f15ba7679cc14830a0", null ],
       [ "SetFreeBodyPose", "classdrake_1_1multibody_1_1_multibody_plant.html#a2afeb2fce8493fe177dd3cd155819bb9", null ],
       [ "SetFreeBodyPose", "classdrake_1_1multibody_1_1_multibody_plant.html#a44d819b895df9f2c35cc4c75269b0d2a", null ],

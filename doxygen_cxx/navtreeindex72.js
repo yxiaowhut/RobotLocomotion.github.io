@@ -1,6 +1,5 @@
 var NAVTREEINDEX72 =
 {
-"rules__right__of__way__compare_8h.html#a2d300c7ba8e56cf43df127a48a46be58":[3,0,0,1,0,0,2,5,2],
 "rules__right__of__way__compare_8h.html#a3f47005018c7db3e94b777004a705792":[3,0,0,1,0,0,2,5,1],
 "rules__right__of__way__compare_8h.html#a8a686485d1dcf40f995ff6db98c09a60":[3,0,0,1,0,0,2,5,4],
 "rules__right__of__way__compare_8h.html#ad1c40e4b02fe810e0428f5e5925f2cd7":[3,0,0,1,0,0,2,5,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX72 =
 "second__order__cone__program__examples_8h.html#a15ca244fe9ed9a70cf52443cc1b864c4":[3,0,0,13,0,56,8],
 "second__order__cone__program__examples_8h.html#a1a64a39d90044a7eb14e1f422d1ca6ed":[3,0,0,13,0,56,5],
 "second__order__cone__program__examples_8h.html#a1a64a39d90044a7eb14e1f422d1ca6eda0d34a84c6dc4cf9c3af12fb9c898b49c":[3,0,0,13,0,56,5,0],
-"second__order__cone__program__examples_8h.html#a1a64a39d90044a7eb14e1f422d1ca6eda48bdb8ba34408b3939feec1e0dea2822":[3,0,0,13,0,56,5,1]
+"second__order__cone__program__examples_8h.html#a1a64a39d90044a7eb14e1f422d1ca6eda48bdb8ba34408b3939feec1e0dea2822":[3,0,0,13,0,56,5,1],
+"second__order__cone__program__examples_8h.html#a9c58acffbfd3c6bd0ecf479d23ca9566":[3,0,0,13,0,56,6]
 };

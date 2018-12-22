@@ -2,7 +2,6 @@ var searchData=
 [
   ['color',['Color',['../namespacedrake_1_1nice__type__name__test.html#ab87bacfdad76e61b9412d7124be44c1c',1,'drake::nice_type_name_test']]],
   ['columntype',['ColumnType',['../integer__inequality__solver_8cc.html#a12a097aab61e653430d85fddbd53267c',1,'drake::solvers::@1551']]],
-  ['computationinfo',['ComputationInfo',['../namespacedrake_1_1multibody_1_1implicit__stribeck.html#a51bc1ac16f26ebe51eae1abb77bd037b',1,'drake::multibody::implicit_stribeck']]],
   ['computationpolicy',['ComputationPolicy',['../namespacedrake_1_1maliput_1_1multilane.html#a9f1bdafa1bee33c155f083a58b0a82f0',1,'drake::maliput::multilane']]],
   ['constraintform',['ConstraintForm',['../namespacedrake_1_1solvers_1_1test.html#a8d9ec9d33ea9a835a8a6f0748971d6f1',1,'drake::solvers::test']]],
   ['constrainttype',['ConstraintType',['../namespacedrake_1_1systems_1_1controllers_1_1qp__inverse__dynamics.html#a4fd4534516907acda4981527fbfa3954',1,'drake::systems::controllers::qp_inverse_dynamics']]],

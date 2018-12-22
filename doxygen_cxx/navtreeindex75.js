@@ -1,6 +1,5 @@
 var NAVTREEINDEX75 =
 {
-"struct_q_p_controller_debug_data.html#a2e6c8f821f88e1dab510dc11a7824721":[2,0,55,13],
 "struct_q_p_controller_debug_data.html#a38533089d00ab147d8a7937237f5743d":[2,0,55,0],
 "struct_q_p_controller_debug_data.html#a56d2f9e4d74caa523ade85b911b00f6b":[2,0,55,1],
 "struct_q_p_controller_debug_data.html#a5d57ebeed30aba2cb8a74098d815e568":[2,0,55,18],
@@ -249,5 +248,6 @@ var NAVTREEINDEX75 =
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a7bb57312681bfd5e0aa2bf1618e7f58f":[2,0,0,6,8,0,5,0],
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a88b98ef43713715dc895e037e90ce39b":[2,0,0,6,8,0,5,7],
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a8d728e2bff773ecd3965d208efd72f55":[2,0,0,6,8,0,5,5],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#accb802f203c87f5b5e005013d480f7a9":[2,0,0,6,8,0,5,4]
+"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#accb802f203c87f5b5e005013d480f7a9":[2,0,0,6,8,0,5,4],
+"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#acd61e70bb9af0518c6c5033953a3beec":[2,0,0,6,8,0,5,1]
 };

@@ -7,6 +7,7 @@ var namespacedrake_1_1multibody_1_1internal =
     [ "BodyNodeTopology", "structdrake_1_1multibody_1_1internal_1_1_body_node_topology.html", "structdrake_1_1multibody_1_1internal_1_1_body_node_topology" ],
     [ "BodyNodeWelded", "classdrake_1_1multibody_1_1internal_1_1_body_node_welded.html", "classdrake_1_1multibody_1_1internal_1_1_body_node_welded" ],
     [ "BodyTopology", "structdrake_1_1multibody_1_1internal_1_1_body_topology.html", "structdrake_1_1multibody_1_1internal_1_1_body_topology" ],
+    [ "DirectionChangeLimiter", "structdrake_1_1multibody_1_1internal_1_1_direction_change_limiter.html", "structdrake_1_1multibody_1_1internal_1_1_direction_change_limiter" ],
     [ "ForceElementTopology", "structdrake_1_1multibody_1_1internal_1_1_force_element_topology.html", "structdrake_1_1multibody_1_1internal_1_1_force_element_topology" ],
     [ "FrameTopology", "structdrake_1_1multibody_1_1internal_1_1_frame_topology.html", "structdrake_1_1multibody_1_1internal_1_1_frame_topology" ],
     [ "IiwaKinematicConstraintTest", "classdrake_1_1multibody_1_1internal_1_1_iiwa_kinematic_constraint_test.html", "classdrake_1_1multibody_1_1internal_1_1_iiwa_kinematic_constraint_test" ],

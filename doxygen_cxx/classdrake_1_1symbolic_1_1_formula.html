@@ -500,10 +500,11 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Evaluates using a given environment (by default, an empty environment) and a random number generator. </p>
+<p>If there is a random variable in this formula which is unassigned in <code>env</code>, it uses <code>random_generator</code> to sample a value and use it to substitute all occurrences of the random variable in this formula.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td>if a variable <code>v</code> is needed for an evaluation but not provided by <code>env</code>. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if a random variable is detected while <code>random_generator</code> is <code>nullptr</code>. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>if an unassigned random variable is detected while <code>random_generator</code> is <code>nullptr</code>. </td></tr>
   </table>
   </dd>
 </dl>

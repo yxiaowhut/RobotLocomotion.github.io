@@ -4,7 +4,7 @@ var searchData=
   ['geometryvisualizationimpl',['GeometryVisualizationImpl',['../classdrake_1_1geometry_1_1_geometry_state.html#ac6fa56afde6e69d01f85aba63a59680b',1,'drake::geometry::GeometryState']]],
   ['idmcontroller',['IdmController',['../classdrake_1_1automotive_1_1_idm_controller.html#a3b93d65e2839bd675c2f2d1f2537dd99',1,'drake::automotive::IdmController']]],
   ['if_5fthen_5felse',['if_then_else',['../classdrake_1_1symbolic_1_1_expression.html#adb59d484cb2b6737923c9b53e0ec432c',1,'drake::symbolic::Expression']]],
-  ['implicitstribecksolvertester',['ImplicitStribeckSolverTester',['../classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html#a4637638b6eb53c6db0d52c50d866a611',1,'drake::multibody::implicit_stribeck::ImplicitStribeckSolver']]],
+  ['implicitstribecksolvertester',['ImplicitStribeckSolverTester',['../classdrake_1_1multibody_1_1_implicit_stribeck_solver.html#a4637638b6eb53c6db0d52c50d866a611',1,'drake::multibody::ImplicitStribeckSolver']]],
   ['intersect',['intersect',['../classdrake_1_1symbolic_1_1_variables.html#adbfb5367e72dfbaf7a778e6896113f64',1,'drake::symbolic::Variables']]],
   ['is_5fabs',['is_abs',['../classdrake_1_1symbolic_1_1_expression.html#ab6046c9bad9a1c5a1ba51ec6157376c3',1,'drake::symbolic::Expression']]],
   ['is_5facos',['is_acos',['../classdrake_1_1symbolic_1_1_expression.html#a40a4e8165bee3d62bd4df8a68226098c',1,'drake::symbolic::Expression']]],

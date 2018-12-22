@@ -1,6 +1,5 @@
 var NAVTREEINDEX80 =
 {
-"symbolic__expression_8cc.html#ae1f447c509e16ebf85df16216af97882":[3,0,0,3,66,17],
 "symbolic__expression_8cc.html#ae96194d93ad39bcb2b7ed22891f44ec7":[3,0,0,3,66,86],
 "symbolic__expression_8cc.html#af0d237e47a39119a457775debdc6c163":[3,0,0,3,66,90],
 "symbolic__expression_8cc.html#af208e5f109a14eae18e12eb779e11c28":[3,0,0,3,66,36],
@@ -26,6 +25,7 @@ var NAVTREEINDEX80 =
 "symbolic__expression_8h.html#a27a345a84e6b273a71aa02ee312f9c51":[3,0,0,3,67,23],
 "symbolic__expression_8h.html#a27e661d9a5f1936f326068b2dea3eecc":[3,0,0,3,67,25],
 "symbolic__expression_8h.html#a28f3f42c88b77cf4893385a7a093087c":[3,0,0,3,67,66],
+"symbolic__expression_8h.html#a2a166b0ad9f629567d453d875562e571":[3,0,0,3,67,24],
 "symbolic__expression_8h.html#a2d2676aafe3ce897d4a66bbad500c67c":[3,0,0,3,67,78],
 "symbolic__expression_8h.html#a2e5ea5116992b4f695c16ad0f297686b":[3,0,0,3,67,18],
 "symbolic__expression_8h.html#a2f13e2bea2dfc69ca8f389450a062981":[3,0,0,3,67,106],
@@ -91,7 +91,6 @@ var NAVTREEINDEX80 =
 "symbolic__expression_8h.html#ab6046c9bad9a1c5a1ba51ec6157376c3":[3,0,0,3,67,45],
 "symbolic__expression_8h.html#ab75d66dc4baea3c6fc9f8f44a938f3a4":[3,0,0,3,67,90],
 "symbolic__expression_8h.html#abd176811046c1f4fab6d56404b270d66":[3,0,0,3,67,117],
-"symbolic__expression_8h.html#abd8a2e82da336f88507a96c140344f03":[3,0,0,3,67,24],
 "symbolic__expression_8h.html#abefc608adef6255f93f6aecf809a8b11":[3,0,0,3,67,53],
 "symbolic__expression_8h.html#ac3d55ec6a55f554174d9bc45d7ed7f5c":[3,0,0,3,67,19],
 "symbolic__expression_8h.html#ac432e3e03086d5b147620673ed357a7c":[3,0,0,3,67,93],
@@ -249,5 +248,6 @@ var NAVTREEINDEX80 =
 "symbolic__expression__cell_8cc.html#aede8001df8d3301fef461d03dd2d859d":[3,0,0,3,68,5],
 "symbolic__expression__cell_8cc.html#af09a2aae3694e048b16141585c8a1d22":[3,0,0,3,68,59],
 "symbolic__expression__cell_8cc.html#af1c9cfb4bd08050990d594029bdf3c96":[3,0,0,3,68,45],
-"symbolic__expression__cell_8cc.html#af4903cdd87eacec1443bab30c08a3193":[3,0,0,3,68,64]
+"symbolic__expression__cell_8cc.html#af4903cdd87eacec1443bab30c08a3193":[3,0,0,3,68,64],
+"symbolic__expression__cell_8cc.html#af704f97cf07efcfc490be6d40484f56c":[3,0,0,3,68,43]
 };

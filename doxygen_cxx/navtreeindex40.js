@@ -1,5 +1,10 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1systems_1_1_matrix_gain.html#a3af0b57a7a890abc45d1e2fadd6d7871":[0,1,0,13,0],
+"classdrake_1_1systems_1_1_matrix_gain.html#a3dab884c7b4061cd0e774d1300d1a7e6":[0,1,0,13,3],
+"classdrake_1_1systems_1_1_matrix_gain.html#a555f573bc1c1a0e3da41f1b5bed26b52":[0,1,0,13,2],
+"classdrake_1_1systems_1_1_matrix_gain.html#a5656e511d250b599887b5585810141ba":[0,1,0,13,1],
+"classdrake_1_1systems_1_1_matrix_gain.html#ae2ad684d66598dabe9aaabb3e55b348d":[0,1,0,13,5],
 "classdrake_1_1systems_1_1_matrix_gain.html#aeda9ecd319ed79c6c53845dc76d2eecc":[0,1,0,13,6],
 "classdrake_1_1systems_1_1_matrix_gain.html#af0fa387fe40009b10648c19019b05ff1":[0,1,0,13,4],
 "classdrake_1_1systems_1_1_multiplexer.html":[0,1,0,14],
@@ -244,10 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#a918cc75f009746b70e5a568ef0b99f7b":[2,0,0,18,100,3],
 "classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#aa1b6fa6139748a70c6ee50283aae9aa1":[2,0,0,18,100,6],
 "classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#aabe6f9ab1c7eae35982c42b89a689b78":[2,0,0,18,100,0],
-"classdrake_1_1systems_1_1_robot_state_decoder.html":[2,0,0,18,101],
-"classdrake_1_1systems_1_1_robot_state_decoder.html#a02ced37313137c8325dd61d658ddbe45":[2,0,0,18,101,5],
-"classdrake_1_1systems_1_1_robot_state_decoder.html#aad34a8307a2294d52727cc0f05fbac4e":[2,0,0,18,101,4],
-"classdrake_1_1systems_1_1_robot_state_decoder.html#ade26e8d52511b01dee67afa182bc20fa":[2,0,0,18,101,1],
-"classdrake_1_1systems_1_1_robot_state_decoder.html#ae056ea4d6a8759058b6d6f03255b9e4e":[2,0,0,18,101,0],
-"classdrake_1_1systems_1_1_robot_state_decoder.html#ae36319d9061f7f1656089d4c53c805a7":[2,0,0,18,101,2]
+"classdrake_1_1systems_1_1_robot_state_decoder.html":[2,0,0,18,101]
 };

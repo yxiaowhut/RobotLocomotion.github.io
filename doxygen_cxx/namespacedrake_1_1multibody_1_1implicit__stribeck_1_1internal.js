@@ -1,4 +1,0 @@
-var namespacedrake_1_1multibody_1_1implicit__stribeck_1_1internal =
-[
-    [ "DirectionChangeLimiter", "structdrake_1_1multibody_1_1implicit__stribeck_1_1internal_1_1_direction_change_limiter.html", "structdrake_1_1multibody_1_1implicit__stribeck_1_1internal_1_1_direction_change_limiter" ]
-];

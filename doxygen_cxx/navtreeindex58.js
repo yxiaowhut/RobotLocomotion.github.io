@@ -1,5 +1,10 @@
 var NAVTREEINDEX58 =
 {
+"group__multibody__spatial__inertia.html":[0,2,0,0,1,2],
+"group__multibody__spatial__pose.html":[0,2,0,0,1,0],
+"group__multibody__spatial__vectors.html":[0,2,0,0,1,1],
+"group__perception__systems.html":[0,1,7],
+"group__planning.html":[0,2,3],
 "group__primitive__systems.html":[0,1,0],
 "group__primitive__systems.html#ga0743dce3cc9342b68048b00d006a1808":[0,1,0,27],
 "group__primitive__systems.html#ga9c51fcacf1408beacf928f0d16c0d2f5":[0,1,0,25],
@@ -244,10 +249,5 @@ var NAVTREEINDEX58 =
 "image__writer_8cc.html":[3,0,0,14,8,10],
 "image__writer_8cc.html#a1d1f4432f089c326a087bd29bac9a15f":[3,0,0,14,8,10,2],
 "image__writer_8cc.html#a29bd196cbf701b14b87cc1b67d1b78f9":[3,0,0,14,8,10,7],
-"image__writer_8cc.html#a47ff380f86746194d20c01d9e06a0b35":[3,0,0,14,8,10,6],
-"image__writer_8cc.html#a57454024e57ded62fb0979507cc13059":[3,0,0,14,8,10,1],
-"image__writer_8cc.html#a5c85d12affb4aef0328e1aa255822185":[3,0,0,14,8,10,3],
-"image__writer_8cc.html#a61a65f47720c5054af7d5315432532bd":[3,0,0,14,8,10,0],
-"image__writer_8cc.html#aa129cee26b601cec737908a5663acc90":[3,0,0,14,8,10,4],
-"image__writer_8cc.html#aa79a9deca5447aa47227ce011a2455ff":[3,0,0,14,8,10,5]
+"image__writer_8cc.html#a47ff380f86746194d20c01d9e06a0b35":[3,0,0,14,8,10,6]
 };

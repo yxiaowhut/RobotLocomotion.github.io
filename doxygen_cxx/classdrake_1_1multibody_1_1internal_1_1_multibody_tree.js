@@ -115,7 +115,6 @@ var classdrake_1_1multibody_1_1internal_1_1_multibody_tree =
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#aba7d88ffae63ddf3c6c81b23fe3d7a89", null ],
     [ "set_tree_system", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a1640dac294e20deb224eec1f6496c316", null ],
     [ "SetActuationInArray", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#aec851e17ae2c34da1b87a03ce85f460a", null ],
-    [ "SetDefaultContext", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a098f3fd21ecb96e2769dbd4bb4c124f2", null ],
     [ "SetDefaultState", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#af8bd33a2e8520eccde63ffbd423c056a", null ],
     [ "SetFreeBodyPoseOrThrow", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a80fd0f1de1971c578083e42d0b2705cf", null ],
     [ "SetFreeBodyPoseOrThrow", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#ac5c546a708bac99c2819bd2b3a83f49a", null ],

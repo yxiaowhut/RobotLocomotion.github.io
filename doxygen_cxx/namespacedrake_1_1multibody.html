@@ -106,8 +106,6 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1detail.html">detail</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1multibody_1_1implicit__stribeck"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1implicit__stribeck.html">implicit_stribeck</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody_1_1internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1internal.html">internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody_1_1joints"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1joints.html">joints</a></td></tr>
@@ -168,6 +166,14 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html">GlobalInverseKinematics</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the inverse kinematics problem as a mixed integer convex optimization problem.  <a href="classdrake_1_1multibody_1_1_global_inverse_kinematics.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_implicit_stribeck_solver.html">ImplicitStribeckSolver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_implicit_stribeck_solver_iteration_stats.html">ImplicitStribeckSolverIterationStats</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct used to store information about the iteration process performed by <a class="el" href="classdrake_1_1multibody_1_1_implicit_stribeck_solver.html">ImplicitStribeckSolver</a>.  <a href="structdrake_1_1multibody_1_1_implicit_stribeck_solver_iteration_stats.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_implicit_stribeck_solver_parameters.html">ImplicitStribeckSolverParameters</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are the parameters controlling the iteration process of the <a class="el" href="classdrake_1_1multibody_1_1_implicit_stribeck_solver.html">ImplicitStribeckSolver</a> solver.  <a href="structdrake_1_1multibody_1_1_implicit_stribeck_solver_parameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_inverse_kinematics.html">InverseKinematics</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an inverse kinematics (IK) problem on a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>, to find the postures of the robot satisfying certain constraints.  <a href="classdrake_1_1multibody_1_1_inverse_kinematics.html#details">More...</a><br /></td></tr>
@@ -279,6 +285,12 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a1d4ae43ed7c3c40d8afb0db61bd29447"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a1d4ae43ed7c3c40d8afb0db61bd29447">ImplicitStribeckSolverResult</a> { <a class="el" href="namespacedrake_1_1multibody.html#a1d4ae43ed7c3c40d8afb0db61bd29447a8c632159fa131f09d04f94e3cbcd8782">kSuccess</a> = 0, 
+<a class="el" href="namespacedrake_1_1multibody.html#a1d4ae43ed7c3c40d8afb0db61bd29447a1131fdd052242dd97fe2fe1d7a9a804a">kMaxIterationsReached</a> = 1, 
+<a class="el" href="namespacedrake_1_1multibody.html#a1d4ae43ed7c3c40d8afb0db61bd29447a03dd71797c3ae46b778a3ab8591a9727">kLinearSolverFailed</a> = 2
+ }<tr class="memdesc:a1d4ae43ed7c3c40d8afb0db61bd29447"><td class="mdescLeft">&#160;</td><td class="mdescRight">The result from ImplicitStribeckSolver::SolveWithGuess() used to report the success or failure of the solver.  <a href="namespacedrake_1_1multibody.html#a1d4ae43ed7c3c40d8afb0db61bd29447">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a1d4ae43ed7c3c40d8afb0db61bd29447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad95b5f6a8d72582ad91a1aca26d76658"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> { <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b">kQDot</a>, 
 <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a">kV</a>
  }<tr class="memdesc:ad95b5f6a8d72582ad91a1aca26d76658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration that distinguishes between flavors of Jacobians based on the variable with respect to which they are taken.  <a href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">More...</a><br /></td></tr>
@@ -546,6 +558,39 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a1d4ae43ed7c3c40d8afb0db61bd29447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4ae43ed7c3c40d8afb0db61bd29447">&#9670;&nbsp;</a></span>ImplicitStribeckSolverResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1multibody.html#a1d4ae43ed7c3c40d8afb0db61bd29447">ImplicitStribeckSolverResult</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The result from <a class="el" href="classdrake_1_1multibody_1_1_implicit_stribeck_solver.html#ac91a2f53eaeab1279be10fd7db5f6546" title="Given an initial guess v_guess, this method uses a Newton-Raphson iteration to find a solution for th...">ImplicitStribeckSolver::SolveWithGuess()</a> used to report the success or failure of the solver. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1d4ae43ed7c3c40d8afb0db61bd29447a8c632159fa131f09d04f94e3cbcd8782"></a>kSuccess&#160;</td><td class="fielddoc"><p>Successful computation. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1d4ae43ed7c3c40d8afb0db61bd29447a1131fdd052242dd97fe2fe1d7a9a804a"></a>kMaxIterationsReached&#160;</td><td class="fielddoc"><p>The maximum number of iterations was reached. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1d4ae43ed7c3c40d8afb0db61bd29447a03dd71797c3ae46b778a3ab8591a9727"></a>kLinearSolverFailed&#160;</td><td class="fielddoc"><p>The linear solver used within the Newton-Raphson loop failed. </p>
+<p>This might be caused by a divergent iteration that led to an invalid Jacobian matrix. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ad95b5f6a8d72582ad91a1aca26d76658"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad95b5f6a8d72582ad91a1aca26d76658">&#9670;&nbsp;</a></span>JacobianWrtVariable</h2>
 

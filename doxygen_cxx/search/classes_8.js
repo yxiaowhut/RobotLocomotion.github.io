@@ -39,9 +39,11 @@ var searchData=
   ['imagetraits_3c_20pixeltype_3a_3akrgba8u_20_3e',['ImageTraits&lt; PixelType::kRgba8U &gt;',['../structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html',1,'drake::systems::sensors']]],
   ['imagewriter',['ImageWriter',['../classdrake_1_1systems_1_1sensors_1_1_image_writer.html',1,'drake::systems::sensors']]],
   ['impliciteulerintegrator',['ImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_implicit_euler_integrator.html',1,'drake::systems']]],
-  ['implicitstribecksolver',['ImplicitStribeckSolver',['../classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html',1,'drake::multibody::implicit_stribeck']]],
-  ['implicitstribecksolver_3c_20autodiffxd_20_3e',['ImplicitStribeckSolver&lt; AutoDiffXd &gt;',['../classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html',1,'drake::multibody::implicit_stribeck']]],
-  ['implicitstribecksolver_3c_20double_20_3e',['ImplicitStribeckSolver&lt; double &gt;',['../classdrake_1_1multibody_1_1implicit__stribeck_1_1_implicit_stribeck_solver.html',1,'drake::multibody::implicit_stribeck']]],
+  ['implicitstribecksolver',['ImplicitStribeckSolver',['../classdrake_1_1multibody_1_1_implicit_stribeck_solver.html',1,'drake::multibody']]],
+  ['implicitstribecksolver_3c_20autodiffxd_20_3e',['ImplicitStribeckSolver&lt; AutoDiffXd &gt;',['../classdrake_1_1multibody_1_1_implicit_stribeck_solver.html',1,'drake::multibody']]],
+  ['implicitstribecksolver_3c_20double_20_3e',['ImplicitStribeckSolver&lt; double &gt;',['../classdrake_1_1multibody_1_1_implicit_stribeck_solver.html',1,'drake::multibody']]],
+  ['implicitstribecksolveriterationstats',['ImplicitStribeckSolverIterationStats',['../structdrake_1_1multibody_1_1_implicit_stribeck_solver_iteration_stats.html',1,'drake::multibody']]],
+  ['implicitstribecksolverparameters',['ImplicitStribeckSolverParameters',['../structdrake_1_1multibody_1_1_implicit_stribeck_solver_parameters.html',1,'drake::multibody']]],
   ['indexface',['IndexFace',['../classdrake_1_1maliput_1_1utility_1_1mesh_1_1_index_face.html',1,'drake::maliput::utility::mesh']]],
   ['infeasiblelinearprogramtest0',['InfeasibleLinearProgramTest0',['../classdrake_1_1solvers_1_1test_1_1_infeasible_linear_program_test0.html',1,'drake::solvers::test']]],
   ['initializeautodifftuplehelper',['InitializeAutoDiffTupleHelper',['../structdrake_1_1math_1_1internal_1_1_initialize_auto_diff_tuple_helper.html',1,'drake::math::internal']]],
@@ -78,6 +80,5 @@ var searchData=
   ['is_5feigen_5fvector',['is_eigen_vector',['../structdrake_1_1is__eigen__vector.html',1,'drake']]],
   ['is_5feigen_5fvector_5fexpression_5fdouble_5fpair',['is_eigen_vector_expression_double_pair',['../structdrake_1_1is__eigen__vector__expression__double__pair.html',1,'drake']]],
   ['is_5feigen_5fvector_5fof',['is_eigen_vector_of',['../structdrake_1_1is__eigen__vector__of.html',1,'drake']]],
-  ['isolanevelocity',['IsoLaneVelocity',['../structdrake_1_1maliput_1_1api_1_1_iso_lane_velocity.html',1,'drake::maliput::api']]],
-  ['iterationstats',['IterationStats',['../structdrake_1_1multibody_1_1implicit__stribeck_1_1_iteration_stats.html',1,'drake::multibody::implicit_stribeck']]]
+  ['isolanevelocity',['IsoLaneVelocity',['../structdrake_1_1maliput_1_1api_1_1_iso_lane_velocity.html',1,'drake::maliput::api']]]
 ];

@@ -703,10 +703,11 @@ A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
 </div><div class="memdoc">
 
 <p>Evaluates using a given environment (by default, an empty environment) and a random number generator. </p>
+<p>If there is a random variable in this expression which is unassigned in <code>env</code>, this method uses <code>random_generator</code> to sample a value and use the value to substitute all occurrences of the variable in this expression.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td>if there exists a non-random variable in this expression whose assignment is not provided by <code>env</code>. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if a random variable is detected while <code>random_generator</code> is <code>nullptr</code>. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>if an unassigned random variable is detected while <code>random_generator</code> is <code>nullptr</code>. </td></tr>
     <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
   </dd>
@@ -731,6 +732,7 @@ A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</dd></dl>
 </div><div class="memdoc">
 
 <p>Evaluates using an empty environment and a random number generator. </p>
+<p>It uses <code>random_generator</code> to sample values for the random variables in this expression.</p>
 <p>See the above overload for the exceptions that it might throw. </p>
 
 </div>

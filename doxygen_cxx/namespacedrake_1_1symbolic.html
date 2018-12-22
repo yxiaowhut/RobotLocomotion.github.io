@@ -381,7 +381,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a7321fd38348c4842f41b4965bdf4979d"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a7321fd38348c4842f41b4965bdf4979d">operator&lt;&lt;</a> (ostream &amp;os, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env)</td></tr>
 <tr class="separator:a7321fd38348c4842f41b4965bdf4979d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8fafcceed185abdb6726cbaf4ff3be3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af8fafcceed185abdb6726cbaf4ff3be3">PopulateRandomVariables</a> (<a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> env, const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html">Variables</a> &amp;variables, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *random_generator)</td></tr>
-<tr class="memdesc:af8fafcceed185abdb6726cbaf4ff3be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the environment <code>env</code> by sampling values for <code>variables</code> using <code>random_generator</code>.  <a href="#af8fafcceed185abdb6726cbaf4ff3be3">More...</a><br /></td></tr>
+<tr class="memdesc:af8fafcceed185abdb6726cbaf4ff3be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates the environment <code>env</code> by sampling values for the unassigned random variables in <code>variables</code> using <code>random_generator</code>.  <a href="#af8fafcceed185abdb6726cbaf4ff3be3">More...</a><br /></td></tr>
 <tr class="separator:af8fafcceed185abdb6726cbaf4ff3be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9911fd0881ffc66c0c64e8d727399237"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9911fd0881ffc66c0c64e8d727399237">operator&lt;</a> (<a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30fa">ExpressionKind</a> k1, <a class="el" href="namespacedrake_1_1symbolic.html#aebde9bdda9a428ef1bab6175954d30fa">ExpressionKind</a> k2)</td></tr>
 <tr class="memdesc:a9911fd0881ffc66c0c64e8d727399237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total ordering between ExpressionKinds.  <a href="#a9911fd0881ffc66c0c64e8d727399237">More...</a><br /></td></tr>
@@ -645,10 +645,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ac432e3e03086d5b147620673ed357a7c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac432e3e03086d5b147620673ed357a7c">operator*</a> (const Eigen::Transform&lt; <a class="el" href="classdouble.html">double</a>, Dim, LhsMode, LhsOptions &gt; &amp;t1, const Eigen::Transform&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, Dim, RhsMode, RhsOptions &gt; &amp;t2)</td></tr>
 <tr class="memdesc:ac432e3e03086d5b147620673ed357a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform&lt;Expression&gt; * Transform&lt;double&gt; =&gt; Transform&lt;Expression&gt;  <a href="#ac432e3e03086d5b147620673ed357a7c">More...</a><br /></td></tr>
 <tr class="separator:ac432e3e03086d5b147620673ed357a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd8a2e82da336f88507a96c140344f03"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:abd8a2e82da336f88507a96c140344f03"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#abd8a2e82da336f88507a96c140344f03">Evaluate</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env)</td></tr>
-<tr class="memdesc:abd8a2e82da336f88507a96c140344f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a symbolic matrix <code>m</code> using the <code>env</code> by evaluating each element.  <a href="#abd8a2e82da336f88507a96c140344f03">More...</a><br /></td></tr>
-<tr class="separator:abd8a2e82da336f88507a96c140344f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a166b0ad9f629567d453d875562e571"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a2a166b0ad9f629567d453d875562e571"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2a166b0ad9f629567d453d875562e571">Evaluate</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *random_generator=nullptr)</td></tr>
+<tr class="memdesc:a2a166b0ad9f629567d453d875562e571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a symbolic matrix <code>m</code> using <code>env</code> and <code>random_generator</code>.  <a href="#a2a166b0ad9f629567d453d875562e571">More...</a><br /></td></tr>
+<tr class="separator:a2a166b0ad9f629567d453d875562e571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3d55ec6a55f554174d9bc45d7ed7f5c"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA , typename DerivedB &gt; </td></tr>
 <tr class="memitem:ac3d55ec6a55f554174d9bc45d7ed7f5c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; Eigen::MatrixBase&lt; DerivedA &gt;, DerivedA &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a> &amp;&amp;std::is_base_of&lt; Eigen::MatrixBase&lt; DerivedB &gt;, DerivedB &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a> &amp;&amp;std::is_same&lt; typename DerivedA::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a> &amp;&amp;std::is_same&lt; typename DerivedB::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>, <a class="el" href="classbool.html">bool</a> &gt;::<a class="el" href="multilane_2loader_8cc.html#adb5798caab72849ba8da861ddc3acccd">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac3d55ec6a55f554174d9bc45d7ed7f5c">CheckStructuralEquality</a> (const DerivedA &amp;m1, const DerivedB &amp;m2)</td></tr>
 <tr class="memdesc:ac3d55ec6a55f554174d9bc45d7ed7f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two Eigen::Matrix&lt;Expression&gt; <code>m1</code> and <code>m2</code> are structurally equal.  <a href="#ac3d55ec6a55f554174d9bc45d7ed7f5c">More...</a><br /></td></tr>
@@ -2567,8 +2567,8 @@ v.rows() == expressions.rows(). </dd></dl>
 
 </div>
 </div>
-<a id="abd8a2e82da336f88507a96c140344f03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd8a2e82da336f88507a96c140344f03">&#9670;&nbsp;</a></span>Evaluate()</h2>
+<a id="a2a166b0ad9f629567d453d875562e571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a166b0ad9f629567d453d875562e571">&#9670;&nbsp;</a></span>Evaluate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2583,7 +2583,13 @@ v.rows() == expressions.rows(). </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;&#160;</td>
-          <td class="paramname"><em>env</em>&#160;</td>
+          <td class="paramname"><em>env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *&#160;</td>
+          <td class="paramname"><em>random_generator</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2593,11 +2599,13 @@ v.rows() == expressions.rows(). </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Evaluates a symbolic matrix <code>m</code> using the <code>env</code> by evaluating each element. </p>
+<p>Evaluates a symbolic matrix <code>m</code> using <code>env</code> and <code>random_generator</code>. </p>
+<p>If there is a random variable in <code>m</code> which is unassigned in <code>env</code>, this function uses <code>random_generator</code> to sample a value and use the value to substitute all occurrences of the random variable in <code>m</code>.</p>
 <dl class="section return"><dt>Returns</dt><dd>a matrix of double whose size is the size of <code>m</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>if <code>m</code> includes unassigned random variables but <code>random_generator</code> is <code>nullptr</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5226,7 +5234,7 @@ More information about the C++'s conditional expression and ternary operator is 
 </div><div class="memdoc">
 
 <p>Returns a <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula. ">Formula</a> for the predicate isnan(e) to the given expression. </p>
-<p>This serves as the argument-dependent lookup related to std::isnan(double). When evaluated, this <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula. ">Formula</a> will return false when the <a class="el" href="namespacedrake_1_1symbolic.html#abd8a2e82da336f88507a96c140344f03" title="Evaluates a symbolic matrix m using the env by evaluating each element. ">e.Evaluate()</a> is not NaN. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>This serves as the argument-dependent lookup related to std::isnan(double). When evaluated, this <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula. ">Formula</a> will return false when the <a class="el" href="namespacedrake_1_1symbolic.html#a2a166b0ad9f629567d453d875562e571" title="Evaluates a symbolic matrix m using env and random_generator. ">e.Evaluate()</a> is not NaN. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
@@ -7065,8 +7073,120 @@ vars.size() == <code>n</code>. </dd></dl>
 
 </div>
 </div>
+<a id="a60c0402d8a4ab5d50003560ddccdb3a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60c0402d8a4ab5d50003560ddccdb3a6">&#9670;&nbsp;</a></span>operator*() <span class="overload">[11/24]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82a1e5c6f989d9eb82b47f06df766264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82a1e5c6f989d9eb82b47f06df766264">&#9670;&nbsp;</a></span>operator*() <span class="overload">[12/24]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45f74794ee4a396e8fd39b44665c2a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f74794ee4a396e8fd39b44665c2a62">&#9670;&nbsp;</a></span>operator*() <span class="overload">[13/24]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af99abd45b5e371255adc9d5c8b078b36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99abd45b5e371255adc9d5c8b078b36">&#9670;&nbsp;</a></span>operator*() <span class="overload">[14/24]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a99dc956184f0c8d7466e78369dd6f595"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99dc956184f0c8d7466e78369dd6f595">&#9670;&nbsp;</a></span>operator*() <span class="overload">[11/24]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a99dc956184f0c8d7466e78369dd6f595">&#9670;&nbsp;</a></span>operator*() <span class="overload">[15/24]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7103,118 +7223,6 @@ vars.size() == <code>n</code>. </dd></dl>
 <li>Matrix&lt;double&gt; * Matrix&lt;Monomial&gt; =&gt; Matrix&lt;Polynomial&gt;</li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>that these operator overloadings are necessary even after providing Eigen::ScalarBinaryOpTraits. See <a href="https://stackoverflow.com/questions/41494288/mixing-scalar-types-in-eigen">https://stackoverflow.com/questions/41494288/mixing-scalar-types-in-eigen</a> for more information. </dd></dl>
-
-</div>
-</div>
-<a id="a60c0402d8a4ab5d50003560ddccdb3a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60c0402d8a4ab5d50003560ddccdb3a6">&#9670;&nbsp;</a></span>operator*() <span class="overload">[12/24]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> operator* </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td>
-          <td class="paramname"><em>p1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
-          <td class="paramname"><em>p2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a82a1e5c6f989d9eb82b47f06df766264"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82a1e5c6f989d9eb82b47f06df766264">&#9670;&nbsp;</a></span>operator*() <span class="overload">[13/24]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> operator* </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a45f74794ee4a396e8fd39b44665c2a62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45f74794ee4a396e8fd39b44665c2a62">&#9670;&nbsp;</a></span>operator*() <span class="overload">[14/24]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td>
-          <td class="paramname"><em>p</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af99abd45b5e371255adc9d5c8b078b36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af99abd45b5e371255adc9d5c8b078b36">&#9670;&nbsp;</a></span>operator*() <span class="overload">[15/24]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td>
-          <td class="paramname"><em>p</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -10305,7 +10313,7 @@ vars.size() == <code>n</code>. </dd></dl>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *const&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *&#160;</td>
           <td class="paramname"><em>random_generator</em>&#160;</td>
         </tr>
         <tr>
@@ -10316,7 +10324,7 @@ vars.size() == <code>n</code>. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Populates the environment <code>env</code> by sampling values for <code>variables</code> using <code>random_generator</code>. </p>
+<p>Populates the environment <code>env</code> by sampling values for the unassigned random variables in <code>variables</code> using <code>random_generator</code>. </p>
 
 </div>
 </div>

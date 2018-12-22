@@ -220,7 +220,10 @@ so, you check the following:</p>
 <li>Evaluate(self: pydrake.symbolic.Expression, env: Dict[pydrake.symbolic.Variable, float] = {}) -&gt; float</li>
 </ol>
 <p>Evaluates using a given environment (by default, an empty environment)
-and a random number generator.</p>
+and a random number generator. If there is a random variable in this
+expression which is unassigned in <code class="docutils literal"><span class="pre">env</span></code>, this method uses
+<code class="docutils literal"><span class="pre">random_generator</span></code> to sample a value and use the value to substitute
+all occurrences of the variable in this expression.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -232,7 +235,7 @@ and a random number generator.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
-<li>RuntimeError if a random variable is detected while</li>
+<li>RuntimeError if an unassigned random variable is detected while</li>
 <li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
 </ul>
 </td>
@@ -246,7 +249,10 @@ and a random number generator.</p>
 <li>Evaluate(self: pydrake.symbolic.Expression, arg0: Dict[pydrake.symbolic.Variable, float]) -&gt; float</li>
 </ol>
 <p>Evaluates using a given environment (by default, an empty environment)
-and a random number generator.</p>
+and a random number generator. If there is a random variable in this
+expression which is unassigned in <code class="docutils literal"><span class="pre">env</span></code>, this method uses
+<code class="docutils literal"><span class="pre">random_generator</span></code> to sample a value and use the value to substitute
+all occurrences of the variable in this expression.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -258,7 +264,7 @@ and a random number generator.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
-<li>RuntimeError if a random variable is detected while</li>
+<li>RuntimeError if an unassigned random variable is detected while</li>
 <li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
 </ul>
 </td>
@@ -515,7 +521,10 @@ codebase. In general, a user of this class should explicitly call
 <dt id="pydrake.symbolic.Formula.Evaluate">
 <code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Formula, arg0: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Formula.Evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates using a given environment (by default, an empty environment)
-and a random number generator.</p>
+and a random number generator. If there is a random variable in this
+formula which is unassigned in <code class="docutils literal"><span class="pre">env</span></code>, it uses <code class="docutils literal"><span class="pre">random_generator</span></code>
+to sample a value and use it to substitute all occurrences of the
+random variable in this formula.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -527,7 +536,7 @@ and a random number generator.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if a random variable is detected while</li>
+<li>RuntimeError if an unassigned random variable is detected while</li>
 <li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
 </ul>
 </td>
@@ -969,16 +978,89 @@ the corresponding random variable in an expression or a formula.</p>
 <dd><p>Checks the equality of two variables based on their ID values.</p>
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.symbolic.Variable.Type">
+<em class="property">class </em><code class="descname">Type</code><a class="headerlink" href="#pydrake.symbolic.Variable.Type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>BINARY : &lt; A BINARY variable takes an integer value from {0, 1}.</p>
+<p>RANDOM_EXPONENTIAL : &lt; A random variable whose value will be drawn from &lt; exponential</p>
+</div></blockquote>
+<p>distribution with λ=1.</p>
+<blockquote>
+<div><p>CONTINUOUS : &lt; A CONTINUOUS variable takes a <code class="docutils literal"><span class="pre">double</span></code> value.</p>
+<p>RANDOM_GAUSSIAN : &lt; A random variable whose value will be drawn from &lt; mean-zero,</p>
+</div></blockquote>
+<p>unit-variance normal.</p>
+<blockquote>
+<div><p>BOOLEAN : &lt; A BOOLEAN variable takes a <code class="docutils literal"><span class="pre">bool</span></code> value.</p>
+<p>INTEGER : &lt; An INTEGER variable takes an <code class="docutils literal"><span class="pre">int</span></code> value.</p>
+<p>RANDOM_UNIFORM : &lt; A random variable whose value will be drawn from &lt; uniform real</p>
+</div></blockquote>
+<p>distributed ∈ [0,1).</p>
+<dl class="attribute">
+<dt id="pydrake.symbolic.Variable.Type.BINARY">
+<code class="descname">BINARY</code><em class="property"> = Type.BINARY</em><a class="headerlink" href="#pydrake.symbolic.Variable.Type.BINARY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.Variable.Type.BOOLEAN">
+<code class="descname">BOOLEAN</code><em class="property"> = Type.BOOLEAN</em><a class="headerlink" href="#pydrake.symbolic.Variable.Type.BOOLEAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.Variable.Type.CONTINUOUS">
+<code class="descname">CONTINUOUS</code><em class="property"> = Type.CONTINUOUS</em><a class="headerlink" href="#pydrake.symbolic.Variable.Type.CONTINUOUS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.Variable.Type.INTEGER">
+<code class="descname">INTEGER</code><em class="property"> = Type.INTEGER</em><a class="headerlink" href="#pydrake.symbolic.Variable.Type.INTEGER" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.Variable.Type.RANDOM_EXPONENTIAL">
+<code class="descname">RANDOM_EXPONENTIAL</code><em class="property"> = Type.RANDOM_EXPONENTIAL</em><a class="headerlink" href="#pydrake.symbolic.Variable.Type.RANDOM_EXPONENTIAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.Variable.Type.RANDOM_GAUSSIAN">
+<code class="descname">RANDOM_GAUSSIAN</code><em class="property"> = Type.RANDOM_GAUSSIAN</em><a class="headerlink" href="#pydrake.symbolic.Variable.Type.RANDOM_GAUSSIAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.Variable.Type.RANDOM_UNIFORM">
+<code class="descname">RANDOM_UNIFORM</code><em class="property"> = Type.RANDOM_UNIFORM</em><a class="headerlink" href="#pydrake.symbolic.Variable.Type.RANDOM_UNIFORM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.Variable.Type.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variable.Type</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.Variable.Type.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.Variable.Type.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.symbolic.Variable.Type.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>(self</em> – handle) -&gt; str</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="method">
 <dt id="pydrake.symbolic.Variable.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variable</em>, <em>arg0: unicode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.Variable.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a default value. This overload is used by Eigen when
-EIGEN_INITIALIZE_MATRICES_BY_ZERO is enabled.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variable</em>, <em>name: unicode</em>, <em>type: pydrake.symbolic.Variable.Type = Type.CONTINUOUS</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.Variable.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a variable with a string. If not specified, it has
+CONTINUOUS type by default.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variable.get_id">
 <code class="descname">get_id</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.symbolic.Variable.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.Variable.get_type">
+<code class="descname">get_type</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Variable.Type<a class="headerlink" href="#pydrake.symbolic.Variable.get_type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

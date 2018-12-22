@@ -110,7 +110,6 @@ var menudata={children:[
 {text:"b",url:"namespacemembers_eval.html#index_b"},
 {text:"c",url:"namespacemembers_eval.html#index_c"},
 {text:"k",url:"namespacemembers_eval.html#index_k"},
-{text:"l",url:"namespacemembers_eval.html#index_l"},
 {text:"m",url:"namespacemembers_eval.html#index_m"},
 {text:"s",url:"namespacemembers_eval.html#index_s"},
 {text:"u",url:"namespacemembers_eval.html#index_u"}]}]}]},

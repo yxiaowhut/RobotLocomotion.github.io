@@ -238,9 +238,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8daceb7a3c384d6ad9f305e42b5fc1c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a> () const</td></tr>
 <tr class="memdesc:a8daceb7a3c384d6ad9f305e42b5fc1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time step (or period) used to model <code>this</code> plant as a discrete system with periodic updates.  <a href="#a8daceb7a3c384d6ad9f305e42b5fc1c6">More...</a><br /></td></tr>
 <tr class="separator:a8daceb7a3c384d6ad9f305e42b5fc1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a098f3fd21ecb96e2769dbd4bb4c124f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a098f3fd21ecb96e2769dbd4bb4c124f2">SetDefaultContext</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a098f3fd21ecb96e2769dbd4bb4c124f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets default values in the context.  <a href="#a098f3fd21ecb96e2769dbd4bb4c124f2">More...</a><br /></td></tr>
-<tr class="separator:a098f3fd21ecb96e2769dbd4bb4c124f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae73edc00d493b3f15ba7679cc14830a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae73edc00d493b3f15ba7679cc14830a0">SetDefaultState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const override</td></tr>
 <tr class="memdesc:ae73edc00d493b3f15ba7679cc14830a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state in <code>context</code> so that generalized positions and velocities are zero.  <a href="#ae73edc00d493b3f15ba7679cc14830a0">More...</a><br /></td></tr>
 <tr class="separator:ae73edc00d493b3f15ba7679cc14830a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6439,35 +6436,6 @@ Finalize() stage</h1>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a098f3fd21ecb96e2769dbd4bb4c124f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a098f3fd21ecb96e2769dbd4bb4c124f2">&#9670;&nbsp;</a></span>SetDefaultContext()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetDefaultContext </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Sets default values in the context. </p>
-<p>For mobilizers, this method sets them to their <em>zero</em> state according to <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a5aa27a24c2c9e5ddc38d771e455c3b88" title="Sets the state to what will be considered to be the zero state (position and velocity) for this mobil...">Mobilizer::set_zero_state()</a>. </p>
 
 </div>
 </div>

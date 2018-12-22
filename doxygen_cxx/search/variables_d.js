@@ -39,7 +39,7 @@ var searchData=
   ['num_5finterval_5fy_5f',['num_interval_y_',['../mixed__integer__optimization__util__test_8cc.html#a1cb3d1a5c648d64b0a904397dd8c4510',1,'mixed_integer_optimization_util_test.cc']]],
   ['num_5fintervals_5fper_5fhalf_5faxis',['num_intervals_per_half_axis',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a0d6fc2daabf951fe18a222fab56c2ba6',1,'drake::multibody::GlobalInverseKinematics::Options']]],
   ['num_5fintervals_5fper_5fhalf_5faxis_5f',['num_intervals_per_half_axis_',['../mixed__integer__rotation__constraint__test_8cc.html#ab8fd6503d48bfd19f66a4dbf6ed168d5',1,'mixed_integer_rotation_constraint_test.cc']]],
-  ['num_5fiterations',['num_iterations',['../structdrake_1_1multibody_1_1implicit__stribeck_1_1_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71',1,'drake::multibody::implicit_stribeck::IterationStats']]],
+  ['num_5fiterations',['num_iterations',['../structdrake_1_1multibody_1_1_implicit_stribeck_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71',1,'drake::multibody::ImplicitStribeckSolverIterationStats']]],
   ['num_5fjoints_5f',['num_joints_',['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_iiwa_status_receiver.html#ae8eb3db2b8c3aebc1292e2f9bb607baa',1,'drake::examples::kuka_iiwa_arm::IiwaStatusReceiver']]],
   ['num_5flanes',['num_lanes',['../multilane__connection__test_8cc.html#aeb68c614deded08834f48ef8702a7be8',1,'multilane_connection_test.cc']]],
   ['num_5fmobilizer_5fpositions',['num_mobilizer_positions',['../structdrake_1_1multibody_1_1internal_1_1_body_node_topology.html#a4a5ff7d07880d12e9351773efe930131',1,'drake::multibody::internal::BodyNodeTopology']]],
