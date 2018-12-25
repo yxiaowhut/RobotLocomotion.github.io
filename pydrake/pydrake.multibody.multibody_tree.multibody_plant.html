@@ -1039,41 +1039,28 @@ string <code class="docutils literal"><span class="pre">name</span></code> in <c
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetJointByName">
-<code class="descname">GetJointByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetJointByName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>GetJointByName(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode) -&gt; pydrake.multibody.multibody_tree.Joint</li>
-</ol>
-<p>Returns a constant reference to a joint that is identified by the
-string <code class="docutils literal"><span class="pre">name</span></code> in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
+<code class="descname">GetJointByName</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>name: unicode</em>, <em>model_instance: Optional[pydrake.multibody.multibody_tree.ModelInstanceIndex] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.Joint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetJointByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to a joint that is identified by the
+string <code class="docutils literal"><span class="pre">name</span></code> in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant. If the optional template
+argument is supplied, then the returned value is downcast to the
+specified <code class="docutils literal"><span class="pre">JointType</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">JointType</span></code>:</dt>
+<dd>The specific type of the Joint to be retrieved. It must be a
+subclass of Joint.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no joint with the requested name.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the named joint is not of type <code class="docutils literal"><span class="pre">JointType</span></code> or if</li>
+<li>there is no Joint with that name.</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the joint name occurs in multiple model instances.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">HasJointNamed() to query if there exists a joint in <code class="docutils literal"><span class="pre">this</span></code>
-MultibodyPlant with a given specified name.</p>
-</div>
-<ol class="arabic simple" start="2">
-<li>GetJointByName(self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant, name: unicode, model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex) -&gt; pydrake.multibody.multibody_tree.Joint</li>
-</ol>
-<p>Returns a constant reference to the joint that is uniquely identified
-by the string <code class="docutils literal"><span class="pre">name</span></code> and <code class="docutils literal"><span class="pre">model_instance</span></code> in <code class="docutils literal"><span class="pre">this</span></code>
-MultibodyPlant.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no joint with the requested name.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if <code class="docutils literal"><span class="pre">model_instance</span></code> is not valid for this model.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1876,7 +1863,7 @@ MultibodyPlant::num_velocities() or <code class="docutils literal"><span class="
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7fafbd268ef0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7f2b5e1d7ef0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Welds frames A and B with relative pose <code class="docutils literal"><span class="pre">X_AB</span></code>. That is, the pose of
 frame B in frame A is fixed, with value <code class="docutils literal"><span class="pre">X_AB</span></code>. The call to this
 method creates and adds a new WeldJoint to the model. The new

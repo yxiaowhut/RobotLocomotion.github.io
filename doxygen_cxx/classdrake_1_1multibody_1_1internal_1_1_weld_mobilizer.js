@@ -15,6 +15,5 @@ var classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer =
     [ "MapVelocityToQDot", "classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html#a809b7e57a979541cb075a4695f0bce7d", null ],
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html#a1f328879554a61776b3a8941fbddce73", null ],
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html#ae6529211a049f071e2d3d4cc5b86d20a", null ],
-    [ "ProjectSpatialForce", "classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html#a4426792223a63849fae538b25d61a909", null ],
-    [ "set_zero_state", "classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html#aa7e03d9fc66da18defa5fc679c310549", null ]
+    [ "ProjectSpatialForce", "classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html#a4426792223a63849fae538b25d61a909", null ]
 ];

@@ -112,6 +112,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac47f9ed86739416e02d8d4d490afe59b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#ac47f9ed86739416e02d8d4d490afe59b">num_velocities</a> () const final</td></tr>
 <tr class="memdesc:ac47f9ed86739416e02d8d4d490afe59b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of generalized velocities granted by this mobilizer.  <a href="#ac47f9ed86739416e02d8d4d490afe59b">More...</a><br /></td></tr>
 <tr class="separator:ac47f9ed86739416e02d8d4d490afe59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e03d9fc66da18defa5fc679c310549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa7e03d9fc66da18defa5fc679c310549">set_zero_state</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const final</td></tr>
+<tr class="memdesc:aa7e03d9fc66da18defa5fc679c310549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <code>state</code> to what will be considered to be the <em>zero</em> state (position and velocity) for <code>this</code> mobilizer.  <a href="#aa7e03d9fc66da18defa5fc679c310549">More...</a><br /></td></tr>
+<tr class="separator:aa7e03d9fc66da18defa5fc679c310549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad720dcf409edffcb9439b70de11126a3"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node.html">internal::BodyNode</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#ad720dcf409edffcb9439b70de11126a3">CreateBodyNode</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node.html">internal::BodyNode</a>&lt; T &gt; *parent_node, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; *body, const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a>&lt; T &gt; *mobilizer) const final</td></tr>
 <tr class="memdesc:ad720dcf409edffcb9439b70de11126a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> internal use only.  <a href="#ad720dcf409edffcb9439b70de11126a3">More...</a><br /></td></tr>
 <tr class="separator:ad720dcf409edffcb9439b70de11126a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,9 +188,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abf179b5c1328d17a41d9a31c01821e92 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973e3098a8f916b64f625b6e1f6bc653 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a973e3098a8f916b64f625b6e1f6bc653">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a973e3098a8f916b64f625b6e1f6bc653 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa27a24c2c9e5ddc38d771e455c3b88 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a5aa27a24c2c9e5ddc38d771e455c3b88">set_zero_state</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const =0</td></tr>
-<tr class="memdesc:a5aa27a24c2c9e5ddc38d771e455c3b88 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <code>state</code> to what will be considered to be the <em>zero</em> state (position and velocity) for <code>this</code> mobilizer.  <a href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a5aa27a24c2c9e5ddc38d771e455c3b88">More...</a><br /></td></tr>
-<tr class="separator:a5aa27a24c2c9e5ddc38d771e455c3b88 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a271216ca6db7c7c8c57ec6f1607c91c4 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a271216ca6db7c7c8c57ec6f1607c91c4">CalcAcrossMobilizerSpatialAcceleration</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;vdot) const =0</td></tr>
 <tr class="memdesc:a271216ca6db7c7c8c57ec6f1607c91c4 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the across-mobilizer spatial accelerations <code>A_FM(q, v, v̇)</code> of the outboard frame M in the inboard frame F.  <a href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a271216ca6db7c7c8c57ec6f1607c91c4">More...</a><br /></td></tr>
 <tr class="separator:a271216ca6db7c7c8c57ec6f1607c91c4 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,12 +216,11 @@ Protected Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa9ccd8a4801117750119f3c7b1d50c42"><td class="memItemLeft" align="right" valign="top">virtual Eigen::Matrix&lt; T, <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a5dc1c232f4ce0a1eb3ff92267e3d61ffadd2ea63356eab1bb2d3565d98fe6b70f">kNq</a>, 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa9ccd8a4801117750119f3c7b1d50c42">get_zero_position</a> () const</td></tr>
+<tr class="separator:aa9ccd8a4801117750119f3c7b1d50c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28d084e1907a6a004bcadce444131158"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a28d084e1907a6a004bcadce444131158">GetMutableMultibodyTreeContextOrThrow</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a28d084e1907a6a004bcadce444131158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper method to retrieve a mutable pointer to the <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html" title="MultibodyTreeContext is an object that contains all the information needed to uniquely determine the ...">MultibodyTreeContext</a> object referenced by <code>context</code>.  <a href="#a28d084e1907a6a004bcadce444131158">More...</a><br /></td></tr>
 <tr class="separator:a28d084e1907a6a004bcadce444131158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c27d3016c1871a5d0e4a038c686824f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a9c27d3016c1871a5d0e4a038c686824f">set_default_zero_state</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const</td></tr>
-<tr class="memdesc:a9c27d3016c1871a5d0e4a038c686824f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to set <code>state</code> to a default zero state with all generalized positions and generalized velocities related to this mobilizer to zero.  <a href="#a9c27d3016c1871a5d0e4a038c686824f">More...</a><br /></td></tr>
-<tr class="separator:a9c27d3016c1871a5d0e4a038c686824f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Helper methods to retrieve entries from MultibodyTreeContext.</div></td></tr>
 <tr class="memitem:aa26adbb30080055e3f6d5736fbdf7bab"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;, <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a5dc1c232f4ce0a1eb3ff92267e3d61ffadd2ea63356eab1bb2d3565d98fe6b70f">kNq</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa26adbb30080055e3f6d5736fbdf7bab">get_positions</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:aa26adbb30080055e3f6d5736fbdf7bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to return a const fixed-size Eigen::VectorBlock referencing the segment in the state vector corresponding to <code>this</code> mobilizer's state.  <a href="#aa26adbb30080055e3f6d5736fbdf7bab">More...</a><br /></td></tr>
@@ -668,6 +667,33 @@ class drake::multibody::internal::MobilizerImpl&lt; T, compile_time_num_position
 
 </div>
 </div>
+<a id="aa9ccd8a4801117750119f3c7b1d50c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ccd8a4801117750119f3c7b1d50c42">&#9670;&nbsp;</a></span>get_zero_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Eigen::Matrix&lt;T, <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a5dc1c232f4ce0a1eb3ff92267e3d61ffadd2ea63356eab1bb2d3565d98fe6b70f">kNq</a>, 1&gt; get_zero_position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#abbb9ea60c85c975eae72896dd220f690">QuaternionFloatingMobilizer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a65a0d9a01e46cb97e638b6293e8bfcdd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a65a0d9a01e46cb97e638b6293e8bfcdd">&#9670;&nbsp;</a></span>GetMultibodyTreeContextOrThrow()</h2>
 
@@ -846,8 +872,8 @@ class drake::multibody::internal::MobilizerImpl&lt; T, compile_time_num_position
 
 </div>
 </div>
-<a id="a9c27d3016c1871a5d0e4a038c686824f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c27d3016c1871a5d0e4a038c686824f">&#9670;&nbsp;</a></span>set_default_zero_state()</h2>
+<a id="aa7e03d9fc66da18defa5fc679c310549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e03d9fc66da18defa5fc679c310549">&#9670;&nbsp;</a></span>set_zero_state()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -856,7 +882,7 @@ class drake::multibody::internal::MobilizerImpl&lt; T, compile_time_num_position
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void set_default_zero_state </td>
+          <td class="memname">void set_zero_state </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -875,13 +901,16 @@ class drake::multibody::internal::MobilizerImpl&lt; T, compile_time_num_position
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Helper to set <code>state</code> to a default zero state with all generalized positions and generalized velocities related to this mobilizer to zero. </p>
-<p>Be aware however that this default does not apply in general to all mobilizers and specific subclasses (for instance for unit quaternions) must override this method for correctness. </p>
+<p>Sets the <code>state</code> to what will be considered to be the <em>zero</em> state (position and velocity) for <code>this</code> mobilizer. </p>
+<p>For most mobilizers the <em>zero</em> position corresponds to the value of generalized positions at which the inboard frame F and the outboard frame coincide or, in other words, when <code>X_FM = Id</code> is the identity pose. In the general case however, the zero position will correspond to a value of the generalized positions for which <code>X_FM = X_FM_ref</code> where <code>X_FM_ref</code> may generally be different from the identity transformation. In other words, <code>X_FM_ref = CalcAcrossMobilizerTransform(ref_context)</code> where <code>ref_context</code> is a Context storing a State set to the zero configuration with <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa7e03d9fc66da18defa5fc679c310549" title="Sets the state to what will be considered to be the zero state (position and velocity) for this mobil...">set_zero_state()</a>. In addition, all generalized velocities are set to zero in the <em>zero</em> state.</p>
+<p>Most often the <em>zero</em> position will correspond to setting the vector of generalized positions related to this mobilizer to zero. However, in the general case, setting all generalized coordinates to zero does not correspond to the <em>zero</em> position and it might even not represent a mathematicaly valid one. Consider for instance a quaternion mobilizer, for which its <em>zero</em> position corresponds to the quaternion [1, 0, 0, 0]. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a5aa27a24c2c9e5ddc38d771e455c3b88">Mobilizer&lt; T &gt;</a>.</p>
 
 </div>
 </div>

@@ -1,13 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"classdrake_1_1systems_1_1_discrete_derivative.html#a0af346932bf913c979543659c4140abe":[0,1,0,6,4],
-"classdrake_1_1systems_1_1_discrete_derivative.html#a2b723e838bda0976ea0fa90a0873cfe9":[0,1,0,6,2],
-"classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b":[0,1,0,6,3],
-"classdrake_1_1systems_1_1_discrete_derivative.html#a3af0b2c14b2c75a6301d9d55e52608d0":[0,1,0,6,9],
-"classdrake_1_1systems_1_1_discrete_derivative.html#aa6b4308bca3ce0b1a016d0eff6f91d5c":[0,1,0,6,1],
-"classdrake_1_1systems_1_1_discrete_derivative.html#aacb738d28aede718f8d1b86689e831d4":[0,1,0,6,0],
-"classdrake_1_1systems_1_1_discrete_derivative.html#ac3a310d490afb0c7d60d80053bb151c0":[0,1,0,6,8],
-"classdrake_1_1systems_1_1_discrete_derivative.html#ac9decad70f99b9a02921ac5cb35e3256":[0,1,0,6,7],
 "classdrake_1_1systems_1_1_discrete_derivative.html#add4fa4c0f5ed5fad6500ecb351aa07ad":[0,1,0,6,5],
 "classdrake_1_1systems_1_1_discrete_update_event.html":[2,0,0,18,56],
 "classdrake_1_1systems_1_1_discrete_update_event.html#a1a06f6eec978952211bea0bf5120b464":[2,0,0,18,56,1],
@@ -249,5 +241,13 @@ var NAVTREEINDEX38 =
 "classdrake_1_1systems_1_1_integrator.html#a780cd767bbbe0b92b73c29348a889915":[0,1,0,10,1],
 "classdrake_1_1systems_1_1_integrator.html#aa8c61be21bb9033424146503f0fe311b":[0,1,0,10,8],
 "classdrake_1_1systems_1_1_integrator.html#ab31e6c294928ac7c131675fad3777073":[0,1,0,10,9],
-"classdrake_1_1systems_1_1_integrator.html#ac639858baafaed51f29f41799fe9d866":[0,1,0,10,0]
+"classdrake_1_1systems_1_1_integrator.html#ac639858baafaed51f29f41799fe9d866":[0,1,0,10,0],
+"classdrake_1_1systems_1_1_integrator.html#ad25f3391cf6174560861b9d8fe44b21b":[0,1,0,10,6],
+"classdrake_1_1systems_1_1_integrator_base.html":[2,0,0,18,73],
+"classdrake_1_1systems_1_1_integrator_base.html#a00778f31642c811fde02c61333aa5a25":[2,0,0,18,73,53],
+"classdrake_1_1systems_1_1_integrator_base.html#a07ea35d1b2a56ca9f9eebb7764ca9dfa":[2,0,0,18,73,65],
+"classdrake_1_1systems_1_1_integrator_base.html#a07fc321896adb6729b2e9f82a647019f":[2,0,0,18,73,9],
+"classdrake_1_1systems_1_1_integrator_base.html#a0ada2c620af585fefd269bbf0a7ff1e9":[2,0,0,18,73,16],
+"classdrake_1_1systems_1_1_integrator_base.html#a0ca73e48fb4c24fcf1893459f57eb86a":[2,0,0,18,73,17],
+"classdrake_1_1systems_1_1_integrator_base.html#a0cdd4796b7f98a09da058b9764f13b86":[2,0,0,18,73,68]
 };

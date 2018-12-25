@@ -1,13 +1,5 @@
 var NAVTREEINDEX80 =
 {
-"symbolic__expression_8cc.html#ae96194d93ad39bcb2b7ed22891f44ec7":[3,0,0,3,66,86],
-"symbolic__expression_8cc.html#af0d237e47a39119a457775debdc6c163":[3,0,0,3,66,90],
-"symbolic__expression_8cc.html#af208e5f109a14eae18e12eb779e11c28":[3,0,0,3,66,36],
-"symbolic__expression_8cc.html#af3b7983f85fe6d5d0e6dd623f630cff2":[3,0,0,3,66,72],
-"symbolic__expression_8cc.html#af3cd13d5472028f31c2e70f1b0e08b5d":[3,0,0,3,66,82],
-"symbolic__expression_8cc.html#af3d53e917f4fd1da3301aa00ee90bb8b":[3,0,0,3,66,26],
-"symbolic__expression_8h.html":[3,0,0,3,67],
-"symbolic__expression_8h.html#a008a73e1d2390dc2325d70175fb5410e":[3,0,0,3,67,14],
 "symbolic__expression_8h.html#a07f09fda9abe80d7b775527445374c06":[3,0,0,3,67,76],
 "symbolic__expression_8h.html#a08cadfe5adda620a40258a84d87081f4":[3,0,0,3,67,27],
 "symbolic__expression_8h.html#a0a54f523f3f3f991c16bea9f3466e2d5":[3,0,0,3,67,40],
@@ -249,5 +241,13 @@ var NAVTREEINDEX80 =
 "symbolic__expression__cell_8cc.html#af09a2aae3694e048b16141585c8a1d22":[3,0,0,3,68,59],
 "symbolic__expression__cell_8cc.html#af1c9cfb4bd08050990d594029bdf3c96":[3,0,0,3,68,45],
 "symbolic__expression__cell_8cc.html#af4903cdd87eacec1443bab30c08a3193":[3,0,0,3,68,64],
-"symbolic__expression__cell_8cc.html#af704f97cf07efcfc490be6d40484f56c":[3,0,0,3,68,43]
+"symbolic__expression__cell_8cc.html#af704f97cf07efcfc490be6d40484f56c":[3,0,0,3,68,43],
+"symbolic__expression__cell_8cc.html#afe49b247802df966f88f7114263c1d33":[3,0,0,3,68,83],
+"symbolic__expression__cell_8cc.html#aff64b176576a46d93b35472d756a41ed":[3,0,0,3,68,48],
+"symbolic__expression__cell_8h.html":[3,0,0,3,69],
+"symbolic__expression__cell_8h.html#a04f56a3c541437d21a7763fef7e1125a":[3,0,0,3,69,104],
+"symbolic__expression__cell_8h.html#a05d2f2b8f1fc3014c246798dce76150c":[3,0,0,3,69,68],
+"symbolic__expression__cell_8h.html#a06990aa7d5a28abd53fe48a4afd1d410":[3,0,0,3,69,85],
+"symbolic__expression__cell_8h.html#a07604bda8201f0e20706eb90227c1237":[3,0,0,3,69,49],
+"symbolic__expression__cell_8h.html#a07eec84289aec7d32403e1573845e7c1":[3,0,0,3,69,83]
 };

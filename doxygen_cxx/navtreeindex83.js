@@ -1,13 +1,5 @@
 var NAVTREEINDEX83 =
 {
-"symbolic__formula__visitor__test_8cc.html#affed76198f9e0d58b0e07157582b09c4":[3,0,0,3,1,67,0],
-"symbolic__mixing__scalar__types__test_8cc.html":[3,0,0,3,1,68],
-"symbolic__mixing__scalar__types__test_8cc.html#a021b37972f0779a96dab4784ce7dd4e2":[3,0,0,3,1,68,18],
-"symbolic__mixing__scalar__types__test_8cc.html#a0cbe367e0369db4fdf9f2b7cbe47684e":[3,0,0,3,1,68,4],
-"symbolic__mixing__scalar__types__test_8cc.html#a0deb785e91c32c6638782b3a66caf0c8":[3,0,0,3,1,68,2],
-"symbolic__mixing__scalar__types__test_8cc.html#a4c6c282c8f656328306191ccc890ecb7":[3,0,0,3,1,68,19],
-"symbolic__mixing__scalar__types__test_8cc.html#a64e40a564028eeb547fa9ea72008e822":[3,0,0,3,1,68,15],
-"symbolic__mixing__scalar__types__test_8cc.html#a67b03106622ac8ab49bfd7d9d68a5409":[3,0,0,3,1,68,17],
 "symbolic__mixing__scalar__types__test_8cc.html#a6a2cca08220f561e478512b7e0fb34c2":[3,0,0,3,1,68,6],
 "symbolic__mixing__scalar__types__test_8cc.html#a6ce3791c74793df47999b140d286feaa":[3,0,0,3,1,68,8],
 "symbolic__mixing__scalar__types__test_8cc.html#a8270a3b24c6f395cb37b68ad6207de27":[3,0,0,3,1,68,10],
@@ -249,5 +241,13 @@ var NAVTREEINDEX83 =
 "symbolic__substitution__test_8cc.html#a0d1dd0a36b84ec6fca10f16778758400":[3,0,0,3,1,75,4],
 "symbolic__substitution__test_8cc.html#a0f1a6077085b8e5ba7627548d3fb79af":[3,0,0,3,1,75,1],
 "symbolic__substitution__test_8cc.html#a0fa726a0f9865e8e48d2fcac9c8d206c":[3,0,0,3,1,75,27],
-"symbolic__substitution__test_8cc.html#a17571f41848ae4b7e6b8d4e29cb30773":[3,0,0,3,1,75,25]
+"symbolic__substitution__test_8cc.html#a17571f41848ae4b7e6b8d4e29cb30773":[3,0,0,3,1,75,25],
+"symbolic__substitution__test_8cc.html#a184cc37a0732fe3be6eeaab5a06f5bc9":[3,0,0,3,1,75,13],
+"symbolic__substitution__test_8cc.html#a3874247b5a2ec5c760e95d83c950802a":[3,0,0,3,1,75,20],
+"symbolic__substitution__test_8cc.html#a3f0e9840056a9ed5ed69c254328d395c":[3,0,0,3,1,75,23],
+"symbolic__substitution__test_8cc.html#a3f3300df62bc634d6612037d9b2d3b82":[3,0,0,3,1,75,24],
+"symbolic__substitution__test_8cc.html#a4405a488b669836170f9d96f567e7567":[3,0,0,3,1,75,17],
+"symbolic__substitution__test_8cc.html#a446d9de7646327c402fe7297333eca95":[3,0,0,3,1,75,11],
+"symbolic__substitution__test_8cc.html#a4c6c282c8f656328306191ccc890ecb7":[3,0,0,3,1,75,36],
+"symbolic__substitution__test_8cc.html#a4caf1947bb242ac998899c364fd8a2ba":[3,0,0,3,1,75,10]
 };

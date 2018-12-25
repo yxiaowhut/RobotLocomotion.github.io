@@ -73,7 +73,7 @@ var searchData=
   ['postureconstraint',['PostureConstraint',['../class_posture_constraint.html',1,'']]],
   ['prismaticjoint',['PrismaticJoint',['../classdrake_1_1multibody_1_1_prismatic_joint.html',1,'PrismaticJoint&lt; T &gt;'],['../class_prismatic_joint.html',1,'PrismaticJoint']]],
   ['prismaticmobilizer',['PrismaticMobilizer',['../classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html',1,'drake::multibody::internal']]],
-  ['product',['Product',['../struct_polynomial_1_1_product.html',1,'Polynomial&lt; _CoefficientType &gt;::Product&lt; Rhs, Lhs &gt;'],['../struct_trig_poly_1_1_product.html',1,'TrigPoly&lt; _CoefficientType &gt;::Product&lt; Rhs, Lhs &gt;']]],
+  ['product',['Product',['../struct_trig_poly_1_1_product.html',1,'TrigPoly&lt; _CoefficientType &gt;::Product&lt; Rhs, Lhs &gt;'],['../struct_polynomial_1_1_product.html',1,'Polynomial&lt; _CoefficientType &gt;::Product&lt; Rhs, Lhs &gt;']]],
   ['proximityengine',['ProximityEngine',['../classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html',1,'drake::geometry::internal']]],
   ['proximityengine_3c_20autodiffxd_20_3e',['ProximityEngine&lt; AutoDiffXd &gt;',['../classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html',1,'drake::geometry::internal']]],
   ['proximityengine_3c_20double_20_3e',['ProximityEngine&lt; double &gt;',['../classdrake_1_1geometry_1_1internal_1_1_proximity_engine.html',1,'drake::geometry::internal']]],

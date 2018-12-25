@@ -85,7 +85,7 @@ var searchData=
   ['oracular_5fstate_5festimator_2eh',['oracular_state_estimator.h',['../oracular__state__estimator_8h.html',1,'']]],
   ['oracularstateestimation',['OracularStateEstimation',['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_oracular_state_estimation.html',1,'OracularStateEstimation&lt; T &gt;'],['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_oracular_state_estimation.html#abe7f2f7d64828a48d2a82b0c843f11d3',1,'drake::examples::kuka_iiwa_arm::OracularStateEstimation::OracularStateEstimation()']]],
   ['order',['order',['../classdrake_1_1maliput_1_1multilane_1_1_cubic_polynomial.html#abcc41a4e499b9ebcdc71c5e213c7c22f',1,'drake::maliput::multilane::CubicPolynomial']]],
-  ['orientation',['orientation',['../classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e9245a4aacc4f96b26b3af9d0d5665',1,'drake::trajectories::PiecewiseQuaternionSlerp::orientation()'],['../classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#ab73122e1e2a158ae2c8e51f3ef5b2517',1,'drake::maliput::multilane::RoadCurve::Orientation()']]],
+  ['orientation',['Orientation',['../classdrake_1_1maliput_1_1multilane_1_1_road_curve.html#ab73122e1e2a158ae2c8e51f3ef5b2517',1,'drake::maliput::multilane::RoadCurve::Orientation()'],['../classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e9245a4aacc4f96b26b3af9d0d5665',1,'drake::trajectories::PiecewiseQuaternionSlerp::orientation()']]],
   ['orientation_5fconstraint_2ecc',['orientation_constraint.cc',['../orientation__constraint_8cc.html',1,'']]],
   ['orientation_5fconstraint_2eh',['orientation_constraint.h',['../orientation__constraint_8h.html',1,'']]],
   ['orientation_5fconstraint_5ftest_2ecc',['orientation_constraint_test.cc',['../orientation__constraint__test_8cc.html',1,'']]],

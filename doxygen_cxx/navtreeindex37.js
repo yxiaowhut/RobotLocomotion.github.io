@@ -1,13 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"classdrake_1_1systems_1_1_continuous_state.html#a8120a62d813139e3777f32de9b1e9041":[2,0,0,18,41,12],
-"classdrake_1_1systems_1_1_continuous_state.html#a82b6637e316ee41cd356a46efece8f46":[2,0,0,18,41,13],
-"classdrake_1_1systems_1_1_continuous_state.html#a8e6159f1b1affb19e7e539abc3a490df":[2,0,0,18,41,7],
-"classdrake_1_1systems_1_1_continuous_state.html#a99150adfc55ef9056b7feddc006d8878":[2,0,0,18,41,25],
-"classdrake_1_1systems_1_1_continuous_state.html#a9bdb59cf7f9cb2a45839c39a952552d2":[2,0,0,18,41,2],
-"classdrake_1_1systems_1_1_continuous_state.html#aa7eb2e24e194284af170d923c9017729":[2,0,0,18,41,16],
-"classdrake_1_1systems_1_1_continuous_state.html#aac8a3aad57388d77300bbebad3de1ff6":[2,0,0,18,41,18],
-"classdrake_1_1systems_1_1_continuous_state.html#ac06d214ff02e0d9f5ed636e55743bcc7":[2,0,0,18,41,1],
 "classdrake_1_1systems_1_1_continuous_state.html#ac39b3348257262124904dfe95fff8221":[2,0,0,18,41,3],
 "classdrake_1_1systems_1_1_continuous_state.html#ac9268f6e13f208019d9131cbe98dde0d":[2,0,0,18,41,9],
 "classdrake_1_1systems_1_1_continuous_state.html#acf42544d45810d7c74083ba2b00bb9d0":[2,0,0,18,41,27],
@@ -249,5 +241,13 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1_diagram_state.html#ad7d04574cf162f4b6e2ed84e42069809":[2,0,0,18,54,1],
 "classdrake_1_1systems_1_1_diagram_state.html#ae79cf6c7c9e09b57a7dcddf6352e6f0a":[2,0,0,18,54,5],
 "classdrake_1_1systems_1_1_discrete_derivative.html":[0,1,0,6],
-"classdrake_1_1systems_1_1_discrete_derivative.html#a061840a96c15813ea3d49efa57d074f6":[0,1,0,6,6]
+"classdrake_1_1systems_1_1_discrete_derivative.html#a061840a96c15813ea3d49efa57d074f6":[0,1,0,6,6],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a0af346932bf913c979543659c4140abe":[0,1,0,6,4],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a2b723e838bda0976ea0fa90a0873cfe9":[0,1,0,6,2],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b":[0,1,0,6,3],
+"classdrake_1_1systems_1_1_discrete_derivative.html#a3af0b2c14b2c75a6301d9d55e52608d0":[0,1,0,6,9],
+"classdrake_1_1systems_1_1_discrete_derivative.html#aa6b4308bca3ce0b1a016d0eff6f91d5c":[0,1,0,6,1],
+"classdrake_1_1systems_1_1_discrete_derivative.html#aacb738d28aede718f8d1b86689e831d4":[0,1,0,6,0],
+"classdrake_1_1systems_1_1_discrete_derivative.html#ac3a310d490afb0c7d60d80053bb151c0":[0,1,0,6,8],
+"classdrake_1_1systems_1_1_discrete_derivative.html#ac9decad70f99b9a02921ac5cb35e3256":[0,1,0,6,7]
 };

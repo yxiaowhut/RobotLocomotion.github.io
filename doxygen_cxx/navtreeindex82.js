@@ -1,13 +1,5 @@
 var NAVTREEINDEX82 =
 {
-"symbolic__formula_8h.html#a05740a421f5a1c3ff96463eaa65682d0":[3,0,0,3,72,43],
-"symbolic__formula_8h.html#a09c7a845583db868b2d30a66c2616397":[3,0,0,3,72,81],
-"symbolic__formula_8h.html#a0a0f6e1f6ff658b6a0b46ce0f048a5f3":[3,0,0,3,72,82],
-"symbolic__formula_8h.html#a0bb4f53b295b2105a77d9578fff68c5e":[3,0,0,3,72,64],
-"symbolic__formula_8h.html#a0e2970a5e4acf251820880cc4bee1a84":[3,0,0,3,72,53],
-"symbolic__formula_8h.html#a0e63a21e3a4861f1a6fccbc7667cd298":[3,0,0,3,72,71],
-"symbolic__formula_8h.html#a10a756a422ebc5e372bb1ecc5ccab5be":[3,0,0,3,72,39],
-"symbolic__formula_8h.html#a1860e7373cbab3826845de76f4c6fc6a":[3,0,0,3,72,20],
 "symbolic__formula_8h.html#a1b37f14ce7a17532970ad74b4182267d":[3,0,0,3,72,79],
 "symbolic__formula_8h.html#a1d4d5abce6202d5c1e711750cf6d4fb6":[3,0,0,3,72,49],
 "symbolic__formula_8h.html#a1fd6bb55d96be271f1a64cfd26ffa286":[3,0,0,3,72,69],
@@ -249,5 +241,13 @@ var NAVTREEINDEX82 =
 "symbolic__formula__visitor__test_8cc.html#a3d1619526f145282d66090dacc4d26f1":[3,0,0,3,1,67,6],
 "symbolic__formula__visitor__test_8cc.html#a71302c26bce9c11454401d41f0e1c861":[3,0,0,3,1,67,7],
 "symbolic__formula__visitor__test_8cc.html#a86a74733d9c7415775f5cee98a2642f0":[3,0,0,3,1,67,4],
-"symbolic__formula__visitor__test_8cc.html#ae583b9eea49dbe16505e650157f9ed32":[3,0,0,3,1,67,3]
+"symbolic__formula__visitor__test_8cc.html#ae583b9eea49dbe16505e650157f9ed32":[3,0,0,3,1,67,3],
+"symbolic__formula__visitor__test_8cc.html#affed76198f9e0d58b0e07157582b09c4":[3,0,0,3,1,67,0],
+"symbolic__mixing__scalar__types__test_8cc.html":[3,0,0,3,1,68],
+"symbolic__mixing__scalar__types__test_8cc.html#a021b37972f0779a96dab4784ce7dd4e2":[3,0,0,3,1,68,18],
+"symbolic__mixing__scalar__types__test_8cc.html#a0cbe367e0369db4fdf9f2b7cbe47684e":[3,0,0,3,1,68,4],
+"symbolic__mixing__scalar__types__test_8cc.html#a0deb785e91c32c6638782b3a66caf0c8":[3,0,0,3,1,68,2],
+"symbolic__mixing__scalar__types__test_8cc.html#a4c6c282c8f656328306191ccc890ecb7":[3,0,0,3,1,68,19],
+"symbolic__mixing__scalar__types__test_8cc.html#a64e40a564028eeb547fa9ea72008e822":[3,0,0,3,1,68,15],
+"symbolic__mixing__scalar__types__test_8cc.html#a67b03106622ac8ab49bfd7d9d68a5409":[3,0,0,3,1,68,17]
 };

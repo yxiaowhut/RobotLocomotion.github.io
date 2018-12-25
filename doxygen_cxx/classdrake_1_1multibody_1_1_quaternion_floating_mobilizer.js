@@ -14,6 +14,7 @@ var classdrake_1_1multibody_1_1_quaternion_floating_mobilizer =
     [ "get_position", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#ad015e1cca6659372cc61a009642b9554", null ],
     [ "get_quaternion", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#a93d60ca383b30ce1a79dbd8f5ca492ec", null ],
     [ "get_translational_velocity", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#ae39f455e6eb2b698186a795c34b117b6", null ],
+    [ "get_zero_position", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#abbb9ea60c85c975eae72896dd220f690", null ],
     [ "MapQDotToVelocity", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#a9b3f8e222f0f86dc9ea56d5307061dbc", null ],
     [ "MapVelocityToQDot", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#a454d7d787d38bc132c75ce36217169ea", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#a49207ba9bdd846ba71f3becfce615662", null ],
@@ -27,6 +28,5 @@ var classdrake_1_1multibody_1_1_quaternion_floating_mobilizer =
     [ "set_quaternion", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#a370c4c2c3f4c47605b55d808f8d568d7", null ],
     [ "set_translational_velocity", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#abc78d15907f361f2e13888196f003229", null ],
     [ "set_translational_velocity", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#ad4a50da8939a4893403222298c8a7735", null ],
-    [ "set_zero_state", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#ab5a7651bb8b15c07bade18e44d742697", null ],
     [ "SetFromRotationMatrix", "classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#a6f3961a66ba9e3f2ee219dc5f81cf376", null ]
 ];

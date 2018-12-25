@@ -1,13 +1,5 @@
 var NAVTREEINDEX70 =
 {
-"rbt__collisions__test_8cc.html#a8109bb41535e7003058c3bb1d7e58e25":[3,0,0,0,1,5,0,4,0],
-"rbt__collisions__test_8cc.html#aa26c37f100746fda788b5a6e99bb9460":[3,0,0,0,1,5,0,4,4],
-"rbt__collisions__test_8cc.html#aaf0e20e7183662254959fa56809a4261":[3,0,0,0,1,5,0,4,6],
-"rbt__collisions__test_8cc.html#ab266e20bec7be83e0d83a62a91e94236":[3,0,0,0,1,5,0,4,5],
-"rbt__collisions__test_8cc.html#ae040923b0ac844b4f267792cbf8d207c":[3,0,0,0,1,5,0,4,2],
-"rbt__collisions__test_8cc.html#aec7134486e9d063bbafbb762bca95ab2":[3,0,0,0,1,5,0,4,7],
-"rbt__collisions__test_8cc.html#afe1cdbf336d3a53a0fd2d1e6ad5c4a04":[3,0,0,0,1,5,0,4,8],
-"rbt__compute__torque_8h.html":[3,0,0,0,3,0,2,1],
 "rbt__compute__torque_8h.html#a1dd2125a88d2f0649082b032b8025dcc":[3,0,0,0,3,0,2,1,0],
 "rbt__differential__inverse__kinematics_8cc.html":[3,0,0,0,0,1,3],
 "rbt__differential__inverse__kinematics_8cc.html#a6e645d32c2b3c79a62f360770bac696b":[3,0,0,0,0,1,3,0],
@@ -249,5 +241,13 @@ var NAVTREEINDEX70 =
 "rigid__body__tree__dynamics__test_8cc.html":[3,0,0,0,1,5,0,12],
 "rigid__body__tree__dynamics__test_8cc.html#a24e415fb7f01cc8807daf237e2222abf":[3,0,0,0,1,5,0,12,0],
 "rigid__body__tree__dynamics__test_8cc.html#a398f90b0322e188260470105b37472a1":[3,0,0,0,1,5,0,12,1],
-"rigid__body__tree__dynamics__test_8cc.html#a5f355e0e9a4fe92fccab15c054dd8b8f":[3,0,0,0,1,5,0,12,2]
+"rigid__body__tree__dynamics__test_8cc.html#a5f355e0e9a4fe92fccab15c054dd8b8f":[3,0,0,0,1,5,0,12,2],
+"rigid__body__tree__face__extraction__test_8cc.html":[3,0,0,0,1,5,0,13],
+"rigid__body__tree__kinematics__test_8cc.html":[3,0,0,0,1,5,0,14],
+"rigid__body__tree__kinematics__test_8cc.html#a144f8340ed7523bebb91a582e8b1747b":[3,0,0,0,1,5,0,14,1],
+"rigid__body__tree__kinematics__test_8cc.html#a33b8ee629b3972f74a0289003ea0c877":[3,0,0,0,1,5,0,14,6],
+"rigid__body__tree__kinematics__test_8cc.html#a39ede0e0c8d051841947b1eb5cbe36ed":[3,0,0,0,1,5,0,14,12],
+"rigid__body__tree__kinematics__test_8cc.html#a5a409883daf509c58046feaac1665cb3":[3,0,0,0,1,5,0,14,4],
+"rigid__body__tree__kinematics__test_8cc.html#a601e7172dd7e5869e0c9d3ac16586805":[3,0,0,0,1,5,0,14,0],
+"rigid__body__tree__kinematics__test_8cc.html#a7393fafc88dd8c971c610a186d2477d7":[3,0,0,0,1,5,0,14,8]
 };

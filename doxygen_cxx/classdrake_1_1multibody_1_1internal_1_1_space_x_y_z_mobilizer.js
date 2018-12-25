@@ -20,6 +20,5 @@ var classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer =
     [ "set_angles", "classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer.html#ab711ed82c980da080cb945d6bb4e257b", null ],
     [ "set_angular_velocity", "classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer.html#af523663d5ef6b9ffaafa75c2a25aec4e", null ],
     [ "set_angular_velocity", "classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer.html#af0f42b5e91211649449048602466ff98", null ],
-    [ "set_zero_state", "classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer.html#ab5a7651bb8b15c07bade18e44d742697", null ],
     [ "SetFromRotationMatrix", "classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer.html#aebf73659acb09f6b081b5deccf35b82c", null ]
 ];

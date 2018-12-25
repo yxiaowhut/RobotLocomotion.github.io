@@ -13,11 +13,12 @@ var classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl =
     [ "get_mutable_velocities", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a002cb7e250418091afff3896359dc956", null ],
     [ "get_positions", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa26adbb30080055e3f6d5736fbdf7bab", null ],
     [ "get_velocities", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a790d96251a8490bdfdbc167a98b01d70", null ],
+    [ "get_zero_position", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa9ccd8a4801117750119f3c7b1d50c42", null ],
     [ "GetMultibodyTreeContextOrThrow", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a65a0d9a01e46cb97e638b6293e8bfcdd", null ],
     [ "GetMutableMultibodyTreeContextOrThrow", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a28d084e1907a6a004bcadce444131158", null ],
     [ "num_positions", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a1679c3151f11e68426d967bb83641e7b", null ],
     [ "num_velocities", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#ac47f9ed86739416e02d8d4d490afe59b", null ],
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a0161bd34f1f5480f0dad26ecb788af33", null ],
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a9ad744977c88eea6a156683d73cc5afd", null ],
-    [ "set_default_zero_state", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a9c27d3016c1871a5d0e4a038c686824f", null ]
+    [ "set_zero_state", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa7e03d9fc66da18defa5fc679c310549", null ]
 ];

@@ -1,13 +1,5 @@
 var NAVTREEINDEX78 =
 {
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[2,0,0,16,46,4],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[2,0,0,16,46,2],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[2,0,0,16,46,6],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5":[2,0,0,16,46,3],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[2,0,0,16,46,1],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb":[2,0,0,16,46,5],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4":[2,0,0,16,46,0],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ae50bc0c53de4da41809fb75c465f04d6":[2,0,0,16,46,7],
 "structdrake_1_1solvers_1_1_scs_solver_details.html":[2,0,0,16,55],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a175a256729d92d673605def5f6eac769":[2,0,0,16,55,11],
 "structdrake_1_1solvers_1_1_scs_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[2,0,0,16,55,0],
@@ -249,5 +241,13 @@ var NAVTREEINDEX78 =
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[2,0,0,18,11,35,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html":[2,0,0,18,11,36],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[2,0,0,18,11,36,0],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html":[2,0,0,18,11,37]
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html":[2,0,0,18,11,37],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[2,0,0,18,11,37,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html":[2,0,0,18,11,38],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[2,0,0,18,11,38,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html":[2,0,0,18,11,39],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[2,0,0,18,11,39,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html":[2,0,0,18,11,40],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#ae99b366a9a1126b3fc6014ceb7eca8d5":[2,0,0,18,11,40,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits.html":[2,0,0,18,11,41]
 };

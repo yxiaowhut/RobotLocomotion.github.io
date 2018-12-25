@@ -14,11 +14,10 @@ var classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer =
     [ "get_angular_rate", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#afd58b7de214c52417b8a7b06f5683ebe", null ],
     [ "MapQDotToVelocity", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#a9b3f8e222f0f86dc9ea56d5307061dbc", null ],
     [ "MapVelocityToQDot", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#a454d7d787d38bc132c75ce36217169ea", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#ae62a5a4ffaa995d6be5d4d3e8fe16bb7", null ],
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#aec03a9bfb78e676c6f882c27cf0ee7f9", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#ae62a5a4ffaa995d6be5d4d3e8fe16bb7", null ],
     [ "ProjectSpatialForce", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#a3b491142ba7765400e42e6bc24b39240", null ],
     [ "revolute_axis", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#aacf23a66ccb8427ff099cae2be7e4443", null ],
     [ "set_angle", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#ad39f7b656becb384aa0eb6e078809f79", null ],
-    [ "set_angular_rate", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#a7212b1a1d87bd03e945167035fc9ec42", null ],
-    [ "set_zero_state", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#ab5a7651bb8b15c07bade18e44d742697", null ]
+    [ "set_angular_rate", "classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#a7212b1a1d87bd03e945167035fc9ec42", null ]
 ];

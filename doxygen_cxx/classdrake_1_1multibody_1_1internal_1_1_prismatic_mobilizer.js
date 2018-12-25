@@ -14,11 +14,10 @@ var classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer =
     [ "get_translation_rate", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a7c686857040ad423b708ad6ecbed51a6", null ],
     [ "MapQDotToVelocity", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a05ac85da34bf06df02f1c87d86652311", null ],
     [ "MapVelocityToQDot", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a809b7e57a979541cb075a4695f0bce7d", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a2d35d4863041807c4932236e74d08b42", null ],
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#add8ba610c0b868a51f6bc0f167ae2125", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a2d35d4863041807c4932236e74d08b42", null ],
     [ "ProjectSpatialForce", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a4426792223a63849fae538b25d61a909", null ],
     [ "set_translation", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a844f7b48e102971977df702daf4f1208", null ],
     [ "set_translation_rate", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a6a8901a06a1c55e628b41a7280da2969", null ],
-    [ "set_zero_state", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#aa7e03d9fc66da18defa5fc679c310549", null ],
     [ "translation_axis", "classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#af6693bdd8cd7c223b8ac7b6015dd2ab4", null ]
 ];
