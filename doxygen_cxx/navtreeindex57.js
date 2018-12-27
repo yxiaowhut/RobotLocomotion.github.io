@@ -1,5 +1,7 @@
 var NAVTREEINDEX57 =
 {
+"geometry__base_2segment_8cc.html":[3,0,0,1,0,2,12],
+"geometry__base_2segment_8h.html":[3,0,0,1,0,2,13],
 "geometry__base__test_8cc.html":[3,0,0,1,0,2,0,0],
 "geometry__base__test_8cc.html#a022f809aeddf465b27bc1b383df1fa07":[3,0,0,1,0,2,0,0,1],
 "geometry__base__test_8cc.html#a1e66fcb1b71adbb61d33c42b54d78ec0":[3,0,0,1,0,2,0,0,0],
@@ -84,8 +86,8 @@ var NAVTREEINDEX57 =
 "global__inverse__kinematics_8cc.html":[3,0,0,0,1,10],
 "global__inverse__kinematics_8cc.html#a35b63489da77be7b9acfa18f4e29fb3c":[3,0,0,0,1,10,0],
 "global__inverse__kinematics_8h.html":[3,0,0,0,1,11],
-"globals.html":[3,1,0],
 "globals.html":[3,1,0,0],
+"globals.html":[3,1,0],
 "globals_b.html":[3,1,0,1],
 "globals_c.html":[3,1,0,2],
 "globals_d.html":[3,1,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "group__multibody__spatial__vectors.html":[0,2,0,0,1,1],
 "group__perception__systems.html":[0,1,7],
 "group__planning.html":[0,2,3],
-"group__primitive__systems.html":[0,1,0],
-"group__primitive__systems.html#ga0743dce3cc9342b68048b00d006a1808":[0,1,0,27],
-"group__primitive__systems.html#ga9c51fcacf1408beacf928f0d16c0d2f5":[0,1,0,25]
+"group__primitive__systems.html":[0,1,0]
 };

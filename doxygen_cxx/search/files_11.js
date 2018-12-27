@@ -8,6 +8,7 @@ var searchData=
   ['random_5fpolynomial_5fmatrix_2eh',['random_polynomial_matrix.h',['../random__polynomial__matrix_8h.html',1,'']]],
   ['random_5frotation_2ecc',['random_rotation.cc',['../random__rotation_8cc.html',1,'']]],
   ['random_5frotation_2eh',['random_rotation.h',['../random__rotation_8h.html',1,'']]],
+  ['random_5frotation_5ftest_2ecc',['random_rotation_test.cc',['../random__rotation__test_8cc.html',1,'']]],
   ['random_5fsource_2ecc',['random_source.cc',['../random__source_8cc.html',1,'']]],
   ['random_5fsource_2eh',['random_source.h',['../random__source_8h.html',1,'']]],
   ['random_5fsource_5ftest_2ecc',['random_source_test.cc',['../random__source__test_8cc.html',1,'']]],

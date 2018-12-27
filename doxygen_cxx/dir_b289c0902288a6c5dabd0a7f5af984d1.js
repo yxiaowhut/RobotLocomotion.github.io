@@ -17,6 +17,7 @@ var dir_b289c0902288a6c5dabd0a7f5af984d1 =
     [ "orthonormal_basis_test.cc", "orthonormal__basis__test_8cc.html", null ],
     [ "quadratic_form_test.cc", "quadratic__form__test_8cc.html", null ],
     [ "quaternion_test.cc", "quaternion__test_8cc.html", "quaternion__test_8cc" ],
+    [ "random_rotation_test.cc", "random__rotation__test_8cc.html", null ],
     [ "rigid_transform_test.cc", "rigid__transform__test_8cc.html", null ],
     [ "roll_pitch_yaw_test.cc", "roll__pitch__yaw__test_8cc.html", null ],
     [ "rotation_conversion_test.cc", "rotation__conversion__test_8cc.html", "rotation__conversion__test_8cc" ],

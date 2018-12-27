@@ -23,6 +23,7 @@ var searchData=
   ['rootstype',['RootsType',['../class_polynomial.html#ac85a9dd1caea93fdcdbffd1432f70060',1,'Polynomial']]],
   ['roottype',['RootType',['../class_polynomial.html#a81b4c054beeae81d6d01bfd5412a89cd',1,'Polynomial']]],
   ['rotationmatrixd',['RotationMatrixd',['../classdrake_1_1math_1_1_rotation_matrix.html#a9771c03401395a6e30c398f5663799ed',1,'drake::math::RotationMatrix']]],
+  ['rowvector',['RowVector',['../namespacedrake.html#a3eb9dffa1f3d48e4c5fe406e5a4617fe',1,'drake']]],
   ['rowvector2',['RowVector2',['../namespacedrake.html#afc54e1f7aa3341a5f6b305705452d9bd',1,'drake']]],
   ['rowvector3',['RowVector3',['../namespacedrake.html#aee4ae0d841ea1629551bf77fd5d9ec9e',1,'drake']]],
   ['rowvector4',['RowVector4',['../namespacedrake.html#aa9b373b2971391d9054b431d8a3e4b33',1,'drake']]],

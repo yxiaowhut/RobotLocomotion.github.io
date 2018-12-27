@@ -9,6 +9,7 @@ var searchData=
   ['vartype',['VarType',['../class_polynomial.html#adb36a6e938f851b1a5d1a443c2dadb8a',1,'Polynomial::VarType()'],['../class_trig_poly.html#a6c566872610727dbc3cc51d069189697',1,'TrigPoly::VarType()'],['../classdrake_1_1solvers_1_1_mathematical_program.html#aaed05d048d1ac7b1d4960e328c20d02f',1,'drake::solvers::MathematicalProgram::VarType()'],['../classdrake_1_1solvers_1_1_system_identification.html#a6c566872610727dbc3cc51d069189697',1,'drake::solvers::SystemIdentification::VarType()']]],
   ['vecin',['VecIn',['../namespacedrake_1_1solvers_1_1detail.html#aa5d10905528abe80736acc381035a23d',1,'drake::solvers::detail']]],
   ['vecout',['VecOut',['../namespacedrake_1_1solvers_1_1detail.html#a898ced6021eb53d59f92e69afc9b4910',1,'drake::solvers::detail']]],
+  ['vector',['Vector',['../namespacedrake.html#a01ae662d5635b7c9efe03d15d976f7a8',1,'drake']]],
   ['vector1',['Vector1',['../namespacedrake.html#af359dfdb84d6c13b606bb3ed7b821e23',1,'drake']]],
   ['vector1d',['Vector1d',['../namespacedrake.html#a6d923e79e6e92c2556edd86520145077',1,'drake']]],
   ['vector2',['Vector2',['../namespacedrake.html#ab9f8b7dbd727440c2dd207bf43812f1e',1,'drake']]],
