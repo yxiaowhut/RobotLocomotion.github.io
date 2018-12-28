@@ -1,6 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#a789bb634fbbbc0569e5e9c59584b3657":[2,0,0,12,9,2],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a7d1bd7b221e380e1bac184d3792abf5f":[2,0,0,12,9,8],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#a9b4bcc3ca011dbb3e484ebb19ce7faa5":[2,0,0,12,9,14],
 "classdrake_1_1multibody_1_1_articulated_body_inertia.html#aa4218b7c32aa0b01cb0b9a6c2dc44a16":[2,0,0,12,9,7],
@@ -249,5 +248,6 @@ var NAVTREEINDEX20 =
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#ae8c862b3463a701945bb25b1ff57ccde":[2,0,0,12,27,2],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#aeca9df3c0415cce50c7175d9ee46a52e":[2,0,0,12,27,14],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#afc8287b4b8b58ad7b7e873d283c8b289":[2,0,0,12,27,4],
-"classdrake_1_1multibody_1_1_mobilizer_tester.html":[2,0,0,12,28]
+"classdrake_1_1multibody_1_1_mobilizer_tester.html":[2,0,0,12,28],
+"classdrake_1_1multibody_1_1_mobilizer_tester.html#a48928c6612db907f3a50d0126a79169f":[2,0,0,12,28,7]
 };

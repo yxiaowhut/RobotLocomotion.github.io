@@ -17,6 +17,7 @@ var classdrake_1_1multibody_1_1_revolute_joint =
     [ "revolute_axis", "classdrake_1_1multibody_1_1_revolute_joint.html#aacf23a66ccb8427ff099cae2be7e4443", null ],
     [ "set_angle", "classdrake_1_1multibody_1_1_revolute_joint.html#ae7694cbff7ae64c752fd446aa8eba843", null ],
     [ "set_angular_rate", "classdrake_1_1multibody_1_1_revolute_joint.html#ab01a357a30cd9cd570e133c5ced20a83", null ],
+    [ "set_random_angle_distribution", "classdrake_1_1multibody_1_1_revolute_joint.html#a4aa0283d494b40fc4b0956b3e40ab99b", null ],
     [ "upper_limit", "classdrake_1_1multibody_1_1_revolute_joint.html#a6b365c2176aa40ba6b1b50b16b6ee603", null ],
     [ "JointTester", "classdrake_1_1multibody_1_1_revolute_joint.html#a4c23b3d7f4f0a32f27069602e0d8397f", null ],
     [ "RevoluteJoint", "classdrake_1_1multibody_1_1_revolute_joint.html#a47733949e40b86ffe8776dea4a154459", null ]

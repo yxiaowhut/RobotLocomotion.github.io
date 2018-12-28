@@ -217,6 +217,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad293b63a81a28c455fdfb7e5f04c35b0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad293b63a81a28c455fdfb7e5f04c35b0">get_joint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> joint_index) const</td></tr>
 <tr class="memdesc:ad293b63a81a28c455fdfb7e5f04c35b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the joint with unique index <code>joint_index</code>.  <a href="#ad293b63a81a28c455fdfb7e5f04c35b0">More...</a><br /></td></tr>
 <tr class="separator:ad293b63a81a28c455fdfb7e5f04c35b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab56a3621a122cdff1729f71b756a75d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab56a3621a122cdff1729f71b756a75d0">get_mutable_joint</a> (<a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a> joint_index)</td></tr>
+<tr class="memdesc:ab56a3621a122cdff1729f71b756a75d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the joint with unique index <code>joint_index</code>.  <a href="#ab56a3621a122cdff1729f71b756a75d0">More...</a><br /></td></tr>
+<tr class="separator:ab56a3621a122cdff1729f71b756a75d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb237ffaadc7323d817ba0e07e78a8f4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html">JointActuator</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abb237ffaadc7323d817ba0e07e78a8f4">get_joint_actuator</a> (<a class="el" href="namespacedrake_1_1multibody.html#acc810ff385ed4dede2e011b0b6fd3f2c">JointActuatorIndex</a> actuator_index) const</td></tr>
 <tr class="memdesc:abb237ffaadc7323d817ba0e07e78a8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the joint actuator with unique index <code>actuator_index</code>.  <a href="#abb237ffaadc7323d817ba0e07e78a8f4">More...</a><br /></td></tr>
 <tr class="separator:abb237ffaadc7323d817ba0e07e78a8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,6 +244,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae73edc00d493b3f15ba7679cc14830a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae73edc00d493b3f15ba7679cc14830a0">SetDefaultState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const override</td></tr>
 <tr class="memdesc:ae73edc00d493b3f15ba7679cc14830a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state in <code>context</code> so that generalized positions and velocities are zero.  <a href="#ae73edc00d493b3f15ba7679cc14830a0">More...</a><br /></td></tr>
 <tr class="separator:ae73edc00d493b3f15ba7679cc14830a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a470c99c41ab31927ae50c9996786bd10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a470c99c41ab31927ae50c9996786bd10">SetRandomState</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *generator) const override</td></tr>
+<tr class="memdesc:a470c99c41ab31927ae50c9996786bd10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns random values to all elements of the state, by drawing samples independently for each joint/floating-base (coming soon: and then solving a mathematical program to "project" these samples onto the registered system constraints).  <a href="#a470c99c41ab31927ae50c9996786bd10">More...</a><br /></td></tr>
+<tr class="separator:a470c99c41ab31927ae50c9996786bd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a3aeb03d90d213da4702f2dc5e484fc86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3aeb03d90d213da4702f2dc5e484fc86">MultibodyPlant</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a> &amp;)=delete</td></tr>
 <tr class="separator:a3aeb03d90d213da4702f2dc5e484fc86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -396,6 +402,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19361c135196cb155e2c8bca02dcbc78"><td class="memTemplItemLeft" align="right" valign="top">const JointType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a19361c135196cb155e2c8bca02dcbc78">GetJointByName</a> (const std::string &amp;<a class="el" href="geometry__base__test_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; model_instance=<a class="el" href="namespacedrake.html#acd293644b847dc4549de80a090d66625">nullopt</a>) const</td></tr>
 <tr class="memdesc:a19361c135196cb155e2c8bca02dcbc78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to a joint that is identified by the string <code>name</code> in <code>this</code> MultibodyPlant.  <a href="#a19361c135196cb155e2c8bca02dcbc78">More...</a><br /></td></tr>
 <tr class="separator:a19361c135196cb155e2c8bca02dcbc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392df3335cb46b0c87f943bdd9fd5279"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class JointType = Joint&gt; </td></tr>
+<tr class="memitem:a392df3335cb46b0c87f943bdd9fd5279"><td class="memTemplItemLeft" align="right" valign="top">JointType&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a392df3335cb46b0c87f943bdd9fd5279">GetMutableJointByName</a> (const std::string &amp;<a class="el" href="geometry__base__test_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; model_instance=<a class="el" href="namespacedrake.html#acd293644b847dc4549de80a090d66625">nullopt</a>)</td></tr>
+<tr class="memdesc:a392df3335cb46b0c87f943bdd9fd5279"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of GetJointByName that returns a mutable reference.  <a href="#a392df3335cb46b0c87f943bdd9fd5279">More...</a><br /></td></tr>
+<tr class="separator:a392df3335cb46b0c87f943bdd9fd5279"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab835365a3c40185b23454f7e08cad083"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html">JointActuator</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ab835365a3c40185b23454f7e08cad083">GetJointActuatorByName</a> (const std::string &amp;<a class="el" href="geometry__base__test_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
 <tr class="memdesc:ab835365a3c40185b23454f7e08cad083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to an actuator that is identified by the string <code>name</code> in <code>this</code> MultibodyPlant.  <a href="#ab835365a3c40185b23454f7e08cad083">More...</a><br /></td></tr>
 <tr class="separator:ab835365a3c40185b23454f7e08cad083"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3738,6 +3748,40 @@ Finalize() stage</h1>
 
 </div>
 </div>
+<a id="ab56a3621a122cdff1729f71b756a75d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab56a3621a122cdff1729f71b756a75d0">&#9670;&nbsp;</a></span>get_mutable_joint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a>&lt;T&gt;&amp; get_mutable_joint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#a27485be8a33f5ed2ee7f3f8de9dd40c0">JointIndex</a>&#160;</td>
+          <td class="paramname"><em>joint_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the joint with unique index <code>joint_index</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>when <code>joint_index</code> does not correspond to a joint in this model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aef692dc2241640a308801f7dfae902ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef692dc2241640a308801f7dfae902ba">&#9670;&nbsp;</a></span>get_source_id()</h2>
 
@@ -4283,6 +4327,45 @@ Finalize() stage</h1>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a392df3335cb46b0c87f943bdd9fd5279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392df3335cb46b0c87f943bdd9fd5279">&#9670;&nbsp;</a></span>GetMutableJointByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JointType&lt;T&gt;&amp; GetMutableJointByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a9f2ec0f640175b49517f43f37073bfc8">optional</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td>
+          <td class="paramname"><em>model_instance</em> = <code><a class="el" href="namespacedrake.html#acd293644b847dc4549de80a090d66625">nullopt</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A version of GetJointByName that returns a mutable reference. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a19361c135196cb155e2c8bca02dcbc78" title="Returns a constant reference to a joint that is identified by the string name in this MultibodyPlant...">GetJointByName</a>. </dd></dl>
 
 </div>
 </div>
@@ -6905,6 +6988,51 @@ Finalize() stage</h1>
 
 <p>Sets the vector of generalized positions for <code>model_instance</code> in <code>q</code> using <code>q_instance</code>, leaving all other elements in the array untouched. </p>
 <p>This method throws an exception if <code>q</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model. ">MultibodyPlant::num_positions()</a> or <code>q_instance</code> is not of size <code>MultibodyPlant::num_positions(model_instance)</code>. </p>
+
+</div>
+</div>
+<a id="a470c99c41ab31927ae50c9996786bd10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a470c99c41ab31927ae50c9996786bd10">&#9670;&nbsp;</a></span>SetRandomState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetRandomState </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *&#160;</td>
+          <td class="paramname"><em>generator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assigns random values to all elements of the state, by drawing samples independently for each joint/floating-base (coming soon: and then solving a mathematical program to "project" these samples onto the registered system constraints). </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__stochastic__systems.html">Stochastic Systems</a> </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,16 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a67fc0881f44b136413ae41566f3ca30e":[2,0,0,16,2,18,0],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a6aa7e60eaeef16d1be7b947be032889a":[2,0,0,16,2,18,9],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a78cc6707c6d6521b0eb804251fb1b77d":[2,0,0,16,2,18,11],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a8d7d2d62a51cc23583fbbf2a3329e072":[2,0,0,16,2,18,1],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#abe873f5660e08ac3a27643d188bc9bcd":[2,0,0,16,2,18,10],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#ac5e9dd317e3e156cb0c43374e7b9a084":[2,0,0,16,2,18,2],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#ad03c7753c08323ca049303909c98d790":[2,0,0,16,2,18,6],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#aefd96b6bc8b50f3d12f41541891408ec":[2,0,0,16,2,18,3],
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html":[2,0,0,16,2,19],
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a313157717b1a6f3db7b9408943d0f918":[2,0,0,16,2,19,2],
+"classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a3dca6351eeb1e5824b767665cc858deb":[2,0,0,16,2,19,5],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a6b8dbb993c3fecc623f624e92ba89e21":[2,0,0,16,2,19,1],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a762d10113ca5e3e58e8b36fcccebd9f4":[2,0,0,16,2,19,6],
 "classdrake_1_1solvers_1_1test_1_1_non_convex_q_pproblem1.html#a7f969dac371e2d577659aea7e502a20c":[2,0,0,16,2,19,3],
@@ -238,16 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_expression.html#aa57efef61100945c693ecb05dadf6dcf":[2,0,0,17,4,85],
 "classdrake_1_1symbolic_1_1_expression.html#aa58ea04bbb5e8d24c2af8a17c64d19f8":[2,0,0,17,4,97],
 "classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0":[2,0,0,17,4,87],
-"classdrake_1_1symbolic_1_1_expression.html#aa8204863236e57c7a074fb90bceb61a1":[2,0,0,17,4,63],
-"classdrake_1_1symbolic_1_1_expression.html#aa951d192140621a51f31d68ead6f3e4d":[2,0,0,17,4,72],
-"classdrake_1_1symbolic_1_1_expression.html#aaac9dbc23642b1ac598352136298a405":[2,0,0,17,4,105],
-"classdrake_1_1symbolic_1_1_expression.html#aabae426c9b32ec48a5655f1e2bafd44c":[2,0,0,17,4,68],
-"classdrake_1_1symbolic_1_1_expression.html#ab049cfca69564b8713a3fd0a0e3bbba9":[2,0,0,17,4,59],
-"classdrake_1_1symbolic_1_1_expression.html#ab069e1d04f34ba9f9eff1ee8e97cca6e":[2,0,0,17,4,55],
-"classdrake_1_1symbolic_1_1_expression.html#ab1f25146d0496147d632a0ac390553fb":[2,0,0,17,4,93],
-"classdrake_1_1symbolic_1_1_expression.html#ab25c184099b9829299a3b739f04561f0":[2,0,0,17,4,6],
-"classdrake_1_1symbolic_1_1_expression.html#ab296e6587d7bf86a4f1b54b5005df4a6":[2,0,0,17,4,54],
-"classdrake_1_1symbolic_1_1_expression.html#ab6046c9bad9a1c5a1ba51ec6157376c3":[2,0,0,17,4,45],
-"classdrake_1_1symbolic_1_1_expression.html#ab73b3ce4e5998cc0ea0a8f0cb649ba4a":[2,0,0,17,4,21],
-"classdrake_1_1symbolic_1_1_expression.html#ab80898f4f9f0131bad841b21c3db4122":[2,0,0,17,4,0]
+"classdrake_1_1symbolic_1_1_expression.html#aa8204863236e57c7a074fb90bceb61a1":[2,0,0,17,4,63]
 };

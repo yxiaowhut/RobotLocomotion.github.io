@@ -22,7 +22,7 @@ var searchData=
   ['serial1_5f',['serial1_',['../fixed__input__port__value__test_8cc.html#a28508885f1f0d0a1dadf63c4dca6c2ab',1,'fixed_input_port_value_test.cc']]],
   ['setup_5ftime',['setup_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb',1,'drake::solvers::OsqpSolverDetails']]],
   ['shape',['shape',['../class_drake_shapes_1_1_geometry.html#a8b9f7758a8bd2bef680aeecc40bcfe04',1,'DrakeShapes::Geometry']]],
-  ['shoulder_5f',['shoulder_',['../acrobot__parser__test_8cc.html#a06a581a397dec0f3243b3ca4a5e24578',1,'shoulder_():&#160;acrobot_parser_test.cc'],['../multibody__plant__test_8cc.html#a06a581a397dec0f3243b3ca4a5e24578',1,'shoulder_():&#160;multibody_plant_test.cc']]],
+  ['shoulder_5f',['shoulder_',['../acrobot__parser__test_8cc.html#a06a581a397dec0f3243b3ca4a5e24578',1,'shoulder_():&#160;acrobot_parser_test.cc'],['../multibody__plant__test_8cc.html#a5321f72349dc6f85997aaa14eae85f21',1,'shoulder_():&#160;multibody_plant_test.cc']]],
   ['shoulder_5finboard_5fframe_5f',['shoulder_inboard_frame_',['../tree__from__mobilizers__test_8cc.html#a43c879cd011c4df816864abf2c0daeef',1,'tree_from_mobilizers_test.cc']]],
   ['shoulder_5fmobilizer_5f',['shoulder_mobilizer_',['../tree__from__mobilizers__test_8cc.html#a29143c3c4f68c2f5dcd8584794b72f19',1,'tree_from_mobilizers_test.cc']]],
   ['shoulder_5foutboard_5fframe_5f',['shoulder_outboard_frame_',['../tree__from__mobilizers__test_8cc.html#ab3ef5f7d499ff1f783029b8c8178b73b',1,'tree_from_mobilizers_test.cc']]],

@@ -1572,5 +1572,6 @@ var hierarchy =
     [ "Vector3< double >", "class_vector3_3_01double_01_4.html", null ],
     [ "Vector6< double >", "class_vector6_3_01double_01_4.html", null ],
     [ "Vector6< T >", "class_vector6_3_01_t_01_4.html", null ],
-    [ "VectorX< double >", "class_vector_x_3_01double_01_4.html", null ]
+    [ "VectorX< double >", "class_vector_x_3_01double_01_4.html", null ],
+    [ "VectorX< drake::symbolic::Expression >", "class_vector_x_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ]
 ];

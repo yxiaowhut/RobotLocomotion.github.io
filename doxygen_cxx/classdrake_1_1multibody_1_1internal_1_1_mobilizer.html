@@ -175,6 +175,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5aa27a24c2c9e5ddc38d771e455c3b88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a5aa27a24c2c9e5ddc38d771e455c3b88">set_zero_state</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const =0</td></tr>
 <tr class="memdesc:a5aa27a24c2c9e5ddc38d771e455c3b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <code>state</code> to what will be considered to be the <em>zero</em> state (position and velocity) for <code>this</code> mobilizer.  <a href="#a5aa27a24c2c9e5ddc38d771e455c3b88">More...</a><br /></td></tr>
 <tr class="separator:a5aa27a24c2c9e5ddc38d771e455c3b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22309313c4735a8585e0f065d09abd60"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a22309313c4735a8585e0f065d09abd60">CalcAcrossMobilizerSpatialVelocity</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v) const =0</td></tr>
+<tr class="memdesc:a22309313c4735a8585e0f065d09abd60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the across-mobilizer spatial velocity <code>V_FM(q, v)</code> of the outboard frame M in the inboard frame F.  <a href="#a22309313c4735a8585e0f065d09abd60">More...</a><br /></td></tr>
+<tr class="separator:a22309313c4735a8585e0f065d09abd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a271216ca6db7c7c8c57ec6f1607c91c4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a271216ca6db7c7c8c57ec6f1607c91c4">CalcAcrossMobilizerSpatialAcceleration</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;vdot) const =0</td></tr>
 <tr class="memdesc:a271216ca6db7c7c8c57ec6f1607c91c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the across-mobilizer spatial accelerations <code>A_FM(q, v, v̇)</code> of the outboard frame M in the inboard frame F.  <a href="#a271216ca6db7c7c8c57ec6f1607c91c4">More...</a><br /></td></tr>
 <tr class="separator:a271216ca6db7c7c8c57ec6f1607c91c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,7 +232,7 @@ class drake::multibody::internal::Mobilizer&lt; T &gt;</h3>
 <p>A Mobilizer describes the kinematics relationship between an inboard frame F and an outboard frame M, introducing an nq-dimensional vector of generalized coordinates q and an nv-dimensional vector of generalized velocities v. Notice that in general <code>nq != nv</code>, though <code>nq == nv</code> is a very common case. The kinematic relationships introduced by a Mobilizer are fully specified by, [Seth 2010]:</p>
 <ul>
 <li>X_FM(q): The pose of the outboard frame M as measured and expressed in the inboard frame F, as a function of the mobilizer's generalized positions. This pose is computed by CalcAcrossMobilizerTransform().</li>
-<li>H_FM(q): the geometric Jacobian matrix describing the relationship between generalized velocities <code>v ∈ ℝⁿᵛ</code> and the spatial velocity <code>V_FM ∈ M⁶</code>. This Jacobian can be thought of as the application: <code>v ∈ ℝⁿᵛ → M⁶: V_FM(q, v) = H_FM(q) * v</code>, where M⁶ is the vector space of "motion vectors" (be aware that while M⁶ is introduced in [Featherstone 2008, Ch. 2] spatial velocities in Drake are not Plücker vectors as in Featherstone's book). A Mobilizer implements this operator in the method CalcAcrossMobilizerSpatialVelocity().</li>
+<li>H_FM(q): the geometric Jacobian matrix describing the relationship between generalized velocities <code>v ∈ ℝⁿᵛ</code> and the spatial velocity <code>V_FM ∈ M⁶</code>. This Jacobian can be thought of as the application: <code>v ∈ ℝⁿᵛ → M⁶: V_FM(q, v) = H_FM(q) * v</code>, where M⁶ is the vector space of "motion vectors" (be aware that while M⁶ is introduced in [Featherstone 2008, Ch. 2] spatial velocities in Drake are not Plücker vectors as in Featherstone's book). A Mobilizer implements this operator in the method <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a22309313c4735a8585e0f065d09abd60" title="Computes the across-mobilizer spatial velocity V_FM(q, v) of the outboard frame M in the inboard fram...">CalcAcrossMobilizerSpatialVelocity()</a>.</li>
 <li>H_FMᵀ(q): The transpose of the geometric Jacobian <code>H_FM(q)</code> describing the relationship between the spatial force <code>F_Mo_F ∈ F⁶</code> and the generalized forces <code>tau ∈ ℝⁿᵛ</code>, where F⁶ is the vector space of "force vectors" (be aware that while F⁶ is introduced in [Featherstone 2008, Ch. 2] spatial forces in Drake are not Plücker vectors as in Featherstone's book.) This mathematical object can be thought of as the application: <code>F_Mo_F ∈ F⁶ → ℝⁿᵛ: tau = H_FMᵀ(q) * F_Mo_F</code>, where <code>Mo</code> is M's origin (see <a class="el" href="group__multibody__frames__and__bodies.html">Frames and Bodies</a> for the monogram notation in use.) A Mobilizer implements this operator in the method <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a7795f7cf542298d92089b3f3e0007fcb" title="Projects the spatial force F_Mo on this mobilizer&#39;s outboard frame M onto the sub-space of motions sp...">ProjectSpatialForce()</a>.</li>
 <li>Hdot_FM(q, v): The time derivative of the Jacobian matrix involved in the computation of the spatial acceleration <code>A_FM(q, v, v̇)</code> between the F and M frames as the application: <code>v̇ ∈ ℝⁿᵛ → M⁶: A_FM(q, v, v̇) = H_FM(q) * v̇ + Ḣ_FM(q, v) * v</code>. A Mobilizer implements this application in <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a271216ca6db7c7c8c57ec6f1607c91c4" title="Computes the across-mobilizer spatial accelerations A_FM(q, v, v̇) of the outboard frame M in the inb...">CalcAcrossMobilizerSpatialAcceleration()</a>.</li>
 <li>N(q): The kinematic coupling matrix describing the relationship between the rate of change of generalized coordinates and the generalized velocities by <code>q̇ = N(q)⋅v</code>, [Seth 2010]. N(q) is an <code>nq x nv</code> matrix. A Mobilizer implements this application in <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a1dbd64e78f3a522c007e242334223e93" title="Computes the kinematic mapping q̇ = N(q)⋅v between generalized velocities v and time derivatives of ...">MapVelocityToQDot()</a>.</li>
@@ -259,7 +262,7 @@ class drake::multibody::internal::Mobilizer&lt; T &gt;</h3>
   P = tauᵀ * v
 </pre><p> Notice that spatial forces in the null space of <code>H_FM(q)</code> do not perform any work. Since the result from the previous two expressions must be equal, the Jacobian operator <code>H_FM(q)</code> and the transpose operator <code>H_FMᵀ(q)</code> are constrained by: </p><pre>
   (H_FMᵀ(q) * F) * v = Fᵀ * (H_FM(q) * v), ∀ v ∈ ℝⁿᵛ ∧ `F ∈ F⁶`
-</pre><p> Therefore, this enforces a relationship to the operations implemented by CalcAcrossMobilizerSpatialVelocity() and <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a7795f7cf542298d92089b3f3e0007fcb" title="Projects the spatial force F_Mo on this mobilizer&#39;s outboard frame M onto the sub-space of motions sp...">ProjectSpatialForce()</a> for any Mobilizer object.</p>
+</pre><p> Therefore, this enforces a relationship to the operations implemented by <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a22309313c4735a8585e0f065d09abd60" title="Computes the across-mobilizer spatial velocity V_FM(q, v) of the outboard frame M in the inboard fram...">CalcAcrossMobilizerSpatialVelocity()</a> and <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a7795f7cf542298d92089b3f3e0007fcb" title="Projects the spatial force F_Mo on this mobilizer&#39;s outboard frame M onto the sub-space of motions sp...">ProjectSpatialForce()</a> for any Mobilizer object.</p>
 <ul>
 <li>[Jain 2010] Jain, A., 2010. Robot and multibody dynamics: analysis and algorithms. Springer Science &amp; Business Media.</li>
 <li>[Seth 2010] Seth, A., Sherman, M., Eastman, P. and Delp, S., 2010. Minimal formulation of joint motion for biomechanisms. Nonlinear dynamics, 62(1), pp.291-303.</li>
@@ -421,6 +424,60 @@ class drake::multibody::internal::Mobilizer&lt; T &gt;</h3>
 </dl>
 
 <p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer.html#a987d7525c960c6aa39641cb5712bf5b8">SpaceXYZMobilizer&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#a987d7525c960c6aa39641cb5712bf5b8">QuaternionFloatingMobilizer&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#a987d7525c960c6aa39641cb5712bf5b8">RevoluteMobilizer&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#ad523ab8836f0bf99220c6959aab817c2">PrismaticMobilizer&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html#ad523ab8836f0bf99220c6959aab817c2">WeldMobilizer&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a22309313c4735a8585e0f065d09abd60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22309313c4735a8585e0f065d09abd60">&#9670;&nbsp;</a></span>CalcAcrossMobilizerSpatialVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt;T&gt; CalcAcrossMobilizerSpatialVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the across-mobilizer spatial velocity <code>V_FM(q, v)</code> of the outboard frame M in the inboard frame F. </p>
+<p>This method can be thought of as the application of the operator <code>H_FM(q)</code> to the input vector of generalized velocities <code>v</code>, i.e. the output of this method is the application <code>v ∈ ℝⁿᵛ → M⁶: V_FM(q, v) = H_FM(q) * v</code>, where <code>nv</code> is the number of generalized velocities of this mobilizer (see <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a6aca305be7e0dbd081a568c1f73d3848" title="Returns the number of generalized velocities granted by this mobilizer. ">num_velocities()</a>) and M⁶ is the vector space of "motion vectors" (be aware that while M⁶ is introduced in [Featherstone 2008, Ch. 2] spatial velocities in Drake are not Plücker vectors as in Featherstone's book). Therefore we say this method is the <em>operator form</em> of the Jacobian matrix <code>H_FM(q)</code>. This method aborts in Debug builds if the dimension of the input vector of generalized velocities has a size different from <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a6aca305be7e0dbd081a568c1f73d3848" title="Returns the number of generalized velocities granted by this mobilizer. ">num_velocities()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context of the parent tree that owns this mobilizer. This mobilizer's generalized positions q are inferred from this context. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A vector of generalized velocities. It must live in ℝⁿᵛ. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">V_FM</td><td>The across-mobilizer spatial velocity of the outboard frame M measured and expressed in the inboard frame F. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_space_x_y_z_mobilizer.html#acffa635ba7934bb240666a3e84cb1e7c">SpaceXYZMobilizer&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_quaternion_floating_mobilizer.html#acffa635ba7934bb240666a3e84cb1e7c">QuaternionFloatingMobilizer&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_revolute_mobilizer.html#acffa635ba7934bb240666a3e84cb1e7c">RevoluteMobilizer&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_prismatic_mobilizer.html#a8dfc7c889736d44cd4ba8a713b1e7d81">PrismaticMobilizer&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_weld_mobilizer.html#a8dfc7c889736d44cd4ba8a713b1e7d81">WeldMobilizer&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -1199,8 +1256,8 @@ class drake::multibody::internal::Mobilizer&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a9ae88d1acbce7e08de78fe051029f1c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ae88d1acbce7e08de78fe051029f1c8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a973e3098a8f916b64f625b6e1f6bc653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973e3098a8f916b64f625b6e1f6bc653">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1211,7 +1268,7 @@ class drake::multibody::internal::Mobilizer&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1225,8 +1282,8 @@ class drake::multibody::internal::Mobilizer&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a973e3098a8f916b64f625b6e1f6bc653"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973e3098a8f916b64f625b6e1f6bc653">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a9ae88d1acbce7e08de78fe051029f1c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae88d1acbce7e08de78fe051029f1c8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1237,7 +1294,7 @@ class drake::multibody::internal::Mobilizer&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1373,7 +1430,7 @@ class drake::multibody::internal::Mobilizer&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Projects the spatial force <code>F_Mo</code> on <code>this</code> mobilizer's outboard frame M onto the sub-space of motions spanned by the geometric Jacobian <code>H_FM(q)</code> to obtain the generalized forces <code>tau</code> (i.e. </p>
-<p>the active components of <code>F_Mo</code>). </p><dl class="section see"><dt>See also</dt><dd>CalcAcrossMobilizerSpatialVelocity() and this class' documentation for the definition of the geometric Jacobian <code>H_FM(q)</code>.</dd></dl>
+<p>the active components of <code>F_Mo</code>). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a22309313c4735a8585e0f065d09abd60" title="Computes the across-mobilizer spatial velocity V_FM(q, v) of the outboard frame M in the inboard fram...">CalcAcrossMobilizerSpatialVelocity()</a> and this class' documentation for the definition of the geometric Jacobian <code>H_FM(q)</code>.</dd></dl>
 <p>This method can be thought of as the application of the transpose operator <code>H_FMᵀ(q)</code> to the input spatial force <code>F_Mo_F</code>, i.e. the output of this method is the application <code>F_Mo_F ∈ F⁶ → ℝⁿᵛ: tau = H_FMᵀ(q) * F_Mo_F</code>, where <code>nv</code> is the number of generalized velocities of this mobilizer (see <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a6aca305be7e0dbd081a568c1f73d3848" title="Returns the number of generalized velocities granted by this mobilizer. ">num_velocities()</a>) and F⁶ is the vector space of "force vectors" (be aware that while F⁶ is introduced in [Featherstone 2008, Ch. 2] spatial forces in Drake are not Plücker vectors as in Featherstone's book). Therefore we say this method is the <em>operator form</em> of the Jacobian matrix transpose <code>H_FMᵀ(q)</code>. This method aborts in Debug builds if the dimension of the output vector of generalized forces has a size different from <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a6aca305be7e0dbd081a568c1f73d3848" title="Returns the number of generalized velocities granted by this mobilizer. ">num_velocities()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

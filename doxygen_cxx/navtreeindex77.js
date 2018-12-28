@@ -1,5 +1,16 @@
 var NAVTREEINDEX77 =
 {
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a148f4adaece02fe36243c84bafd8d467":[2,0,0,12,2,0,2],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09":[2,0,0,12,2,0,18],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a1b267a517e862262fc1f50dd62c48f41":[2,0,0,12,2,0,1],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a1ea36727a50f62443fbf5770544a69d4":[2,0,0,12,2,0,13],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[2,0,0,12,2,0,14],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a35881bb6864939d024dcffcef32de848":[2,0,0,12,2,0,19],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a3cde9da79a1a8aba25ee8aacdb2ffd39":[2,0,0,12,2,0,6],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a613d499d309c4906c2df5db6580dd665":[2,0,0,12,2,0,8],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a658dd9b46db6b0a4572e7d6412e6bb40":[2,0,0,12,2,0,12],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a7c4a40b91dff8e9d8d5c4d39b3e93df2":[2,0,0,12,2,0,10],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a83d22b9ce633cccb2b57d1739e59d94d":[2,0,0,12,2,0,5],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a98c1d757c37c73a7454c7922094ca9ac":[2,0,0,12,2,0,20],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#aa24636f116f235120b6b9c48c083a7e2":[2,0,0,12,2,0,3],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#ac3d38d1b83f93e18d5a4633beef4639f":[2,0,0,12,2,0,4],
@@ -238,16 +249,5 @@ var NAVTREEINDEX77 =
 "structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[2,0,0,16,38],
 "structdrake_1_1solvers_1_1_new_variable_names.html":[2,0,0,16,39],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_eigen_1_1_dynamic_01_4.html":[2,0,0,16,40],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_eigen_1_1_dynamic_01_4.html#ad33eb23d345a07265641fbcaa4c75744":[2,0,0,16,40,0],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[2,0,0,16,41],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[2,0,0,16,42],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[2,0,0,16,42,0],
-"structdrake_1_1solvers_1_1_nlopt_solver_details.html":[2,0,0,16,44],
-"structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[2,0,0,16,44,0],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html":[2,0,0,16,46],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[2,0,0,16,46,4],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[2,0,0,16,46,2],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[2,0,0,16,46,6],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5":[2,0,0,16,46,3],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[2,0,0,16,46,1]
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_eigen_1_1_dynamic_01_4.html#ad33eb23d345a07265641fbcaa4c75744":[2,0,0,16,40,0]
 };

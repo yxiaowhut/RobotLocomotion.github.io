@@ -1,5 +1,9 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a6f3d914695e66945fc14bb098058b1f3":[2,0,0,12,48,10],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a76cdcb77d7658e74e7e1f9fc0026e9bb":[2,0,0,12,48,6],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a7d173a00c859d5a2e3cfe3ce6939edd9":[2,0,0,12,48,5],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#adbef805dde23a6114cde3d86d0154422":[2,0,0,12,48,3],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#ae3115bd02fecbbfbd3b862aefc85a527":[2,0,0,12,48,0],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html":[2,0,0,12,49],
 "classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a0b1293f0e09ec2d3df0a9eaeab6baa9a":[2,0,0,12,49,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#a76b446a93fbda8add95f80d98d315d1c":[2,0,0,12,1,5,6],
 "classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#a7ace6229fb9c6bb760641a0ab79594c1":[2,0,0,12,1,5,10],
 "classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#a7f29765103d50cc026310045c07f7924":[2,0,0,12,1,5,11],
-"classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#a995d6a40e9f9e38f086699c8aa45a58c":[2,0,0,12,1,5,5],
-"classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#a9bc0faad1e73b029e34548b48a1d3f51":[2,0,0,12,1,5,12],
-"classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#aaa3969453cc80c97f65a08aedbae5f45":[2,0,0,12,1,5,16],
-"classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#ab170f98c45fb6a4136d06ccbdfe2eb55":[2,0,0,12,1,5,15],
-"classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#ab84f618845170be912046af71b1edc12":[2,0,0,12,1,5,3]
+"classdrake_1_1multibody_1_1collision_1_1_fcl_model.html#a995d6a40e9f9e38f086699c8aa45a58c":[2,0,0,12,1,5,5]
 };

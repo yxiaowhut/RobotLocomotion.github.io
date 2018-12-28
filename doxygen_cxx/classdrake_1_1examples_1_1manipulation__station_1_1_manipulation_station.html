@@ -88,6 +88,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1examples_1_1manipulation
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ManipulationStation&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__systems.html">Modeling Dynamical Systems</a> &raquo; <a class="el" href="group__example__systems.html">Examples</a> &raquo; <a class="el" href="group__manipulation__station__systems.html">Manipulation Station</a></div></div>  </div>
@@ -107,88 +108,80 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5ae700cfd75062f5279ca6f9e82058c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#af5ae700cfd75062f5279ca6f9e82058c">SetupDefaultStation</a> (<a class="el" href="namespacedrake_1_1examples_1_1manipulation__station.html#ad52e754b3d3e57fdbf865d450da88b8d">IiwaCollisionModel</a> collision_model=<a class="el" href="namespacedrake_1_1examples_1_1manipulation__station.html#ad52e754b3d3e57fdbf865d450da88b8dae9e690a25422e7ed157a6f924b06c20c">IiwaCollisionModel::kNoCollision</a>)</td></tr>
 <tr class="memdesc:af5ae700cfd75062f5279ca6f9e82058c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a default iiwa, wsg, cupboard, and 8020 frame for the MIT Intelligent Robot Manipulation class, then calls <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a29150974d6cae8767ab9705c8aa1f18f" title="Notifies the ManipulationStation that the IIWA robot model instance can be identified by iiwa_instanc...">RegisterIiwaControllerModel()</a> and <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a807001b50292ea12e2aac3cf95c4bf7d" title="Notifies the ManipulationStation that the WSG gripper model instance can be identified by wsg_instanc...">RegisterWsgControllerModel()</a> with the appropriate arguments.  <a href="#af5ae700cfd75062f5279ca6f9e82058c">More...</a><br /></td></tr>
 <tr class="separator:af5ae700cfd75062f5279ca6f9e82058c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29150974d6cae8767ab9705c8aa1f18f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a29150974d6cae8767ab9705c8aa1f18f">RegisterIiwaControllerModel</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;model_path, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> iiwa_instance, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;child_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC)</td></tr>
+<tr class="memitem:a29150974d6cae8767ab9705c8aa1f18f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a29150974d6cae8767ab9705c8aa1f18f">RegisterIiwaControllerModel</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> std::string &amp;model_path, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> iiwa_instance, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;child_frame, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC)</td></tr>
 <tr class="memdesc:a29150974d6cae8767ab9705c8aa1f18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> that the IIWA robot model instance can be identified by <code>iiwa_instance</code> as well as necessary information to reload model for the internal controller's use.  <a href="#a29150974d6cae8767ab9705c8aa1f18f">More...</a><br /></td></tr>
 <tr class="separator:a29150974d6cae8767ab9705c8aa1f18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a807001b50292ea12e2aac3cf95c4bf7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a807001b50292ea12e2aac3cf95c4bf7d">RegisterWsgControllerModel</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;model_path, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> wsg_instance, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;child_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC)</td></tr>
+<tr class="memitem:a807001b50292ea12e2aac3cf95c4bf7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a807001b50292ea12e2aac3cf95c4bf7d">RegisterWsgControllerModel</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> std::string &amp;model_path, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a> wsg_instance, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;child_frame, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PC)</td></tr>
 <tr class="memdesc:a807001b50292ea12e2aac3cf95c4bf7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">ManipulationStation</a> that the WSG gripper model instance can be identified by <code>wsg_instance</code>, as well as necessary information to reload model for the internal controller's use.  <a href="#a807001b50292ea12e2aac3cf95c4bf7d">More...</a><br /></td></tr>
 <tr class="separator:a807001b50292ea12e2aac3cf95c4bf7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25036caccec91e7d1bb2e534dbe5c096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a25036caccec91e7d1bb2e534dbe5c096">RegisterRgbdCamera</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;<a class="el" href="geometry__base__test_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PCameraBody, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> geometry::dev::render::DepthCameraProperties &amp;properties)</td></tr>
+<tr class="memitem:a25036caccec91e7d1bb2e534dbe5c096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a25036caccec91e7d1bb2e534dbe5c096">RegisterRgbdCamera</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> std::string &amp;<a class="el" href="geometry__base__test_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;parent_frame, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;X_PCameraBody, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> geometry::dev::render::DepthCameraProperties &amp;properties)</td></tr>
 <tr class="memdesc:a25036caccec91e7d1bb2e534dbe5c096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a RGBD camera.  <a href="#a25036caccec91e7d1bb2e534dbe5c096">More...</a><br /></td></tr>
 <tr class="separator:a25036caccec91e7d1bb2e534dbe5c096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fee61d7a783cade1a3d07fe86284d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27">Finalize</a> ()</td></tr>
 <tr class="memdesc:a8fee61d7a783cade1a3d07fe86284d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Users <em>must</em> call <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a8fee61d7a783cade1a3d07fe86284d27" title="Users must call Finalize() after making any additions to the multibody plant and before using this cl...">Finalize()</a> after making any additions to the multibody plant and before using this class in the Systems framework.  <a href="#a8fee61d7a783cade1a3d07fe86284d27">More...</a><br /></td></tr>
 <tr class="separator:a8fee61d7a783cade1a3d07fe86284d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f94d1c2b9f9f4bfba53ce45e3ec917e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a1f94d1c2b9f9f4bfba53ce45e3ec917e">get_multibody_plant</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memitem:a1f94d1c2b9f9f4bfba53ce45e3ec917e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a1f94d1c2b9f9f4bfba53ce45e3ec917e">get_multibody_plant</a> () <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
 <tr class="memdesc:a1f94d1c2b9f9f4bfba53ce45e3ec917e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the main plant responsible for the dynamics of the robot and the environment.  <a href="#a1f94d1c2b9f9f4bfba53ce45e3ec917e">More...</a><br /></td></tr>
 <tr class="separator:a1f94d1c2b9f9f4bfba53ce45e3ec917e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ef9bcc1fa2f4f3250cd5d3f93f16c54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a9ef9bcc1fa2f4f3250cd5d3f93f16c54">get_mutable_multibody_plant</a> ()</td></tr>
 <tr class="memdesc:a9ef9bcc1fa2f4f3250cd5d3f93f16c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the main plant responsible for the dynamics of the robot and the environment.  <a href="#a9ef9bcc1fa2f4f3250cd5d3f93f16c54">More...</a><br /></td></tr>
 <tr class="separator:a9ef9bcc1fa2f4f3250cd5d3f93f16c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17e62927aa3fcd951414114295385150"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a17e62927aa3fcd951414114295385150">get_scene_graph</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memitem:a17e62927aa3fcd951414114295385150"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a17e62927aa3fcd951414114295385150">get_scene_graph</a> () <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
 <tr class="memdesc:a17e62927aa3fcd951414114295385150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the SceneGraph responsible for all of the geometry for the robot and the environment.  <a href="#a17e62927aa3fcd951414114295385150">More...</a><br /></td></tr>
 <tr class="separator:a17e62927aa3fcd951414114295385150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a196f98e5d68f6075be19efa313e68e10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a196f98e5d68f6075be19efa313e68e10">get_mutable_scene_graph</a> ()</td></tr>
 <tr class="memdesc:a196f98e5d68f6075be19efa313e68e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the SceneGraph responsible for all of the geometry for the robot and the environment.  <a href="#a196f98e5d68f6075be19efa313e68e10">More...</a><br /></td></tr>
 <tr class="separator:a196f98e5d68f6075be19efa313e68e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50abc7ca931244ca10f30250cede1374"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> geometry::dev::SceneGraph&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a50abc7ca931244ca10f30250cede1374">get_render_scene_graph</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memitem:a50abc7ca931244ca10f30250cede1374"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> geometry::dev::SceneGraph&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a50abc7ca931244ca10f30250cede1374">get_render_scene_graph</a> () <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
 <tr class="memdesc:a50abc7ca931244ca10f30250cede1374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the SceneGraph used for rendering camera images.  <a href="#a50abc7ca931244ca10f30250cede1374">More...</a><br /></td></tr>
 <tr class="separator:a50abc7ca931244ca10f30250cede1374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a599c57549f4b1da5dbc4086d99117a41"><td class="memItemLeft" align="right" valign="top">geometry::dev::SceneGraph&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a599c57549f4b1da5dbc4086d99117a41">get_mutable_render_scene_graph</a> ()</td></tr>
 <tr class="memdesc:a599c57549f4b1da5dbc4086d99117a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the SceneGraph used for rendering camera images.  <a href="#a599c57549f4b1da5dbc4086d99117a41">More...</a><br /></td></tr>
 <tr class="separator:a599c57549f4b1da5dbc4086d99117a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a383826f5e1d24ca83b51a0a4337e6338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a383826f5e1d24ca83b51a0a4337e6338">get_controller_plant</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memitem:a383826f5e1d24ca83b51a0a4337e6338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a383826f5e1d24ca83b51a0a4337e6338">get_controller_plant</a> () <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
 <tr class="memdesc:a383826f5e1d24ca83b51a0a4337e6338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the plant used by the inverse dynamics controller (which contains only a model of the iiwa + equivalent mass of the gripper).  <a href="#a383826f5e1d24ca83b51a0a4337e6338">More...</a><br /></td></tr>
 <tr class="separator:a383826f5e1d24ca83b51a0a4337e6338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15f05a3d7f23b3fc83e67dace06d49c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a15f05a3d7f23b3fc83e67dace06d49c5">num_iiwa_joints</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memitem:a15f05a3d7f23b3fc83e67dace06d49c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a15f05a3d7f23b3fc83e67dace06d49c5">num_iiwa_joints</a> () <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
 <tr class="memdesc:a15f05a3d7f23b3fc83e67dace06d49c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of joints in the IIWA (only &ndash; does not include the gripper).  <a href="#a15f05a3d7f23b3fc83e67dace06d49c5">More...</a><br /></td></tr>
 <tr class="separator:a15f05a3d7f23b3fc83e67dace06d49c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7fbeb092bc60714bcf5212044823c6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#af7fbeb092bc60714bcf5212044823c6d">GetIiwaPosition</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memitem:af7fbeb092bc60714bcf5212044823c6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#af7fbeb092bc60714bcf5212044823c6d">GetIiwaPosition</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;station_context) <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
 <tr class="memdesc:af7fbeb092bc60714bcf5212044823c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for getting all of the joint angles of the Kuka IIWA.  <a href="#af7fbeb092bc60714bcf5212044823c6d">More...</a><br /></td></tr>
 <tr class="separator:af7fbeb092bc60714bcf5212044823c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1b1b68f91a654c60587cd6a58fc593a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ab1b1b68f91a654c60587cd6a58fc593a">SetIiwaPosition</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="memdesc:ab1b1b68f91a654c60587cd6a58fc593a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for setting all of the joint angles of the Kuka IIWA.  <a href="#ab1b1b68f91a654c60587cd6a58fc593a">More...</a><br /></td></tr>
-<tr class="separator:ab1b1b68f91a654c60587cd6a58fc593a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4aff46a81e811337a8b53f0b9d82479"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#af4aff46a81e811337a8b53f0b9d82479">GetIiwaVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="memdesc:af4aff46a81e811337a8b53f0b9d82479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for getting all of the joint velocities of the Kuka.  <a href="#af4aff46a81e811337a8b53f0b9d82479">More...</a><br /></td></tr>
-<tr class="separator:af4aff46a81e811337a8b53f0b9d82479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2c5b76f07e770434eec1c212831620f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ac2c5b76f07e770434eec1c212831620f">SetIiwaVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="memdesc:ac2c5b76f07e770434eec1c212831620f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for setting all of the joint velocities of the Kuka IIWA.  <a href="#ac2c5b76f07e770434eec1c212831620f">More...</a><br /></td></tr>
-<tr class="separator:ac2c5b76f07e770434eec1c212831620f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6f75942e0e9416f2a17f0c383e7fde1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aa6f75942e0e9416f2a17f0c383e7fde1">GetWsgPosition</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="memdesc:aa6f75942e0e9416f2a17f0c383e7fde1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for getting the position of the Schunk WSG.  <a href="#aa6f75942e0e9416f2a17f0c383e7fde1">More...</a><br /></td></tr>
-<tr class="separator:aa6f75942e0e9416f2a17f0c383e7fde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4643d6d3ce603a9b788e16c814293700"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a4643d6d3ce603a9b788e16c814293700">GetWsgVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="memdesc:a4643d6d3ce603a9b788e16c814293700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for getting the velocity of the Schunk WSG.  <a href="#a4643d6d3ce603a9b788e16c814293700">More...</a><br /></td></tr>
-<tr class="separator:a4643d6d3ce603a9b788e16c814293700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07797268aa8a97a84128ca90d6691d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a07797268aa8a97a84128ca90d6691d85">SetWsgPosition</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> T &amp;q, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="memdesc:a07797268aa8a97a84128ca90d6691d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for setting the position of the Schunk WSG.  <a href="#a07797268aa8a97a84128ca90d6691d85">More...</a><br /></td></tr>
-<tr class="separator:a07797268aa8a97a84128ca90d6691d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a5c0096b248ae2dc23a3a457a0c43f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a35a5c0096b248ae2dc23a3a457a0c43f">SetWsgVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> T &amp;v, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="memdesc:a35a5c0096b248ae2dc23a3a457a0c43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for setting the velocity of the Schunk WSG.  <a href="#a35a5c0096b248ae2dc23a3a457a0c43f">More...</a><br /></td></tr>
-<tr class="separator:a35a5c0096b248ae2dc23a3a457a0c43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a569ccd9ea20294e6c3cc302ad1021f8d"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a569ccd9ea20294e6c3cc302ad1021f8d">GetStaticCameraPosesInWorld</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memitem:ad0b97b3ff54fa673901d0fb7307c2694"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ad0b97b3ff54fa673901d0fb7307c2694">SetIiwaPosition</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q) <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
+<tr class="memdesc:ad0b97b3ff54fa673901d0fb7307c2694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for setting all of the joint angles of the Kuka IIWA.  <a href="#ad0b97b3ff54fa673901d0fb7307c2694">More...</a><br /></td></tr>
+<tr class="separator:ad0b97b3ff54fa673901d0fb7307c2694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51b01ccc806697e372c8a219011f55e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ae51b01ccc806697e372c8a219011f55e">SetWsgPosition</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> T &amp;q) <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
+<tr class="memdesc:ae51b01ccc806697e372c8a219011f55e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for setting the position of the Schunk WSG.  <a href="#ae51b01ccc806697e372c8a219011f55e">More...</a><br /></td></tr>
+<tr class="separator:ae51b01ccc806697e372c8a219011f55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9ea435bb0bec8e572c55b26b526cc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#acd9ea435bb0bec8e572c55b26b526cc7">DRAKE_DEPRECATED</a> (&quot;Prefer the version with the <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a> as the first argument.&quot; &quot;This method will be deleted after 2019-04-01.&quot;) void <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ae51b01ccc806697e372c8a219011f55e">SetWsgPosition</a>(<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> T &amp;q</td></tr>
+<tr class="separator:acd9ea435bb0bec8e572c55b26b526cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2de43d2f1d38f4c558ced715e89ca22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ad2de43d2f1d38f4c558ced715e89ca22">SetWsgVelocity</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context, <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> T &amp;v) <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
+<tr class="memdesc:ad2de43d2f1d38f4c558ced715e89ca22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method for setting the velocity of the Schunk WSG.  <a href="#ad2de43d2f1d38f4c558ced715e89ca22">More...</a><br /></td></tr>
+<tr class="separator:ad2de43d2f1d38f4c558ced715e89ca22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae18e0011dd2709a2d96367c4682c32c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ae18e0011dd2709a2d96367c4682c32c2">DRAKE_DEPRECATED</a> (&quot;Prefer the version with the <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a> as the first argument.&quot; &quot;This method will be deleted after 2019-04-01.&quot;) void <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ad2de43d2f1d38f4c558ced715e89ca22">SetWsgVelocity</a>(<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> T &amp;v</td></tr>
+<tr class="separator:ae18e0011dd2709a2d96367c4682c32c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569ccd9ea20294e6c3cc302ad1021f8d"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a569ccd9ea20294e6c3cc302ad1021f8d">GetStaticCameraPosesInWorld</a> () <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
 <tr class="memdesc:a569ccd9ea20294e6c3cc302ad1021f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a map from camera name to X_WCameraBody for all the static (rigidly attached to the world body) cameras that have been registered.  <a href="#a569ccd9ea20294e6c3cc302ad1021f8d">More...</a><br /></td></tr>
 <tr class="separator:a569ccd9ea20294e6c3cc302ad1021f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9cb4c905f0c1539c9630a9b0d2ba939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aa9cb4c905f0c1539c9630a9b0d2ba939">get_camera_names</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memitem:aa9cb4c905f0c1539c9630a9b0d2ba939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aa9cb4c905f0c1539c9630a9b0d2ba939">get_camera_names</a> () <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
 <tr class="memdesc:aa9cb4c905f0c1539c9630a9b0d2ba939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera names / unique ids.  <a href="#aa9cb4c905f0c1539c9630a9b0d2ba939">More...</a><br /></td></tr>
 <tr class="separator:aa9cb4c905f0c1539c9630a9b0d2ba939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26fae17059db3c4d520ae9701f2c5b2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a26fae17059db3c4d520ae9701f2c5b2a">SetWsgGains</a> (<a class="el" href="classdouble.html">double</a> kp, <a class="el" href="classdouble.html">double</a> kd)</td></tr>
 <tr class="memdesc:a26fae17059db3c4d520ae9701f2c5b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the gains for the WSG controller.  <a href="#a26fae17059db3c4d520ae9701f2c5b2a">More...</a><br /></td></tr>
 <tr class="separator:a26fae17059db3c4d520ae9701f2c5b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59eb43dfb9545e48e22182a2e5d79a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a59eb43dfb9545e48e22182a2e5d79a6b">SetIiwaPositionGains</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;kp)</td></tr>
+<tr class="memitem:a59eb43dfb9545e48e22182a2e5d79a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a59eb43dfb9545e48e22182a2e5d79a6b">SetIiwaPositionGains</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;kp)</td></tr>
 <tr class="memdesc:a59eb43dfb9545e48e22182a2e5d79a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position gains for the IIWA controller.  <a href="#a59eb43dfb9545e48e22182a2e5d79a6b">More...</a><br /></td></tr>
 <tr class="separator:a59eb43dfb9545e48e22182a2e5d79a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39ecaa6881a2d8473769091178fe7f2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a39ecaa6881a2d8473769091178fe7f2d">SetIiwaVelocityGains</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;kd)</td></tr>
+<tr class="memitem:a39ecaa6881a2d8473769091178fe7f2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a39ecaa6881a2d8473769091178fe7f2d">SetIiwaVelocityGains</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;kd)</td></tr>
 <tr class="memdesc:a39ecaa6881a2d8473769091178fe7f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the velocity gains for the IIWA controller.  <a href="#a39ecaa6881a2d8473769091178fe7f2d">More...</a><br /></td></tr>
 <tr class="separator:a39ecaa6881a2d8473769091178fe7f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a134e146c5f122563a2264c278ebb111b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a134e146c5f122563a2264c278ebb111b">SetIiwaIntegralGains</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;ki)</td></tr>
+<tr class="memitem:a134e146c5f122563a2264c278ebb111b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a134e146c5f122563a2264c278ebb111b">SetIiwaIntegralGains</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;ki)</td></tr>
 <tr class="memdesc:a134e146c5f122563a2264c278ebb111b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the integral gains for the IIWA controller.  <a href="#a134e146c5f122563a2264c278ebb111b">More...</a><br /></td></tr>
 <tr class="separator:a134e146c5f122563a2264c278ebb111b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
-<tr class="memitem:aa513f62c49b6f80d3ce5e5ad4a9f13c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aa513f62c49b6f80d3ce5e5ad4a9f13c6">ManipulationStation</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a> &amp;)=delete</td></tr>
+<tr class="memitem:aa513f62c49b6f80d3ce5e5ad4a9f13c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#aa513f62c49b6f80d3ce5e5ad4a9f13c6">ManipulationStation</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a> &amp;)=delete</td></tr>
 <tr class="separator:aa513f62c49b6f80d3ce5e5ad4a9f13c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36d4a974af41806147325f9fcb2997ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a36d4a974af41806147325f9fcb2997ae">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a> &amp;)=delete</td></tr>
+<tr class="memitem:a36d4a974af41806147325f9fcb2997ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a36d4a974af41806147325f9fcb2997ae">operator=</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a> &amp;)=delete</td></tr>
 <tr class="separator:a36d4a974af41806147325f9fcb2997ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f463569a3a7c6236635706311831bfd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2f463569a3a7c6236635706311831bfd">ManipulationStation</a> (<a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a2f463569a3a7c6236635706311831bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -617,6 +610,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0232523ac7f8337a392b321ffd282187 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of declared abstract parameters.  <a href="classdrake_1_1systems_1_1_system_base.html#a0232523ac7f8337a392b321ffd282187">More...</a><br /></td></tr>
 <tr class="separator:a0232523ac7f8337a392b321ffd282187 inherit pub_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a2bcab60b6efd6a2a0fd3e622bf22bb08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a></td></tr>
+<tr class="separator:a2bcab60b6efd6a2a0fd3e622bf22bb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classdrake_1_1systems_1_1_diagram"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classdrake_1_1systems_1_1_diagram')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram&lt; T &gt;</a></td></tr>
+<tr class="memitem:a8eaa5be8f188f7cc8118fec1f4f4b14f inherit pub_attribs_classdrake_1_1systems_1_1_diagram"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *subsystem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="separator:a8eaa5be8f188f7cc8118fec1f4f4b14f inherit pub_attribs_classdrake_1_1systems_1_1_diagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classdrake_1_1systems_1_1_diagram"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classdrake_1_1systems_1_1_diagram')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram&lt; T &gt;</a></td></tr>
@@ -700,9 +701,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a0afc9712c887706c12039e871476f30c inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a0afc9712c887706c12039e871476f30c">pnc_ticket</a> ()</td></tr>
 <tr class="memdesc:a0afc9712c887706c12039e871476f30c inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ticket for the cache entry that holds the non-conservative power calculation.  <a href="classdrake_1_1systems_1_1_system_base.html#a0afc9712c887706c12039e871476f30c">More...</a><br /></td></tr>
 <tr class="separator:a0afc9712c887706c12039e871476f30c inherit pub_static_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classdrake_1_1systems_1_1_diagram"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classdrake_1_1systems_1_1_diagram')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram&lt; T &gt;</a></td></tr>
-<tr class="memitem:a8eaa5be8f188f7cc8118fec1f4f4b14f inherit pub_attribs_classdrake_1_1systems_1_1_diagram"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *subsystem&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
-<tr class="separator:a8eaa5be8f188f7cc8118fec1f4f4b14f inherit pub_attribs_classdrake_1_1systems_1_1_diagram"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1systems_1_1_diagram"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1systems_1_1_diagram')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram&lt; T &gt;</a></td></tr>
 <tr class="memitem:a628bfe0e8835a0144d79b2a38424420d inherit pro_methods_classdrake_1_1systems_1_1_diagram"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a628bfe0e8835a0144d79b2a38424420d">Diagram</a> ()</td></tr>
 <tr class="memdesc:a628bfe0e8835a0144d79b2a38424420d inherit pro_methods_classdrake_1_1systems_1_1_diagram"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an uninitialized <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>.  <a href="classdrake_1_1systems_1_1_diagram.html#a628bfe0e8835a0144d79b2a38424420d">More...</a><br /></td></tr>
@@ -976,7 +974,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1051,6 +1049,42 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acd9ea435bb0bec8e572c55b26b526cc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9ea435bb0bec8e572c55b26b526cc7">&#9670;&nbsp;</a></span>DRAKE_DEPRECATED() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DRAKE_DEPRECATED </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Prefer the version with the <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a> as the first argument.&quot; &quot;This method will be deleted after 2019-04-01.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae18e0011dd2709a2d96367c4682c32c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18e0011dd2709a2d96367c4682c32c2">&#9670;&nbsp;</a></span>DRAKE_DEPRECATED() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DRAKE_DEPRECATED </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Prefer the version with the <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a> as the first argument.&quot; &quot;This method will be deleted after 2019-04-01.&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8fee61d7a783cade1a3d07fe86284d27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fee61d7a783cade1a3d07fe86284d27">&#9670;&nbsp;</a></span>Finalize()</h2>
 
@@ -1101,7 +1135,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt;T&gt;&amp; get_controller_plant </td>
+          <td class="memname"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt;T&gt;&amp; get_controller_plant </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1128,7 +1162,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt;T&gt;&amp; get_multibody_plant </td>
+          <td class="memname"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt;T&gt;&amp; get_multibody_plant </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1240,7 +1274,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> geometry::dev::SceneGraph&lt;T&gt;&amp; get_render_scene_graph </td>
+          <td class="memname"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> geometry::dev::SceneGraph&lt;T&gt;&amp; get_render_scene_graph </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1268,7 +1302,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt;T&gt;&amp; get_scene_graph </td>
+          <td class="memname"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt;T&gt;&amp; get_scene_graph </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1295,7 +1329,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; GetIiwaPosition </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>station_context</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -1304,26 +1338,6 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 <p>Convenience method for getting all of the joint angles of the Kuka IIWA. </p>
 <p>This does not include the gripper. </p>
-
-</div>
-</div>
-<a id="af4aff46a81e811337a8b53f0b9d82479"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4aff46a81e811337a8b53f0b9d82479">&#9670;&nbsp;</a></span>GetIiwaVelocity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; GetIiwaVelocity </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>station_context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convenience method for getting all of the joint velocities of the Kuka. </p>
 
 </div>
 </div>
@@ -1343,47 +1357,6 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Returns a map from camera name to X_WCameraBody for all the static (rigidly attached to the world body) cameras that have been registered. </p>
-
-</div>
-</div>
-<a id="aa6f75942e0e9416f2a17f0c383e7fde1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6f75942e0e9416f2a17f0c383e7fde1">&#9670;&nbsp;</a></span>GetWsgPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T GetWsgPosition </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>station_context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convenience method for getting the position of the Schunk WSG. </p>
-<p>Note that the WSG position is the signed distance between the two fingers (not the state of the fingers individually). </p>
-
-</div>
-</div>
-<a id="a4643d6d3ce603a9b788e16c814293700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4643d6d3ce603a9b788e16c814293700">&#9670;&nbsp;</a></span>GetWsgVelocity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">T GetWsgVelocity </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>station_context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convenience method for getting the velocity of the Schunk WSG. </p>
 
 </div>
 </div>
@@ -1452,7 +1425,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html">ManipulationStation</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1475,31 +1448,31 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void RegisterIiwaControllerModel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> std::string &amp;&#160;</td>
           <td class="paramname"><em>model_path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a>&#160;</td>
           <td class="paramname"><em>iiwa_instance</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>parent_frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>child_frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>X_PC</em>&#160;</td>
         </tr>
         <tr>
@@ -1539,25 +1512,25 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void RegisterRgbdCamera </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>parent_frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>X_PCameraBody</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> geometry::dev::render::DepthCameraProperties &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> geometry::dev::render::DepthCameraProperties &amp;&#160;</td>
           <td class="paramname"><em>properties</em>&#160;</td>
         </tr>
         <tr>
@@ -1590,31 +1563,31 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void RegisterWsgControllerModel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> std::string &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> std::string &amp;&#160;</td>
           <td class="paramname"><em>model_path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">multibody::ModelInstanceIndex</a>&#160;</td>
           <td class="paramname"><em>wsg_instance</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>parent_frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>child_frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>X_PC</em>&#160;</td>
         </tr>
         <tr>
@@ -1651,7 +1624,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void SetIiwaIntegralGains </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>ki</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1673,8 +1646,8 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="ab1b1b68f91a654c60587cd6a58fc593a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1b1b68f91a654c60587cd6a58fc593a">&#9670;&nbsp;</a></span>SetIiwaPosition()</h2>
+<a id="ad0b97b3ff54fa673901d0fb7307c2694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0b97b3ff54fa673901d0fb7307c2694">&#9670;&nbsp;</a></span>SetIiwaPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1682,14 +1655,14 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void SetIiwaPosition </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>q</em>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>station_context</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>station_context</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1716,7 +1689,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void SetIiwaPositionGains </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>kp</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1738,37 +1711,6 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="ac2c5b76f07e770434eec1c212831620f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2c5b76f07e770434eec1c212831620f">&#9670;&nbsp;</a></span>SetIiwaVelocity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetIiwaVelocity </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>station_context</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Convenience method for setting all of the joint velocities of the Kuka IIWA. </p>
-<p>must have size <a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a15f05a3d7f23b3fc83e67dace06d49c5" title="Get the number of joints in the IIWA (only – does not include the gripper). ">num_iiwa_joints()</a>. </p>
-
-</div>
-</div>
 <a id="a39ecaa6881a2d8473769091178fe7f2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39ecaa6881a2d8473769091178fe7f2d">&#9670;&nbsp;</a></span>SetIiwaVelocityGains()</h2>
 
@@ -1781,7 +1723,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void SetIiwaVelocityGains </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>kd</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1865,8 +1807,8 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a07797268aa8a97a84128ca90d6691d85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07797268aa8a97a84128ca90d6691d85">&#9670;&nbsp;</a></span>SetWsgPosition()</h2>
+<a id="ae51b01ccc806697e372c8a219011f55e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae51b01ccc806697e372c8a219011f55e">&#9670;&nbsp;</a></span>SetWsgPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1874,14 +1816,14 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void SetWsgPosition </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> T &amp;&#160;</td>
-          <td class="paramname"><em>q</em>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>station_context</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>station_context</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> T &amp;&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1896,8 +1838,8 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a35a5c0096b248ae2dc23a3a457a0c43f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35a5c0096b248ae2dc23a3a457a0c43f">&#9670;&nbsp;</a></span>SetWsgVelocity()</h2>
+<a id="ad2de43d2f1d38f4c558ced715e89ca22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2de43d2f1d38f4c558ced715e89ca22">&#9670;&nbsp;</a></span>SetWsgVelocity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1905,14 +1847,14 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
         <tr>
           <td class="memname">void SetWsgVelocity </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> T &amp;&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>station_context</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>station_context</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#a2bcab60b6efd6a2a0fd3e622bf22bb08">const</a> T &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1924,6 +1866,21 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 
 <p>Convenience method for setting the velocity of the Schunk WSG. </p>
 
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2bcab60b6efd6a2a0fd3e622bf22bb08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bcab60b6efd6a2a0fd3e622bf22bb08">&#9670;&nbsp;</a></span>const</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *station_context const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">    <a class="code" href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html#ae51b01ccc806697e372c8a219011f55e">SetWsgPosition</a>(station_context, q)</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>

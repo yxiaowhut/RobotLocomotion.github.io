@@ -20,5 +20,8 @@ var classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl =
     [ "num_velocities", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#ac47f9ed86739416e02d8d4d490afe59b", null ],
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a0161bd34f1f5480f0dad26ecb788af33", null ],
     [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a9ad744977c88eea6a156683d73cc5afd", null ],
+    [ "set_random_position_distribution", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#ad0ef2881eae78009e1f02476bb783955", null ],
+    [ "set_random_state", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a40aee09e6e6d3483f6fbf8873c01d2ff", null ],
+    [ "set_random_velocity_distribution", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a26282a803841a691a157def7105137b8", null ],
     [ "set_zero_state", "classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa7e03d9fc66da18defa5fc679c310549", null ]
 ];

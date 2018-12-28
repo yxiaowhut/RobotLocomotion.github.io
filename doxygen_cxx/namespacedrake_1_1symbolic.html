@@ -645,10 +645,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ac432e3e03086d5b147620673ed357a7c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac432e3e03086d5b147620673ed357a7c">operator*</a> (const Eigen::Transform&lt; <a class="el" href="classdouble.html">double</a>, Dim, LhsMode, LhsOptions &gt; &amp;t1, const Eigen::Transform&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, Dim, RhsMode, RhsOptions &gt; &amp;t2)</td></tr>
 <tr class="memdesc:ac432e3e03086d5b147620673ed357a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform&lt;Expression&gt; * Transform&lt;double&gt; =&gt; Transform&lt;Expression&gt;  <a href="#ac432e3e03086d5b147620673ed357a7c">More...</a><br /></td></tr>
 <tr class="separator:ac432e3e03086d5b147620673ed357a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a166b0ad9f629567d453d875562e571"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a2a166b0ad9f629567d453d875562e571"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2a166b0ad9f629567d453d875562e571">Evaluate</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *random_generator=nullptr)</td></tr>
-<tr class="memdesc:a2a166b0ad9f629567d453d875562e571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a symbolic matrix <code>m</code> using <code>env</code> and <code>random_generator</code>.  <a href="#a2a166b0ad9f629567d453d875562e571">More...</a><br /></td></tr>
-<tr class="separator:a2a166b0ad9f629567d453d875562e571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189f3085c95a362da3dafdc788be3302"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a189f3085c95a362da3dafdc788be3302"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="classdouble.html">double</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a189f3085c95a362da3dafdc788be3302">Evaluate</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env=<a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>{}, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *random_generator=nullptr)</td></tr>
+<tr class="memdesc:a189f3085c95a362da3dafdc788be3302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a symbolic matrix <code>m</code> using <code>env</code> and <code>random_generator</code>.  <a href="#a189f3085c95a362da3dafdc788be3302">More...</a><br /></td></tr>
+<tr class="separator:a189f3085c95a362da3dafdc788be3302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3d55ec6a55f554174d9bc45d7ed7f5c"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA , typename DerivedB &gt; </td></tr>
 <tr class="memitem:ac3d55ec6a55f554174d9bc45d7ed7f5c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; Eigen::MatrixBase&lt; DerivedA &gt;, DerivedA &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a> &amp;&amp;std::is_base_of&lt; Eigen::MatrixBase&lt; DerivedB &gt;, DerivedB &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a> &amp;&amp;std::is_same&lt; typename DerivedA::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a> &amp;&amp;std::is_same&lt; typename DerivedB::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &gt;::<a class="el" href="lcm__subscriber__system__test_8cc.html#a999459b8af9d4480b112b99074033d38">value</a>, <a class="el" href="classbool.html">bool</a> &gt;::<a class="el" href="multilane_2loader_8cc.html#adb5798caab72849ba8da861ddc3acccd">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac3d55ec6a55f554174d9bc45d7ed7f5c">CheckStructuralEquality</a> (const DerivedA &amp;m1, const DerivedB &amp;m2)</td></tr>
 <tr class="memdesc:ac3d55ec6a55f554174d9bc45d7ed7f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two Eigen::Matrix&lt;Expression&gt; <code>m1</code> and <code>m2</code> are structurally equal.  <a href="#ac3d55ec6a55f554174d9bc45d7ed7f5c">More...</a><br /></td></tr>
@@ -2567,14 +2567,14 @@ v.rows() == expressions.rows(). </dd></dl>
 
 </div>
 </div>
-<a id="a2a166b0ad9f629567d453d875562e571"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a166b0ad9f629567d453d875562e571">&#9670;&nbsp;</a></span>Evaluate()</h2>
+<a id="a189f3085c95a362da3dafdc788be3302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a189f3085c95a362da3dafdc788be3302">&#9670;&nbsp;</a></span>Evaluate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">auto drake::symbolic::Evaluate </td>
+          <td class="memname">Eigen::Matrix&lt;<a class="el" href="classdouble.html">double</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; drake::symbolic::Evaluate </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
@@ -2583,7 +2583,7 @@ v.rows() == expressions.rows(). </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;&#160;</td>
-          <td class="paramname"><em>env</em>, </td>
+          <td class="paramname"><em>env</em> = <code><a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5234,7 +5234,7 @@ More information about the C++'s conditional expression and ternary operator is 
 </div><div class="memdoc">
 
 <p>Returns a <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula. ">Formula</a> for the predicate isnan(e) to the given expression. </p>
-<p>This serves as the argument-dependent lookup related to std::isnan(double). When evaluated, this <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula. ">Formula</a> will return false when the <a class="el" href="namespacedrake_1_1symbolic.html#a2a166b0ad9f629567d453d875562e571" title="Evaluates a symbolic matrix m using env and random_generator. ">e.Evaluate()</a> is not NaN. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>This serves as the argument-dependent lookup related to std::isnan(double). When evaluated, this <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula. ">Formula</a> will return false when the <a class="el" href="namespacedrake_1_1symbolic.html#a189f3085c95a362da3dafdc788be3302" title="Evaluates a symbolic matrix m using env and random_generator. ">e.Evaluate()</a> is not NaN. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
   </table>

@@ -1,5 +1,16 @@
 var NAVTREEINDEX75 =
 {
+"struct_q_p_controller_debug_data.html":[2,0,55],
+"struct_q_p_controller_debug_data.html#a008158254f2e279a1795a7358692c078":[2,0,55,7],
+"struct_q_p_controller_debug_data.html#a1f3150ccf61b245d0363a198068ebf3d":[2,0,55,17],
+"struct_q_p_controller_debug_data.html#a230319a0369beabd174212269a2097c7":[2,0,55,12],
+"struct_q_p_controller_debug_data.html#a2ca6474f67391740fed8a8cdf6004436":[2,0,55,16],
+"struct_q_p_controller_debug_data.html#a2e6c8f821f88e1dab510dc11a7824721":[2,0,55,13],
+"struct_q_p_controller_debug_data.html#a38533089d00ab147d8a7937237f5743d":[2,0,55,0],
+"struct_q_p_controller_debug_data.html#a56d2f9e4d74caa523ade85b911b00f6b":[2,0,55,1],
+"struct_q_p_controller_debug_data.html#a5d57ebeed30aba2cb8a74098d815e568":[2,0,55,18],
+"struct_q_p_controller_debug_data.html#a629f14fcd982c344259705eb6332a207":[2,0,55,14],
+"struct_q_p_controller_debug_data.html#a7abdc66a678bc080fa08e0ec89a5e983":[2,0,55,19],
 "struct_q_p_controller_debug_data.html#a829f97c1d058527ed13f29ca3f74fa93":[2,0,55,5],
 "struct_q_p_controller_debug_data.html#a993a85cda35f7698e0d2077aa496479c":[2,0,55,20],
 "struct_q_p_controller_debug_data.html#a9dc352e9dd9411121c1155eeb60ec313":[2,0,55,21],
@@ -238,16 +249,5 @@ var NAVTREEINDEX75 =
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_info.html#af37d7e74133fa9ff022e63bd146042ff":[2,0,0,6,8,0,3,1],
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html":[2,0,0,6,8,0,5],
 "structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a4267767d486984fcbfd11c036a8918a5":[2,0,0,6,8,0,5,8],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a626d34188c0907a778ddc9ea4d6080db":[2,0,0,6,8,0,5,6],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a72f7796d01e211afc3e8cca8f5890dc0":[2,0,0,6,8,0,5,2],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a7bb57312681bfd5e0aa2bf1618e7f58f":[2,0,0,6,8,0,5,0],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a88b98ef43713715dc895e037e90ce39b":[2,0,0,6,8,0,5,7],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a8d728e2bff773ecd3965d208efd72f55":[2,0,0,6,8,0,5,5],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#accb802f203c87f5b5e005013d480f7a9":[2,0,0,6,8,0,5,4],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#acd61e70bb9af0518c6c5033953a3beec":[2,0,0,6,8,0,5,1],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#acd755676f01f2444397b35c9e32986f6":[2,0,0,6,8,0,5,9],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#ad90edef229b87965307dbbb7525d1514":[2,0,0,6,8,0,5,3],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_simulated_plant_configuration.html":[2,0,0,6,8,0,6],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_simulated_plant_configuration.html#a436927e14502260708997b1af45a72b5":[2,0,0,6,8,0,6,2],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_simulated_plant_configuration.html#a6683042551a0bfec1d77fb7412083337":[2,0,0,6,8,0,6,0]
+"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html#a626d34188c0907a778ddc9ea4d6080db":[2,0,0,6,8,0,5,6]
 };

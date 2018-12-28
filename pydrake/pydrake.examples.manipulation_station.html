@@ -290,10 +290,17 @@ that the WSG position is the signed distance between the two fingers
 
 <dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition">
-<code class="descname">SetIiwaPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]], arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convenience method for setting all of the joint angles of the Kuka
+<code class="descname">SetIiwaPosition</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetIiwaPosition(self: pydrake.examples.manipulation_station.ManipulationStation, station_context: pydrake.systems.framework.Context_[float], q: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Convenience method for setting all of the joint angles of the Kuka
 IIWA. Also sets the position history in the velocity command
 generator. <code class="docutils literal"><span class="pre">q</span></code> must have size num_iiwa_joints().</p>
+<ol class="arabic simple" start="2">
+<li>SetIiwaPosition(self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]], arg1: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
 </dd></dl>
 
 <dl class="method">
@@ -312,9 +319,16 @@ generator. <code class="docutils literal"><span class="pre">q</span></code> must
 
 <dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocity">
-<code class="descname">SetIiwaVelocity</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]], arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convenience method for setting all of the joint velocities of the Kuka
+<code class="descname">SetIiwaVelocity</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetIiwaVelocity(self: pydrake.examples.manipulation_station.ManipulationStation, station_context: pydrake.systems.framework.Context_[float], v: numpy.ndarray[float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Convenience method for setting all of the joint velocities of the Kuka
 IIWA. &#64;v must have size num_iiwa_joints().</p>
+<ol class="arabic simple" start="2">
+<li>SetIiwaVelocity(self: pydrake.examples.manipulation_station.ManipulationStation, arg0: numpy.ndarray[float64[m, 1]], arg1: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
 </dd></dl>
 
 <dl class="method">
@@ -347,17 +361,31 @@ IIWA. &#64;v must have size num_iiwa_joints().</p>
 
 <dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.SetWsgPosition">
-<code class="descname">SetWsgPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: float, arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetWsgPosition" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convenience method for setting the position of the Schunk WSG. Also
+<code class="descname">SetWsgPosition</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetWsgPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetWsgPosition(self: pydrake.examples.manipulation_station.ManipulationStation, station_context: pydrake.systems.framework.Context_[float], q: float) -&gt; None</li>
+</ol>
+<p>Convenience method for setting the position of the Schunk WSG. Also
 sets the position history in the velocity interpolator. Note that the
 WSG position is the signed distance between the two fingers (not the
 state of the fingers individually).</p>
+<ol class="arabic simple" start="2">
+<li>SetWsgPosition(self: pydrake.examples.manipulation_station.ManipulationStation, arg0: float, arg1: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation.SetWsgVelocity">
-<code class="descname">SetWsgVelocity</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, arg0: float, arg1: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetWsgVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convenience method for setting the velocity of the Schunk WSG.</p>
+<code class="descname">SetWsgVelocity</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetWsgVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetWsgVelocity(self: pydrake.examples.manipulation_station.ManipulationStation, station_context: pydrake.systems.framework.Context_[float], v: float) -&gt; None</li>
+</ol>
+<p>Convenience method for setting the velocity of the Schunk WSG.</p>
+<ol class="arabic simple" start="2">
+<li>SetWsgVelocity(self: pydrake.examples.manipulation_station.ManipulationStation, arg0: float, arg1: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
 </dd></dl>
 
 <dl class="method">

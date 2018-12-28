@@ -115,6 +115,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7e03d9fc66da18defa5fc679c310549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#aa7e03d9fc66da18defa5fc679c310549">set_zero_state</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const final</td></tr>
 <tr class="memdesc:aa7e03d9fc66da18defa5fc679c310549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <code>state</code> to what will be considered to be the <em>zero</em> state (position and velocity) for <code>this</code> mobilizer.  <a href="#aa7e03d9fc66da18defa5fc679c310549">More...</a><br /></td></tr>
 <tr class="separator:aa7e03d9fc66da18defa5fc679c310549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40aee09e6e6d3483f6fbf8873c01d2ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a40aee09e6e6d3483f6fbf8873c01d2ff">set_random_state</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, <a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *generator) const override</td></tr>
+<tr class="separator:a40aee09e6e6d3483f6fbf8873c01d2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ef2881eae78009e1f02476bb783955"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#ad0ef2881eae78009e1f02476bb783955">set_random_position_distribution</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;<a class="el" href="system__identification__test_8cc.html#aa1b2c258efdc9e057ee99a45179692fd">position</a>)</td></tr>
+<tr class="memdesc:ad0ef2881eae78009e1f02476bb783955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the distribution used to draw random samples from this mobilizer, using a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression. ">symbolic::Expression</a> that contains random variables.  <a href="#ad0ef2881eae78009e1f02476bb783955">More...</a><br /></td></tr>
+<tr class="separator:ad0ef2881eae78009e1f02476bb783955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26282a803841a691a157def7105137b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#a26282a803841a691a157def7105137b8">set_random_velocity_distribution</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;<a class="el" href="system__identification__test_8cc.html#accacf4e9263030d70ed79f8516c0eac5">velocity</a>)</td></tr>
+<tr class="memdesc:a26282a803841a691a157def7105137b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the distribution used to draw random samples from this mobilizer, using a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression. ">symbolic::Expression</a> that contains random variables.  <a href="#a26282a803841a691a157def7105137b8">More...</a><br /></td></tr>
+<tr class="separator:a26282a803841a691a157def7105137b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad720dcf409edffcb9439b70de11126a3"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node.html">internal::BodyNode</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer_impl.html#ad720dcf409edffcb9439b70de11126a3">CreateBodyNode</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_body_node.html">internal::BodyNode</a>&lt; T &gt; *parent_node, const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; *body, const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a>&lt; T &gt; *mobilizer) const final</td></tr>
 <tr class="memdesc:ad720dcf409edffcb9439b70de11126a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">For <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html" title="MultibodyTree provides a representation for a physical system consisting of a collection of interconn...">MultibodyTree</a> internal use only.  <a href="#ad720dcf409edffcb9439b70de11126a3">More...</a><br /></td></tr>
 <tr class="separator:ad720dcf409edffcb9439b70de11126a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,6 +196,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abf179b5c1328d17a41d9a31c01821e92 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973e3098a8f916b64f625b6e1f6bc653 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a973e3098a8f916b64f625b6e1f6bc653">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html">Mobilizer</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a973e3098a8f916b64f625b6e1f6bc653 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22309313c4735a8585e0f065d09abd60 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a22309313c4735a8585e0f065d09abd60">CalcAcrossMobilizerSpatialVelocity</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v) const =0</td></tr>
+<tr class="memdesc:a22309313c4735a8585e0f065d09abd60 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the across-mobilizer spatial velocity <code>V_FM(q, v)</code> of the outboard frame M in the inboard frame F.  <a href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a22309313c4735a8585e0f065d09abd60">More...</a><br /></td></tr>
+<tr class="separator:a22309313c4735a8585e0f065d09abd60 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a271216ca6db7c7c8c57ec6f1607c91c4 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a271216ca6db7c7c8c57ec6f1607c91c4">CalcAcrossMobilizerSpatialAcceleration</a> (const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;vdot) const =0</td></tr>
 <tr class="memdesc:a271216ca6db7c7c8c57ec6f1607c91c4 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the across-mobilizer spatial accelerations <code>A_FM(q, v, v̇)</code> of the outboard frame M in the inboard frame F.  <a href="classdrake_1_1multibody_1_1internal_1_1_mobilizer.html#a271216ca6db7c7c8c57ec6f1607c91c4">More...</a><br /></td></tr>
 <tr class="separator:a271216ca6db7c7c8c57ec6f1607c91c4 inherit pub_methods_classdrake_1_1multibody_1_1internal_1_1_mobilizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -869,6 +880,104 @@ class drake::multibody::internal::MobilizerImpl&lt; T, compile_time_num_position
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0ef2881eae78009e1f02476bb783955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ef2881eae78009e1f02476bb783955">&#9670;&nbsp;</a></span>set_random_position_distribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_random_position_distribution </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defines the distribution used to draw random samples from this mobilizer, using a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression. ">symbolic::Expression</a> that contains random variables. </p>
+
+</div>
+</div>
+<a id="a40aee09e6e6d3483f6fbf8873c01d2ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40aee09e6e6d3483f6fbf8873c01d2ff">&#9670;&nbsp;</a></span>set_random_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_random_state </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#ab262f8e82f09d8df2990d0dc5869c34f">RandomGenerator</a> *&#160;</td>
+          <td class="paramname"><em>generator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26282a803841a691a157def7105137b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26282a803841a691a157def7105137b8">&#9670;&nbsp;</a></span>set_random_velocity_distribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_random_velocity_distribution </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>velocity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defines the distribution used to draw random samples from this mobilizer, using a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression. ">symbolic::Expression</a> that contains random variables. </p>
 
 </div>
 </div>
