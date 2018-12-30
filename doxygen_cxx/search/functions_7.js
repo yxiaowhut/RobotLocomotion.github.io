@@ -775,6 +775,7 @@ var searchData=
   ['getbodyframeidifexists',['GetBodyFrameIdIfExists',['../classdrake_1_1multibody_1_1_multibody_plant.html#a52ca6d32db3c06c6ef91ad42fc36052c',1,'drake::multibody::MultibodyPlant']]],
   ['getbodyframeidorthrow',['GetBodyFrameIdOrThrow',['../classdrake_1_1multibody_1_1_multibody_plant.html#afdcdcb4e7798a5aef9bc3111402dfa5e',1,'drake::multibody::MultibodyPlant']]],
   ['getbodyfromframeid',['GetBodyFromFrameId',['../classdrake_1_1multibody_1_1_multibody_plant.html#adf36bc0dadc3f1e72bc17072c5f9e4f2',1,'drake::multibody::MultibodyPlant']]],
+  ['getbodyindices',['GetBodyIndices',['../classdrake_1_1multibody_1_1_multibody_plant.html#a9e826bbe6f7a8768bea8d2a41be7f0ac',1,'drake::multibody::MultibodyPlant::GetBodyIndices()'],['../classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a9e826bbe6f7a8768bea8d2a41be7f0ac',1,'drake::multibody::internal::MultibodyTree::GetBodyIndices()']]],
   ['getbodyorframeid',['getBodyOrFrameId',['../class_body_motion_data.html#a8744effa838a98f992c6af5ad8c9ff57',1,'BodyMotionData']]],
   ['getbodyorframename',['getBodyOrFrameName',['../class_rigid_body_tree.html#ae1d9e00bbd5aee3b2da50bca0b43819c',1,'RigidBodyTree']]],
   ['getbodypoints',['getBodyPoints',['../rigid__body__tree__contact_8cc.html#ac68899991a92af76374c97ddfb4cc8c2',1,'rigid_body_tree_contact.cc']]],

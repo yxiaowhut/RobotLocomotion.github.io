@@ -1,5 +1,7 @@
 var NAVTREEINDEX74 =
 {
+"solve_8cc.html":[3,0,0,13,89],
+"solve_8cc.html#abcb761412090871c2fa11e436e4acec6":[3,0,0,13,89,0],
 "solve_8h.html":[3,0,0,13,90],
 "solve_8h.html#abcb761412090871c2fa11e436e4acec6":[3,0,0,13,90,0],
 "solve__test_8cc.html":[3,0,0,13,0,60],
@@ -247,7 +249,5 @@ var NAVTREEINDEX74 =
 "struct_position_indices.html#a3638a4a6675620cc7b90390e6309e908":[2,0,51,4],
 "struct_position_indices.html#a62ff9f957a671ccc4243fa6b5261193e":[2,0,51,0],
 "struct_position_indices.html#a765011dc31c90c8d127db47173c69e61":[2,0,51,3],
-"struct_position_indices.html#a8530aadb7b607ee17fd2628ed70b3ead":[2,0,51,1],
-"struct_position_indices.html#a9fd169913d1104da466cbf753977895b":[2,0,51,2],
-"struct_position_indices.html#abf79bbf1a00f27c36477b18fea1381c8":[2,0,51,6]
+"struct_position_indices.html#a8530aadb7b607ee17fd2628ed70b3ead":[2,0,51,1]
 };

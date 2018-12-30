@@ -1,5 +1,7 @@
 var NAVTREEINDEX77 =
 {
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a09f8d0da960e3eed8859508f7efdb421":[2,0,0,12,2,0,0],
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06":[2,0,0,12,2,0,7],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a148f4adaece02fe36243c84bafd8d467":[2,0,0,12,2,0,2],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09":[2,0,0,12,2,0,18],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a1b267a517e862262fc1f50dd62c48f41":[2,0,0,12,2,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[2,0,0,16,37,0],
 "structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[2,0,0,16,37,2],
 "structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[2,0,0,16,38],
-"structdrake_1_1solvers_1_1_new_variable_names.html":[2,0,0,16,39],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_eigen_1_1_dynamic_01_4.html":[2,0,0,16,40],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_eigen_1_1_dynamic_01_4.html#ad33eb23d345a07265641fbcaa4c75744":[2,0,0,16,40,0]
+"structdrake_1_1solvers_1_1_new_variable_names.html":[2,0,0,16,39]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#ab104e3c22de68f56ea7ffa49b60023a2":[2,0,0,20,4,12],
+"classdrake_1_1trajectories_1_1_trajectory.html#aec58a75947d06ba435adda6fd990678e":[2,0,0,20,4,0],
 "classdrake_1_1trajectories_1_1_trajectory.html#af752fbd39919690fbbe2110639682be7":[2,0,0,20,4,2],
 "classes.html":[2,1],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[2,0,7,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "control_util_8h.html":[3,0,0,0,3,0,4],
 "control_util_8h.html#a052de519dcf566bb02fbc9c68fc71f3e":[3,0,0,0,3,0,4,5],
 "control_util_8h.html#a13a6330b4a41b96b124a1ab827e22be8":[3,0,0,0,3,0,4,4],
-"control_util_8h.html#a183476c49ee1d95654047c24d20f56ff":[3,0,0,0,3,0,4,11],
-"control_util_8h.html#a386c81887508909b1746115a0aad62cf":[3,0,0,0,3,0,4,14],
-"control_util_8h.html#a3b8cb8866f733b2be52d81f31145859b":[3,0,0,0,3,0,4,6]
+"control_util_8h.html#a183476c49ee1d95654047c24d20f56ff":[3,0,0,0,3,0,4,11]
 };

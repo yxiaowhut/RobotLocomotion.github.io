@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"eigen__autodiff__types_8h.html#a7b13142534d668d5d490b829b917fa16":[3,0,0,3,31,2],
+"eigen__autodiff__types__test_8cc.html":[3,0,0,3,1,36],
 "eigen__geometry__compare_8cc.html":[3,0,0,3,2,2],
 "eigen__geometry__compare_8cc.html#a72b529a6a9ee1d87147690b921194d47":[3,0,0,3,2,2,1],
 "eigen__geometry__compare_8cc.html#ad6f4bdc9fbf5f6a31c67e1772620eff2":[3,0,0,3,2,2,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "frame__kinematics__vector__test_8cc.html#a5226a17fcca23dac3f40f8a77896c67c":[3,0,0,6,1,0,4],
 "frame__kinematics__vector__test_8cc.html#a8fb66ef0f8c1275ad2ea4126dc845e13":[3,0,0,6,1,0,3],
 "frame__kinematics__vector__test_8cc.html#acd478dbc10ab805938f0fe6dc5febea3":[3,0,0,6,1,0,6],
-"frame__kinematics__vector__test_8cc.html#ad62941c8ff303221fec69e3217133e7d":[3,0,0,6,1,0,0],
-"frame__pose__tracker_8cc.html":[3,0,0,0,0,4,1],
-"frame__pose__tracker_8h.html":[3,0,0,0,0,4,2]
+"frame__kinematics__vector__test_8cc.html#ad62941c8ff303221fec69e3217133e7d":[3,0,0,6,1,0,0]
 };

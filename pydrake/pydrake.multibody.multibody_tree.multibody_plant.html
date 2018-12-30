@@ -965,6 +965,12 @@ associated with that id (nullptr if there is no such body).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetBodyIndices">
+<code class="descname">GetBodyIndices</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>model_instance: pydrake.multibody.multibody_tree.ModelInstanceIndex</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.multibody_tree.BodyIndex]<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetBodyIndices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of body indices associated with <code class="docutils literal"><span class="pre">model_instance</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetFrameByName">
 <code class="descname">GetFrameByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.GetFrameByName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -1863,7 +1869,7 @@ MultibodyPlant::num_velocities() or <code class="docutils literal"><span class="
 
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7fcfb33ccef0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant</em>, <em>A: pydrake.multibody.multibody_tree.Frame</em>, <em>B: pydrake.multibody.multibody_tree.Frame</em>, <em>X_AB: pydrake.common.eigen_geometry.Isometry3 = &lt;pydrake.common.eigen_geometry.Isometry3 object at 0x7fc67f87bf70&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.multibody_tree.WeldJoint<a class="headerlink" href="#pydrake.multibody.multibody_tree.multibody_plant.MultibodyPlant.WeldFrames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Welds frames A and B with relative pose <code class="docutils literal"><span class="pre">X_AB</span></code>. That is, the pose of
 frame B in frame A is fixed, with value <code class="docutils literal"><span class="pre">X_AB</span></code>. The call to this
 method creates and adds a new WeldJoint to the model. The new

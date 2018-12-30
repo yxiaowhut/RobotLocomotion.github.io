@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"control_util_8h.html#a386c81887508909b1746115a0aad62cf":[3,0,0,0,3,0,4,14],
+"control_util_8h.html#a3b8cb8866f733b2be52d81f31145859b":[3,0,0,0,3,0,4,6],
 "control_util_8h.html#a3dc3bb1646f0916ed8122b73a44d4455":[3,0,0,0,3,0,4,20],
 "control_util_8h.html#a5f3e439866d624bd8552eeb28a6ce00e":[3,0,0,0,3,0,4,19],
 "control_util_8h.html#a6fc1cc729514ebb5c24adb96b3a48fb2":[3,0,0,0,3,0,4,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "depth__sensor__output_8cc.html":[3,0,0,0,3,3,7],
 "depth__sensor__output_8h.html":[3,0,0,0,3,3,8],
 "depth__sensor__specification_8cc.html":[3,0,0,0,3,3,9],
-"depth__sensor__specification_8h.html":[3,0,0,0,3,3,10],
-"depth__sensor__specification_8h.html#a47e0b5c1164831e7fcc42400a1aedd8b":[3,0,0,0,3,3,10,1],
-"depth__sensor__test_8cc.html":[3,0,0,0,3,3,0,1]
+"depth__sensor__specification_8h.html":[3,0,0,0,3,3,10]
 };

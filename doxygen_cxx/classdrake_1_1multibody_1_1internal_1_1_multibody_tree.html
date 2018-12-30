@@ -185,6 +185,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d93818409f0144bb63248dc64a9130f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_body.html">Body</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a3d93818409f0144bb63248dc64a9130f">GetBodyByName</a> (const std::string &amp;<a class="el" href="geometry__base__test_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a3d93818409f0144bb63248dc64a9130f"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> method.  <a href="#a3d93818409f0144bb63248dc64a9130f">More...</a><br /></td></tr>
 <tr class="separator:a3d93818409f0144bb63248dc64a9130f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e826bbe6f7a8768bea8d2a41be7f0ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt; <a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a9e826bbe6f7a8768bea8d2a41be7f0ac">GetBodyIndices</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
+<tr class="memdesc:a9e826bbe6f7a8768bea8d2a41be7f0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of body indices associated with <code>model_instance</code>.  <a href="#a9e826bbe6f7a8768bea8d2a41be7f0ac">More...</a><br /></td></tr>
+<tr class="separator:a9e826bbe6f7a8768bea8d2a41be7f0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b557087f117859fd5246112f0d829cd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a4b557087f117859fd5246112f0d829cd">GetFrameByName</a> (const std::string &amp;<a class="el" href="geometry__base__test_8cc.html#a9b45b3e13bd9167aab02e17e08916231">name</a>) const</td></tr>
 <tr class="memdesc:a4b557087f117859fd5246112f0d829cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> method.  <a href="#a4b557087f117859fd5246112f0d829cd">More...</a><br /></td></tr>
 <tr class="separator:a4b557087f117859fd5246112f0d829cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3104,6 +3107,34 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 </div><div class="memdoc">
 
 <p>See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> method. </p>
+
+</div>
+</div>
+<a id="a9e826bbe6f7a8768bea8d2a41be7f0ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e826bbe6f7a8768bea8d2a41be7f0ac">&#9670;&nbsp;</a></span>GetBodyIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="translator__test_8cc.html#aa8ec4e9f7594c29b258511283384c33b">std::vector</a>&lt;<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a>&gt; GetBodyIndices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a list of body indices associated with <code>model_instance</code>. </p>
 
 </div>
 </div>

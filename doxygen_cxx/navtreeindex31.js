@@ -1,5 +1,7 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a1d5b212e8da47a63f7af03b43faae6f6":[2,0,0,16,2,18,4],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a3dca6351eeb1e5824b767665cc858deb":[2,0,0,16,2,18,5],
 "classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a67fc0881f44b136413ae41566f3ca30e":[2,0,0,16,2,18,0],
 "classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a6aa7e60eaeef16d1be7b947be032889a":[2,0,0,16,2,18,9],
 "classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a78cc6707c6d6521b0eb804251fb1b77d":[2,0,0,16,2,18,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_expression.html#aa4a2c288d79cc175a23093bfe33a033a":[2,0,0,17,4,67],
 "classdrake_1_1symbolic_1_1_expression.html#aa4b273174794b2ba4f524c528d686906":[2,0,0,17,4,111],
 "classdrake_1_1symbolic_1_1_expression.html#aa57efef61100945c693ecb05dadf6dcf":[2,0,0,17,4,85],
-"classdrake_1_1symbolic_1_1_expression.html#aa58ea04bbb5e8d24c2af8a17c64d19f8":[2,0,0,17,4,97],
-"classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0":[2,0,0,17,4,87],
-"classdrake_1_1symbolic_1_1_expression.html#aa8204863236e57c7a074fb90bceb61a1":[2,0,0,17,4,63]
+"classdrake_1_1symbolic_1_1_expression.html#aa58ea04bbb5e8d24c2af8a17c64d19f8":[2,0,0,17,4,97]
 };

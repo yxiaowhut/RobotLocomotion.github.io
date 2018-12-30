@@ -1,5 +1,7 @@
 var NAVTREEINDEX30 =
 {
+"classdrake_1_1solvers_1_1_solver_options.html#ae735ec2f66f7ac2bdc79307be1841cb5":[2,0,0,16,58,2],
+"classdrake_1_1solvers_1_1_solver_options.html#af3650fa85849e382ab3a014d013ac927":[2,0,0,16,58,6],
 "classdrake_1_1solvers_1_1_solver_options.html#af3a6a8693d5410ab5dc7ee4c98752311":[2,0,0,16,58,4],
 "classdrake_1_1solvers_1_1_solver_result.html":[2,0,0,16,59],
 "classdrake_1_1solvers_1_1_solver_result.html#a2e556038dda1c8a04091cd9f59ca9cfb":[2,0,0,16,59,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX30 =
 "classdrake_1_1solvers_1_1test_1_1_lower_bounded_problem.html#ae99b975c206f43c31b28e5112300b4d9":[2,0,0,16,2,17,1],
 "classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html":[2,0,0,16,2,18],
 "classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a02458ef8c35b89df4d040b1aa1e53ebf":[2,0,0,16,2,18,7],
-"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a07613baad973ee1803457e319d2daf7e":[2,0,0,16,2,18,8],
-"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a1d5b212e8da47a63f7af03b43faae6f6":[2,0,0,16,2,18,4],
-"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a3dca6351eeb1e5824b767665cc858deb":[2,0,0,16,2,18,5]
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a07613baad973ee1803457e319d2daf7e":[2,0,0,16,2,18,8]
 };

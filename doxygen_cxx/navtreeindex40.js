@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"classdrake_1_1systems_1_1_linear_system.html#a7d84b84b8a63c9ea89c3b5f81ad7edd7":[0,1,0,11,2],
+"classdrake_1_1systems_1_1_linear_system.html#a8314d177fc70f159e3aad0323228aa31":[0,1,0,11,5],
 "classdrake_1_1systems_1_1_linear_system.html#ae145dc8b64927588ad2124efb1c46492":[0,1,0,11,0],
 "classdrake_1_1systems_1_1_linear_system.html#aff2ef43d29e6390e87d9980157c9affa":[0,1,0,11,7],
 "classdrake_1_1systems_1_1_matrix_gain.html":[0,1,0,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html":[2,0,0,18,100],
 "classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#a10abf5223e2d552b3261c6acd46f3876":[2,0,0,18,100,4],
 "classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#a2e3afdff5034f4df64dedd3577f8d5d6":[2,0,0,18,100,2],
-"classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#a6b0b203eb74668dd96526df6172d33ac":[2,0,0,18,100,1],
-"classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#a6c54111ab0c81953e1abc641727fe069":[2,0,0,18,100,5],
-"classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#a918cc75f009746b70e5a568ef0b99f7b":[2,0,0,18,100,3]
+"classdrake_1_1systems_1_1_robot_command_to_desired_effort_converter.html#a6b0b203eb74668dd96526df6172d33ac":[2,0,0,18,100,1]
 };
