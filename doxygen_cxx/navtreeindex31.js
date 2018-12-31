@@ -1,5 +1,12 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1solvers_1_1test_1_1_lower_bounded_problem.html#aa98e4bde19bd0e0a494a5c09b38c13b0":[2,0,0,16,2,17,8],
+"classdrake_1_1solvers_1_1test_1_1_lower_bounded_problem.html#ab4a4646bc6b0eff2e907a95637d1d117":[2,0,0,16,2,17,2],
+"classdrake_1_1solvers_1_1test_1_1_lower_bounded_problem.html#abf5558b13a591438546c15cab44cacd0":[2,0,0,16,2,17,6],
+"classdrake_1_1solvers_1_1test_1_1_lower_bounded_problem.html#ae99b975c206f43c31b28e5112300b4d9":[2,0,0,16,2,17,1],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html":[2,0,0,16,2,18],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a02458ef8c35b89df4d040b1aa1e53ebf":[2,0,0,16,2,18,7],
+"classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a07613baad973ee1803457e319d2daf7e":[2,0,0,16,2,18,8],
 "classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a1d5b212e8da47a63f7af03b43faae6f6":[2,0,0,16,2,18,4],
 "classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a3dca6351eeb1e5824b767665cc858deb":[2,0,0,16,2,18,5],
 "classdrake_1_1solvers_1_1test_1_1_min_distance_from_plane_to_origin.html#a67fc0881f44b136413ae41566f3ca30e":[2,0,0,16,2,18,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1symbolic_1_1_expression.html#a8b5a6641d59b4bc6ee08c725e7742b90":[2,0,0,17,4,11],
 "classdrake_1_1symbolic_1_1_expression.html#a8d78919127ccba2ba24cdb1b0c57613d":[2,0,0,17,4,37],
 "classdrake_1_1symbolic_1_1_expression.html#a9294eeb528bb3beaa480bf17ac5e971d":[2,0,0,17,4,12],
-"classdrake_1_1symbolic_1_1_expression.html#a9a65c6eae526c1f116f99fa1eba9f73a":[2,0,0,17,4,82],
-"classdrake_1_1symbolic_1_1_expression.html#a9d9ed4b56aef62ef067034e4bc706004":[2,0,0,17,4,40],
-"classdrake_1_1symbolic_1_1_expression.html#a9ddcc51253066082911475e06b0ac994":[2,0,0,17,4,35],
-"classdrake_1_1symbolic_1_1_expression.html#aa19665aa37ff4c0aff7aa1ca142eff46":[2,0,0,17,4,69],
-"classdrake_1_1symbolic_1_1_expression.html#aa4a2c288d79cc175a23093bfe33a033a":[2,0,0,17,4,67],
-"classdrake_1_1symbolic_1_1_expression.html#aa4b273174794b2ba4f524c528d686906":[2,0,0,17,4,111],
-"classdrake_1_1symbolic_1_1_expression.html#aa57efef61100945c693ecb05dadf6dcf":[2,0,0,17,4,85],
-"classdrake_1_1symbolic_1_1_expression.html#aa58ea04bbb5e8d24c2af8a17c64d19f8":[2,0,0,17,4,97]
+"classdrake_1_1symbolic_1_1_expression.html#a9a65c6eae526c1f116f99fa1eba9f73a":[2,0,0,17,4,82]
 };

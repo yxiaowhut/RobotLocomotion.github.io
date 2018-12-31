@@ -8,6 +8,7 @@ var classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context =
     [ "get_mutable_state_segment", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a5700bc25dbd71742971f7c96e7213f00", null ],
     [ "get_mutable_state_segment", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#aa728b8c145ec628734029349951430f6", null ],
     [ "get_mutable_state_vector", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#afa7e1b34bc92b74bee31fc0e564f5c85", null ],
+    [ "get_mutable_state_vector", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a2f6efc155edc311149179096eed3d5cc", null ],
     [ "get_mutable_velocities", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a29d386481b461f14b86e1dd70640c793", null ],
     [ "get_positions", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a0e0ef12a42de6660540ed322155402df", null ],
     [ "get_state_segment", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#aa8112fa7c7f95381308ec6c2848e72c3", null ],
@@ -17,6 +18,6 @@ var classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context =
     [ "is_state_discrete", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a3c96801e0a031baa93f0cf461f0bde19", null ],
     [ "num_positions", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#aba2887f0ca1fbbdfb49cf6b0ee21e553", null ],
     [ "num_velocities", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#ae0163ac0976659d811e3337647ff0313", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a9fe10810bcdbd31613d4b7ef1852a739", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a5a6b2841e4c40734462cc979dc5e6343", null ]
+    [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a5a6b2841e4c40734462cc979dc5e6343", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a9fe10810bcdbd31613d4b7ef1852a739", null ]
 ];

@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a338c661d94c2b17045ea58a6b5a7964b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b">DiscreteDerivative</a> (const <a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html">DiscreteDerivative</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a338c661d94c2b17045ea58a6b5a7964b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor. See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>.  <a href="#a338c661d94c2b17045ea58a6b5a7964b">More...</a><br /></td></tr>
 <tr class="separator:a338c661d94c2b17045ea58a6b5a7964b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49326ecc136341f4277e409a757d03d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#ab49326ecc136341f4277e409a757d03d">set_input_history</a> (<a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_n, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_n_minus_1) const</td></tr>
+<tr class="memdesc:ab49326ecc136341f4277e409a757d03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the input history so that the initial output is fully specified.  <a href="#ab49326ecc136341f4277e409a757d03d">More...</a><br /></td></tr>
+<tr class="separator:ab49326ecc136341f4277e409a757d03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a061840a96c15813ea3d49efa57d074f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_derivative.html#a061840a96c15813ea3d49efa57d074f6">set_input_history</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_n, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_n_minus_1) const</td></tr>
 <tr class="memdesc:a061840a96c15813ea3d49efa57d074f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the input history so that the initial output is fully specified.  <a href="#a061840a96c15813ea3d49efa57d074f6">More...</a><br /></td></tr>
 <tr class="separator:a061840a96c15813ea3d49efa57d074f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1145,8 +1148,8 @@ class drake::systems::DiscreteDerivative&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a061840a96c15813ea3d49efa57d074f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a061840a96c15813ea3d49efa57d074f6">&#9670;&nbsp;</a></span>set_input_history() <span class="overload">[1/2]</span></h2>
+<a id="ab49326ecc136341f4277e409a757d03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49326ecc136341f4277e409a757d03d">&#9670;&nbsp;</a></span>set_input_history() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1154,8 +1157,8 @@ class drake::systems::DiscreteDerivative&lt; T &gt;</h3>
         <tr>
           <td class="memname">void set_input_history </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1182,8 +1185,53 @@ class drake::systems::DiscreteDerivative&lt; T &gt;</h3>
 
 </div>
 </div>
+<a id="a061840a96c15813ea3d49efa57d074f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061840a96c15813ea3d49efa57d074f6">&#9670;&nbsp;</a></span>set_input_history() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_input_history </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>u_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>u_n_minus_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the input history so that the initial output is fully specified. </p>
+<p>This is useful during initialization to avoid large derivative outputs if u[0] ≠ 0. <code>u_n</code> and @ u_n_minus_1 must be the same size as the input/output ports. </p>
+
+</div>
+</div>
 <a id="ac9decad70f99b9a02921ac5cb35e3256"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9decad70f99b9a02921ac5cb35e3256">&#9670;&nbsp;</a></span>set_input_history() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9decad70f99b9a02921ac5cb35e3256">&#9670;&nbsp;</a></span>set_input_history() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

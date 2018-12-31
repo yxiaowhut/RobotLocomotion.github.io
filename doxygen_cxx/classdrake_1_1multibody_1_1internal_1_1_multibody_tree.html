@@ -241,9 +241,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ed3389732867302278b87d4605509a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a7ed3389732867302278b87d4605509a2">GetPositionsAndVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a7ed3389732867302278b87d4605509a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="namespace_eigen.html">Eigen</a> vector containing the multibody state <code>x = [q; v]</code> of the model with <code>q</code> the vector of generalized positions and <code>v</code> the vector of generalized velocities for model instance <code>model_instance</code>.  <a href="#a7ed3389732867302278b87d4605509a2">More...</a><br /></td></tr>
 <tr class="separator:a7ed3389732867302278b87d4605509a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca225909f1909f8a37b0b3f89884f29b"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#aca225909f1909f8a37b0b3f89884f29b">GetMutablePositionsAndVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:aca225909f1909f8a37b0b3f89884f29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable <a class="el" href="namespace_eigen.html">Eigen</a> vector containing the vector <code>[q; v]</code> of the model with <code>q</code> the vector of generalized positions and <code>v</code> the vector of generalized velocities.  <a href="#aca225909f1909f8a37b0b3f89884f29b">More...</a><br /></td></tr>
-<tr class="separator:aca225909f1909f8a37b0b3f89884f29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6a1a1c3b761f5cc4cbdebc81125b2a"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a3a6a1a1c3b761f5cc4cbdebc81125b2a">GetMutablePositionsAndVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const</td></tr>
+<tr class="memdesc:a3a6a1a1c3b761f5cc4cbdebc81125b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable <a class="el" href="namespace_eigen.html">Eigen</a> vector containing the vector <code>[q; v]</code> of the model with <code>q</code> the vector of generalized positions and <code>v</code> the vector of generalized velocities.  <a href="#a3a6a1a1c3b761f5cc4cbdebc81125b2a">More...</a><br /></td></tr>
+<tr class="separator:a3a6a1a1c3b761f5cc4cbdebc81125b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1036e869271ac77a82f891a5f7187210"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#a1036e869271ac77a82f891a5f7187210">GetMutablePositionsAndVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
+<tr class="memdesc:a1036e869271ac77a82f891a5f7187210"><td class="mdescLeft">&#160;</td><td class="mdescRight">See GetMutablePositionsAndVelocities(context, state) above.  <a href="#a1036e869271ac77a82f891a5f7187210">More...</a><br /></td></tr>
+<tr class="separator:a1036e869271ac77a82f891a5f7187210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1e3715f67d9c2abd27454522c85322a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html#ab1e3715f67d9c2abd27454522c85322a">SetPositionsAndVelocities</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;instance_state, <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:ab1e3715f67d9c2abd27454522c85322a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>context</code> to store the vector <code>[q; v]</code> with <code>q</code> the vector of generalized positions and <code>v</code> the vector of generalized velocities for model instance <code>model_instance</code>.  <a href="#ab1e3715f67d9c2abd27454522c85322a">More...</a><br /></td></tr>
 <tr class="separator:ab1e3715f67d9c2abd27454522c85322a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3402,8 +3405,8 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 </div>
 </div>
-<a id="aca225909f1909f8a37b0b3f89884f29b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca225909f1909f8a37b0b3f89884f29b">&#9670;&nbsp;</a></span>GetMutablePositionsAndVelocities()</h2>
+<a id="a3a6a1a1c3b761f5cc4cbdebc81125b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6a1a1c3b761f5cc4cbdebc81125b2a">&#9670;&nbsp;</a></span>GetMutablePositionsAndVelocities() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3411,9 +3414,19 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
         <tr>
           <td class="memname">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt; GetMutablePositionsAndVelocities </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -3426,6 +3439,35 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This method returns a reference to existing data, exhibits constant i.e., O(1) time complexity, and runs very quickly. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>state</code> must be the systems::State&lt;T&gt; owned by the <code>context</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a1036e869271ac77a82f891a5f7187210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1036e869271ac77a82f891a5f7187210">&#9670;&nbsp;</a></span>GetMutablePositionsAndVelocities() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetMutablePositionsAndVelocities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>See GetMutablePositionsAndVelocities(context, state) above. </p>
 
 </div>
 </div>
@@ -4495,8 +4537,8 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 </div>
 </div>
-<a id="afa14b83a5d66b905376d7654ef7cf7a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa14b83a5d66b905376d7654ef7cf7a2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aba7d88ffae63ddf3c6c81b23fe3d7a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7d88ffae63ddf3c6c81b23fe3d7a89">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4507,7 +4549,7 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -4521,8 +4563,8 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
 
 </div>
 </div>
-<a id="aba7d88ffae63ddf3c6c81b23fe3d7a89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba7d88ffae63ddf3c6c81b23fe3d7a89">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="afa14b83a5d66b905376d7654ef7cf7a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa14b83a5d66b905376d7654ef7cf7a2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4533,7 +4575,7 @@ The velocity kinematics <code>vc</code> must have been previously updated with a
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree.html">MultibodyTree</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

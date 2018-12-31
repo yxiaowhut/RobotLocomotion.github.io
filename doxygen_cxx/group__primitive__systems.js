@@ -92,6 +92,7 @@ var group__primitive__systems =
       [ "DiscreteDerivative", "classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b", null ],
       [ "operator=", "classdrake_1_1systems_1_1_discrete_derivative.html#a0af346932bf913c979543659c4140abe", null ],
       [ "operator=", "classdrake_1_1systems_1_1_discrete_derivative.html#add4fa4c0f5ed5fad6500ecb351aa07ad", null ],
+      [ "set_input_history", "classdrake_1_1systems_1_1_discrete_derivative.html#ab49326ecc136341f4277e409a757d03d", null ],
       [ "set_input_history", "classdrake_1_1systems_1_1_discrete_derivative.html#a061840a96c15813ea3d49efa57d074f6", null ],
       [ "set_input_history", "classdrake_1_1systems_1_1_discrete_derivative.html#ac9decad70f99b9a02921ac5cb35e3256", null ],
       [ "n_", "classdrake_1_1systems_1_1_discrete_derivative.html#ac3a310d490afb0c7d60d80053bb151c0", null ],
@@ -105,7 +106,9 @@ var group__primitive__systems =
       [ "get_output_port", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a25265df82f15c7eb03b0dd9516696ff4", null ],
       [ "operator=", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a3b689004040660502e57c9a8f6998ce3", null ],
       [ "operator=", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a9c3937505bdb9d7b7b3ac00cc9fbbb38", null ],
+      [ "set_initial_position", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#ab2e72527cc9b40d8b29eaaca0bde3ab2", null ],
       [ "set_initial_position", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a2030c7bdf1e9fda50f3a6b63b5a355ee", null ],
+      [ "set_initial_state", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#af4fb50c7b8a76b065cbb42faa508090d", null ],
       [ "set_initial_state", "classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a58bd3ef530552c6a99cf76bf402434cd", null ]
     ] ],
     [ "FirstOrderLowPassFilter", "classdrake_1_1systems_1_1_first_order_low_pass_filter.html", [

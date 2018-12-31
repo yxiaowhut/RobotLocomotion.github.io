@@ -1,5 +1,15 @@
 var NAVTREEINDEX60 =
 {
+"ipopt__solver__test_8cc.html#ac510e4c51043012c35286969f1a65ef4":[3,0,0,13,0,22,0],
+"ipopt__solver__test_8cc.html#ad6aed41db16e65208c35c1b468cf9367":[3,0,0,13,0,22,1],
+"ipopt__solver__test_8cc.html#aff45b7661886141e191bbffb44ea54f7":[3,0,0,13,0,22,3],
+"is__approx__equal__abstol_8h.html":[3,0,0,3,40],
+"is__approx__equal__abstol_8h.html#a3cd8151cc95b5b95de9a9b882e27ed84":[3,0,0,3,40,0],
+"is__approx__equal__abstol_8h.html#ab8c3f5f0514513155be9f674f2c2cd63":[3,0,0,3,40,1],
+"is__approx__equal__abstol__test_8cc.html":[3,0,0,3,1,43],
+"is__cloneable_8h.html":[3,0,0,3,41],
+"is__cloneable_8h.html#a180d8e6bc7dcb53a32335226b15cca20":[3,0,0,3,41,0],
+"is__cloneable__test_8cc.html":[3,0,0,3,1,44],
 "is__dynamic__castable_8h.html":[3,0,0,3,2,6],
 "is__dynamic__castable_8h.html#a120160cb3dd89c5c7ae2543a3de457e8":[3,0,0,3,2,6,1],
 "is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[3,0,0,3,2,6,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX60 =
 "lcm__utils_8h.html#a8e6f01bc4add8ca4a57452f0e49f3a95":[3,0,0,0,3,0,1,2,8],
 "lcm__utils_8h.html#a92dfa0b485961d83cdd0e4416cbe06fb":[3,0,0,0,3,0,1,2,6],
 "lcm__utils_8h.html#a94582a27e6e497a8ca606b1b955486e8":[3,0,0,0,3,0,1,2,10],
-"lcm__utils_8h.html#aa59b2373fb2b3fa203ec3503baa795c5":[3,0,0,0,3,0,1,2,7],
-"lcm__utils_8h.html#ab035d5e98ea2bc1509496f27b5c5f46c":[3,0,0,0,3,0,1,2,4],
-"lcm__utils_8h.html#abc4eb49ac96a6913990fed9406eef570":[3,0,0,0,3,0,1,2,14],
-"lcm__utils_8h.html#afbdf377f822d4872469872722645515d":[3,0,0,0,3,0,1,2,17],
-"lcm__utils__test_8cc.html":[3,0,0,0,3,0,1,0,1],
-"lcm__utils__test_8cc.html#ac9048b89a18496fc9946dd0b6a59b5b3":[3,0,0,0,3,0,1,0,1,0],
-"lcmt__drake__signal__translator_8cc.html":[3,0,0,14,4,15],
-"lcmt__drake__signal__translator_8h.html":[3,0,0,14,4,16],
-"lcmt__drake__signal__utils_8cc.html":[3,0,0,7,10],
-"lcmt__drake__signal__utils_8cc.html#ab7a360b282245ea582cfd62dd86b6b23":[3,0,0,7,10,0],
-"lcmt__drake__signal__utils_8h.html":[3,0,0,7,11]
+"lcm__utils_8h.html#aa59b2373fb2b3fa203ec3503baa795c5":[3,0,0,0,3,0,1,2,7]
 };

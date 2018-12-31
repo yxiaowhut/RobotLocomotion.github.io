@@ -107,6 +107,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a49447f38d806d93361646bb4ccec81c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25265df82f15c7eb03b0dd9516696ff4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a25265df82f15c7eb03b0dd9516696ff4">get_output_port</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
 <tr class="separator:a25265df82f15c7eb03b0dd9516696ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e72527cc9b40d8b29eaaca0bde3ab2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#ab2e72527cc9b40d8b29eaaca0bde3ab2">set_initial_position</a> (<a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;<a class="el" href="system__identification__test_8cc.html#aa1b2c258efdc9e057ee99a45179692fd">position</a>) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memdesc:ab2e72527cc9b40d8b29eaaca0bde3ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method to set the entire position history for the discrete-time derivative to a constant vector value (resulting in velocity estimate of zero).  <a href="#ab2e72527cc9b40d8b29eaaca0bde3ab2">More...</a><br /></td></tr>
+<tr class="separator:ab2e72527cc9b40d8b29eaaca0bde3ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4fb50c7b8a76b065cbb42faa508090d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#af4fb50c7b8a76b065cbb42faa508090d">set_initial_state</a> (<a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;<a class="el" href="system__identification__test_8cc.html#aa1b2c258efdc9e057ee99a45179692fd">position</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;<a class="el" href="system__identification__test_8cc.html#accacf4e9263030d70ed79f8516c0eac5">velocity</a>) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="memdesc:af4fb50c7b8a76b065cbb42faa508090d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method to set the entire position history for the discrete-time derivative as if the most recent input was <code>position</code>, and the input before that was whatever was required to produce the output velocity <code>velocity</code>.  <a href="#af4fb50c7b8a76b065cbb42faa508090d">More...</a><br /></td></tr>
+<tr class="separator:af4fb50c7b8a76b065cbb42faa508090d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2030c7bdf1e9fda50f3a6b63b5a355ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html#a2030c7bdf1e9fda50f3a6b63b5a355ee">set_initial_position</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;<a class="el" href="system__identification__test_8cc.html#aa1b2c258efdc9e057ee99a45179692fd">position</a>) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
 <tr class="memdesc:a2030c7bdf1e9fda50f3a6b63b5a355ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience method to set the entire position history for the discrete-time derivative to a constant vector value (resulting in velocity estimate of zero).  <a href="#a2030c7bdf1e9fda50f3a6b63b5a355ee">More...</a><br /></td></tr>
 <tr class="separator:a2030c7bdf1e9fda50f3a6b63b5a355ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1023,8 +1029,8 @@ class drake::systems::StateInterpolatorWithDiscreteDerivative&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a2030c7bdf1e9fda50f3a6b63b5a355ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2030c7bdf1e9fda50f3a6b63b5a355ee">&#9670;&nbsp;</a></span>set_initial_position()</h2>
+<a id="ab2e72527cc9b40d8b29eaaca0bde3ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e72527cc9b40d8b29eaaca0bde3ab2">&#9670;&nbsp;</a></span>set_initial_position() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1032,8 +1038,8 @@ class drake::systems::StateInterpolatorWithDiscreteDerivative&lt; T &gt;</h3>
         <tr>
           <td class="memname">void set_initial_position </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1054,11 +1060,90 @@ class drake::systems::StateInterpolatorWithDiscreteDerivative&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a58bd3ef530552c6a99cf76bf402434cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58bd3ef530552c6a99cf76bf402434cd">&#9670;&nbsp;</a></span>set_initial_state()</h2>
+<a id="a2030c7bdf1e9fda50f3a6b63b5a355ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2030c7bdf1e9fda50f3a6b63b5a355ee">&#9670;&nbsp;</a></span>set_initial_position() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_initial_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convenience method to set the entire position history for the discrete-time derivative to a constant vector value (resulting in velocity estimate of zero). </p>
+<p>This is useful during initialization to avoid large derivative outputs. <code>position</code> must be the same size as the input/output ports. </p>
+
+</div>
+</div>
+<a id="af4fb50c7b8a76b065cbb42faa508090d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4fb50c7b8a76b065cbb42faa508090d">&#9670;&nbsp;</a></span>set_initial_state() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_initial_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> Eigen::Ref&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience method to set the entire position history for the discrete-time derivative as if the most recent input was <code>position</code>, and the input before that was whatever was required to produce the output velocity <code>velocity</code>. </p>
+<p><code>position</code> and <code>velocity</code> must be the same size as the input/output ports. </p>
+
+</div>
+</div>
+<a id="a58bd3ef530552c6a99cf76bf402434cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58bd3ef530552c6a99cf76bf402434cd">&#9670;&nbsp;</a></span>set_initial_state() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void set_initial_state </td>
@@ -1084,6 +1169,11 @@ class drake::systems::StateInterpolatorWithDiscreteDerivative&lt; T &gt;</h3>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Convenience method to set the entire position history for the discrete-time derivative as if the most recent input was <code>position</code>, and the input before that was whatever was required to produce the output velocity <code>velocity</code>. </p>

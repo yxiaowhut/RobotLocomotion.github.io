@@ -1,5 +1,15 @@
 var NAVTREEINDEX55 =
 {
+"dynamic__programming_8cc.html#ad9a3626540ed82521ce862855a65f56f":[3,0,0,14,1,2,1],
+"dynamic__programming_8h.html":[3,0,0,14,1,3],
+"dynamic__programming_8h.html#a6c8d5619eb8dc7a8e280eb123deac6fe":[3,0,0,14,1,3,2],
+"dynamic__programming_8h.html#ad9a3626540ed82521ce862855a65f56f":[3,0,0,14,1,3,3],
+"dynamic__programming__test_8cc.html":[3,0,0,14,1,0,0],
+"eigen__autodiff__limits_8h.html":[3,0,0,3,30],
+"eigen__autodiff__types_8h.html":[3,0,0,3,31],
+"eigen__autodiff__types_8h.html#a35725b277b02aeb79f24fd7f724e6dbc":[3,0,0,3,31,3],
+"eigen__autodiff__types_8h.html#a5f4077c4918078fb55bfb6b73968cb0a":[3,0,0,3,31,0],
+"eigen__autodiff__types_8h.html#a790a072a62129732864a20e7a4743298":[3,0,0,3,31,1],
 "eigen__autodiff__types_8h.html#a7b13142534d668d5d490b829b917fa16":[3,0,0,3,31,2],
 "eigen__autodiff__types__test_8cc.html":[3,0,0,3,1,36],
 "eigen__geometry__compare_8cc.html":[3,0,0,3,2,2],
@@ -239,15 +249,5 @@ var NAVTREEINDEX55 =
 "frame__cache_8h.html":[3,0,0,5,7,3],
 "frame__cache__test_8cc.html":[3,0,0,5,7,0,0],
 "frame__kinematics__test_8cc.html":[3,0,0,11,5,0,4],
-"frame__kinematics__vector_8cc.html":[3,0,0,6,2],
-"frame__kinematics__vector_8h.html":[3,0,0,6,3],
-"frame__kinematics__vector_8h.html#aabe48813dfd7db14c564904dcefab397":[3,0,0,6,3,1],
-"frame__kinematics__vector__test_8cc.html":[3,0,0,6,1,0],
-"frame__kinematics__vector__test_8cc.html#a2656ad77aeef55c3f89e0b5c754aec7a":[3,0,0,6,1,0,2],
-"frame__kinematics__vector__test_8cc.html#a2891decdb0ddf4da304c9807eb0d1301":[3,0,0,6,1,0,5],
-"frame__kinematics__vector__test_8cc.html#a43fb6b9d94f9ada4e956f3885901a7c9":[3,0,0,6,1,0,1],
-"frame__kinematics__vector__test_8cc.html#a5226a17fcca23dac3f40f8a77896c67c":[3,0,0,6,1,0,4],
-"frame__kinematics__vector__test_8cc.html#a8fb66ef0f8c1275ad2ea4126dc845e13":[3,0,0,6,1,0,3],
-"frame__kinematics__vector__test_8cc.html#acd478dbc10ab805938f0fe6dc5febea3":[3,0,0,6,1,0,6],
-"frame__kinematics__vector__test_8cc.html#ad62941c8ff303221fec69e3217133e7d":[3,0,0,6,1,0,0]
+"frame__kinematics__vector_8cc.html":[3,0,0,6,2]
 };

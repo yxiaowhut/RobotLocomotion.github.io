@@ -972,26 +972,7 @@ No other values for T are currently supported.</p>
 <dl class="method">
 <dt id="pydrake.multibody.multibody_tree.MultibodyTree.GetMutablePositionsAndVelocities">
 <code class="descname">GetMutablePositionsAndVelocities</code><span class="sig-paren">(</span><em>self: pydrake.multibody.multibody_tree.MultibodyTree, context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[float64[m, 1], flags.writeable]<a class="headerlink" href="#pydrake.multibody.multibody_tree.MultibodyTree.GetMutablePositionsAndVelocities" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable Eigen vector containing the vector <code class="docutils literal"><span class="pre">[q;</span> <span class="pre">v]</span></code> of the
-model with <code class="docutils literal"><span class="pre">q</span></code> the vector of generalized positions and <code class="docutils literal"><span class="pre">v</span></code> the
-vector of generalized velocities.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the <code class="docutils literal"><span class="pre">context</span></code> is nullptr or if it does not</li>
-<li>correspond to the context for a multibody model.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This method returns a reference to existing data, exhibits
-constant i.e., O(1) time complexity, and runs very quickly.</p>
-</div>
+<dd><p>See GetMutablePositionsAndVelocities(context, state) above.</p>
 </dd></dl>
 
 <dl class="method">

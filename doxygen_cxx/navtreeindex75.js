@@ -1,5 +1,15 @@
 var NAVTREEINDEX75 =
 {
+"struct_point.html#a7c66a2e86f8237318e2584e96e34075b":[2,0,46,1],
+"struct_point.html#aeaa6d1a2937421eebca127e4f3cdd1b7":[2,0,46,2],
+"struct_polynomial_1_1_product.html":[2,0,49,1],
+"struct_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[2,0,49,1,0],
+"struct_position_indices.html":[2,0,51],
+"struct_position_indices.html#a0384612ea7af28a3ff3c4486f2676163":[2,0,51,5],
+"struct_position_indices.html#a3638a4a6675620cc7b90390e6309e908":[2,0,51,4],
+"struct_position_indices.html#a62ff9f957a671ccc4243fa6b5261193e":[2,0,51,0],
+"struct_position_indices.html#a765011dc31c90c8d127db47173c69e61":[2,0,51,3],
+"struct_position_indices.html#a8530aadb7b607ee17fd2628ed70b3ead":[2,0,51,1],
 "struct_position_indices.html#a9fd169913d1104da466cbf753977895b":[2,0,51,2],
 "struct_position_indices.html#abf79bbf1a00f27c36477b18fea1381c8":[2,0,51,6],
 "struct_q_p_controller_debug_data.html":[2,0,55],
@@ -239,15 +249,5 @@ var NAVTREEINDEX75 =
 "structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html#a0bc222e26c2e949909b7f7845e9cff18":[2,0,0,26,0],
 "structdrake_1_1examples_1_1double__pendulum_1_1_framed_isometry3.html":[2,0,0,6,4,1],
 "structdrake_1_1examples_1_1double__pendulum_1_1_framed_isometry3.html#a3907799042aa4d75ae6a9cef74070d47":[2,0,0,6,4,1,0],
-"structdrake_1_1examples_1_1double__pendulum_1_1_framed_isometry3.html#a74052360820244e974f0170d6bd91c4f":[2,0,0,6,4,1,1],
-"structdrake_1_1examples_1_1double__pendulum_1_1_framed_isometry3.html#abe60a2ebe324a7ec86e5bd0024febf2e":[2,0,0,6,4,1,2],
-"structdrake_1_1examples_1_1double__pendulum_1_1_framed_isometry3.html#af22e44966407866a6333204312c9ffd2":[2,0,0,6,4,1,3],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html":[2,0,0,6,8,0,2],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html#a10fbb08d4cfc3dad3047dce18cf31a09":[2,0,0,6,8,0,2,1],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html#aa4f230408be3e94704b85754b9a6fb7d":[2,0,0,6,8,0,2,2],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_configuration.html#af2ae883788df5cbe59b031062d660d9b":[2,0,0,6,8,0,2,0],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_info.html":[2,0,0,6,8,0,3],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_info.html#a7441ef0865bcb3db9b8064dd7375c1ea":[2,0,0,6,8,0,3,0],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_optitrack_info.html#af37d7e74133fa9ff022e63bd146042ff":[2,0,0,6,8,0,3,1],
-"structdrake_1_1examples_1_1kuka__iiwa__arm_1_1pick__and__place_1_1_planner_configuration.html":[2,0,0,6,8,0,5]
+"structdrake_1_1examples_1_1double__pendulum_1_1_framed_isometry3.html#a74052360820244e974f0170d6bd91c4f":[2,0,0,6,4,1,1]
 };

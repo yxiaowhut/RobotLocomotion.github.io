@@ -1,5 +1,12 @@
 var NAVTREEINDEX27 =
 {
+"classdrake_1_1reset__on__copy.html#aa21e380b520fb649d3d8c0403f98f48a":[2,0,0,42,5],
+"classdrake_1_1reset__on__copy.html#ab8b1be347012bdfab8e461085598f51b":[2,0,0,42,3],
+"classdrake_1_1reset__on__copy.html#ac4c2f4aff329cb5d4311f7a5a04b0020":[2,0,0,42,0],
+"classdrake_1_1reset__on__copy.html#ae427702dac375af45ad8272fb8424102":[2,0,0,42,7],
+"classdrake_1_1reset__on__copy.html#af387627cc9bea3825e5b15a2d8e7f6b7":[2,0,0,42,2],
+"classdrake_1_1solvers_1_1_binding.html":[2,0,0,16,4],
+"classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a":[2,0,0,16,4,3],
 "classdrake_1_1solvers_1_1_binding.html#a2552599281f242a091a08ca9de5ce5ea":[2,0,0,16,4,4],
 "classdrake_1_1solvers_1_1_binding.html#a38b81cff4aa19f7c4f19a55d095d2213":[2,0,0,16,4,5],
 "classdrake_1_1solvers_1_1_binding.html#a437e49f5ef82c70c9085c8f0c741005a":[2,0,0,16,4,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX27 =
 "classdrake_1_1solvers_1_1_linear_system_solver.html#ace78b0eb206235ec9aeb6243f9e5b3fe":[2,0,0,16,24,3],
 "classdrake_1_1solvers_1_1_linear_system_solver.html#aecb3768848b97d9288ce72f9b4e17b0b":[2,0,0,16,24,8],
 "classdrake_1_1solvers_1_1_linear_system_solver.html#aeccfbaa73e7a744f9339d671ac2f3832":[2,0,0,16,24,11],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#af47284efa3bf16af6970507472ff75d8":[2,0,0,16,24,2],
-"classdrake_1_1solvers_1_1_linear_system_solver.html#af7a6f591af12f4db10cabba35be5496e":[2,0,0,16,24,0],
-"classdrake_1_1solvers_1_1_lorentz_cone_constraint.html":[2,0,0,16,27],
-"classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a0f8abae50cace5781a2b3e60b7b65eaf":[2,0,0,16,27,0],
-"classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a1fbc02ca0fa36307860a1d68b5bbcdad":[2,0,0,16,27,3],
-"classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a28d0987d16ca4400288af69fecb06f67":[2,0,0,16,27,2],
-"classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a47dc7cc63c329390bf34f2033f0b23ac":[2,0,0,16,27,7],
-"classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7f34e62d2679ef1dbea01e82d39a2698":[2,0,0,16,27,6]
+"classdrake_1_1solvers_1_1_linear_system_solver.html#af47284efa3bf16af6970507472ff75d8":[2,0,0,16,24,2]
 };

@@ -235,10 +235,11 @@ var NAVTREEINDEX18 =
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#af71a66f365f5efc8fcaa78a2c2fde404":[0,1,5,7,10],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html":[2,0,0,10,3,7],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a2697220d4384c1aa4baf583efa3ef305":[2,0,0,10,3,7,8],
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a32f1afa470a4479ee8d7f4cb620dd30e":[2,0,0,10,3,7,10],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a356498b2bd580d7052b0eb6548a06c9c":[2,0,0,10,3,7,3],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a612f07c0174c09bb0207ecc6a53c4b45":[2,0,0,10,3,7,9],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a71ec23b5b9d1a45e490c54d445c78d94":[2,0,0,10,3,7,7],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a73695b0d901bb8b508a7a27e37d7db15":[2,0,0,10,3,7,10],
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a73695b0d901bb8b508a7a27e37d7db15":[2,0,0,10,3,7,11],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a81f7b538a90c7ca880c6085b0d386cf1":[2,0,0,10,3,7,4],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#aa21fdaa0e87c15959f122db20b94fd9c":[2,0,0,10,3,7,1],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#aa5dade8cfa37fcf164490d4c988a6391":[2,0,0,10,3,7,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html":[2,0,0,10,3,8],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html#a309da84db9c0dd6c1636b21822318466":[2,0,0,10,3,8,0],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html#a4460debcc58eb0a99461203d604b08b1":[2,0,0,10,3,8,6],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html#a6a67b24efa19452cf1e401463c1960e2":[2,0,0,10,3,8,3],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html#a70b0c84bc3d53500530e380e6b8dd753":[2,0,0,10,3,8,2]
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html#a6a67b24efa19452cf1e401463c1960e2":[2,0,0,10,3,8,3]
 };

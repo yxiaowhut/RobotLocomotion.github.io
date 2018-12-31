@@ -1,5 +1,15 @@
 var NAVTREEINDEX48 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a53509ac0b40f94e8384c1de22d2c949b":[2,0,0,18,11,8,7],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a7f7f1b899a73a10ee66389c12ea84f3e":[2,0,0,18,11,8,6],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#ac7be8892d7c204872030e83baa420b66":[2,0,0,18,11,8,10],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#acefac0850fc505cbb0f4a9ff782ccc79":[2,0,0,18,11,8,9],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#adacf846f73624ee81f656d6a2c0044d3":[2,0,0,18,11,8,8],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html":[0,1,3,1],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html#a086c5619d1a4e51139c21c4291ac06a3":[0,1,3,1,4],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html#a087d1da04b1cd185533461128c018152":[0,1,3,1,13],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html#a14ed48dab80f660e43380dcb482fde8e":[0,1,3,1,5],
+"classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html#a31797747b66c9b8bdfa7751c10c59308":[0,1,3,1,8],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html#a344af888a3f27e589c785d1f809f44b1":[0,1,3,1,1],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html#a3c0a7f053ac6ffc2c28bb227cfc933c4":[0,1,3,1,12],
 "classdrake_1_1systems_1_1sensors_1_1_depth_sensor.html#a7e6e2ba5688fd46782e461d29eadd222":[0,1,3,1,11],
@@ -239,15 +249,5 @@ var NAVTREEINDEX48 =
 "classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html":[2,0,0,18,11,0,0],
 "classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a019c77da9e61b493df0fbeaefa458b3f":[2,0,0,18,11,0,0,0],
 "classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a032c520bebde0350ab08c76d8528c81d":[2,0,0,18,11,0,0,17],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a12cdfec89bf0f0928acbbbae11f860f7":[2,0,0,18,11,0,0,8],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a2122bb5d68b5d9ccca59d73889afd04b":[2,0,0,18,11,0,0,23],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a2603fad8fcf84e56d7f26282431078f5":[2,0,0,18,11,0,0,21],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a26baf6a684685d7f336821a64bdc35e4":[2,0,0,18,11,0,0,11],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a2bd09fac0eb651e7d8237676b95a3530":[2,0,0,18,11,0,0,3],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a3cfaad94d93f5d08ceb8392cb807a53a":[2,0,0,18,11,0,0,1],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a4318fa54988dbde573fb1ccc346733e7":[2,0,0,18,11,0,0,6],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a436830dff9fbce05c931c5a6d8d5366d":[2,0,0,18,11,0,0,2],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a5af284fefb376ab96c7df2434063ab52":[2,0,0,18,11,0,0,10],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a6160634fc13ea46c684e7e6f4022f6db":[2,0,0,18,11,0,0,15],
-"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a6a66bf82754309ca5ad15d9e8ca6c3d8":[2,0,0,18,11,0,0,13]
+"classdrake_1_1systems_1_1sensors_1_1test_1_1_rgbd_renderer_test.html#a12cdfec89bf0f0928acbbbae11f860f7":[2,0,0,18,11,0,0,8]
 };

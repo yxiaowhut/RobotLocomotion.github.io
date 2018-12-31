@@ -121,6 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afa7e1b34bc92b74bee31fc0e564f5c85"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#afa7e1b34bc92b74bee31fc0e564f5c85">get_mutable_state_vector</a> ()</td></tr>
 <tr class="memdesc:afa7e1b34bc92b74bee31fc0e564f5c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the state vector stored in <code>this</code> context as an <code>Eigen::VectorBlock&lt;VectorX&lt;T&gt;&gt;</code>.  <a href="#afa7e1b34bc92b74bee31fc0e564f5c85">More...</a><br /></td></tr>
 <tr class="separator:afa7e1b34bc92b74bee31fc0e564f5c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6efc155edc311149179096eed3d5cc"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a2f6efc155edc311149179096eed3d5cc">get_mutable_state_vector</a> (<a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *state) const</td></tr>
+<tr class="memdesc:a2f6efc155edc311149179096eed3d5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the state vector stored in <code>state</code> which must be the state associated with <code>this</code> context, as an <code>Eigen::VectorBlock&lt;VectorX&lt;T&gt;&gt;</code>.  <a href="#a2f6efc155edc311149179096eed3d5cc">More...</a><br /></td></tr>
+<tr class="separator:a2f6efc155edc311149179096eed3d5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e0ef12a42de6660540ed322155402df"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html#a0e0ef12a42de6660540ed322155402df">get_positions</a> () const</td></tr>
 <tr class="memdesc:a0e0ef12a42de6660540ed322155402df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="namespace_eigen.html">Eigen</a> expression of the vector of generalized positions.  <a href="#a0e0ef12a42de6660540ed322155402df">More...</a><br /></td></tr>
 <tr class="separator:a0e0ef12a42de6660540ed322155402df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -776,7 +779,7 @@ class drake::multibody::internal::MultibodyTreeContext&lt; T &gt;</h3>
 </div>
 </div>
 <a id="afa7e1b34bc92b74bee31fc0e564f5c85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa7e1b34bc92b74bee31fc0e564f5c85">&#9670;&nbsp;</a></span>get_mutable_state_vector()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afa7e1b34bc92b74bee31fc0e564f5c85">&#9670;&nbsp;</a></span>get_mutable_state_vector() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -799,6 +802,35 @@ class drake::multibody::internal::MultibodyTreeContext&lt; T &gt;</h3>
 </div><div class="memdoc">
 
 <p>Returns a mutable reference to the state vector stored in <code>this</code> context as an <code>Eigen::VectorBlock&lt;VectorX&lt;T&gt;&gt;</code>. </p>
+
+</div>
+</div>
+<a id="a2f6efc155edc311149179096eed3d5cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6efc155edc311149179096eed3d5cc">&#9670;&nbsp;</a></span>get_mutable_state_vector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; get_mutable_state_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to the state vector stored in <code>state</code> which must be the state associated with <code>this</code> context, as an <code>Eigen::VectorBlock&lt;VectorX&lt;T&gt;&gt;</code>. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>state</code> must be the systems::State&lt;T&gt; owned by this context. </dd></dl>
 
 </div>
 </div>
@@ -1057,8 +1089,8 @@ class drake::multibody::internal::MultibodyTreeContext&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a9fe10810bcdbd31613d4b7ef1852a739"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fe10810bcdbd31613d4b7ef1852a739">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a5a6b2841e4c40734462cc979dc5e6343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6b2841e4c40734462cc979dc5e6343">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1069,7 +1101,7 @@ class drake::multibody::internal::MultibodyTreeContext&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1083,8 +1115,8 @@ class drake::multibody::internal::MultibodyTreeContext&lt; T &gt;</h3>
 
 </div>
 </div>
-<a id="a5a6b2841e4c40734462cc979dc5e6343"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a6b2841e4c40734462cc979dc5e6343">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a9fe10810bcdbd31613d4b7ef1852a739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fe10810bcdbd31613d4b7ef1852a739">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1095,7 +1127,7 @@ class drake::multibody::internal::MultibodyTreeContext&lt; T &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1internal_1_1_multibody_tree_context.html">MultibodyTreeContext</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

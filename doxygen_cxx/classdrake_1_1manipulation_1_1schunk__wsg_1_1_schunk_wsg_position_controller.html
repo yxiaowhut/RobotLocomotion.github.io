@@ -103,6 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa5dade8cfa37fcf164490d4c988a6391"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#aa5dade8cfa37fcf164490d4c988a6391">SchunkWsgPositionController</a> (<a class="el" href="classdouble.html">double</a> time_step=0.05, <a class="el" href="classdouble.html">double</a> kp_command=200.0, <a class="el" href="classdouble.html">double</a> kd_command=5.0, <a class="el" href="classdouble.html">double</a> kp_constraint=2000.0, <a class="el" href="classdouble.html">double</a> kd_constraint=5.0)</td></tr>
 <tr class="memdesc:aa5dade8cfa37fcf164490d4c988a6391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the controller.  <a href="#aa5dade8cfa37fcf164490d4c988a6391">More...</a><br /></td></tr>
 <tr class="separator:aa5dade8cfa37fcf164490d4c988a6391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f1afa470a4479ee8d7f4cb620dd30e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a32f1afa470a4479ee8d7f4cb620dd30e">set_initial_position</a> (<a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *state, <a class="el" href="classdouble.html">double</a> desired_position) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
+<tr class="separator:a32f1afa470a4479ee8d7f4cb620dd30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73695b0d901bb8b508a7a27e37d7db15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a73695b0d901bb8b508a7a27e37d7db15">set_initial_position</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *context, <a class="el" href="classdouble.html">double</a> desired_position) <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
 <tr class="separator:a73695b0d901bb8b508a7a27e37d7db15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a356498b2bd580d7052b0eb6548a06c9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a> <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html#a356498b2bd580d7052b0eb6548a06c9c">get_desired_position_input_port</a> () <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a8eaa5be8f188f7cc8118fec1f4f4b14f">const</a></td></tr>
@@ -1106,11 +1108,42 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a73695b0d901bb8b508a7a27e37d7db15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73695b0d901bb8b508a7a27e37d7db15">&#9670;&nbsp;</a></span>set_initial_position()</h2>
+<a id="a32f1afa470a4479ee8d7f4cb620dd30e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f1afa470a4479ee8d7f4cb620dd30e">&#9670;&nbsp;</a></span>set_initial_position() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_initial_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_state.html">systems::State</a>&lt; <a class="el" href="classdouble.html">double</a> &gt; *&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>desired_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73695b0d901bb8b508a7a27e37d7db15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73695b0d901bb8b508a7a27e37d7db15">&#9670;&nbsp;</a></span>set_initial_position() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void set_initial_position </td>
@@ -1130,6 +1163,11 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
